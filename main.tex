@@ -12,7 +12,14 @@
   \renewcommand{\familydefault}{\sfdefault}
 \else
   \usepackage{fontspec}
-  \setsansfont{TeX Gyre Heros}
+  % Load by file name so XeLaTeX/LuaLaTeX find the font on any TeX Live.
+  \setsansfont{texgyreheros}[
+    Extension      = .otf,
+    UprightFont    = *-regular,
+    BoldFont       = *-bold,
+    ItalicFont     = *-italic,
+    BoldItalicFont = *-bolditalic
+  ]
 \fi
 
 \usepackage{graphicx}
