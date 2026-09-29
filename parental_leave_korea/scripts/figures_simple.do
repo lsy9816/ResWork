@@ -28,14 +28,14 @@ twoway connected share year, lcolor("0 114 178") mcolor("0 114 178") msize(small
     title("Fathers' Share of Benefit Recipients (%)")
 graph export "fig2_father_share.png", width(2400) replace
 
-* 3. 출생아 부모 사용률: 엄마/아빠 패널 (y축 따로)
+* 3. 출생아 부모 사용률: 엄마, 아빠 각각 저장 (y축 따로)
 keep if inrange(year, 2010, 2024)
 twoway connected pct1 year, lcolor("204 51 99") mcolor("204 51 99") msize(small) ///
     ylabel(0(20)80, angle(0)) xlabel(2010(2)2024) ytitle("") xtitle("") ///
-    subtitle("Mothers") name(m, replace) nodraw
+    title("Parental Leave Use Rate of Mothers of Newborns (%)")
+graph export "fig3a_userate_mothers.png", width(2400) replace
+
 twoway connected pct0 year, lcolor("0 114 178") mcolor("0 114 178") msize(small) ///
     ylabel(0(2)12, angle(0)) xlabel(2010(2)2024) ytitle("") xtitle("") ///
-    subtitle("Fathers") name(f, replace) nodraw
-graph combine m f, cols(2) xsize(8) ysize(4) graphregion(color(white)) ///
-    title("Parental Leave Use Rate of Parents of Newborns (%)")
-graph export "fig3_userate.png", width(2400) replace
+    title("Parental Leave Use Rate of Fathers of Newborns (%)")
+graph export "fig3b_userate_fathers.png", width(2400) replace
