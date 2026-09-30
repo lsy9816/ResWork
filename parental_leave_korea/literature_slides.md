@@ -28,7 +28,7 @@
 
 | 주제 | 저자 (연도) | 제목 | 출처 | 데이터 | 방법 | 메인 결과 |
 |---|---|---|---|---|---|---|
-| 출산 | **Kim, Kyeongkuk, Sang-Hyop Lee & Timothy J. Halliday (2023)** | Paid Childcare Leave, Fertility, and Female Labor Supply in South Korea | *Review of Economics of the Household* 21(4) (IZA DP 15223) | 출산력 조사(임신·피임·노동공급 문항). 조사명과 분석 개혁은 원문 확인 | 이중차분 | 임신 증가, 피임 감소(호 탄력성 0.65, −0.10). 고용 형태에는 체계적 효과 없음 |
+| 출산 | **Kim, Kyeongkuk, Sang-Hyop Lee & Timothy J. Halliday (2023)** | Paid Childcare Leave, Fertility, and Female Labor Supply in South Korea | *Review of Economics of the Household* 21(4): 1433–1451 (IZA DP 15223) | 출산력 조사(임신·피임·노동공급 문항). 조사명과 분석 개혁은 원문 확인 | 이중차분 | 임신 증가, 피임 감소(호 탄력성 0.65, −0.10). 고용 형태에는 체계적 효과 없음 |
 | 성별 격차 (구조모형) | **Kim, Daisoon & Minchul Yum (2025)** | Parental Leave Policies, Fertility, and Labor Supply | CEPR Discussion Paper No. 19951 | 한국 자료에 캘리브레이션 | 이질적 가구 생애주기 구조모형(분절된 노동시장), 반사실 분석 | 낮은 정액제 → 소득비례·상한 인상이 **출산율을 높이고 성별 노동공급·임금 격차를 줄임**. 고학력 부모에서 효과가 크고, 재정적으로 자기부담 가능 |
 | 기업 (근로자 정렬) | **Chu, Ross, Sohee Jeon, Hyun Seung Lee & Tammy Lee (2025)** | Sorting of Working Parents into Family-Friendly Firms | arXiv:2512.22810 (working paper) | 한국 행정자료와 기업 복지 정보 연계 | 준실험 사례 2개: 직장 보육시설 의무 준수 시차, 대기업 남성 육아휴직 의무화 | 가족친화 제도 도입 시 혜택 받을 부모의 입직이 늘고, 임금 상승이 느려도 잔류. 엄마들은 이직보다 노동시장 이탈 여부로 정렬 |
 | 기업 (가임기 여성 비중) | **김정호 (2012)** | (위와 같음) | (위와 같음) | 원문 확인 | 원문 확인 | 급여 인상이 **사업체 수준의 가임기 여성 근로자 비중을 바꿨다는 증거 없음** (국문 초록 요약 기준, 원문 확인 필요) |
