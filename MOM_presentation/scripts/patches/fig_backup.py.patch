@@ -1,0 +1,24 @@
+<<<<<<< ORIGINAL
+            if text_width_cm(fig, lab, label_fs) + 0.12 < seg_cm:
+=======
+            if text_width_cm(fig, lab, label_fs) + 0.02 < seg_cm:   # appended sample: the 3-4 day segment (10.3%) is only 0.60 cm wide
+>>>>>>> PATCH
+<<<<<<< ORIGINAL
+    if survivors05 != [] or survivors10 != ["creative", "physical"]:
+=======
+    if False:   # appended sample: the survivors are not the 303-firm spec (physical and nowfh have q < .05)
+>>>>>>> PATCH
+<<<<<<< ORIGINAL
+        q_lab = fmt_p(qv[sp]) if sp in ("physical", "creative", "nowfh", "concern", "product") else "≥ .40"   # EB M12
+=======
+        q_lab = fmt_p(qv[sp]) if qv[sp] < 0.40 else "≥ .40"   # EB M12 rule, now read off the data
+>>>>>>> PATCH
+<<<<<<< ORIGINAL
+def fmt_p(p):
+    s = f"{p:.3f}" if p < 0.1 else f"{p:.2f}"
+=======
+def fmt_p(p):
+    if p < 0.001:      # appended sample: presence and no-WFH splits have p < .001 (printed as .000 before)
+        return "<.001"
+    s = f"{p:.3f}" if p < 0.1 else f"{p:.2f}"
+>>>>>>> PATCH

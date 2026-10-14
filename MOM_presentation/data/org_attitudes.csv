@@ -1,0 +1,96 @@
+block,sample,group,item,qid,n,k,share,lb,ub,value,note
+statement_distribution,all,I worry that employees are less productive when working from home,1 Strongly disagree,QID22_1,397,23,5.7935,3.8912,8.5430,,
+statement_distribution,all,I worry that employees are less productive when working from home,2,QID22_1,397,54,13.6020,10.5768,17.3249,,
+statement_distribution,all,I worry that employees are less productive when working from home,3 Neither agree nor disagree,QID22_1,397,97,24.4332,20.4647,28.8919,,
+statement_distribution,all,I worry that employees are less productive when working from home,4,QID22_1,397,170,42.8212,38.0454,47.7345,,
+statement_distribution,all,I worry that employees are less productive when working from home,5 Strongly agree,QID22_1,397,53,13.3501,10.3533,17.0494,,
+statement_agree,all,All employer respondents,I worry that employees are less productive when working from home,QID22_1,397,223,56.1713,51.2544,60.9698,,B2; agree = 4-5 on 1-5
+statement_mean,all,All employer respondents,I worry that employees are less productive when working from home,QID22_1,397,,,,,3.4433,mean on 1-5
+statement_distribution,all,Hybrid work creates coordination and communication problems,1 Strongly disagree,QID22_2,397,11,2.7708,1.5541,4.8927,,
+statement_distribution,all,Hybrid work creates coordination and communication problems,2,QID22_2,397,60,15.1134,11.9254,18.9700,,
+statement_distribution,all,Hybrid work creates coordination and communication problems,3 Neither agree nor disagree,QID22_2,397,113,28.4635,24.2476,33.0921,,
+statement_distribution,all,Hybrid work creates coordination and communication problems,4,QID22_2,397,153,38.5390,33.8832,43.4146,,
+statement_distribution,all,Hybrid work creates coordination and communication problems,5 Strongly agree,QID22_2,397,60,15.1134,11.9254,18.9700,,
+statement_agree,all,All employer respondents,Hybrid work creates coordination and communication problems,QID22_2,397,213,53.6524,48.7356,58.4992,,B2; agree = 4-5 on 1-5
+statement_mean,all,All employer respondents,Hybrid work creates coordination and communication problems,QID22_2,397,,,,,3.4811,mean on 1-5
+statement_distribution,all,Creativity and innovation suffer when people are not physically together,1 Strongly disagree,QID22_3,397,21,5.2897,3.4855,7.9508,,
+statement_distribution,all,Creativity and innovation suffer when people are not physically together,2,QID22_3,397,64,16.1209,12.8311,20.0600,,
+statement_distribution,all,Creativity and innovation suffer when people are not physically together,3 Neither agree nor disagree,QID22_3,397,111,27.9597,23.7723,32.5695,,
+statement_distribution,all,Creativity and innovation suffer when people are not physically together,4,QID22_3,397,138,34.7607,30.2426,39.5709,,
+statement_distribution,all,Creativity and innovation suffer when people are not physically together,5 Strongly agree,QID22_3,397,63,15.8690,12.6042,19.7880,,
+statement_agree,all,All employer respondents,Creativity and innovation suffer when people are not physically together,QID22_3,397,201,50.6297,45.7293,55.5181,,B2; agree = 4-5 on 1-5
+statement_mean,all,All employer respondents,Creativity and innovation suffer when people are not physically together,QID22_3,397,,,,,3.3980,mean on 1-5
+statement_distribution,all,It is unfair to offer FWAs to PMEs when frontline staff cannot have them,1 Strongly disagree,QID22_4,397,27,6.8010,4.7158,9.7142,,
+statement_distribution,all,It is unfair to offer FWAs to PMEs when frontline staff cannot have them,2,QID22_4,397,61,15.3652,12.1513,19.2430,,
+statement_distribution,all,It is unfair to offer FWAs to PMEs when frontline staff cannot have them,3 Neither agree nor disagree,QID22_4,397,125,31.4861,27.1133,36.2139,,
+statement_distribution,all,It is unfair to offer FWAs to PMEs when frontline staff cannot have them,4,QID22_4,397,117,29.4710,25.2003,34.1353,,
+statement_distribution,all,It is unfair to offer FWAs to PMEs when frontline staff cannot have them,5 Strongly agree,QID22_4,397,67,16.8766,13.5137,20.8743,,
+statement_agree,all,All employer respondents,It is unfair to offer FWAs to PMEs when frontline staff cannot have them,QID22_4,397,184,46.3476,41.5008,51.2644,,B2; agree = 4-5 on 1-5
+statement_mean,all,All employer respondents,It is unfair to offer FWAs to PMEs when frontline staff cannot have them,QID22_4,397,,,,,3.3426,mean on 1-5
+statement_distribution,all,FWAs help us attract and retain talent in a competitive market,1 Strongly disagree,QID22_5,397,10,2.5189,1.3739,4.5740,,
+statement_distribution,all,FWAs help us attract and retain talent in a competitive market,2,QID22_5,397,25,6.2972,4.3014,9.1307,,
+statement_distribution,all,FWAs help us attract and retain talent in a competitive market,3 Neither agree nor disagree,QID22_5,397,98,24.6851,20.6997,29.1558,,
+statement_distribution,all,FWAs help us attract and retain talent in a competitive market,4,QID22_5,397,188,47.3552,42.4925,52.2685,,
+statement_distribution,all,FWAs help us attract and retain talent in a competitive market,5 Strongly agree,QID22_5,397,76,19.1436,15.5764,23.3021,,
+statement_agree,all,All employer respondents,FWAs help us attract and retain talent in a competitive market,QID22_5,397,264,66.4987,61.7173,70.9639,,B2; agree = 4-5 on 1-5
+statement_mean,all,All employer respondents,FWAs help us attract and retain talent in a competitive market,QID22_5,397,,,,,3.7431,mean on 1-5
+statement_distribution,all,Offering FWAs reduces the salary we need to offer to attract and retain PME talent,1 Strongly disagree,QID22_6,397,32,8.0605,5.7673,11.1575,,
+statement_distribution,all,Offering FWAs reduces the salary we need to offer to attract and retain PME talent,2,QID22_6,397,52,13.0982,10.1302,16.7736,,
+statement_distribution,all,Offering FWAs reduces the salary we need to offer to attract and retain PME talent,3 Neither agree nor disagree,QID22_6,397,126,31.7380,27.3531,36.4730,,
+statement_distribution,all,Offering FWAs reduces the salary we need to offer to attract and retain PME talent,4,QID22_6,397,149,37.5315,32.9093,42.3926,,
+statement_distribution,all,Offering FWAs reduces the salary we need to offer to attract and retain PME talent,5 Strongly agree,QID22_6,397,38,9.5718,7.0532,12.8653,,
+statement_agree,all,All employer respondents,Offering FWAs reduces the salary we need to offer to attract and retain PME talent,QID22_6,397,187,47.1033,42.2444,52.0177,,B2; agree = 4-5 on 1-5
+statement_mean,all,All employer respondents,Offering FWAs reduces the salary we need to offer to attract and retain PME talent,QID22_6,397,,,,,3.2746,mean on 1-5
+statement_agree,all,All employer respondents,Agree with at least one of the productivity/coordination/creativity statements,QID22_1-3,397,299,75.3149,70.8442,79.3003,,B2
+biggest_challenge,all,All employer respondents,Maintaining productivity and output quality,QID50,397,96,24.1814,20.2298,28.6278,,B1
+biggest_challenge,all,All employer respondents,Coordination and communication across teams,QID50,397,94,23.6776,19.7606,28.0990,,B1
+biggest_challenge,all,All employer respondents,Fairness concerns (not all roles can be flexible),QID50,397,91,22.9219,19.0584,27.3044,,B1
+biggest_challenge,all,All employer respondents,Lack of digital infrastructure,QID50,397,25,6.2972,4.3014,9.1307,,B1
+biggest_challenge,all,All employer respondents,Managerial resistance or lack of trust,QID50,397,56,14.1058,11.0249,17.8747,,B1
+biggest_challenge,all,All employer respondents,"Security, confidentiality or compliance",QID50,397,23,5.7935,3.8912,8.5430,,B1
+biggest_challenge,all,All employer respondents,Other,QID50,397,12,3.0227,1.7374,5.2084,,B1
+biggest_challenge_by_size,all,Firm size: 200 or fewer,Maintaining productivity and output quality,QID50,175,44,25.1429,19.2961,32.0574,,B1
+biggest_challenge_by_size,all,Firm size: 200 or fewer,Coordination and communication across teams,QID50,175,34,19.4286,14.2495,25.9209,,B1
+biggest_challenge_by_size,all,Firm size: 200 or fewer,Fairness concerns (not all roles can be flexible),QID50,175,44,25.1429,19.2961,32.0574,,B1
+biggest_challenge_by_size,all,Firm size: 200 or fewer,Lack of digital infrastructure,QID50,175,10,5.7143,3.1332,10.1979,,B1
+biggest_challenge_by_size,all,Firm size: 200 or fewer,Managerial resistance or lack of trust,QID50,175,24,13.7143,9.3922,19.5952,,B1
+biggest_challenge_by_size,all,Firm size: 200 or fewer,"Security, confidentiality or compliance",QID50,175,11,6.2857,3.5458,10.9036,,B1
+biggest_challenge_by_size,all,Firm size: 200 or fewer,Other,QID50,175,8,4.5714,2.3343,8.7601,,B1
+biggest_challenge_by_size,all,"Firm size: 201-1,000",Maintaining productivity and output quality,QID50,140,30,21.4286,15.4428,28.9404,,B1
+biggest_challenge_by_size,all,"Firm size: 201-1,000",Coordination and communication across teams,QID50,140,37,26.4286,19.8246,34.2916,,B1
+biggest_challenge_by_size,all,"Firm size: 201-1,000",Fairness concerns (not all roles can be flexible),QID50,140,33,23.5714,17.3051,31.2493,,B1
+biggest_challenge_by_size,all,"Firm size: 201-1,000",Lack of digital infrastructure,QID50,140,8,5.7143,2.9236,10.8703,,B1
+biggest_challenge_by_size,all,"Firm size: 201-1,000",Managerial resistance or lack of trust,QID50,140,22,15.7143,10.6124,22.6474,,B1
+biggest_challenge_by_size,all,"Firm size: 201-1,000","Security, confidentiality or compliance",QID50,140,7,5.0000,2.4428,9.9607,,B1
+biggest_challenge_by_size,all,"Firm size: 201-1,000",Other,QID50,140,3,2.1429,0.7314,6.1105,,B1
+biggest_challenge_by_size,all,"Firm size: 1,001 or more",Maintaining productivity and output quality,QID50,82,22,26.8293,18.4361,37.2962,,B1
+biggest_challenge_by_size,all,"Firm size: 1,001 or more",Coordination and communication across teams,QID50,82,23,28.0488,19.4772,38.5851,,B1
+biggest_challenge_by_size,all,"Firm size: 1,001 or more",Fairness concerns (not all roles can be flexible),QID50,82,14,17.0732,10.4516,26.6417,,B1
+biggest_challenge_by_size,all,"Firm size: 1,001 or more",Lack of digital infrastructure,QID50,82,7,8.5366,4.1967,16.5875,,B1
+biggest_challenge_by_size,all,"Firm size: 1,001 or more",Managerial resistance or lack of trust,QID50,82,10,12.1951,6.7609,21.0130,,B1
+biggest_challenge_by_size,all,"Firm size: 1,001 or more","Security, confidentiality or compliance",QID50,82,5,6.0976,2.6324,13.4920,,B1
+biggest_challenge_by_size,all,"Firm size: 1,001 or more",Other,QID50,82,1,1.2195,0.2156,6.5893,,B1
+plan_12m,all,All employer respondents,Expand significantly,QID26,397,19,4.7859,3.0850,7.3534,,B3
+plan_12m,all,All employer respondents,Expand somewhat,QID26,397,86,21.6625,17.8922,25.9759,,B3
+plan_12m,all,All employer respondents,Maintain current offerings,QID26,397,225,56.6751,51.7597,61.4625,,B3
+plan_12m,all,All employer respondents,Reduce somewhat,QID26,397,33,8.3123,5.9799,11.4438,,B3
+plan_12m,all,All employer respondents,Reduce significantly,QID26,397,9,2.2670,1.1972,4.2517,,B3
+plan_12m,all,All employer respondents,Don't know / not sure,QID26,397,25,6.2972,4.3014,9.1307,,B3
+plan_12m,all,All employer respondents,Expand (significantly or somewhat),QID26,397,105,26.4484,22.3504,30.9977,,B3
+plan_12m,all,All employer respondents,Reduce (somewhat or significantly),QID26,397,42,10.5793,7.9225,13.9917,,B3
+plan_12m_by_policy,all,Written FWA policy,Expand (significantly or somewhat),QID26 x QID21,276,84,30.4348,25.3056,36.1011,,
+plan_12m_by_policy,all,No written FWA policy,Expand (significantly or somewhat),QID26 x QID21,121,21,17.3554,11.6409,25.0788,,
+hiring_difficulty,all,All employer respondents,"Yes, significant difficulty",QID49,397,20,5.0378,3.2846,7.6528,,B3
+hiring_difficulty,all,All employer respondents,"Yes, some difficulty",QID49,397,187,47.1033,42.2444,52.0177,,B3
+hiring_difficulty,all,All employer respondents,"No, not particularly difficult",QID49,397,167,42.0655,37.3082,46.9749,,B3
+hiring_difficulty,all,All employer respondents,Not applicable (no PME vacancies),QID49,397,23,5.7935,3.8912,8.5430,,B3
+hiring_difficulty,all,All employer respondents,Any difficulty (significant or some),QID49,397,207,52.1411,47.2302,57.0109,,B3
+tech_readiness,all,All employer respondents,Not ready,QID28,397,29,7.3048,5.1339,10.2940,,B4
+tech_readiness,all,All employer respondents,Partially ready (significant gaps),QID28,397,209,52.6448,47.7315,57.5075,,B4
+tech_readiness,all,All employer respondents,Fully ready,QID28,397,159,40.0504,35.3479,44.9436,,B4
+tech_readiness_by_size,all,Firm size: 200 or fewer,Fully ready,QID28,175,69,39.4286,32.4897,46.8216,,
+tech_readiness_by_size,all,"Firm size: 201-1,000",Fully ready,QID28,140,52,37.1429,29.5825,45.3899,,
+tech_readiness_by_size,all,"Firm size: 1,001 or more",Fully ready,QID28,82,38,46.3415,35.9551,57.0553,,
+physical_presence,all,All employer respondents,Most roles require physical presence,QID27,397,137,34.5088,30.0010,39.3136,,R14a split variable
+physical_presence,all,All employer respondents,Some roles require presence; others can be remote,QID27,397,238,59.9496,55.0564,64.6521,,R14a split variable
+physical_presence,all,All employer respondents,Few or no roles require physical presence,QID27,397,22,5.5416,3.6877,8.2475,,R14a split variable

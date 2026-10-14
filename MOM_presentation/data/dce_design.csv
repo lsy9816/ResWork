@@ -1,0 +1,59 @@
+side,block,item,value,note
+employee,counts,Respondents,1020.0,
+employee,counts,Choice sets (6 per respondent),6120.0,S1/S2
+employee,position,Share of choices for the displayed-left option (%),47.3856,
+employee,salary_grid,Sets pairing a below-1 with an above-1 multiplier (%),100.0,S6
+employee,salary_grid,Design log gap ln(rmax/rmin): min,0.1911,S6
+employee,salary_grid,Design log gap: p5,0.2007,
+employee,salary_grid,Design log gap: median,0.2719,
+employee,salary_grid,Design log gap: max,0.4055,S6
+employee,salary_grid,Design % cut of lower vs higher offer: min,17.3913,S6: 17%
+employee,salary_grid,Design % cut of lower vs higher offer: median,23.8095,
+employee,salary_grid,Design % cut of lower vs higher offer: max,33.3333,S6: 33%
+employee,salary_displayed,Displayed log gap ln(smax/smin): min,0.1773,after rounding to SGD 50 and clamping
+employee,salary_displayed,Displayed log gap: p1,0.1911,
+employee,salary_displayed,Displayed log gap: p5,0.2007,
+employee,salary_displayed,Displayed log gap: median,0.2747,
+employee,salary_displayed,Displayed log gap: max,0.4169,
+employee,salary_displayed,Displayed % cut of lower vs higher offer: min,16.25,
+employee,salary_displayed,Displayed % cut: p5,18.1818,
+employee,salary_displayed,Displayed % cut: median,24.0223,
+employee,salary_displayed,Displayed % cut: max,34.0909,
+employee,salary_displayed,Displayed % premium of higher vs lower offer: min,19.403,
+employee,salary_displayed,Displayed % premium: median,31.6176,
+employee,salary_displayed,Displayed % premium: max,51.7241,
+employee,salary_grid,Distinct design log-gap values,12.0,191 201 234 245 258 272 288 302 318 345 363 405 (x1000)
+employee,blocks,Design blocks (fixed survey versions),10.0,
+employee,blocks,Distinct block x task choice situations,60.0,section 9: 60 distinct choice situations
+employee,blocks,"Distinct varied-attribute configurations (task, salary pair, varied levels by pay side)",64.0,design_identification 1.1: 4 more than 60 because of the task-1 early-version mapping
+employee,blocks,Respondents per block: min,79.0,
+employee,blocks,Respondents per block: max,116.0,
+employer,counts,Respondents,397.0,
+employer,counts,Choice sets (6 per respondent),2382.0,S1/S2
+employer,position,Share of choices for the displayed-left option (%),54.7019,
+employer,salary_grid,Sets pairing a below-1 with an above-1 multiplier (%),100.0,S6
+employer,salary_grid,Design log gap ln(rmax/rmin): min,0.1911,S6
+employer,salary_grid,Design log gap: p5,0.2007,
+employer,salary_grid,Design log gap: median,0.2719,
+employer,salary_grid,Design log gap: max,0.4055,S6
+employer,salary_grid,Design % cut of lower vs higher offer: min,17.3913,S6: 17%
+employer,salary_grid,Design % cut of lower vs higher offer: median,23.8095,
+employer,salary_grid,Design % cut of lower vs higher offer: max,33.3333,S6: 33%
+employer,salary_displayed,Displayed log gap ln(smax/smin): min,0.1773,after rounding to SGD 50 and clamping
+employer,salary_displayed,Displayed log gap: p1,0.1904,
+employer,salary_displayed,Displayed log gap: p5,0.2007,
+employer,salary_displayed,Displayed log gap: median,0.2763,
+employer,salary_displayed,Displayed log gap: max,0.4162,
+employer,salary_displayed,Displayed % cut of lower vs higher offer: min,16.25,
+employer,salary_displayed,Displayed % cut: p5,18.1818,
+employer,salary_displayed,Displayed % cut: median,24.1379,
+employer,salary_displayed,Displayed % cut: max,34.0426,
+employer,salary_displayed,Displayed % premium of higher vs lower offer: min,19.403,
+employer,salary_displayed,Displayed % premium: median,31.8182,
+employer,salary_displayed,Displayed % premium: max,51.6129,
+employer,salary_grid,Distinct design log-gap values,12.0,191 201 234 245 258 272 288 302 318 345 363 405 (x1000)
+employer,blocks,Design blocks (fixed survey versions),10.0,
+employer,blocks,Distinct block x task choice situations,60.0,section 9: 60 distinct choice situations
+employer,blocks,"Distinct varied-attribute configurations (task, salary pair, varied levels by pay side)",118.0,
+employer,blocks,Respondents per block: min,33.0,
+employer,blocks,Respondents per block: max,45.0,

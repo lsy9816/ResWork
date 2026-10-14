@@ -1,0 +1,19 @@
+side,model,spec,n_obs,n_resp,ll,k,aic,bic,b_logsal,se_logsal,b_rank,se_rank,b_left,se_left,lr,lr_df,lr_p,note
+employee,M0,log salary (published main model),12240,1020,-3417.185,15,6864.37,6975.557,4.3484,0.1805,,,,,,,,
+employee,M1,rank only (higher-paid dummy),12240,1020,-3414.053,15,6858.106,6969.293,,,1.2325,0.0508,,,,,,
+employee,M2,log salary + rank,12240,1020,-3408.065,16,6848.131,6966.73,1.9753,0.5482,0.6886,0.1559,,,,,,
+employee,M3,rank x design-gap tercile,12240,1020,-3409.839,17,6853.678,6979.69,,,,,,,,,,tercile coefs 1.132 / 1.291 / 1.363; equality p = 0.0141
+employee,M4,log salary + left ASC,12240,1020,-3407.224,16,6846.448,6965.048,4.4936,0.1812,,,0.1559,0.036,,,,
+employee,M5,rank + left ASC,12240,1020,-3404.409,16,6840.817,6959.417,,,1.2724,0.051,0.1558,0.0371,,,,
+employee,M6,log salary + rank + left ASC,12240,1020,-3397.853,17,6829.706,6955.718,2.0779,0.5532,0.7014,0.1572,0.1594,0.0366,,,,
+employee,LR,M2 vs M0: does rank add to log salary?,,,,,,,,,,,,,18.239,1,1.9e-05,LL identical with or without clustering
+employee,LR,M2 vs M1: does log salary add to rank?,,,,,,,,,,,,,11.975,1,0.000539,
+employer,M0,log salary (published main model),4764,397,-1526.878,11,3075.755,3146.912,-1.8169,0.2278,,,,,,,,
+employer,M1,rank only (cheaper-candidate dummy),4764,397,-1527.209,11,3076.419,3147.576,,,0.5398,0.069,,,,,,
+employer,M2,log salary + rank,4764,397,-1526.361,12,3076.722,3154.348,-1.0314,0.8064,0.2404,0.2486,,,,,,
+employer,M3,rank x design-gap tercile,4764,397,-1526.454,13,3078.909,3163.004,,,,,,,,,,tercile coefs 0.464 / 0.586 / 0.585; equality p = 0.5026
+employer,M4,log salary + left ASC,4764,397,-1526.509,12,3077.019,3154.645,-1.7839,0.2303,,,0.0396,0.0415,,,,
+employer,M5,rank + left ASC,4764,397,-1526.85,12,3077.7,3155.326,,,0.53,0.0699,0.0392,0.0417,,,,
+employer,M6,log salary + rank + left ASC,4764,397,-1526.02,13,3078.041,3162.136,-1.0203,0.8067,0.2341,0.2487,0.0381,0.0416,,,,
+employer,LR,M2 vs M0: does rank add to log salary?,,,,,,,,,,,,,1.033,1,0.309454,LL identical with or without clustering
+employer,LR,M2 vs M1: does log salary add to rank?,,,,,,,,,,,,,1.697,1,0.192715,

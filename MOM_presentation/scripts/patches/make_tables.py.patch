@@ -1,0 +1,78 @@
+<<<<<<< ORIGINAL
+def disc(x, nd=0):
+    """Employer discount (positive %) for printing; refuses values beyond the tested range."""
+    d = -float(x)
+    assert d <= MAX_CUT, ("employer value beyond the tested range must not be printed", d)
+    return num(d, nd)
+=======
+class _Beyond(str):
+    """A printed discount beyond the tested range: replaces the '~' (AP) prefix that precedes it."""
+    def __radd__(self, other):
+        other = str(other)
+        return str(other[: -len(AP)] + str(self)) if other.endswith(AP) else str(other + str(self))
+
+
+def disc(x, nd=0):
+    """Employer discount (positive %) for printing; a value beyond the tested range prints as '>33'
+    (appended sample: 3-4 days WFH and part-time are beyond 33% as well, not only fully remote)."""
+    d = -float(x)
+    if d > MAX_CUT:
+        return _Beyond(GT + num(MAX_CUT))
+    return num(d, nd)
+>>>>>>> PATCH
+<<<<<<< ORIGINAL
+    lo, hi = -float(ub), -float(lb)
+    assert lo <= MAX_CUT, ("lower CI limit beyond the tested range", lo)
+    return "[" + num(lo) + ", " + ((GT + num(MAX_CUT)) if hi > MAX_CUT else num(hi)) + "]"
+=======
+    lo, hi = -float(ub), -float(lb)
+    lo_s = (GT + num(MAX_CUT)) if lo > MAX_CUT else num(lo)
+    return "[" + lo_s + ", " + ((GT + num(MAX_CUT)) if hi > MAX_CUT else num(hi)) + "]"
+>>>>>>> PATCH
+<<<<<<< ORIGINAL
+                gv = num(fl(g, "est")) + ", n.s. (" + peq(fl(g, "p")) + ")"
+=======
+                # appended sample: the 1-2 days gap is significant (p < .05), so it is not labelled n.s.
+                gv = ((num(fl(g, "est")) + ", n.s. (" + peq(fl(g, "p")) + ")") if fl(g, "p") >= 0.05 else
+                      (num(fl(g, "est")) + " (" + rng(fl(g, "lb"), fl(g, "ub")) + "), " + peq(fl(g, "p"))))
+>>>>>>> PATCH
+<<<<<<< ORIGINAL
+num(100 * int(lt["concern"]["n_a"]) / 303),
+=======
+num(100 * int(lt["concern"]["n_a"]) / (int(lt["concern"]["n_a"]) + int(lt["concern"]["n_b"]))),
+>>>>>>> PATCH
+<<<<<<< ORIGINAL
+        t.row(lab, num(fl(agree[item], "share")), pv(fl(lt[split], "p")), reading)
+=======
+        _p = fl(lt[split], "p")
+        if split == "creat":      # verdict words follow the data (appended sample: p = .068, q = .43)
+            reading = (reading if _p < 0.05 else reading.replace("Linked:", "Weak link:") if _p < 0.10
+                       else reading.replace("Linked:", "No detectable link; remote share"))
+        else:
+            reading = "Linked" if _p < 0.05 else "Marginal" if _p < 0.10 else "No detectable link"
+        t.row(lab, num(fl(agree[item], "share")), pv(_p), reading)
+>>>>>>> PATCH
+<<<<<<< ORIGINAL
+          pv(fl(lt["concern"], "p")) + sup("1"), "Marginal")
+=======
+          pv(fl(lt["concern"], "p")) + sup("1"),
+          "Linked" if fl(lt["concern"], "p") < 0.05 else "Marginal" if fl(lt["concern"], "p") < 0.10 else "No detectable link")
+>>>>>>> PATCH
+<<<<<<< ORIGINAL
+           + r" across all " + str(len(loc20)) + r" employer splits tested, so significant at the 10\% level "
+           r"after correction). "
+=======
+           + r" across all " + str(len(loc20)) + r" employer splits tested, so "
+           + (r"significant at the 10\% level " if qc < 0.10 else "not significant ") + r"after correction). "
+>>>>>>> PATCH
+<<<<<<< ORIGINAL
+           + r"; CI limits beyond print as " + GT + num(MAX_CUT) + ". " + GREY)
+=======
+           + r"; values beyond print as " + GT + num(MAX_CUT) + ". " + GREY)
+>>>>>>> PATCH
+<<<<<<< ORIGINAL
+           r"Pay gaps shown were " + GAPS + r", so zones rest on equal-pay choices. "
+=======
+           r"Pay gaps shown were " + GAPS + r", so zones rest on equal-pay choices; employer discounts beyond "
+           + num(MAX_CUT) + r" print as " + GT + num(MAX_CUT) + r". "
+>>>>>>> PATCH
