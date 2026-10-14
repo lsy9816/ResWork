@@ -1,0 +1,10 @@
+side,split,group,glabel,n_resp,level,label,model,prob,lb,ub,joint_p
+employer,main,0,All employers,397,1.place,1-2 days WFH,log,0.4015526243,0.35068420,0.45242105,
+employer,main,0,All employers,397,2.place,3-4 days WFH,log,0.3085301457,0.25918903,0.35787126,
+employer,main,0,All employers,397,3.place,Fully remote,log,0.2291706660,0.17619642,0.28214491,
+employer,main,0,All employers,397,1.timeflex,Staggered hours,log,0.4521469144,0.40165369,0.50264014,
+employer,main,0,All employers,397,2.timeflex,Compressed 4-day week,log,0.4670478327,0.40752748,0.52656819,
+employer,main,0,All employers,397,1.load,Reduced load (4 days/week),log,0.3803648296,0.33786567,0.42286399,
+employer,main,0,All employers,397,2.load,Part-time,log,0.3104535007,0.26975411,0.35115289,
+employer,main,0,All employers,397,1.retention,Moderate turnover risk,log,0.4757689961,0.42883947,0.52269852,
+employer,main,0,All employers,397,2.retention,High turnover risk (>20%),log,0.3355920629,0.27703121,0.39415291,
