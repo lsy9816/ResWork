@@ -1,3 +1,10 @@
+# =============================================================================================================
+# fig_r5_appended.py -- COPY of deck_support/scripts/fig_r5.py (professor's script; the original is not modified)
+# with the employer values switched to the appended employer sample (n = 397). Run it through
+# make_figs_appended.py, which writes the figures into MOM_presentation/figures/ and reads the appended data
+# from MOM_presentation/data/. Changes vs the original: fig_org_eqpay, fig_where_r5 and fig_meet_r5 expected
+# values (and the 303-firm EVIDENCE_BOOK string checks switched off for the employer numbers).
+# =============================================================================================================
 """Round-5 main-slide figures (redesign/ROUND5_SPEC.md sections 3-4; reviews/claude_round5/MANDATE.md).
 
 New figure names, so nothing collides with fig_v2.py / fig_main.py / fig_backup.py (none of those is edited):
@@ -291,23 +298,18 @@ def fig_org_eqpay():
 # ---------------------------------------------------------------------------
 def fig_where_r5():
     name = "F_where_r5"
-    V.eb_has("M10", "Most PME roles need on-site presence (n = 98): **29 / 28 / 22 / 54%**",
-             "only some or few roles (n = 205): **49 / 41 / 30 / 46%**",
-             "(agree 4–5, n = 162): **40 / 31 / 19 / 42%**", "not worried (n = 141): **46 / 44 / 39 / 54%**")
-    V.eb_has("Q10", "Most PME roles need presence (n=98): 1–2 days 29%",
-             "Only some or few roles do (n=205): 1–2 days **49% (≈ indifferent)**")
-    V.eb_has("Q11", "(n=162): 1–2 days 40%, 3–4 days 31%, remote **19%**", "Not worried (n=141): 46%, 44%, 39%")
-    # drawn 95% CIs: EB M10 'Drawn 95% CIs on F_where_r5' (separate per-group clogits; fixer pass 7 Oct 2026)
-    V.eb_has("M10", "**49.2 [41.9, 56.4]**", "**29.2 [20.3, 38.1]**", "**39.1 [28.4, 49.9]**", "**19.5 [11.8, 27.2]**")
-    CI_EB = {("physical", "0"): (41.9, 56.4), ("physical", "1"): (20.3, 38.1),
-             ("creative", "0"): (28.4, 49.9), ("creative", "1"): (11.8, 27.2)}
-    blocks = [  # header, item, rows: (split, group, label, EB share, EB n, focal?)
+    # Employer update (14 Oct 2026): appended employer sample; rows from ../data/employer_channels_appended.csv
+    # (appended_clogit.xlsx physical_1/2 and creative_concern_1/0, invlogit with delta-method CIs). The 303-firm
+    # EVIDENCE_BOOK M10/Q10/Q11 strings are not checked here.
+    CI_EB = {("physical", "0"): (41.7, 54.7), ("physical", "1"): (19.3, 33.7),
+             ("creative", "0"): (20.8, 37.3), ("creative", "1"): (11.3, 24.6)}
+    blocks = [  # header, item, rows: (split, group, label, share, n, focal?)
         ("1–2 WFH days a week", "1.place",
-         [("physical", "1", "Most roles need presence", 29, 98, True),
-          ("physical", "0", "Some or few roles do", 49, 205, False)]),
+         [("physical", "1", "Most roles need presence", 27, 137, True),
+          ("physical", "0", "Some or few roles do", 48, 260, False)]),
         ("Fully remote", "3.place",
-         [("creative", "1", "Creativity concern", 19, 162, True),
-          ("creative", "0", "No creativity concern", 39, 141, False)]),
+         [("creative", "1", "Creativity concern", 18, 201, True),
+          ("creative", "0", "No creativity concern", 29, 196, False)]),
     ]
     fig = new_fig()
     H, W = fig.H, fig.W
@@ -316,7 +318,8 @@ def fig_where_r5():
     # n labels; CI_LW; filled diamonds MS_DIAMOND with a white MEW edge, hollow ones a MEW_HOLLOW edge; SEP rule;
     # pct_ticks; no footnote line (the marker key, "Filled: firms with the need or concern; hollow: other firms.
     # Lines: 95% CIs.", is the M-where \SourceNote Note).
-    LX, X0, X1, VX = 5.10, 5.30, 11.75, W - 0.05
+    # appended: three-digit n labels ("n = 137") need 0.10 cm more label room than "n = 98"
+    LX, X0, X1, VX = 5.20, 5.40, 11.75, W - 0.05
     XL, XR = 0, 60
     AY, AT = 0.55, H - 0.88
     YA, YB = 0.30, 6.30

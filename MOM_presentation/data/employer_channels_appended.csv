@@ -1,0 +1,9 @@
+block,split,group,glabel,n_resp,item,est,lb,ub,source
+eqpay,physical,1,Most PME roles need presence,137,1.place,0.265027,0.192870,0.337185,appended_clogit.xlsx physical_1
+eqpay,physical,1,Most PME roles need presence,137,3.place,0.174078,0.091229,0.256926,appended_clogit.xlsx physical_1
+eqpay,physical,0,Some or few PME roles need presence,260,1.place,0.482257,0.417170,0.547345,appended_clogit.xlsx physical_2
+eqpay,physical,0,Some or few PME roles need presence,260,3.place,0.262309,0.193662,0.330957,appended_clogit.xlsx physical_2
+eqpay,creative,1,Worried creativity suffers,201,1.place,0.388173,0.316022,0.460324,appended_clogit.xlsx creative_concern_1
+eqpay,creative,1,Worried creativity suffers,201,3.place,0.179314,0.112974,0.245654,appended_clogit.xlsx creative_concern_1
+eqpay,creative,0,Not worried about creativity,196,1.place,0.417268,0.344350,0.490185,appended_clogit.xlsx creative_concern_0
+eqpay,creative,0,Not worried about creativity,196,3.place,0.290904,0.208425,0.373382,appended_clogit.xlsx creative_concern_0

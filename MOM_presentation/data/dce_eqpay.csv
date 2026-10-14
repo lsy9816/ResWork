@@ -1,4 +1,13 @@
 side,split,group,glabel,n_resp,level,label,model,prob,lb,ub,joint_p
+employee,main,0,All PMEs,1020,1.place,1-2 days WFH,log,.5829521969789075,.54932582,.61657858,
+employee,main,0,All PMEs,1020,2.place,3-4 days WFH,log,.6069456365363849,.57338786,.64050341,
+employee,main,0,All PMEs,1020,3.place,Fully remote (vs long commute),log,.6705881575692664,.62291539,.71826094,
+employee,main,0,All PMEs,1020,3.place_mod,Fully remote (vs moderate commute),log,.6381552980458837,.5996961,.67661452,
+employee,main,0,All PMEs,1020,1.timeflex,Staggered hours,log,.4929391281328337,.46316835,.52270991,
+employee,main,0,All PMEs,1020,2.timeflex,Compressed 4-day week,log,.5828315573988514,.54629344,.61936963,
+employee,main,0,All PMEs,1020,1.load,Job sharing (4 days/week),log,.567088124285879,.53662556,.59755069,
+employee,main,0,All PMEs,1020,2.load,Part-time,log,.5436430250459738,.51085263,.57643342,
+employee,main,0,All PMEs,1020,2.jobculture,Collaborative culture,log,.6081124368922756,.55173945,.66448545,
 employer,main,0,All employers,397,1.place,1-2 days WFH,log,0.4015526243,0.35068420,0.45242105,
 employer,main,0,All employers,397,2.place,3-4 days WFH,log,0.3085301457,0.25918903,0.35787126,
 employer,main,0,All employers,397,3.place,Fully remote,log,0.2291706660,0.17619642,0.28214491,
