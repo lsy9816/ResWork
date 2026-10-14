@@ -9,7 +9,8 @@
 | `latex/main-2.tex` | 발표자료. 고용주 값은 appended 결과로 교체. 아직 appended 결과가 없는 값은 이전(303개사) 값을 빨간색 `\Pend{}`로 표시 |
 | `latex/tables/` | 고용주 값이 들어간 표 6개(T_eqpay, T_org_pct, T_yardstick, T_gap, T_flexiload, T_concerns). Overleaf의 `tables/`에서 같은 이름의 파일만 교체 |
 | `scripts/make_figs_appended.py` | 고용주 그림 3개(F_org_eqpay, F_where_r5, F_meet_r5)를 다시 그리는 실행 파일. 교수님 `deck_support/scripts`의 figstyle/fig_main/fig_v2를 읽기 전용으로 사용 |
-| `scripts/fig_r5_appended.py` | 교수님 `fig_r5.py`의 복사본. 고용주 기대값만 appended 값으로 바꿈 |
+| `latex/parts/` | Dropbox 업로드 한도 때문에 `main-2.tex`를 프레임 경계에서 4개로 나눈 파일. Dropbox의 `latex/main-2.tex`는 이 4개를 `\input`하는 래퍼이고, 합치면 GitHub의 단일 파일 `main-2.tex`와 바이트 단위로 같음 |
+| `scripts/fig_r5_appended.py` | 교수님 `fig_r5.py`를 읽어서 메모리에서만 고용주 기대값을 appended 값으로 바꿔 실행(원본 파일은 수정하지 않음) |
 | `data/dce_eqpay.csv` | 그림용 동일임금 선택확률(PME 행은 원본 그대로, 고용주 행은 appended_clogit.xlsx main) |
 | `data/employer_channels_appended.csv` | F_where_r5용 집단별 값(appended_clogit.xlsx physical_1/2, creative_concern_1/0) |
 | `figures/` | 위 스크립트의 결과물. 처음에는 비어 있으니 아래 명령으로 생성 |

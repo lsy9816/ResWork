@@ -1,0 +1,640 @@
+% ==========================================================================
+% 23. THANK YOU   [short path; plain frame]
+% ==========================================================================
+\begin{frame}[plain,label=M-thanks]
+  % COMMENTS new M-thanks; mandate: large centred "Thank you", optional "Questions and discussion",
+  % the minimal SMU / joint-with-SNEF line, and only a small link to the backup index. No numbers.
+  % filll glue (as in \Backups) so the block sits centred above the bottom-right button.
+  % Polish pass, 7 Oct 2026 (DESIGN_PLAN s2 W5; G4): the title-page hierarchy, closing the talk in the same
+  % grammar: bold Navy line, 13 pt Ink line, a 3 cm Navy rule, then the author lines at \FsBody in Muted.
+  \vskip 0pt plus 1filll
+  {\centering
+    {\color{Navy}\fontsize{26}{31}\selectfont\bfseries Thank you\par}
+    \vspace{0.30cm}
+    {\color{Ink}\fontsize{13}{16}\selectfont Questions and discussion\par}
+    \vspace{0.40cm}
+    {\color{Navy}\rule{3cm}{0.8pt}\par}
+    \vspace{0.40cm}
+    {\color{Muted}\FsBody Seonghoon Kim $\cdot$ Singapore Management University\\
+      Joint work with the Singapore National Employers Federation (SNEF)\par}
+  \par}
+  \Backups{\BL{B-index}{Backup index}}
+  % Integrator, 7 Oct 2026: a plain frame has no footline, so the filll glue would set the button row on the
+  % paper's bottom edge; this fixed space keeps the button where the Madrid footer row sits on other frames.
+  % Polish pass: 0.40 -> 0.58 cm, so the button lands at the same height as on p2-p22.
+  \vspace*{0.58cm}
+\end{frame}
+\note{[Short path] Thank you; we welcome your questions and comments.}
+
+% ##########################################################################
+% BACKUP SLIDES (B-index order)
+% ##########################################################################
+\appendix
+\inbackuptrue
+
+\begin{frame}[t,label=B-index]{Backup index: likely questions}
+  % Polish pass: questions at the body size (10.5 pt), group heads at FsHead in bold Ink, as on
+  % B-index-all; top-aligned like B-index-all (no FrameTop, by the plan)
+  \setbeamerfont{itemize/enumerate body}{size=\fontsize{10.5}{12.8}\selectfont}
+  \begin{columns}[T,onlytextwidth]
+    \begin{column}{0.49\textwidth}
+      {\FsHead\color{Ink}Policy and practice\par}
+      \begin{itemize}\setlength{\itemsep}{0.12cm}
+        \item \BIi{B-tgfwar}{Did the Guidelines change outcomes?}
+        \item \BIi{B-legal}{Should FWA requests be legislated?}
+        \item \BIi{B-org-view}{Is this a burden for smaller firms?}
+        \item \BIi{B-pilot}{How would a compressed-week pilot run?}
+        \item \BIi{B-optD-items}{Why do some PMEs not ask?}
+        \item \BIi{B-followup}{What next, and with whose consent?}
+      \end{itemize}
+    \end{column}
+    \begin{column}{0.49\textwidth}
+      {\FsHead\color{Ink}The evidence\par}
+      \begin{itemize}\setlength{\itemsep}{0.12cm}
+        \item \BIi{B-career-who}{Is the career risk real?}
+        \item \BIi{B-why-org}{Are reservations about roles or concerns?}
+        \item \BIi{B-puzzle}{Is the compressed-week result a design artefact?}
+        % fixer pass 7 Oct 2026 (worker-03): not a pay-cut question
+        \item \BIi{B-org-salary}{Can employer reservations be priced?}
+      \end{itemize}
+      \vspace{0.16cm}
+      {\FsHead\color{Ink}The study\par}
+      \begin{itemize}\setlength{\itemsep}{0.12cm}
+        \item \BIi{B-validity}{Do stated choices predict behaviour?}
+        % fixer pass 7 Oct 2026 (mom_ps-06 c): B-governance is unlinked here until the PI confirms its facts in
+        % writing; it stays in B-index-all. Restore this line once B-governance is complete:
+        % item BIi B-governance: Who funds the study; who controls release?
+      \end{itemize}
+    \end{column}
+  \end{columns}
+  \DeckNavGlue\noindent\hfill{\usebeamerfont{button}\hyperlink{B-index-all}{\beamergotobutton{Full backup index}}\hspace{0.15cm}\hyperlink{M-conclusion}{\beamerreturnbutton{Conclusion}}\hspace{0.15cm}\hyperlink{M-thanks}{\beamerreturnbutton{Thank you}}}\par
+\end{frame}
+
+\begin{frame}[t,label=B-index-all]{Full backup index}
+  % Polish pass: 9 pt links, each in an mbox, separated by a muted dot; BH heads in bold Ink.
+  % The column breaks moved to balance the columns; the reading order, which sets the
+  % backup order in assemble_deck.py, is unchanged. Link labels are capitalised as index
+  % entries. The middle column is wider so that the Barriers line fits; the last column is
+  % the shortest, as the reading order leaves it only short groups. Leading 10.5 pt keeps
+  % 0.2 cm of slack above the button row (at 11 pt the middle column had none).
+  \fontsize{9}{10.5}\selectfont
+  \begin{columns}[T,onlytextwidth]
+    \begin{column}{0.32\textwidth}
+      \BH{Motivation and question}
+      \mbox{\BIi{B-laboursupply}{Labour supply}}\enspace\textcolor{Muted}{$\cdot$}\enspace \mbox{\BIi{B-talent}{Talent}}\par
+      \mbox{\BIi{B-triangulation}{Partners' evidence}}\enspace\textcolor{Muted}{$\cdot$}\enspace \mbox{\BIi{B-guidelines}{Guidelines}}\par
+      \mbox{\BIi{B-partners}{Partner positions}}\enspace\textcolor{Muted}{$\cdot$}\enspace \mbox{\BIi{B-legal}{Abroad}}\par
+      \BH{Framework}
+      \mbox{\BIi{B-intl}{Evidence elsewhere}}\enspace\textcolor{Muted}{$\cdot$}\enspace \mbox{\BIi{B-zones}{Zone rules}}\par
+      \BI{B-validity}{Validity of stated choices}
+      \BH{Data and design}
+      \mbox{\BIi{B-sample}{Sample}}\enspace\textcolor{Muted}{$\cdot$}\enspace \mbox{\BIi{B-industry}{Industries}}\enspace\textcolor{Muted}{$\cdot$}\enspace \mbox{\BIi{B-panel}{Panels}}\par
+      \mbox{\BIi{B-governance}{Governance}}\enspace\textcolor{Muted}{$\cdot$}\enspace \mbox{\BIi{B-cards}{Choice cards}}\par
+      \mbox{\BIi{B-paygaps}{Pay gaps}}\enspace\textcolor{Muted}{$\cdot$}\enspace \mbox{\BIi{B-hedonic}{Why not pay data}}\par
+      \BH{Method}
+      \mbox{\BIi{B-methods}{Equations}}\enspace\textcolor{Muted}{$\cdot$}\enspace \mbox{\BIi{B-eqpay}{Equal-pay shares}}\par
+      \BH{Practice today}
+      \mbox{\BIi{B-landscape}{Landscape}}\enspace\textcolor{Muted}{$\cdot$}\enspace \mbox{\BIi{B-setup}{Pathways}}\par
+    \end{column}
+    \begin{column}{0.35\textwidth}
+      \BH{PMEs}
+      \mbox{\BIi{B-emp-all}{All estimates}}\enspace\textcolor{Muted}{$\cdot$}\enspace \mbox{\BIi{B-remote-commute}{Commute}}\par
+      \mbox{\BIi{B-emp-benchmarks}{Benchmarks}}\enspace\textcolor{Muted}{$\cdot$}\enspace \mbox{\BIi{B-why-pmes}{All splits}}\par
+      \mbox{\BIi{B-emp-groups}{By group}}\enspace\textcolor{Muted}{$\cdot$}\enspace \mbox{\BIi{B-access}{Access}}\enspace\textcolor{Muted}{$\cdot$}\enspace \mbox{\BIi{B-emp-robust}{Checks}}\par
+      \BH{Employers}
+      \mbox{\BIi{B-org-yardstick}{Yardstick}}\enspace\textcolor{Muted}{$\cdot$}\enspace \mbox{\BIi{B-org-salary}{Salary lever}}\par
+      \mbox{\BIi{B-why-org}{Roles and concerns}}\enspace\textcolor{Muted}{$\cdot$}\enspace \mbox{\BIi{B-org-splits}{Splits chart}}\par
+      \mbox{\BIi{B-org-concerns}{Concerns}}\enspace\textcolor{Muted}{$\cdot$}\enspace \mbox{\BIi{B-org-view}{Own view; SMEs}}\par
+      \BI{B-industry-note}{No industry split}
+      \BH{Where the sides meet}
+      \mbox{\BIi{B-modelfree}{Raw choices}}\enspace\textcolor{Muted}{$\cdot$}\enspace \mbox{\BIi{B-puzzle}{Compressed week}}\par
+      \mbox{\BIi{B-pilot}{Pilot checklist}}\enspace\textcolor{Muted}{$\cdot$}\enspace \mbox{\BIi{B-flexiload}{Flexi-load}}\par
+      \BH{Barriers}
+      \mbox{\BIi{B-career-who}{Who expects it}}\enspace\textcolor{Muted}{$\cdot$}\enspace \mbox{\BIi{B-career}{Career risk}}\par
+      \mbox{\BIi{B-tgfwar}{On the Guidelines}}\enspace\textcolor{Muted}{$\cdot$}\enspace \mbox{\BIi{B-awareness}{Awareness}}\par
+      \mbox{\BIi{B-approvals}{Approvals}}\enspace\textcolor{Muted}{$\cdot$}\enspace \mbox{\BIi{B-approvals-tab}{Outcomes}}\enspace\textcolor{Muted}{$\cdot$}\enspace \mbox{\BIi{B-requestrate}{Request rate}}\par
+    \end{column}
+    \begin{column}{0.29\textwidth}
+      \BH{Limits and next steps}
+      \mbox{\BIi{B-limits}{Limits}}\enspace\textcolor{Muted}{$\cdot$}\enspace \mbox{\BIi{B-nextsteps}{Next steps}}\enspace\textcolor{Muted}{$\cdot$}\enspace \mbox{\BIi{B-followup}{Follow-up}}\par
+      \BH{Options}
+      \mbox{\BIi{B-optA}{Option A}}\enspace\BIi{B-optB}{B}\enspace\BIi{B-optC}{C}\enspace\BIi{B-optD}{D}\enspace\textcolor{Muted}{$\cdot$}\enspace \mbox{\BIi{B-optD-items}{D: items}}\par
+      \BH{Technical appendix}
+      \mbox{\BIi{B-why-org-tests}{20 employer tests}}\enspace\textcolor{Muted}{$\cdot$}\enspace \mbox{\BIi{B-language}{Wording}}\par
+      \mbox{\BIi{B-org-pct}{Employer \% of salary}}\enspace\textcolor{Muted}{$\cdot$}\enspace \mbox{\BIi{B-gap}{Gap}}\par
+      \BH{PME groups}
+      \mbox{\BIi{B-ra-gender}{Gender}}\enspace\textcolor{Muted}{$\cdot$}\enspace \mbox{\BIi{B-ra-age}{Age}}\enspace\textcolor{Muted}{$\cdot$}\enspace \mbox{\BIi{B-ra-care}{Care}}\par
+      \mbox{\BIi{B-ra-role}{Role}}\enspace\textcolor{Muted}{$\cdot$}\enspace \mbox{\BIi{B-ra-edu}{Education}}\par
+      \BH{PME checks}
+      \mbox{\BIi{B-ra-sameside}{Same-side}}\enspace\textcolor{Muted}{$\cdot$}\enspace \mbox{\BIi{B-ra-trim}{Trim}}\par
+    \end{column}
+  \end{columns}
+  \DeckNavGlue\noindent\hfill{\usebeamerfont{button}\hyperlink{B-index}{\beamergotobutton{Likely questions}}\hspace{0.15cm}\hyperlink{M-thanks}{\beamerreturnbutton{Thank you}}}\par
+\end{frame}
+
+% ==========================================================================
+% Motivation and question
+% ==========================================================================
+\begin{frame}[t,label=B-laboursupply]{Keeping people in work matters more}
+  % [P6] LFPR 67.9% (2025); support ratio 3.2 (Jun 2026) to 2.7 (2030, projected); 133,500 to 72,500 mainly to give care;
+  % female LFPR 25-64 80.5%; [P5] fewer than half (COS 2026, data for 2024); 5.9% vs 13.7%, women 25-64, share of all women
+  \FrameTop
+  \begin{columns}[T,onlytextwidth]
+    \begin{column}{0.49\textwidth}
+      \BigStat{Navy}{67.9\%}{resident participation, 2025 (fourth straight fall)}
+      \BigStat{Navy}{3.2 \ensuremath{\rightarrow} 2.7}{residents 20--64 per resident 65+, 2026 to 2030 (projected)}
+      \BigStat{Navy}{133,500 \ensuremath{\rightarrow} 72,500}{outside the labour force mainly to give care, 2019 to 2025}
+    \end{column}
+    \begin{column}{0.49\textwidth}
+      \BigStat{Navy}{80.5\%}{female participation, ages 25--64 (2025)}
+      \BigStat{Navy}{$<$ half}{who needed part-time work got it (2024; COS 2026)}
+      \BigStat{Navy}{5.9\% vs 13.7\%}{share of all women 25--64 in part-time work: Singapore (2025) vs OECD (2024)}
+    \end{column}
+  \end{columns}
+  % [P6] 1.48 vacancies per unemployed person, Jun 2026; [S1] sample = PMEs in or seeking work (Lead decision 13)
+  % TODO(PI): re-check LFS Advance Release 2026 and LMR 3Q 2026 before the meeting (EB s14)
+  % Check date: P6 fact-checked 6 Oct 2026 (EB s14), fixer pass 7 Oct 2026 (mom_ps-10)
+  \SourceNote{\textbf{Sources:} MRSD Labour Force in Singapore 2025; Population in Brief 2026; MOM COS 2026; Labour Market Report 2Q 2026 (1.48 vacancies per unemployed person, Jun 2026). We survey PMEs in or seeking work, not carers outside the labour force. Checked 6 Oct 2026.}
+  \BackTo{M-motivation}{Motivation}
+\end{frame}
+
+\begin{frame}[t,label=B-talent]{What FWAs offer firms seeking talent}
+  \FrameTop
+  % polish pass (BKb): list frames with room use the 9.5 pt backup body (as the Body macro), items 0.08 cm apart
+  \setbeamerfont{itemize/enumerate body}{size=\fontsize{9.5}{11.6}\selectfont}
+  \begin{columns}[T,onlytextwidth]
+    \begin{column}{0.48\textwidth}
+      \PanelTitle{Navy}{What we observe}
+      % [B3] 52%, 34%, 10%; [B2] 67%; [E1, E2, E5] 7-10%, about 7%; [E13, S6] 3 in 4 at 17-33% gaps
+      \begin{itemize}\setlength{\itemsep}{0.08cm}
+        \item \Pend{52\%} of surveyed firms had difficulty filling PME roles last year
+        \item \Pend{67\%} say FWAs help attract and retain talent; \Pend{34\%} plan to expand them
+        \item PMEs value hybrid at \ap 7--10\% of pay, a compressed week \ap 7\% (indicative)
+        \item Pay comes first: at 17--33\% gaps, 3 in 4 chose the better-paid offer
+      \end{itemize}
+    \end{column}
+    \begin{column}{0.48\textwidth}
+      \PanelTitle{Navy}{Elsewhere}
+      % [P4] 65.9%, employer-reported, mid-2024; [P7] six-month trial, quits down by one-third
+      \begin{itemize}\setlength{\itemsep}{0.08cm}
+        \item Singapore: 65.9\% of firms offering scheduled FWAs report better retention (employer-reported, mid-2024)
+        \item A six-month hybrid trial abroad cut quits by one-third
+      \end{itemize}
+      \vspace{0.12cm}
+      \PanelTitle{Navy}{What we cannot say}
+      \begin{itemize}\setlength{\itemsep}{0.08cm}
+        \item Whether firms offering FWAs hire faster or keep staff longer
+      \end{itemize}
+    \end{column}
+  \end{columns}
+  \SourceNote{FWAs add to the reward package; not a basis for setting pay.}
+  \BackToTwo{M-motivation}{Motivation}{M-employers}{Employers}
+\end{frame}
+
+\begin{frame}[t,label=B-triangulation]{Partners' evidence and ours}
+  % [P3, P4, P8, P8b, P9, P9b, P15] vs our [D6, D6x, D7, D7b, D7c, B2, M23]
+  \FrameTop % first body token (centring; never a frame subtitle)
+  {\fontsize{8.5}{10.2}\selectfont
+  \renewcommand{\arraystretch}{1.10}
+  \begin{tabularx}{\linewidth}{@{}>{\raggedright\arraybackslash}p{3.0cm}>{\raggedright\arraybackslash}X>{\raggedright\arraybackslash}X@{}}
+    \toprule
+    \textbf{Source} & \textbf{They found} & \textbf{We find}\\
+    \midrule
+    % [P3] about 94% approved, 18.5% formal; [D7] declined 4.4 [7.2], a lower bound [D7b]
+    \textbf{MOM, Working Conditions 2024} & \ap 94\% of requests approved; 18.5\% ask formally & 4--7\%\dg\ of PMEs' formal requests declined outright (a lower bound)\\ \RowSep
+    % [P4] employer-reported shares among firms offering scheduled FWAs; [B2] 67%
+    \textbf{MOM, CoE 2024} & Firms with scheduled FWAs report gains: engagement 69.5\%, retention 65.9\%, productivity 59.9\% & \Pend{67\%} of employers: FWAs help attract and retain talent\\ \RowSep
+    % [P8, P8b] 36%, 58%, 89%; [M23] 44.6 [37.1]; [D6x] 83 [77]; [D6] 55 [44]; [D7c] 95.6 [92.8]
+    \textbf{PAP Women's Wing--NTUC (2025)}\textsuperscript{a} & 36\% name stigma the main concern; 58\% aware; 89\% of formal applicants approved, fully or with changes & 37--45\%\dg\ expect a career penalty; 77--83\%\dg\ aware (44--55\%\dg\ familiar); 93--96\%\dg\ of formal requests approved, fully or partly\\ \RowSep
+    % [P9b, P9] 81% prepared; 22% thought they must approve all; [D6] employers familiar 53%, heard but not familiar 40%
+    \textbf{SUSS$\times$SNEF (2024)} & 81\% felt prepared; 22\% thought they must approve every request & \Pend{53\%} of employers familiar; \Pend{40\%} more have heard of them\\
+    \bottomrule
+  \end{tabularx}\par}
+  % [P15] MOM PQ 2936, 9 Sep 2026: about 6% of resident FWA users reported a setback in 2025; not comparable with M23
+  \SourceNote{\textsuperscript{a}Online, N = 1,508; sampling not published. MOM (PQ, 2026): \ap 6\% of FWA users report a 2025 career setback (experience, not expectation). \DgNote\ Populations and questions differ: read as direction.}
+  \BackToTwo{M-motivation}{Motivation}{M-barriers}{Barriers}
+\end{frame}
+
+% Round 5: receives the Guidelines process strip and the MOM indicators that
+% left M-question (PI directive 2). The three MOM figures are not one funnel:
+% their definitions and FWA types differ (EB P3).
+\begin{frame}[t,label=B-guidelines]{The Guidelines: process, not outcome}
+  % [P1] in effect 1 Dec 2024; employees past probation, all employers; request in writing by default, paras 10-12;
+  % employer properly considers it on business needs, case by case, Table 1; written decision within 2 months with
+  % the reason if rejecting, paras 21-22; process, not outcome: Workgroup Rec. 2 (verified V-06; EB P1)
+  \FrameTop % first body token (centring; never a frame subtitle)
+  {\fontsize{9}{11}\selectfont\renewcommand{\arraystretch}{1.12}%
+  \begin{tabularx}{\linewidth}{@{}>{\RaggedRight\arraybackslash}X@{\hspace{0.12cm}}c@{\hspace{0.12cm}}>{\RaggedRight\arraybackslash}X@{\hspace{0.12cm}}c@{\hspace{0.12cm}}>{\RaggedRight\arraybackslash}X@{}}
+    \toprule
+    \textbf{\textcolor{Navy}{1.}\ Request} & \textcolor{Muted}{$\rightarrow$} & \textbf{\textcolor{Navy}{2.}\ Proper consideration} & \textcolor{Muted}{$\rightarrow$} & \textbf{\textcolor{Navy}{3.}\ Written decision}\\
+    In writing by default & & On business needs & & Within 2 months; reasons if declined\\ % [P1]
+    \bottomrule
+  \end{tabularx}\par}
+  \vspace{0.10cm}
+  % [P1] reasonable grounds include cost, productivity and feasibility; custom or disbelief in FWAs cannot be one (para 19, Table 4)
+  % [P17] MOM 2026; short form as on B-legal (verified wording: FAQ, 17 Jun 2026; COS 2026 speech, 3 Mar 2026)
+  {\fontsize{9}{11}\selectfont\RaggedRight In effect from 1 Dec 2024 for employees past probation. Cost, productivity and feasibility can be reasonable grounds to decline; custom or disbelief in FWAs cannot. TAFEP takes an educational approach, guiding employers to comply (MOM, 2026).\par}
+  \vspace{0.10cm}
+  \PanelTitle{Navy}{MOM indicators, 2024 data: not one funnel; definitions differ} % [P3]
+  % [P3] MRSD, Employees' Working Conditions, May 2026, data for 2024, full-time resident employees aged 25-64:
+  % 84.5% of those who needed a scheduled FWA got at least one they needed; about 94% approved, stated with no base;
+  % 18.5% asked formally and 26.3% informally (Chart 5, other FWA types than the 84.5%, so not one funnel; do not add)
+  \begin{columns}[T,onlytextwidth]
+    \begin{column}{0.32\textwidth}
+      \BigStat{Navy}{84.5\%}{who needed a scheduled FWA got one they needed} % [P3]
+    \end{column}
+    \begin{column}{0.32\textwidth}
+      \BigStat{Navy}{\ap 94\%}{of requests approved; base not defined} % [P3]
+    \end{column}
+    \begin{column}{0.32\textwidth}
+      \BigStat{Navy}{18.5\%}{of those in need asked formally; 26.3\% informally} % [P3]
+    \end{column}
+  \end{columns}
+  \vspace{0.06cm}
+  % [P3] full-time residents 25-64; almost entirely before the Guidelines; MOM's frictions reading; [P2] firms are not required to report requests, no administrative counts
+  % [P4, P4s] 72.7% in Jun 2024 (CoE), 66.4% in Jun 2025 (Supplementary Survey); establishments with 25+ staff, private plus
+  % the public sector; no causal reading (Lead decision 1, EB s14). Fixer pass 7 Oct 2026: need not report (P2); establishments (P4);
+  % incl. public sector is on F_motivation's title; here it would add a line (B-guidelines overflowed by 0.01 cm)
+  {\fontsize{8.5}{10.2}\selectfont\RaggedRight Full-time residents aged 25--64, almost entirely before the Guidelines; MOM reads the gap as ``frictions'', not employer resistance. Firms need not report requests to MOM. Establishments (25+ staff) offering a scheduled FWA: 72.7\% (Jun 2024), 66.4\% (Jun 2025; another MOM survey; not attributed to the Guidelines).\par}
+  % TODO(PI): re-check the PQ replies of the Sep-Nov 2026 sittings and CoE 2025 before the meeting (EB s14)
+  % Check date: EB s14 fact-check log, 6 Oct 2026
+  \SourceNote{\textbf{Sources:} Tripartite Guidelines (2024); MRSD (May and Jun 2026); MOM PQ replies (2025--26); COS 2026. Checked 6 Oct 2026.}
+  \BackToTwo{M-question}{Question}{M-motivation}{Motivation}
+\end{frame}
+
+\begin{frame}[t,label=B-partners]{What each partner has said}
+  \FrameTop
+  \setbeamerfont{itemize/enumerate body}{size=\fontsize{9}{11}\selectfont}
+  \begin{itemize}\setlength{\itemsep}{0.10cm}
+    % [P3] MOM's frictions reading; [P18] COS 2026 too-blunt remark (FACTCHECK F31)
+    \item \textbf{MOM:} reads the need-request gap as ``frictions \ldots\ rather than employer resistance''; at COS 2026 called a proposal to make the Guidelines law, and FWAs a presumptive right for parents of young children, ``too blunt'', as business needs differ by industry and role.
+    % [P9b] SNEF three principles, 23 Apr 2024; SUSS x SNEF: 367 firms, Sep 2024, 81% prepared
+    \item \textbf{SNEF:} endorses the Guidelines on three principles: outcomes stay the employer's prerogative; FWAs must not harm productivity or service quality; not every role suits every FWA. SUSS$\times$SNEF (367 firms, 2024): 81\% felt prepared.
+    % [P12] NTUC in MOM's release of 16 Apr 2024; [P8] online survey, Nov-Dec 2025, N = 1,508; 36% primary concern, most-cited
+    \item \textbf{NTUC:} FWA access is often the main consideration for caregivers, women and senior workers in staying in or returning to work. PAP Women's Wing--NTUC survey (online, N = 1,508; sampling not published): 36\% named stigma their primary concern in requesting an FWA (most cited).
+  \end{itemize}
+  \SourceNote{\textbf{Sources:} MRSD (2026); MOM COS 2026 (3 Mar 2026); SNEF statement (23 Apr 2024); SUSS--SNEF (2025); MOM release (16 Apr 2024); PAP Women's Wing, NTUC (Mar 2026).}
+  \BackTo{M-question}{Question}
+\end{frame}
+
+\begin{frame}[t,label=B-legal]{FWA request rules elsewhere}
+  \FrameTop
+  \setbeamerfont{itemize/enumerate body}{size=\fontsize{9}{11}\selectfont}
+  % Verified wording from FACTCHECK_REPORT F28 F31 F32 F33 (slide_patches.md s1); [P1, P17] Singapore; [P20] foreign law; [P18, P19] too blunt, acrimonious
+  % Declutter: the full P17 wording (could include educational workshops) stays on B-guidelines.
+  \begin{itemize}\setlength{\itemsep}{0.10cm}
+    \item \textbf{Singapore:} tripartite guidelines on the process, not the outcome; TAFEP takes an educational approach.
+    % [P20] GB: Employment Rights Act 2025 changes due in 2027, not yet in force (DBT timeline, 25 Sep 2026)
+    \item \textbf{Great Britain:} statutory right to request from day one (since Apr 2024); decision within 2 months; refusal only on eight listed business reasons; a tribunal if a request is not handled reasonably, not merely if refused. Employment Rights Act 2025 changes due in 2027.
+    % [P20] Australia, Fair Work Act 2009 ss65-65C; New Zealand, Employment Relations Act 2000 Part 6AA; Workgroup s2.4.1
+    \item \textbf{Australia:} eligible employees (e.g.\ parents, carers, 55+); written reply within 21 days; refusal only on reasonable business grounds; the Fair Work Commission can arbitrate and, as a last resort, order it granted. \textbf{New Zealand:} any employee; reply within 1 month; eight listed grounds; disputes cover process only. In both, most requests are informal.
+    % [P19] acrimonious, Workgroup s3.2.2; [P18] COS 2026 too blunt, with its full object
+    \item \textbf{Why guidelines here:} the Workgroup judged legislation risks an acrimonious workplace culture; at COS 2026, MOM called legislating the Guidelines, with a presumptive FWA right for parents of young children, too blunt.
+  \end{itemize}
+  % TODO(PI): re-check the UK DBT timeline (Employment Rights Act 2025) in Jan 2027 (EB P20, s14)
+  % Check date: EB P20 sources GOV.UK updated 5 Oct 2026, DBT timeline 25 Sep 2026; EB s14 fact-check log, 6 Oct 2026
+  \SourceNote{\textbf{Sources:} MOM COS 2026, FAQ (Jun 2026); Workgroup report (2024); gov.uk/flexible-working; Fair Work Act 2009 ss65--65C; Employment Relations Act 2000 (NZ) Part 6AA. Checked 6 Oct 2026.}
+  \BackToTwo{M-options}{Options}{M-question}{Question}
+\end{frame}
+
+% ==========================================================================
+% Framework
+% ==========================================================================
+\begin{frame}[t,label=B-intl]{Evidence elsewhere: concerns and trials}
+  \FrameTop
+  \setbeamerfont{itemize/enumerate body}{size=\fontsize{9.5}{11.6}\selectfont}
+  \begin{itemize}\setlength{\itemsep}{0.14cm}
+    % [R16, L1] IZA DP 2023: 2.9% vs 21%, pooled; ILR Review 2026: 5.2% hybrid, 24.6% fully remote; Lead decision 4 (EB s14)
+    \item \textbf{Poland, two-sided experiment:} workers give up 2.9\% of pay for remote work; employers expect a 21\% wage cut, mostly for lost productivity (Lewandowski et al., IZA DP 16041, 2023; hybrid and fully remote pooled). ILR Review (2026) version: gaps \ap 5\% (hybrid), 25\% (fully remote).
+    % [P7, V6] six-month RCT, 1,612 graduates; quits down by a third; promotions n.s. over two years; managers -2.6% to +1.0%
+    \item \textbf{Randomised hybrid trial} (two days a week; 1,612 graduates, one Chinese firm): quits fell by one-third over six months; over two years, reviews were unaffected and promotions showed no statistically significant difference; managers' productivity view: $-$2.6\% to +1.0\% (Bloom, Han \& Liang, Nature 2024).
+    % [P4] employer-reported shares, mid-2024
+    \item \textbf{Singapore firms offering scheduled FWAs:} 69.5\% report better engagement, 65.9\% retention, 59.9\% productivity (employer-reported, mid-2024; MRSD).
+    % [L1] Barrero, Bloom & Davis 2023; Emanuel & Harrington 2024 (FACTCHECK F25)
+    \item \textbf{Fully remote:} evidence is mixed and job-dependent; several studies find lower productivity, partly reflecting who selects into remote jobs (Barrero, Bloom \& Davis 2023; Emanuel \& Harrington 2024).
+  \end{itemize}
+  % [P7] co-author disclosure
+  \SourceNote{Other settings; read as context. Trip.com trial: co-author James Liang co-founded and chairs Trip.com.}
+  \BackToTwo{M-framework}{Framework}{M-discussion}{Discussion}
+\end{frame}
+
+\begin{frame}[t,label=B-zones]{How the zones are set}
+  % Lead decision 9: A Common ground, B Depends on the role, C Far apart; [Q5] 47 (appended); [M19] no firm group;
+  % [Q10] 49% for 1-2 days, 41% for 3-4 days, 30% remote where only some or few roles need presence; [R3] beyond range
+  % C rule, fixer pass 7 Oct 2026 (editor-01): [Q2, Q3] 37% and 28% overall; [Q10] 41% and 30% where only some or few
+  % roles need presence; [M13] 48% [38, 57] and 43% [32, 55] where neither a presence need nor a creativity concern
+  \FrameTop % first body token (centring; never a frame subtitle)
+  % Polish pass: zone letters as the deck's deckdisc badges, as on M-framework and M-discussion;
+  % rows without a letter are indented by the badge width so the names align
+  \tikzset{zonebadge/.style={deckdisc,minimum size=0.40cm,font=\fontsize{8.5}{10}\selectfont\bfseries}}
+  {\fontsize{8.5}{10.2}\selectfont
+  \renewcommand{\arraystretch}{1.15}
+  \begin{tabularx}{\linewidth}{@{}>{\raggedright\arraybackslash}p{3.2cm}>{\raggedright\arraybackslash}X>{\raggedright\arraybackslash}p{3.0cm}@{}}
+    \toprule
+    \textbf{Zone} & \textbf{Rule (equal-pay share vs 50\%)} & \textbf{Arrangements}\\
+    \midrule
+    \makebox[0.52cm][l]{\tikz[baseline=(z.base)]\node[zonebadge](z){A};}\textbf{Common ground} & PMEs $>$50\%; employers 47\%, not distinguishable from 50\%; \Pend{no firm group shows a detectable penalty} & Compressed week\\ \RowSep
+    \makebox[0.52cm][l]{\tikz[baseline=(z.base)]\node[zonebadge](z){B};}\textbf{Depends on the role} & PMEs $>$50\%; employers below 50\%, but 48\% in firms where only some or few roles need presence & 1--2 days WFH\\ \RowSep
+    \makebox[0.52cm][l]{\tikz[baseline=(z.base)]\node[zonebadge](z){C};}\textbf{Far apart} & PMEs $>$50\%; employers below 50\% overall (31\%, 23\%) and where only some or few roles need presence (35\%, 26\%); no detectable penalty where neither a presence need nor a creativity concern (\Pend{48\%, 43\%}; preliminary) & 3--4 days WFH; fully remote\\ \RowSep % [Q2, Q3, Q10] appended; [M13] 303-firm values
+    \makebox[0.52cm]{}\textbf{Little at stake} & PMEs \ap 50\% & Staggered hours\\ \RowSep
+    \makebox[0.52cm]{}\textbf{Pay for hours} & Fewer hours at the same pay; employer values \ap pro-rata & Part-time; reduced load\\
+    \bottomrule
+  \end{tabularx}\par}
+  % [Q16] p = .22, .061, .006; [Q10c] p = .002; EB s9: role splits use one pay slope, free-slope check pending
+  \SourceNote{Descriptive labels, not one ruler across sides; role splits preliminary (one pay slope). Employer tests: \Pend{compressed vs 1--2 days p = .22; 1--2 vs 3--4 days p = .06; 3--4 days vs remote p = .006; compressed vs 1--2 days in presence-heavy firms p = .002}.}
+  \BackToTwo{M-meet}{Two sides}{M-framework}{Framework}
+\end{frame}
+
+\begin{frame}[t,label=B-validity]{Do stated choices predict real choices?}
+  \FrameTop
+  % polish pass (BKb): backup table style (TableFont, 4 pt gaps, RowSep); study names bold on line 1 and
+  % the outlet on line 2, so no name breaks mid-citation; closing line bold Ink with a Navy link
+  \setbeamerfont{itemize/enumerate body}{size=\fontsize{9}{11}\selectfont}
+  {\TableFont\setlength{\tabcolsep}{4pt}\renewcommand{\arraystretch}{1.05}%
+  \begin{tabularx}{\linewidth}{@{}>{\RaggedRight}p{3.6cm}>{\RaggedRight\arraybackslash}X@{}}
+    \toprule
+    % [V1] 977 of 1,738 = 56% matched, up to three years later; kept vs lost 4.1 pp at the 1% level; gained 1.7 pp n.s.
+    \textbf{Maestas et al.}\newline (AER 2023) & US workers, up to 3 years on: 977 of 1,738 (56\%) matched; kept vs lost an amenity: +4.1 pp (1\% level); gained: +1.7 pp (n.s.)\\ \RowSep
+    % [V2] 59 of 71 follow-up respondents working; about four years; 6 links, 3 significant at 5%; joint p = .012
+    \textbf{Wiswall \& Zafar}\newline (QJE 2018) & NYU students, about 4 years on (59 working): 6 of 6 links to actual jobs with the expected sign, 3 significant at 5\%; joint test of no link p = .012\\ \RowSep
+    % [V3] survey 8.4% reweighted to field commute times vs field 7.8%; scheduling 2.5% vs 2.8%; US call-centre applicants
+    \textbf{Mas \& Pallais}\newline (AER 2017) & Call-centre applicants: WFH 8.4\% of pay, survey (reweighted to field commute times) vs 7.8\%, field; scheduling 2.5\% vs 2.8\%\\ \RowSep
+    % [V4] paired conjoint, best of five designs: within 2 pp on average across 21 effects; 21% vs 37% rejection
+    \textbf{Hainmueller et al.}\newline (PNAS 2015) & Swiss voters: paired conjoint (best of 5 designs) within 2 pp of referendum effects on average (21 effects); levels missed (21\% vs 37\% rejection)\\ \RowSep
+    % [V5] pooled specificity 34-52%
+    \textbf{Health DCE meta-analyses} & Opting in predicted well; opting out weakly (pooled specificity 34--52\%)\\
+    \bottomrule
+  \end{tabularx}\par}
+  \vspace{0.10cm}
+  \begin{itemize}\setlength{\itemsep}{0.04cm}
+    \item \textbf{Rankings hold best:} direction right and, in one direct test, relative size; our ranking is the firmest result.
+    \item \textbf{Levels less so:} rates predicted less well, money values mixed; our \% of pay values are indicative.
+    % [S6] every pay gap 17-33%
+    \item \textbf{Our design:} one cross-section; pay gaps of 17--33\% only; no link yet to behaviour.
+  \end{itemize}
+  \vspace{0.10cm}
+  % COMMENTS B-validity, verbatim closing line; the follow-up covers PMEs only, with no employer consent [F1, F2]
+  {\fontsize{9}{11}\selectfont\RaggedRight\color{Ink}\textbf{No cited study validates employer hiring choices of this form;\\ our \hyperlink{B-followup}{\textcolor{Navy}{follow-up}} addresses only part of that gap.}\par}
+  % [V1] split by amenity status; averages across 12 amenities
+  \SourceNote{Maestas: split by amenity status; mean of 12 amenities.}
+  \BackToTwo{M-estimation}{Estimation}{M-robust}{Robustness}
+\end{frame}
+
+% ==========================================================================
+% Data and design
+% ==========================================================================
+\begin{frame}[t,label=B-sample]{Who answered}
+  % [S1-S4]; [S2] people involved in PME hiring or manpower decisions; [S3] 12% of firms have 50 or fewer staff
+  \FrameTop
+  \Fig{F_sample}{4.8cm}
+  % [S1] 73 with no panel recorded; [S2] hiring or manpower decisions; [S3] 12%
+  \SourceNote{PMEs: citizens and PRs in or seeking PME roles, two online panels (73 with no panel recorded). Employers: people involved in PME hiring or manpower decisions; \Pend{12\%} of their firms have 50 or fewer staff. Unweighted.}
+  \BackToTwo{M-design}{Design}{M-data}{Data}
+\end{frame}
+
+% [S1, S2] n = 1,004 employed PMEs and 303 employer respondents (F_industry not yet redrawn for the appended 397); EB s10 industry cells
+\BackupFig{B-industry}{Respondents span the main industries}{F_industry}{5.2cm}{M-data}{Data}{Employed PMEs (n = 1,004), employers (\Pend{n = 303}). Unweighted.}
+
+\begin{frame}[t,label=B-panel]{Weaker panel: choice results hold}
+  % [S1, E15, Q14, D1, D6, B5]
+  \FrameTop
+  \Tab{T_panel}
+  \BackToTwo{M-data}{Data}{M-robust}{Robustness}
+\end{frame}
+
+% Round 5 (COMMENTS Top-10 #10; ROUND5_SPEC s5): governance facts must come from the PI in writing.
+% Every [PI to confirm] line is a placeholder; do not infer or invent its content.
+\begin{frame}[t,label=B-governance]{Study governance}
+  % TODO(PI): replace each [PI to confirm] with a plain statement agreed in writing by the partners before any external use.
+  % [G0] IRB exemption number and date; title-page line: joint work with SNEF (PI revision 3, LEAD_DECISIONS_v3)
+  % [S9] DCE instructions in both questionnaires: results will be used by SNEF to inform workplace flexibility policy
+  \FrameTop % first body token (centring; never a frame subtitle)
+  {\fontsize{9.5}{11.6}\selectfont\renewcommand{\arraystretch}{1.08}%
+  \begin{tabularx}{\linewidth}{@{}>{\RaggedRight}p{5.4cm}>{\RaggedRight\arraybackslash}X@{}}
+    \toprule
+    \textbf{Item} & \textbf{Status}\\
+    \midrule
+    Ethics (SMU IRB) & Category 1, exempt from further review: IRB-26-069-E012(326), 19 Mar 2026\\ % [G0]
+    Partnership & Joint work with SNEF\\
+    Funding & \textbf{[PI to confirm]}\\
+    Survey and design roles & \textbf{[PI to confirm]}\\
+    Custody of identifiable data & \textbf{[PI to confirm]}\\
+    Custody of de-identified data & \textbf{[PI to confirm]}\\
+    Who ran the analysis & \textbf{[PI to confirm]}\\
+    Right to publish & \textbf{[PI to confirm]}\\
+    Partner delay or veto rights & \textbf{[PI to confirm]}\\
+    \bottomrule
+  \end{tabularx}\par}
+  \SourceNote{Both surveys told respondents that SNEF would use the results to inform workplace flexibility policy. Items marked [PI to confirm] need written agreement before external use.}
+  \BackToTwo{M-data}{Data}{M-conclusion}{Conclusion}
+\end{frame}
+
+\begin{frame}[t,label=B-cards]{Nearly the same cards on both sides}
+  % [S5, S6, S6b, S7]; turnover levels [R8, R9]
+  \FrameTop % first body token (centring; never a frame subtitle)
+  {\fontsize{8.5}{10.2}\selectfont
+  \renewcommand{\arraystretch}{1.10}
+  \begin{tabularx}{\linewidth}{@{}>{\raggedright\arraybackslash}p{2.6cm}>{\raggedright\arraybackslash}X>{\raggedright\arraybackslash}X@{}}
+    \toprule
+    \textbf{Attribute} & \textbf{\color{Employee}PMEs (job offers)} & \textbf{\color{Employer}Employers (candidates)}\\
+    \midrule
+    \textbf{Salary} & Own salary $\times$ multiplier & Latest PME-hire salary $\times$ multiplier\\ \RowSep
+    \textbf{Location} & Onsite; 1--2 WFH days a week; 3--4 days; fully remote & \textcolor{Muted}{Same}\\ \RowSep
+    \textbf{Schedule} & Fixed 9am--6pm; staggered; compressed 4-day week (same hours, longer days) & \textcolor{Muted}{Same}\\ \RowSep
+    \textbf{Workload} & Full-time (35--44 h); \emph{job sharing (4 days)}; part-time ($<$35 h) & Full-time; \emph{reduced load (4 days)}; part-time\\ \RowSep
+    \textbf{Risk} & Job loss (low / moderate / high) & Turnover (low $<$10\% / moderate / high $>$20\%)\\ \RowSep
+    \textbf{Other} & Culture; commute & Culture\\
+    \midrule
+    % [S5] 6 tasks, 2 options; [S6, S6b] multipliers, closest pairs never drawn, 17-33%; 10 versions
+    \textbf{Design} & \multicolumn{2}{>{\raggedright\arraybackslash}p{11.2cm}}{6 forced choices between 2 options; each pair differs in salary and two attributes, the rest held at the respondent's own practice. Multipliers 0.80--0.95 vs 1.05--1.20, closest pairs never drawn: every gap is 17--33\%. 10 versions.}\\
+    \bottomrule
+  \end{tabularx}\par}
+  \SourceNote{Employers were told both candidates are equally qualified.}
+  \BackTo{M-design}{Design}
+\end{frame}
+
+\begin{frame}[t,label=B-paygaps]{Every pair differed in pay by 17--33\%}
+  % [S6, S6b] 17-33%; [E1-E7, E3] PME values about 4-15; [R3] employer remote beyond 33; EB s3b additivity
+  \FrameTop
+  \Fig{F_paygaps}{4.5cm}
+  \SourceNote{Pay gap within each choice pair. PME values (\ap 4--15\% of pay) lie below this band and \Pend{the employer fully remote estimate} above it: both extrapolate beyond the gaps shown. Equal-pay choices skip the pay slope but assume effects add up.}
+  \BackToTwo{M-design}{Design}{M-estimation}{Estimation}
+\end{frame}
+
+% [H1] FWAs sit in better-paid jobs; usable only as sorting, never as a price
+\BackupTab{B-hedonic}{Pay data cannot price flexibility}{T_hedonic}{M-design}{Design}{Log salary on current arrangement, controlling for age, gender, education, residency; employed PMEs. It shows who has flexibility (FWAs sit in better-paid jobs), not its worth; the experiment isolates the trade-off.}
+
+% ==========================================================================
+% Method
+% ==========================================================================
+% Round 5: receives the equations from M-estimation (PI directive 6; ROUND5_SPEC s5). The employer
+% free-slope check is NOT available: stated as pending, never as run (EB s9; mandate).
+\begin{frame}[t,label=B-methods]{Equations and inference}
+  % EB s3b: conditional logit per side, log salary plus one indicator per arrangement level; SEs clustered by respondent
+  \FrameTop % first body token (centring; never a frame subtitle)
+  {\centering\fontsize{10}{12}\selectfont $U_{ijt}=\beta_w\ln w_{ijt}+\sum_k\beta_k x_{kijt}+\varepsilon_{ijt}$\par}
+  \vspace{0.04cm}
+  {\centering\color{Muted}\fontsize{8.5}{10.2}\selectfont Conditional logit per side; SEs clustered by respondent.\par}
+  \vspace{0.08cm}
+  \begin{columns}[T,onlytextwidth]
+    \begin{column}{0.48\textwidth}
+      \PanelTitle{Navy}{Per cent of pay: $100\,[1-\exp(-\beta_k/\beta_w)]$}
+      % [S6] gaps shown 17-33%; [RB1] a which-paid-more indicator fits about as well on both sides; EB s3 header
+      {\fontsize{9}{11}\selectfont\RaggedRight Pay a PME would give up, or the discount an employer would need. Indicative: gaps shown were 17--33\%, and a which-paid-more indicator fits about as well.\par}
+    \end{column}
+    \begin{column}{0.48\textwidth}
+      \PanelTitle{Navy}{Equal-pay share: $\varLambda(\beta_k)=e^{\beta_k}/(1+e^{\beta_k})$}
+      % EB s3b invlogit, no salary coefficient, 50% = no preference; EB s10 seven arrangements: at most 1 point (employers), 3 (PMEs);
+      % fixer pass 7 Oct 2026 (fact_audit WRONG 4): the scope, for the seven arrangements, is now on the slide (culture moves 4.9, Q9)
+      {\fontsize{9}{11}\selectfont\RaggedRight How often $k$ wins at equal pay; 50\% = no preference, within a side. No pay slope: for the seven arrangements, moves \Pend{$\le$1 point (employers)}, $\le$3 (PMEs) across pay models; assumes effects add up.\par}
+    \end{column}
+  \end{columns}
+  \vspace{0.06cm}
+  \setbeamerfont{itemize/enumerate body}{size=\fontsize{9}{11}\selectfont}
+  \begin{itemize}\setlength{\itemsep}{0.03cm}
+    % EB s9: 10 versions x 6 tasks = 60; [E18] 198 PME contrasts; [M7] 7 PME mechanism splits; [M12] 20 employer splits
+    \item \textbf{Tests:} 60 choice situations per side, so intervals may be too narrow. Benjamini--Hochberg by family: 198 PME contrasts, 7 PME mechanisms, 20 employer splits.
+    % [M8] free-slope tests added after the pre-specified convention; EB s9: no employer free-slope check yet for presence and creativity
+    \item \textbf{Pay slopes:} one slope for all groups. PMEs: group slopes added after the pre-specified tests. Employers' presence and creativity splits: check pending, so preliminary associations.
+    % [RB2] PME arrangement values move at most 2 points; [E15]; EB s9: task-1 coding moves remote by about 0.5 point
+    \item \textbf{Checks:} without the weaker panel, outliers or same-side respondents, or with a position term, PME values move $\le$2 points. To fix: position term; task-1 coding (\ap 0.5 point, remote).
+  \end{itemize}
+  % [L1] McFadden (1974), conditional logit (EB L1 since the fixer pass, 7 Oct 2026; fact_audit UNTRACED 4)
+  \SourceNote{$i$ respondent, $j$ option, $t$ task; $w$ pay shown; $x_k$ arrangement level $k$. McFadden (1974).}
+  \BackToTwo{M-estimation}{Estimation}{M-framework}{Framework}
+\end{frame}
+
+% [Q1-Q9] log and rank models; Lead decision 3: each side's own scale; EB s3b: no pair shown at equal pay
+\begin{frame}[t,label=B-eqpay]{Pay model barely moves equal-pay shares}
+  \FrameTop
+  \Tab{T_eqpay}
+  \SourceNote{Own scale per side: compare shares with 50\%, not across sides.}
+  \BackToTwo{M-meet}{Two sides}{M-estimation}{Estimation}
+\end{frame}
+
+% ==========================================================================
+% Practice today
+% ==========================================================================
+\begin{frame}[t,label=B-landscape]{Flexible work today: PMEs and firms}
+  % [D1, D1 excl. Lucid, D2, D2x, D3, M16]
+  \FrameTop
+  \Fig{F_landscape}{5.0cm}
+  \SourceNote{PMEs: employed (n = 1,004); brackets exclude one lower-quality panel. Employers: \Pend{n = 303}. Unweighted online panels: shares describe surveyed PMEs and firms, not national rates.}
+  \BackToTwo{M-descriptive}{Practice}{M-puzzle}{Puzzle}
+\end{frame}
+
+\begin{frame}[t,label=B-setup]{Most FWAs come via policy or request}
+  % [D4, D5, D5x, D10]
+  \FrameTop
+  \Tab{T_setup}
+  \SourceNote{PMEs with an FWA; employers' written policy by size, and requests received by policy.}
+  \BackToTwo{M-descriptive}{Practice}{M-barriers}{Barriers}
+\end{frame}
+
+% ==========================================================================
+% PMEs
+% ==========================================================================
+% [E1-E10] main model, N = 1,020, 6,120 choices; [M1] remote vs own commute about 13
+\BackupTab{B-emp-all}{All PME estimates, \% of pay}{T_emp_all}{M-pmes}{PMEs}{Conditional logit, N = 1,020 PMEs, 6,120 choices; 95\% CIs clustered by respondent. Pay a PME would give up for the level over the base; indicative, as gaps shown were 17--33\%. Fully remote is vs a long commute; vs own commute, \ap 13\% (\hyperlink{B-remote-commute}{\textcolor{Navy}{commute}}).}
+
+\begin{frame}[t,label=B-remote-commute]{Fully remote valued against any commute}
+  \FrameTop
+  {\centering\TableFont
+  \renewcommand{\arraystretch}{1.12}
+  \begin{tabular}{@{}>{\raggedright\arraybackslash}p{6.6cm}@{\hspace{0.25cm}}>{\raggedleft\arraybackslash}p{3.6cm}@{\hspace{0.25cm}}>{\raggedleft\arraybackslash}p{3.6cm}@{}}
+    \toprule
+    \textbf{Fully remote vs \ldots} & \textbf{\% of pay [95\% CI]} & \textbf{Equal-pay share, \%}\\
+    \midrule
+    % [M1] 12.7 [9.8, 15.6]; 64% [61, 68]; n = 1,020
+    \textbf{own commute} (headline) & \textcolor{Muted}{12.7 [9.8, 15.6]} & 64\\
+    % [M1] excl. Lucid 13.6 [10.5, 16.6]; 68%; n = 708
+    \quad excluding one panel (n = 708) & \textcolor{Muted}{13.6 [10.5, 16.6]} & 68\\
+    % [E3] 15.1 (11.1-19.1); [Q3] 67% vs long
+    long commute ($>$45 min; main model) & \textcolor{Muted}{15.1 [11.1, 19.1]} & 67\\
+    % [E3] 12.2 (9.0-15.5); [Q3] 64% (60-68) vs moderate
+    moderate commute (15--45 min) & \textcolor{Muted}{12.2 [9.0, 15.5]} & 64\\
+    % [E3] 7.5 (2.9-12.1); [Q3] 58% vs short
+    short commute ($<$15 min) & \textcolor{Muted}{7.5 [2.9, 12.1]} & 58\\
+    \midrule
+    \multicolumn{3}{@{}l}{\textbf{Own commute, by length}}\\
+    % [M2] <= 45 min, n = 681: 11.0 [7.2, 14.9]; 62% [57, 66]
+    45 min or less (n = 681) & \textcolor{Muted}{11.0 [7.2, 14.9]} & 62\\
+    % [M2] > 45 min, n = 305: 11.8 [6.9, 16.8]; 65% [58, 72]
+    over 45 min (n = 305) & \textcolor{Muted}{11.8 [6.9, 16.8]} & 65\\
+    % [M2] WTP p = .80; equal-pay p = .45
+    Test of no difference & p = .80 & p = .45\\
+    \bottomrule
+  \end{tabular}\par}
+  % [M1] commute shares short .037, moderate .729, long .233; [M3] 1-2 days 58% vs 58%, compressed 57% vs 58%
+  \SourceNote{Own commute: remote effect net of the commute each PME held in the design (short .037, moderate .729, long .233). Commute is not associated with valuing hybrid work or the compressed week (1--2 WFH days: 58\% vs 58\%). Grey = indicative (gaps shown 17--33\%). By-length values use group pay slopes, so need not bracket 12.7; equal-pay shares (62, 65) bracket 64.}
+  \BackTo{M-pmes}{PMEs}
+\end{frame}
+
+\begin{frame}[t,label=B-emp-benchmarks]{PME values at or above estimates abroad}
+  % [E16, L1] 4.2 Maestas, about 5 and 4.8 Aksoy, 8 Barrero-Bloom-Davis, 8 Mas-Pallais; [R16] 2.9 vs 21 (IZA DP 2023, pooled); ILR 2026: 5.2 hybrid, 24.6 remote
+  \FrameTop
+  \Fig{F_benchmarks}{4.5cm}
+  \SourceNote{Not like-for-like: populations, methods and definitions differ. Maestas et al.\ (AER 2023); Aksoy et al.\ (BPEA 2022); Barrero, Bloom \& Davis (JEP 2023); Mas \& Pallais (AER 2017); Lewandowski et al.\ (IZA DP 16041, 2023; ILR Review 2026: \ap 5\% hybrid, 25\% fully remote).}
+  \BackToTwo{M-pmes}{PMEs}{M-literature}{Literature}
+\end{frame}
+
+\begin{frame}[t,label=B-why-pmes]{PME splits: one survives correction}
+  \FrameTop
+  % polish pass (BKb): backup table style (TableFont; 2.5 pt gaps kept for nine columns); the single
+  % Reading bullet is a plain 9.5 pt line (Body macro)
+  % final fixer (7 Oct 2026): notes print at 8.0 pt (were 6.9 pt); arraystretch 1.05 (was 1.08), 0.08 cm before Reading (was 0.12)
+  {\TableFont\setlength{\tabcolsep}{2.5pt}\renewcommand{\arraystretch}{1.05}%
+  \begin{tabularx}{\linewidth}{@{}>{\RaggedRight}X>{\centering}p{1.6cm}>{\centering}p{1.2cm}>{\centering}p{1.2cm}>{\centering}p{1.2cm}>{\centering}p{1.2cm}>{\centering}p{0.9cm}>{\centering}p{0.9cm}>{\centering\arraybackslash}p{0.82cm}@{}}
+    \toprule
+    % [S7] attribute levels: 1-2 and 3-4 WFH days a week
+    \textbf{Split (A / B)} & \textbf{n} & \textbf{1--2 days} & \textbf{3--4 days} & \textbf{Remote} & \textbf{Compr.} & \textbf{p} & \textbf{p pay} & \textbf{q}\\
+    \midrule
+    % [M4] n 455 / 565; 1-2d 52 vs 64; 3-4d 52 vs 69; remote vs moderate commute 55 vs 72; location p < .001, q < .001; WTP p = .002
+    % [M5] compressed week 59 vs 58, p = .70
+    Career penalty: y / n & 455 / 565 & 52 / 64 & 52 / 69 & 55 / 72\textsuperscript{a} & 59 / 58 & $<$.001 & .002 & $<$.001\\
+    % [M4] excl. Lucid 1-2d 53 vs 65; 3-4d 58 vs 71; location p = .002, q = .013; WTP p = .048; [M5] compressed 57 vs 58
+    \quad excl.\ one panel & & 53 / 65 & 58 / 71 & & 57 / 58 & .002 & .048 & .013\\
+    % [M2] n 305 / 681; remote vs own commute 65 vs 62, equal-pay p = .45, WTP p = .80
+    % [M3] 1-2d 58 vs 58; 3-4d 63 vs 58; compressed 57 vs 58; three-effect free-slope location p = .030 (q .105) equal pay, .015 (q .051) WTP; hybrid alone .33 / .43
+    Commute $>$ / $\le$45 min & 305 / 681 & 58 / 58 & 63 / 58 & 65 / 62\textsuperscript{b} & 57 / 58 & .030\textsuperscript{c} & .015\textsuperscript{c} & .11\\
+    % [M7] current WFH users vs fully onsite PMEs: 1-2 days 58 vs 58, p = .79
+    WFH now: y / n & & 58 / 58 & & & & .79 & & n.s.\\
+    % [M7] income above vs at or below S$6,000: n 408 / 435; p .91 equal pay, .77 WTP
+    Pay $>$ / $\le$S\$6,000 & 408 / 435 & & & & & .91 & .77 & n.s.\\
+    % [M7] organisation type public / local / MNC: n 171 / 383 / 412; p .69 / .68
+    Public / local / MNC & 171/383/412 & & & & & .69 & .68 & n.s.\\
+    % [M7] tenure 3+ vs under 3 years: n 805 / 199; p .44 / .62
+    Tenure: 3+ / $<$3 years & 805 / 199 & & & & & .44 & .62 & n.s.\\
+    % [M7] women with a child aged 0-6 vs all others: n 108 / 912; p .28 / .33
+    Mothers, child 0--6 / rest & 108 / 912 & & & & & .28 & .33 & n.s.\\
+    % [M9] employer offers a compressed week, ticked n = 169 vs 814: 58.7 vs 58.1, p = .86, q = .96; free-slope WTP gap p = .27
+    Offered compr.\ week: y / n & 169 / 814 & & & & 59 / 58 & .86\textsuperscript{d} & .27\textsuperscript{d} & .96\\
+    \bottomrule
+  \end{tabularx}\par}
+  \vspace{0.08cm}
+  % [M7] only the career split survives BH on every metric; [M6] about 40% could be choice noise, item asked after the choices; [E18] 198 contrasts, min q = .70: kept on B-emp-groups and in the M-groups note
+  \Body{\textbf{Reading:} only the career-concern split survives (location only); about 40\% of its gap could be choice noise, and it was asked after the choices. Excl.\ one panel, \% of pay q = .11.}
+  % [M2] remote p = .45 equal pay, .80 WTP; [M3] common-slope location p = .006, q = .021, from the remote-vs-long-commute term
+  % [M7] 7 primary splits; compressed week 56-61% in every subgroup; [M8] common slope rejects for WFH today, p = .005, at 58% vs 58%; [M9] E19 not robust
+  \SourceNote{Shares: \% choosing the flexible job at equal pay. p: location test (3 effects) with group-specific salary slopes, added post hoc (one slope rejects for WFH now, p = .005, at 58\% vs 58\%); p pay: same in \% of pay; q: Benjamini--Hochberg, 7 primary splits. Blank: not tabulated (compressed week 56--61\% in every group). \textsuperscript{a}Vs moderate commute. \textsuperscript{b}Vs own commute (p = .45; .80). \textsuperscript{c}Hybrid alone p = .33 (.43); the pre-set one-slope test (p = .006, q = .021) comes from remote vs a long commute. \textsuperscript{d}Old access gap not robust (\hyperlink{B-access}{\textcolor{Navy}{access}}).}
+  \BackToTwo{M-why-pmes}{Career concerns}{M-groups}{PME groups}
+\end{frame}
+
+\begin{frame}[t,label=B-emp-groups]{No group difference established}
+  % [Q14, Q14b] equal-pay shares by group; [E18] p = .43 / .09 / .66; 198 contrasts, min q = .70; [Q14] p = .047 nominal
+  % [M9] access row: compressed week 58.7 vs 58.1 at equal pay, p = .86; E19 not robust; [M7] further splits on B-why-pmes
+  \FrameTop
+  \Fig{F_emp_groups}{5.2cm}
+  \SourceNote{Joint tests, \% of pay: gender p = .43, age .09, care .66; none of 198 contrasts survives correction, so women's higher WFH shares (p~=~.047) are nominal. \textbf{Access:} compressed week chosen as often where offered (59\% vs 58\% at equal pay, p~=~.86); \% of pay gap not \hyperlink{B-access}{\textcolor{Navy}{robust}}. Detail: \hyperlink{B-ra-gender}{\textcolor{Navy}{gender}}, \hyperlink{B-ra-age}{\textcolor{Navy}{age}}, \hyperlink{B-ra-care}{\textcolor{Navy}{care}}, \hyperlink{B-ra-role}{\textcolor{Navy}{role}}, \hyperlink{B-ra-edu}{\textcolor{Navy}{edu}}.}
+  \BackToTwo{M-groups}{PME groups}{M-why-pmes}{Career concerns}
+\end{frame}
+
+\begin{frame}[t,label=B-access]{Valued more where offered? Not robust}
+  % [E19] status X, NOT ROBUST (Lead decision 5); [M9] 58.7 vs 58.1 at equal pay, p = .86; +5.5 [-4.4, 15.4], p = .27;
+  % slope 2.79 vs 4.70; [M20] cheaper option in 83.2% of PME pairs; [D2, D2x] take-up
+  \FrameTop
+  {\centering\fontsize{8.5}{10}\selectfont\input{tables/T_access}\par}
+  \SourceNote{The gap is statistically significant only under a common pay slope. PMEs with access are less pay-sensitive (log-pay coefficient 2.79 vs 4.70); the compressed week was cheaper in 83\% of PME pairs. Experience and sorting cannot be told apart.}
+  \BackToTwo{M-puzzle}{Puzzle}{M-groups}{Groups}
+\end{frame}
+
