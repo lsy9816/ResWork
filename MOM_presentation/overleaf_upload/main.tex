@@ -680,20 +680,17 @@ Next, the choice task.}
     \node[cell,minimum height=0.95cm] at (8.98,-2.84) {Fixed hours};
     \node[cell,minimum height=0.95cm] at (11.84,-2.84) {Compressed\\4-day week};
     % ---- held row: [S5] all other attributes at the respondent's own current practice, both sides
-    \node[same,one] at (0,-3.85) {Same in both: as in own job};
+    \node[same,one] at (0,-3.85) {Same in A and B: as in own job};
     \node[lab,one,minimum height=0.55cm] at (7.31,-3.85) {Everything else};
-    \node[same,one] at (8.98,-3.85) {Same in both: as in own firm};
+    \node[same,one] at (8.98,-3.85) {Same in A and B: as in own firm};
     % ---- three guardrails, 0.2 cm apart, spanning the card width: [S5] six forced choices; [S6, S6b] pay gaps
     % 17-33% by design (displayed about 16-34% after S$50 rounding, S6; fixer pass 7 Oct 2026, editor-13: the
     % spec chip wording, without always); [S5; EB s9; Lead decision 7] the employer task is a hire, not a reply
     % to a request
-    \node[chip,one,minimum width=4.00cm,text width=3.76cm] at (0,-4.75) {Six forced choices each};
-    \node[chip,one,minimum width=4.22cm,text width=3.98cm] at (4.20,-4.75) {Pay gaps \ap 17--33\%};
-    \node[chip,one,minimum width=6.00cm,text width=5.76cm] at (8.62,-4.75) {Employer task = hiring, not a request};
+    \node[anchor=north,inner sep=0pt,text width=14.6cm,align=center,text=Ink,font=\FsBody]
+      at (7.31,-4.75) {One of six choices each. In every choice, pay and two other attributes change at random.};
     % ---- sample: [S1] 1,020 PMEs; [S2] 397 people involved in PME hiring or manpower decisions;
     % [S1, S2, S4] online panels, unweighted; [S3] 12% of employer respondents' firms have 50 or fewer staff
-    \node[anchor=north,inner sep=0pt,text width=14.6cm,align=center,text=Muted,font=\FsSmall]
-      at (7.31,-5.55) {1,020 surveyed PMEs $\cdot$ 397 people involved in PME hiring or manpower decisions}; % [S1, S2]
   \end{tikzpicture}\par}
   \Backups{\BL{B-cards}{Choice cards}\BL{B-sample}{Sample}}
 \end{frame}
@@ -735,31 +732,31 @@ Now the results, starting with PMEs. [Full deck: ``Next, how we turn these choic
         text=Ink,font=\FsSmall}]
     % ---- card (x 0 to 8.1): label and scenario line [S5] six tasks
     \node[deckhead] (hc) at (0,0) {Illustrative choice task};
-    \node[anchor=base east,inner sep=0pt,text=Muted,font=\FsSmall] at (8.1,0 |- hc.base) {Scenario 1 of 6}; % [S5] six tasks per respondent
+    \node[anchor=base east,inner sep=0pt,text=Muted,font=\FsSmall] at (8.1,0 |- hc.base) {Example, 1 of 6}; % [S5] six tasks per respondent
     % header row (instrument: Attribute / Job Offer A / Job Offer B) on baseline y = -0.83, rule under the pair
     % as on M-design
     \node[anchor=base west,inner xsep=0.08cm,inner ysep=0pt,text=Ink,font=\FsBody\bfseries]
-      at (0,-0.83) {Attribute};
+      at (0,-0.83) {};
     \node[hdr] at (2.95,-0.83) {Job Offer A};
     \node[hdr] at (5.55,-0.83) {Job Offer B};
     \draw[Employee,line width=1.2pt] (2.95,-0.98) -- (8.1,-0.98);
     \draw[Rule,line width=0.4pt] (0,-0.98) -- (2.9,-0.98);
     % varied rows (shaded in the instrument). Pay: [S6b] multipliers 1.10 and 0.90
-    \node[lbl,minimum height=1.0cm] at (0,-1.05) {Monthly gross salary for this job};
-    \node[opt] at (2.95,-1.05) {Your pay +10\%};
-    \node[opt] at (5.55,-1.05) {Your pay \textminus 10\%};
+    \node[lbl,minimum height=1.0cm] at (0,-1.05) {Monthly pay};
+    \node[opt] at (2.95,-1.05) {\textbf{+10\%}\\{\FsSmall vs own pay}};
+    \node[opt] at (5.55,-1.05) {\textbf{\textminus 10\%}\\{\FsSmall vs own pay}};
     % location levels as on the card [S7]
     \node[lbl,minimum height=1.0cm] at (0,-2.11) {Work location};
-    \node[opt] at (2.95,-2.11) {Fully onsite\\(0 days WFH)};
-    \node[opt] at (5.55,-2.11) {1--2 days\\WFH/week};
+    \node[opt] at (2.95,-2.11) {Fully onsite};
+    \node[opt] at (5.55,-2.11) {1--2 days WFH};
     % schedule levels as on the card [S7]; 9am-6pm and 4-day are level labels
     \node[lbl,minimum height=1.0cm] at (0,-3.17) {Work schedule};
-    \node[opt] at (2.95,-3.17) {Fixed hours\\(9am--6pm)};
+    \node[opt] at (2.95,-3.17) {Fixed hours};
     \node[opt] at (5.55,-3.17) {Compressed\\4-day week};
     % held rows (one value spanning A and B in the instrument) [S5]; the card's foot lines up with step 3's
     \node[deckheld,anchor=north west,inner xsep=0.08cm,inner ysep=0.04cm,minimum width=8.1cm,
       minimum height=0.89cm,text width=7.94cm] at (0,-4.23)
-      {Workload, Job security, Workplace culture, Commute time: same for A and B (your current job)};
+      {Same in A and B: as in own job};
     % ---- three steps (x 8.42 to 14.78), stacked 0.30 cm apart
     \node[deckhead] at (8.42,0) {How values are calculated};
     % [S5] six choices per respondent
@@ -780,8 +777,7 @@ Now the results, starting with PMEs. [Full deck: ``Next, how we turn these choic
     \draw[deckarrow] ([xshift=0.33cm]sB.south west) -- ([xshift=0.33cm]sC.north west);
   \end{tikzpicture}\par}
   % [S6, S6b] no equal-pay pair was shown; every gap 17-33%; EB s9: magnitudes model-based
-  \Interp{Pay gaps were about 17--33\%, so rankings are firmer than prices.}
-  % card wording: questionnaire/FWA_Study_-_Employee_DCE.docx Section D; employer card: Candidate A / Candidate B
+    % card wording: questionnaire/FWA_Study_-_Employee_DCE.docx Section D; employer card: Candidate A / Candidate B
   \Backups{\BL{B-methods}{Equations}\BL{B-eqpay}{Equal pay}\BL{B-validity}{Validity}}
 \end{frame}
 % note facts: [S5] six choices, employer version with two candidates; EB s3b: equal-pay share needs no pay
