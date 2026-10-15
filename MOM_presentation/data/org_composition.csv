@@ -1,16 +1,16 @@
 block,sample,group,item,qid,n,k,share,lb,ub,value,note
 firm_size,all,All employer respondents,Fewer than 10,QID9/QID11,397,14,3.5264,2.1121,5.8316,,S3; numeric headcount or band for 17 unsure
 firm_size,all,All employer respondents,10-50,QID9/QID11,397,65,16.3728,13.0584,20.3318,,S3; numeric headcount or band for 17 unsure
-firm_size,all,All employer respondents,51-200,QID9/QID11,397,95,23.929471032745592,19.995052858252983,28.36360053500759,,"S3; size4 tab (SY, Stata): <=50 75, 51-200 95, 201-1,000 132, 1,001+ 95"
+firm_size,all,All employer respondents,51-200,QID9/QID11,397,96,24.1814,20.2298,28.6278,,S3; numeric headcount or band for 17 unsure
 firm_size,all,All employer respondents,201-500,QID9/QID11,397,74,18.6398,15.1162,22.7645,,S3; numeric headcount or band for 17 unsure
 firm_size,all,All employer respondents,"501-1,000",QID9/QID11,397,66,16.6247,13.2859,20.6032,,S3; numeric headcount or band for 17 unsure
-firm_size,all,All employer respondents,"1,001 or more",QID9/QID11,397,95,23.929471032745592,19.995052858252983,28.36360053500759,,"S3; size4 tab (SY, Stata): <=50 75, 51-200 95, 201-1,000 132, 1,001+ 95"
-firm_size3,all,All employer respondents,200 or fewer,QID9/QID11,397,170,42.821158690176325,38.04533236682562,47.734586683492495,,"S3; size4 tab (SY, Stata): <=50 75, 51-200 95, 201-1,000 132, 1,001+ 95"
-firm_size3,all,All employer respondents,"201-1,000",QID9/QID11,397,132,33.249370277078086,28.795114822240897,38.024696295168056,,"S3; size4 tab (SY, Stata): <=50 75, 51-200 95, 201-1,000 132, 1,001+ 95"
-firm_size3,all,All employer respondents,"1,001 or more",QID9/QID11,397,95,23.929471032745592,19.995052858252983,28.36360053500759,,"S3; size4 tab (SY, Stata): <=50 75, 51-200 95, 201-1,000 132, 1,001+ 95"
-firm_size3,all,All employer respondents,50 or fewer,QID9/QID11,397,75,18.89168765743073,15.346136633182914,23.03351258486232,,"S3; size4 tab (SY, Stata): <=50 75, 51-200 95, 201-1,000 132, 1,001+ 95"
-firm_size_numeric,all,Firms giving a numeric headcount,Median headcount,QID9,380,,,,,253.5,
-designation,all,All employer respondents,"Senior executive (owner, CEO or C-suite)",QID7,397,84,21.1587,17.4272,25.443,,S2
+firm_size,all,All employer respondents,"1,001 or more",QID9/QID11,397,82,20.6549,16.9631,24.9092,,S3; numeric headcount or band for 17 unsure
+firm_size3,all,All employer respondents,200 or fewer,QID9/QID11,397,175,44.0806,39.2767,48.9980,,S3
+firm_size3,all,All employer respondents,"201-1,000",QID9/QID11,397,140,35.2645,30.7262,40.0852,,S3
+firm_size3,all,All employer respondents,"1,001 or more",QID9/QID11,397,82,20.6549,16.9631,24.9092,,S3
+firm_size3,all,All employer respondents,50 or fewer,QID9/QID11,397,79,19.8992,16.2687,24.1067,,S3
+firm_size_numeric,all,Firms giving a numeric headcount,Median headcount,QID9,380,,,,,253.5000,
+designation,all,All employer respondents,"Senior executive (owner, CEO or C-suite)",QID7,397,84,21.1587,17.4272,25.4430,,S2
 designation,all,All employer respondents,HR director or HR manager,QID7,397,122,30.7305,26.3947,35.4356,,S2
 designation,all,All employer respondents,Manager with hiring responsibilities (line or hiring manager),QID7,397,170,42.8212,38.0454,47.7345,,S2
 designation,all,All employer respondents,Other,QID7,397,21,5.2897,3.4855,7.9508,,S2
@@ -23,23 +23,23 @@ industry,all,All employer respondents,Accommodation,QID8,397,8,2.0151,1.0245,3.9
 industry,all,All employer respondents,Information and communications,QID8,397,48,12.0907,9.2418,15.6662,,composition only; industry-level DCE estimates are not reportable
 industry,all,All employer respondents,Administrative and support services,QID8,397,11,2.7708,1.5541,4.8927,,composition only; industry-level DCE estimates are not reportable
 industry,all,All employer respondents,"Arts, entertainment and recreation",QID8,397,6,1.5113,0.6945,3.2576,,composition only; industry-level DCE estimates are not reportable
-industry,all,All employer respondents,Construction,QID8,397,27,6.801,4.7158,9.7142,,composition only; industry-level DCE estimates are not reportable
+industry,all,All employer respondents,Construction,QID8,397,27,6.8010,4.7158,9.7142,,composition only; industry-level DCE estimates are not reportable
 industry,all,All employer respondents,"Other community, social and personal services",QID8,397,4,1.0076,0.3925,2.5617,,composition only; industry-level DCE estimates are not reportable
 industry,all,All employer respondents,Financial and insurance services,QID8,397,44,11.0831,8.3604,14.5518,,composition only; industry-level DCE estimates are not reportable
 industry,all,All employer respondents,Health and social services,QID8,397,22,5.5416,3.6877,8.2475,,composition only; industry-level DCE estimates are not reportable
-industry,all,All employer respondents,Manufacturing,QID8,397,60,15.1134,11.9254,18.97,,composition only; industry-level DCE estimates are not reportable
-industry,all,All employer respondents,Retail trade,QID8,397,9,2.267,1.1972,4.2517,,composition only; industry-level DCE estimates are not reportable
+industry,all,All employer respondents,Manufacturing,QID8,397,60,15.1134,11.9254,18.9700,,composition only; industry-level DCE estimates are not reportable
+industry,all,All employer respondents,Retail trade,QID8,397,9,2.2670,1.1972,4.2517,,composition only; industry-level DCE estimates are not reportable
 industry,all,All employer respondents,Professional services,QID8,397,47,11.8388,9.0208,15.3883,,composition only; industry-level DCE estimates are not reportable
 industry,all,All employer respondents,Public administration and education,QID8,397,21,5.2897,3.4855,7.9508,,composition only; industry-level DCE estimates are not reportable
 industry,all,All employer respondents,Real estate services,QID8,397,8,2.0151,1.0245,3.9254,,composition only; industry-level DCE estimates are not reportable
 industry,all,All employer respondents,Transportation and storage,QID8,397,28,7.0529,4.9244,10.0045,,composition only; industry-level DCE estimates are not reportable
-industry,all,All employer respondents,Wholesale trade,QID8,397,18,4.534,2.8869,7.0525,,composition only; industry-level DCE estimates are not reportable
-industry,all,All employer respondents,Other,QID8,397,23,5.7935,3.8912,8.543,,composition only; industry-level DCE estimates are not reportable
+industry,all,All employer respondents,Wholesale trade,QID8,397,18,4.5340,2.8869,7.0525,,composition only; industry-level DCE estimates are not reportable
+industry,all,All employer respondents,Other,QID8,397,23,5.7935,3.8912,8.5430,,composition only; industry-level DCE estimates are not reportable
 industry,all,All employer respondents,Food and beverage services,QID8,397,13,3.2746,1.9235,5.5212,,composition only; industry-level DCE estimates are not reportable
 pme_share,all,All employer respondents,Less than 25%,QID12,397,121,30.4786,26.1555,35.1758,,
 pme_share,all,All employer respondents,25%-49%,QID12,397,166,41.8136,37.0627,46.7214,,
 pme_share,all,All employer respondents,50%-74%,QID12,397,67,16.8766,13.5137,20.8743,,
-pme_share,all,All employer respondents,75% or more,QID12,397,43,10.8312,8.1412,14.272,,
+pme_share,all,All employer respondents,75% or more,QID12,397,43,10.8312,8.1412,14.2720,,
 role_in_mind_level,all,All employer respondents,Individual contributor,QID32,397,146,36.7758,32.1804,41.6247,,
 role_in_mind_level,all,All employer respondents,Team lead / supervisor,QID32,397,128,32.2418,27.8332,36.9908,,
 role_in_mind_level,all,All employer respondents,Middle management,QID32,397,93,23.4257,19.5264,27.8344,,
@@ -48,20 +48,20 @@ role_in_mind_function,all,All employer respondents,Finance / accounting / procur
 role_in_mind_function,all,All employer respondents,HR / administration,QID33,397,39,9.8237,7.2697,13.1477,,
 role_in_mind_function,all,All employer respondents,Sales / business development,QID33,397,46,11.5869,8.8002,15.1099,,
 role_in_mind_function,all,All employer respondents,Marketing / communications,QID33,397,14,3.5264,2.1121,5.8316,,
-role_in_mind_function,all,All employer respondents,IT / digital,QID33,397,64,16.1209,12.8311,20.06,,
+role_in_mind_function,all,All employer respondents,IT / digital,QID33,397,64,16.1209,12.8311,20.0600,,
 role_in_mind_function,all,All employer respondents,R&D / engineering,QID33,397,24,6.0453,4.0958,8.8374,,
-role_in_mind_function,all,All employer respondents,Operations / supply chain / logistics,QID33,397,63,15.869,12.6042,19.788,,
-role_in_mind_function,all,All employer respondents,Strategy / corporate planning / governance,QID33,397,17,4.2821,2.6905,6.75,,
+role_in_mind_function,all,All employer respondents,Operations / supply chain / logistics,QID33,397,63,15.8690,12.6042,19.7880,,
+role_in_mind_function,all,All employer respondents,Strategy / corporate planning / governance,QID33,397,17,4.2821,2.6905,6.7500,,
 role_in_mind_function,all,All employer respondents,General management,QID33,397,30,7.5567,5.3442,10.5826,,
 role_in_mind_function,all,All employer respondents,Legal / compliance,QID33,397,6,1.5113,0.6945,3.2576,,
 role_in_mind_function,all,All employer respondents,Other,QID33,397,21,5.2897,3.4855,7.9508,,
 pme_turnover,all,All employer respondents,Low (<10% left voluntarily),QID19,397,191,48.1108,43.2376,53.0202,,
-pme_turnover,all,All employer respondents,Moderate (10%-20%),QID19,397,163,41.0579,36.327,45.9602,,
-pme_turnover,all,All employer respondents,High (>20%),QID19,397,27,6.801,4.7158,9.7142,,
+pme_turnover,all,All employer respondents,Moderate (10%-20%),QID19,397,163,41.0579,36.3270,45.9602,,
+pme_turnover,all,All employer respondents,High (>20%),QID19,397,27,6.8010,4.7158,9.7142,,
 pme_turnover,all,All employer respondents,Not sure,QID19,397,16,4.0302,2.4957,6.4458,,
 culture,all,All employer respondents,Hierarchical,QID18,397,140,35.2645,30.7262,40.0852,,
 culture,all,All employer respondents,Collaborative,QID18,397,181,45.5919,40.7583,50.5101,,
 culture,all,All employer respondents,Autonomous / results-oriented,QID18,397,30,7.5567,5.3442,10.5826,,
 culture,all,All employer respondents,Mixed / difficult to characterise,QID18,397,46,11.5869,8.8002,15.1099,,
-salary_anchor,all,Firms giving an exact salary,Median monthly salary of most recent PME hire (SGD),QID63,296,,,,,5000.0,
-salary_anchor,all,All employer respondents,Median DCE reference salary (SGD),QID63/QID64,397,,,,,5000.0,
+salary_anchor,all,Firms giving an exact salary,Median monthly salary of most recent PME hire (SGD),QID63,296,,,,,5000.0000,
+salary_anchor,all,All employer respondents,Median DCE reference salary (SGD),QID63/QID64,397,,,,,5000.0000,

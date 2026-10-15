@@ -126,7 +126,10 @@ def run(dta_path, appended, outdir):
         d[nm] = np.where(d[v].isna(), nan, (d[v] > 3).astype(float))
     d["belief"] = np.where(d["salary_offset"].isna(), nan, d["salary_offset"].isin([4, 5]).astype(float))
     o = d["orgsize"]
-    d["size"] = np.where(o.between(0, 200), 1.0, np.where(o.between(201, 1000), 2.0, np.where(o >= 1001, 3.0, nan)))
+    # numeric headcount where given; firms that only picked a size band (orgsize_cat) are placed by their band
+    oc = d["orgsize_cat"]
+    d["size"] = np.where(o.between(0, 200), 1.0, np.where(o.between(201, 1000), 2.0, np.where(o >= 1001, 3.0,
+                np.where(oc.isin([1, 2, 3]), 1.0, np.where(oc.isin([4, 5]), 2.0, np.where(oc == 6, 3.0, nan))))))
     d["tech"] = d["tech_readiness"]
     d["policy"] = 2 - d["fwa_policy"]
     d["ind4"] = d["industry"]
@@ -134,7 +137,7 @@ def run(dta_path, appended, outdir):
     for nm in ("curwfh", "concern", "prod", "coord", "creat", "belief"):
         d["grp_" + nm] = d[nm]
     d["grp_policy"] = np.where(d["fwa_policy"].isna(), nan, (d["fwa_policy"] == 1).astype(float))
-    d["grp_large"] = np.where(o.isna(), nan, (o >= 1001).astype(float))
+    d["grp_large"] = np.where(d["size"].isna(), nan, (d["size"] == 3).astype(float))
     d["grp_techfull"] = np.where(d["tech_readiness"].isna(), nan, (d["tech_readiness"] == 3).astype(float))
     inr = d["role"].isin([1, 2, 3])
     d["grp_hr"] = np.where(inr, (d["role"] == 2).astype(float), nan)
@@ -244,7 +247,7 @@ def run(dta_path, appended, outdir):
     orgsplit("creat", [0, 1], "creat", "R14b")
     orgsplit("belief", [0, 1], "belief")
     nsz = int(((d["tagid"] == 1) & d["size"].isna()).sum())
-    orgsplit("size", [1, 2, 3], "size", f"numeric headcount only; {nsz} firms without a number excluded")
+    orgsplit("size", [1, 2, 3], "size", f"numeric headcount, or size band for firms without a number; {nsz} firms without either excluded")
     orgsplit("tech", [1, 2, 3], "tech")
     nother = int(((d["tagid"] == 1) & ~d["role"].isin([1, 2, 3])).sum())
     orgsplit("role", [1, 2, 3], "role", f"Other designation (n={nother}) excluded")
