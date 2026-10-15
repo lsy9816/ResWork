@@ -416,13 +416,13 @@ The findings are preliminary; we end with a decision for the partners.
   % Supplementary Survey, no causal reading [P4, P4s]; Guidelines in effect 1 Dec 2024 [P1]
   \FrameTop
   \FigC{F_motivation}
-  \Interp{Aggregate provision does not tell us whether the arrangements offered\\ are the ones workers value and firms can sustain.}
+  \Interp{Aggregate provision does not show whether firms offer the arrangements workers value.}
   % Polish pass, 7 Oct 2026 (DESIGN_PLAN s2 W1, G5/G6): F_motivation is redrawn at 14.0 x 5.0 cm with no footnote
   % line; its footnote moves here verbatim as the slide's source line, so the budget is figure 5.0 cm + two-line
   % caption + one 7.5 pt source line + buttons (compiled deck is the fit authority; slack_check.py).
   % Source line: [P4s] MRSD time series released 30 Jun 2026, establishments with 25+ staff; [P4] MOM gives no
   % reason for the 2025 fall; [P4s] 77.5 incl. newer types, 2024
-  \SourceNote{\textbf{Source:} MRSD, MOM (Jun 2026). MOM gives no reason for the 2025 fall; 2024 incl.\ newer types: 77.5\%.} % [P4s, P4]
+  \SourceNote{\textbf{Source:} MRSD, MOM (Jun 2026).} % [P4s, P4]
   \Backups{\BL{B-laboursupply}{Labour supply} \BL{B-guidelines}{Guidelines}}
 \end{frame}
 % Note numbers: [P4s] 28 in 2008, 73 in mid-2024, establishments with 25 or more staff, private plus public sector;
@@ -506,21 +506,21 @@ We use a simple map. [Full deck: first, where this sits in the research.]}
   {\MainTableStyle\FsTableTight
   \begin{tabularx}{\linewidth}{@{}>{\raggedright\arraybackslash}p{2.6cm}>{\raggedright\arraybackslash}p{2.8cm}>{\raggedright\arraybackslash}X>{\raggedright\arraybackslash}p{3.0cm}@{}}
     \toprule
-    & \HeadB{\linewidth}{What existing work measures} & \HeadB{\linewidth}{What it finds \mdseries(not like-for-like)} & \HeadB{\linewidth}{What this study adds}\\
+    & \HeadB{\linewidth}{What it measures} & \HeadB{\linewidth}{What it finds} & \HeadB{\linewidth}{What we add}\\
     \midrule
-    \textbf{Worker value of WFH}
-      & Pay workers would give up for a WFH option
-      & About 4--8\% of pay; Singapore 4.8\%, in an online, mostly tertiary-educated sample % [E16, L1]
+    \textbf{Worker value}
+      & Pay given up for a WFH option
+      & About 4--8\% of pay; Singapore 4.8\% % [E16, L1]
       & Seven arrangements, one design\\ % [S7]
     \midrule
-    \textbf{Employer side and productivity}
-      & Employers' expected costs; quits in a firm trial
-      & Poland (2023 working paper, hybrid and remote pooled): workers give up 2.9\%, employers expect a 21\% wage cut. Hybrid trial: quits fell by a third % [R16, P7, L1]
+    \textbf{Employer side}
+      & Employers' expected costs; quits in a trial
+      & Poland: workers give up 2.9\%, employers expect a 21\% wage cut. Hybrid trial: quits fell by a third % [R16, P7, L1]
       & Employers' hiring choices, mirrored with PMEs'\\ % [S5]
     \midrule
     \textbf{Singapore}
-      & Which firms offer FWAs; stated intentions
-      & Provision is widespread; FWAs raise stated fertility intentions % [P4s, L1]
+      & Which firms offer FWAs
+      & Provision is widespread % [P4s, L1]
       & Both sides' choices, after the Guidelines took effect\\ % [S1, S2, P1]
     \bottomrule
   \end{tabularx}\par}
@@ -609,7 +609,6 @@ Next, how we asked both sides. [Full deck: next, the two surveys.]}
   % [S1, S2, S4] unweighted online panels: shares describe the surveyed samples only
   \Interp{Shares describe surveyed PMEs and firms, not national rates.}
   % [S1] PME survey fielded 4-21 Aug 2026; [S2] employer survey 12 Aug-2 Oct 2026
-  \SourceNote{\textbf{Source:} this study's PME survey (Aug 2026) and employer survey (Aug--Oct 2026).}
   \Backups{\BL{B-sample}{Sample}\BL{B-panel}{Panels}}
 \end{frame}
 % note facts: [S1] 1,020, 4-21 Aug 2026; [S2] 397 (appended sample), 12 Aug-2 Oct 2026; [S1, S2, S4] online, unweighted;
@@ -694,8 +693,7 @@ Next, the choice task.}
     % ---- sample: [S1] 1,020 PMEs; [S2] 397 people involved in PME hiring or manpower decisions;
     % [S1, S2, S4] online panels, unweighted; [S3] 12% of employer respondents' firms have 50 or fewer staff
     \node[anchor=north,inner sep=0pt,text width=14.6cm,align=center,text=Muted,font=\FsSmall]
-      at (7.31,-5.55) {1,020 surveyed PMEs $\cdot$ 397 people involved in PME hiring or manpower decisions\\ % [S1, S2]; 397 = appended sample
-      Online, unweighted panels $\cdot$ 20\% of employer respondents' firms have 50 or fewer staff}; % [S3, S4]; S3 not in appended_* outputs
+      at (7.31,-5.55) {1,020 surveyed PMEs $\cdot$ 397 people involved in PME hiring or manpower decisions}; % [S1, S2]
   \end{tikzpicture}\par}
   \Backups{\BL{B-cards}{Choice cards}\BL{B-sample}{Sample}}
 \end{frame}
@@ -775,18 +773,15 @@ Now the results, starting with PMEs. [Full deck: ``Next, how we turn these choic
     % equal-pay share = invlogit of the FWA coefficient, 50% = no preference, read within each side
     \node[stepbox] (sC) at ([yshift=-0.30cm]sB.south west)
       {\hspace*{0.22cm}\makebox[0.36cm][l]{\color{Navy}\fontsize{12}{14}\selectfont\bfseries 3}%
-      \parbox[t]{5.66cm}{\RaggedRight Translate the average effect into:\\[0.04cm] % [S5] step label, not a data value
-      \textbf{\% of pay} (indicative): the pay gap that makes A and B equally attractive\\[0.04cm]
-      \textbf{Equal-pay share}: how often the FWA option wins if pay is equal; 50\% = no preference}% [EB s3b]
+      \parbox[t]{5.66cm}{\RaggedRight Translate it into a \textbf{\% of pay} (indicative) and an \textbf{equal-pay share} (50\% = no preference)}% [EB s3b]
       \hspace*{0.12cm}};
     \foreach \s in {sA,sB,sC} {\fill[Navy] (\s.north west) rectangle ([xshift=0.07cm]\s.south west);}
     \draw[deckarrow] ([xshift=0.33cm]sA.south west) -- ([xshift=0.33cm]sB.north west);
     \draw[deckarrow] ([xshift=0.33cm]sB.south west) -- ([xshift=0.33cm]sC.north west);
   \end{tikzpicture}\par}
   % [S6, S6b] no equal-pay pair was shown; every gap 17-33%; EB s9: magnitudes model-based
-  \Interp{No equal-pay pair was shown; observed pay gaps were about 17--33\%,\\ so rankings are firmer than prices.}
+  \Interp{Pay gaps were about 17--33\%, so rankings are firmer than prices.}
   % card wording: questionnaire/FWA_Study_-_Employee_DCE.docx Section D; employer card: Candidate A / Candidate B
-  \SourceNote{\textbf{Source:} PME questionnaire, Section D. Employers saw the same layout with Candidates A and B.}
   \Backups{\BL{B-methods}{Equations}\BL{B-eqpay}{Equal pay}\BL{B-validity}{Validity}}
 \end{frame}
 % note facts: [S5] six choices, employer version with two candidates; EB s3b: equal-pay share needs no pay
@@ -811,9 +806,9 @@ Next, what PMEs and firms do today.}
   \FigC{F_landscape_m}
   % [D3] 62% of surveyed employers call 1-2 WFH days the typical PME arrangement;
   % [D1] compressed-week use 6.5% [4.3% excl. Lucid], display 4-6% with dagger
-  \Interp{Among surveyed firms, 60\% call 1--2 WFH days typical for PMEs;\\ only 4--6\%\dg\ of surveyed PMEs use a compressed week.}
+  \Interp{60\% of surveyed firms call 1--2 WFH days typical for PMEs;\\ only 4--6\%\dg\ of surveyed PMEs use a compressed week.}
   % [D1] dagger range: all respondents and excluding one online panel; [D1, D3] PME and employer surveys
-  \SourceNote{\textbf{Note:} \DgShort\ \textbf{Source:} this study's PME and employer surveys (Aug--Oct 2026).}
+  \SourceNote{\DgShort}
   \Backups{\BL{B-landscape}{Landscape}\BL{B-setup}{Pathways}}
 \end{frame}
 % note facts: [D1] any FWA 73% [69%], about seven in ten; [D3] 62%; [D1] compressed 4-6%; [M16] 20.8% of
@@ -838,15 +833,14 @@ Is the compressed week rare because PMEs place little value on it, or because em
   \FrameTop
   \FigC{F_emp_wtp}
   % [E1, E2] 1-2 days 7.4, 3-4 days 9.5 -> about 7-10%; [S6] pay gaps 17-33% by design (mandated wording kept)
-  \Interp{The model implies about 7--10\% of pay for hybrid work:\\
-    indicative, not a proposed pay cut; observed pay gaps were about 17--33\%.}
+  \Interp{About 7--10\% of pay for hybrid work: indicative, not a proposed pay cut.}
   % Note: F_emp_wtp's former footnote, verbatim, for the starred job-sharing and part-time rows [E6, E7].
   % Polish pass: "Conditional logit" leaves the source line (DESIGN_PLAN s2 W3; M-estimation and B-methods
   % carry the method). One line at 7.5 pt, 406 of 421 pt: the source names the survey, its size and month,
   % as on M-data; the exact field dates 4-21 Aug 2026 stay on F_sample_m (M-data) and its speaker note. Fixer pass
   % 7 Oct 2026 (employer-01, mom_ps-06, worker-04): never "SMU--SNEF survey" until the PI confirms roles (G0).
   % [S1] 1,020 PMEs, fielded 4-21 Aug 2026, online panels; 95% CIs clustered by respondent (EB s2 header)
-  \SourceNote{\textbf{Note:} * Hours change too: not a price of flexibility. Lines: 95\% CIs. \textbf{Source:} PME survey (n = 1,020), Aug 2026 (online panels).}
+  \SourceNote{* Hours change too, so not a price of flexibility.}
   \Backups{\BL{B-emp-all}{All estimates}\BL{B-remote-commute}{By commute}}
 \end{frame}
 % note facts: [E1, E2] 7 to 10; [E16] at or above the upper end of estimates abroad; [E5] about 7;
@@ -869,13 +863,12 @@ Yet one group chooses WFH less often.
   \FrameTop
   \FigC{F_why_pmes}
   % [M6] items 3-4: belief asked after the choice tasks; gap smaller excl. one panel, WTP p = .048 there
-  \Interp{Consistent with a visibility concern, but asked after the choices\\
-    and weaker outside one panel.}
+  \Interp{Consistent with a visibility concern; the career question was asked after the choices.}
   % Note: F_why_pmes's former footnote. [M4] penalty = QID51_1 agree 4-5; "Associations" kept. Its second
   % clause, gap smaller excl. one panel [M6], is not repeated: the Interp above states it, weaker outside
   % one panel. Equal-pay shares: the figure header names the measure. One line, 412 of 421 pt.
   % [S1] 1,020 PMEs, 4-21 Aug 2026; [M4] fully interacted model, equal-pay shares, 95% CIs
-  \SourceNote{\textbf{Note:} Penalty: agrees flexible hours would hurt their career. Associations; lines: 95\% CIs. \textbf{Source:} PME survey (n = 1,020), Aug 2026.}
+  \SourceNote{Penalty: expects flexible hours to hurt their career.}
   \Backups{\BL{B-why-pmes}{All splits}\BL{B-career-who}{Career risk}}
 \end{frame}
 % note facts: [M4] 52 vs 64, 1% level; [M5] compressed week 59 vs 58, p = .70, no detectable difference;
@@ -901,13 +894,12 @@ What do employers weigh in hiring?}
   % EB s3b: 50% = indifferent, equal-pay share uses no salary coefficient; [R13] pay is a weak lever for employers
   % line 2, fixer pass 7 Oct 2026 (employer-02): MANDATE information/learning problem; [S5; EB s9] hiring choice
   % between candidates, not a request and not an operating-cost measure; the DCE cannot separate these; EB s3b 50%
-  \Interp{Ranking, not a salary price: shares of hiring choices at equal pay; 50\% = no preference.\\
-    Reservations may reflect operating needs, uncertainty or a candidate signal.}
+  \Interp{A ranking, not a salary price: 50\% = no preference.}
   % Note: F_org_eqpay's former footnote, verbatim. [S6] no shown pair had equal pay, gaps 17-33%; EB s3b model-based share.
   % Source: the respondent wording, people involved in PME hiring or manpower decisions, stays on M-design
   % and M-data; here "employer survey, n = 397, Aug-Oct 2026" keeps the block on one line, 408 of 421 pt.
   % [S2] 397 respondents (appended sample) involved in PME hiring/HR/manpower decisions; [S5] hiring choice
-  \SourceNote{\textbf{Note:} Lines: 95\% CIs. Model-based shares: no pair in the survey had equal pay. \textbf{Source:} employer survey (n = 397), Aug--Oct 2026.}
+  \SourceNote{Model-based: no pair in the survey had equal pay.}
   \Backups{\BL{B-org-yardstick}{Yardstick}\BL{B-org-salary}{Salary lever}}
 \end{frame}
 % note facts: [S2, S5] hiring choice between equally qualified candidates; EB s3b 50 = no preference;
@@ -942,12 +934,11 @@ Why are some more reserved?}
   \FigC{F_where_r5}
   % [M12, Q15] BH q = .058 across 20 splits; EB s9: both items asked after the choices (Block 5); EB s9: no
   % group-specific salary-slope check yet for these splits, so "preliminary association under a common pay-slope model"
-  \Interp{Preliminary associations under a common pay-slope model;\\
-    both items asked after the choices; presence q = .002, creativity q = .43 across 20 splits.}
+  \Interp{Preliminary associations; both items were asked after the choices.}
   % Note: F_where_r5's former footnote, verbatim, the filled and hollow marker key [M10]. One line, 408 of 421 pt.
   % CIs: separate per-group clogits, EB M10 drawn CIs (fixer pass 7 Oct 2026, editor-04)
   % [S2] 397 respondents (appended sample); [M10] filled = firms with the need or concern
-  \SourceNote{\textbf{Note:} Filled: firms with the need or concern; hollow: other firms. Lines: 95\% CIs. \textbf{Source:} employer survey (n = 397), Aug--Oct 2026.}
+  \SourceNote{Filled: firms with the need or concern; hollow: other firms.}
   % employer-07: employers' own view (B-org-view returns to M-employers and M-where)
   \Backups{\BL{B-why-org}{Tests}\BL{B-org-concerns}{Concerns}\BL{B-org-view}{Employer view}}
 \end{frame}
@@ -982,12 +973,11 @@ Next, each side against its own 50 per cent.}
   \FrameTop
   \FigC{F_meet_r5}
   % compressed-week wording: mandate "Evidence and language rules"; [Q5] 47% (41-53, appended) includes 50
-  \Interp{Compressed week: most promising common-ground test;\\ evidence moderate; operating costs unmeasured.}
+  \Interp{Compressed week: the most promising test; evidence moderate, operating costs unmeasured.}
   % Note = F_meet_r5's former footnote, verbatim (polish pass 7 Oct 2026): [s3b] equal-pay shares, 95% CIs;
   % [Q16] zones A-C are descriptive labels; [M1] PMEs' fully remote is measured against each PME's own commute.
   % [S1] 1,020 PMEs, 4-21 Aug 2026; [S2] 397 employer respondents (appended sample)
-  \SourceNote{\textbf{Note:} \% of choices at equal pay; 95\% CIs. Zones A--C: descriptive labels. PMEs' remote vs own commute.
-    \textbf{Source:} choice experiments with 1,020 surveyed PMEs and 397 employer respondents (Aug--Oct 2026).}
+  \SourceNote{\% of choices at equal pay. Zones A--C are descriptive labels. PMEs' fully remote: vs own commute.}
   \Backups{\BL{B-eqpay}{Equal pay} \BL{B-language}{Wording}}
 \end{frame}
 \note{[Short path] Two panels, two scales. Read each against its own 50 per cent line, meaning no preference; do not compare distances across sides. % [s3b; Lead decision 3; mandate M-meet]
@@ -1016,8 +1006,7 @@ SNEF and volunteer firms could test the compressed week first. So why is it rare
   % ([E3] main model: fully remote vs onsite with a long commute; [S8] long = >45 min); and the figure's
   % former "* Nominal" footnote, verbatim ([Q14] the starred p = .047 is nominal; [E18] 198 contrasts, BH).
   % [S1] 1,020 PMEs; [E18] BH correction over 198 contrasts; [M7] 7 primary splits
-  \SourceNote{\textbf{Note:} Lines: 95\% CIs. Fully remote: vs a \textgreater 45 min commute. * Nominal: none of 198 subgroup contrasts survives multiple-testing correction.
-    \textbf{Source:} PME choice experiment (1,020 surveyed PMEs).}
+  \SourceNote{* Nominal: none of 198 subgroup contrasts survives correction. Fully remote: vs a \textgreater 45 min commute.}
   \Backups{\BL{B-emp-groups}{All groups} \BL{B-why-pmes}{All splits}}
 \end{frame}
 \note{[Full deck only] In every group shown, the interval for choosing a WFH job at equal pay lies above one half. % [Q14b]
@@ -1044,8 +1033,7 @@ MOM, SNEF and NTUC could therefore treat PME demand for WFH as broad, not niche.
   % Note (polish pass 7 Oct 2026): the figure's former footnote ("+ All respondents / excluding one online
   % panel. Surveyed samples, unweighted.") with the deck's one dagger wording \DgShort [S1, S2];
   % [M20] cheaper option in 83.2% of PME pairs (1,502/1,805) and 90.8% of employer pairs (327/360)
-  \SourceNote{\textbf{Note:} \DgShort\ Surveyed samples, unweighted.
-    Design: where only one option had it, the compressed week was the cheaper one in 83\% of PME and 91\% of employer pairs.}
+  \SourceNote{\DgShort\ Where only one option had it, the compressed week was the cheaper one in 83\% of PME and 91\% of employer pairs.}
   \Backups{\BL{B-puzzle}{Offering} \BL{B-pilot}{Pilot checklist}}
 \end{frame}
 \note{[Short path] PMEs value the compressed week and employers show no detectable hiring penalty, yet only about one surveyed firm in six offers it. % [Q5, M16] 58% in the figure
@@ -1075,12 +1063,11 @@ So the case is for a voluntary, evaluated pilot, not a roll-out: SNEF could recr
   \FrameTop
   \FigC{F_barriers_r5}
   % bases separated (mandate M-barriers; COMMENTS slide 17): [M23] all PMEs; [D7] reported requesters only; [B6] no why-not item
-  \Interp{Career concern covers all surveyed PMEs; refusals cover only reported requesters.\\ We cannot say why others did not ask.}
+  \Interp{Career concern covers all surveyed PMEs; refusals cover only reported requesters.}
   % Note (polish pass 7 Oct 2026): the figure's former footnote ("+ All respondents / excluding one online
   % panel (grey: the gap between the two)"), with the dagger stated once as \DgShort [B5, D6, D7b];
   % [S1] PME survey 4-21 Aug 2026; [D9] request item partly misread ("a selected lower bound" in the figure; the note)
-  \SourceNote{\textbf{Note:} \DgShort\ Grey: the gap between the two.
-    \textbf{Source:} PME survey (Aug 2026).}
+  \SourceNote{\DgShort\ Grey: the gap between the two.}
   \Backups{\BL{B-career-who}{Who expects} \BL{B-approvals-tab}{Approvals}}
 \end{frame}
 \note{[Short path] Three facts, on different bases. First, across all surveyed PMEs, 37 to 45 per cent expect shorter or more flexible hours to hurt their careers. % [M23, B5]
@@ -1110,9 +1097,8 @@ One guardrail before the options. These are stated choices from unweighted onlin
   % [S6, S6b] pay gaps 17-33% by design (displayed about 16-34%; fixer pass 7 Oct 2026, editor-13): % of pay values are model-based;
   % [EB s9] 10 versions x 6 tasks = 60 distinct choice situations per survey;
   % [V1-V5] no cited validation study tests employer hiring choices (B-validity)
-  \Interp{Pay gaps were 17--33\% by design, so levels in \% of pay are model-based;\\ 60 choice situations per side; employer hiring-task validity untested.}
+  \Interp{Rankings hold; levels in \% of pay are model-based (pay gaps were 17--33\%).}
   % [S1] 1,020 PMEs, 4-21 Aug 2026; [S2] 397 employer respondents (appended sample)
-  \SourceNote{\textbf{Source:} choice experiments with 1,020 surveyed PMEs and 397 employer respondents (Aug--Oct 2026).}
   \Backups{\BL{B-validity}{Validity} \BL{B-emp-robust}{Checks}}
 \end{frame}
 \note{[Full deck only] Which results survive changes to the analysis? % [E15, RB2]
@@ -1194,7 +1180,7 @@ MOM, SNEF and NTUC can therefore act on rankings; prices need a wave with small 
   % dagger: [M10, M11, M12] associations from splits that use one salary slope; EB s9 l.183 free-slope check pending;
   % employer side = hiring choices between candidates [S2, S5]: carried by the A cell (hiring penalty) and the note;
   % [S1, S2] fieldwork 4-21 Aug 2026 (PMEs) and 12 Aug-2 Oct 2026 (employers)
-  \SourceNote{\textbf{Note:} \dg\ Preliminary association under a common pay-slope model. \textbf{Source:} PME and employer surveys (Aug--Oct 2026).}
+  \SourceNote{\dg\ Preliminary association under a common pay-slope model.}
   \Backups{\BL{B-intl}{Trials abroad} \BL{B-puzzle}{Offering}}
 \end{frame}
 \note{[Full deck only] This map brings the results together and links each zone to an option. % [S7]
@@ -1230,14 +1216,14 @@ In every zone, request data are missing. Which options could the partners take u
     % with a written FWA policy, an association; [M19] no firm group penalises it; [M20] design balance;
     % [S7] same hours over four longer days; [P21] TAFEP and SNEF resources; Lead decision 2: test, not proven
     \hyperlink{B-optA}{\textbf{\textcolor{Navy}{A\enspace Pilot:}}} put compressed weeks on the written menu and test them
-      & SNEF and volunteer firms; NTUC: safeguards; TAFEP: guidance
-      & Moderate; operating costs unmeasured\\ \addlinespace[2pt]
+      & SNEF and volunteer firms
+      & Moderate\\ \addlinespace[2pt]
     % [M10, Q10] reservations where most roles need presence; [M12] q about .06 over 20 splits; EB s9 l.183:
     % preliminary association under a common pay-slope model; [P11] Job Redesign+ and the PTRG review for
     % flexi-load; [P5] flexi-load the weak spot; [R6, R7, G6] reduced load and part-time about pro-rata
-    \hyperlink{B-optB}{\textbf{\textcolor{Navy}{B\enspace Support:}}} review which tasks need presence; flexi-load where fewer hours, not location, address the need
-      & Firms, with Job Redesign+; MOM's PTRG review
-      & Moderate; preliminary associations\\ \addlinespace[2pt]
+    \hyperlink{B-optB}{\textbf{\textcolor{Navy}{B\enspace Support:}}} review which tasks need presence; flexi-load where hours, not location, matter
+      & Firms; MOM (PTRG review)
+      & Moderate\\ \addlinespace[2pt]
     % [S7] 3-4 WFH days is an attribute level; [Q2, Q3] 31% and 23% at equal pay (appended; not printed);
     % [M13] no detectable penalty where neither presence need nor creativity concern; [V6, P7] trial abroad;
     % Lead decision 10: not a push for fully remote work
@@ -1247,7 +1233,7 @@ In every zone, request data are missing. Which options could the partners take u
     % [P2] no administrative request counts; [P3] MOM survey: few in need ask formally; [B6] no why-not item;
     % [D7, D9] partial approvals, request item partly misread; draft items on B-optD-items
     \hyperlink{B-optD}{\textbf{\textcolor{Navy}{D\enspace Measure:}}} why-not-request and partial-approval survey items
-      & MRSD checks the items against its survey, with NTUC and SNEF % fixer pass 7 Oct 2026 (mom_ps-01 b, mom_ps-02 b)
+      & MRSD, with NTUC and SNEF % fixer pass 7 Oct 2026 (mom_ps-01 b, mom_ps-02 b)
       & Gap documented\\
     \bottomrule
   \end{tabularx}\par}
@@ -1275,25 +1261,25 @@ We close with three messages. % transition to M-conclusion
   % Polish pass, 7 Oct 2026 (G8): the shared main-table style, \MainTableStyle = 10 pt, arraystretch 1.15, with
   % \RowSep between the limits; label column 3.0 cm (was 3.6), so the explanations need fewer lines.
   \FrameTop % first body token (centring; never a frame subtitle)
-  {\MainTableStyle
+  {\MainTableStyle\renewcommand{\arraystretch}{1.75}
   \begin{tabularx}{\linewidth}{@{}>{\raggedright\arraybackslash}p{3.0cm}>{\raggedright\arraybackslash}X@{}}
     \toprule
     \textbf{Limit} & \textbf{What it means}\\
     \midrule
     % [S5] hypothetical offers; [V1-V5] stated choices track directions better than levels; [S9] both questionnaires
     % said SNEF would use the results (fixer pass 7 Oct 2026, mom_ps-06 d)
-    \textbf{Stated choices} & Hypothetical offers; respondents knew SNEF would use the results; rankings firmer than levels\\ \RowSep
+    \textbf{Stated choices} & Hypothetical offers; rankings are firmer than levels\\ \RowSep
     % [S4] unweighted online panels; [S3] only 12% of employer respondents' firms have 50 or fewer staff (not printed)
     % [S1, S2, S4] PMEs in or seeking PME roles and employers about PME hiring: no rank-and-file staff (worker-07)
-    \textbf{Online panels} & Unweighted surveyed PMEs and firms, not national rates; no rank-and-file staff\\ \RowSep
+    \textbf{Online panels} & Unweighted; not national rates; no rank-and-file staff\\ \RowSep
     % [S2, S5] a hire between two equally qualified candidates; EB s9: hire, not request; operating costs not measured
     % [S2, S5; EB s9] a hiring reservation may also reflect what wanting the arrangement signals (editor-08)
-    \textbf{Employer task} & Hiring, not a staff request; may also reflect candidate signals; operating costs unmeasured\\ \RowSep
+    \textbf{Employer task} & A hiring choice, not a staff request; operating costs unmeasured\\ \RowSep
     % respondent-clustered CIs likely too narrow with so few distinct situations (EB s9)
     % [EB s9] 10 versions x 6 tasks = 60 choice situations per survey; [S6, S6b] every pay gap 17-33%
-    \textbf{Few design cells} & 60 choice situations per side; pay gaps 17--33\% by design; intervals likely too narrow\\ \RowSep
+    \textbf{Few design cells} & 60 choice situations per side; pay gaps 17--33\%\\ \RowSep
     % EB s9 l.183: no free-slope equal-pay check yet for the presence and creativity splits; [M12]
-    \textbf{Employer splits} & Free-slope check pending: preliminary associations under a common pay-slope model\\ \RowSep
+    \textbf{Employer splits} & Preliminary associations; free-slope check pending\\ \RowSep
     % [D9] request item partly misread; [D7b] refusals only among reported requesters; [B6] no why-not item
     \textbf{Request item} & Partly misread; why PMEs do not ask is unmeasured\\
     \bottomrule
@@ -1736,7 +1722,7 @@ We ask the partners today to choose one measurement step and one bounded, volunt
   \FrameTop
   \Fig{F_sample}{4.8cm}
   % [S1] 73 with no panel recorded; [S2] hiring or manpower decisions; [S3] 12%
-  \SourceNote{PMEs: citizens and PRs in or seeking PME roles, two online panels (73 with no panel recorded). Employers: people involved in PME hiring or manpower decisions; 20\% of their firms have 50 or fewer staff. Unweighted.}
+  \SourceNote{Unweighted online panels.}
   \BackToTwo{M-design}{Design}{M-data}{Data}
 \end{frame}
 
@@ -1867,7 +1853,7 @@ We ask the partners today to choose one measurement step and one bounded, volunt
   % [D1, D1 excl. Lucid, D2, D2x, D3, M16]
   \FrameTop
   \Fig{F_landscape}{5.0cm}
-  \SourceNote{PMEs: employed (n = 1,004); brackets exclude one lower-quality panel. Employers: n = 397. Unweighted online panels: shares describe surveyed PMEs and firms, not national rates.}
+  \SourceNote{Brackets exclude one lower-quality panel. Shares describe surveyed PMEs and firms, not national rates.}
   \BackToTwo{M-descriptive}{Practice}{M-puzzle}{Puzzle}
 \end{frame}
 
@@ -1883,7 +1869,7 @@ We ask the partners today to choose one measurement step and one bounded, volunt
 % PMEs
 % ==========================================================================
 % [E1-E10] main model, N = 1,020, 6,120 choices; [M1] remote vs own commute about 13
-\BackupTab{B-emp-all}{All PME estimates, \% of pay}{T_emp_all}{M-pmes}{PMEs}{Conditional logit, N = 1,020 PMEs, 6,120 choices; 95\% CIs clustered by respondent. Pay a PME would give up for the level over the base; indicative, as gaps shown were 17--33\%. Fully remote is vs a long commute; vs own commute, \ap 13\% (\hyperlink{B-remote-commute}{\textcolor{Navy}{commute}}).}
+\BackupTab{B-emp-all}{All PME estimates, \% of pay}{T_emp_all}{M-pmes}{PMEs}{Indicative: pay gaps shown were 17--33\%. Fully remote is vs a long commute; vs own commute, \ap 13\% (\hyperlink{B-remote-commute}{\textcolor{Navy}{commute}}).}
 
 \begin{frame}[t,label=B-remote-commute]{Fully remote valued against any commute}
   \FrameTop
@@ -2060,7 +2046,7 @@ We ask the partners today to choose one measurement step and one bounded, volunt
   % [B1, B2, B3]; [B1] fairness top challenge at 200 or fewer staff, 28% (shown in the figure); [P16] MOM PQ 2937; [S3] 12%; [R15, Q13, M18] no size association
   \FrameTop
   \Fig{F_org_view}{5.2cm}
-  \SourceNote{Surveyed employers, n = 397; few small firms (20\% have $\le$50 staff). We detect no size association in hiring choices; compressed-week offering rises with firm size (14, 18, 26\%; p = .07). MOM (PQ, 10 Sep 2026): in 2025, nearly 7 in 10 SMEs and about 8 in 10 non-SMEs offered a scheduled FWA; definitions differ, so not comparable with the 66.4\% series.}
+  \SourceNote{We detect no size association in hiring choices; compressed-week offering rises with firm size (14, 18, 26\%; p = .07). MOM (PQ, 10 Sep 2026): in 2025, nearly 7 in 10 SMEs and about 8 in 10 non-SMEs offered a scheduled FWA; definitions differ, so not comparable with the 66.4\% series.}
   \BackToTwo{M-employers}{Employers}{M-where}{Reservations}
 \end{frame}
 
