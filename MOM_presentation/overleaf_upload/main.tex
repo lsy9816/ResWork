@@ -680,15 +680,15 @@ Next, the choice task.}
     \node[cell,minimum height=0.95cm] at (8.98,-2.84) {Fixed hours};
     \node[cell,minimum height=0.95cm] at (11.84,-2.84) {Compressed\\4-day week};
     % ---- held row: [S5] all other attributes at the respondent's own current practice, both sides
-    \node[same,one] at (0,-3.85) {Same in A and B: as in own job};
+    \node[same,one] at (0,-3.85) {Same in both: as in own job};
     \node[lab,one,minimum height=0.55cm] at (7.31,-3.85) {Everything else};
-    \node[same,one] at (8.98,-3.85) {Same in A and B: as in own firm};
+    \node[same,one] at (8.98,-3.85) {Same in both: as in own firm};
     % ---- three guardrails, 0.2 cm apart, spanning the card width: [S5] six forced choices; [S6, S6b] pay gaps
     % 17-33% by design (displayed about 16-34% after S$50 rounding, S6; fixer pass 7 Oct 2026, editor-13: the
     % spec chip wording, without always); [S5; EB s9; Lead decision 7] the employer task is a hire, not a reply
     % to a request
     \node[anchor=north,inner sep=0pt,text width=14.6cm,align=center,text=Ink,font=\FsBody]
-      at (7.31,-4.75) {One of six choices each. In every choice, pay and two other attributes change at random.};
+      at (7.31,-4.75) {Two attributes differ in each choice; which ones, and their levels, are randomized.};
     % ---- sample: [S1] 1,020 PMEs; [S2] 397 people involved in PME hiring or manpower decisions;
     % [S1, S2, S4] online panels, unweighted; [S3] 12% of employer respondents' firms have 50 or fewer staff
   \end{tikzpicture}\par}
@@ -732,7 +732,7 @@ Now the results, starting with PMEs. [Full deck: ``Next, how we turn these choic
         text=Ink,font=\FsSmall}]
     % ---- card (x 0 to 8.1): label and scenario line [S5] six tasks
     \node[deckhead] (hc) at (0,0) {Illustrative choice task};
-    \node[anchor=base east,inner sep=0pt,text=Muted,font=\FsSmall] at (8.1,0 |- hc.base) {Example, 1 of 6}; % [S5] six tasks per respondent
+    \node[anchor=base east,inner sep=0pt,text=Muted,font=\FsSmall] at (8.1,0 |- hc.base) {Scenario 1 of 6}; % [S5] six tasks per respondent
     % header row (instrument: Attribute / Job Offer A / Job Offer B) on baseline y = -0.83, rule under the pair
     % as on M-design
     \node[anchor=base west,inner xsep=0.08cm,inner ysep=0pt,text=Ink,font=\FsBody\bfseries]
@@ -756,7 +756,7 @@ Now the results, starting with PMEs. [Full deck: ``Next, how we turn these choic
     % held rows (one value spanning A and B in the instrument) [S5]; the card's foot lines up with step 3's
     \node[deckheld,anchor=north west,inner xsep=0.08cm,inner ysep=0.04cm,minimum width=8.1cm,
       minimum height=0.89cm,text width=7.94cm] at (0,-4.23)
-      {Same in A and B: as in own job};
+      {Workload, Job security, Workplace culture, Commute time: same for A and B (your current job)};
     % ---- three steps (x 8.42 to 14.78), stacked 0.30 cm apart
     \node[deckhead] at (8.42,0) {How values are calculated};
     % [S5] six choices per respondent
