@@ -10,6 +10,8 @@ cp $MOM/mechanisms/employer_channels.csv $MOM/mechanisms/compressed_puzzle.csv $
 cp $SRC/b/table/employee_*.xlsx $B/table/
 cp $SRC/src/appended_wtp.xlsx $B/table/employer_wtp.xlsx; cp $SRC/src/appended_clogit.xlsx $B/table/employer_clogit.xlsx
 cp $SRC/b/deck_support/EVIDENCE_BOOK.md $B/deck_support/
+# appended sample: 397 firms, fieldwork ended 2 Oct 2026 (F_sample_m reads both from the S2 line)
+sed -i '/^- S2 Employers/{s/\*\*303\*\*/**397**/;s/2 Sep 2026/2 Oct 2026/}' $B/deck_support/EVIDENCE_BOOK.md
 cp $MOM/latex/main-2.tex $B/overleaf/main.tex 2>/dev/null || cat $MOM/latex/parts/main-2_part*.tex > $B/overleaf/main.tex
 for f in fig_backup fig_main fig_r5 fig_v2 figstyle make_tables; do cp $SRC/src/$f.py $B/deck_support/scripts/; done
 cp $SRC/figstyle_fallback.py $B/deck_support/scripts/figstyle.py   # adds Liberation Sans after Arial (this machine has no Arial)
