@@ -1840,24 +1840,15 @@ We ask the partners today to choose one measurement step and one bounded, volunt
     \textbf{Fully remote vs \ldots} & \textbf{\% of pay given up [95\% CI]}\\
     \midrule
     % 3.place: fully remote (no commute) vs onsite with a long commute; the headline everywhere in the deck
-    \textbf{long commute ($>$45 min)} (headline; the model's \texttt{3.place}) & \textcolor{Muted}{15.1 [11.1, 19.1]}\\
+    \textbf{long commute ($>$45 min)} (main; the model's \texttt{3.place}) & \textcolor{Muted}{15.1 [11.1, 19.1]}\\
     % same logit coefficients combined: b[3.place] - b[commute_mod] and - b[commute_short]
     moderate commute (15--45 min) & \textcolor{Muted}{12.2 [9.0, 15.5]}\\
     short commute ($<$15 min) & \textcolor{Muted}{7.5 [2.9, 12.1]}\\
-    % pme_channels p3own: weighted by the commute each PME held in the design
-    each PME's own commute & \textcolor{Muted}{12.7 [9.8, 15.6]}\\
-    \midrule
-    \multicolumn{2}{@{}l}{\textbf{Own commute, by length}}\\
-    % [M2] <= 45 min, n = 681: 11.0 [7.2, 14.9]
-    45 min or less (n = 681) & \textcolor{Muted}{11.0 [7.2, 14.9]}\\
-    % [M2] > 45 min, n = 305: 11.8 [6.9, 16.8]
-    over 45 min (n = 305) & \textcolor{Muted}{11.8 [6.9, 16.8]}\\
-    % [M2] WTP p = .80
-    Test of no difference & p = .80\\
+    % weights = share of respondents whose held commute (tasks 1-5, employee.dta commutetime) is short 38, moderate 744, long 238 of 1,020
+    commute held in the design (weighted) & \textcolor{Muted}{12.7 [9.8, 15.6]}\\
     \bottomrule
   \end{tabular}\par}
-  % [M1] commute shares short .037, moderate .729, long .233; [M3] 1-2 days 58% vs 58%, compressed 57% vs 58%
-  \SourceNote{Commute dummies apply to onsite jobs only (base: long); fully remote has none, so \texttt{3.place} is remote vs onsite with a long commute and includes the end of commuting. Employers saw no commute attribute. The other rows recombine the same logit coefficients (\texttt{3.place} less a commute dummy); own commute weights them by the commute each PME held in the design (short .037, moderate .729, long .233). Grey = indicative.}
+  \SourceNote{Commute dummies apply to onsite jobs only (base: long); fully remote has none, so \texttt{3.place} is remote vs onsite with a long commute and includes the end of commuting. Employers saw no commute attribute. Only fully remote loses the commute; hybrid and onsite jobs keep it. The other rows recombine the same logit coefficients (\texttt{3.place} less a commute dummy). Weighted: less the held-commute average, using the share of PMEs whose commute was held at short, moderate or long in tasks 1--5 (3.7\%, 72.9\%, 23.3\%). Grey = indicative.}
   \BackTo{M-pmes}{PMEs}
 \end{frame}
 
