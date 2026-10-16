@@ -34,7 +34,7 @@ D = pd.read_csv(MOM / "data" / "wtp_deck.csv")
 GREY_D = V.GREY_D
 HALO = M.HALO
 SIZE = (13.0, 5.0)
-V.SIZE.update({k: SIZE for k in ("F_org_wtp", "F_gap_m", "F_why_pmes", "F_where_r5", "F_groups_m", "F_landscape_m",
+V.SIZE.update({k: SIZE for k in ("F_org_wtp", "F_gap_m", "F_why_pmes", "F_where_r5", "F_groups_m", "F_emp_wtp", "F_landscape_m",
                                  "F_puzzle_r5", "F_barriers_r5")})
 
 
@@ -76,13 +76,13 @@ ROWS = [  # label, item, y (data units), hours-change row?
 YA, YB = 0.55, 7.5
 
 
-def frame(fig, labels, xl, xr, ticks, val_w=1.05, head_h=0.86, pad=0.15):
+def frame(fig, labels, xl, xr, ticks, val_w=1.05, head_h=0.86, pad=0.15, bottom=0.55):
     W, H = fig.W, fig.H
     LX = 0.05 + max(V.tw_cm(fig, t, S.FS_ROW) for t in labels)
     X0 = LX + pad
     EX = W - val_w
     X1 = EX - 0.30
-    AY, AT = 0.55, H - head_h
+    AY, AT = bottom, H - head_h
     ax = M.axes_cm(fig, X0, AY, X1 - X0, AT - AY)
     ax.set_xlim(xl, xr)
     ax.set_ylim(YA, YB)
@@ -97,6 +97,12 @@ def frame(fig, labels, xl, xr, ticks, val_w=1.05, head_h=0.86, pad=0.15):
     return dict(LX=LX, X0=X0, X1=X1, EX=EX, AY=AY, AT=AT, ax=ax, fy=fy)
 
 
+def vlabel(ax, x, y, txt, col, bold=True):
+    """value label right next to the marker's CI end (5 pt gap)"""
+    ax.annotate(txt, (x, y), xytext=(5, 0), textcoords="offset points", ha="left", va="center", fontsize=S.FS_VAL,
+                color=col, fontweight="bold" if bold else "normal", path_effects=HALO, zorder=5)
+
+
 def ci_dot(ax, y, est, lb, ub, col, **kw):
     ax.plot([lb, ub], [y, y], color=col, lw=S.CI_LW, solid_capstyle="butt", zorder=2)
     ax.plot([est], [y], marker="o", ms=S.MS_CIRCLE, mfc=col, mec="white", mew=S.MEW, ls="none", zorder=3, **kw)
@@ -109,15 +115,14 @@ def fig_org_wtp():
     name = "F_org_wtp"
     fig = new_fig(name)
     labels = [r[0] for r in ROWS]
-    F = frame(fig, labels, -8, 64, [0, 20, 40, 60])
+    F = frame(fig, labels, -8, 68, [0, 20, 40, 60], val_w=0.35, bottom=0.60)
     V.head(fig, name, "Pay cut employers would require for each arrangement, % of pay")
     V.hline_cm(fig, 0.05, fig.W - 0.05, F["fy"](2.6), **S.SEP)
     for lab, item, y, load in ROWS:
         est, lb, ub = tri("emp", item)
         col = S.MUTED if load else S.EMPLOYER
         ci_dot(F["ax"], y, est, lb, ub, col)
-        M.ftext(fig, F["EX"], F["fy"](y), txt0(est), ha="left", va="center", fontsize=S.FS_VAL, color=col,
-                fontweight="normal" if load else "bold")
+        vlabel(F["ax"], max(ub, est), y, txt0(est), col, not load)
         M.ftext(fig, F["LX"], F["fy"](y), lab, ha="right", va="center", fontsize=S.FS_ROW,
                 color=S.MUTED if load else S.INK)
     return done(fig, name)
@@ -140,16 +145,38 @@ def gap_row(item, pme_item=None):
 # ----------------------------------------------------------------------------------------------------------------
 # F_gap_m (M-meet): dumbbell, PMEs' pay given up vs employers' required cut, with the gap
 # ----------------------------------------------------------------------------------------------------------------
+def fig_emp_wtp():
+    name = "F_emp_wtp"
+    fig = new_fig(name)
+    labels = ["Fully remote (vs own commute)"] + [r[0] for r in ROWS[1:]]
+    F = frame(fig, labels, -5, 24, [0, 5, 10, 15, 20], val_w=0.35, bottom=0.60)
+    ax = F["ax"]
+    ax.axvspan(4, 8, color=S.BAND, zorder=0, lw=0)
+    xb = F["X0"] + (6 + 5) / 29 * (F["X1"] - F["X0"])
+    M.ftext(fig, xb, F["AT"] + 0.05, "WFH option abroad (4\u20138%)", ha="center", va="bottom", fontsize=S.FS_CAP,
+            color=S.MUTED)
+    V.head(fig, name, "Pay PMEs would give up for each arrangement, % of monthly pay")
+    V.hline_cm(fig, 0.05, fig.W - 0.05, F["fy"](2.6), **S.SEP)
+    for i, (lab, item, y, load) in enumerate(ROWS):
+        est, lb, ub = tri("pme", "p3own" if item == "p3" else item)
+        col = S.MUTED if load else S.EMPLOYEE
+        ci_dot(ax, y, est, lb, ub, col)
+        vlabel(ax, max(ub, est), y, txt0(est), col, not load)
+        M.ftext(fig, F["LX"], F["fy"](y), labels[i], ha="right", va="center", fontsize=S.FS_ROW,
+                color=S.MUTED if load else S.INK)
+    return done(fig, name)
+
+
 def fig_gap_m():
     name = "F_gap_m"
     fig = new_fig(name)
     labels = ["Fully remote", "3–4 WFH days", "1–2 WFH days", "Compressed week", "Staggered hours",
               "Job sharing / reduced load*", "Part-time*"]
-    F = frame(fig, labels, -4, 62, [0, 20, 40, 60], val_w=1.35)
+    F = frame(fig, labels, -4, 62, [0, 20, 40, 60], val_w=1.35, bottom=1.15)
     ax = F["ax"]
     keys = [("o", S.EMPLOYEE, S.EMPLOYEE, S.MS_CIRCLE, "PMEs would give up", S.EMPLOYEE, "bold"),
             ("o", S.EMPLOYER, S.EMPLOYER, S.MS_CIRCLE, "Employers would require", S.EMPLOYER, "bold")]
-    V.r5_key(fig, F["EX"] - 0.25 - V.key_width(fig, keys), fig.H - 0.64, keys)
+    V.r5_key(fig, (fig.W - V.key_width(fig, keys)) / 2, 0.16, keys)
     V.head(fig, name, "Pay given up vs pay cut required, % of pay")
     V.hline_cm(fig, 0.05, fig.W - 0.05, F["fy"](2.6), **S.SEP)
     M.ftext(fig, F["EX"], F["AT"] + 0.10, "Gap", ha="left", va="bottom", fontsize=S.FS_HEAD, color=S.INK,
@@ -174,7 +201,7 @@ def fig_gap_m():
 # ----------------------------------------------------------------------------------------------------------------
 def fig_why_pmes():
     name = "F_why_pmes"
-    levels = [("p1", "1–2 WFH days"), ("p2", "3–4 WFH days"), ("p3m", "Fully remote\n(vs 15–45 min commute)"),
+    levels = [("p1", "1–2 WFH days"), ("p2", "3–4 WFH days"), ("p3", "Fully remote\n(vs >45 min commute)"),
               ("t2", "Compressed week")]
     fig = new_fig(name)
     W, H = fig.W, fig.H
@@ -184,7 +211,7 @@ def fig_why_pmes():
     X0 = LX + 0.15
     X1 = W - 0.05 - PW_ - 0.30
     XL, XR = -9, 26
-    YB0, YB1 = 0.55, H - 1.24
+    YB0, YB1 = 1.15, H - 0.80
     ax = M.axes_cm(fig, X0, YB0, X1 - X0, YB1 - YB0)
     ax.set_xlim(XL, XR)
     ax.set_ylim(YB0, YB1)
@@ -221,7 +248,7 @@ def fig_why_pmes():
             color=S.INK, linespacing=1.1)
     keys = [("o", S.EMPLOYEE, S.EMPLOYEE, S.MS_CIRCLE, f"No expected penalty (n = {ns[0]})", S.EMPLOYEE, "bold"),
             ("o", GREY_D, GREY_D, S.MS_CIRCLE, f"Expected penalty (n = {ns[1]})", GREY_D, "bold")]
-    V.r5_key(fig, W - 0.05 - V.key_width(fig, keys), H - 0.64, keys)
+    V.r5_key(fig, (W - V.key_width(fig, keys)) / 2, 0.16, keys)
     V.head(fig, name, "Pay PMEs would give up, % of monthly pay")
     ax.set_yticks([])
     ax.spines["left"].set_visible(False)
@@ -240,9 +267,9 @@ def fig_where_r5():
     blocks = [("1–2 WFH days a week", "p1", "physical", [(0, "Most roles need presence", True),
                                                              (1, "Some or few roles do", False)]),
               ("Fully remote", "p3", "creat", [(0, "Creativity concern", True), (1, "No creativity concern", False)])]
-    LX, X0, X1, VX = 5.20, 5.40, 11.75, W - 0.05
-    XL, XR = -40, 90
-    AY, AT = 0.55, H - 0.55
+    LX, X0, X1 = 5.20, 5.40, W - 0.30
+    XL, XR = -40, 100
+    AY, AT = 0.60, H - 0.55
     ax = M.axes_cm(fig, X0, AY, X1 - X0, AT - AY)
     ax.set_xlim(XL, XR)
     YA_, YB_ = 0.0, 6.0
@@ -265,8 +292,7 @@ def fig_where_r5():
                     mec="white" if focal else S.EMPLOYER, mew=S.MEW if focal else S.MEW_HOLLOW, ls="none", zorder=3)
             M.ftext(fig, LX, fy(y), lab, ha="right", va="center", fontsize=S.FS_ROW, color=S.INK)
             M.ftext(fig, LX + 0.08, fy(y), f"n = {int(q.n)}", ha="left", va="center", fontsize=S.FS_CAP, color=S.MUTED)
-            M.ftext(fig, VX, fy(y), txt0(q.giveup), ha="right", va="center", fontsize=S.FS_VAL, color=S.EMPLOYER,
-                    fontweight="bold")
+            vlabel(ax, max(q.ub, q.giveup), y, txt0(q.giveup), S.EMPLOYER)
     V.hline_cm(fig, 0.05, W - 0.05, fy(3.1), **S.SEP)
     V.head(fig, name, "Pay cut employers would require, % of pay")
     return done(fig, name)
@@ -291,7 +317,7 @@ def fig_groups_m():
     PCW = max([V.tw_cm(fig, ".43", S.FS_ROW)] + [V.tw_cm(fig, s_, S.FS_HEAD, "bold") for s_ in P_HEAD]) + 0.10
     PX0, GAP = LX + 0.15, 0.30
     PW = (W - 0.05 - PCW - 0.30 - PX0 - 2 * GAP) / 3
-    AY, AT = 0.55, H - 0.98
+    AY, AT = 1.15, H - 0.98
     YA_, YB_ = 1.95, 9.50
 
     def fy(y):
@@ -333,7 +359,7 @@ def fig_groups_m():
     keys = [("o", "white", S.EMPLOYEE, S.MS_CIRCLE, "first group listed", S.INK, "normal"),
             ("o", S.EMPLOYEE, S.EMPLOYEE, S.MS_CIRCLE, "second", S.INK, "normal")]
     kw_ = V.key_width(fig, keys, gap=0.35)
-    V.r5_key(fig, W - 0.05 - kw_, H - 0.23, keys, gap=0.35)
+    V.r5_key(fig, (W - kw_) / 2, 0.16, keys, gap=0.35)
     return done(fig, name)
 
 
@@ -369,34 +395,88 @@ def fig_landscape_m():
                 color=S.EMPLOYEE, fontweight="bold")
     V.vline_cm(fig, BX0, top - 4 * pitch - bh / 2 - 0.06, top + bh / 2 + 0.06, color=S.RULE, lw=0.7)
     RX0 = 8.05
-    cats = [("0 days (fully onsite)", "0"), ("1-2 days a week", "1\u20132"), ("3-4 days a week", "3\u20134"),
-            ("5 days (remote-first)", "5")]
-    vals = []
-    for it, short in cats:
-        v, _ = M.one("org_fwa.csv", block="typical_wfh_days", sample="all", group="All employer respondents", item=it)
-        vals.append((float(v["share"]), short, int(v["n"])))
-    n_o = vals[0][2]
-    M.ftext(fig, RX0, H - 0.04, f"Employers (n = {n_o})", ha="left", va="top", fontsize=S.FS_HEAD,
-            color=S.EMPLOYER, fontweight="bold")
-    M.ftext(fig, RX0, H - 0.47, "Typical PME WFH days a week", ha="left", va="top", fontsize=S.FS_AXIS, color=S.INK)
-    CB, CT = 0.46, H - 1.40
-    CW, CP = 0.78, 1.18
-    scale = (CT - CB) / max(v for v, _, _ in vals)
-    for k, (v, short, _) in enumerate(vals):
-        x = RX0 + 0.25 + k * CP
-        hi_ = short == "1\u20132"
-        fig.add_artist(Rectangle((x / W, CB / H), CW / W, v * scale / H, transform=fig.transFigure,
-                                 fc=S.EMPLOYER if hi_ else S.EMPLOYER_LIGHT, ec="none", lw=0))
-        M.ftext(fig, x + CW / 2, CB + v * scale + 0.08, f"{r0(v)}%", ha="center", va="bottom", fontsize=S.FS_VAL,
-                color=S.EMPLOYER if hi_ else S.INK, fontweight="bold")
-        M.ftext(fig, x + CW / 2, CB - 0.08, short, ha="center", va="top", fontsize=S.FS_ROW, color=S.INK)
-    V.hline_cm(fig, RX0 + 0.10, RX0 + 0.40 + 3 * CP + CW, CB, color=S.RULE, lw=0.7)
+    M.ftext(fig, RX0, H - 0.04, "Employers (n = 397)", ha="left", va="top", fontsize=S.FS_HEAD, color=S.EMPLOYER,
+            fontweight="bold")
+    M.ftext(fig, RX0, H - 0.47, "% offering it to PMEs", ha="left", va="top", fontsize=S.FS_AXIS, color=S.INK)
+    ritems = [("Remote work (ad hoc, scheduled or remote-first)", "WFH"), ("Staggered hours", "Staggered hours"),
+              ("Compressed workweek", "Compressed week"), ("Job sharing", "Job sharing"),
+              ("Part-time / reduced hours", "Part-time")]
+    RL = RX0 + 0.05 + max(V.tw_cm(fig, t, S.FS_ROW) for _, t in ritems)
+    RB0, RBW = RL + 0.15, 1.15
+    for i, (item, lab) in enumerate(ritems):
+        y = top - i * pitch
+        v = float(M.one("org_fwa.csv", block="offered_ticked", sample="all", group="All employer respondents",
+                       item=item)[0]["share"])
+        M.ftext(fig, RL, y, lab, ha="right", va="center", fontsize=S.FS_ROW, color=S.INK)
+        fig.add_artist(Rectangle((RB0 / W, (y - bh / 2) / H), v / 100 * RBW / W, bh / H, transform=fig.transFigure,
+                                 fc=S.EMPLOYER, ec="none", lw=0))
+        M.ftext(fig, RB0 + v / 100 * RBW + 0.14, y, f"{r0(v)}%", ha="left", va="center", fontsize=S.FS_VAL,
+                color=S.EMPLOYER, fontweight="bold")
+    V.vline_cm(fig, RB0, top - 4 * pitch - bh / 2 - 0.06, top + bh / 2 + 0.06, color=S.RULE, lw=0.7)
     return done(fig, name)
 
 
 # ----------------------------------------------------------------------------------------------------------------
 # F_puzzle_r5 (M-puzzle): four fact cards, no equal-pay share, no dagger
 # ----------------------------------------------------------------------------------------------------------------
+def fig_sample_m():
+    name = "F_sample_m"
+    SZ = (13.0, 6.0)
+    fig = M.new_fig(*SZ)
+    Wd, H = fig.W, fig.H
+    oc = pd.read_csv(MOM / "data" / "org_composition.csv")
+
+    def share(block, item):
+        r = oc[(oc.block == block) & (oc["sample"] == "all") & (oc["item"] == item)].iloc[0]
+        return float(r.share)
+    PAD, BAR = S.CARD_PAD_CM, S.CARD_BAR_CM
+    CY0, CY1 = 2.95, H - 0.04
+    CWD = (Wd - 0.10 - 0.30) / 2
+    cards = [(0.05, S.EMPLOYEE, "1,020", "PMEs", ["Singapore citizens and PRs", "in or seeking PME roles"],
+              "Fielded 4\u201321 Aug 2026", "Online panels"),
+             (0.05 + CWD + 0.30, S.EMPLOYER, "397", "employer respondents", ["People involved in PME hiring", "or manpower decisions"],
+              "Fielded 12 Aug\u20132 Oct 2026", "Online panel")]
+    for x, col, big, unit, who, when, pan in cards:
+        fig.add_artist(Rectangle((x / Wd, CY0 / H), CWD / Wd, (CY1 - CY0) / H, transform=fig.transFigure, fc=S.CARD_FILL, ec="none", lw=0))
+        fig.add_artist(Rectangle((x / Wd, (CY1 - BAR) / H), CWD / Wd, BAR / H, transform=fig.transFigure, fc=col, ec="none", lw=0))
+        xt = x + PAD + 0.05
+        tb = M.ftext(fig, xt, CY1 - BAR - PAD - 0.55, big, ha="left", va="baseline", fontsize=S.FS_BIG, color=col, fontweight="bold")
+        xb_ = fig.transFigure.inverted().transform((tb.get_window_extent(renderer=fig.canvas.get_renderer()).x1, 0))[0] * Wd
+        M.ftext(fig, xb_ + 0.12, CY1 - BAR - PAD - 0.55, unit, ha="left", va="baseline", fontsize=S.CARD_HEAD_FS, color=col, fontweight="bold")
+        M.ftext(fig, xt, CY1 - BAR - PAD - 0.80, "\n".join(who), ha="left", va="top", fontsize=S.FS_ROW, color=S.INK, linespacing=1.2)
+        M.ftext(fig, xt, CY0 + PAD + 0.45, f"{pan}, unweighted", ha="left", va="baseline", fontsize=S.FS_ROW, color=S.INK, fontweight="bold")
+        M.ftext(fig, xt, CY0 + PAD, when, ha="left", va="baseline", fontsize=S.FS_ROW, color=S.MUTED)
+    M.ftext(fig, 0.05, 1.95, "Employer respondents' firms, by staff size", ha="left", va="center", fontsize=S.FS_HEAD,
+            color=S.EMPLOYER, fontweight="bold")
+    BX0, BX1, BY, BH = 0.05, Wd - 0.05, 0.18, 0.70
+    segs = [("\u2264200 staff", "200 or fewer", "firm_size3", S.EMPLOYER_LIGHT), ("201\u20131,000", "201-1,000", "firm_size3", S.GREY_MID),
+            ("1,001+", "1,001 or more", "firm_size3", S.MUTED)]
+    x = BX0
+    for lab, it, blk, c in segs:
+        v = share(blk, it)
+        w = v / 100 * (BX1 - BX0)
+        fig.add_artist(Rectangle((x / Wd, BY / H), w / Wd, BH / H, transform=fig.transFigure, fc=c, ec="white", lw=1.0))
+        if lab.startswith("\u2264200"):
+            yb = BY + BH + 0.16
+            V.hline_cm(fig, x + 0.02, x + w - 0.02, yb, color=S.INK, lw=0.7)
+            for xx in (x + 0.02, x + w - 0.02):
+                V.vline_cm(fig, xx, yb - 0.10, yb, color=S.INK, lw=0.7)
+            M.ftext(fig, x + w / 2, yb + 0.08, f"{lab}: {r0(v)}%", ha="center", va="bottom", fontsize=S.FS_TICK,
+                    color=S.INK, fontweight="bold")
+            w200 = (x, w)
+        else:
+            M.ftext(fig, x + w / 2, BY + BH / 2, f"{lab}: {r0(v)}%", ha="center", va="center", fontsize=S.FS_TICK,
+                    color="white" if c == S.MUTED else S.INK, fontweight="bold")
+        x += w
+    v50 = share("firm_size3", "50 or fewer")
+    w50 = v50 / 100 * (BX1 - BX0)
+    fig.add_artist(Rectangle((BX0 / Wd, BY / H), w50 / Wd, BH / H, transform=fig.transFigure, fc=S.EMPLOYER, ec="white", lw=1.0))
+    M.ftext(fig, BX0 + w50 / 2, BY + BH / 2, f"\u226450: {r0(v50)}%", ha="center", va="center", fontsize=S.FS_TICK, color="white", fontweight="bold")
+    M.ftext(fig, BX0 + w50 + (w200[1] - w50) / 2, BY + BH / 2, "51\u2013200", ha="center", va="center", fontsize=S.FS_TICK, color=S.INK)
+    V.outside(fig, name)
+    return M.finish(fig, name, SZ)
+
+
 def fig_puzzle_r5():
     import fig_r5 as F5
     name = "F_puzzle_r5"
@@ -525,9 +605,9 @@ def fig_barriers_r5():
     return done(fig, name)
 
 
-FIGS = {"F_org_wtp": fig_org_wtp, "F_gap_m": fig_gap_m, "F_why_pmes": fig_why_pmes, "F_where_r5": fig_where_r5,
+FIGS = {"F_emp_wtp": fig_emp_wtp, "F_org_wtp": fig_org_wtp, "F_gap_m": fig_gap_m, "F_why_pmes": fig_why_pmes, "F_where_r5": fig_where_r5,
         "F_groups_m": fig_groups_m,
-        "F_landscape_m": fig_landscape_m, "F_puzzle_r5": fig_puzzle_r5, "F_barriers_r5": fig_barriers_r5}
+        "F_landscape_m": fig_landscape_m, "F_sample_m": fig_sample_m, "F_puzzle_r5": fig_puzzle_r5, "F_barriers_r5": fig_barriers_r5}
 
 if __name__ == "__main__":
     import warnings
