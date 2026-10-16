@@ -33,3 +33,12 @@ B-awareness, B-approvals, B-tgfwar, B-triangulation, B-limits, B-followup, B-opt
 * The employer split tests are now WTP ratio tests with group-specific pay slopes; BH q is over 11 tests (this differs from the
   earlier 20-split, equal-pay q values).
 * Source note texts under figures were kept to what the slide needs.
+
+## Commute basis for "fully remote" (16 Oct 2026, second update)
+`3.place` = remote with no commute vs onsite with a long commute (commute dummies only for onsite jobs, base = long), so it includes the
+end of commuting. Employers saw no commute attribute, so PMEs' fully remote is now shown **vs onsite with a moderate commute**
+(`b[3.place] - b[commute_mod]`, 12.2 [9.0, 15.5]) on every slide, figure and table. Long (15.1), short (7.5) and own-commute (12.7)
+values are in the backup `B-remote-commute` only.
+Gender / age / caregiving panels: the point estimates are exact, but their SEs are PROVISIONAL (3.place SE x main-sample ratio) until
+`nlcom` output is available (`wtp_deck.csv`, column `provisional`):
+    nlcom (remote_mod: 100*(1-exp(-(_b[3.place]-_b[commute_mod])/_b[log_salary]))) , post   // per group, after the group's clogit

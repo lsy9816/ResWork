@@ -25,7 +25,7 @@ OUT = []
 
 # term -> item key shared by both sides
 TERM = {"1.place": "p1", "2.place": "p2", "3.place": "p3", "1.timeflex": "t1", "2.timeflex": "t2",
-        "1.load": "l1", "2.load": "l2", "1.retention": "r1", "2.retention": "r2", "0.collaborative": "cult",
+        "1.load": "l1", "2.load": "l2", "1.retention": "r1", "2.retention": "r2", "0.collaborative": "cult", "remote_vs_mod": "p3m",
         "0.risk": "risk0", "1.risk": "risk1"}
 
 
@@ -44,11 +44,11 @@ keep = {"main": "main", "excl_salary_out": "excl_salary_out", "trim1pct": "trim1
 for smp, nm in keep.items():
     for _, r in w[w["sample"] == smp].iterrows():
         k = TERM.get(r["item"])
-        if k and k in ("p1", "p2", "p3", "t1", "t2", "l1", "l2"):
+        if k and k in ("p1", "p2", "p3", "p3m", "t1", "t2", "l1", "l2"):
             add("pme", nm, "all", 0, "All PMEs", int(r["n_resp"]), k, r.est, r.se, r.lb, r.ub)
 pc = pd.read_csv(IN / "pme_channels.csv")
 pc = pc[(pc.block == "wtp") & (pc["sample"] == "all")]
-for _, r in pc[(pc.split == "all") & (pc.item.isin(["p3own", "p3m"]))].iterrows():
+for _, r in pc[(pc.split == "all") & (pc.item.isin(["p3own"]))].iterrows():
     add("pme", "main", "all", 0, "All PMEs", int(r.n_resp), r["item"], r.est, r.se, r.lb, r.ub)
 for _, r in pc[pc.split == "career"].iterrows():
     if r["item"] in ("p1", "p2", "p3", "p3m", "t1", "t2", "l1", "l2"):
@@ -72,6 +72,19 @@ for sheet, (hs, labs) in SPL.items():
             g = int(r["group"])
             add("pme", "main", sheet, g, labs[g] if g < len(labs) else str(g), ns.get(g, 0), k,
                 r.wtp, r.se, r.lb, r.ub)
+    # Fully remote vs onsite with a MODERATE commute (= b[3.place] - b[commute_mod]); the covariance is not in the xlsx, so the point
+    # estimate is exact (ratio form) but the SE is PROVISIONAL: the 3.place SE scaled by the main-sample ratio se(remote_vs_mod)/se(3.place).
+    # Replace with nlcom output (see CHANGES_wtp_update.md) when available.
+    t3 = {(int(r["group"]), r["term"]): r for _, r in t.iterrows()}
+    ratio = 1.6428 / 2.0519
+    for g in sorted({k[0] for k in t3}):
+        w3, wm = t3[(g, "3.place")], t3[(g, "commute_mod")]
+        x = -np.log(1 - w3.wtp / 100) + np.log(1 - wm.wtp / 100)
+        est = 100 * (1 - np.exp(-x))
+        se = w3.se * ratio
+        OUT.append(dict(side="pme", sample="main", split=sheet, group=g, glabel=labs[g] if g < len(labs) else str(g), n=ns.get(g, 0),
+                        item="p3m", giveup=round(est, 4), se=round(se, 4), lb=round(est - 1.96 * se, 4), ub=round(est + 1.96 * se, 4),
+                        provisional=1))
     jt = het[(het.block == "joint_test") & (het.split == hs) & (het["item"] == "wtp")].iloc[0]
     OUT.append(dict(side="pme", sample="main", split=sheet, group=-1, glabel="joint test: all WTP ratios equal",
                     n=0, item="joint_p", giveup=round(float(jt.p), 5), se=0, lb=0, ub=0))

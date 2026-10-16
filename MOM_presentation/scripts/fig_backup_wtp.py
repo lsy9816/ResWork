@@ -119,7 +119,7 @@ def fig_emp_groups():
     SZ = (14.5, 5.2)
     fig = M.new_fig(*SZ)
     Wd, H = fig.W, fig.H
-    levels = [("p1", "1–2 days"), ("p2", "3–4 days"), ("p3", "Remote¹"), ("t2", "Compressed")]
+    levels = [("p1", "1–2 days"), ("p2", "3–4 days"), ("p3m", "Remote¹"), ("t2", "Compressed")]
     rows = [("main", 0, "All PMEs (1,020)")]
     for sp, labs in (("gender", ("Men", "Women")), ("age", ("Aged 19–39", "Aged 40+")),
                      ("care_type", ("No caregiving", "Other caregiving", "Child aged 0–6"))):
@@ -150,7 +150,7 @@ def fig_emp_groups():
         S.ref_line(ax, 0, YA_, YB_)
         for (sp, g, lab), yy in zip(rows, ys):
             if sp == "main":
-                e, lb, ub = W.tri("pme", "p3own" if it == "p3" else it)
+                e, lb, ub = W.tri("pme", it)
             else:
                 q = D[(D.side == "pme") & (D.split == sp) & (D.group == g) & (D["item"] == it)].iloc[0]
                 e, lb, ub = q.giveup, q.lb, q.ub
