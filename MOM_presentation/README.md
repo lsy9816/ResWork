@@ -3,6 +3,12 @@
 교수님 폴더(`ResWork_SY/SNEF_survey/final/deck_support`, `final/overleaf`)는 수정하지 않았습니다.
 그 폴더의 코드는 읽기만 하고, 바뀐 결과물은 모두 이 폴더에만 둡니다.
 
+## 2026-10-16 업데이트 (WTP 기준)
+- 본문·부록 모두 전체 응답자 사용, Lucid 제외 값과 †범위 삭제, 같은 임금에서 선택 확률(equal-pay share) 삭제 → 전부 WTP.
+- 부호: **양수 = 포기하는 임금**. PME = 포기할 임금, 고용주 = 요구하는 임금 삭감(= 모형 WTP의 부호 반전). 격차 = 고용주 요구 − PME 포기(양수 = 마찰).
+- 새 파일: `scripts/build_wtp_data.py`(→ `data/wtp_deck.csv`), `scripts/fig_wtp.py`, `scripts/fig_backup_wtp.py`, `scripts/make_tables_wtp.py`, `latex/CHANGES_wtp_update.md`.
+- 올릴 파일은 `overleaf_upload/` 또는 `MOM_overleaf_upload.zip`. 아래 옛 설명(동일임금 확률 기준)은 참고용입니다.
+
 ## 폴더 구성
 | 경로 | 내용 |
 |---|---|

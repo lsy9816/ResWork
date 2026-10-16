@@ -235,9 +235,6 @@
 % Text elements (API used by the frames)
 % --------------------------------------------------------------------------
 \newcommand{\ap}{\ensuremath{\approx}\,}
-\newcommand{\dg}{\textsuperscript{\textdagger}}
-\newcommand{\DgNote}{\textsuperscript{\textdagger}Range across two samples: all respondents, and excluding one online panel with less reliable survey answers.}
-\newcommand{\DgShort}{\textsuperscript{\textdagger}Range across all respondents and excluding one online panel.}
 \newcommand{\TableFont}{\fontsize{8.5}{10}\selectfont}
 \newcommand{\Caveat}[1]{\par{\color{Ink}\fontsize{10}{12}\selectfont\bfseries #1\par}\vspace{0.06cm}}
 
@@ -384,7 +381,7 @@
 % path below plus every backup; return links to omitted main slides go to the index.
 \def\ShortLabels{M-title,M-motivation,M-question,M-framework,M-design,M-pmes,M-why-pmes,M-employers,M-where,M-meet,M-puzzle,M-barriers,M-options,M-conclusion,M-thanks}
 \ifdefined\ShortPath
-  \includeonlyframes{M-title,M-motivation,M-question,M-framework,M-design,M-pmes,M-why-pmes,M-employers,M-where,M-meet,M-puzzle,M-barriers,M-options,M-conclusion,M-thanks,B-index,B-index-all,B-laboursupply,B-talent,B-triangulation,B-guidelines,B-partners,B-legal,B-intl,B-zones,B-validity,B-sample,B-industry,B-panel,B-governance,B-cards,B-paygaps,B-hedonic,B-methods,B-eqpay,B-landscape,B-setup,B-emp-all,B-remote-commute,B-emp-benchmarks,B-why-pmes,B-emp-groups,B-access,B-emp-robust,B-org-yardstick,B-org-salary,B-why-org,B-org-splits,B-org-concerns,B-org-view,B-industry-note,B-modelfree,B-puzzle,B-pilot,B-flexiload,B-career-who,B-career,B-tgfwar,B-awareness,B-approvals,B-approvals-tab,B-requestrate,B-limits,B-nextsteps,B-followup,B-optA,B-optB,B-optC,B-optD,B-optD-items,B-why-org-tests,B-language,B-org-pct,B-gap,B-ra-gender,B-ra-age,B-ra-care,B-ra-role,B-ra-edu,B-ra-sameside,B-ra-trim}
+  \includeonlyframes{M-title,M-motivation,M-question,M-framework,M-design,M-pmes,M-why-pmes,M-employers,M-where,M-meet,M-puzzle,M-barriers,M-options,M-conclusion,M-thanks,B-index,B-index-all,B-laboursupply,B-talent,B-triangulation,B-guidelines,B-partners,B-legal,B-intl,B-zones,B-validity,B-sample,B-industry,B-governance,B-cards,B-paygaps,B-hedonic,B-methods,B-landscape,B-setup,B-emp-all,B-remote-commute,B-emp-benchmarks,B-why-pmes,B-emp-groups,B-access,B-emp-robust,B-org-robust,B-org-salary,B-why-org,B-org-splits,B-org-concerns,B-org-view,B-industry-note,B-modelfree,B-puzzle,B-pilot,B-flexiload,B-career-who,B-career,B-tgfwar,B-awareness,B-approvals,B-approvals-tab,B-requestrate,B-limits,B-nextsteps,B-followup,B-optA,B-optB,B-optC,B-optD,B-optD-items,B-why-org-tests,B-language,B-org-pct,B-gap,B-ra-gender,B-ra-age,B-ra-care,B-ra-role,B-ra-edu,B-ra-sameside,B-ra-trim}
 \fi
 
 \begin{document}
@@ -416,13 +413,13 @@ The findings are preliminary; we end with a decision for the partners.
   % Supplementary Survey, no causal reading [P4, P4s]; Guidelines in effect 1 Dec 2024 [P1]
   \FrameTop
   \FigC{F_motivation}
-  \Interp{Aggregate provision does not tell us whether the arrangements offered\\ are the ones workers value and firms can sustain.}
+  \Interp{Aggregate provision does not show whether firms offer the arrangements workers value.}
   % Polish pass, 7 Oct 2026 (DESIGN_PLAN s2 W1, G5/G6): F_motivation is redrawn at 14.0 x 5.0 cm with no footnote
   % line; its footnote moves here verbatim as the slide's source line, so the budget is figure 5.0 cm + two-line
   % caption + one 7.5 pt source line + buttons (compiled deck is the fit authority; slack_check.py).
   % Source line: [P4s] MRSD time series released 30 Jun 2026, establishments with 25+ staff; [P4] MOM gives no
   % reason for the 2025 fall; [P4s] 77.5 incl. newer types, 2024
-  \SourceNote{\textbf{Source:} MRSD, MOM (Jun 2026). MOM gives no reason for the 2025 fall; 2024 incl.\ newer types: 77.5\%.} % [P4s, P4]
+  \SourceNote{\textbf{Source:} MRSD, MOM (Jun 2026).} % [P4s, P4]
   \Backups{\BL{B-laboursupply}{Labour supply} \BL{B-guidelines}{Guidelines}}
 \end{frame}
 % Note numbers: [P4s] 28 in 2008, 73 in mid-2024, establishments with 25 or more staff, private plus public sector;
@@ -506,21 +503,21 @@ We use a simple map. [Full deck: first, where this sits in the research.]}
   {\MainTableStyle\FsTableTight
   \begin{tabularx}{\linewidth}{@{}>{\raggedright\arraybackslash}p{2.6cm}>{\raggedright\arraybackslash}p{2.8cm}>{\raggedright\arraybackslash}X>{\raggedright\arraybackslash}p{3.0cm}@{}}
     \toprule
-    & \HeadB{\linewidth}{What existing work measures} & \HeadB{\linewidth}{What it finds \mdseries(not like-for-like)} & \HeadB{\linewidth}{What this study adds}\\
+    & \HeadB{\linewidth}{What it measures} & \HeadB{\linewidth}{What it finds} & \HeadB{\linewidth}{What we add}\\
     \midrule
-    \textbf{Worker value of WFH}
-      & Pay workers would give up for a WFH option
-      & About 4--8\% of pay; Singapore 4.8\%, in an online, mostly tertiary-educated sample % [E16, L1]
+    \textbf{Worker value}
+      & Pay given up for a WFH option
+      & About 4--8\% of pay; Singapore 4.8\% % [E16, L1]
       & Seven arrangements, one design\\ % [S7]
     \midrule
-    \textbf{Employer side and productivity}
-      & Employers' expected costs; quits in a firm trial
-      & Poland (2023 working paper, hybrid and remote pooled): workers give up 2.9\%, employers expect a 21\% wage cut. Hybrid trial: quits fell by a third % [R16, P7, L1]
+    \textbf{Employer side}
+      & Employers' expected costs; quits in a trial
+      & Poland: workers give up 2.9\%, employers expect a 21\% wage cut. Hybrid trial: quits fell by a third % [R16, P7, L1]
       & Employers' hiring choices, mirrored with PMEs'\\ % [S5]
     \midrule
     \textbf{Singapore}
-      & Which firms offer FWAs; stated intentions
-      & Provision is widespread; FWAs raise stated fertility intentions % [P4s, L1]
+      & Which firms offer FWAs
+      & Provision is widespread % [P4s, L1]
       & Both sides' choices, after the Guidelines took effect\\ % [S1, S2, P1]
     \bottomrule
   \end{tabularx}\par}
@@ -556,31 +553,31 @@ Next, a simple map for reading the results.}
       arr/.style={deckarrow}]
     % column heads (polish pass: all bold \FsBody; Zone and Policy move in Ink, the two sides in their colours)
     \node[hdr,text=Ink] at (0.20,0.15) {Zone};
-    \node[hdr,text=Employee] at (3.95,0.15) {PMEs};
-    \node[hdr,text=Employer] at (6.70,0.15) {Employers, in hiring};
+    \node[hdr,text=Employee] at (3.95,0.15) {PMEs give up};
+    \node[hdr,text=Employer] at (6.70,0.15) {Employers require};
     \node[hdr,text=Ink] at (11.90,0.15) {Policy move};
     % A: common ground
     \fill[band] (0,0) rectangle (14.8,-1.45);
     \node[zl] at (0.50,-0.725) {A};
     \node[zn] at (0.95,-0.725) {Common\\ground};
-    \node[pm] at (3.95,-0.725) {Value it};
-    \node[em] at (6.70,-0.725) {No hiring penalty detected};
+    \node[pm] at (3.95,-0.725) {Some pay};
+    \node[em] at (6.70,-0.725) {About the same: no gap detected};
     \draw[arr] (11.20,-0.725) -- (11.75,-0.725);
     \node[mv] at (11.90,-0.725) {Make it easier\\to try};
     % B: depends on the role
     \fill[band] (0,-1.60) rectangle (14.8,-3.05);
     \node[zl] at (0.50,-2.325) {B};
     \node[zn] at (0.95,-2.325) {Depends on\\the role};
-    \node[pm] at (3.95,-2.325) {Value it};
-    \node[em] at (6.70,-2.325) {Reservations vary with the role's tasks};
+    \node[pm] at (3.95,-2.325) {Some pay};
+    \node[em] at (6.70,-2.325) {A larger cut; varies with the role's tasks};
     \draw[arr] (11.20,-2.325) -- (11.75,-2.325);
     \node[mv] at (11.90,-2.325) {Redesign and\\test by role};
     % C: far apart
     \fill[band] (0,-3.20) rectangle (14.8,-4.65);
     \node[zl] at (0.50,-3.925) {C};
     \node[zn] at (0.95,-3.925) {Far apart};
-    \node[pm] at (3.95,-3.925) {Value it highly};
-    \node[em] at (6.70,-3.925) {Strong hiring reservation};
+    \node[pm] at (3.95,-3.925) {More pay};
+    \node[em] at (6.70,-3.925) {A much larger cut};
     \draw[arr] (11.20,-3.925) -- (11.75,-3.925);
     \node[mv] at (11.90,-3.925) {Pilot before\\scaling};
     % barriers, in any zone
@@ -592,10 +589,10 @@ Next, a simple map for reading the results.}
 \end{frame}
 % Note numbers: none. Information problem per MANDATE: a hiring reservation may reflect operating constraints,
 % uncertainty or a candidate signal, and the hiring choices cannot separate them [S5; B-limits]
-\note{[Short path] We read every result on this map. For each arrangement, we ask how much PMEs value it, and how strongly employers hold back when hiring someone who wants it.
-Where PMEs value it and we detect no hiring penalty, there is common ground: firms and SNEF could make it easier to try.
-Where reservations depend on the role's tasks, firms can redesign jobs and test role by role.
-Where PMEs value it highly but employers hold strong reservations, the sides are far apart: pilot with volunteer firms before scaling.
+\note{[Short path] We read every result on this map. For each arrangement, we ask how much pay PMEs would give up for it, and how large a pay cut employers would require of a candidate who wants it. The difference is the gap.
+Where the two are about the same and we detect no gap, there is common ground: firms and SNEF could make it easier to try.
+Where the gap is moderate and depends on the role's tasks, firms can redesign jobs and test role by role.
+Where PMEs would give up some pay but employers would require a much larger cut, the sides are far apart: pilot with volunteer firms before scaling.
 A reservation may reflect real operating constraints, uncertainty, or what a request seems to signal; hiring choices cannot separate these; a pilot can show whether operating constraints materialise.
 In any zone, career signals, redesign and missing information can block use.
 Next, how we asked both sides. [Full deck: next, the two surveys.]}
@@ -609,8 +606,7 @@ Next, how we asked both sides. [Full deck: next, the two surveys.]}
   % [S1, S2, S4] unweighted online panels: shares describe the surveyed samples only
   \Interp{Shares describe surveyed PMEs and firms, not national rates.}
   % [S1] PME survey fielded 4-21 Aug 2026; [S2] employer survey 12 Aug-2 Oct 2026
-  \SourceNote{\textbf{Source:} this study's PME survey (Aug 2026) and employer survey (Aug--Oct 2026).}
-  \Backups{\BL{B-sample}{Sample}\BL{B-panel}{Panels}}
+  \Backups{\BL{B-sample}{Sample}}
 \end{frame}
 % note facts: [S1] 1,020, 4-21 Aug 2026; [S2] 397 (appended sample), 12 Aug-2 Oct 2026; [S1, S2, S4] online, unweighted;
 % [S3] 12%, about one firm in eight; [F2] the employer survey asked no re-contact question, so firm-side work
@@ -621,7 +617,7 @@ We surveyed both sides of the same labour market.
 1,020 citizens and permanent residents in or seeking PME roles answered between 4 and 21 August 2026; % [S1]
 397 people involved in PME hiring or manpower decisions answered between 12 August and 2 October. % [S2]
 Both samples come from unweighted online panels, so our shares describe the PMEs and firms we surveyed: MOM's surveys give national rates; ours give the trade-offs. % [S1, S2, S4]
-We acknowledge that the employer sample leans large: only \Pend{about one firm in eight} has 50 or fewer staff. % [S3] not in appended_* outputs
+We acknowledge that the employer sample leans large: only about one firm in five has 50 or fewer staff. % [S3] not in appended_* outputs
 SNEF could help recruit smaller member firms, as fresh volunteers, for any next round. % [F2]
 Next, the choice task.}
 
@@ -688,14 +684,10 @@ Next, the choice task.}
     % 17-33% by design (displayed about 16-34% after S$50 rounding, S6; fixer pass 7 Oct 2026, editor-13: the
     % spec chip wording, without always); [S5; EB s9; Lead decision 7] the employer task is a hire, not a reply
     % to a request
-    \node[chip,one,minimum width=4.00cm,text width=3.76cm] at (0,-4.75) {Six forced choices each};
-    \node[chip,one,minimum width=4.22cm,text width=3.98cm] at (4.20,-4.75) {Pay gaps \ap 17--33\%};
-    \node[chip,one,minimum width=6.00cm,text width=5.76cm] at (8.62,-4.75) {Employer task = hiring, not a request};
+    \node[anchor=north,inner sep=0pt,text width=14.6cm,align=center,text=Ink,font=\FsBody]
+      at (7.31,-4.75) {Two attributes differ in each choice; which ones, and their levels, are randomized.};
     % ---- sample: [S1] 1,020 PMEs; [S2] 397 people involved in PME hiring or manpower decisions;
     % [S1, S2, S4] online panels, unweighted; [S3] 12% of employer respondents' firms have 50 or fewer staff
-    \node[anchor=north,inner sep=0pt,text width=14.6cm,align=center,text=Muted,font=\FsSmall]
-      at (7.31,-5.55) {1,020 surveyed PMEs $\cdot$ 397 people involved in PME hiring or manpower decisions\\ % [S1, S2]; 397 = appended sample
-      Online, unweighted panels $\cdot$ \Pend{12\%} of employer respondents' firms have 50 or fewer staff}; % [S3, S4]; S3 not in appended_* outputs
   \end{tikzpicture}\par}
   \Backups{\BL{B-cards}{Choice cards}\BL{B-sample}{Sample}}
 \end{frame}
@@ -713,3 +705,11 @@ Pay gaps were 17 to 33 per cent by design, so rankings are firmer than prices. %
 For employers, this is a hiring choice, not a reply to a request. % [S5; EB s9]
 Now the results, starting with PMEs. [Full deck: ``Next, how we turn these choices into values.'']}
 
+% ==========================================================================
+% 8. ESTIMATION   [full deck only]
+% ==========================================================================
+% PI directive 6: a large illustrative choice task in the instrument's wording plus a three-step visual of
+% how values are calculated; the equations (utility, % of pay, equal-pay share) are on B-methods.
+% Card: PME version, Scenario 1 layout (salary, location and schedule varied; workload, job security,
+% workplace culture and commute time held at the respondent's own practice) [S5, S7]. Example pay: own pay
+% x 1.10 and x 0.90, shown here as +10% / -10% [S6b]; the instrument showed a monthly S$ amount [S6].

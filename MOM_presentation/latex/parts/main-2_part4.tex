@@ -1,19 +1,66 @@
+\begin{frame}[t,label=B-why-pmes]{PME splits: one survives correction}
+  \FrameTop
+  % WTP basis: group-specific pay slopes (pme_channels.csv, block wtp / fiwtp); values in % of pay given up, group A / group B
+  {\TableFont\setlength{\tabcolsep}{2.5pt}\renewcommand{\arraystretch}{1.05}%
+  \begin{tabularx}{\linewidth}{@{}>{\RaggedRight}X>{\centering}p{1.6cm}>{\centering}p{1.3cm}>{\centering}p{1.3cm}>{\centering}p{1.3cm}>{\centering}p{1.3cm}>{\centering}p{1.0cm}>{\centering}p{1.0cm}>{\centering\arraybackslash}p{0.82cm}@{}}
+    \toprule
+    % [S7] attribute levels: 1-2 and 3-4 WFH days a week
+    \textbf{Split (A / B)} & \textbf{n} & \textbf{1--2 days} & \textbf{3--4 days} & \textbf{Remote}\textsuperscript{a} & \textbf{Compr.} & \textbf{p} & \textbf{p compr.} & \textbf{q}\\
+    \midrule
+    Career penalty: y / n & 455 / 565 & 2 / 10 & 2 / 14 & 6 / 16 & 10 / 6 & .002 & .15 & .012\\
+    Commute $>$ / $\le$45 min & 305 / 681 & 6 / 8 & 10 / 8 & 16 / 11 & 6 / 8 & .015 & .54 & .051\\
+    WFH now: y / n & 666 / 338 & 9 / 5 & 12 / 5 & 14 / 9 & 8 / 6 & .094 & .50 & .22\\
+    Pay $>$ / $\le$S\$6,000 & 408 / 435 & 8 / 7 & 11 / 10 & 15 / 10 & 9 / 6 & .77 & .33 & .77\\
+    Public / local / MNC & 171/383/412 & 8/9/7 & 6/11/9 & 15/12/11 & 7/7/8 & .68 & .93 & .77\\
+    Tenure: 3+ / $<$3 years & 805 / 199 & 7 / 6 & 9 / 12 & 12 / 11 & 7 / 8 & .62 & .69 & .77\\
+    Mothers, child 0--6 / rest & 108 / 912 & 11 / 7 & 17 / 9 & 16 / 12 & 7 / 7 & .33 & 1.00 & .58\\
+    \bottomrule
+  \end{tabularx}\par}
+  \vspace{0.08cm}
+  \Body{\textbf{Reading:} only the career-concern split survives correction (location); about 40\% of its gap could be choice noise, and it was asked after the choices.}
+  \SourceNote{\% of pay given up, group A / group B. p: test that the three location values are equal across groups (group-specific pay slopes); p compr.: same for the compressed week; q: Benjamini--Hochberg over the splits. Compr. = compressed week. \textsuperscript{a}Fully remote vs onsite with a moderate commute.}
+  \BackToTwo{M-why-pmes}{Career concerns}{M-groups}{PME groups}
+\end{frame}
+
+\begin{frame}[t,label=B-emp-groups]{No group difference established}
+  % [Q14, Q14b] equal-pay shares by group; [E18] p = .43 / .09 / .66; 198 contrasts, min q = .70; [Q14] p = .047 nominal
+  % [M9] access row: compressed week 58.7 vs 58.1 at equal pay, p = .86; E19 not robust; [M7] further splits on B-why-pmes
+  \FrameTop
+  \Fig{F_emp_groups}{5.2cm}
+  \SourceNote{Joint tests that all pay values are equal across groups: gender p = .43, age .09, care .66; none of 198 contrasts survives correction. \textsuperscript{1}Vs onsite with a long commute. Detail: \hyperlink{B-ra-gender}{\textcolor{Navy}{gender}}, \hyperlink{B-ra-age}{\textcolor{Navy}{age}}, \hyperlink{B-ra-care}{\textcolor{Navy}{care}}, \hyperlink{B-ra-role}{\textcolor{Navy}{role}}, \hyperlink{B-ra-edu}{\textcolor{Navy}{edu}}.}
+  \BackToTwo{M-groups}{PME groups}{M-why-pmes}{Career concerns}
+\end{frame}
+
+\begin{frame}[t,label=B-access]{Valued more where offered? Not robust}
+  % [E19] status X, NOT ROBUST (Lead decision 5); [M9] 58.7 vs 58.1 at equal pay, p = .86; +5.5 [-4.4, 15.4], p = .27;
+  % slope 2.79 vs 4.70; [M20] cheaper option in 83.2% of PME pairs; [D2, D2x] take-up
+  \FrameTop
+  {\centering\fontsize{8.5}{10}\selectfont\input{tables/T_access}\par}
+  \SourceNote{The gap is statistically significant only under a common pay slope. PMEs with access are less pay-sensitive (log-pay coefficient 2.79 vs 4.70); the compressed week was cheaper in 83\% of PME pairs. Experience and sorting cannot be told apart.}
+  \BackToTwo{M-puzzle}{Puzzle}{M-groups}{Groups}
+\end{frame}
+
 \begin{frame}[t,label=B-emp-robust]{PME values stay positive}
   \FrameTop
   \Tab{T_emp_robust}
-  % [E15, RB2] moves of about 1 point; excl. Lucid 3-4 days up, compressed down by about 2; same-side part-time p = .06; [E8] job security X
-  \SourceNote{Location, compressed and workload values stay positive (staggered \ap 0) and statistically significant at the 5\% level, except part-time without \hyperlink{B-ra-sameside}{\textcolor{Navy}{same-side}} respondents. Most move \ap 1 point (e.g.\ \hyperlink{B-ra-trim}{\textcolor{Navy}{trimming}}); without the weaker panel, 3--4 WFH days rises and compressed falls by \ap 2. Version clustering: precision only. Job security: not robust.}
+  % [E15, RB2] moves of about 1 point (same-side part-time p = .06); [E8] job security X
+  \SourceNote{Outliers: implausible salaries dropped; same-side: always chose one side. Values stay positive (staggered \ap 0) and significant at 5\%, except part-time without \hyperlink{B-ra-sameside}{\textcolor{Navy}{same-side}} respondents; most move \ap 1 point (\hyperlink{B-ra-trim}{\textcolor{Navy}{trimming}}).}
   \BackToTwo{M-robust}{Robustness}{M-pmes}{PMEs}
+\end{frame}
+
+\begin{frame}[t,label=B-org-robust]{Employer values hold in every sample}
+  \FrameTop
+  % appended_wtp.xlsx sheets main, robust_outlier (salary_out excluded, N = 392), robust_trim (top and bottom 1% of income, N = 391), robust_same_side (N = 381); pay cut = minus WTP
+  \Tab{T_org_robust}
+  \SourceNote{Cuts for 1--2 days, 3--4 days, fully remote and reduced load or part-time stay statistically significant in every sample; the compressed week stays near 7 and is not distinguishable from zero. Moves are \ap 1 point, up to 2.5 without same-side respondents. Main results use all 397 firms.}
+  \BackToTwo{M-robust}{Robustness}{M-employers}{Employers}
 \end{frame}
 
 % ==========================================================================
 % Employers
 % ==========================================================================
 % [R11, R11b, Q8] high turnover risk 34% (appended); q over 7 comparisons
-\BackupTab{B-org-yardstick}{Yardstick: a high-turnover hire}{T_yardstick}{M-employers}{Employers}{Employers' equal-pay share for each arrangement (50\% = no preference), beside a candidate with $>$20\% turnover risk (34\%).}
-
-% [R13] cheaper candidate 57%; [RB1] rank vs log fit
-\BackupTab{B-org-salary}{Why employer \% is secondary}{T_org_salary}{M-employers}{Employers}{Rankings and equal-pay shares use no pay slope.}
+\BackupTab{B-org-salary}{Why employer \% is secondary}{T_org_salary}{M-employers}{Employers}{Employers' pay-cut sizes rest on a weakly identified pay slope; the ranking is firmer.}
 
 \begin{frame}[t,label=B-why-org]{Employer reservations: two preliminary contrasts}
   \FrameTop
@@ -21,58 +68,47 @@
   % polish pass (BKb): the main-slide table style (MainTableStyle, 10 pt, for projection); panel rows bold
   % Ink (Navy is structure only); the last column fits the bold Compressed header
   % final fixer (7 Oct 2026): notes print at 8.0 pt (were 6.9 pt); the table's arraystretch is 1.08 here (\MainTableStyle: 1.15)
-  % Appended sample: firm counts and equal-pay shares from appended_clogit.xlsx (physical_1/2, creative_concern_1/0;
-  % invlogit, delta-method CIs); the pooled p and the 20-split q are 303-firm values (red), not yet re-run
+  % Appended sample: pay cut required (= minus WTP) from appended_wtp.xlsx (physical_presence, concern_creativity) / data/wtp_deck.csv;
+  % p: ratio test, location WTPs equal across the two groups (group-specific pay slopes); q: Benjamini--Hochberg over 11 split tests
   {\MainTableStyle\renewcommand{\arraystretch}{1.08}%
   \begin{tabularx}{\linewidth}{@{}>{\RaggedRight}X>{\centering}p{1.1cm}>{\centering}p{1.7cm}>{\centering}p{1.7cm}>{\centering}p{1.7cm}>{\centering\arraybackslash}p{2.35cm}@{}}
     \toprule
     % [S7] attribute levels: 1-2 and 3-4 WFH days a week
-    \textbf{Equal-pay share, \%} & \textbf{Firms} & \textbf{1--2 days} & \textbf{3--4 days} & \textbf{Remote} & \textbf{Compressed}\textsuperscript{a}\\
+    \textbf{Pay cut required, \% of pay} & \textbf{Firms} & \textbf{1--2 days} & \textbf{3--4 days} & \textbf{Remote} & \textbf{Compressed}\\
     \midrule
-    % [M10] presence split: location chi2(3) = 12.51, p = .006; [M12] q = .058 across 20 splits
-    \multicolumn{6}{@{}l}{\textbf{Do most PME roles need on-site presence?}\enspace \Pend{p = .006,\ q = .058}}\\
-    % [M10, Q10] most roles need presence, n = 137 (appended): 27 / 22 / 17 / 50; compressed CI 40-60
-    \quad Yes, most roles & 137 & \textbf{\color{Employer}27} & 22 & 17 & 50\\
-    % [M10, Q10] only some or few roles, n = 260 (appended): 48 / 35 / 26 / 46; compressed CI 38-53
-    \quad Only some or few & 260 & \textbf{\color{Employer}48} & 35 & 26 & 46\\
+    \multicolumn{6}{@{}l}{\textbf{Do most PME roles need on-site presence?}\enspace p = .025,\ q = .14}\\
+    \quad Yes, most roles & 137 & \textbf{\color{Employer}52} & 60 & 67 & 1\\
+    \quad Only some or few & 260 & \textbf{\color{Employer}3} & 25 & 40 & 8\\
     \midrule
-    % [M10] creativity split: location chi2(3) = 13.91, p = .003; [M12] q = .058 across 20 splits
-    \multicolumn{6}{@{}l}{\textbf{Worried that creativity suffers when people are apart?}\enspace \Pend{p = .003,\ q = .058}}\\
-    % [M10, Q11] worried, n = 201 (appended): 39 / 28 / 18 / 42; compressed CI 33-51
-    \quad Yes & 201 & 39 & 28 & \textbf{\color{Employer}18} & 42\\
-    % [M10, Q11] not worried, n = 196 (appended): 42 / 34 / 29 / 51; compressed CI 44-59
-    \quad No & 196 & 42 & 34 & \textbf{\color{Employer}29} & 51\\
+    \multicolumn{6}{@{}l}{\textbf{Worried that creativity suffers when people are apart?}\enspace p = .14,\ q = .43}\\
+    \quad Yes & 201 & 24 & 44 & \textbf{\color{Employer}61} & 18\\
+    \quad No & 196 & 15 & 28 & \textbf{\color{Employer}36} & $-$3\\
     \bottomrule
   \end{tabularx}\par}
   \vspace{0.06cm}
   \begin{itemize}\setlength{\itemsep}{0.04cm}
-    % [M11] mutually adjusted: presence p = .010, creativity p = .005; not statistically different, remote p = .17
-    \item \textbf{In one model, both hold} (\Pend{presence p = .010; creativity p = .005}), but we cannot tell which matters more: they are not statistically distinguishable (\Pend{remote p = .17}).
+    \item \textbf{The presence contrast is significant at the 5\% level} (p = .025) but not after correcting for the 11 split tests (q = .14); the creativity contrast is not (p = .14).
     % EB s9 l.182: presence and concern items sit in Block 5, after the DCE block
     \item \textbf{Asked after the choices:} the answers may partly rationalise the hiring choices.
-    % EB s9 l.183: no group-specific salary-slope equal-pay check for these two splits; not run this round
-    \item \textbf{Free-slope check pending:} preliminary association under a common pay-slope model.
+    \item \textbf{Separate pay slope for each group:} values are group-specific, so they are preliminary associations.
   \end{itemize}
-  % [M12] p <= .006 individually, statistically significant at the 1% level; q = .058, i.e. the 10% level after correction
-  % [Q10b, Q11, M19] every compressed-week interval includes 50%; the compressed week is not part of the location test
-  \SourceNote{Model-based share of hiring choices for the flexible candidate at equal pay; 50\% = no preference. p: joint test of three WFH effects, one salary slope; q: Benjamini--Hochberg, 20 splits (10\% level after correction). \textsuperscript{a}Not in the joint test; every interval includes 50\%. \hyperlink{B-why-org-tests}{\textcolor{Navy}{All 20 tests}}.}
+  \SourceNote{Pay cut employers would require of a candidate wanting the arrangement, \% of pay (minus the model's WTP). p: test that the three location values are equal across the two groups; q: Benjamini--Hochberg over 11 split tests. Many values go beyond the pay gaps shown (17--33\%): read the contrasts, not the sizes. \hyperlink{B-why-org-tests}{\textcolor{Navy}{All split tests}}.}
   \BackTo{M-where}{Reservations}
 \end{frame}
 
-% [Q10-Q13] equal-pay shares by employer group; [M12, Q15] q over all 20 splits: presence and creativity .058
-% EB s9: items asked after the choices; one pay slope, free-slope check pending (not run)
+% [Q10-Q13] pay cut required by employer group (wtp_deck.csv, org splits); p ratio test, q = BH over 11 split tests
 % EB s10 QID22_6: a survey item, labelled salary offset, never FWAs let firms pay less (fixer pass 7 Oct 2026, worker-03)
-\BackupFig{B-org-splits}{All employer splits}{F_org_splits}{5.4cm}{M-where}{Reservations}{Presence and creativity: \Pend{p $\le$ .006 each; q \ap .06} over all \hyperlink{B-why-org-tests}{\textcolor{Navy}{20 splits}} (10\% level, corrected). Preliminary: one pay slope (free-slope check pending); asked after the choices. Salary offset: agrees that offering FWAs reduces the salary needed to attract and retain PMEs (survey item).}
+\BackupFig{B-org-splits}{All employer splits}{F_org_splits}{5.4cm}{M-where}{Reservations}{Pay cut required, 95\% CI. Presence and no WFH today: p $\approx$ .02 each, q = .14 over all \hyperlink{B-why-org-tests}{\textcolor{Navy}{11 split tests}}; creativity p = .14, q = .43. Preliminary: asked after the choices. Salary offset: agrees that offering FWAs reduces the salary needed to attract and retain PMEs (survey item).}
 
 % [B2] agreement shares; [Q11, R14b, M12] creativity p = .003, q about .06; Lead decision 6: concerns, not beliefs
 % EB s9 l.183: no free-slope check yet for the presence and creativity splits; EB s9 l.182: items asked after the choices
-\BackupTab{B-org-concerns}{Concerns are common; creativity tracks choices}{T_concerns}{M-where}{Reservations}{Agree = 4--5 of 5. p: joint WFH test, one pay slope. Preliminary associations: free-slope check pending; items asked after the choices. Perceived vs true cost: not separable.}
+\BackupTab{B-org-concerns}{Concerns are common; creativity tracks choices}{T_concerns}{M-where}{Reservations}{Agree = 4--5 of 5. p: joint WFH test, one pay slope. Preliminary associations: items asked after the choices. Perceived vs true cost: not separable.}
 
 \begin{frame}[t,label=B-org-view]{Employers: talent upside, practical hurdles}
   % [B1, B2, B3]; [B1] fairness top challenge at 200 or fewer staff, 28% (shown in the figure); [P16] MOM PQ 2937; [S3] 12%; [R15, Q13, M18] no size association
   \FrameTop
   \Fig{F_org_view}{5.2cm}
-  \SourceNote{Surveyed employers, \Pend{n = 303}; few small firms (\Pend{12\%} have $\le$50 staff). We detect no size association in hiring choices or compressed-week offering. MOM (PQ, 10 Sep 2026): in 2025, nearly 7 in 10 SMEs and about 8 in 10 non-SMEs offered a scheduled FWA; definitions differ, so not comparable with the 66.4\% series.}
+  \SourceNote{We detect no size association in hiring choices; compressed-week offering rises with firm size (14, 18, 26\%; p = .07). MOM (PQ, 10 Sep 2026): in 2025, nearly 7 in 10 SMEs and about 8 in 10 non-SMEs offered a scheduled FWA; definitions differ, so not comparable with the 66.4\% series.}
   \BackToTwo{M-employers}{Employers}{M-where}{Reservations}
 \end{frame}
 
@@ -81,8 +117,8 @@
   % [M10, M12] presence and creativity splits; EB s9 l.183: free-slope check pending
   \FrameTop
   \begin{itemize}\setlength{\itemsep}{0.12cm}
-    \item Industry cells hold \Pend{1 to 44} employers (\Pend{13 of 17} below 25); some intervals are wider than the scale.
-    \item Four largest industries (ICT, finance, manufacturing, professional services): we detect no difference in WFH valuations (\Pend{p = .87}).
+    \item Industry cells hold 4 to 60 employers (11 of 17 below 25); some intervals are wider than the scale.
+    \item Four largest industries (ICT, finance, manufacturing, professional services): we detect no difference in WFH valuations (p = .94).
     \item Reservations are associated with role needs and concerns (presence; creativity), as preliminary associations under a common pay-slope model; industry differences cannot be ruled out.
   \end{itemize}
   \SourceNote{Industry mix: \hyperlink{B-industry}{\textcolor{Navy}{Industries}}.}
@@ -108,7 +144,7 @@
     \begin{column}{0.41\textwidth}
       \PanelTitle{Navy}{Design: usually the cheaper option}
       % [M20] cheaper option in 83.2% of PME pairs and 90.8% of employer pairs
-      {\fontsize{9}{11}\selectfont\RaggedRight The lower-paid option in 83\% of PME and \Pend{91\%} of employer pairs.\par}
+      {\fontsize{9}{11}\selectfont\RaggedRight The lower-paid option in 83\% of PME and 91\% of employer pairs.\par}
       \vspace{0.06cm}
       {\TableFont\setlength{\tabcolsep}{3pt}%
       \begin{tabular}{@{}>{\RaggedRight}p{3.15cm}>{\centering}p{1.15cm}>{\centering\arraybackslash}p{1.15cm}@{}}
@@ -120,9 +156,9 @@
         % [M21] PMEs: other options 24.9% and 75.1%
         PMEs: others & 24.9 & 75.1\\
         % [M21] employers: compressed-week candidate 66% cheaper, 36% dearer with n = 33
-        Firms: compressed & \Pend{66} & \Pend{36}\textsuperscript{c}\\
+        Firms: compressed & 67 & 37\textsuperscript{c}\\
         % [M21] employers: other candidates 55% and 45%
-        Firms: others & \Pend{55} & \Pend{45}\\
+        Firms: others & 56 & 44\\
         \bottomrule
       \end{tabular}\par}
       \vspace{0.06cm}
@@ -131,31 +167,31 @@
     \end{column}
     \begin{column}{0.56\textwidth}
       % [M16] 63 of 303 firms offer it
-      \PanelTitle{Navy}{Surveyed firms offering it (\Pend{63 of 303})}
+      \PanelTitle{Navy}{Surveyed firms offering it (70 of 397)}
       {\TableFont\setlength{\tabcolsep}{3pt}%
       \begin{tabular}{@{}>{\RaggedRight}p{2.85cm}>{\centering}p{2.55cm}>{\centering\arraybackslash}p{2.35cm}@{}}
         \toprule
         \textbf{Trait} & \textbf{\% offer} & \textbf{OR [95\% CI]}\\
         \midrule
         % [M17] 26.5% (53/200) vs 9.7% (10/103); OR 2.94 [1.37, 6.33], p = .006
-        Written policy & \Pend{26.5 vs 9.7} & \Pend{\textbf{2.94} [1.37, 6.33]}\\
+        Written policy & 21.4 vs 9.1 & \textbf{2.41} [1.20, 4.87]\\
         % [M17] offering part-time OR 3.19 [1.65, 6.18], p < .001
-        Offers part-time\textsuperscript{a} & & \Pend{\textbf{3.19} [1.65, 6.18]}\\
+        Offers part-time\textsuperscript{a} & & \textbf{3.03} [1.67, 5.51]\\
         % [M18] most roles need presence OR 1.71 [0.94, 3.12], p = .080
-        Presence need & & \Pend{1.71 [0.94, 3.12]}\\
+        Presence need & & 1.53 [0.88, 2.66]\\
         % [M18] fully tech-ready OR 1.20 [0.66, 2.19]
-        Fully tech-ready & & \Pend{1.20 [0.66, 2.19]}\\
+        Fully tech-ready & & 0.83 [0.48, 1.43]\\
         % [M18] productivity worry OR 1.36 [0.59, 3.10]
-        Productivity concern\textsuperscript{b} & & \Pend{1.36 [0.59, 3.10]}\\
+        Productivity concern\textsuperscript{b} & & 1.61 [0.77, 3.37]\\
         % [M18] hiring difficulty 21.5% vs 20.0%, p = .74 (CSV chi2_p .7448)
-        Hard to hire & \Pend{21.5 vs 20.0} & \Pend{p = .74}\\
+        Hard to hire & 18.4 vs 16.8 & p = .69\\
         % [M18] by size band 18.9 / 19.8 / 25.0, p = .57
-        Size: $\le$200 / 201--1,000 / 1,001+ & \Pend{18.9 / 19.8 / 25.0} & \Pend{p = .57}\\
+        Size: $\le$200 / 201--1,000 / 1,001+ & 13.7 / 17.9 / 25.6 & p = .066\\
         \bottomrule
       \end{tabular}\par}
       \vspace{0.06cm}
       % [M16] access 20.9% [13.1% excl. Lucid]; [M22] 65 of 210 = 31.0% use it; career belief OR 0.86 [0.44, 1.67]
-      {\fontsize{9}{11}\selectfont\RaggedRight \textbf{Surveyed PMEs:} access 21\% (13\% excl.\ one panel); take-up 31\%; career concern OR 0.86 [0.44, 1.67].\par}
+      {\fontsize{9}{11}\selectfont\RaggedRight \textbf{Surveyed PMEs:} access 21\%; take-up 31\%; career concern OR 0.86 [0.44, 1.67].\par}
     \end{column}
   \end{columns}
   \vspace{0.08cm}
@@ -163,7 +199,7 @@
   {\fontsize{9}{11}\selectfont\RaggedRight Operating costs unmeasured: \hyperlink{B-pilot}{\textcolor{Navy}{pilot checklist}}.\par}
   % [M17] logit N = 303; written policy stays OR 2.78 [1.28, 6.04] with other offerings; [M18] all ORs 0.83-1.36, p >= .47
   % [M20] only 33 dearer employer pairs
-  \SourceNote{Logit on size, WFH now, policy, tech, presence (\Pend{N = 303}); ORs are not risk ratios; policy may follow offering. \textsuperscript{a}With other offerings (policy OR \Pend{2.78 [1.28, 6.04]}). \textsuperscript{b}With concerns, talent view, hiring, turnover: ORs \Pend{0.83--1.36, p $\ge$ .47}. \textsuperscript{c}\Pend{33} pairs.}
+  \SourceNote{Logit on size, WFH now, policy, tech, presence (N = 397); ORs are not risk ratios; policy may follow offering. \textsuperscript{a}With other offerings (policy OR 2.16 [1.04, 4.49]). \textsuperscript{b}With concerns, talent view, hiring, turnover: ORs 0.75--1.61, p $\ge$ .16. \textsuperscript{c}41 pairs.}
   \BackToTwo{M-puzzle}{Compressed week}{M-discussion}{Zones}
 \end{frame}
 
@@ -235,7 +271,7 @@
   \Tab{T_flexiload}
   % [S7] 4 of 5 days; [R6, R7, G6] about pro-rata; [M13] part-time 35% where neither concern; [P11] PTRG under review, no enhancement by 6 Oct 2026
   % Declutter: [P5] 5.9% vs 13.7% part-time share of all women 25-64 is on B-laboursupply.
-  \SourceNote{4 of 5 days = 20\% fewer hours, so employer discounts near pro-rata show no sign of an extra flexibility penalty. At equal pay, part-time candidates win only \Pend{35\%} of choices even in firms with no presence need or creativity concern, partly reflecting pro-rata pay. MOM is reviewing the PTRG for flexi-load (COS 2026); \hyperlink{B-laboursupply}{\textcolor{Navy}{part-time context}}.}
+  \SourceNote{4 of 5 days = 20\% fewer hours, so employer discounts near pro-rata show no sign of an extra flexibility penalty. Part-time draws a larger required cut (about 36\%) because it cuts more hours. MOM is reviewing the PTRG for flexi-load (COS 2026); \hyperlink{B-laboursupply}{\textcolor{Navy}{part-time context}}.}
   \BackToTwo{M-options}{Options}{M-where}{Reservations}
 \end{frame}
 
@@ -253,9 +289,9 @@
   \vspace{0.12cm}
   % [M26] child 0-6 +12.0 pp [4.7, 19.3]; excl. Lucid +8.2 pp, p = .089
   % [P15] MOM PQ 2936, 9 Sep 2026: about 6% of resident FWA users reported setbacks in 2025
-  {\fontsize{9}{11}\selectfont\RaggedRight \textbf{Parents of 0--6s:} +12 pp after controls (+8 pp excl.\ one panel, p = .089). \textbf{MOM:} about 6\% of resident FWA users reported a setback in 2025 (reported experience, not expectation).\par}
+  {\fontsize{9}{11}\selectfont\RaggedRight \textbf{Parents of 0--6s:} +12 pp after controls (p = .001). \textbf{MOM:} about 6\% of resident FWA users reported a setback in 2025 (reported experience, not expectation).\par}
   % [M23] 44.6% all, 37.1% excl. Lucid, display 37-45%; [M24] relative insecurity index; [P15] PQ 2936, 9 Sep 2026
-  \SourceNote{Agree (4--5 of 5) that shorter or more flexible hours would hurt their career: 37--45\% of surveyed PMEs (excl.\ one panel / all). Job loss: self-rated 12-month chance. MOM PQ 2936 (9 Sep 2026); not comparable. \hyperlink{B-career}{\textcolor{Navy}{Chart}}.}
+  \SourceNote{Agree (4--5 of 5) that shorter or more flexible hours would hurt their career: 45\% of surveyed PMEs. Job loss: self-rated 12-month chance. MOM PQ 2936 (9 Sep 2026); not comparable. \hyperlink{B-career}{\textcolor{Navy}{Chart}}.}
   \BackToTwo{M-barriers}{Barriers}{M-why-pmes}{Career concerns}
 \end{frame}
 
@@ -263,7 +299,7 @@
   % [B5, M23] 45 [37]; S4 panel composition of parents of 0-6; [P8] figure note: workers in general, not PMEs (FACTCHECK F22, F30)
   \FrameTop
   \Fig{F_career}{4.7cm}
-  \SourceNote{Agree = 4--5 of 5: an expected penalty, not a reported setback. Brackets exclude one lower-quality panel, which holds half the parents of children 0--6: read their bracketed value. PAP--NTUC survey: all workers, not PMEs. \hyperlink{B-career-who}{\textcolor{Navy}{Who expects it}}.}
+  \SourceNote{Agree = 4--5 of 5: an expected penalty, not a reported setback. PAP--NTUC survey: all workers, not PMEs. \hyperlink{B-career-who}{\textcolor{Navy}{Who expects it}}.}
   \BackToTwo{M-barriers}{Barriers}{M-why-pmes}{Why PMEs}
 \end{frame}
 
@@ -275,10 +311,10 @@
       \PanelTitle{Navy}{What we observe (2026)}
       % [D6, D6x, D7, D7b, D5x, D10]
       \begin{itemize}\setlength{\itemsep}{0.08cm}
-        \item Familiar: 44--55\%\dg\ of surveyed PMEs, 25--29\%\dg\ of juniors, \Pend{53\%} of employers
-        \item Of PMEs reporting a formal request, 4--7\%\dg\ were declined (7--10\%\dg, stricter definition): a lower bound
-        \item More FWAs came via company policy (39--43\%\dg) than individual request (26--30\%\dg)
-        \item Aware firms with a written policy got more requests (\Pend{71\% vs 20\%}; an association)
+        \item Familiar: 55\% of surveyed PMEs, 29\% of juniors, 58\% of employers
+        \item Of PMEs reporting a formal request, 4\% were declined (7\%, stricter definition): a lower bound
+        \item More FWAs came via company policy (43\%) than individual request (30\%)
+        \item Aware firms with a written policy got more requests (68\% vs 19\%; an association)
       \end{itemize}
     \end{column}
     \begin{column}{0.48\textwidth}
@@ -291,12 +327,12 @@
       \end{itemize}
     \end{column}
   \end{columns}
-  \SourceNote{\DgNote\ See \hyperlink{B-approvals}{\textcolor{Navy}{two views}}, \hyperlink{B-approvals-tab}{\textcolor{Navy}{table}}, \hyperlink{B-awareness}{\textcolor{Navy}{awareness}}.}
+  \SourceNote{See \hyperlink{B-approvals}{\textcolor{Navy}{two views}}, \hyperlink{B-approvals-tab}{\textcolor{Navy}{table}}, \hyperlink{B-awareness}{\textcolor{Navy}{awareness}}.}
   \BackTo{M-barriers}{Barriers}
 \end{frame}
 
 % [D6, D6x]; [P8] PAP Women's Wing-NTUC WAF survey: 58% aware, 29% know where to turn (FACTCHECK F30, V-21)
-\BackupFig{B-awareness}{Awareness is wide but shallow}{F_awareness}{5.0cm}{M-barriers}{Barriers}{Brackets exclude one lower-quality panel. PAP Women's Wing--NTUC survey (online, Nov--Dec 2025; sampling not published): 58\% aware; 29\% know where to turn if a request is denied or mishandled.}
+\BackupFig{B-awareness}{Awareness is wide but shallow}{F_awareness}{5.0cm}{M-barriers}{Barriers}{PAP Women's Wing--NTUC survey (online, Nov--Dec 2025; sampling not published): 58\% aware; 29\% know where to turn if a request is denied or mishandled.}
 
 % [D7, D7c, D8] figure; [P3] about 94%, data for 2024, almost entirely before the Guidelines, undefined (FACTCHECK F11, F13)
 % [P15] MOM PQ 2936, 9 Sep 2026: about 6% of resident FWA users reported a setback in 2025; experience, not expectation (moved off M-barriers, round 5)
@@ -332,23 +368,23 @@
     \textbf{Limit} & \textbf{What it means} & \textbf{Next step}\\
     \midrule
     % [S6, S6b] every gap 17-33%; [R13] cheaper candidate chosen 57%; EB s3 header: employer salary term weakly identified
-    \textbf{Pay gaps 17--33\%} & \% of pay is model-based; employers weakly pay-sensitive (cheaper won \Pend{57\%}) & A small-gap wave\\ \RowSep
+    \textbf{Pay gaps 17--33\%} & \% of pay is model-based; employers weakly pay-sensitive (cheaper won 58\%) & A small-gap wave\\ \RowSep
     % EB s9: 10 versions x 6 tasks = 60 distinct choice situations per survey; respondent-clustered SEs overstate precision
     \textbf{60 design cells} & 10 versions $\times$ 6 tasks per side: intervals likely too narrow & Cluster by version\\ \RowSep
     % [M20] 83.2% of PME and 90.8% of employer pairs
-    \textbf{Compressed week} & Cheaper in 83\% (PME) and \Pend{91\%} (employer) of its pairs & Balance pay positions\\ \RowSep
+    \textbf{Compressed week} & Cheaper in 83\% (PME) and 91\% (employer) of its pairs & Balance pay positions\\ \RowSep
     % EB s9 l.183: no free-slope check yet; [M8, M19] free slopes only for the compressed week; EB s9 l.182 items asked after the choices
-    \textbf{Employer splits} & One pay slope: preliminary associations, asked after the choices & Free-slope check, pending\\ \RowSep
+    \textbf{Employer splits} & Preliminary associations, asked after the choices & Ask these items before the choices\\ \RowSep
     % [S2, S5] a hire between two equally qualified candidates; Lead decision 7; EB s9: hire, not request
     \textbf{Employer task} & A hire, not a staff request; not an operating cost & Pilots that record operations\\ \RowSep
     % [S3, S4] unweighted; large firms; [S1] Lucid 312 of 1,020 = 31%; [E15] choice results hold without it
-    \textbf{Samples} & Unweighted panels, mostly large firms; one weaker PME panel (31\%) & Items in MOM surveys\\ \RowSep
+    \textbf{Samples} & Unweighted panels, mostly large firms & Items in MOM surveys\\ \RowSep
     % [D9] misread; [D7b] askers only, a lower bound; [B6] no why-not item
     \textbf{Request item} & Misread; refusals among askers only; no why-not item & Option D items\\
     \bottomrule
   \end{tabularx}\par}
   % [S9] respondents knew SNEF would use the results; EB s9: 118 of 1,020 = 12% capped; task-1 coding; [E15] choice results hold without the weaker panel
-  \SourceNote{Also: stated choices (SNEF use known); no before-and-after; 12\% of salaries capped; task-1 coding. Choice results hold without the weaker panel. \hyperlink{B-nextsteps}{\textcolor{Navy}{Next steps}}.}
+  \SourceNote{Also: stated choices (SNEF use known); no before-and-after; 12\% of salaries capped; task-1 coding. Choice results hold without outliers or same-side respondents. \hyperlink{B-nextsteps}{\textcolor{Navy}{Next steps}}.}
   \BackToTwo{M-limits}{Limits}{M-robust}{Robustness}
 \end{frame}
 
@@ -360,12 +396,12 @@
       \PanelTitle{Navy}{Before publication}
       \begin{itemize}\setlength{\itemsep}{0.08cm}
         % EB s9 l.183: employer free-slope equal-pay test for the presence and creativity splits, not yet run; [M8]
-        \item Employer free-slope check (presence, creativity)
+        \item Employer role and concern items asked before the choices
         \item Add a position term; fix early task-1 coding
         \item Cluster by survey version; wild bootstrap
         \item Log vs rank salary models
         % [B6] 68% of PMEs, 61% of employers wrote a comment
-        \item Code open-text comments (68\% of PMEs, \Pend{61\%} of employers wrote one)
+        \item Code open-text comments (68\% of PMEs, 58\% of employers wrote one)
       \end{itemize}
     \end{column}
     \begin{column}{0.48\textwidth}
@@ -394,7 +430,7 @@
     \toprule
      & \textbf{Aim 1: do stated choices predict behaviour?} & \textbf{Aim 2: what changes in firms that adopt?}\\
     \midrule
-    \textbf{Outcomes} & FWA take-up, job moves, promotion, appraisal vs each PME's choices; checked without one panel & Productivity, retention, hires, exits in volunteer pilot firms (Option A or C), vs a comparison group\\ \RowSep
+    \textbf{Outcomes} & FWA take-up, job moves, promotion, appraisal vs each PME's choices & Productivity, retention, hires, exits in volunteer pilot firms (Option A or C), vs a comparison group\\ \RowSep
     % [F1] 490 of 1,020 = 48%; about 5-minute survey in 6-12 months; window Feb-Aug 2027; [F2] employer survey asked no re-contact question
     \textbf{Consent now} & 490 of 1,020 PMEs (48\%) agreed to one short (about 5-minute) survey in 6--12 months (Feb--Aug 2027) & None: the employer survey asked no re-contact question\\ \RowSep
     \textbf{Partner roles} & \textbf{NTUC:} reach members beyond online panels; \textbf{MOM:} linkage only with fresh consent, under its data rules & \textbf{SNEF:} recruit fresh volunteer member firms; \textbf{MOM:} firm linkage only with consent\\ \RowSep
@@ -410,7 +446,7 @@
     % Governance facts must come from the PI (mandate; EB G0): placeholders only
     \textbf{Data owner, funder and publication:} [PI to confirm] (\hyperlink{B-governance}{\textcolor{Navy}{governance}}).\par}
   % [F1] Lucid supplies 194 of 490 = 40% of consenters; caregivers 52.6% vs 39.7%; excl. Lucid 296 of 708 = 42%
-  \SourceNote{Consenters lean to one online panel (40\%) and to caregivers (52.6\% vs 39.7\% agreed); without that panel, 296 of 708 (42\%) agreed.}
+  \SourceNote{Consenters lean to caregivers (52.6\% vs 39.7\% agreed).}
   \BackTo{M-conclusion}{Conclusion}
 \end{frame}
 
@@ -421,7 +457,7 @@
   {\textbf{Zone:} A, common ground\quad\textbf{Strength:} moderate; operating costs unmeasured}
   {% [E5] about 7; [Q5] 58 and 47 (appended); [R5] CI -5 to 19 (appended), wide; [M19] no firm group shows a detectable penalty (303-firm)
    % [M16] 20.8% offer; [M17] 26.5 vs 9.7, an association; [M20] 83.2 and 90.8
-   PMEs value it (\ap 7\% of pay; 58\% at equal pay); employers show no detectable hiring penalty (47\%; wide interval). \Pend{1 surveyed firm in 5} offers it, more often with a written policy (\Pend{27\% vs 10\%}). It was the cheaper option in 83\% (PME) and \Pend{91\%} (employer) of its pairs.}
+   PMEs would give up about 7\% of pay for it; employers would require about 7\% (wide interval): no detectable gap. 1 surveyed firm in 6 offers it, more often with a written policy (21\% vs 9\%). It was the cheaper option in 83\% (PME) and 91\% (employer) of its pairs.}
   {% W5 M-options owner: SNEF with volunteer firms; NTUC co-designs safeguards; TAFEP guidance
    \textbf{SNEF}, with volunteer member firms: put it on the written menu and test it in a bounded, evaluated pilot (\hyperlink{B-pilot}{\textcolor{Navy}{checklist}}). \textbf{NTUC:} co-design safeguards. \textbf{TAFEP:} guidance.}
   {% [P21] TAFEP, IHRP and SNEF resources (V-09)
@@ -430,15 +466,15 @@
   {% [S7] the same total hours over four longer days
    Not shorter hours (same hours, four longer days), a mandate or a case for lower pay; not shown to be costless.}
   {% [D2x] take-up 31 [33]
-   Output, coverage, rostering, fatigue; take-up where available (31--33\%\dg).}
-  {\SourceNote{Associations, not causes: a policy may follow offering. Hiring choices do not measure operating costs. \DgNote}%
+   Output, coverage, rostering, fatigue; take-up where available (31\%).}
+  {\SourceNote{Associations, not causes: a policy may follow offering. Hiring choices do not measure operating costs.}%
    \BackToTwo{M-options}{Options}{M-puzzle}{Puzzle}}
 
 \OptionFrame{B-optB}{Option B: fit arrangements to the role, with flexi-load}
   {\textbf{Zone:} B, depends on the role\quad\textbf{Strength:} moderate; preliminary associations}
   {% [Q10, M10] 27 vs 48 (appended); [Q10b] 50 (appended); [Q10c] p = .002 vs 1-2 days; [M12] p = .006, q = .058 over 20 splits; EB s9 l.183 one pay slope, free-slope check pending
    % [M13] part-time 35 where neither presence need nor creativity concern
-   Where most roles need presence, 1--2 WFH days win 27\% of hiring choices at equal pay (48\% elsewhere), a compressed week 50\% (\Pend{p = .002} vs 1--2 days). Presence: \Pend{p = .006 (q \ap .06} over 20 splits; preliminary). Part-time: \Pend{35\%} even with neither presence need nor creativity concern.}
+   Where most roles need presence, firms would require a pay cut of about 52\% for 1--2 WFH days (3\% elsewhere), against about 1\% for a compressed week. Presence: p = .025 (q = .14 over 11 split tests; preliminary).}
   {% [P11] Job Redesign+ up to 70% of qualifying costs for SMEs, 50% for others; PTRG under review for flexi-load
    % [Q10c] say "a compressed week may fit where WFH does not" (fixer pass 7 Oct 2026, employer-11; fact_audit s3 item 6)
    \textbf{Firms}, with SNEF: review which tasks need presence; a compressed week may fit where WFH does not; use flexi-load where fewer hours, not location, address the need. Job Redesign+: up to 70\% of qualifying costs for SMEs, 50\% for others. \textbf{MOM:} PTRG review.}
@@ -447,14 +483,14 @@
   {Not one-size-fits-all; not a quota.}
   {% [B1] fairness top challenge at 200 or fewer staff, 28%; [P5] COS 2026 speech: under half who needed part-time got it, 2024
    Fairness to staff without FWAs (top challenge, $\le$200 staff); part-time access (COS 2026: under half who needed it got it).}
-  {\SourceNote{Associations; asked after the choices; free-slope check pending. \hyperlink{B-flexiload}{\textcolor{Navy}{Flexi-load}}.}%
+  {\SourceNote{Associations; asked after the choices. \hyperlink{B-flexiload}{\textcolor{Navy}{Flexi-load}}.}%
    \BackToTwo{M-options}{Options}{M-where}{Reservations}}
 
 % [S7] 3-4 WFH days is a tested attribute level; W5 M-options row C
 \OptionFrame{B-optC}{Option C: a 3--4-day WFH pilot where roles allow}
   {\textbf{Zone:} C, far apart\quad\textbf{Strength:} exploratory}
   {% [Q2] 31; [Q3] 23 (appended); [M10] 19 vs 39 (303-firm); EB s9 l.183 one pay slope, free-slope check pending; [M13] 35% of firms, 52 and 48; [P7] six-month trial, quits down by a third
-   3--4 WFH days and fully remote win 31\% and 23\% of hiring choices at equal pay. The remote reservation is associated mainly with the creativity concern (18\% vs 29\%; preliminary, one pay slope). In the \Pend{35\%} of firms with neither that concern nor a presence need, we detect no WFH penalty (\Pend{52\%, 48\%}). Abroad, a six-month hybrid trial cut quits by a third.}
+   Employers would require pay cuts of about 36\% for 3--4 WFH days and 49\% for fully remote work (PMEs would give up 10\% and 13\%). Fully remote draws about 61\% where firms worry that creativity suffers apart, against 36\% elsewhere (a weak association, p = .14; preliminary). Abroad, a six-month hybrid trial cut quits by a third.}
   {% W5 M-options owner: volunteer firms; independent evaluation; Lead decision 10: roles without presence needs
    \textbf{Volunteer firms}, with SNEF and NTUC: a 3--4-day WFH pilot in roles without presence needs; outcomes agreed upfront; independent evaluation; stop criteria set in advance. Convenor, funding and publication rule: for the partners.}
   {% [V6] managers' perceived productivity effect -2.6% to +1.0%
@@ -471,15 +507,15 @@
    % [D7] 4.4 [7.2] declined, 32 [42] partly; [D7b] lower bound; [M23] 44.6 [37.1]; [M27] more formal requests, not fewer
    % fixer pass 7 Oct 2026 (mom_ps-02 b): [P3] MOM publishes request rates; [B6] our survey had no why-not item; whether MRSD's
    % questionnaire already asks why is a PI gate before the meeting (REPORT.md)
-   Firms need not report requests to MOM; in MOM's survey, 18.5\% of those needing an FWA made a formal request (data for 2024). MOM publishes request rates, not reasons; our survey had no why-not item, and our request item was partly misread. Of PMEs reporting a request, 4--7\%\dg\ were declined (a lower bound), 32--42\%\dg\ partly approved. 37--45\%\dg\ expect a career penalty; it goes with more requests, not fewer.}
+   Firms need not report requests to MOM; in MOM's survey, 18.5\% of those needing an FWA made a formal request (data for 2024). MOM publishes request rates, not reasons; our survey had no why-not item, and our request item was partly misread. Of PMEs reporting a request, about 4\% were declined (a lower bound) and 32\% partly approved. 45\% expect a career penalty; it goes with more requests, not fewer.}
   {% W5 M-options owner: MRSD checks the items against its survey, with NTUC and SNEF (fixer pass 7 Oct 2026, mom_ps-02);
    % COMMENTS slide 20: first deliverable restricted to the two items
    \textbf{MOM (MRSD)}, with NTUC and SNEF: check its survey, then add the items not yet asked: why those who need an FWA do not ask, and whether a request was approved in full, with changes, or declined (\hyperlink{B-optD-items}{\textcolor{Navy}{draft}}).}
   {MOM's employee survey; partners' outreach channels.}
   {Not a new reporting duty for firms; not an evaluation of the Guidelines.}
   {% [D6] junior 29 [25] familiar; [P15] about 6% of FWA users reported a setback in 2025, experience not expectation
-   Partial approvals; junior PMEs' awareness (25--29\%\dg\ familiar); expected penalty vs MOM's reported setbacks (\ap 6\% of FWA users, 2025).}
-  {\SourceNote{\DgNote}%
+   Partial approvals; junior PMEs' awareness (29\% familiar); expected penalty vs MOM's reported setbacks (\ap 6\% of FWA users, 2025).}
+  {\SourceNote{Surveyed samples, unweighted.}%
    \BackToTwo{M-options}{Options}{M-barriers}{Barriers}}
 
 \begin{frame}[t,label=B-optD-items]{Option D: draft survey items}
@@ -518,103 +554,30 @@
 % ==========================================================================
 % Technical appendix
 % ==========================================================================
-\begin{frame}[t,label=B-why-org-tests]{Technical: all 20 employer split tests}
+\begin{frame}[t,label=B-why-org-tests]{Technical: all 11 employer split tests}
   \FrameTop % first body token (centring; never a frame subtitle)
-  % TODO(appended): every p, q and share on this slide is a 303-firm value; the 20 split tests, M13 and M14
-  % are not in the appended_* outputs (only the continuous concern-index test is: p = .089, appended)
-  {\centering\Pend{\fontsize{8}{9.6}\selectfont All values on this slide: 303-firm sample, not yet re-estimated for the appended sample.}\par}
-  % polish pass (BKb): the three split tables share one width and one p / q layout (blank q = .40 or more,
-  % as the note says); backup table style (TableFont, 4 pt gaps, bold headers)
-  % final fixer (7 Oct 2026): notes print at 8.0 pt (were 6.9 pt); the split tables and the table below are
-  % set at arraystretch 0.92 (were 1.0), 0.04 cm apart (was 0.08), so the 5-line note fits above the button row
-  {\TableFont\setlength{\tabcolsep}{4pt}\renewcommand{\arraystretch}{0.92}%
-  \begin{columns}[T,onlytextwidth]
-    \begin{column}{0.32\textwidth}
-      \begin{tabularx}{\linewidth}{@{}>{\RaggedRight}X>{\centering}p{0.75cm}>{\centering\arraybackslash}p{0.75cm}@{}}
-        \toprule
-        \textbf{Split} & \textbf{p} & \textbf{q}\\
-        \midrule
-        % [M10] creativity p = .003; [M12] q = .058
-        Creativity concern & .003 & .058\\
-        % [M10] presence p = .006; [M12] q = .058
-        Presence need & .006 & .058\\
-        % [M10] no WFH today p = .018; [M12] q = .121
-        No WFH now & .018 & .121\\
-        % [Q13] overall concern p = .07; [M12] q = .301
-        Concern index & .07 & .301\\
-        % [Q13] productivity concern p = .075; [M12] q = .301
-        Productivity concern & .075 & .301\\
-        % [Q13, R15] size up to 200 staff p = .12; [M12] all others q >= .40
-        Size $\le$200 & .12 & \\
-        % [Q13, R15] salary-offset belief p = .24; [M12] q >= .40
-        Salary offset & .24 & \\
-        \bottomrule
-      \end{tabularx}
-    \end{column}
-    \begin{column}{0.32\textwidth}
-      \begin{tabularx}{\linewidth}{@{}>{\RaggedRight}X>{\centering}p{0.75cm}>{\centering\arraybackslash}p{0.75cm}@{}}
-        \toprule
-        \textbf{Split} & \textbf{p} & \textbf{q}\\
-        \midrule
-        % [M15] talent benefit p = .29, q >= .64
-        Talent benefit & .29 & \\
-        % [M15] hiring difficulty p = .32, q >= .64
-        Hard to hire & .32 & \\
-        % [Q13, R15] size 1,001+ p = .35; [M12] q >= .40
-        Size 1,001+ & .35 & \\
-        % [Q13] coordination concern p = .35; [M12] q >= .40
-        Coordination concern & .35 & \\
-        % [M15] hiring role p = .49, q >= .64
-        Hiring role & .49 & \\
-        % [Q13, R15] tech readiness p = .53; [M12] q >= .40
-        Tech readiness & .53 & \\
-        % [M15] PME share 50% or more p = .60, q >= .64
-        PME share $\ge$50\% & .60 & \\
-        \bottomrule
-      \end{tabularx}
-    \end{column}
-    \begin{column}{0.32\textwidth}
-      \begin{tabularx}{\linewidth}{@{}>{\RaggedRight}X>{\centering}p{0.75cm}>{\centering\arraybackslash}p{0.75cm}@{}}
-        \toprule
-        \textbf{Split} & \textbf{p} & \textbf{q}\\
-        \midrule
-        % [Q13, R15] written policy p = .69; [M12] q >= .40
-        Written policy & .69 & \\
-        % [M15] PME turnover p = .70, q >= .64
-        PME turnover & .70 & \\
-        % [M15] designation p = .80, q >= .64
-        Designation & .80 & \\
-        % [M15] fairness concern p = .87, q >= .64
-        Fairness concern & .87 & \\
-        % [M15] 12-month plan p = .87, q >= .64
-        12-month plan & .87 & \\
-        % [M15] familiarity with the Guidelines p = .94, q >= .64
-        Knows Guidelines & .94 & \\
-        \bottomrule
-      \end{tabularx}
-    \end{column}
-  \end{columns}\par}
-  \vspace{0.04cm}
-  {\TableFont\setlength{\tabcolsep}{4pt}\renewcommand{\arraystretch}{0.92}%
-  \begin{tabularx}{\linewidth}{@{}>{\RaggedRight}X>{\centering}p{1.9cm}>{\centering}p{1.9cm}>{\centering}p{1.9cm}>{\centering\arraybackslash}p{1.9cm}@{}}
+  % Appended sample (n = 397): ratio tests of equal location WTPs across groups (group-specific pay slopes), data/wtp_deck.csv (ratio_p);
+  % q = Benjamini-Hochberg over the 11 tests; 3-group splits use the joint 6-df test
+  {\TableFont\setlength{\tabcolsep}{4pt}\renewcommand{\arraystretch}{1.0}%
+  \begin{tabularx}{\linewidth}{@{}>{\RaggedRight}X>{\centering}p{3.2cm}>{\centering}p{1.6cm}>{\centering\arraybackslash}p{1.6cm}@{}}
     \toprule
-    % [S7] attribute levels: 1-2 and 3-4 WFH days a week
-    \textbf{\%, 95\% CI} & \textbf{1--2 days} & \textbf{3--4 days} & \textbf{Remote} & \textbf{Compr.}\\
+    \textbf{Split} & \textbf{Firms} & \textbf{p} & \textbf{q}\\
     \midrule
-    % [M13] neither, 35% = 107 firms: 52 [43, 61], 48 [38, 57], 43 [32, 55], 57 [46, 67]; vs 50% all p >= .20
-    \textbf{Neither (35\%):} equal pay & 52 [43, 61] & 48 [38, 57] & 43 [32, 55] & 57 [46, 67]\\
-    % [M14] share of the PME-employer gap associated with presence: 44 [11, 76], 16 [-3, 35], 7 [-7, 21]; compressed unstable
-    \textbf{Gap share: presence} & 44 [11, 76] & 16 [$-$3, 35] & 7 [$-$7, 21] & unstable\\
-    % [M14] share associated with the creativity concern: 18 [-23, 58], 29 [2, 57], 34 [12, 57]; compressed unstable
-    \textbf{Gap share: creativity} & 18 [$-$23, 58] & 29 [2, 57] & 34 [12, 57] & unstable\\
+    No WFH now & 96 / 301 & .023 & .14\\
+    Presence need & 137 / 260 & .025 & .14\\
+    Creativity concern & 201 / 196 & .14 & .43\\
+    Concern index & 260 / 137 & .19 & .43\\
+    Written policy & 276 / 121 & .19 & .43\\
+    Hiring role (3 groups) & 84 / 122 / 170 & .36 & .61\\
+    Productivity concern & 223 / 174 & .39 & .61\\
+    Coordination concern & 213 / 184 & .47 & .62\\
+    Salary offset & 187 / 210 & .51 & .62\\
+    Firm size (3 bands) & 175 / 140 / 82 & .63 & .66\\
+    Tech readiness (3 levels) & 29 / 209 / 159 & .66 & .66\\
     \bottomrule
   \end{tabularx}\par}
-  % [M12] 20 splits; [M13] none differs from 50%, all p >= .20; part-time 35% [26, 43], p < .001
-  % [M14] presence share of the 1-2 day shortfall below 50%: 94% [-3, 192], imprecise; reweights observed groups
-  % fixer pass 7 Oct 2026 (fact_audit s3 item 2; editor-14 keeps the rows): the note names the gap-share rows a
-  % cross-side decomposition, not a market gap (Lead decision 3)
-  % EB s9 l.182-183: items asked after the choices; no free-slope check yet
-  \SourceNote{Technical appendix, not for projection. p: location test, one salary slope (free-slope check pending); q: Benjamini--Hochberg over 20 splits, $\ge$ .40 where blank. Neither: no presence need or creativity concern; none differs from 50\% (p $\ge$ .20); part-time still 35\% [26, 43]. Gap shares: a cross-side decomposition, not a market gap; imprecise associations that reweight observed firm groups (presence, 1--2-day shortfall below 50\%: 94\% [$-$3, 192]). Items asked after the choices. \hyperlink{B-why-org}{\textcolor{Navy}{Summary}}.}
+  % EB s9 l.182: presence and concern items sit in Block 5, after the DCE block
+  \SourceNote{Technical appendix, not for projection. p: test that the three location pay-cut values (1--2 days, 3--4 days, fully remote) are equal across the groups, with a separate pay slope per group; q: Benjamini--Hochberg over the 11 tests. Items asked after the choices: preliminary associations.}
   \BackTo{M-where}{Reservations}
 \end{frame}
 
@@ -628,11 +591,11 @@
     % [E1, E2] about 7-10, indicative; never a pay cut
     \item PMEs strongly prefer hybrid work: about 7--10\% of pay, indicative, never a pay cut.
     % [Q1, Q2, Q5] about six in ten; EB s3b plain-English reading, choices not people
-    \item At equal pay, hybrid or compressed-week jobs win about six in ten choices (vs 50\%).
+    \item Employers would require larger pay cuts than PMEs would give up for most arrangements; for the compressed week the two are about equal.
     % [R5, Q5] no detectable penalty; [R10, R12] fully remote ranked last (both hold in the appended sample)
-    \item Hiring: no detectable penalty for a compressed week; fully remote last (a ranking).
+    \item Hiring: no detectable gap for a compressed week; fully remote draws the largest cut (a ranking).
     % [M10] presence and creativity contrasts; EB s9: free-slope check pending
-    \item Reservations: 1--2 WFH days where most roles need presence; remote with the creativity concern; preliminary (one pay slope).
+    \item Reservations: 1--2 WFH days where most roles need presence; remote with the creativity concern; preliminary (asked after the choices).
     % Lead decision 2; mandate: compressed-week conclusion wording
     \item Compressed week: most promising common-ground test; evidence moderate; operating costs unmeasured.
     % [M23] more than a third; [D7, D7b] lower bound
@@ -640,7 +603,7 @@
   \end{itemize}
   \vspace{0.06cm}
   \PanelTitle{Navy}{We avoid}
-  \Body{Employer \% of salary as a price, or WTP as a pay cut; a request rate; equal-pay shares as shares of people, or compared across sides; ``easy'', ``low cost'', ``no cost'', ``indifferent''; associations or nulls as causes or proof; Guidelines effects on provision, requests or approvals.}
+  \Body{Pay values as a proposed pay cut, or employer cut sizes as a price (read the ranking); a request rate; ``easy'', ``low cost'', ``no cost'', ``indifferent''; associations or nulls as causes or proof; Guidelines effects on provision, requests or approvals.}
   \BackToTwo{M-meet}{Two sides}{M-conclusion}{Conclusion}
 \end{frame}
 
@@ -650,7 +613,7 @@
   \FrameTop % first body token (centring; never a frame subtitle)
   {\centering\Caveat{Model-dependent; not a pay recommendation and not a main finding.}}
   \Tab{T_org_pct}
-  \SourceNote{Firmer result: the ranking at equal pay (\hyperlink{B-org-yardstick}{\textcolor{Navy}{yardstick}}).}
+  \SourceNote{Firmer result: the ranking of the pay cuts.}
   \BackTo{M-employers}{Employers}
 \end{frame}
 
