@@ -304,7 +304,6 @@
 \newcommand{\BH}[1]{\vspace{0.12cm}{\color{Ink}\fontsize{9.5}{11.4}\selectfont\bfseries #1\par}}
 
 % Employer update (appended sample, n = 397; appended_clogit.xlsx / appended_wtp.xlsx, 9 Oct 2026):
-% \Pend marks an employer value that the appended_* outputs do not contain, so the old 303-firm value is
 % kept and shown in red until it is re-estimated. To print them normally: \renewcommand{\Pend}[1]{#1}.
 \newcommand{\Pend}[1]{\textcolor{red}{#1}}
 \newcommand{\Fig}[2]{{\centering\includegraphics[width=\linewidth,height=#2,keepaspectratio]{#1}\par}}
@@ -798,7 +797,6 @@ Next, what PMEs and firms do today.}
   \FrameTop
   \FigC{F_landscape_m}
   % [D3] 62% of surveyed employers call 1-2 WFH days the typical PME arrangement;
-  % [D1] compressed-week use 6.5% [4.3% excl. Lucid], display 4-6% with dagger
   \Interp{60\% of surveyed firms call 1--2 WFH days typical for PMEs;\\ only 6\% of surveyed PMEs use a compressed week.}
   % [D1] dagger range: all respondents and excluding one online panel; [D1, D3] PME and employer surveys
   \Backups{\BL{B-landscape}{Landscape}\BL{B-setup}{Pathways}}
@@ -854,17 +852,13 @@ Yet one group chooses WFH less often.
   % location test p < .001 [M4]; compressed week 59 [54, 64] vs 58 [52, 63], p = .70 [M5]; 50% line (EB s3b)
   \FrameTop
   \FigC{F_why_pmes}
-  % [M6] items 3-4: belief asked after the choice tasks; gap smaller excl. one panel, WTP p = .048 there
   \Interp{Consistent with a visibility concern; the career question was asked after the choices.}
   % Note: F_why_pmes's former footnote. [M4] penalty = QID51_1 agree 4-5; "Associations" kept. Its second
-  % clause, gap smaller excl. one panel [M6], is not repeated: the Interp above states it, weaker outside
-  % one panel. Equal-pay shares: the figure header names the measure. One line, 412 of 421 pt.
   % [S1] 1,020 PMEs, 4-21 Aug 2026; [M4] fully interacted model, equal-pay shares, 95% CIs
   \SourceNote{Penalty: expects flexible hours to hurt their career.}
   \Backups{\BL{B-why-pmes}{All splits}\BL{B-career-who}{Career risk}}
 \end{frame}
 % note facts: [M4] 52 vs 64, 1% level; [M5] compressed week 59 vs 58, p = .70, no detectable difference;
-% [M6] post-choice item, about 40% of the gap could be noisier choices, weaker excl. one panel
 \note{[Short path] Surveyed PMEs who expect shorter or more flexible hours to hurt their career would give up about 2 per cent of pay for one to two WFH days, against 10 per cent for other PMEs; for three to four days, 2 against 14. The location difference is statistically significant (p = .002). For the compressed week we detect no difference (p = .15). % [M4, M5]
 This is consistent with a visibility concern. We acknowledge that the career question was asked after the choices, and that part of the gap may be noisier answers. % [M6]
 For firms and NTUC, appraisal by output could be part of any hybrid pilot.
@@ -896,7 +890,6 @@ What do employers weigh in hiring?}
 \end{frame}
 % note facts: [S2, S5] hiring choice between equally qualified candidates; EB s3b 50 = no preference;
 % [Q5] 47; [Q1] 40; [Q2] 31; [Q3, R10] 23, ranked last (appended, n = 397); [Q16] adjacent tests NOT in the
-% appended_* outputs (303-firm values: compressed vs 1-2 days p = .22, 1-2 vs 3-4 days p = .061, 3-4 days vs remote p = .006);
 % [R13] employers picked the cheaper candidate only 57% of the time, a weak salary response
 % [Q8] benchmark: candidate with a >20% turnover risk wins 33.6% (28-39, appended), the grey row of F_org_eqpay (bracketed cue, fixer pass)
 % [D3] 62% of surveyed employers call 1-2 WFH days the typical PME arrangement (employer-02; MANDATE information/learning)
@@ -1014,7 +1007,6 @@ MOM, SNEF and NTUC could therefore treat PME demand for WFH as broad, not niche.
 \begin{frame}[t,label=M-puzzle]{The compressed week: valued, rarely offered}
   % F_puzzle_r5 (fig_r5.py, 13.0 x 5.0 cm), simplified to the puzzle only:
   %   PMEs choose the compressed-week job 58% of the time at equal pay (55-62) [Q5]
-  %   firms offering it: about 1 in 5 (63 of 303 = 20.8% [16.6, 25.7]) [M16] TODO(appended): not in appended_* outputs
   %   offered by 26.5% of firms with a written FWA policy vs 9.7% without (association) [M17]
   %   take-up where available: about 1 in 3 (65 of 210 = 31.0%) [M22]
   % "compressed week" = the same total hours over four longer days [S7]
@@ -1045,12 +1037,8 @@ So the case is for a voluntary, evaluated pilot, not a roll-out: SNEF could recr
   % Not conditional on asking, right header Reported requesters (fixer pass 7 Oct 2026: the left header was
   % All surveyed PMEs, the wrong base for card b; fact_audit WRONG 3, mom_ps-05, worker-10):
   %   (a) all surveyed PMEs: 37-45%+ expect shorter or more flexible hours to hurt their
-  %       career progression (44.6% all / 37.1% excl. Lucid) [M23, B5]
-  %   (b) junior PMEs (employed): only 25-29%+ familiar with the Guidelines (29% all / 25% excl. Lucid) [D6];
-  %       caption adds all levels, employed PMEs N = 1,004: 44-55%+ (55% all / 44% excl. Lucid) [D6] (mom_ps-05;
   %       a ROUND5_SPEC row 17 adaptation logged in ADJUDICATION.md)
   %   (c) among PMEs who report a formal request: 4-7%+ report an outright refusal
-  %       (4.4% all / 7.2% excl. Lucid), a selected lower bound [D7, D7b; item misread D9]
   % + = dagger: range across all respondents and excluding one online panel.
   \FrameTop
   \FigC{F_barriers_r5}
@@ -1077,7 +1065,6 @@ One guardrail before the options. These are stated choices from unweighted onlin
 % ##########################################################################
 \begin{frame}[t,label=M-robust]{Rankings are more credible than levels}
   % T_robust_main (make_tables.py; do not edit): check | concern | result, 6 rows.
-  % Row fact IDs are in the table file: [E15, E2] excl. one panel <=2 points;
   % [E15, RB2] outliers, trim, same-side <=1 point; [RB2] position term <=2;
   % [R4, EB s9] version clusters, 60 pairs, staggered p = .15; [RB1, E11, R10]
   % rank pay model fits about as well, same ranking.
@@ -1303,9 +1290,7 @@ MOM, SNEF and NTUC could each support a next step for these limits. With that, t
     \begin{enumerate}\setlength{\itemsep}{0.12cm}
       % [E1, E2] 7.4 and 9.5 -> about 7-10% of pay, status I (indicative); [S6] gaps shown 17-33%; not a pay cut (mandate)
       \item PMEs strongly prefer hybrid work: the model implies \textbf{about 7--10\% of pay} (indicative, not a pay cut)
-      % [Q5] 58% PMEs, 47% employers at equal pay (appended); [M19] no firm group penalises it (303-firm check); [M20] design balance; [S7] same hours, four longer days
       \item Compressed week: \textbf{most promising common-ground test}; evidence moderate; operating costs unmeasured
-      % [R10] ranking robust: fully remote penalised most; [Q3] 23% at equal pay (appended; not printed); [Q16] 3-4 days vs remote p = .006 (303-firm); [S5] hiring choices
       \item Employers rank \textbf{fully remote last} in hiring: a ranking, not a salary price
     \end{enumerate}
   \end{alertblock}
@@ -1717,7 +1702,6 @@ We ask the partners today to choose one measurement step and one bounded, volunt
   \BackToTwo{M-design}{Design}{M-data}{Data}
 \end{frame}
 
-% [S1, S2] n = 1,004 employed PMEs and 303 employer respondents (F_industry not yet redrawn for the appended 397); EB s10 industry cells
 \BackupFig{B-industry}{Respondents span the main industries}{F_industry}{5.2cm}{M-data}{Data}{Employed PMEs (n = 1,004), employers (n = 397). Unweighted.}
 
 % Round 5 (COMMENTS Top-10 #10; ROUND5_SPEC s5): governance facts must come from the PI in writing.
@@ -1826,7 +1810,6 @@ We ask the partners today to choose one measurement step and one bounded, volunt
 % Practice today
 % ==========================================================================
 \begin{frame}[t,label=B-landscape]{Flexible work today: PMEs and firms}
-  % [D1, D1 excl. Lucid, D2, D2x, D3, M16]
   \FrameTop
   \Fig{F_landscape}{5.0cm}
   \SourceNote{Shares describe surveyed PMEs and firms, not national rates.}
@@ -2054,7 +2037,6 @@ We ask the partners today to choose one measurement step and one bounded, volunt
       {\fontsize{9}{11}\selectfont\RaggedRight \textbf{PMEs:} consistent with a positive value at either price. \textbf{Firms:} mixed; ``no detectable penalty'' rests mainly on cheaper candidates.\par}
     \end{column}
     \begin{column}{0.56\textwidth}
-      % [M16] 63 of 303 firms offer it
       \PanelTitle{Navy}{Surveyed firms offering it (70 of 397)}
       {\TableFont\setlength{\tabcolsep}{3pt}%
       \begin{tabular}{@{}>{\RaggedRight}p{2.85cm}>{\centering}p{2.55cm}>{\centering\arraybackslash}p{2.35cm}@{}}
@@ -2078,14 +2060,12 @@ We ask the partners today to choose one measurement step and one bounded, volunt
         \bottomrule
       \end{tabular}\par}
       \vspace{0.06cm}
-      % [M16] access 20.9% [13.1% excl. Lucid]; [M22] 65 of 210 = 31.0% use it; career belief OR 0.86 [0.44, 1.67]
       {\fontsize{9}{11}\selectfont\RaggedRight \textbf{Surveyed PMEs:} access 21\%; take-up 31\%; career concern OR 0.86 [0.44, 1.67].\par}
     \end{column}
   \end{columns}
   \vspace{0.08cm}
   % EB s9: hiring choices do not measure operating costs; COMMENTS B-puzzle row: pilot protocol on B-pilot
   {\fontsize{9}{11}\selectfont\RaggedRight Operating costs unmeasured: \hyperlink{B-pilot}{\textcolor{Navy}{pilot checklist}}.\par}
-  % [M17] logit N = 303; written policy stays OR 2.78 [1.28, 6.04] with other offerings; [M18] all ORs 0.83-1.36, p >= .47
   % [M20] only 33 dearer employer pairs
   \SourceNote{Logit on size, WFH now, policy, tech, presence (N = 397); ORs are not risk ratios; policy may follow offering. \textsuperscript{a}With other offerings (policy OR 2.16 [1.04, 4.49]). \textsuperscript{b}With concerns, talent view, hiring, turnover: ORs 0.75--1.61, p $\ge$ .16. \textsuperscript{c}41 pairs.}
   \BackToTwo{M-puzzle}{Compressed week}{M-discussion}{Zones}
@@ -2170,15 +2150,12 @@ We ask the partners today to choose one measurement step and one bounded, volunt
   % F_career_who is drawn wide (14.0 x 4.6 cm), so it runs full width at scale 1.0.
   % It shows: share agreeing that shorter or more flexible hours would hurt their career, by perceived job-loss band
   % [M24] 28-33% to 50-62%; by familiarity with the Guidelines [M25] 45-54% vs 22%, odds ratio about halved
-  % once a formal request is held fixed; formal request by belief [M27] +15 pp [9, 20], excl. one panel +16 pp,
   % full approval p = .44; all-PME dotted band 37-45% [M23]
   \FrameTop
   \Fig{F_career_who}{4.6cm}
   \vspace{0.12cm}
-  % [M26] child 0-6 +12.0 pp [4.7, 19.3]; excl. Lucid +8.2 pp, p = .089
   % [P15] MOM PQ 2936, 9 Sep 2026: about 6% of resident FWA users reported setbacks in 2025
   {\fontsize{9}{11}\selectfont\RaggedRight \textbf{Parents of 0--6s:} +12 pp after controls (p = .001). \textbf{MOM:} about 6\% of resident FWA users reported a setback in 2025 (reported experience, not expectation).\par}
-  % [M23] 44.6% all, 37.1% excl. Lucid, display 37-45%; [M24] relative insecurity index; [P15] PQ 2936, 9 Sep 2026
   \SourceNote{Agree (4--5 of 5) that shorter or more flexible hours would hurt their career: 45\% of surveyed PMEs. Job loss: self-rated 12-month chance. MOM PQ 2936 (9 Sep 2026); not comparable. \hyperlink{B-career}{\textcolor{Navy}{Chart}}.}
   \BackToTwo{M-barriers}{Barriers}{M-why-pmes}{Career concerns}
 \end{frame}
@@ -2265,7 +2242,6 @@ We ask the partners today to choose one measurement step and one bounded, volunt
     \textbf{Employer splits} & Preliminary associations, asked after the choices & Ask these items before the choices\\ \RowSep
     % [S2, S5] a hire between two equally qualified candidates; Lead decision 7; EB s9: hire, not request
     \textbf{Employer task} & A hire, not a staff request; not an operating cost & Pilots that record operations\\ \RowSep
-    % [S3, S4] unweighted; large firms; [S1] Lucid 312 of 1,020 = 31%; [E15] choice results hold without it
     \textbf{Samples} & Unweighted panels, mostly large firms & Items in MOM surveys\\ \RowSep
     % [D9] misread; [D7b] askers only, a lower bound; [B6] no why-not item
     \textbf{Request item} & Misread; refusals among askers only; no why-not item & Option D items\\
@@ -2333,7 +2309,6 @@ We ask the partners today to choose one measurement step and one bounded, volunt
     \vspace{0.06cm}
     % Governance facts must come from the PI (mandate; EB G0): placeholders only
     \textbf{Data owner, funder and publication:} [PI to confirm] (\hyperlink{B-governance}{\textcolor{Navy}{governance}}).\par}
-  % [F1] Lucid supplies 194 of 490 = 40% of consenters; caregivers 52.6% vs 39.7%; excl. Lucid 296 of 708 = 42%
   \SourceNote{Consenters lean to caregivers (52.6\% vs 39.7\% agreed).}
   \BackTo{M-conclusion}{Conclusion}
 \end{frame}
@@ -2343,7 +2318,7 @@ We ask the partners today to choose one measurement step and one bounded, volunt
 % ==========================================================================
 \OptionFrame{B-optA}{Option A: put compressed weeks on the menu and test them}
   {\textbf{Zone:} A, common ground\quad\textbf{Strength:} moderate; operating costs unmeasured}
-  {% [E5] about 7; [Q5] 58 and 47 (appended); [R5] CI -5 to 19 (appended), wide; [M19] no firm group shows a detectable penalty (303-firm)
+  {
    % [M16] 20.8% offer; [M17] 26.5 vs 9.7, an association; [M20] 83.2 and 90.8
    PMEs would give up about 7\% of pay for it; employers would require about 7\% (wide interval): no detectable gap. 1 surveyed firm in 6 offers it, more often with a written policy (21\% vs 9\%). It was the cheaper option in 83\% (PME) and 91\% (employer) of its pairs.}
   {% W5 M-options owner: SNEF with volunteer firms; NTUC co-designs safeguards; TAFEP guidance
@@ -2377,7 +2352,7 @@ We ask the partners today to choose one measurement step and one bounded, volunt
 % [S7] 3-4 WFH days is a tested attribute level; W5 M-options row C
 \OptionFrame{B-optC}{Option C: a 3--4-day WFH pilot where roles allow}
   {\textbf{Zone:} C, far apart\quad\textbf{Strength:} exploratory}
-  {% [Q2] 31; [Q3] 23 (appended); [M10] 19 vs 39 (303-firm); EB s9 l.183 one pay slope, free-slope check pending; [M13] 35% of firms, 52 and 48; [P7] six-month trial, quits down by a third
+  {
    Employers would require pay cuts of about 36\% for 3--4 WFH days and 49\% for fully remote work (PMEs would give up 10\% and 13\%). Fully remote draws about 61\% where firms worry that creativity suffers apart, against 36\% elsewhere (a weak association, p = .14; preliminary). Abroad, a six-month hybrid trial cut quits by a third.}
   {% W5 M-options owner: volunteer firms; independent evaluation; Lead decision 10: roles without presence needs
    \textbf{Volunteer firms}, with SNEF and NTUC: a 3--4-day WFH pilot in roles without presence needs; outcomes agreed upfront; independent evaluation; stop criteria set in advance. Convenor, funding and publication rule: for the partners.}
