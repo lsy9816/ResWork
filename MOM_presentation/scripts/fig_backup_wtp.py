@@ -119,7 +119,7 @@ def fig_emp_groups():
     SZ = (14.5, 5.2)
     fig = M.new_fig(*SZ)
     Wd, H = fig.W, fig.H
-    levels = [("p1", "1–2 days"), ("p2", "3–4 days"), ("p3m", "Remote¹"), ("t2", "Compressed")]
+    levels = [("p1", "1–2 days"), ("p2", "3–4 days"), ("p3", "Remote¹"), ("t2", "Compressed")]
     rows = [("main", 0, "All PMEs (1,020)")]
     for sp, labs in (("gender", ("Men", "Women")), ("age", ("Aged 19–39", "Aged 40+")),
                      ("care_type", ("No caregiving", "Other caregiving", "Child aged 0–6"))):

@@ -366,7 +366,7 @@ We ask the partners today to choose one measurement step and one bounded, volunt
     \midrule
     \makebox[0.52cm][l]{\tikz[baseline=(z.base)]\node[zonebadge](z){A};}\textbf{Common ground} & Employers' required cut is about what PMEs would give up (7\% and 7\%); the gap is not distinguishable from zero & Compressed week\\ \RowSep
     \makebox[0.52cm][l]{\tikz[baseline=(z.base)]\node[zonebadge](z){B};}\textbf{Depends on the role} & Gap about 12 points (CI 2 to 23); employers would require about 52\% where most roles need presence, 3\% where only some or few do & 1--2 days WFH\\ \RowSep
-    \makebox[0.52cm][l]{\tikz[baseline=(z.base)]\node[zonebadge](z){C};}\textbf{Far apart} & Gaps of about 26 and 36 points; employers would require 36\% and 49\% of pay, PMEs would give up 10\% and 12\% & 3--4 days WFH; fully remote\\ \RowSep
+    \makebox[0.52cm][l]{\tikz[baseline=(z.base)]\node[zonebadge](z){C};}\textbf{Far apart} & Gaps of about 26 and 34 points; employers would require 36\% and 49\% of pay, PMEs would give up 10\% and 15\% & 3--4 days WFH; fully remote\\ \RowSep
     \makebox[0.52cm]{}\textbf{Little at stake} & PMEs give up about 0; employers would require about 10\% (not robust) & Staggered hours\\ \RowSep
     \makebox[0.52cm]{}\textbf{Pay for hours} & Fewer hours at the same pay; employer cuts \ap pro-rata & Part-time; reduced load\\
     \bottomrule
@@ -549,7 +549,7 @@ We ask the partners today to choose one measurement step and one bounded, volunt
 % PMEs
 % ==========================================================================
 % [E1-E10] main model, N = 1,020, 6,120 choices; [M1] remote vs own commute about 13
-\BackupTab{B-emp-all}{All PME estimates, \% of pay}{T_emp_all}{M-pmes}{PMEs}{Indicative: pay gaps shown were 17--33\%. Fully remote is vs a moderate commute; vs a long commute, \ap 15\% (\hyperlink{B-remote-commute}{\textcolor{Navy}{commute}}).}
+\BackupTab{B-emp-all}{All PME estimates, \% of pay}{T_emp_all}{M-pmes}{PMEs}{Indicative: pay gaps shown were 17--33\%. Fully remote is vs a long commute; vs a moderate commute, \ap 12\% (\hyperlink{B-remote-commute}{\textcolor{Navy}{commute}}).}
 
 \begin{frame}[t,label=B-remote-commute]{Fully remote valued against any commute}
   \FrameTop
@@ -559,12 +559,11 @@ We ask the partners today to choose one measurement step and one bounded, volunt
     \toprule
     \textbf{Fully remote vs \ldots} & \textbf{\% of pay given up [95\% CI]}\\
     \midrule
-    % remote_vs_mod = b[3.place] - b[commute_mod]: headline, the onsite counterpart a firm would have in mind (commute not specified for employers)
-    \textbf{moderate commute (15--45 min)} (headline) & \textcolor{Muted}{12.2 [9.0, 15.5]}\\
-    % remote_vs_short
+    % 3.place: fully remote (no commute) vs onsite with a long commute; the headline everywhere in the deck
+    \textbf{long commute ($>$45 min)} (headline; the model's \texttt{3.place}) & \textcolor{Muted}{15.1 [11.1, 19.1]}\\
+    % same logit coefficients combined: b[3.place] - b[commute_mod] and - b[commute_short]
+    moderate commute (15--45 min) & \textcolor{Muted}{12.2 [9.0, 15.5]}\\
     short commute ($<$15 min) & \textcolor{Muted}{7.5 [2.9, 12.1]}\\
-    % 3.place: remote with no commute vs onsite with a long commute; includes the benefit of no commute
-    long commute ($>$45 min; the model's \texttt{3.place}) & \textcolor{Muted}{15.1 [11.1, 19.1]}\\
     % pme_channels p3own: weighted by the commute each PME held in the design
     each PME's own commute & \textcolor{Muted}{12.7 [9.8, 15.6]}\\
     \midrule
@@ -578,7 +577,7 @@ We ask the partners today to choose one measurement step and one bounded, volunt
     \bottomrule
   \end{tabular}\par}
   % [M1] commute shares short .037, moderate .729, long .233; [M3] 1-2 days 58% vs 58%, compressed 57% vs 58%
-  \SourceNote{The commute dummies compare commutes among onsite jobs (base: long); fully remote has none, so \texttt{3.place} (15.1) is remote with no commute vs onsite with a long commute and includes the end of commuting. Employers saw no commute, so PMEs' headline is vs a moderate commute (12.2 = 15.1 less the value of a moderate over a long commute). Own commute: weighted by the commute each PME held in the design (short .037, moderate .729, long .233). Grey = indicative.}
+  \SourceNote{Commute dummies apply to onsite jobs only (base: long); fully remote has none, so \texttt{3.place} is remote vs onsite with a long commute and includes the end of commuting. Employers saw no commute attribute. The other rows recombine the same logit coefficients (\texttt{3.place} less a commute dummy); own commute weights them by the commute each PME held in the design (short .037, moderate .729, long .233). Grey = indicative.}
   \BackTo{M-pmes}{PMEs}
 \end{frame}
 

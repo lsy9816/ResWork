@@ -72,19 +72,6 @@ for sheet, (hs, labs) in SPL.items():
             g = int(r["group"])
             add("pme", "main", sheet, g, labs[g] if g < len(labs) else str(g), ns.get(g, 0), k,
                 r.wtp, r.se, r.lb, r.ub)
-    # Fully remote vs onsite with a MODERATE commute (= b[3.place] - b[commute_mod]); the covariance is not in the xlsx, so the point
-    # estimate is exact (ratio form) but the SE is PROVISIONAL: the 3.place SE scaled by the main-sample ratio se(remote_vs_mod)/se(3.place).
-    # Replace with nlcom output (see CHANGES_wtp_update.md) when available.
-    t3 = {(int(r["group"]), r["term"]): r for _, r in t.iterrows()}
-    ratio = 1.6428 / 2.0519
-    for g in sorted({k[0] for k in t3}):
-        w3, wm = t3[(g, "3.place")], t3[(g, "commute_mod")]
-        x = -np.log(1 - w3.wtp / 100) + np.log(1 - wm.wtp / 100)
-        est = 100 * (1 - np.exp(-x))
-        se = w3.se * ratio
-        OUT.append(dict(side="pme", sample="main", split=sheet, group=g, glabel=labs[g] if g < len(labs) else str(g), n=ns.get(g, 0),
-                        item="p3m", giveup=round(est, 4), se=round(se, 4), lb=round(est - 1.96 * se, 4), ub=round(est + 1.96 * se, 4),
-                        provisional=1))
     jt = het[(het.block == "joint_test") & (het.split == hs) & (het["item"] == "wtp")].iloc[0]
     OUT.append(dict(side="pme", sample="main", split=sheet, group=-1, glabel="joint test: all WTP ratios equal",
                     n=0, item="joint_p", giveup=round(float(jt.p), 5), se=0, lb=0, ub=0))

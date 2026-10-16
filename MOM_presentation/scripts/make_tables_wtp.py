@@ -65,7 +65,7 @@ ARR = [("Compressed week", "t2", "A: common ground"), ("1--2 days WFH", "p1", "B
 
 
 def gap(item):
-    p = row("pme", "p3m" if item == "p3" else item)
+    p = row("pme", item)
     e = row("emp", item)
     g = e.giveup - p.giveup
     se = math.hypot(p.se, e.se)
@@ -85,7 +85,7 @@ for lab, it, zone in ARR:
 write("T_gap", "B-gap", tab([3.10, 2.20, 2.45, 2.45, 3.60], "lrrrl", ["Arrangement", "PMEs give up, \\%", "Employers require, \\%",
                                                                   "Gap, points", "Zone"], rows,
     "\\textbf{Zones are descriptive; numbers are indicative.} \\% of pay, 95\\% CI. Gap = employers' cut minus PMEs' give-up (positive = friction). Employer values above 33 go beyond the pay gaps shown. n.s. = not significant at 5\\%. "
-    "\\textsuperscript{1}PMEs: vs onsite with a moderate commute. "
+    "\\textsuperscript{1}PMEs: vs onsite with a long commute; includes the end of commuting. "
     "\\textsuperscript{2}Mostly pay for fewer hours. Grey = indicative."))
 
 # ---- T_org_pct: B-org-pct
@@ -106,7 +106,7 @@ write("T_org_pct", "B-org-pct", tab([5.50, 1.70, 1.80, 4.75], "lrrl", ["Candidat
 # ---- T_emp_robust: B-emp-robust (PMEs)
 cols = [("Main", "main"), ("Excl.\\ outliers", "excl_salary_out"), ("1\\% trim", "trim1pct"), ("Excl.\\ same-side", "same_side"),
         ("Position term", "left_asc")]
-RR = [("1--2 days WFH", "p1"), ("3--4 days WFH", "p2"), ("Fully remote\\textsuperscript{1}", "p3m"), ("Compressed week", "t2"),
+RR = [("1--2 days WFH", "p1"), ("3--4 days WFH", "p2"), ("Fully remote\\textsuperscript{1}", "p3"), ("Compressed week", "t2"),
       ("Staggered hours", "t1"), ("Job sharing", "l1"), ("Part-time", "l2")]
 ns = {c: int(row("pme", "p1", c).n) for _, c in cols}
 rows = [["N"] + [f"{ns[c]:,}" for _, c in cols] + ["1,020"], "MID"]
@@ -116,7 +116,7 @@ for lab, it in RR:
                 [M % f"{r0(vc.lb)}--{r0(vc.ub)}"])
 w = [3.20, 1.30, 1.55, 1.30, 1.55, 1.50, 1.45]
 write("T_emp_robust", "B-emp-robust", tab(w, "lrrrrrr", ["", *[h for h, _ in cols], "Version CI"], rows,
-    "\\% of pay given up. Version CI: 95\\% CI clustered by survey version. \\textsuperscript{1}vs onsite with a moderate commute. Grey = indicative.", total=14.40))
+    "\\% of pay given up. Version CI: 95\\% CI clustered by survey version. \\textsuperscript{1}vs onsite with a long commute; includes the end of commuting. Grey = indicative.", total=14.40))
 
 # ---- T_org_robust: B-org-robust (employers)
 cols = [("Main", "main"), ("Excl.\\ outliers", "excl_salary_out"), ("1\\% trim", "trim1pct"), ("Excl.\\ same-side", "same_side")]

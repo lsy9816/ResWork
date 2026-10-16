@@ -158,7 +158,7 @@ def fig_emp_wtp():
     V.head(fig, name, "Pay PMEs would give up for each arrangement, % of monthly pay")
     V.hline_cm(fig, 0.05, fig.W - 0.05, F["fy"](2.6), **S.SEP)
     for i, (lab, item, y, load) in enumerate(ROWS):
-        est, lb, ub = tri("pme", "p3m" if item == "p3" else item)
+        est, lb, ub = tri("pme", item)
         col = S.MUTED if load else S.EMPLOYEE
         ci_dot(ax, y, est, lb, ub, col)
         vlabel(ax, max(ub, est), y, txt0(est), col, not load)
@@ -182,7 +182,7 @@ def fig_gap_m():
     M.ftext(fig, F["EX"], F["AT"] + 0.10, "Gap", ha="left", va="bottom", fontsize=S.FS_HEAD, color=S.INK,
             fontweight="bold")
     for (lab0, item, y, load), lab in zip(ROWS, labels):
-        g = gap_row(item, "p3m" if item == "p3" else None)
+        g = gap_row(item)
         pe, ee = g["pme"][0], g["emp"][0]
         ax.plot([pe, ee], [y, y], color=S.RULE, lw=2.4, solid_capstyle="butt", zorder=1)
         ax.plot([pe], [y], marker="o", ms=S.MS_CIRCLE, mfc=S.EMPLOYEE, mec="white", mew=S.MEW, ls="none", zorder=3)
@@ -201,7 +201,7 @@ def fig_gap_m():
 # ----------------------------------------------------------------------------------------------------------------
 def fig_why_pmes():
     name = "F_why_pmes"
-    levels = [("p1", "1–2 WFH days"), ("p2", "3–4 WFH days"), ("p3m", "Fully remote\u00b9"),
+    levels = [("p1", "1–2 WFH days"), ("p2", "3–4 WFH days"), ("p3", "Fully remote\u00b9"),
               ("t2", "Compressed week")]
     fig = new_fig(name)
     W, H = fig.W, fig.H
@@ -303,7 +303,7 @@ def fig_where_r5():
 # ----------------------------------------------------------------------------------------------------------------
 def fig_groups_m():
     name = "F_groups_m"
-    levels = [("p1", "1–2 WFH days"), ("p2", "3–4 WFH days"), ("p3m", "Fully remote\u00b9")]
+    levels = [("p1", "1–2 WFH days"), ("p2", "3–4 WFH days"), ("p3", "Fully remote\u00b9")]
     splits = [("gender", "Men", "Women"), ("age", "Under 40", "Aged 40+"), ("care_any", "Not caregivers", "Caregivers")]
     rows = [("main", 0, "All PMEs (1,020)")]
     for sp, a, b in splits:
