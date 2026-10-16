@@ -40,7 +40,7 @@ apply to onsite jobs only, base = long), so PMEs' value includes the end of comm
 footnote 1 says so. Moderate (12.2), short (7.5) and own-commute (12.7) values recombine the same coefficients and appear only in `B-remote-commute`.
 PME fully remote 15 [11, 19]; employers 49; gap 34 [23, 44].
 
-## B-remote-commute (checked against employee.dta)
-Weights for the "commute held in the design" row = distribution of the commute held constant in tasks 1-5 (commutetime 0/1/2 =
-short/moderate/long; 38/744/238 of 1,020 = .0373/.7294/.2333). Re-estimated from employee.dta: 3.place 15.08, vs moderate 12.23,
-vs short 7.51, weighted 12.73 (matches the slide). The "own commute, by length" rows (comm2 split) were removed (B-why-pmes has the commute split).
+## B-remote-commute
+Rows: fully remote vs onsite with a long (main), moderate and short commute (re-estimated from employee.dta: 15.08 / 12.23 / 7.51). The
+"commute held in the design (weighted)" row (12.7) was removed: the held commute (tasks 1-5) was mis-recorded in the survey code, so
+it is not the respondents' own commute. Note: Fully remote changes where you work and removes the commute at once; the estimate cannot separate them.
