@@ -83,6 +83,8 @@ for k, item in [("remote", "Remote work"), ("staggered", "Staggered hours"), ("c
                 ("jobshare", "Job sharing"), ("parttime", "Part-time / reduced hours")]:
     assert int(off_a[k].sum()) == int(chk[item]), (k, int(off_a[k].sum()), chk[item])   # reproduces org_fwa.csv
 off = {k: wilson(int(off_a[k].sum()), NO) for k in KEYS}
+typ = {"remote": a.remote >= 2, "staggered": a.schedule == 2, "compressed": a.schedule == 3}   # typical arrangement for its PMEs
+typ_v = {k: 100 * float(typ[k].mean()) for k in typ}
 
 CH = {1: "Productivity and output quality", 2: "Team coordination and communication",
       3: "Fairness across roles (not every role can be flexible)", 5: "Managerial resistance or lack of trust",
@@ -114,7 +116,7 @@ for k in KEYS:
         gap = em - pm
         gs = np.hypot(ps, es)
         out.append(dict(arrangement=LAB[k], level=SUB[it] or LAB[k], item=it,
-                        firms_offering=off[k][0], firms_lb=off[k][1], firms_ub=off[k][2],
+                        firms_offering=off[k][0], firms_typical=typ_v.get(k, np.nan), firms_lb=off[k][1], firms_ub=off[k][2],
                         pme_available=float(tk[tk.arrangement == k].avail.iloc[0]),
                         pme_used=float(tk[tk.arrangement == k].used.iloc[0]),
                         pme_takeup=float(tk[tk.arrangement == k].takeup.iloc[0]),
