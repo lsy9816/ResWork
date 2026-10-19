@@ -124,7 +124,6 @@ def fig_org_wtp():
     F = frame(fig, labels, -8, 68, [0, 20, 40, 60], val_w=0.35, bottom=0.60)
     V.head(fig, name, "Pay cut employers would require for each arrangement, % of pay")
     V.hline_cm(fig, 0.05, fig.W - 0.05, F["fy"](2.6), **S.SEP)
-    hours_note(fig, F)
     for lab, item, y, load in ROWS:
         est, lb, ub = tri("emp", item)
         col = S.MUTED if load else S.EMPLOYER
@@ -164,7 +163,6 @@ def fig_emp_wtp():
             color=S.MUTED)
     V.head(fig, name, "Pay PMEs would give up for each arrangement, % of monthly pay")
     V.hline_cm(fig, 0.05, fig.W - 0.05, F["fy"](2.6), **S.SEP)
-    hours_note(fig, F)
     for i, (lab, item, y, load) in enumerate(ROWS):
         est, lb, ub = tri("pme", item)
         col = S.MUTED if load else S.EMPLOYEE
@@ -187,7 +185,6 @@ def fig_gap_m():
     V.r5_key(fig, (fig.W - V.key_width(fig, keys)) / 2, 0.16, keys)
     V.head(fig, name, "Pay given up vs pay cut required, % of pay")
     V.hline_cm(fig, 0.05, fig.W - 0.05, F["fy"](2.6), **S.SEP)
-    hours_note(fig, F)
     for (lab0, item, y, load), lab in zip(ROWS, labels):
         g = gap_row(item)
         pe, ee = g["pme"][0], g["emp"][0]
