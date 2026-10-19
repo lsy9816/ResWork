@@ -267,37 +267,47 @@ def fig_where_r5():
     name = "F_where_r5"
     fig = new_fig(name)
     W, H = fig.W, fig.H
-    blocks = [("1–2 WFH days a week", "p1", "physical", [(0, "Most roles need presence", True),
-                                                             (1, "Some or few roles do", False)]),
-              ("Fully remote", "p3", "creat", [(0, "Creativity concern", True), (1, "No creativity concern", False)])]
-    LX, X0, X1 = 5.20, 5.40, W - 0.30
-    XL, XR = -40, 100
-    AY, AT = 0.60, H - 0.55
-    ax = M.axes_cm(fig, X0, AY, X1 - X0, AT - AY)
-    ax.set_xlim(XL, XR)
-    YA_, YB_ = 0.0, 6.0
-    ax.set_ylim(YA_, YB_)
-    S.ref_line(ax, 0, YA_, YB_)
-    ax.set_yticks([])
-    ax.spines["left"].set_visible(False)
-    ax.spines["bottom"].set_color(S.RULE)
-    S.pct_ticks(ax, [0, 25, 50, 75])
+    levels = [("p1", "1\u20132 WFH days"), ("p2", "3\u20134 WFH days"), ("p3", "Fully remote")]
+    panels = [("On-site presence needed", "physical", "Most roles", "Some or few roles"),
+              ("Creativity concern", "creat", "Concern", "No concern")]
+    LX = 0.05 + max(V.tw_cm(fig, t, S.FS_ROW) for _, t in levels)
+    GAP = 0.45
+    PW = (W - 0.05 - LX - 0.15 - GAP) / 2
+    AY, AT = 1.40, H - 0.95
+    XL, XR = -15, 108
+    YA_, YB_ = 0.0, 3.0
 
-    def fy(y):
-        return AY + (y - YA_) / (YB_ - YA_) * (AT - AY)
-    ys = [(5.2, [4.35, 3.55]), (2.45, [1.6, 0.8])]
-    for (title, item, split, grps), (yh, yr) in zip(blocks, ys):
-        M.ftext(fig, 0.05, fy(yh), title, ha="left", va="center", fontsize=S.FS_HEAD, color=S.INK, fontweight="bold")
-        for (g, lab, focal), y in zip(grps, yr):
-            q = D[(D.side == "emp") & (D.split == split) & (D.group == g) & (D["item"] == item)].iloc[0]
-            ax.plot([q.lb, q.ub], [y, y], color=S.EMPLOYER, lw=S.CI_LW, solid_capstyle="butt", zorder=2)
-            ax.plot([q.giveup], [y], marker="D", ms=S.MS_DIAMOND, mfc=S.EMPLOYER if focal else "white",
-                    mec="white" if focal else S.EMPLOYER, mew=S.MEW if focal else S.MEW_HOLLOW, ls="none", zorder=3)
-            M.ftext(fig, LX, fy(y), lab, ha="right", va="center", fontsize=S.FS_ROW, color=S.INK)
-            M.ftext(fig, LX + 0.08, fy(y), f"n = {int(q.n)}", ha="left", va="center", fontsize=S.FS_CAP, color=S.MUTED)
-            vlabel(ax, max(q.ub, q.giveup), y, txt0(q.giveup), S.EMPLOYER)
-    V.hline_cm(fig, 0.05, W - 0.05, fy(3.1), **S.SEP)
+    def fy(v):
+        return AY + (v - YA_) / (YB_ - YA_) * (AT - AY)
     V.head(fig, name, "Pay cut employers would require, % of pay")
+    for j, (title, split, lab_f, lab_o) in enumerate(panels):
+        x0 = LX + 0.15 + j * (PW + GAP)
+        ax = M.axes_cm(fig, x0, AY, PW, AT - AY)
+        ax.set_xlim(XL, XR)
+        ax.set_ylim(YA_, YB_)
+        S.ref_line(ax, 0, YA_, YB_)
+        ax.set_yticks([])
+        ax.spines["left"].set_visible(False)
+        ax.spines["bottom"].set_color(S.RULE)
+        S.pct_ticks(ax, [0, 25, 50, 75])
+        M.ftext(fig, x0 + PW / 2, AT + 0.10, title, ha="center", va="bottom", fontsize=S.FS_HEAD, color=S.INK,
+                fontweight="bold")
+        ns = {}
+        for (it, _), yc in zip(levels, (2.5, 1.5, 0.5)):
+            for g, focal, dy in ((0, True, 0.2), (1, False, -0.2)):
+                q = D[(D.side == "emp") & (D.split == split) & (D.group == g) & (D["item"] == it)].iloc[0]
+                ns[g] = int(q.n)
+                y = yc + dy
+                ax.plot([q.lb, q.ub], [y, y], color=S.EMPLOYER, lw=S.CI_LW, solid_capstyle="butt", zorder=2)
+                ax.plot([q.giveup], [y], marker="D", ms=S.MS_DIAMOND, mfc=S.EMPLOYER if focal else "white",
+                        mec="white" if focal else S.EMPLOYER, mew=S.MEW if focal else S.MEW_HOLLOW, ls="none", zorder=3)
+                vlabel(ax, max(q.ub, q.giveup), y, txt0(q.giveup), S.EMPLOYER)
+        keys = [("D", S.EMPLOYER, S.EMPLOYER, S.MS_DIAMOND, f"{lab_f} (n = {ns[0]})", S.INK, "normal"),
+                ("D", "white", S.EMPLOYER, S.MS_DIAMOND, f"{lab_o} (n = {ns[1]})", S.INK, "normal")]
+        V.r5_key(fig, x0 - 0.1, 0.72, keys[:1])
+        V.r5_key(fig, x0 - 0.1, 0.30, keys[1:])
+    for (it, lab), yc in zip(levels, (2.5, 1.5, 0.5)):
+        M.ftext(fig, LX, fy(yc), lab, ha="right", va="center", fontsize=S.FS_ROW, color=S.INK)
     return done(fig, name)
 
 
