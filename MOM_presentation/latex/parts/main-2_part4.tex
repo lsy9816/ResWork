@@ -1,3 +1,11 @@
+\begin{frame}[t,label=B-emp-benchmarks]{PME values at or above estimates abroad}
+  % [E16, L1] 4.2 Maestas, about 5 and 4.8 Aksoy, 8 Barrero-Bloom-Davis, 8 Mas-Pallais; [R16] 2.9 vs 21 (IZA DP 2023, pooled); ILR 2026: 5.2 hybrid, 24.6 remote
+  \FrameTop
+  \Fig{F_benchmarks}{4.5cm}
+  \SourceNote{Not like-for-like: populations, methods and definitions differ. Maestas et al.\ (AER 2023); Aksoy et al.\ (BPEA 2022); Barrero, Bloom \& Davis (JEP 2023); Mas \& Pallais (AER 2017); Lewandowski et al.\ (IZA DP 16041, 2023; ILR Review 2026: \ap 5\% hybrid, 25\% fully remote).}
+  \BackToTwo{M-pmes}{PMEs}{M-literature}{Literature}
+\end{frame}
+
 \begin{frame}[t,label=B-why-pmes]{PME splits: one survives correction}
   \FrameTop
   % WTP basis: group-specific pay slopes (pme_channels.csv, block wtp / fiwtp); values in % of pay given up, group A / group B
@@ -18,7 +26,7 @@
   \end{tabularx}\par}
   \vspace{0.08cm}
   \Body{\textbf{Reading:} only the career-concern split survives correction (location); about 40\% of its gap could be choice noise, and it was asked after the choices.}
-  \SourceNote{\% of pay given up, group A / group B. p: test that the three location values are equal across groups (group-specific pay slopes); p compr.: same for the compressed week; q: Benjamini--Hochberg over the splits. Compr. = compressed week. \textsuperscript{a}Fully remote vs onsite with a long commute; includes the end of commuting.}
+  \SourceNote{Group A / group B. p, q: test that location values are equal across groups. Compr. = compressed week.}
   \BackToTwo{M-why-pmes}{Career concerns}{M-groups}{PME groups}
 \end{frame}
 
@@ -27,7 +35,7 @@
   % [M9] access row: compressed week 58.7 vs 58.1 at equal pay, p = .86; E19 not robust; [M7] further splits on B-why-pmes
   \FrameTop
   \Fig{F_emp_groups}{5.2cm}
-  \SourceNote{Joint tests that all pay values are equal across groups: gender p = .43, age .09, care .66; none of 198 contrasts survives correction. \textsuperscript{1}Vs onsite with a long commute; includes the end of commuting. Detail: \hyperlink{B-ra-gender}{\textcolor{Navy}{gender}}, \hyperlink{B-ra-age}{\textcolor{Navy}{age}}, \hyperlink{B-ra-care}{\textcolor{Navy}{care}}, \hyperlink{B-ra-role}{\textcolor{Navy}{role}}, \hyperlink{B-ra-edu}{\textcolor{Navy}{edu}}.}
+  \SourceNote{p: test that all pay values are equal across the groups.}
   \BackToTwo{M-groups}{PME groups}{M-why-pmes}{Career concerns}
 \end{frame}
 
@@ -44,7 +52,7 @@
   \FrameTop
   \Tab{T_emp_robust}
   % [E15, RB2] moves of about 1 point (same-side part-time p = .06); [E8] job security X
-  \SourceNote{Outliers: implausible salaries dropped; same-side: always chose one side. Values stay positive (staggered \ap 0) and significant at 5\%, except part-time without \hyperlink{B-ra-sameside}{\textcolor{Navy}{same-side}} respondents; most move \ap 1 point (\hyperlink{B-ra-trim}{\textcolor{Navy}{trimming}}).}
+  \SourceNote{Outliers: implausible salaries dropped. Same-side: always chose one side.}
   \BackToTwo{M-robust}{Robustness}{M-pmes}{PMEs}
 \end{frame}
 
@@ -52,7 +60,7 @@
   \FrameTop
   % appended_wtp.xlsx sheets main, robust_outlier (salary_out excluded, N = 392), robust_trim (top and bottom 1% of income, N = 391), robust_same_side (N = 381); pay cut = minus WTP
   \Tab{T_org_robust}
-  \SourceNote{Cuts for 1--2 days, 3--4 days, fully remote and reduced load or part-time stay statistically significant in every sample; the compressed week stays near 7 and is not distinguishable from zero. Moves are \ap 1 point, up to 2.5 without same-side respondents. Main results use all 397 firms.}
+  \SourceNote{Moves are about 1 point, up to 2.5 without same-side respondents.}
   \BackToTwo{M-robust}{Robustness}{M-employers}{Employers}
 \end{frame}
 
@@ -92,7 +100,7 @@
     \item \textbf{Asked after the choices:} the answers may partly rationalise the hiring choices.
     \item \textbf{Separate pay slope for each group:} values are group-specific, so they are preliminary associations.
   \end{itemize}
-  \SourceNote{Pay cut employers would require of a candidate wanting the arrangement, \% of pay (minus the model's WTP). p: test that the three location values are equal across the two groups; q: Benjamini--Hochberg over 11 split tests. Many values go beyond the pay gaps shown (17--33\%): read the contrasts, not the sizes. \hyperlink{B-why-org-tests}{\textcolor{Navy}{All split tests}}.}
+  \SourceNote{p: test that location values are equal across the groups; q: multiple-test correction.}
   \BackTo{M-where}{Reservations}
 \end{frame}
 
@@ -268,7 +276,7 @@
   \Tab{T_flexiload}
   % [S7] 4 of 5 days; [R6, R7, G6] about pro-rata; [M13] part-time 35% where neither concern; [P11] PTRG under review, no enhancement by 6 Oct 2026
   % Declutter: [P5] 5.9% vs 13.7% part-time share of all women 25-64 is on B-laboursupply.
-  \SourceNote{4 of 5 days = 20\% fewer hours, so employer discounts near pro-rata show no sign of an extra flexibility penalty. Part-time draws a larger required cut (about 36\%) because it cuts more hours. MOM is reviewing the PTRG for flexi-load (COS 2026); \hyperlink{B-laboursupply}{\textcolor{Navy}{part-time context}}.}
+  \SourceNote{Part-time draws a larger required cut because it cuts more hours.}
   \BackToTwo{M-options}{Options}{M-where}{Reservations}
 \end{frame}
 
@@ -569,7 +577,7 @@
     \bottomrule
   \end{tabularx}\par}
   % EB s9 l.182: presence and concern items sit in Block 5, after the DCE block
-  \SourceNote{Technical appendix, not for projection. p: test that the three location pay-cut values (1--2 days, 3--4 days, fully remote) are equal across the groups, with a separate pay slope per group; q: Benjamini--Hochberg over the 11 tests. Items asked after the choices: preliminary associations.}
+  \SourceNote{p: test that location values are equal across groups; q: multiple-test correction.}
   \BackTo{M-where}{Reservations}
 \end{frame}
 
@@ -605,7 +613,6 @@
   \FrameTop % first body token (centring; never a frame subtitle)
   {\centering\Caveat{Model-dependent; not a pay recommendation and not a main finding.}}
   \Tab{T_org_pct}
-  \SourceNote{Firmer result: the ranking of the pay cuts.}
   \BackTo{M-employers}{Employers}
 \end{frame}
 

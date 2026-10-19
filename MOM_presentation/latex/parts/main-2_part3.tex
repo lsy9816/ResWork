@@ -1,3 +1,50 @@
+\begin{frame}[t,label=M-limits]{What we cannot yet say}
+  % Six limits (ROUND5_SPEC s3 row 21; COMMENTS slide 21: add the pending free-slope check and the
+  % 60 design cells). 10 pt table: limit | what it means.
+  % Integrator, 7 Oct 2026: the third column (what would address it) is dropped; the spec asks for at most six
+  % short limits, the next steps are on B-nextsteps and B-limits, and the slide was above the 80% density rule
+  % (LEAD_DECISIONS_v3 rule 1).
+  % Polish pass, 7 Oct 2026 (G8): the shared main-table style, \MainTableStyle = 10 pt, arraystretch 1.15, with
+  % \RowSep between the limits; label column 3.0 cm (was 3.6), so the explanations need fewer lines.
+  \FrameTop % first body token (centring; never a frame subtitle)
+  {\MainTableStyle\renewcommand{\arraystretch}{1.75}
+  \begin{tabularx}{\linewidth}{@{}>{\raggedright\arraybackslash}p{3.0cm}>{\raggedright\arraybackslash}X@{}}
+    \toprule
+    \textbf{Limit} & \textbf{What it means}\\
+    \midrule
+    % [S5] hypothetical offers; [V1-V5] stated choices track directions better than levels; [S9] both questionnaires
+    % said SNEF would use the results (fixer pass 7 Oct 2026, mom_ps-06 d)
+    \textbf{Stated choices} & Hypothetical offers; rankings are firmer than levels\\ \RowSep
+    % [S4] unweighted online panels; [S3] only 12% of employer respondents' firms have 50 or fewer staff (not printed)
+    % [S1, S2, S4] PMEs in or seeking PME roles and employers about PME hiring: no rank-and-file staff (worker-07)
+    \textbf{Online panels} & Unweighted; not national rates; no rank-and-file staff\\ \RowSep
+    % [S2, S5] a hire between two equally qualified candidates; EB s9: hire, not request; operating costs not measured
+    % [S2, S5; EB s9] a hiring reservation may also reflect what wanting the arrangement signals (editor-08)
+    \textbf{Employer task} & A hiring choice, not a staff request; operating costs unmeasured\\ \RowSep
+    % respondent-clustered CIs likely too narrow with so few distinct situations (EB s9)
+    % [EB s9] 10 versions x 6 tasks = 60 choice situations per survey; [S6, S6b] every pay gap 17-33%
+    \textbf{Few design cells} & 60 choice situations per side; pay gaps 17--33\%; larger employer cuts are extrapolated\\ \RowSep
+    % EB s9 l.183: no free-slope equal-pay check yet for the presence and creativity splits; [M12]
+    \textbf{Employer splits} & Preliminary associations; asked after the choices\\ \RowSep
+    % [D9] request item partly misread; [D7b] refusals only among reported requesters; [B6] no why-not item
+    \textbf{Request item} & Partly misread; why PMEs do not ask is unmeasured\\
+    \bottomrule
+  \end{tabularx}\par}
+  \Backups{\BL{B-limits}{All limits} \BL{B-nextsteps}{Next steps}}
+\end{frame}
+\note{[Full deck only] We acknowledge six limits. The choices are stated, so rankings are firmer than levels. % [S5, V1-V5]
+Respondents knew SNEF would use the results, which may invite strategic answers on both sides. % [S9]
+The panels are online and unweighted, so shares describe surveyed PMEs and firms, not national rates. % [S4]
+The employer task is a hiring choice, not a reply to a staff request, and does not measure operating costs. % [S2, S5]
+Each side saw only 60 choice situations, with pay gaps of 17 to 33 per cent, so intervals are likely too narrow and employer cuts above 33 per cent are extrapolated. % [EB s9; S6, S6b]
+The employer splits by role and concern were asked after the choices, so they remain preliminary associations. % [EB s9, M12]
+And the request item was partly misread. % [D9, B6]
+MOM, SNEF and NTUC could each support a next step for these limits. With that, the decision we ask for. % implication (who could act) and transition to M-conclusion
+}
+
+% ==========================================================================
+% 22. CONCLUSION: THE DECISION   [short path]
+% ==========================================================================
 \begin{frame}[t,label=M-conclusion]{The decision we ask of the partners}
   % Decision slide (mandate; COMMENTS slide 22): banner, then one take-away block with three robust
   % messages; the 490-PME detail is on B-followup; no "Thank you" here (M-thanks follows).
@@ -372,7 +419,7 @@ We ask the partners today to choose one measurement step and one bounded, volunt
     \bottomrule
   \end{tabularx}\par}
   % [Q16] p = .22, .061, .006; [Q10c] p = .002; EB s9: role splits use one pay slope, free-slope check pending
-  \SourceNote{Descriptive labels. Values in \% of pay, indicative; employer cuts above 33\% go beyond the pay gaps shown. Role split preliminary (p = .02), asked after the choices.}
+  \SourceNote{Descriptive labels; values in \% of pay, indicative.}
   \BackToTwo{M-meet}{Two sides}{M-framework}{Framework}
 \end{frame}
 
@@ -568,13 +615,5 @@ We ask the partners today to choose one measurement step and one bounded, volunt
   \end{tabular}\par}
   \SourceNote{Values show the \% of pay PMEs would give up for fully remote rather than fully onsite work with the commute listed. They include the benefit of avoiding the commute. The main estimate uses a long commute as the comparison.}
   \BackTo{M-pmes}{PMEs}
-\end{frame}
-
-\begin{frame}[t,label=B-emp-benchmarks]{PME values at or above estimates abroad}
-  % [E16, L1] 4.2 Maestas, about 5 and 4.8 Aksoy, 8 Barrero-Bloom-Davis, 8 Mas-Pallais; [R16] 2.9 vs 21 (IZA DP 2023, pooled); ILR 2026: 5.2 hybrid, 24.6 remote
-  \FrameTop
-  \Fig{F_benchmarks}{4.5cm}
-  \SourceNote{Not like-for-like: populations, methods and definitions differ. Maestas et al.\ (AER 2023); Aksoy et al.\ (BPEA 2022); Barrero, Bloom \& Davis (JEP 2023); Mas \& Pallais (AER 2017); Lewandowski et al.\ (IZA DP 16041, 2023; ILR Review 2026: \ap 5\% hybrid, 25\% fully remote).}
-  \BackToTwo{M-pmes}{PMEs}{M-literature}{Literature}
 \end{frame}
 

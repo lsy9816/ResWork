@@ -59,9 +59,9 @@ def write(name, header, text):
 
 
 ARR = [("Compressed week", "t2", "A: common ground"), ("1--2 days WFH", "p1", "B: depends on the role"),
-       ("3--4 days WFH", "p2", "C: far apart"), ("Fully remote\\textsuperscript{1}", "p3", "C: far apart"),
-       ("Staggered hours", "t1", "Little at stake"), ("Job sharing / reduced load\\textsuperscript{2}", "l1", "Pay for hours"),
-       ("Part-time\\textsuperscript{2}", "l2", "Pay for hours")]
+       ("3--4 days WFH", "p2", "C: far apart"), ("Fully remote", "p3", "C: far apart"),
+       ("Staggered hours", "t1", "Little at stake"), ("Job sharing / reduced load", "l1", "Pay for hours"),
+       ("Part-time", "l2", "Pay for hours")]
 
 
 def gap(item):
@@ -84,9 +84,7 @@ for lab, it, zone in ARR:
     rows.append([lab, M % ci(p.giveup, p.lb, p.ub), M % ci(e.giveup, e.lb, e.ub), M % gtxt, zone])
 write("T_gap", "B-gap", tab([3.10, 2.20, 2.45, 2.45, 3.60], "lrrrl", ["Arrangement", "PMEs give up, \\%", "Employers require, \\%",
                                                                   "Gap, points", "Zone"], rows,
-    "\\textbf{Zones are descriptive; numbers are indicative.} \\% of pay, 95\\% CI. Gap = employers' cut minus PMEs' give-up (positive = friction). Employer values above 33 go beyond the pay gaps shown. n.s. = not significant at 5\\%. "
-    "\\textsuperscript{1}PMEs: vs onsite with a long commute; includes the end of commuting. "
-    "\\textsuperscript{2}Mostly pay for fewer hours. Grey = indicative."))
+    "Gap = employers' cut minus PMEs' give-up (\\% of pay, 95\\% CI). Indicative. n.s. = not significant at 5\\%."))
 
 # ---- T_org_pct: B-org-pct
 OP = [("1--2 days WFH (onsite)", "p1", "Direction robust"), ("3--4 days WFH (onsite)", "p2", ""),
@@ -101,12 +99,12 @@ for lab, it, st in OP:
     e = row("emp", it)
     rows.append([lab, M % r0(e.giveup), M % f"{r0(e.lb)} to {r0(e.ub)}", st])
 write("T_org_pct", "B-org-pct", tab([5.50, 1.70, 1.80, 4.75], "lrrl", ["Candidate (vs base)", "Pay cut, \\%", "95\\% CI", "Status"], rows,
-    "Pay cut at which the model predicts a 50:50 hiring choice (positive = cut required). Weakly identified: a cheaper-candidate indicator fits as well as log salary (\\hyperlink{B-org-salary}{\\textcolor{Navy}{why}}). Pay gaps shown: 17--33\\%; larger values extend beyond them. Grey = indicative.", spacing="1pt"))
+    "Pay cut at which employers would be indifferent between the candidates (positive = cut required). Indicative.", spacing="1pt"))
 
 # ---- T_emp_robust: B-emp-robust (PMEs)
 cols = [("Main", "main"), ("Excl.\\ outliers", "excl_salary_out"), ("1\\% trim", "trim1pct"), ("Excl.\\ same-side", "same_side"),
         ("Position term", "left_asc")]
-RR = [("1--2 days WFH", "p1"), ("3--4 days WFH", "p2"), ("Fully remote\\textsuperscript{1}", "p3"), ("Compressed week", "t2"),
+RR = [("1--2 days WFH", "p1"), ("3--4 days WFH", "p2"), ("Fully remote", "p3"), ("Compressed week", "t2"),
       ("Staggered hours", "t1"), ("Job sharing", "l1"), ("Part-time", "l2")]
 ns = {c: int(row("pme", "p1", c).n) for _, c in cols}
 rows = [["N"] + [f"{ns[c]:,}" for _, c in cols] + ["1,020"], "MID"]
@@ -116,7 +114,7 @@ for lab, it in RR:
                 [M % f"{r0(vc.lb)}--{r0(vc.ub)}"])
 w = [3.20, 1.30, 1.55, 1.30, 1.55, 1.50, 1.45]
 write("T_emp_robust", "B-emp-robust", tab(w, "lrrrrrr", ["", *[h for h, _ in cols], "Version CI"], rows,
-    "\\% of pay given up. Version CI: 95\\% CI clustered by survey version. \\textsuperscript{1}vs onsite with a long commute; includes the end of commuting. Grey = indicative.", total=14.40))
+    "\\% of pay given up. Version CI: 95\\% CI clustered by survey version.", total=14.40))
 
 # ---- T_org_robust: B-org-robust (employers)
 cols = [("Main", "main"), ("Excl.\\ outliers", "excl_salary_out"), ("1\\% trim", "trim1pct"), ("Excl.\\ same-side", "same_side")]
@@ -127,7 +125,5 @@ ER = [("1--2 days WFH", "p1"), ("3--4 days WFH", "p2"), ("Fully remote", "p3"), 
 for lab, it in ER:
     rows.append([lab] + [M % ("\\ensuremath{\\approx}" + r1(row("emp", it, c).giveup)) for _, c in cols])
 write("T_org_robust", "B-org-robust", tab([4.00, 1.90, 2.30, 1.90, 2.40][:5], "lrrrr", ["", *[h for h, _ in cols]], rows,
-    "\\% pay cut employers would require. Outliers: implausible salaries (salary\\_out) excluded; 1\\% trim: top and bottom 1\\% of income "
-    "dropped; same-side: respondents who always chose one side excluded. Pay gaps shown: 17--33\\%; larger values extend beyond them. "
-    "Grey = indicative.", total=12.50))
+    "\\% pay cut employers would require. Outliers: implausible salaries; same-side: always chose one side.", total=12.50))
 print("ok")

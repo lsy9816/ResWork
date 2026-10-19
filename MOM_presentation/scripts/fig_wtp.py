@@ -72,7 +72,7 @@ def done(fig, name):
 ROWS = [  # label, item, y (data units), hours-change row?
     ("Fully remote", "p3", 7.0, False), ("3–4 WFH days", "p2", 5.95, False),
     ("1–2 WFH days", "p1", 5.05, False), ("Compressed week", "t2", 4.15, False),
-    ("Staggered hours", "t1", 3.25, False), ("Job sharing*", "l1", 1.95, True), ("Part-time*", "l2", 1.05, True)]
+    ("Staggered hours", "t1", 3.25, False), ("Job sharing", "l1", 1.95, True), ("Part-time", "l2", 1.05, True)]
 YA, YB = 0.55, 7.5
 
 
@@ -103,6 +103,12 @@ def vlabel(ax, x, y, txt, col, bold=True):
                 color=col, fontweight="bold" if bold else "normal", path_effects=HALO, zorder=5)
 
 
+def hours_note(fig, F):
+    """small grey label above the separator line: the two rows below also change hours"""
+    M.ftext(fig, fig.W - 0.05, F["fy"](2.6) + 0.04, "These also cut hours", ha="right", va="bottom",
+            fontsize=S.FS_CAP, color=S.MUTED)
+
+
 def ci_dot(ax, y, est, lb, ub, col, **kw):
     ax.plot([lb, ub], [y, y], color=col, lw=S.CI_LW, solid_capstyle="butt", zorder=2)
     ax.plot([est], [y], marker="o", ms=S.MS_CIRCLE, mfc=col, mec="white", mew=S.MEW, ls="none", zorder=3, **kw)
@@ -118,6 +124,7 @@ def fig_org_wtp():
     F = frame(fig, labels, -8, 68, [0, 20, 40, 60], val_w=0.35, bottom=0.60)
     V.head(fig, name, "Pay cut employers would require for each arrangement, % of pay")
     V.hline_cm(fig, 0.05, fig.W - 0.05, F["fy"](2.6), **S.SEP)
+    hours_note(fig, F)
     for lab, item, y, load in ROWS:
         est, lb, ub = tri("emp", item)
         col = S.MUTED if load else S.EMPLOYER
@@ -148,7 +155,7 @@ def gap_row(item, pme_item=None):
 def fig_emp_wtp():
     name = "F_emp_wtp"
     fig = new_fig(name)
-    labels = ["Fully remote\u00b9"] + [r[0] for r in ROWS[1:]]
+    labels = [r[0] for r in ROWS]
     F = frame(fig, labels, -5, 24, [0, 5, 10, 15, 20], val_w=0.35, bottom=0.60)
     ax = F["ax"]
     ax.axvspan(4, 8, color=S.BAND, zorder=0, lw=0)
@@ -157,6 +164,7 @@ def fig_emp_wtp():
             color=S.MUTED)
     V.head(fig, name, "Pay PMEs would give up for each arrangement, % of monthly pay")
     V.hline_cm(fig, 0.05, fig.W - 0.05, F["fy"](2.6), **S.SEP)
+    hours_note(fig, F)
     for i, (lab, item, y, load) in enumerate(ROWS):
         est, lb, ub = tri("pme", item)
         col = S.MUTED if load else S.EMPLOYEE
@@ -171,16 +179,15 @@ def fig_gap_m():
     name = "F_gap_m"
     fig = new_fig(name)
     labels = ["Fully remote", "3–4 WFH days", "1–2 WFH days", "Compressed week", "Staggered hours",
-              "Job sharing / reduced load*", "Part-time*"]
-    F = frame(fig, labels, -4, 62, [0, 20, 40, 60], val_w=1.35, bottom=1.15)
+              "Job sharing / reduced load", "Part-time"]
+    F = frame(fig, labels, -4, 68, [0, 20, 40, 60], val_w=0.35, bottom=1.15)
     ax = F["ax"]
     keys = [("o", S.EMPLOYEE, S.EMPLOYEE, S.MS_CIRCLE, "PMEs would give up", S.EMPLOYEE, "bold"),
             ("o", S.EMPLOYER, S.EMPLOYER, S.MS_CIRCLE, "Employers would require", S.EMPLOYER, "bold")]
     V.r5_key(fig, (fig.W - V.key_width(fig, keys)) / 2, 0.16, keys)
     V.head(fig, name, "Pay given up vs pay cut required, % of pay")
     V.hline_cm(fig, 0.05, fig.W - 0.05, F["fy"](2.6), **S.SEP)
-    M.ftext(fig, F["EX"], F["AT"] + 0.10, "Gap", ha="left", va="bottom", fontsize=S.FS_HEAD, color=S.INK,
-            fontweight="bold")
+    hours_note(fig, F)
     for (lab0, item, y, load), lab in zip(ROWS, labels):
         g = gap_row(item)
         pe, ee = g["pme"][0], g["emp"][0]
@@ -188,9 +195,8 @@ def fig_gap_m():
         ax.plot([pe], [y], marker="o", ms=S.MS_CIRCLE, mfc=S.EMPLOYEE, mec="white", mew=S.MEW, ls="none", zorder=3)
         ax.plot([ee], [y], marker="o", ms=S.MS_CIRCLE, mfc=S.EMPLOYER, mec="white", mew=S.MEW, ls="none", zorder=3)
         overlap = g["lo"] <= 0 <= g["hi"]
-        M.ftext(fig, F["EX"], F["fy"](y), "overlap" if overlap else txt0(g["gap"]), ha="left", va="center",
-                fontsize=S.FS_VAL if not overlap else S.FS_ROW, color=S.MUTED if overlap else S.INK,
-                fontweight="normal" if overlap else "bold")
+        vlabel(ax, max(pe, ee), y, "overlap" if overlap else f"gap {txt0(g['gap'])}", S.MUTED if overlap else S.INK,
+               not overlap)
         M.ftext(fig, F["LX"], F["fy"](y), lab, ha="right", va="center", fontsize=S.FS_ROW,
                 color=S.MUTED if load else S.INK)
     return done(fig, name)
@@ -201,7 +207,7 @@ def fig_gap_m():
 # ----------------------------------------------------------------------------------------------------------------
 def fig_why_pmes():
     name = "F_why_pmes"
-    levels = [("p1", "1–2 WFH days"), ("p2", "3–4 WFH days"), ("p3", "Fully remote\u00b9"),
+    levels = [("p1", "1–2 WFH days"), ("p2", "3–4 WFH days"), ("p3", "Fully remote"),
               ("t2", "Compressed week")]
     fig = new_fig(name)
     W, H = fig.W, fig.H
@@ -303,7 +309,7 @@ def fig_where_r5():
 # ----------------------------------------------------------------------------------------------------------------
 def fig_groups_m():
     name = "F_groups_m"
-    levels = [("p1", "1–2 WFH days"), ("p2", "3–4 WFH days"), ("p3", "Fully remote\u00b9")]
+    levels = [("p1", "1–2 WFH days"), ("p2", "3–4 WFH days"), ("p3", "Fully remote")]
     splits = [("gender", "Men", "Women"), ("age", "Under 40", "Aged 40+"), ("care_any", "Not caregivers", "Caregivers")]
     rows = [("main", 0, "All PMEs (1,020)")]
     for sp, a, b in splits:
