@@ -204,7 +204,7 @@ plt.close(fig)
 fig, ax = plt.subplots(figsize=(8.4, 3.9))
 c2 = ch.iloc[::-1]
 for i, r in enumerate(c2.itertuples()):
-    ax.barh(i, r.share, height=0.6, color=RED)
+    ax.barh(i, r.share, height=0.6, color=LRED)
     ax.plot([r.lb, r.ub], [i, i], color=INK, lw=1.0)
     ax.text(r.ub + 0.8, i, f"{r.share:.0f}%", va="center", fontsize=9.5)
 ax.set_yticks(range(len(c2)))
