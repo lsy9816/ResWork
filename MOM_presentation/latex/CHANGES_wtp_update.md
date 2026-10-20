@@ -70,3 +70,5 @@ part-time 24); results_fwa/fwa_diagnosis.csv also holds the "adjusted" share (ti
 - F_fwa_diag_m (M-diag): the dot panel is replaced by one "Pay gap, points" column (employers' cut minus PMEs' give-up).
 - scripts/restructure_flow.py is a historical one-off; main.tex is the source.
 - F_gap_m (M-meet): now the gap itself (employers' cut minus PMEs' give-up) as a dot with 95% CI and a 0 line; no 'gap' word; one-line note under the summary.
+- M-descriptive (slide 7) now shows firms offering, PMEs using, and use among PMEs who have access (F_use_m, three columns); the
+  former M-diag slide is a backup (B-fwa-diag). Main deck = 19 slides. scripts/restructure_flow2.py (historical; main.tex is the source).
