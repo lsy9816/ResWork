@@ -88,3 +88,6 @@ part-time 24); results_fwa/fwa_diagnosis.csv also holds the "adjusted" share (ti
   Main deck is now 20 slides; the earlier F_where_r5 (presence + creativity, location only) is no longer on a main slide.
 - Slide 11 (M-where) summary adds that the other arrangements are rarely offered; M-employer-barriers (firms' main challenge) now comes before it.
   Slide 13 (M-concerns): both groups shown (firm shares the concern / does not) instead of the difference; title "Employers who share a concern tend to ask for more".
+- Order (20 Oct 2026, evening): ... 8 PMEs' value, 9 employers' required cut, 10 gap, 11 employers' main challenge, 12 on-site need, 13 concerns,
+  14 PMEs' career worry, 15 PME barriers, 16 zones, 17 options, 18 limits, 19 conclusion, 20 thanks. Plain-language titles on slides 5, 7, 9, 14;
+  take-aways on the conclusion slide now state the pay PMEs would accept and the 12-34 point gap; notes' transitions follow the new order.

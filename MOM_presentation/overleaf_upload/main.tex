@@ -525,7 +525,7 @@ Our study measures both sides in Singapore with the same choices.}
 % ##########################################################################
 % Main slides from redesign/v3/W2_frames.tex
 % ##########################################################################
-\begin{frame}[t,label=M-data]{Two surveys, unweighted online panels}
+\begin{frame}[t,label=M-data]{We surveyed 1,020 PMEs and 397 employers}
   \FrameTop
   \FigC{F_sample_m}
   % [S1, S2, S4] unweighted online panels: shares describe the surveyed samples only
@@ -577,7 +577,7 @@ Next, the choice task that lets us put a price on each arrangement.}
 % compressed 4-day week [S6b: 0.90/1.10 was drawn; gap 18%, inside 17-33%, S6]; levels [S7]; the rest is
 % held at the respondent's own practice [S5]. Reference pay: own salary (PMEs), the firm's most recent PME
 % hire (employers) [S6]. Sample facts from M-data moved here (COMMENTS slide 6): [S1] [S2] [S3]. [S2] now 397 (appended).
-\begin{frame}[t,label=M-design]{Mirrored choices on a common FWA menu}
+\begin{frame}[t,label=M-design]{Both sides chose between the same kinds of options}
   \FrameTop % first body token (centring; never a frame subtitle)
   {\centering
   % Polish pass (DESIGN_PLAN s2, W2): shared deck styles; column heads are coloured bold text over a
@@ -686,35 +686,16 @@ Now the results, starting with PMEs. [Full deck: ``Next, how we turn these choic
 Hybrid work, one to two or three to four WFH days, is worth about 7 to 10 per cent of pay, at or above the upper end of estimates abroad. A compressed week, about 7; staggered hours, about zero; fully remote, about 15. % [E1, E2, E16, E5, E4, M1]
 We acknowledge that the pay gaps shown were about 17 to 33 per cent, so these levels are indicative, not a proposed pay cut. % [S6]
 For firms and SNEF, hybrid options can help attract PMEs alongside pay, not instead of it.
-Yet one group chooses WFH less often.
+Now employers.
 [If asked for dollars: at a median S\$6,000 a month, about S\$400--600; illustrative only.]} % [E17] bracketed cue, not timed
 
 % ==========================================================================
 % 11. MECHANISMS: CAREER CONCERN AND WFH CHOICES (association)   [short path]
 % ==========================================================================
-\begin{frame}[t,label=M-why-pmes]{Career concerns track lower demand for WFH}
-  % F_why_pmes, true size 13.0 x 5.0 cm: flexible job's % of choices at equal pay, 95% CIs, by career belief
-  % (QID51_1 agree 4-5, n = 455, vs others, n = 565) [M4]; legend "No expected penalty / Expected penalty".
-  % 1-2 WFH days 52 [47, 57] vs 64 [60, 69]; 3-4 WFH days 52 vs 69; remote vs a 15-45 min commute 55 vs 72;
-  % location test p < .001 [M4]; compressed week 59 [54, 64] vs 58 [52, 63], p = .70 [M5]; 50% line (EB s3b)
-  \FrameTop
-  \FigC{F_why_pmes}
-  \Interp{PMEs who expect flexible work to hurt their career\\ would give up much less pay for working from home.}
-  % Note: F_why_pmes's former footnote. [M4] penalty = QID51_1 agree 4-5; "Associations" kept. Its second
-  % [S1] 1,020 PMEs, 4-21 Aug 2026; [M4] fully interacted model, equal-pay shares, 95% CIs
-  \SourceNote{Penalty: expects flexible hours to hurt their career. }
-  \Backups{\BL{B-why-pmes}{All splits}\BL{B-career-who}{Career risk}}
-\end{frame}
-% note facts: [M4] 52 vs 64, 1% level; [M5] compressed week 59 vs 58, p = .70, no detectable difference;
-\note{[Short path] Surveyed PMEs who expect shorter or more flexible hours to hurt their career would give up about 2 per cent of pay for one to two WFH days, against 10 per cent for other PMEs; for three to four days, 2 against 14. The location difference is statistically significant (p = .002). For the compressed week we detect no difference (p = .15). % [M4, M5]
-This is consistent with a visibility concern. We acknowledge that the career question was asked after the choices, and that part of the gap may be noisier answers. % [M6]
-For firms and NTUC, appraisal by output could be part of any hybrid pilot.
-What do employers weigh in hiring?}
-
 % ==========================================================================
 % 12. RESULT 2: WHAT EMPLOYERS RANK, IN HIRING   [short path]
 % ==========================================================================
-\begin{frame}[t,label=M-employers]{Employers rank fully remote last in hiring}
+\begin{frame}[t,label=M-employers]{Employers ask for the biggest pay cut for fully remote work}
   % F_org_eqpay, true size 13.0 x 5.0 cm: share of hiring choices the flexible candidate wins at equal salary,
   % 95% CIs; no % of salary values (mandate; EB s8). Appended sample (n = 397), appended_clogit.xlsx main,
   % invlogit(b) with delta-method CIs. Rows: compressed week 47 [41, 53] [Q5];
@@ -744,7 +725,39 @@ Because the pay gaps shown were 17 to 33 per cent, cuts above 33 go beyond what 
 Salary moved choices only weakly (the cheaper candidate won 58 per cent). % [R13]
 Most surveyed firms already use hybrid work: 60 per cent call one to two WFH days typical for PMEs. So a hiring reservation may reflect role needs, uncertainty or a candidate signal, not simply opposition to hybrid work. % [D3]
 SNEF and member firms could start pilots near the top of this ranking.
-Why are some more reserved?}
+Put side by side, how far apart are the two sides?}
+
+\begin{frame}[t,label=M-meet]{The two sides' values meet only for the compressed week} % [s3b] 50% = no preference, read within each side only (Lead decision 3)
+  % F_meet_r5 (fig_r5.py, 14.0 x 4.7 cm; integrator pass 7 Oct 2026: the header on one
+  % line gives the slide 0.30 cm of slack): two visibly separate panels, each with its
+  % own axis and its own 50% reference line [s3b]; same row order in both panels;
+  % fixer pass 7 Oct 2026 (mom_ps-09): one x-range per panel, PMEs 40-80 and employers 10-70, so the panels share
+  % no ruler; footnote (editor-01): zones A-C are descriptive labels [Q16]; PMEs' remote vs own commute [M1];
+  % header printed in the figure: "Compare each side with its own 50%; do not
+  % compare distances across sides" (mandate, M-meet). Zone labels A/B/C inside are
+  % descriptive labels [Q16]. Model-based equal-pay shares with 95% CIs:
+  %   left, PMEs:       compressed week 58 (55-62) [Q5]; 1-2 WFH days 58 (55-62) [Q1];
+  %                     3-4 WFH days 61 (57-64) [Q2]; fully remote 64 (61-68, vs own commute) [M1, Q3]
+  %   right, employers (appended, n = 397): compressed week 47 (41-53) [Q5]; 1-2 WFH days 40 (35-45) [Q1];
+  %                     3-4 WFH days 31 (26-36) [Q2]; fully remote 23 (18-28) [Q3]
+  %   F_meet_r5 redrawn for the appended sample (fig_r5.py, 14 Oct 2026)
+  % "1--2", "3--4 WFH days" are attribute levels [S7], not data values.
+  \FrameTop
+  \FigC{F_gap_m}
+  % compressed-week wording: mandate "Evidence and language rules"; [Q5] 47% (41-53, appended) includes 50
+  \Interp{Only for the compressed week do the two sides agree (about 7\% each).\\ For WFH, employers ask for 12 to 34 points more than PMEs would give up.}
+  \SourceNote{Gap: pay cut employers require minus pay PMEs would give up, in points of pay, with 95\% intervals.}
+  % Note = F_meet_r5's former footnote, verbatim (polish pass 7 Oct 2026): [s3b] equal-pay shares, 95% CIs;
+  % [Q16] zones A-C are descriptive labels; [M1] PMEs' fully remote is measured against each PME's own commute.
+  % [S1] 1,020 PMEs, 4-21 Aug 2026; [S2] 397 employer respondents (appended sample)
+\end{frame}
+\note{[Short path] Here the two sides sit on one scale: the pay PMEs would give up, and the pay cut employers would require, for each arrangement. The gap between them is the friction. % [E1-E7, R1-R7]
+For the compressed week the two are about the same, 7 per cent each: no detectable gap. % [E5, R5]
+For one to two WFH days, PMEs would give up 7 per cent and employers would require 20: a gap of about 12 points, and it depends on the role. For three to four days the gap is about 26 points, and for fully remote work about 34: the sides are far apart. These are indicative; employer cuts above 33 per cent go beyond the pay gaps shown. % [G2, G3, G4, S6]
+SNEF and volunteer firms could test the compressed week first. So why is it rare? % implication (who could act) and transition to M-puzzle (short path)
+[If asked: the zones are descriptive labels; the gap is employers' required cut minus PMEs' accepted cut, so positive means friction.]
+Next, what do employers worry about, and does it change what they ask?}
+
 
 % ==========================================================================
 % 13. MECHANISMS: WHERE EMPLOYER RESERVATIONS SIT (association)   [short path]
@@ -783,44 +796,10 @@ So on-site needs mostly rule out location flexibility, not necessarily schedule 
   \Backups{\BL{B-why-org-tests}{All tests}\BL{B-org-splits}{All splits}\BL{B-org-view}{Employer view}}
 \end{frame}
 \note{[Full deck only] Employers' main stated concerns are productivity, coordination, creativity and fairness across roles. Splitting firms by whether they agree with each concern, firms that do ask for more in 23 of 28 comparisons, on average 16 points more for the creativity concern, 10 for productivity, 5 for coordination and 3 for fairness. For WFH both groups ask for large cuts; for the compressed week and staggered hours, firms without the concern ask for nothing (about minus 3 per cent) while concerned firms ask for 15 to 22. But only three of the 28 differences are significant at 5 per cent, none after correcting for 28 tests, and the joint tests are not significant (p = .18 to .89). % [employer_splits]
-Fairness is new here: it shows no difference at all. So concerns point the same way, but on-site needs are the more reliable guide.}
+Fairness is new here: it shows no difference at all. So concerns point the same way, but on-site needs are the more reliable guide. Back to PMEs: who values WFH less?}
 % ##########################################################################
 % Main slides from redesign/v3/W4_frames.tex
 % ##########################################################################
-\begin{frame}[t,label=M-meet]{The two sides' values meet only for the compressed week} % [s3b] 50% = no preference, read within each side only (Lead decision 3)
-  % F_meet_r5 (fig_r5.py, 14.0 x 4.7 cm; integrator pass 7 Oct 2026: the header on one
-  % line gives the slide 0.30 cm of slack): two visibly separate panels, each with its
-  % own axis and its own 50% reference line [s3b]; same row order in both panels;
-  % fixer pass 7 Oct 2026 (mom_ps-09): one x-range per panel, PMEs 40-80 and employers 10-70, so the panels share
-  % no ruler; footnote (editor-01): zones A-C are descriptive labels [Q16]; PMEs' remote vs own commute [M1];
-  % header printed in the figure: "Compare each side with its own 50%; do not
-  % compare distances across sides" (mandate, M-meet). Zone labels A/B/C inside are
-  % descriptive labels [Q16]. Model-based equal-pay shares with 95% CIs:
-  %   left, PMEs:       compressed week 58 (55-62) [Q5]; 1-2 WFH days 58 (55-62) [Q1];
-  %                     3-4 WFH days 61 (57-64) [Q2]; fully remote 64 (61-68, vs own commute) [M1, Q3]
-  %   right, employers (appended, n = 397): compressed week 47 (41-53) [Q5]; 1-2 WFH days 40 (35-45) [Q1];
-  %                     3-4 WFH days 31 (26-36) [Q2]; fully remote 23 (18-28) [Q3]
-  %   F_meet_r5 redrawn for the appended sample (fig_r5.py, 14 Oct 2026)
-  % "1--2", "3--4 WFH days" are attribute levels [S7], not data values.
-  \FrameTop
-  \FigC{F_gap_m}
-  % compressed-week wording: mandate "Evidence and language rules"; [Q5] 47% (41-53, appended) includes 50
-  \Interp{Only for the compressed week do the two sides agree (about 7\% each).\\ For WFH, employers ask for 12 to 34 points more than PMEs would give up.}
-  \SourceNote{Gap: pay cut employers require minus pay PMEs would give up, in points of pay, with 95\% intervals.}
-  % Note = F_meet_r5's former footnote, verbatim (polish pass 7 Oct 2026): [s3b] equal-pay shares, 95% CIs;
-  % [Q16] zones A-C are descriptive labels; [M1] PMEs' fully remote is measured against each PME's own commute.
-  % [S1] 1,020 PMEs, 4-21 Aug 2026; [S2] 397 employer respondents (appended sample)
-\end{frame}
-\note{[Short path] Here the two sides sit on one scale: the pay PMEs would give up, and the pay cut employers would require, for each arrangement. The gap between them is the friction. % [E1-E7, R1-R7]
-For the compressed week the two are about the same, 7 per cent each: no detectable gap. % [E5, R5]
-For one to two WFH days, PMEs would give up 7 per cent and employers would require 20: a gap of about 12 points, and it depends on the role. For three to four days the gap is about 26 points, and for fully remote work about 34: the sides are far apart. These are indicative; employer cuts above 33 per cent go beyond the pay gaps shown. % [G2, G3, G4, S6]
-SNEF and volunteer firms could test the compressed week first. So why is it rare? % implication (who could act) and transition to M-puzzle (short path)
-[If asked: the zones are descriptive labels; the gap is employers' required cut minus PMEs' accepted cut, so positive means friction.]
-[Full deck: go to M-groups first and ask: does demand differ across PMEs?]}
-
-
-
-
 % ==========================================================================
 % 15. HETEROGENEITY ACROSS PME GROUPS   [full deck only]
 % ==========================================================================
@@ -834,6 +813,25 @@ SNEF and volunteer firms could test the compressed week first. So why is it rare
 % ==========================================================================
 % Title: ROUND5_SPEC s3 row 17 wording, restored by the integrator (7 Oct 2026). W4 had shortened it under the
 % superseded 48-character lint rule; title_fit.py measures it at 14.37 cm bold (13.36 regular) of 15.4 cm: one line.
+\begin{frame}[t,label=M-why-pmes]{PMEs who fear a career penalty give up much less pay for WFH}
+  % F_why_pmes, true size 13.0 x 5.0 cm: flexible job's % of choices at equal pay, 95% CIs, by career belief
+  % (QID51_1 agree 4-5, n = 455, vs others, n = 565) [M4]; legend "No expected penalty / Expected penalty".
+  % 1-2 WFH days 52 [47, 57] vs 64 [60, 69]; 3-4 WFH days 52 vs 69; remote vs a 15-45 min commute 55 vs 72;
+  % location test p < .001 [M4]; compressed week 59 [54, 64] vs 58 [52, 63], p = .70 [M5]; 50% line (EB s3b)
+  \FrameTop
+  \FigC{F_why_pmes}
+  \Interp{PMEs who expect flexible work to hurt their career\\ would give up much less pay for working from home.}
+  % Note: F_why_pmes's former footnote. [M4] penalty = QID51_1 agree 4-5; "Associations" kept. Its second
+  % [S1] 1,020 PMEs, 4-21 Aug 2026; [M4] fully interacted model, equal-pay shares, 95% CIs
+  \SourceNote{Penalty: expects flexible hours to hurt their career. }
+  \Backups{\BL{B-why-pmes}{All splits}\BL{B-career-who}{Career risk}}
+\end{frame}
+% note facts: [M4] 52 vs 64, 1% level; [M5] compressed week 59 vs 58, p = .70, no detectable difference;
+\note{[Short path] Surveyed PMEs who expect shorter or more flexible hours to hurt their career would give up about 2 per cent of pay for one to two WFH days, against 10 per cent for other PMEs; for three to four days, 2 against 14. The location difference is statistically significant (p = .002). For the compressed week we detect no difference (p = .15). % [M4, M5]
+This is consistent with a visibility concern. We acknowledge that the career question was asked after the choices, and that part of the gap may be noisier answers. % [M6]
+For firms and NTUC, appraisal by output could be part of any hybrid pilot.
+Does fear of a career penalty also keep PMEs from asking? Barriers next.}
+
 \begin{frame}[t,label=M-barriers]{We see outcomes for requesters, not why others do not ask}
   % F_barriers_r5 (fig_r5.py, 13.0 x 5.0 cm): three facts only, each with its own base; left header
   % Not conditional on asking, right header Reported requesters (fixer pass 7 Oct 2026: the left header was
@@ -1068,9 +1066,9 @@ MOM, SNEF and NTUC could each support a next step for these limits. With that, t
   \begin{alertblock}{Take-away messages}
     \begin{enumerate}\setlength{\itemsep}{0.12cm}
       % [E1, E2] 7.4 and 9.5 -> about 7-10% of pay, status I (indicative); [S6] gaps shown 17-33%; not a pay cut (mandate)
-      \item PMEs strongly prefer hybrid work: the model implies \textbf{about 7--10\% of pay} (indicative, not a pay cut)
+      \item PMEs would accept \textbf{about 7--10\% lower pay} for hybrid work and about 15\% for fully remote work
+      \item For WFH, employers ask for \textbf{12 to 34 points more}; only for the compressed week do the two sides agree
       \item Compressed week: \textbf{most promising common-ground test}; evidence moderate; operating costs unmeasured
-      \item Employers rank \textbf{fully remote last} in hiring: a ranking, not a salary price
     \end{enumerate}
   \end{alertblock}
   % mom_ps-01 (d): the proposed default, visible on the decision slide (Options D and A as on M-options)
