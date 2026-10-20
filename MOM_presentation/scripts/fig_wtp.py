@@ -60,13 +60,16 @@ def txt0(x):
     return ("−" if v < 0 else "") + str(abs(v))
 
 
+SIZES1 = {"F_emp_wtp": (13.0, 5.8), "F_org_wtp": (13.0, 5.8), "F_gap_m": (13.0, 5.4)}   # single-panel figures without a subtitle: taller
+
+
 def new_fig(name):
-    return M.new_fig(*SIZE)
+    return M.new_fig(*SIZES1.get(name, SIZE))
 
 
 def done(fig, name):
     V.outside(fig, name)
-    return M.finish(fig, name, SIZE)
+    return M.finish(fig, name, SIZES1.get(name, SIZE))
 
 
 ROWS = [  # label, item, y (data units), hours-change row?

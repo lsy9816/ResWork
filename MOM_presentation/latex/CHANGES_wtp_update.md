@@ -81,3 +81,4 @@ part-time 24); results_fwa/fwa_diagnosis.csv also holds the "adjusted" share (ti
 - Slide 4: removed the closing sentence.
 - F_emp_wtp: the grey 'WFH option abroad (4-8%)' band now spans the three WFH rows only.
 - F_emp_wtp: grey 'abroad' band removed (slide 8 compares remote work with the other arrangements; the abroad range is on slide 4 and B-emp-benchmarks).
+- Order: data (5), current use (6), design (7), PMEs' value (8). F_emp_wtp / F_org_wtp / F_gap_m are taller (13 x 5.8 / 5.8 / 5.4 cm) now that they have no subtitle.
