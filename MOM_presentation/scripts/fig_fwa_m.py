@@ -1,7 +1,7 @@
 """fig_fwa_m -- main-slide figures for "why are the other FWAs used so little?" (deck style, same helpers as fig_wtp.py).
 
 Reads results_fwa/*.csv (scripts/fwa_diagnosis.py, scripts/fwa_current.py), data/org_fwa.csv, data/org_attitudes.csv and
-the PME barrier aggregates of the build tree.  Figures: F_fwa_diag_m, F_fwa_challenge_m, F_fwa_current_m, F_barriers_both_m.
+the PME barrier aggregates of the build tree.  Figures: F_use_m, F_fwa_challenge_m, F_fwa_current_m.
 
 usage: BUILD=/path/to/build OUTDIR=/path/to/figures python3 fig_fwa_m.py [name ...]
 """
@@ -15,7 +15,7 @@ import fig_wtp as W  # noqa: E402  (helpers; running it as a module draws nothin
 from fig_wtp import M, S, V, Rectangle, r0, txt0, vlabel, ci_dot, frame, new_fig, done, MOM  # noqa: E402
 
 RES = MOM / "results_fwa"
-V.SIZE.update({k: W.SIZE for k in ("F_use_m", "F_fwa_challenge_m", "F_fwa_current_m", "F_barriers_both_m")})
+V.SIZE.update({k: W.SIZE for k in ("F_use_m", "F_fwa_challenge_m", "F_fwa_current_m")})
 
 
 def bar(fig, x0, y, w, h, col):
@@ -175,48 +175,7 @@ def fig_fwa_current_m():
     return done(fig, name)
 
 
-# ----------------------------------------------------------------------------------------------------------------
-# F_barriers_both_m (draft for a merged slide): PME-side facts and the employer-side challenge, side by side
-# ----------------------------------------------------------------------------------------------------------------
-def fig_barriers_both_m():
-    name = "F_barriers_both_m"
-    fam = "Familiar (aware and understand key provisions)"
-    c = float(M.one("emp_career.csv", block="career_penalty", sample="all", group="All respondents",
-                    item="Agree (4-5)")[0]["share"])
-    j = float(M.one("emp_tgfwar.csv", block="by_role", sample="all", group="Role: Junior professional / specialist",
-                    item=fam)[0]["share"])
-    d = float(M.one("emp_requests.csv", block="outcome", sample="all", group="Employed who say they made a formal request",
-                    item="Yes, but declined")[0]["share"])
-    ch = pd.read_csv(RES / "fwa_employer_challenge.csv")
-    fig = new_fig(name)
-    Wd, H = fig.W, fig.H
-    L = [("Career penalty expected", c), ("Juniors know Guidelines", j), ("Requests refused", d)]
-    R = [("Productivity", ch.share[0]), ("Team coordination", ch.share[1]), ("Fairness across roles", ch.share[2]),
-         ("Managerial resistance", ch.share[3]), ("Other four items", ch.share[4:].sum())]
-    half = (Wd - 0.55) / 2
-
-    def panel(x0, title, col, items, mx):
-        M.ftext(fig, x0, H - 0.04, title, ha="left", va="top", fontsize=S.FS_HEAD, color=col, fontweight="bold")
-        V.hline_cm(fig, x0, x0 + half, H - 0.50, color=col, lw=0.8)
-        lx = x0 + max(V.tw_cm(fig, t, S.FS_ROW) for t, _ in items)
-        top = H - 1.15
-        pitch = (top - 0.45) / 4
-        b0, bw = lx + 0.16, x0 + half - lx - 0.16 - 0.75
-        for i, (lab, v) in enumerate(items):
-            y = top - i * pitch
-            M.ftext(fig, lx, y, lab, ha="right", va="center", fontsize=S.FS_ROW, color=S.INK)
-            bar(fig, b0, y, v / mx * bw, 0.36, col)
-            M.ftext(fig, b0 + v / mx * bw + 0.12, y, f"{r0(v)}%", ha="left", va="center", fontsize=S.FS_VAL, color=col,
-                    fontweight="bold")
-        V.vline_cm(fig, b0, top - (len(items) - 1) * pitch - 0.25, top + 0.25, color=S.RULE, lw=0.7)
-    panel(0.05, "PMEs", S.EMPLOYEE, L, 60.0)
-    panel(0.05 + half + 0.40, "Employers: biggest challenge", S.EMPLOYER, R, 60.0)
-    V.vline_cm(fig, 0.05 + half + 0.20, 0.10, H - 0.10, **S.SEP)
-    return done(fig, name)
-
-
-FIGS = {"F_use_m": fig_use_m, "F_fwa_challenge_m": fig_fwa_challenge_m, "F_fwa_current_m": fig_fwa_current_m,
-        "F_barriers_both_m": fig_barriers_both_m}
+FIGS = {"F_use_m": fig_use_m, "F_fwa_challenge_m": fig_fwa_challenge_m, "F_fwa_current_m": fig_fwa_current_m}
 
 if __name__ == "__main__":
     import warnings

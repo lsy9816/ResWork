@@ -380,7 +380,7 @@
 % path below plus every backup; return links to omitted main slides go to the index.
 \def\ShortLabels{M-title,M-motivation,M-question,M-benchmark,M-design,M-pmes,M-why-pmes,M-employers,M-where,M-meet,M-barriers,M-employer-barriers,M-options,M-conclusion,M-thanks}
 \ifdefined\ShortPath
-  \includeonlyframes{M-title,M-motivation,M-question,M-benchmark,M-design,M-pmes,M-why-pmes,M-employers,M-where,M-meet,M-barriers,M-employer-barriers,M-options,M-conclusion,M-thanks,B-index,B-index-all,B-literature,B-framework,B-estimation,B-groups,B-robust,B-puzzle-main,B-barriers-both,B-fwa-current,B-fwa-table,B-laboursupply,B-talent,B-triangulation,B-guidelines,B-partners,B-legal,B-intl,B-zones,B-validity,B-sample,B-industry,B-governance,B-cards,B-paygaps,B-hedonic,B-methods,B-landscape,B-setup,B-emp-all,B-remote-commute,B-emp-benchmarks,B-why-pmes,B-emp-groups,B-access,B-emp-robust,B-org-robust,B-org-salary,B-why-org,B-org-splits,B-org-concerns,B-org-view,B-industry-note,B-modelfree,B-puzzle,B-pilot,B-flexiload,B-career-who,B-career,B-tgfwar,B-awareness,B-approvals,B-approvals-tab,B-requestrate,B-limits,B-nextsteps,B-followup,B-optA,B-optB,B-optC,B-optD,B-optD-items,B-why-org-tests,B-language,B-org-pct,B-gap,B-ra-gender,B-ra-age,B-ra-care,B-ra-role,B-ra-edu,B-ra-sameside,B-ra-trim}
+  \includeonlyframes{M-title,M-motivation,M-question,M-benchmark,M-design,M-pmes,M-why-pmes,M-employers,M-where,M-meet,M-barriers,M-employer-barriers,M-options,M-conclusion,M-thanks,B-index,B-index-all,B-literature,B-framework,B-estimation,B-groups,B-robust,B-puzzle-main,B-fwa-current,B-fwa-table,B-laboursupply,B-talent,B-triangulation,B-guidelines,B-partners,B-legal,B-intl,B-zones,B-validity,B-sample,B-industry,B-governance,B-cards,B-paygaps,B-hedonic,B-methods,B-landscape,B-setup,B-emp-all,B-remote-commute,B-emp-benchmarks,B-why-pmes,B-emp-groups,B-access,B-emp-robust,B-org-robust,B-org-salary,B-why-org,B-org-splits,B-org-concerns,B-org-view,B-industry-note,B-modelfree,B-puzzle,B-pilot,B-flexiload,B-career-who,B-career,B-tgfwar,B-awareness,B-approvals,B-approvals-tab,B-requestrate,B-limits,B-nextsteps,B-followup,B-optA,B-optB,B-optC,B-optD,B-optD-items,B-why-org-tests,B-language,B-org-pct,B-gap,B-ra-gender,B-ra-age,B-ra-care,B-ra-role,B-ra-edu,B-ra-sameside,B-ra-trim}
 \fi
 
 \begin{document}
@@ -859,7 +859,7 @@ One guardrail before the options. These are stated choices from unweighted onlin
   \FrameTop
   \FigC{F_fwa_challenge_m}
   \Interp{Productivity, coordination and fairness are each named by about a quarter of employers.\\ Digital infrastructure and security matter much less (6\% each).}
-  \Backups{\BL{B-barriers-both}{Both sides} \BL{B-org-view}{Employer view}}
+  \Backups{\BL{B-org-view}{Employer view}}
 \end{frame}
 \note{[Short path] Asked for the biggest challenge in offering flexible arrangements, employers name productivity and output quality (24 per cent), team coordination (24) and fairness across roles (23). Managerial resistance or lack of trust follows (14). Digital infrastructure and security are named by 6 per cent each. % [B1, fwa_challenge]
 The three leading items are statistically indistinguishable in this sample. The question asks for one challenge for FWAs in general, not for each arrangement, so it cannot say why a given arrangement, such as the compressed week, is offered by few firms. % [B1]
@@ -1217,7 +1217,6 @@ We ask the partners today to choose one measurement step and one bounded, volunt
       \mbox{\BIi{B-why-org-tests}{11 employer tests}}\enspace\textcolor{Muted}{$\cdot$}\enspace \mbox{\BIi{B-language}{Wording}}\par
       \mbox{\BIi{B-org-pct}{Employer \% of salary}}\enspace\textcolor{Muted}{$\cdot$}\enspace \mbox{\BIi{B-gap}{Gap}}\par
       \mbox{\BIi{B-fwa-table}{Numbers}}\enspace\textcolor{Muted}{$\cdot$}\enspace \mbox{\BIi{B-fwa-current}{Users vs others}}\par
-      \BI{B-barriers-both}{Both sides}
       \BH{PME groups}
       \mbox{\BIi{B-ra-gender}{Gender}}\enspace\textcolor{Muted}{$\cdot$}\enspace \mbox{\BIi{B-ra-age}{Age}}\enspace\textcolor{Muted}{$\cdot$}\enspace \mbox{\BIi{B-ra-care}{Care}}\par
       \mbox{\BIi{B-ra-role}{Role}}\enspace\textcolor{Muted}{$\cdot$}\enspace \mbox{\BIi{B-ra-edu}{Education}}\par
@@ -1492,14 +1491,6 @@ We acknowledge that the design usually made it the cheaper option, and a hiring 
 So the case is for a voluntary, evaluated pilot, not a roll-out: SNEF could recruit volunteer firms to put it on their written menu, with NTUC co-designing safeguards. What happens when PMEs ask? % implication (who could act) and transition to M-barriers
 }
 
-
-% Draft for review (19 Oct 2026): the two barrier slides on one page, to judge how busy it looks.
-\begin{frame}[t,label=B-barriers-both]{Barriers on both sides (draft of a merged slide)}
-  \FrameTop
-  \FigC{F_barriers_both_m}
-  \Interp{PMEs: career worries and little knowledge of the Guidelines.\\ Employers: productivity, coordination and fairness.}
-  \BackToTwo{M-barriers}{PME barriers}{M-employer-barriers}{Employer concerns}
-\end{frame}
 
 \begin{frame}[t,label=B-fwa-current]{Current users value part-time and staggered hours more}
   % F_fwa_current_m (scripts/fig_fwa_m.py) from results_fwa/fwa_current.csv: current-arrangement interaction model of
