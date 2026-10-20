@@ -116,7 +116,7 @@ for k in KEYS:
         gap = em - pm
         gs = np.hypot(ps, es)
         out.append(dict(arrangement=LAB[k], level=SUB[it] or LAB[k], item=it,
-                        firms_offering=off[k][0], firms_typical=typ_v.get(k, np.nan), firms_lb=off[k][1], firms_ub=off[k][2],
+                        firms_ticked=100 * float(off_t[k].mean()), firms_offering=off[k][0], firms_typical=typ_v.get(k, np.nan), firms_lb=off[k][1], firms_ub=off[k][2],
                         pme_available=float(tk[tk.arrangement == k].avail.iloc[0]),
                         pme_used=float(tk[tk.arrangement == k].used.iloc[0]),
                         pme_takeup=float(tk[tk.arrangement == k].takeup.iloc[0]),

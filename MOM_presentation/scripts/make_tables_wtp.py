@@ -126,4 +126,25 @@ for lab, it in ER:
     rows.append([lab] + [M % ("\\ensuremath{\\approx}" + r1(row("emp", it, c).giveup)) for _, c in cols])
 write("T_org_robust", "B-org-robust", tab([4.00, 1.90, 2.30, 1.90, 2.40][:5], "lrrrr", ["", *[h for h, _ in cols]], rows,
     "\\% pay cut employers would require. Outliers: implausible salaries; same-side: always chose one side.", total=12.50))
+
+# ---- T_fwa_diag: B-fwa-table (needs results_fwa/ from fwa_diagnosis.py)
+fd = MOM / "results_fwa" / "fwa_diagnosis.csv"
+if fd.exists():
+    dg = pd.read_csv(fd)
+    tk = pd.read_csv(MOM / "results_fwa" / "fwa_takeup.csv").set_index("arrangement")
+    KEY = {"p1": "remote", "p2": "remote", "p3": "remote", "t1": "staggered", "t2": "compressed", "l1": "jobshare", "l2": "parttime"}
+    rows = []
+    for lab, it, _ in ARR:
+        r = dg[dg["item"] == it].iloc[0]
+        t = tk.loc[KEY[it]]
+        wfh = it in ("p2", "p3")
+        gtxt = f"{r0(r.gap)} [{r0(r.gap_lb)}, {r0(r.gap_ub)}]" + (", n.s." if r.gap_lb <= 0 <= r.gap_ub else "")
+        rows.append([lab, M % ("" if wfh else r0(r.firms_ticked)), M % ("" if wfh else r0(t.used)),
+                     M % ("" if wfh else f"{r0(t.takeup)} [{r0(t.takeup_lb)}, {r0(t.takeup_ub)}]"),
+                     M % ci(r.pme_giveup, r.pme_lb, r.pme_ub), M % ci(r.emp_require, r.emp_lb, r.emp_ub), M % gtxt])
+    write("T_fwa_diag", "B-fwa-table", tab([2.60, 1.40, 1.30, 2.00, 1.80, 1.90, 1.80], "lrrrrrr",
+        ["Arrangement", "Firms offer, \\%", "PMEs use, \\%", "Use, if available, \\%", "PMEs give up, \\%",
+         "Employers require, \\%", "Gap, points"], rows,
+        "Firms: ticked in the survey (n = 397). PMEs: employed (n = 1,004); WFH offer and use refer to any WFH, shown on the first WFH row. Use, if available: share using among PMEs with access. 95\\% CIs. n.s. = not significant at 5\\%.",
+        total=14.30))
 print("ok")

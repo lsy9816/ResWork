@@ -44,3 +44,19 @@ PME fully remote 15 [11, 19]; employers 49; gap 34 [23, 44].
 Rows: fully remote vs onsite with a long (main), moderate and short commute (re-estimated from employee.dta: 15.08 / 12.23 / 7.51). The
 "commute held in the design (weighted)" row (12.7) was removed: the held commute (tasks 1-5) was mis-recorded in the survey code, so
 it is not the respondents' own commute. Note: Fully remote changes where you work and removes the commute at once; the estimate cannot separate them.
+
+## Main-slide flow revision (20 Oct 2026) -- scripts/restructure_flow.py (one-off edit of main.tex)
+
+Main deck is now 20 slides: title, motivation, question, **benchmark (new)**, data, design (**now includes the three estimation steps**),
+current use, PMEs' value, career concern, employers' required cut, where employers differ, gap, **arrangement diagnosis (new, M-diag)**,
+PME barriers, **employer barriers (new, M-employer-barriers)**, zones and policy, options, limits, conclusion, thanks.
+
+Moved to the backups (not deleted; labels renamed M- to B-): literature table (B-literature), three-zone framework (B-framework),
+estimation slide (B-estimation), subgroups (B-groups), robustness (B-robust), compressed-week puzzle (B-puzzle-main).
+New backups: B-barriers-both (draft of the two barrier slides on one page), B-fwa-current (users vs non-users), B-fwa-table (numbers).
+Both backup indexes list the moved and new slides.
+
+New figures (scripts/fig_fwa_m.py, deck style): F_fwa_diag_m, F_fwa_challenge_m, F_fwa_current_m, F_barriers_both_m.
+New table: T_fwa_diag (make_tables_wtp.py). Analysis: scripts/fwa_diagnosis.py, scripts/fwa_current.py -> results_fwa/.
+Note: firms "offering" in F_fwa_diag_m is the ticked share (as M-descriptive: WFH 78, staggered 37, compressed 17, job sharing 20,
+part-time 24); results_fwa/fwa_diagnosis.csv also holds the "adjusted" share (ticked or typical practice: 87, 57, 18, 37, 30).
