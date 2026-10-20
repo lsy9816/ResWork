@@ -78,3 +78,4 @@ part-time 24); results_fwa/fwa_diagnosis.csv also holds the "adjusted" share (ti
 - M-benchmark (slide 4): redrawn as F_benchmark_m (Poland: workers 2.9% vs employers 21% as bars; elsewhere: 4-8%, Singapore 4.8%); the quits-in-a-trial fact moved to the notes and the Trials backup.
 - Slide 4 (M-benchmark) rebuilt from the references folder: Poland (workers 2.9% vs employers 21%) plus workers' WFH value in the US (Maestas et al., 4.1%; Mas & Pallais, 8%) and Singapore (Aksoy et al., 4.8%). New backup B-references (Studies) summarises Mas & Pallais, Maestas et al., Aum-Kim-Lee, Wang & Dong and the SNEF FWA Study II note.
 - Slide 4 (M-benchmark) is a 3x2 table again (Workers / Employers / Singapore: known so far, this study adds); the Poland bars figure F_benchmark_m was dropped (numbers stay on B-emp-benchmarks).
+- Slide 4: removed the closing sentence.
