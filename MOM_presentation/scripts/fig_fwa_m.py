@@ -15,7 +15,7 @@ import fig_wtp as W  # noqa: E402  (helpers; running it as a module draws nothin
 from fig_wtp import M, S, V, Rectangle, r0, txt0, vlabel, ci_dot, frame, new_fig, done, MOM  # noqa: E402
 
 RES = MOM / "results_fwa"
-V.SIZE.update({k: W.SIZE for k in ("F_use_m", "F_fwa_challenge_m", "F_fwa_current_m")})
+V.SIZE.update({k: W.SIZE for k in ("F_benchmark_m", "F_use_m", "F_fwa_challenge_m", "F_fwa_current_m")})
 
 
 def bar(fig, x0, y, w, h, col):
@@ -175,7 +175,41 @@ def fig_fwa_current_m():
     return done(fig, name)
 
 
-FIGS = {"F_use_m": fig_use_m, "F_fwa_challenge_m": fig_fwa_challenge_m, "F_fwa_current_m": fig_fwa_current_m}
+# ----------------------------------------------------------------------------------------------------------------
+# F_benchmark_m (M-benchmark): what is known abroad -- Poland's two-sided gap, plus two supporting facts
+# ----------------------------------------------------------------------------------------------------------------
+def fig_benchmark_m():
+    import fig_r5 as F5
+    name = "F_benchmark_m"
+    SZ = (13.0, 4.9)
+    fig = M.new_fig(*SZ)
+    Wd, H = fig.W, fig.H
+    LW = 7.55
+    RX, RW = 0.05 + LW + 0.25, Wd - 0.05 - (0.05 + LW + 0.25)
+    for x, w, col in ((0.05, LW, S.NAVY), (RX, RW, S.NAVY)):
+        F5.card(fig, x, 0.05, w, H - 0.10, col)
+    # left card: Poland
+    M.ftext(fig, 0.05 + 0.25, H - 0.45, "Poland: the two sides differ", ha="left", va="top", fontsize=S.FS_HEAD,
+            color=S.INK, fontweight="bold")
+    bx0, scale = 0.05 + 0.25, 5.2 / 22.0
+    for lab, v, col, ylab in (("Workers would give up", 2.9, S.EMPLOYEE, 3.00), ("Employers expect a wage cut of", 21.0, S.EMPLOYER, 1.62)):
+        M.ftext(fig, bx0, ylab + 0.62, lab, ha="left", va="center", fontsize=S.FS_ROW, color=S.INK)
+        bar(fig, bx0, ylab, v * scale, 0.42, col)
+        M.ftext(fig, bx0 + v * scale + 0.15, ylab, f"{v:g}%", ha="left", va="center", fontsize=S.FS_BIG,
+                color=col, fontweight="bold")
+    M.ftext(fig, bx0, 0.38, "% of pay", ha="left", va="center", fontsize=S.FS_CAP, color=S.MUTED)
+    # right card: two supporting facts
+    M.ftext(fig, RX + 0.25, H - 0.45, "Elsewhere", ha="left", va="top", fontsize=S.FS_HEAD, color=S.INK,
+            fontweight="bold")
+    M.ftext(fig, RX + 0.25, 3.35, "4\u20138%", ha="left", va="center", fontsize=S.FS_BIG, color=S.EMPLOYEE,
+            fontweight="bold")
+    M.ftext(fig, RX + 0.25, 2.80, "of pay: what workers give\nup for a WFH option\nabroad (Singapore: 4.8%)", ha="left",
+            va="top", fontsize=S.FS_ROW, color=S.INK, linespacing=1.15)
+    V.outside(fig, name)
+    return M.finish(fig, name, SZ)
+
+
+FIGS = {"F_benchmark_m": fig_benchmark_m, "F_use_m": fig_use_m, "F_fwa_challenge_m": fig_fwa_challenge_m, "F_fwa_current_m": fig_fwa_current_m}
 
 if __name__ == "__main__":
     import warnings
