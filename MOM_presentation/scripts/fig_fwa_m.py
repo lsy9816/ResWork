@@ -181,30 +181,35 @@ def fig_fwa_current_m():
 def fig_benchmark_m():
     import fig_r5 as F5
     name = "F_benchmark_m"
-    SZ = (13.0, 4.9)
+    SZ = (13.0, 4.3)
     fig = M.new_fig(*SZ)
     Wd, H = fig.W, fig.H
-    LW = 7.55
-    RX, RW = 0.05 + LW + 0.25, Wd - 0.05 - (0.05 + LW + 0.25)
-    for x, w, col in ((0.05, LW, S.NAVY), (RX, RW, S.NAVY)):
-        F5.card(fig, x, 0.05, w, H - 0.10, col)
-    # left card: Poland
-    M.ftext(fig, 0.05 + 0.25, H - 0.45, "Poland: the two sides differ", ha="left", va="top", fontsize=S.FS_HEAD,
+    LW = 6.30
+    RX = 0.05 + LW + 0.25
+    RW = Wd - 0.05 - RX
+    for x, w in ((0.05, LW), (RX, RW)):
+        F5.card(fig, x, 0.05, w, H - 0.10, S.NAVY)
+    # left card: Poland, both sides (Lewandowski et al. 2023)
+    M.ftext(fig, 0.30, H - 0.45, "Poland: workers and employers", ha="left", va="top", fontsize=S.FS_HEAD,
             color=S.INK, fontweight="bold")
-    bx0, scale = 0.05 + 0.25, 5.2 / 22.0
-    for lab, v, col, ylab in (("Workers would give up", 2.9, S.EMPLOYEE, 3.00), ("Employers expect a wage cut of", 21.0, S.EMPLOYER, 1.62)):
-        M.ftext(fig, bx0, ylab + 0.62, lab, ha="left", va="center", fontsize=S.FS_ROW, color=S.INK)
-        bar(fig, bx0, ylab, v * scale, 0.42, col)
-        M.ftext(fig, bx0 + v * scale + 0.15, ylab, f"{v:g}%", ha="left", va="center", fontsize=S.FS_BIG,
-                color=col, fontweight="bold")
-    M.ftext(fig, bx0, 0.38, "% of pay", ha="left", va="center", fontsize=S.FS_CAP, color=S.MUTED)
-    # right card: two supporting facts
-    M.ftext(fig, RX + 0.25, H - 0.45, "Elsewhere", ha="left", va="top", fontsize=S.FS_HEAD, color=S.INK,
-            fontweight="bold")
-    M.ftext(fig, RX + 0.25, 3.35, "4\u20138%", ha="left", va="center", fontsize=S.FS_BIG, color=S.EMPLOYEE,
-            fontweight="bold")
-    M.ftext(fig, RX + 0.25, 2.80, "of pay: what workers give\nup for a WFH option\nabroad (Singapore: 4.8%)", ha="left",
-            va="top", fontsize=S.FS_ROW, color=S.INK, linespacing=1.15)
+    bx0, scale = 0.30, 3.6 / 21.0
+    for lab, v, col, y in (("Workers would give up", 2.9, S.EMPLOYEE, 2.40), ("Employers expect a wage cut of", 21.0, S.EMPLOYER, 0.95)):
+        M.ftext(fig, bx0, y + 0.62, lab, ha="left", va="center", fontsize=S.FS_ROW, color=S.INK)
+        bar(fig, bx0, y, v * scale, 0.42, col)
+        M.ftext(fig, bx0 + v * scale + 0.15, y, f"{v:g}%", ha="left", va="center", fontsize=S.FS_BIG, color=col,
+                fontweight="bold")
+    # right card: what workers give up for a WFH option elsewhere
+    M.ftext(fig, RX + 0.25, H - 0.45, "Workers: pay given up for WFH", ha="left", va="top", fontsize=S.FS_HEAD,
+            color=S.INK, fontweight="bold")
+    rows = [("US (Maestas et al.)", 4.1), ("US (Mas & Pallais)", 8.0), ("Singapore (Aksoy et al.)", 4.8)]
+    lx = RX + 0.25 + max(V.tw_cm(fig, r[0], S.FS_ROW) for r in rows)
+    sc = 1.6 / 8.0
+    for i, (lab, v) in enumerate(rows):
+        y = 2.90 - i * 0.95
+        M.ftext(fig, lx, y, lab, ha="right", va="center", fontsize=S.FS_ROW, color=S.INK)
+        bar(fig, lx + 0.15, y, v * sc, 0.34, S.EMPLOYEE)
+        M.ftext(fig, lx + 0.15 + v * sc + 0.12, y, f"{v:g}%", ha="left", va="center", fontsize=S.FS_VAL,
+                color=S.EMPLOYEE, fontweight="bold")
     V.outside(fig, name)
     return M.finish(fig, name, SZ)
 
