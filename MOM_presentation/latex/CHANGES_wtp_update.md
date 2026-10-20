@@ -86,3 +86,5 @@ part-time 24); results_fwa/fwa_diagnosis.csv also holds the "adjusted" share (ti
   productivity, coordination, creativity and fairness concerns; fully interacted model, 397 firms) -> results_fwa/employer_splits.csv.
   Slide 11 (M-where) = F_where_pres_m (presence need x all arrangements); new slide 12 (M-concerns) = F_org_concerns_m (difference per concern).
   Main deck is now 20 slides; the earlier F_where_r5 (presence + creativity, location only) is no longer on a main slide.
+- Slide 11 (M-where) summary adds that the other arrangements are rarely offered; M-employer-barriers (firms' main challenge) now comes before it.
+  Slide 13 (M-concerns): both groups shown (firm shares the concern / does not) instead of the difference; title "Employers who share a concern tend to ask for more".

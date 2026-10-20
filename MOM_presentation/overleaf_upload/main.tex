@@ -749,31 +749,41 @@ Why are some more reserved?}
 % ==========================================================================
 % 13. MECHANISMS: WHERE EMPLOYER RESERVATIONS SIT (association)   [short path]
 % ==========================================================================
+\begin{frame}[t,label=M-employer-barriers]{Employers name productivity, coordination and fairness}
+  % F_fwa_challenge_m (scripts/fig_fwa_m.py): QID50 biggest challenge in offering FWAs, all 397 employers incl. Other
+  \FrameTop
+  \FigC{F_fwa_challenge_m}
+  \Interp{Productivity, coordination and fairness are each named by about a quarter of employers.\\ Digital infrastructure and security matter much less (6\% each).}
+  \Backups{\BL{B-org-view}{Employer view}}
+\end{frame}
+\note{[Short path] Asked for the biggest challenge in offering flexible arrangements, employers name productivity and output quality (24 per cent), team coordination (24) and fairness across roles (23). Managerial resistance or lack of trust follows (14). Digital infrastructure and security are named by 6 per cent each. % [B1, fwa_challenge]
+The three leading items are statistically indistinguishable in this sample. The question asks for one challenge for FWAs in general, not for each arrangement, so it cannot say why a given arrangement, such as the compressed week, is offered by few firms. % [B1]
+Next, does the pay cut employers ask for depend on where they need people on site, and on these concerns?}
+
 \begin{frame}[t,label=M-where]{On-site needs raise the WFH pay cut, not the others}
   % F_where_pres_m (scripts/fig_fwa_m.py from results_fwa/employer_splits.csv; scripts/fwa_employer_splits.py): pay cut employers would
   % require, all seven arrangements, by on-site presence need (137 firms: most PME roles need presence; 260: some or few). Fully interacted
   % conditional logit (group-specific pay slope); location p = .025, non-location (staggered, compressed, job sharing, part-time) p = .60.
   \FrameTop
   \FigC{F_where_pres_m}
-  \Interp{Where most roles need on-site presence, employers ask for 28 to 49 points more for WFH.\\ For the other arrangements we detect no difference. Early evidence only.}
+  \Interp{Where most roles need on-site presence, employers ask for 28 to 49 points more for WFH.\\ The other arrangements show no such difference, yet few firms offer them. Early evidence only.}
   \Backups{\BL{B-why-org}{Tests}\BL{B-org-concerns}{Concerns}\BL{B-org-view}{Employer view}}
 \end{frame}
 \note{[Short path] We split employers by whether most PME roles need on-site presence. Where they do, firms would require a much larger pay cut for any WFH: 52 against 3 per cent for one to two days, 60 against 25 for three to four days, 67 against 40 for fully remote. The WFH difference is statistically significant (p = .025) but not after correcting for the many splits we tested. % [M10, wtp_deck, employer_splits]
 For the other arrangements we detect no difference: the compressed week 1 against 8 per cent, job sharing 24 against 23, part-time 32 against 36; staggered hours are higher where presence is needed, 22 against 7, but not significantly. The intervals are wide, 137 firms in one group, so we read this as no detectable difference, not as proof of none. % [employer_splits, p = .60]
 So on-site needs mostly rule out location flexibility, not necessarily schedule or load. [Backup: tests; concerns.]}
 
-\begin{frame}[t,label=M-concerns]{Employers' main concerns do not reliably change what they ask}
+\begin{frame}[t,label=M-concerns]{Employers who share a concern tend to ask for more}
   % F_org_concerns_m (scripts/fig_fwa_m.py; employer_splits.csv): difference in the pay cut required, firms that agree with the concern minus
   % firms that do not (points), all seven arrangements; filled = 95% interval excludes 0. Joint tests across all 7: productivity p = .25,
   % coordination .89, creativity .18, fairness .79; item-level p < .05 only for creativity (fully remote, staggered hours), not corrected for 28 items.
   \FrameTop
   \FigC{F_org_concerns_m}
-  \Interp{Firms worried about productivity, coordination, creativity or fairness do not ask for reliably more.\\ Only the creativity concern shows a few differences (filled).}
-  \SourceNote{Extra pay cut required by firms that agree with the concern, in points; filled: 95\% interval excludes zero.}
+  \Interp{Firms worried about creativity or productivity ask for more, notably for the compressed week.\\ But the differences are not statistically reliable.}
   \Backups{\BL{B-why-org-tests}{All tests}\BL{B-org-splits}{All splits}\BL{B-org-view}{Employer view}}
 \end{frame}
-\note{[Full deck only] Employers' main stated concerns are productivity, coordination, creativity and fairness across roles. Splitting firms by whether they agree with each concern, none reliably changes how much more pay cut they ask for an arrangement. The creativity concern shows larger cuts for fully remote and staggered hours, but with 28 comparisons we would expect a few such differences by chance. % [employer_splits]
-Fairness is new here: it shows no difference at all. So the pattern of firms' pay-cut requests follows on-site needs more than stated worries.}
+\note{[Full deck only] Employers' main stated concerns are productivity, coordination, creativity and fairness across roles. Splitting firms by whether they agree with each concern, firms that do ask for more in 23 of 28 comparisons, on average 16 points more for the creativity concern, 10 for productivity, 5 for coordination and 3 for fairness. For WFH both groups ask for large cuts; for the compressed week and staggered hours, firms without the concern ask for nothing (about minus 3 per cent) while concerned firms ask for 15 to 22. But only three of the 28 differences are significant at 5 per cent, none after correcting for 28 tests, and the joint tests are not significant (p = .18 to .89). % [employer_splits]
+Fairness is new here: it shows no difference at all. So concerns point the same way, but on-site needs are the more reliable guide.}
 % ##########################################################################
 % Main slides from redesign/v3/W4_frames.tex
 % ##########################################################################
@@ -851,18 +861,6 @@ One guardrail before the options. These are stated choices from unweighted onlin
 [If asked: among those who asked, 93 to 96 per cent were approved fully or partly, broadly in line with MOM's figure, though definitions differ.] % [D7c, D7, P3]
 [If asked: MOM finds about 6 per cent of FWA users report a setback; that is experience, ours is expectation.] % [P15, M23]
 [Full deck: M-robust and M-limits come next; the guardrail can be shortened there.]}
-
-\begin{frame}[t,label=M-employer-barriers]{Employers name productivity, coordination and fairness}
-  % F_fwa_challenge_m (scripts/fig_fwa_m.py): QID50 biggest challenge in offering FWAs, all 397 employers incl. Other
-  \FrameTop
-  \FigC{F_fwa_challenge_m}
-  \Interp{Productivity, coordination and fairness are each named by about a quarter of employers.\\ Digital infrastructure and security matter much less (6\% each).}
-  \Backups{\BL{B-org-view}{Employer view}}
-\end{frame}
-\note{[Short path] Asked for the biggest challenge in offering flexible arrangements, employers name productivity and output quality (24 per cent), team coordination (24) and fairness across roles (23). Managerial resistance or lack of trust follows (14). Digital infrastructure and security are named by 6 per cent each. % [B1, fwa_challenge]
-The three leading items are statistically indistinguishable in this sample. The question asks for one challenge for FWAs in general, not for each arrangement, so it cannot say why a given arrangement, such as the compressed week, is offered by few firms. % [B1]
-Next, how the evidence maps to the three zones.}
-
 
 % ##########################################################################
 % Main slides from redesign/v3/W5_frames.tex

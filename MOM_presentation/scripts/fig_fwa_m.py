@@ -216,42 +216,47 @@ def fig_org_concerns_m():
     name = "F_org_concerns_m"
     es = pd.read_csv(RES / "employer_splits.csv")
     panels = [("prod", "Productivity"), ("coord", "Coordination"), ("creat", "Creativity"), ("fair", "Fairness")]
-    SZ = (13.0, 5.4)
+    SZ = (13.0, 5.6)
     fig = M.new_fig(*SZ)
     Wd, H = fig.W, fig.H
     labels = [r[0] for r in W.ROWS]
     LX = 0.05 + max(V.tw_cm(fig, t, S.FS_ROW) for t in labels)
     GAP = 0.25
     PW = (Wd - 0.05 - LX - 0.15 - 3 * GAP) / 4
-    AY, AT = 0.70, H - 0.62
+    AY, AT = 0.70, H - 1.30
     YA_, YB_ = 0.55, 7.5
+    YS = {"p3": 7.15, "p2": 6.2, "p1": 5.25, "t2": 4.3, "t1": 3.35, "l1": 2.15, "l2": 1.2}
 
     def fy(v):
         return AY + (v - YA_) / (YB_ - YA_) * (AT - AY)
-    V.hline_cm(fig, 0.05, Wd - 0.05, fy(2.6), **S.SEP)
+    keys = [("D", S.EMPLOYER, S.EMPLOYER, S.MS_DIAMOND, "Firm shares the concern", S.INK, "normal"),
+            ("D", "white", S.EMPLOYER, S.MS_DIAMOND, "Firm does not", S.INK, "normal")]
+    V.r5_key(fig, 0.05, H - 0.30, keys)
+    V.hline_cm(fig, 0.05, Wd - 0.05, fy(2.75), **S.SEP)
     for j, (key, title) in enumerate(panels):
         x0 = LX + 0.15 + j * (PW + GAP)
         ax = M.axes_cm(fig, x0, AY, PW, AT - AY)
-        ax.set_xlim(-50, 60)
+        ax.set_xlim(-30, 100)
         ax.set_ylim(YA_, YB_)
         S.ref_line(ax, 0, YA_, YB_)
         ax.set_yticks([])
         ax.spines["left"].set_visible(False)
         ax.spines["bottom"].set_color(S.RULE)
-        ax.set_xticks([-40, 0, 40])
-        ax.set_xticklabels(["-40", "0", "40"])
+        ax.set_xticks([0, 50])
+        ax.set_xticklabels(["0", "50%"])
         ax.tick_params(axis="x", length=2.5, width=0.6, colors=S.RULE, labelcolor=S.MUTED, labelsize=S.FS_TICK)
-        M.ftext(fig, x0 + PW / 2, AT + 0.10, title, ha="center", va="bottom", fontsize=S.FS_HEAD, color=S.INK,
+        M.ftext(fig, x0 + PW / 2, AT + 0.08, title, ha="center", va="bottom", fontsize=S.FS_HEAD, color=S.INK,
                 fontweight="bold")
         q = es[es.split == key].set_index("item")
-        for lab, item, y, load in W.ROWS:
+        for lab, item, y0, load in W.ROWS:
             r = q.loc[CSV2[item]]
-            sig = (r.diff_lb > 0) or (r.diff_ub < 0)
-            ax.plot([r.diff_lb, r.diff_ub], [y, y], color=S.EMPLOYER, lw=S.CI_LW, solid_capstyle="butt", zorder=2)
-            ax.plot([r["diff"]], [y], marker="D", ms=S.MS_DIAMOND, mfc=S.EMPLOYER if sig else "white",
-                    mec="white" if sig else S.EMPLOYER, mew=S.MEW if sig else S.MEW_HOLLOW, ls="none", zorder=3)
-    for lab, item, y, load in W.ROWS:
-        M.ftext(fig, LX, fy(y), lab, ha="right", va="center", fontsize=S.FS_ROW, color=S.INK)
+            y = YS[item]
+            for cut, lb, ub, dy, focal in ((r.cut1, r.lb1, r.ub1, 0.25, True), (r.cut0, r.lb0, r.ub0, -0.25, False)):
+                ax.plot([lb, ub], [y + dy, y + dy], color=S.EMPLOYER, lw=S.CI_LW, solid_capstyle="butt", zorder=2)
+                ax.plot([cut], [y + dy], marker="D", ms=S.MS_DIAMOND, mfc=S.EMPLOYER if focal else "white",
+                        mec="white" if focal else S.EMPLOYER, mew=S.MEW if focal else S.MEW_HOLLOW, ls="none", zorder=3)
+    for lab, item, y0, load in W.ROWS:
+        M.ftext(fig, LX, fy(YS[item]), lab, ha="right", va="center", fontsize=S.FS_ROW, color=S.INK)
     V.outside(fig, name)
     return M.finish(fig, name, SZ)
 
