@@ -60,3 +60,12 @@ New figures (scripts/fig_fwa_m.py, deck style): F_fwa_diag_m, F_fwa_challenge_m,
 New table: T_fwa_diag (make_tables_wtp.py). Analysis: scripts/fwa_diagnosis.py, scripts/fwa_current.py -> results_fwa/.
 Note: firms "offering" in F_fwa_diag_m is the ticked share (as M-descriptive: WFH 78, staggered 37, compressed 17, job sharing 20,
 part-time 24); results_fwa/fwa_diagnosis.csv also holds the "adjusted" share (ticked or typical practice: 87, 57, 18, 37, 30).
+
+## Figure simplification (20 Oct 2026)
+- No subtitle above any WTP figure (nohead() in fig_wtp.py, fig_backup_wtp.py, fig_fwa_m.py): the slide title and the summary say what is
+  shown, and the axis ticks end in %. Regenerated: F_emp_wtp, F_org_wtp, F_gap_m, F_why_pmes, F_where_r5, F_groups_m, F_emp_groups,
+  F_org_splits, F_fwa_current_m.
+- One colour per series: the grey for the hours-changing rows (job sharing, part-time) is gone; the separator line stays.
+- M-design: the three estimation boxes are replaced by one sentence; M-benchmark: "1/3 / Fewer quits".
+- F_fwa_diag_m (M-diag): the dot panel is replaced by one "Pay gap, points" column (employers' cut minus PMEs' give-up).
+- scripts/restructure_flow.py is a historical one-off; main.tex is the source.

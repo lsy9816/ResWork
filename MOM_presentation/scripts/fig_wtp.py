@@ -76,7 +76,12 @@ ROWS = [  # label, item, y (data units), hours-change row?
 YA, YB = 0.55, 7.5
 
 
-def frame(fig, labels, xl, xr, ticks, val_w=1.05, head_h=0.86, pad=0.15, bottom=0.55):
+def nohead(*args, **kw):
+    """the figures carry no subtitle: slide title and summary say what is shown; tick labels end in %"""
+    return None
+
+
+def frame(fig, labels, xl, xr, ticks, val_w=1.05, head_h=0.36, pad=0.15, bottom=0.55):
     W, H = fig.W, fig.H
     LX = 0.05 + max(V.tw_cm(fig, t, S.FS_ROW) for t in labels)
     X0 = LX + pad
@@ -122,15 +127,15 @@ def fig_org_wtp():
     fig = new_fig(name)
     labels = [r[0] for r in ROWS]
     F = frame(fig, labels, -8, 68, [0, 20, 40, 60], val_w=0.35, bottom=0.60)
-    V.head(fig, name, "Pay cut employers would require for each arrangement, % of pay")
+    nohead(fig, name, "Pay cut employers would require for each arrangement, % of pay")
     V.hline_cm(fig, 0.05, fig.W - 0.05, F["fy"](2.6), **S.SEP)
     for lab, item, y, load in ROWS:
         est, lb, ub = tri("emp", item)
-        col = S.MUTED if load else S.EMPLOYER
+        col = S.EMPLOYER
         ci_dot(F["ax"], y, est, lb, ub, col)
-        vlabel(F["ax"], max(ub, est), y, txt0(est), col, not load)
+        vlabel(F["ax"], max(ub, est), y, txt0(est), col)
         M.ftext(fig, F["LX"], F["fy"](y), lab, ha="right", va="center", fontsize=S.FS_ROW,
-                color=S.MUTED if load else S.INK)
+                color=S.INK)
     return done(fig, name)
 
 
@@ -161,15 +166,15 @@ def fig_emp_wtp():
     xb = F["X0"] + (6 + 5) / 29 * (F["X1"] - F["X0"])
     M.ftext(fig, xb, F["AT"] + 0.05, "WFH option abroad (4\u20138%)", ha="center", va="bottom", fontsize=S.FS_CAP,
             color=S.MUTED)
-    V.head(fig, name, "Pay PMEs would give up for each arrangement, % of monthly pay")
+    nohead(fig, name, "Pay PMEs would give up for each arrangement, % of monthly pay")
     V.hline_cm(fig, 0.05, fig.W - 0.05, F["fy"](2.6), **S.SEP)
     for i, (lab, item, y, load) in enumerate(ROWS):
         est, lb, ub = tri("pme", item)
-        col = S.MUTED if load else S.EMPLOYEE
+        col = S.EMPLOYEE
         ci_dot(ax, y, est, lb, ub, col)
-        vlabel(ax, max(ub, est), y, txt0(est), col, not load)
+        vlabel(ax, max(ub, est), y, txt0(est), col)
         M.ftext(fig, F["LX"], F["fy"](y), labels[i], ha="right", va="center", fontsize=S.FS_ROW,
-                color=S.MUTED if load else S.INK)
+                color=S.INK)
     return done(fig, name)
 
 
@@ -183,7 +188,7 @@ def fig_gap_m():
     keys = [("o", S.EMPLOYEE, S.EMPLOYEE, S.MS_CIRCLE, "PMEs would give up", S.EMPLOYEE, "bold"),
             ("o", S.EMPLOYER, S.EMPLOYER, S.MS_CIRCLE, "Employers would require", S.EMPLOYER, "bold")]
     V.r5_key(fig, (fig.W - V.key_width(fig, keys)) / 2, 0.16, keys)
-    V.head(fig, name, "Pay given up vs pay cut required, % of pay")
+    nohead(fig, name, "Pay given up vs pay cut required, % of pay")
     V.hline_cm(fig, 0.05, fig.W - 0.05, F["fy"](2.6), **S.SEP)
     for (lab0, item, y, load), lab in zip(ROWS, labels):
         g = gap_row(item)
@@ -195,7 +200,7 @@ def fig_gap_m():
         vlabel(ax, max(pe, ee), y, "overlap" if overlap else f"gap {txt0(g['gap'])}", S.MUTED if overlap else S.INK,
                not overlap)
         M.ftext(fig, F["LX"], F["fy"](y), lab, ha="right", va="center", fontsize=S.FS_ROW,
-                color=S.MUTED if load else S.INK)
+                color=S.INK)
     return done(fig, name)
 
 
@@ -214,7 +219,7 @@ def fig_why_pmes():
     X0 = LX + 0.15
     X1 = W - 0.05 - PW_ - 0.30
     XL, XR = -9, 26
-    YB0, YB1 = 1.15, H - 0.80
+    YB0, YB1 = 1.15, H - 0.30
     ax = M.axes_cm(fig, X0, YB0, X1 - X0, YB1 - YB0)
     ax.set_xlim(XL, XR)
     ax.set_ylim(YB0, YB1)
@@ -252,7 +257,7 @@ def fig_why_pmes():
     keys = [("o", S.EMPLOYEE, S.EMPLOYEE, S.MS_CIRCLE, f"No expected penalty (n = {ns[0]})", S.EMPLOYEE, "bold"),
             ("o", GREY_D, GREY_D, S.MS_CIRCLE, f"Expected penalty (n = {ns[1]})", GREY_D, "bold")]
     V.r5_key(fig, (W - V.key_width(fig, keys)) / 2, 0.16, keys)
-    V.head(fig, name, "Pay PMEs would give up, % of monthly pay")
+    nohead(fig, name, "Pay PMEs would give up, % of monthly pay")
     ax.set_yticks([])
     ax.spines["left"].set_visible(False)
     ax.spines["bottom"].set_color(S.RULE)
@@ -273,13 +278,13 @@ def fig_where_r5():
     LX = 0.05 + max(V.tw_cm(fig, t, S.FS_ROW) for _, t in levels)
     GAP = 0.45
     PW = (W - 0.05 - LX - 0.15 - GAP) / 2
-    AY, AT = 1.40, H - 0.95
+    AY, AT = 1.40, H - 0.62
     XL, XR = -15, 108
     YA_, YB_ = 0.0, 3.0
 
     def fy(v):
         return AY + (v - YA_) / (YB_ - YA_) * (AT - AY)
-    V.head(fig, name, "Pay cut employers would require, % of pay")
+    nohead(fig, name, "Pay cut employers would require, % of pay")
     for j, (title, split, lab_f, lab_o) in enumerate(panels):
         x0 = LX + 0.15 + j * (PW + GAP)
         ax = M.axes_cm(fig, x0, AY, PW, AT - AY)
@@ -330,7 +335,7 @@ def fig_groups_m():
     PCW = max([V.tw_cm(fig, ".43", S.FS_ROW)] + [V.tw_cm(fig, s_, S.FS_HEAD, "bold") for s_ in P_HEAD]) + 0.10
     PX0, GAP = LX + 0.15, 0.30
     PW = (W - 0.05 - PCW - 0.30 - PX0 - 2 * GAP) / 3
-    AY, AT = 1.15, H - 0.98
+    AY, AT = 1.15, H - 0.62
     YA_, YB_ = 1.95, 9.50
 
     def fy(y):
@@ -368,7 +373,7 @@ def fig_groups_m():
         pv = get("pme", "joint_p", split=sp, group=-1)
         M.ftext(fig, xp, (fy(ya) + fy(yb_)) / 2, ("%.2f" % pv).lstrip("0"), ha="left", va="center",
                 fontsize=S.FS_ROW, color=S.INK)
-    V.head(fig, name, "Pay PMEs would give up, % of monthly pay")
+    nohead(fig, name, "Pay PMEs would give up, % of monthly pay")
     keys = [("o", "white", S.EMPLOYEE, S.MS_CIRCLE, "first group listed", S.INK, "normal"),
             ("o", S.EMPLOYEE, S.EMPLOYEE, S.MS_CIRCLE, "second", S.INK, "normal")]
     kw_ = V.key_width(fig, keys, gap=0.35)

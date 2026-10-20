@@ -138,7 +138,7 @@ def fig_emp_groups():
     PCW = 0.9
     PX0, GAP = LX + 0.15, 0.30
     PW = (Wd - 0.05 - PCW - 0.20 - PX0 - 3 * GAP) / 4
-    AY, AT = 1.20, H - 0.95
+    AY, AT = 1.20, H - 0.55
     YA_, YB_ = min(ys) - 0.6, 10.2
 
     def fy(v):
@@ -177,7 +177,7 @@ def fig_emp_groups():
         pv = W.get("pme", "joint_p", split=sp, group=-1)
         M.ftext(fig, xp, fy(sum(ys[i] for i in idx) / len(idx)), ("%.2f" % pv).lstrip("0"), ha="left", va="center",
                 fontsize=S.FS_ROW, color=S.INK)
-    V.head(fig, name, "Pay PMEs would give up, % of monthly pay")
+    W.nohead(fig, name, "Pay PMEs would give up, % of monthly pay")
     keys = [("o", "white", S.EMPLOYEE, S.MS_CIRCLE, "first group listed", S.INK, "normal"),
             ("o", S.EMPLOYEE, S.EMPLOYEE, S.MS_CIRCLE, "others", S.INK, "normal")]
     V.r5_key(fig, (Wd - V.key_width(fig, keys, gap=0.35)) / 2, 0.16, keys, gap=0.35)
@@ -227,7 +227,7 @@ def fig_org_splits():
     PX0, GAP = LX + 0.15, 0.25
     PW_, QW_ = 0.85, 0.85
     PW = (Wd - 0.05 - PW_ - QW_ - PX0 - 3 * GAP) / 3
-    AY, AT = 1.20, H - 0.95
+    AY, AT = 1.20, H - 0.55
     n = len(SPL_ROWS)
     ys = [n - i for i in range(n)]
     YA_, YB_ = 0.4, n + 0.6
@@ -263,7 +263,7 @@ def fig_org_splits():
     M.ftext(fig, Wd - 0.05 - PW_ - QW_, AT + 0.08, "p", ha="left", va="bottom", fontsize=S.FS_HEAD, color=S.INK, fontweight="bold")
     M.ftext(fig, Wd - 0.05 - QW_, AT + 0.08, "q", ha="left", va="bottom", fontsize=S.FS_HEAD, color=S.INK, fontweight="bold")
     M.ftext(fig, 0.05, AT + 0.08, "n: with feature / others", ha="left", va="bottom", fontsize=S.FS_CAP, color=S.MUTED)
-    V.head(fig, name, "Pay cut employers would require, % of pay")
+    W.nohead(fig, name, "Pay cut employers would require, % of pay")
     keys = [("D", S.EMPLOYER, S.EMPLOYER, 4.6, "with feature", S.INK, "normal"),
             ("D", "white", S.EMPLOYER, 4.6, "others", S.INK, "normal")]
     V.r5_key(fig, (Wd - V.key_width(fig, keys, gap=0.35)) / 2, 0.16, keys, gap=0.35)

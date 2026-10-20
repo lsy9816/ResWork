@@ -32,38 +32,26 @@ def fig_fwa_diag_m():
     tk = pd.read_csv(RES / "fwa_takeup.csv").set_index("arrangement")
     rows = [("WFH 1\u20132 days", "p1", "remote"), ("Staggered hours", "t1", "staggered"),
             ("Compressed week", "t2", "compressed"), ("Job sharing", "l1", "jobshare"), ("Part-time", "l2", "parttime")]
-    SZ = (14.4, 5.0)
+    SZ = (13.0, 4.9)
     fig = M.new_fig(*SZ)
     Wd, H = fig.W, fig.H
     LX = 0.05 + max(V.tw_cm(fig, r[0], S.FS_ROW) for r in rows)
-    pitch = 0.64
-    top = H - 1.38
-    bh = 0.32
-    A0, AW = LX + 0.18, 0.95
-    B0 = A0 + 1.95
-    C0 = B0 + 1.95
-    D0 = C0 + 1.70
-    DX0, DX1 = D0 + 0.10, Wd - 0.55
+    pitch = 0.80
+    top = H - 1.35
+    bh = 0.36
+    A0, AW = LX + 0.30, 1.25
+    B0 = A0 + 2.45
+    C0 = B0 + 2.45
+    D0 = C0 + 2.45
 
-    def head(x, s, col, ha="left"):
-        M.ftext(fig, x, H - 0.04, s, ha=ha, va="top", fontsize=S.FS_CAP, color=col, fontweight="bold",
+    def head(x, s, col):
+        M.ftext(fig, x, H - 0.04, s, ha="left", va="top", fontsize=S.FS_CAP, color=col, fontweight="bold",
                 linespacing=1.1, multialignment="left")
     head(A0, "Firms\noffering", S.EMPLOYER)
     head(B0, "PMEs\nusing", S.EMPLOYEE)
-    head(C0 + 0.05, "Use, if\navailable", S.EMPLOYEE)
-    head(D0 + 0.10, "Pay PMEs would give up", S.EMPLOYEE)
-    M.ftext(fig, D0 + 0.10, H - 0.04 - 0.36, "Pay cut employers require", ha="left", va="top", fontsize=S.FS_CAP,
-            color=S.EMPLOYER, fontweight="bold")
+    head(C0, "Use, if\navailable", S.EMPLOYEE)
+    head(D0, "Pay gap,\npoints", S.INK)
     V.hline_cm(fig, 0.05, Wd - 0.05, H - 0.80, **S.SEP)
-    ylo, yhi = -0.55, 4.55
-    ax = M.axes_cm(fig, DX0, top - 4 * pitch + ylo * pitch, DX1 - DX0, (yhi - ylo) * pitch)
-    ax.set_xlim(-6, 58)
-    ax.set_ylim(ylo, yhi)
-    S.ref_line(ax, 0, ylo, yhi)
-    ax.set_yticks([])
-    ax.spines["left"].set_visible(False)
-    ax.spines["bottom"].set_color(S.RULE)
-    S.pct_ticks(ax, [0, 20, 40])
     for i, (lab, item, key) in enumerate(rows):
         y = top - i * pitch
         r = dg[dg["item"] == item].iloc[0]
@@ -71,19 +59,17 @@ def fig_fwa_diag_m():
         off = float(r.firms_ticked)
         used = float(tk.loc[key, "used"])
         bar(fig, A0, y, max(off / 100 * AW, 0.03), bh, S.EMPLOYER)
-        M.ftext(fig, A0 + off / 100 * AW + 0.10, y, f"{r0(off)}%", ha="left", va="center", fontsize=S.FS_VAL,
+        M.ftext(fig, A0 + off / 100 * AW + 0.12, y, f"{r0(off)}%", ha="left", va="center", fontsize=S.FS_VAL,
                 color=S.EMPLOYER, fontweight="bold")
         bar(fig, B0, y, max(used / 100 * AW, 0.03), bh, S.EMPLOYEE)
-        M.ftext(fig, B0 + used / 100 * AW + 0.10, y, f"{r0(used)}%", ha="left", va="center", fontsize=S.FS_VAL,
+        M.ftext(fig, B0 + used / 100 * AW + 0.12, y, f"{r0(used)}%", ha="left", va="center", fontsize=S.FS_VAL,
                 color=S.EMPLOYEE, fontweight="bold")
-        M.ftext(fig, C0 + 0.05, y, f"{r0(float(tk.loc[key, 'takeup']))}%", ha="left", va="center",
+        M.ftext(fig, C0, y, f"{r0(float(tk.loc[key, 'takeup']))}%", ha="left", va="center",
                 fontsize=S.FS_VAL, color=S.EMPLOYEE, fontweight="bold")
-        yy = 4 - i
-        ci_dot(ax, yy + 0.22, r.pme_giveup, r.pme_lb, r.pme_ub, S.EMPLOYEE)
-        vlabel(ax, max(r.pme_ub, r.pme_giveup), yy + 0.22, txt0(r.pme_giveup), S.EMPLOYEE)
-        ci_dot(ax, yy - 0.22, r.emp_require, r.emp_lb, r.emp_ub, S.EMPLOYER)
-        vlabel(ax, max(r.emp_ub, r.emp_require), yy - 0.22, txt0(r.emp_require), S.EMPLOYER)
-    for x in (A0 - 0.10, B0 - 0.10, C0 - 0.10, D0 - 0.0):
+        overlap = r.gap_lb <= 0 <= r.gap_ub
+        M.ftext(fig, D0, y, txt0(r.gap), ha="left", va="center", fontsize=S.FS_VAL,
+                color=S.MUTED if overlap else S.INK, fontweight="bold")
+    for x in (A0 - 0.14, B0 - 0.14, C0 - 0.14, D0 - 0.14):
         V.vline_cm(fig, x, top - 4 * pitch - bh / 2 - 0.06, top + bh / 2 + 0.06, color=S.RULE, lw=0.7)
     V.outside(fig, name)
     return M.finish(fig, name, SZ)
@@ -132,7 +118,7 @@ def fig_fwa_current_m():
     fig = new_fig(name)
     labels = [f"{a} ({int(cu.loc[t, 'n_users'])} use it)" for a, t, _ in order]
     F = frame(fig, labels, -14, 34, [-10, 0, 10, 20, 30], val_w=0.35, bottom=0.60)
-    V.head(fig, name, "Extra pay given up by PMEs already in the arrangement, points of % of pay")
+    W.nohead(fig, name, "Extra pay given up by PMEs already in the arrangement, points of % of pay")
     V.hline_cm(fig, 0.05, fig.W - 0.05, F["fy"](2.6), **S.SEP)
     for (a, t, y), lab in zip(order, labels):
         r = cu.loc[t]
