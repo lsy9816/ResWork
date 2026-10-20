@@ -139,12 +139,12 @@ if fd.exists():
         t = tk.loc[KEY[it]]
         wfh = it in ("p2", "p3")
         gtxt = f"{r0(r.gap)} [{r0(r.gap_lb)}, {r0(r.gap_ub)}]" + (", n.s." if r.gap_lb <= 0 <= r.gap_ub else "")
-        rows.append([lab, M % ("" if wfh else r0(r.firms_ticked)), M % ("" if wfh else r0(t.used)),
+        rows.append([lab, M % ("" if wfh else r0(r.firms_ticked)), M % ("" if wfh else r0(t.avail)), M % ("" if wfh else r0(t.used)),
                      M % ("" if wfh else f"{r0(t.takeup)} [{r0(t.takeup_lb)}, {r0(t.takeup_ub)}]"),
                      M % ci(r.pme_giveup, r.pme_lb, r.pme_ub), M % ci(r.emp_require, r.emp_lb, r.emp_ub), M % gtxt])
-    write("T_fwa_diag", "B-fwa-table", tab([2.60, 1.40, 1.30, 2.00, 1.80, 1.90, 1.80], "lrrrrrr",
-        ["Arrangement", "Firms offer, \\%", "PMEs use, \\%", "Use, if available, \\%", "PMEs give up, \\%",
-         "Employers require, \\%", "Gap, points"], rows,
-        "Firms: ticked in the survey (n = 397). PMEs: employed (n = 1,004); WFH offer and use refer to any WFH, shown on the first WFH row. Use, if available: share using among PMEs with access. 95\\% CIs. n.s. = not significant at 5\\%.",
+    write("T_fwa_diag", "B-fwa-table", tab([2.30, 1.15, 1.25, 1.15, 1.80, 1.65, 1.75, 1.60], "lrrrrrrr",
+        ["Arrangement", "Firms offer, \\%", "PMEs with access, \\%", "PMEs use, \\%", "Use, if available, \\%",
+         "PMEs give up, \\%", "Employers require, \\%", "Gap, points"], rows,
+        "Firms: ticked in the survey (n = 397). PMEs: employed (n = 1,004). Offer, access and use refer to any WFH, shown on the first WFH row. Access: available to them or already used. Use, if available: share using it among PMEs with access. 95\\% CIs. n.s. = not significant at 5\\%.",
         total=14.30))
 print("ok")

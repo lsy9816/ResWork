@@ -380,7 +380,7 @@
 % path below plus every backup; return links to omitted main slides go to the index.
 \def\ShortLabels{M-title,M-motivation,M-question,M-benchmark,M-design,M-pmes,M-why-pmes,M-employers,M-where,M-meet,M-barriers,M-employer-barriers,M-options,M-conclusion,M-thanks}
 \ifdefined\ShortPath
-  \includeonlyframes{M-title,M-motivation,M-question,M-benchmark,M-design,M-pmes,M-why-pmes,M-employers,M-where,M-meet,M-barriers,M-employer-barriers,M-options,M-conclusion,M-thanks,B-index,B-index-all,B-literature,B-framework,B-estimation,B-groups,B-robust,B-puzzle-main,B-barriers-both,B-fwa-diag,B-fwa-current,B-fwa-table,B-laboursupply,B-talent,B-triangulation,B-guidelines,B-partners,B-legal,B-intl,B-zones,B-validity,B-sample,B-industry,B-governance,B-cards,B-paygaps,B-hedonic,B-methods,B-landscape,B-setup,B-emp-all,B-remote-commute,B-emp-benchmarks,B-why-pmes,B-emp-groups,B-access,B-emp-robust,B-org-robust,B-org-salary,B-why-org,B-org-splits,B-org-concerns,B-org-view,B-industry-note,B-modelfree,B-puzzle,B-pilot,B-flexiload,B-career-who,B-career,B-tgfwar,B-awareness,B-approvals,B-approvals-tab,B-requestrate,B-limits,B-nextsteps,B-followup,B-optA,B-optB,B-optC,B-optD,B-optD-items,B-why-org-tests,B-language,B-org-pct,B-gap,B-ra-gender,B-ra-age,B-ra-care,B-ra-role,B-ra-edu,B-ra-sameside,B-ra-trim}
+  \includeonlyframes{M-title,M-motivation,M-question,M-benchmark,M-design,M-pmes,M-why-pmes,M-employers,M-where,M-meet,M-barriers,M-employer-barriers,M-options,M-conclusion,M-thanks,B-index,B-index-all,B-literature,B-framework,B-estimation,B-groups,B-robust,B-puzzle-main,B-barriers-both,B-fwa-current,B-fwa-table,B-laboursupply,B-talent,B-triangulation,B-guidelines,B-partners,B-legal,B-intl,B-zones,B-validity,B-sample,B-industry,B-governance,B-cards,B-paygaps,B-hedonic,B-methods,B-landscape,B-setup,B-emp-all,B-remote-commute,B-emp-benchmarks,B-why-pmes,B-emp-groups,B-access,B-emp-robust,B-org-robust,B-org-salary,B-why-org,B-org-splits,B-org-concerns,B-org-view,B-industry-note,B-modelfree,B-puzzle,B-pilot,B-flexiload,B-career-who,B-career,B-tgfwar,B-awareness,B-approvals,B-approvals-tab,B-requestrate,B-limits,B-nextsteps,B-followup,B-optA,B-optB,B-optC,B-optD,B-optD-items,B-why-org-tests,B-language,B-org-pct,B-gap,B-ra-gender,B-ra-age,B-ra-care,B-ra-role,B-ra-edu,B-ra-sameside,B-ra-trim}
 \fi
 
 \begin{document}
@@ -643,7 +643,7 @@ Now the results, starting with PMEs. [Full deck: ``Next, how we turn these choic
   \FigC{F_use_m}
   \Interp{Most PMEs can work from home and most do; the other arrangements are open to far fewer.\\ Even where available, only 3 in 10 use the compressed week, job sharing or part-time.}
   \SourceNote{With access: PMEs who say it is available to them or already use it.}
-  \Backups{\BL{B-landscape}{Landscape}\BL{B-setup}{Pathways}\BL{B-fwa-diag}{With pay terms}}
+  \Backups{\BL{B-landscape}{Landscape}\BL{B-setup}{Pathways}\BL{B-fwa-table}{Numbers}}
 \end{frame}
 % note facts: [D1] any FWA 73% [69%], about seven in ten; [D3] 62%; [D1] compressed 4-6%; [M16] 20.8% of
 % firms offer it, about one firm in five; [D5x] company-wide policy 43% [39%] vs individual request 30% [26%]
@@ -1216,8 +1216,8 @@ We ask the partners today to choose one measurement step and one bounded, volunt
       \BH{Technical appendix}
       \mbox{\BIi{B-why-org-tests}{11 employer tests}}\enspace\textcolor{Muted}{$\cdot$}\enspace \mbox{\BIi{B-language}{Wording}}\par
       \mbox{\BIi{B-org-pct}{Employer \% of salary}}\enspace\textcolor{Muted}{$\cdot$}\enspace \mbox{\BIi{B-gap}{Gap}}\par
-      \mbox{\BIi{B-fwa-diag}{Arrangements}}\enspace\textcolor{Muted}{$\cdot$}\enspace \mbox{\BIi{B-fwa-table}{Numbers}}\par
-      \mbox{\BIi{B-fwa-current}{Users vs others}}\enspace\textcolor{Muted}{$\cdot$}\enspace \mbox{\BIi{B-barriers-both}{Both sides}}\par
+      \mbox{\BIi{B-fwa-table}{Numbers}}\enspace\textcolor{Muted}{$\cdot$}\enspace \mbox{\BIi{B-fwa-current}{Users vs others}}\par
+      \BI{B-barriers-both}{Both sides}
       \BH{PME groups}
       \mbox{\BIi{B-ra-gender}{Gender}}\enspace\textcolor{Muted}{$\cdot$}\enspace \mbox{\BIi{B-ra-age}{Age}}\enspace\textcolor{Muted}{$\cdot$}\enspace \mbox{\BIi{B-ra-care}{Care}}\par
       \mbox{\BIi{B-ra-role}{Role}}\enspace\textcolor{Muted}{$\cdot$}\enspace \mbox{\BIi{B-ra-edu}{Education}}\par
@@ -1493,20 +1493,6 @@ So the case is for a voluntary, evaluated pilot, not a roll-out: SNEF could recr
 }
 
 
-\begin{frame}[t,label=B-fwa-diag]{Offering, use and pay terms differ across arrangements}
-  % F_fwa_diag_m (scripts/fig_fwa_m.py, 14.4 x 5.0 cm) from results_fwa/ (scripts/fwa_diagnosis.py): firms offering = ticked
-  % in QID15 (as M-descriptive); PMEs using = current arrangement (QID31-33), employed PMEs n = 1,004; "use, if available" =
-  % share using among PMEs with access (available = ticked or currently used); pay terms as M-meet (1--2 days WFH on the WFH row).
-  \FrameTop
-  \FigC{F_fwa_diag_m}
-  \Interp{The compressed week is the one that both sides value alike, yet only 17\% of firms offer it.\\ For job sharing and part-time, employers ask for far more than PMEs would give up.}
-  \SourceNote{Use, if available: share of PMEs using it among those with access. Last column: pay cut employers require minus pay PMEs would give up, in points of pay (intervals on slide 12).}
-  \Backups{\BL{B-fwa-table}{Numbers} \BL{B-fwa-current}{Users vs others}}
-\end{frame}
-\note{[Backup] This puts the five arrangements side by side. Left: the share of firms that offer each, and the share of PMEs who use it; then, among PMEs who have it available, the share who use it. Right: the pay gap between the two sides, as on the previous slide. % [D1, M16, E-series, R-series]
-Three patterns. First, WFH: widely offered and used (78 per cent of firms, 66 per cent of PMEs, 87 per cent take-up where available), but employers require much more than PMEs give up. Second, the compressed week: both sides accept about 7 per cent, yet only 17 per cent of firms offer it and 6 per cent of PMEs use it, 31 per cent of those who have it. Third, job sharing and part-time: employers ask for 24 and 36 per cent against 6 and 4 per cent from PMEs; both cut hours, so much of the employers' number is simply pay for fewer hours. Staggered hours are offered by 37 per cent of firms and PMEs place little value on them. % [S1, S2]
-Take-up among those with access is 31, 27 and 26 per cent for the compressed week, job sharing and part-time, against 69 per cent for staggered hours and 87 per cent for WFH. These are our samples, not national rates; we did not ask why PMEs who have an arrangement do not use it. [Backup: numbers; users against others.]}
-
 % Draft for review (19 Oct 2026): the two barrier slides on one page, to judge how busy it looks.
 \begin{frame}[t,label=B-barriers-both]{Barriers on both sides (draft of a merged slide)}
   \FrameTop
@@ -1522,13 +1508,13 @@ Take-up among those with access is 31, 27 and 26 per cent for the compressed wee
   \FigC{F_fwa_current_m}
   \Interp{Users give up more for part-time (14 points) and staggered hours (6), but not for WFH.}
   \SourceNote{Users may differ from non-users in other ways; the gap is not an effect of using it.}
-  \BackTo{B-fwa-diag}{Arrangements}
+  \BackTo{M-descriptive}{Current use}
 \end{frame}
 
 \begin{frame}[t,label=B-fwa-table]{Offering, use and pay terms: numbers}
   \FrameTop % first body token (centring; never a frame subtitle)
   \Tab{T_fwa_diag}
-  \BackTo{B-fwa-diag}{Arrangements}
+  \BackTo{M-descriptive}{Current use}
 \end{frame}
 
 % ==========================================================================

@@ -73,3 +73,4 @@ part-time 24); results_fwa/fwa_diagnosis.csv also holds the "adjusted" share (ti
 - M-descriptive (slide 7) now shows firms offering, PMEs using, and use among PMEs who have access (F_use_m, three columns); the
   former M-diag slide is a backup (B-fwa-diag). Main deck = 19 slides. scripts/restructure_flow2.py (historical; main.tex is the source).
 - M-descriptive (slide 7): columns now firms offering | PMEs with access | share using it among them (overall use is in B-fwa-diag/B-fwa-table). B-fwa-diag last column labelled 'Employers' cut minus PMEs' give-up, points'.
+- Slide 7: third column now has bars too. B-fwa-diag removed (duplicated slide 12's gap and slide 7); B-fwa-table gained the access column.

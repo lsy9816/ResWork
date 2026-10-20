@@ -15,7 +15,7 @@ import fig_wtp as W  # noqa: E402  (helpers; running it as a module draws nothin
 from fig_wtp import M, S, V, Rectangle, r0, txt0, vlabel, ci_dot, frame, new_fig, done, MOM  # noqa: E402
 
 RES = MOM / "results_fwa"
-V.SIZE.update({k: W.SIZE for k in ("F_use_m", "F_fwa_diag_m", "F_fwa_challenge_m", "F_fwa_current_m", "F_barriers_both_m")})
+V.SIZE.update({k: W.SIZE for k in ("F_use_m", "F_fwa_challenge_m", "F_fwa_current_m", "F_barriers_both_m")})
 
 
 def bar(fig, x0, y, w, h, col):
@@ -111,7 +111,9 @@ def fig_use_m():
         bar(fig, B0, y, max(used / 100 * AW, 0.03), bh, S.EMPLOYEE)
         M.ftext(fig, B0 + used / 100 * AW + 0.12, y, f"{r0(used)}%", ha="left", va="center", fontsize=S.FS_VAL,
                 color=S.EMPLOYEE, fontweight="bold")
-        M.ftext(fig, C0, y, f"{r0(float(tk.loc[key, 'takeup']))}%", ha="left", va="center", fontsize=S.FS_VAL,
+        tku = float(tk.loc[key, "takeup"])
+        bar(fig, C0, y, max(tku / 100 * AW, 0.03), bh, S.EMPLOYEE)
+        M.ftext(fig, C0 + tku / 100 * AW + 0.12, y, f"{r0(tku)}%", ha="left", va="center", fontsize=S.FS_VAL,
                 color=S.EMPLOYEE, fontweight="bold")
     for x in (A0 - 0.14, B0 - 0.14, C0 - 0.14):
         V.vline_cm(fig, x, top - 4 * pitch - bh / 2 - 0.06, top + bh / 2 + 0.06, color=S.RULE, lw=0.7)
@@ -213,7 +215,7 @@ def fig_barriers_both_m():
     return done(fig, name)
 
 
-FIGS = {"F_use_m": fig_use_m, "F_fwa_diag_m": fig_fwa_diag_m, "F_fwa_challenge_m": fig_fwa_challenge_m, "F_fwa_current_m": fig_fwa_current_m,
+FIGS = {"F_use_m": fig_use_m, "F_fwa_challenge_m": fig_fwa_challenge_m, "F_fwa_current_m": fig_fwa_current_m,
         "F_barriers_both_m": fig_barriers_both_m}
 
 if __name__ == "__main__":
