@@ -15,7 +15,7 @@ import fig_wtp as W  # noqa: E402  (helpers; running it as a module draws nothin
 from fig_wtp import M, S, V, Rectangle, r0, txt0, vlabel, ci_dot, frame, new_fig, done, MOM  # noqa: E402
 
 RES = MOM / "results_fwa"
-V.SIZE.update({k: W.SIZE for k in ("F_where_pres_m", "F_org_concerns_m", "F_use_m", "F_fwa_challenge_m", "F_fwa_current_m")})
+V.SIZE.update({k: W.SIZE for k in ("F_where_pres_m", "F_org_concerns_m", "F_org_concerns_ci_m", "F_use_m", "F_fwa_challenge_m", "F_fwa_current_m")})
 
 
 def bar(fig, x0, y, w, h, col):
@@ -212,11 +212,10 @@ def fig_where_pres_m():
 # ----------------------------------------------------------------------------------------------------------------
 # F_org_concerns_m (backup): how much more employers who share each concern ask, all seven arrangements
 # ----------------------------------------------------------------------------------------------------------------
-def fig_org_concerns_m():
-    name = "F_org_concerns_m"
+def _concerns(name, ci):
     es = pd.read_csv(RES / "employer_splits.csv")
     panels = [("prod", "Productivity"), ("coord", "Coordination"), ("creat", "Creativity"), ("fair", "Fairness")]
-    SZ = (13.0, 5.6)
+    SZ = (13.0, 5.2)
     fig = M.new_fig(*SZ)
     Wd, H = fig.W, fig.H
     labels = [r[0] for r in W.ROWS]
@@ -251,17 +250,32 @@ def fig_org_concerns_m():
         for lab, item, y0, load in W.ROWS:
             r = q.loc[CSV2[item]]
             y = YS[item]
-            for cut, lb, ub, dy, focal in ((r.cut1, r.lb1, r.ub1, 0.25, True), (r.cut0, r.lb0, r.ub0, -0.25, False)):
-                ax.plot([lb, ub], [y + dy, y + dy], color=S.EMPLOYER, lw=S.CI_LW, solid_capstyle="butt", zorder=2)
-                ax.plot([cut], [y + dy], marker="D", ms=S.MS_DIAMOND, mfc=S.EMPLOYER if focal else "white",
-                        mec="white" if focal else S.EMPLOYER, mew=S.MEW if focal else S.MEW_HOLLOW, ls="none", zorder=3)
+            if ci:
+                for cut, lb, ub, dy, focal in ((r.cut1, r.lb1, r.ub1, 0.25, True), (r.cut0, r.lb0, r.ub0, -0.25, False)):
+                    ax.plot([lb, ub], [y + dy, y + dy], color=S.EMPLOYER, lw=S.CI_LW, solid_capstyle="butt", zorder=2)
+                    ax.plot([cut], [y + dy], marker="D", ms=S.MS_DIAMOND, mfc=S.EMPLOYER if focal else "white",
+                            mec="white" if focal else S.EMPLOYER, mew=S.MEW if focal else S.MEW_HOLLOW, ls="none", zorder=3)
+            else:      # dumbbell: the two groups' pay cut on one line, no intervals (they are on the backup)
+                ax.plot([r.cut0, r.cut1], [y, y], color=S.RULE, lw=2.4, solid_capstyle="butt", zorder=1)
+                ax.plot([r.cut0], [y], marker="D", ms=S.MS_DIAMOND, mfc="white", mec=S.EMPLOYER, mew=S.MEW_HOLLOW,
+                        ls="none", zorder=3)
+                ax.plot([r.cut1], [y], marker="D", ms=S.MS_DIAMOND, mfc=S.EMPLOYER, mec="white", mew=S.MEW, ls="none",
+                        zorder=4)
     for lab, item, y0, load in W.ROWS:
         M.ftext(fig, LX, fy(YS[item]), lab, ha="right", va="center", fontsize=S.FS_ROW, color=S.INK)
     V.outside(fig, name)
     return M.finish(fig, name, SZ)
 
 
-FIGS = {"F_where_pres_m": fig_where_pres_m, "F_org_concerns_m": fig_org_concerns_m, "F_use_m": fig_use_m, "F_fwa_challenge_m": fig_fwa_challenge_m, "F_fwa_current_m": fig_fwa_current_m}
+def fig_org_concerns_m():
+    return _concerns("F_org_concerns_m", False)
+
+
+def fig_org_concerns_ci_m():
+    return _concerns("F_org_concerns_ci_m", True)
+
+
+FIGS = {"F_where_pres_m": fig_where_pres_m, "F_org_concerns_m": fig_org_concerns_m, "F_org_concerns_ci_m": fig_org_concerns_ci_m, "F_use_m": fig_use_m, "F_fwa_challenge_m": fig_fwa_challenge_m, "F_fwa_current_m": fig_fwa_current_m}
 
 if __name__ == "__main__":
     import warnings

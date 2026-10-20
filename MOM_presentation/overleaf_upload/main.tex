@@ -380,7 +380,7 @@
 % path below plus every backup; return links to omitted main slides go to the index.
 \def\ShortLabels{M-title,M-motivation,M-question,M-benchmark,M-design,M-pmes,M-why-pmes,M-employers,M-where,M-meet,M-barriers,M-employer-barriers,M-options,M-conclusion,M-thanks}
 \ifdefined\ShortPath
-  \includeonlyframes{M-title,M-motivation,M-question,M-benchmark,M-design,M-pmes,M-why-pmes,M-employers,M-where,M-meet,M-barriers,M-employer-barriers,M-options,M-conclusion,M-thanks,B-index,B-index-all,B-literature,B-references,B-framework,B-estimation,B-groups,B-robust,B-puzzle-main,B-fwa-current,B-fwa-table,B-laboursupply,B-talent,B-triangulation,B-guidelines,B-partners,B-legal,B-intl,B-zones,B-validity,B-sample,B-industry,B-governance,B-cards,B-paygaps,B-hedonic,B-methods,B-landscape,B-setup,B-emp-all,B-remote-commute,B-emp-benchmarks,B-why-pmes,B-emp-groups,B-access,B-emp-robust,B-org-robust,B-org-salary,B-why-org,B-org-splits,B-org-concerns,B-org-view,B-industry-note,B-modelfree,B-puzzle,B-pilot,B-flexiload,B-career-who,B-career,B-tgfwar,B-awareness,B-approvals,B-approvals-tab,B-requestrate,B-limits,B-nextsteps,B-followup,B-optA,B-optB,B-optC,B-optD,B-optD-items,B-why-org-tests,B-language,B-org-pct,B-gap,B-ra-gender,B-ra-age,B-ra-care,B-ra-role,B-ra-edu,B-ra-sameside,B-ra-trim}
+  \includeonlyframes{M-title,M-motivation,M-question,M-benchmark,M-design,M-pmes,M-why-pmes,M-employers,M-where,M-meet,M-barriers,M-employer-barriers,M-options,M-conclusion,M-thanks,B-index,B-index-all,B-literature,B-references,B-framework,B-estimation,B-groups,B-robust,B-puzzle-main,B-fwa-current,B-fwa-table,B-org-concerns-ci,B-laboursupply,B-talent,B-triangulation,B-guidelines,B-partners,B-legal,B-intl,B-zones,B-validity,B-sample,B-industry,B-governance,B-cards,B-paygaps,B-hedonic,B-methods,B-landscape,B-setup,B-emp-all,B-remote-commute,B-emp-benchmarks,B-why-pmes,B-emp-groups,B-access,B-emp-robust,B-org-robust,B-org-salary,B-why-org,B-org-splits,B-org-concerns,B-org-view,B-industry-note,B-modelfree,B-puzzle,B-pilot,B-flexiload,B-career-who,B-career,B-tgfwar,B-awareness,B-approvals,B-approvals-tab,B-requestrate,B-limits,B-nextsteps,B-followup,B-optA,B-optB,B-optC,B-optD,B-optD-items,B-why-org-tests,B-language,B-org-pct,B-gap,B-ra-gender,B-ra-age,B-ra-care,B-ra-role,B-ra-edu,B-ra-sameside,B-ra-trim}
 \fi
 
 \begin{document}
@@ -792,8 +792,9 @@ So on-site needs mostly rule out location flexibility, not necessarily schedule 
   % coordination .89, creativity .18, fairness .79; item-level p < .05 only for creativity (fully remote, staggered hours), not corrected for 28 items.
   \FrameTop
   \FigC{F_org_concerns_m}
-  \Interp{Firms worried about creativity or productivity ask for more, notably for the compressed week.\\ But the differences are not statistically reliable.}
-  \Backups{\BL{B-why-org-tests}{All tests}\BL{B-org-splits}{All splits}\BL{B-org-view}{Employer view}}
+  \Interp{Firms that share a concern ask for more, mostly for the compressed week and staggered hours.\\ The gaps are small elsewhere and not statistically reliable.}
+  \SourceNote{Pay cut employers would require, by whether the firm agrees with the concern; intervals on the backup.}
+  \Backups{\BL{B-org-concerns-ci}{With intervals}\BL{B-why-org-tests}{All tests}\BL{B-org-splits}{All splits}}
 \end{frame}
 \note{[Full deck only] Employers' main stated concerns are productivity, coordination, creativity and fairness across roles. Splitting firms by whether they agree with each concern, firms that do ask for more in 23 of 28 comparisons, on average 16 points more for the creativity concern, 10 for productivity, 5 for coordination and 3 for fairness. For WFH both groups ask for large cuts; for the compressed week and staggered hours, firms without the concern ask for nothing (about minus 3 per cent) while concerned firms ask for 15 to 22. But only three of the 28 differences are significant at 5 per cent, none after correcting for 28 tests, and the joint tests are not significant (p = .18 to .89). % [employer_splits]
 Fairness is new here: it shows no difference at all. So concerns point the same way, but on-site needs are the more reliable guide. Back to PMEs: who values WFH less?}
@@ -1192,8 +1193,8 @@ We ask the partners today to choose one measurement step and one bounded, volunt
       \BH{Employers}
       \mbox{\BIi{B-org-salary}{Salary lever}}\enspace\textcolor{Muted}{$\cdot$}\enspace \mbox{\BIi{B-org-robust}{Checks}}\par
       \mbox{\BIi{B-why-org}{Roles and concerns}}\enspace\textcolor{Muted}{$\cdot$}\enspace \mbox{\BIi{B-org-splits}{Splits chart}}\par
-      \mbox{\BIi{B-org-concerns}{Concerns}}\enspace\textcolor{Muted}{$\cdot$}\enspace \mbox{\BIi{B-org-view}{Own view; SMEs}}\par
-      \BI{B-industry-note}{No industry split}
+      \mbox{\BIi{B-org-concerns}{Concerns}}\enspace\textcolor{Muted}{$\cdot$}\enspace \mbox{\BIi{B-org-concerns-ci}{Intervals}}\par
+      \mbox{\BIi{B-org-view}{Own view; SMEs}}\enspace\textcolor{Muted}{$\cdot$}\enspace \mbox{\BIi{B-industry-note}{No industry split}}\par
       \BH{Where the sides meet}
       \mbox{\BIi{B-modelfree}{Raw choices}}\enspace\textcolor{Muted}{$\cdot$}\enspace \mbox{\BIi{B-puzzle}{Compressed week}}\par
       \mbox{\BIi{B-pilot}{Pilot checklist}}\enspace\textcolor{Muted}{$\cdot$}\enspace \mbox{\BIi{B-flexiload}{Flexi-load}}\par
@@ -2046,6 +2047,7 @@ So the case is for a voluntary, evaluated pilot, not a roll-out: SNEF could recr
 % [Q10-Q13] pay cut required by employer group (wtp_deck.csv, org splits); p ratio test, q = BH over 11 split tests
 % EB s10 QID22_6: a survey item, labelled salary offset, never FWAs let firms pay less (fixer pass 7 Oct 2026, worker-03)
 \BackupFig{B-org-splits}{All employer splits}{F_org_splits}{5.4cm}{M-where}{Reservations}{Pay cut required, 95\% CI. Presence and no WFH today: p $\approx$ .02 each, q = .14 over all \hyperlink{B-why-org-tests}{\textcolor{Navy}{11 split tests}}; creativity p = .14, q = .43. Preliminary: asked after the choices. Salary offset: agrees that offering FWAs reduces the salary needed to attract and retain PMEs (survey item).}
+\BackupFig{B-org-concerns-ci}{Employer concerns, with 95\% intervals}{F_org_concerns_ci_m}{5.2cm}{M-concerns}{Concerns}{Pay cut employers would require. Joint tests over all seven arrangements: productivity p = .25, coordination .89, creativity .18, fairness .79; 3 of 28 differences significant at 5\%, none after correction.}
 
 % [B2] agreement shares; [Q11, R14b, M12] creativity p = .003, q about .06; Lead decision 6: concerns, not beliefs
 % EB s9 l.183: no free-slope check yet for the presence and creativity splits; EB s9 l.182: items asked after the choices
