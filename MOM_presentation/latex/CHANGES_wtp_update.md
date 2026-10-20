@@ -82,3 +82,7 @@ part-time 24); results_fwa/fwa_diagnosis.csv also holds the "adjusted" share (ti
 - F_emp_wtp: the grey 'WFH option abroad (4-8%)' band now spans the three WFH rows only.
 - F_emp_wtp: grey 'abroad' band removed (slide 8 compares remote work with the other arrangements; the abroad range is on slide 4 and B-emp-benchmarks).
 - Order: data (5), current use (6), design (7), PMEs' value (8). F_emp_wtp / F_org_wtp / F_gap_m are taller (13 x 5.8 / 5.8 / 5.4 cm) now that they have no subtitle.
+- Employer heterogeneity (slides 11-12): new analysis scripts/fwa_employer_splits.py (all seven arrangements, by on-site presence need and by the
+  productivity, coordination, creativity and fairness concerns; fully interacted model, 397 firms) -> results_fwa/employer_splits.csv.
+  Slide 11 (M-where) = F_where_pres_m (presence need x all arrangements); new slide 12 (M-concerns) = F_org_concerns_m (difference per concern).
+  Main deck is now 20 slides; the earlier F_where_r5 (presence + creativity, location only) is no longer on a main slide.

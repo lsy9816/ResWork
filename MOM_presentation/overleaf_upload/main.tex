@@ -749,37 +749,31 @@ Why are some more reserved?}
 % ==========================================================================
 % 13. MECHANISMS: WHERE EMPLOYER RESERVATIONS SIT (association)   [short path]
 % ==========================================================================
-\begin{frame}[t,label=M-where]{Employer reservations vary with on-site needs and concerns}
-  % Title: 13.9 cm at 14.4 pt bold (layout_sim Helvetica metrics) < 14.8 cm, one line, so the mandated title is kept.
-  % F_where_r5, true size 13.0 x 5.0 cm: two contrasts, % of hiring choices at equal pay, 50% line (EB s3b).
-  % 1-2 WFH days: most PME roles need presence (n = 98) 29% vs only some or few roles (n = 205) 49% [M10, Q10];
-  % fully remote: creativity concern (n = 162) 19% vs not worried (n = 141) 39% [M10, Q11];
-  % location tests p = .006 and .003, common salary slope [M10]
-  % Appended sample (appended_clogit.xlsx physical_1/2, creative_concern_1/0; invlogit, delta-method CIs):
-  % 1-2 WFH days: most roles need presence (n = 137) 27% [19, 34] vs only some or few (n = 260) 48% [42, 55];
-  % fully remote: creativity concern (n = 201) 18% [11, 25] vs not worried (n = 196) 29% [21, 37].
-  % F_where_r5 redrawn from these values (MOM_presentation/scripts/make_figs_appended.py). TODO(appended): the
-  % pooled location tests (p) and the 20-split q are not in the appended_* outputs
+\begin{frame}[t,label=M-where]{On-site needs raise the WFH pay cut, not the others}
+  % F_where_pres_m (scripts/fig_fwa_m.py from results_fwa/employer_splits.csv; scripts/fwa_employer_splits.py): pay cut employers would
+  % require, all seven arrangements, by on-site presence need (137 firms: most PME roles need presence; 260: some or few). Fully interacted
+  % conditional logit (group-specific pay slope); location p = .025, non-location (staggered, compressed, job sharing, part-time) p = .60.
   \FrameTop
-  \FigC{F_where_r5}
-  % [M12, Q15] BH q = .058 across 20 splits; EB s9: both items asked after the choices (Block 5); EB s9: no
-  % group-specific salary-slope check yet for these splits, so "preliminary association under a common pay-slope model"
-  \Interp{Employers ask for bigger pay cuts where most roles need on-site presence\\ and where they worry about creativity. Early evidence only.}
-  % Note: F_where_r5's former footnote, verbatim, the filled and hollow marker key [M10]. One line, 408 of 421 pt.
-  % CIs: separate per-group clogits, EB M10 drawn CIs (fixer pass 7 Oct 2026, editor-04)
-  % [S2] 397 respondents (appended sample); [M10] filled = firms with the need or concern
-  % employer-07: employers' own view (B-org-view returns to M-employers and M-where)
+  \FigC{F_where_pres_m}
+  \Interp{Where most roles need on-site presence, employers ask for 28 to 49 points more for WFH.\\ For the other arrangements we detect no difference. Early evidence only.}
   \Backups{\BL{B-why-org}{Tests}\BL{B-org-concerns}{Concerns}\BL{B-org-view}{Employer view}}
 \end{frame}
-% note facts: [M10, Q10] 29 vs 49; [M10, Q11] 19 vs 39; [M12, Q15] p <= .006 individually, q = .058
-% across 20 splits, i.e. the 10% level after correction; EB s9 post-choice items and the pending
-% group-specific salary-slope check; [P11] Job Redesign+ grant; [B2] 67% say FWAs help attract and retain talent;
-% [B1] biggest challenges coordination 25%, fairness to staff who cannot have FWAs 23%, productivity 22% (employer-07)
-\note{[Short path] Here we split employers in two ways, for each WFH level. Where most PME roles need on-site presence, firms would require a bigger pay cut at every level: about 52 per cent against 3 for one to two WFH days, 60 against 25 for three to four days, and 67 against 40 for fully remote. Where firms worry that creativity suffers when people are apart, the cuts are also larger: 24 against 15, 44 against 28, and 61 against 36. % [M10, Q10, Q11] pay cut = minus WTP
-The presence difference is statistically significant (p = .02) but not after correcting for the splits we tested; the creativity difference is weaker (p = .14). Both items were asked after the choices: these are preliminary associations. % [M12, Q15]
-Firms, with Job Redesign+ support, could first review which tasks need presence. % [P11]
-Next, the two sides together: the gap.}
+\note{[Short path] We split employers by whether most PME roles need on-site presence. Where they do, firms would require a much larger pay cut for any WFH: 52 against 3 per cent for one to two days, 60 against 25 for three to four days, 67 against 40 for fully remote. The WFH difference is statistically significant (p = .025) but not after correcting for the many splits we tested. % [M10, wtp_deck, employer_splits]
+For the other arrangements we detect no difference: the compressed week 1 against 8 per cent, job sharing 24 against 23, part-time 32 against 36; staggered hours are higher where presence is needed, 22 against 7, but not significantly. The intervals are wide, 137 firms in one group, so we read this as no detectable difference, not as proof of none. % [employer_splits, p = .60]
+So on-site needs mostly rule out location flexibility, not necessarily schedule or load. [Backup: tests; concerns.]}
 
+\begin{frame}[t,label=M-concerns]{Employers' main concerns do not reliably change what they ask}
+  % F_org_concerns_m (scripts/fig_fwa_m.py; employer_splits.csv): difference in the pay cut required, firms that agree with the concern minus
+  % firms that do not (points), all seven arrangements; filled = 95% interval excludes 0. Joint tests across all 7: productivity p = .25,
+  % coordination .89, creativity .18, fairness .79; item-level p < .05 only for creativity (fully remote, staggered hours), not corrected for 28 items.
+  \FrameTop
+  \FigC{F_org_concerns_m}
+  \Interp{Firms worried about productivity, coordination, creativity or fairness do not ask for reliably more.\\ Only the creativity concern shows a few differences (filled).}
+  \SourceNote{Extra pay cut required by firms that agree with the concern, in points; filled: 95\% interval excludes zero.}
+  \Backups{\BL{B-why-org-tests}{All tests}\BL{B-org-splits}{All splits}\BL{B-org-view}{Employer view}}
+\end{frame}
+\note{[Full deck only] Employers' main stated concerns are productivity, coordination, creativity and fairness across roles. Splitting firms by whether they agree with each concern, none reliably changes how much more pay cut they ask for an arrangement. The creativity concern shows larger cuts for fully remote and staggered hours, but with 28 comparisons we would expect a few such differences by chance. % [employer_splits]
+Fairness is new here: it shows no difference at all. So the pattern of firms' pay-cut requests follows on-site needs more than stated worries.}
 % ##########################################################################
 % Main slides from redesign/v3/W4_frames.tex
 % ##########################################################################

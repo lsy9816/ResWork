@@ -15,7 +15,7 @@ import fig_wtp as W  # noqa: E402  (helpers; running it as a module draws nothin
 from fig_wtp import M, S, V, Rectangle, r0, txt0, vlabel, ci_dot, frame, new_fig, done, MOM  # noqa: E402
 
 RES = MOM / "results_fwa"
-V.SIZE.update({k: W.SIZE for k in ("F_use_m", "F_fwa_challenge_m", "F_fwa_current_m")})
+V.SIZE.update({k: W.SIZE for k in ("F_where_pres_m", "F_org_concerns_m", "F_use_m", "F_fwa_challenge_m", "F_fwa_current_m")})
 
 
 def bar(fig, x0, y, w, h, col):
@@ -175,7 +175,88 @@ def fig_fwa_current_m():
     return done(fig, name)
 
 
-FIGS = {"F_use_m": fig_use_m, "F_fwa_challenge_m": fig_fwa_challenge_m, "F_fwa_current_m": fig_fwa_current_m}
+# ----------------------------------------------------------------------------------------------------------------
+# F_where_pres_m (M-where): employers' required cut for all seven arrangements, by on-site presence need
+# ----------------------------------------------------------------------------------------------------------------
+CSV2 = {"p1": "p1", "p2": "p2", "p3": "p3", "t2": "s2", "t1": "s1", "l1": "j1", "l2": "j2"}
+
+
+def fig_where_pres_m():
+    name = "F_where_pres_m"
+    es = pd.read_csv(RES / "employer_splits.csv")
+    es = es[es.split == "pres"].set_index("item")
+    SZ = (13.0, 5.9)
+    fig = M.new_fig(*SZ)
+    labels = [r[0] for r in W.ROWS]
+    F = frame(fig, labels, -34, 112, [0, 25, 50, 75], val_w=0.35, head_h=0.92, bottom=0.62)
+    ax = F["ax"]
+    n1, n0 = int(es.n1.iloc[0]), int(es.n0.iloc[0])
+    keys = [("D", S.EMPLOYER, S.EMPLOYER, S.MS_DIAMOND, f"Most roles need on-site presence (n = {n1})", S.INK, "normal"),
+            ("D", "white", S.EMPLOYER, S.MS_DIAMOND, f"Some or few roles (n = {n0})", S.INK, "normal")]
+    V.r5_key(fig, 0.05, fig.H - 0.40, keys)
+    V.hline_cm(fig, 0.05, fig.W - 0.05, F["fy"](2.75), **S.SEP)
+    YS = {"p3": 7.15, "p2": 6.2, "p1": 5.25, "t2": 4.3, "t1": 3.35, "l1": 2.15, "l2": 1.2}
+    for lab, item, y0, load in W.ROWS:
+        y = YS[item]
+        r = es.loc[CSV2[item]]
+        for cut, lb, ub, dy, focal in ((r.cut1, r.lb1, r.ub1, 0.27, True), (r.cut0, r.lb0, r.ub0, -0.27, False)):
+            ax.plot([lb, ub], [y + dy, y + dy], color=S.EMPLOYER, lw=S.CI_LW, solid_capstyle="butt", zorder=2)
+            ax.plot([cut], [y + dy], marker="D", ms=S.MS_DIAMOND, mfc=S.EMPLOYER if focal else "white",
+                    mec="white" if focal else S.EMPLOYER, mew=S.MEW if focal else S.MEW_HOLLOW, ls="none", zorder=3)
+            vlabel(ax, max(ub, cut), y + dy, txt0(cut), S.EMPLOYER)
+        M.ftext(fig, F["LX"], F["fy"](y), lab, ha="right", va="center", fontsize=S.FS_ROW, color=S.INK)
+    V.outside(fig, name)
+    return M.finish(fig, name, SZ)
+
+
+# ----------------------------------------------------------------------------------------------------------------
+# F_org_concerns_m (backup): how much more employers who share each concern ask, all seven arrangements
+# ----------------------------------------------------------------------------------------------------------------
+def fig_org_concerns_m():
+    name = "F_org_concerns_m"
+    es = pd.read_csv(RES / "employer_splits.csv")
+    panels = [("prod", "Productivity"), ("coord", "Coordination"), ("creat", "Creativity"), ("fair", "Fairness")]
+    SZ = (13.0, 5.4)
+    fig = M.new_fig(*SZ)
+    Wd, H = fig.W, fig.H
+    labels = [r[0] for r in W.ROWS]
+    LX = 0.05 + max(V.tw_cm(fig, t, S.FS_ROW) for t in labels)
+    GAP = 0.25
+    PW = (Wd - 0.05 - LX - 0.15 - 3 * GAP) / 4
+    AY, AT = 0.70, H - 0.62
+    YA_, YB_ = 0.55, 7.5
+
+    def fy(v):
+        return AY + (v - YA_) / (YB_ - YA_) * (AT - AY)
+    V.hline_cm(fig, 0.05, Wd - 0.05, fy(2.6), **S.SEP)
+    for j, (key, title) in enumerate(panels):
+        x0 = LX + 0.15 + j * (PW + GAP)
+        ax = M.axes_cm(fig, x0, AY, PW, AT - AY)
+        ax.set_xlim(-50, 60)
+        ax.set_ylim(YA_, YB_)
+        S.ref_line(ax, 0, YA_, YB_)
+        ax.set_yticks([])
+        ax.spines["left"].set_visible(False)
+        ax.spines["bottom"].set_color(S.RULE)
+        ax.set_xticks([-40, 0, 40])
+        ax.set_xticklabels(["-40", "0", "40"])
+        ax.tick_params(axis="x", length=2.5, width=0.6, colors=S.RULE, labelcolor=S.MUTED, labelsize=S.FS_TICK)
+        M.ftext(fig, x0 + PW / 2, AT + 0.10, title, ha="center", va="bottom", fontsize=S.FS_HEAD, color=S.INK,
+                fontweight="bold")
+        q = es[es.split == key].set_index("item")
+        for lab, item, y, load in W.ROWS:
+            r = q.loc[CSV2[item]]
+            sig = (r.diff_lb > 0) or (r.diff_ub < 0)
+            ax.plot([r.diff_lb, r.diff_ub], [y, y], color=S.EMPLOYER, lw=S.CI_LW, solid_capstyle="butt", zorder=2)
+            ax.plot([r["diff"]], [y], marker="D", ms=S.MS_DIAMOND, mfc=S.EMPLOYER if sig else "white",
+                    mec="white" if sig else S.EMPLOYER, mew=S.MEW if sig else S.MEW_HOLLOW, ls="none", zorder=3)
+    for lab, item, y, load in W.ROWS:
+        M.ftext(fig, LX, fy(y), lab, ha="right", va="center", fontsize=S.FS_ROW, color=S.INK)
+    V.outside(fig, name)
+    return M.finish(fig, name, SZ)
+
+
+FIGS = {"F_where_pres_m": fig_where_pres_m, "F_org_concerns_m": fig_org_concerns_m, "F_use_m": fig_use_m, "F_fwa_challenge_m": fig_fwa_challenge_m, "F_fwa_current_m": fig_fwa_current_m}
 
 if __name__ == "__main__":
     import warnings
