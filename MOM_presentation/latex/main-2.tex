@@ -486,11 +486,33 @@ We use a simple map. [Full deck: first, where this sits in the research.]}
 % ==========================================================================
 
 % Draft for review (19 Oct 2026): option A for the literature slide, three big numbers instead of the table; M-literature is kept above.
-\begin{frame}[t,label=M-benchmark]{Abroad, employers expect a bigger pay cut than workers accept}
+\begin{frame}[t,label=M-benchmark]{What is known, and what this study adds}
+  % Table form restored (20 Oct 2026): known so far (columns: workers, employers, Singapore) and what this study adds.
+  % [E16, L1] WFH option 4-8% of pay: Maestas et al. 2023 about 4%, Mas & Pallais 2017 8%, Aksoy et al. 2022 Singapore 4.8%;
+  % [R16] Poland, IZA DP 2023: employers expect a larger wage cut than workers would give up (numbers on B-emp-benchmarks);
+  % [P4s] MRSD: 73% of establishments with 25 or more staff offered a scheduled flexible arrangement by mid-2024.
   \FrameTop
-  \FigC{F_benchmark_m}
-  \Interp{Few studies measure both sides on the same choices; this study does so for Singapore.}
-  \SourceNote{\textbf{References:} Lewandowski et al.\ 2023; Maestas et al.\ 2023; Mas \& Pallais 2017; Aksoy et al.\ 2022.} % [L1, R16, E16]
+  {\FsBody\setlength{\tabcolsep}{6pt}\renewcommand{\arraystretch}{1.25}
+  \begin{tabularx}{\linewidth}{@{}>{\raggedright\arraybackslash}p{2.5cm}>{\raggedright\arraybackslash}X>{\raggedright\arraybackslash}p{4.4cm}@{}}
+    \toprule
+    & \textbf{Known so far} & \textbf{This study adds}\\
+    \midrule
+    \textcolor{Employee}{\textbf{Workers}}
+      & Give up \textcolor{Employee}{\textbf{4--8\%}} of pay for a WFH option (US 4\% and 8\%; Singapore 4.8\%)
+      & Seven arrangements, one design\\
+    \midrule
+    \textcolor{Employer}{\textbf{Employers}}
+      & Rarely measured. In Poland, employers expect a \textcolor{Employer}{\textbf{much larger}} pay cut than workers accept
+      & Employers' hiring choices, on the same cards as PMEs'\\
+    \midrule
+    \textbf{Singapore}
+      & Most larger firms offer FWAs (73\% in 2024); \textbf{values are unknown}
+      & Both sides' choices, after the Guidelines took effect\\
+    \bottomrule
+  \end{tabularx}\par}
+  \vspace{0.35cm}
+  \Interp{Few studies measure both sides on the same choices.}
+  \SourceNote{\textbf{References:} Mas \& Pallais 2017; Maestas et al.\ 2023; Aksoy et al.\ 2022; Lewandowski et al.\ 2023; MRSD.} % [L1, R16, E16, P4s]
   \Backups{\BL{B-references}{Studies} \BL{B-emp-benchmarks}{Benchmarks} \BL{B-intl}{Trials}}
 \end{frame}
 \note{[Draft; the literature table is now a backup] Abroad, workers give up about 4 to 8 per cent of pay for a work-from-home option; a 27-country survey puts Singapore at 4.8 per cent. % [E16, L1]
