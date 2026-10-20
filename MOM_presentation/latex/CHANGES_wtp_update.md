@@ -69,3 +69,4 @@ part-time 24); results_fwa/fwa_diagnosis.csv also holds the "adjusted" share (ti
 - M-design: the three estimation boxes are replaced by one sentence; M-benchmark: "1/3 / Fewer quits".
 - F_fwa_diag_m (M-diag): the dot panel is replaced by one "Pay gap, points" column (employers' cut minus PMEs' give-up).
 - scripts/restructure_flow.py is a historical one-off; main.tex is the source.
+- F_gap_m (M-meet): now the gap itself (employers' cut minus PMEs' give-up) as a dot with 95% CI and a 0 line; no 'gap' word; one-line note under the summary.

@@ -183,24 +183,16 @@ def fig_gap_m():
     fig = new_fig(name)
     labels = ["Fully remote", "3–4 WFH days", "1–2 WFH days", "Compressed week", "Staggered hours",
               "Job sharing / reduced load", "Part-time"]
-    F = frame(fig, labels, -4, 68, [0, 20, 40, 60], val_w=0.35, bottom=1.15)
+    F = frame(fig, labels, -17, 52, [0, 20, 40], val_w=0.35, bottom=0.60)
     ax = F["ax"]
-    keys = [("o", S.EMPLOYEE, S.EMPLOYEE, S.MS_CIRCLE, "PMEs would give up", S.EMPLOYEE, "bold"),
-            ("o", S.EMPLOYER, S.EMPLOYER, S.MS_CIRCLE, "Employers would require", S.EMPLOYER, "bold")]
-    V.r5_key(fig, (fig.W - V.key_width(fig, keys)) / 2, 0.16, keys)
-    nohead(fig, name, "Pay given up vs pay cut required, % of pay")
+    ax.set_xticks([0, 20, 40])
+    ax.set_xticklabels(["0", "20", "40"])      # points of pay, not %
     V.hline_cm(fig, 0.05, fig.W - 0.05, F["fy"](2.6), **S.SEP)
     for (lab0, item, y, load), lab in zip(ROWS, labels):
         g = gap_row(item)
-        pe, ee = g["pme"][0], g["emp"][0]
-        ax.plot([pe, ee], [y, y], color=S.RULE, lw=2.4, solid_capstyle="butt", zorder=1)
-        ax.plot([pe], [y], marker="o", ms=S.MS_CIRCLE, mfc=S.EMPLOYEE, mec="white", mew=S.MEW, ls="none", zorder=3)
-        ax.plot([ee], [y], marker="o", ms=S.MS_CIRCLE, mfc=S.EMPLOYER, mec="white", mew=S.MEW, ls="none", zorder=3)
-        overlap = g["lo"] <= 0 <= g["hi"]
-        vlabel(ax, max(pe, ee), y, "overlap" if overlap else f"gap {txt0(g['gap'])}", S.MUTED if overlap else S.INK,
-               not overlap)
-        M.ftext(fig, F["LX"], F["fy"](y), lab, ha="right", va="center", fontsize=S.FS_ROW,
-                color=S.INK)
+        ci_dot(ax, y, g["gap"], g["lo"], g["hi"], S.AGREE)
+        vlabel(ax, max(g["hi"], g["gap"]), y, txt0(g["gap"]), S.AGREE)
+        M.ftext(fig, F["LX"], F["fy"](y), lab, ha="right", va="center", fontsize=S.FS_ROW, color=S.INK)
     return done(fig, name)
 
 
