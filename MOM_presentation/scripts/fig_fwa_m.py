@@ -36,9 +36,9 @@ def fig_fwa_diag_m():
     fig = M.new_fig(*SZ)
     Wd, H = fig.W, fig.H
     LX = 0.05 + max(V.tw_cm(fig, r[0], S.FS_ROW) for r in rows)
-    pitch = 0.80
-    top = H - 1.35
-    bh = 0.36
+    pitch = 0.70
+    top = H - 1.72
+    bh = 0.34
     A0, AW = LX + 0.30, 1.25
     B0 = A0 + 2.45
     C0 = B0 + 2.45
@@ -50,8 +50,8 @@ def fig_fwa_diag_m():
     head(A0, "Firms\noffering", S.EMPLOYER)
     head(B0, "PMEs\nusing", S.EMPLOYEE)
     head(C0, "Use, if\navailable", S.EMPLOYEE)
-    head(D0, "Pay gap,\npoints", S.INK)
-    V.hline_cm(fig, 0.05, Wd - 0.05, H - 0.80, **S.SEP)
+    head(D0, "Employers' cut\nminus PMEs'\ngive-up, points", S.INK)
+    V.hline_cm(fig, 0.05, Wd - 0.05, H - 1.24, **S.SEP)
     for i, (lab, item, key) in enumerate(rows):
         y = top - i * pitch
         r = dg[dg["item"] == item].iloc[0]
@@ -97,14 +97,14 @@ def fig_use_m():
         M.ftext(fig, x, H - 0.04, s, ha="left", va="top", fontsize=S.FS_CAP, color=col, fontweight="bold",
                 linespacing=1.1, multialignment="left")
     head(A0, "Firms offering it\nto PMEs", S.EMPLOYER)
-    head(B0, "PMEs using it\nnow", S.EMPLOYEE)
-    head(C0, "PMEs using it, if\nit is available to them", S.EMPLOYEE)
+    head(B0, "PMEs with access\nto it", S.EMPLOYEE)
+    head(C0, "Of those, share\nusing it", S.EMPLOYEE)
     V.hline_cm(fig, 0.05, Wd - 0.05, H - 0.80, **S.SEP)
     for i, (lab, item, key) in enumerate(rows):
         y = top - i * pitch
         r = dg[dg["item"] == item].iloc[0]
         M.ftext(fig, LX, y, lab, ha="right", va="center", fontsize=S.FS_ROW, color=S.INK)
-        off, used = float(r.firms_ticked), float(tk.loc[key, "used"])
+        off, used = float(r.firms_ticked), float(tk.loc[key, "avail"])
         bar(fig, A0, y, max(off / 100 * AW, 0.03), bh, S.EMPLOYER)
         M.ftext(fig, A0 + off / 100 * AW + 0.12, y, f"{r0(off)}%", ha="left", va="center", fontsize=S.FS_VAL,
                 color=S.EMPLOYER, fontweight="bold")
