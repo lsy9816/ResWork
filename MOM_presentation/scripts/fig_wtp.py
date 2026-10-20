@@ -162,7 +162,7 @@ def fig_emp_wtp():
     labels = [r[0] for r in ROWS]
     F = frame(fig, labels, -5, 24, [0, 5, 10, 15, 20], val_w=0.35, bottom=0.60)
     ax = F["ax"]
-    ax.axvspan(4, 8, color=S.BAND, zorder=0, lw=0)
+    ax.add_patch(Rectangle((4, 4.62), 4, YB - 4.62, fc=S.BAND, ec="none", zorder=0))   # abroad range applies to the WFH rows only
     xb = F["X0"] + (6 + 5) / 29 * (F["X1"] - F["X0"])
     M.ftext(fig, xb, F["AT"] + 0.05, "WFH option abroad (4\u20138%)", ha="center", va="bottom", fontsize=S.FS_CAP,
             color=S.MUTED)
