@@ -162,10 +162,7 @@ def fig_emp_wtp():
     labels = [r[0] for r in ROWS]
     F = frame(fig, labels, -5, 24, [0, 5, 10, 15, 20], val_w=0.35, bottom=0.60)
     ax = F["ax"]
-    ax.add_patch(Rectangle((4, 4.62), 4, YB - 4.62, fc=S.BAND, ec="none", zorder=0))   # abroad range applies to the WFH rows only
-    xb = F["X0"] + (6 + 5) / 29 * (F["X1"] - F["X0"])
-    M.ftext(fig, xb, F["AT"] + 0.05, "WFH option abroad (4\u20138%)", ha="center", va="bottom", fontsize=S.FS_CAP,
-            color=S.MUTED)
+    # no 'abroad' band: the title compares remote work with the other arrangements; the abroad range is on slide 4 and B-emp-benchmarks
     nohead(fig, name, "Pay PMEs would give up for each arrangement, % of monthly pay")
     V.hline_cm(fig, 0.05, fig.W - 0.05, F["fy"](2.6), **S.SEP)
     for i, (lab, item, y, load) in enumerate(ROWS):

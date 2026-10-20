@@ -80,3 +80,4 @@ part-time 24); results_fwa/fwa_diagnosis.csv also holds the "adjusted" share (ti
 - Slide 4 (M-benchmark) is a 3x2 table again (Workers / Employers / Singapore: known so far, this study adds); the Poland bars figure F_benchmark_m was dropped (numbers stay on B-emp-benchmarks).
 - Slide 4: removed the closing sentence.
 - F_emp_wtp: the grey 'WFH option abroad (4-8%)' band now spans the three WFH rows only.
+- F_emp_wtp: grey 'abroad' band removed (slide 8 compares remote work with the other arrangements; the abroad range is on slide 4 and B-emp-benchmarks).
