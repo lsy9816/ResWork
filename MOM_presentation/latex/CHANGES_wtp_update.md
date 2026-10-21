@@ -98,3 +98,4 @@ part-time 24); results_fwa/fwa_diagnosis.csv also holds the "adjusted" share (ti
 - Slide 4 adds: 'Other FWAs, not only WFH' / 'Singapore employers' required pay cut for each FWA, from the same choices PMEs make' / 'The gap between what PMEs give up and what employers require, FWA by FWA'.
 - Slide 4 adds shortened: 'Other FWAs, not only WFH' / 'Singapore employers, for each FWA' / 'The gap between the two sides'.
 - Slide 4 Singapore row: official surveys and regressions (MRSD CoE 2024, Working Conditions 2024) show who offers FWAs and how firms and workers rate them, not what they are worth; adds: both sides' prices for each FWA, and the gap. B-references gained the MRSD CoE 2024 row.
+- Slide 4 Singapore row: 'No Singapore study measures what FWAs are worth; official surveys show only who offers them'; Workers row notes Singapore 4.8% comes from a 27-country survey.
