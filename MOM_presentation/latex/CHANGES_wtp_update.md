@@ -139,3 +139,5 @@ part-time 24); results_fwa/fwa_diagnosis.csv also holds the "adjusted" share (ti
 - Joint-test statements removed from the main-slide speaker notes (slides 13-14); results are reported test by test.
 
 - Slides 16-18: zone table replaced by a findings-to-implications synthesis (no zone letters); limits slide removed from the main deck (B-limits stays); options rebuilt as A pilot, B review (tasks and 3-4 day trial where roles allow), C inform and safeguard, D measure; takeaways and notes updated.
+
+- Slides 16-18 simplified: one short line per finding and per option; takeaways shortened.
