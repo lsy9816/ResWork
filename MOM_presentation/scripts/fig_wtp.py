@@ -206,10 +206,8 @@ def fig_why_pmes():
     fig = new_fig(name)
     W, H = fig.W, fig.H
     LX = 0.05 + max(V.tw_cm(fig, ln, S.FS_ROW) for lv in levels for ln in lv[1].split("\n"))
-    ANN = ("Groups differ", "p = .002", "No difference", "detected, p = .15")
-    PW_ = max(V.tw_cm(fig, t_, S.FS_TICK) for t_ in ANN)
     X0 = LX + 0.15
-    X1 = W - 0.05 - PW_ - 0.30
+    X1 = W - 0.35
     XL, XR = -9, 26
     YB0, YB1 = 1.15, H - 0.30
     ax = M.axes_cm(fig, X0, YB0, X1 - X0, YB1 - YB0)
@@ -238,14 +236,6 @@ def fig_why_pmes():
             xt = (min(lb, other[1]) - 0.8) if left else (max(ub, other[2]) + 0.8)
             ax.text(xt, y + DY[g], txt0(p), ha="right" if left else "left", va="center", fontsize=S.FS_VAL,
                     color=cols[g], fontweight="bold", path_effects=HALO, zorder=5)
-    xb = X1 + 0.10
-    V.vline_cm(fig, xb, rows_y[2] - 0.20, rows_y[0] + 0.20, color=S.INK, lw=0.7)
-    for yy in (rows_y[0] + 0.20, rows_y[2] - 0.20):
-        V.hline_cm(fig, xb - 0.08, xb, yy, color=S.INK, lw=0.7)
-    M.ftext(fig, xb + 0.15, rows_y[1], "Groups differ\np = .002", ha="left", va="center", fontsize=S.FS_TICK,
-            color=S.INK, linespacing=1.1)
-    M.ftext(fig, xb + 0.15, rows_y[3], "No difference\ndetected, p = .15", ha="left", va="center", fontsize=S.FS_TICK,
-            color=S.INK, linespacing=1.1)
     keys = [("o", S.EMPLOYEE, S.EMPLOYEE, S.MS_CIRCLE, "No expected penalty", S.EMPLOYEE, "bold"),
             ("o", GREY_D, GREY_D, S.MS_CIRCLE, "Expected penalty", GREY_D, "bold")]
     V.r5_key(fig, (W - V.key_width(fig, keys)) / 2, 0.16, keys)

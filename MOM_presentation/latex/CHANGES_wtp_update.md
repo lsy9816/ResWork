@@ -121,3 +121,5 @@ part-time 24); results_fwa/fwa_diagnosis.csv also holds the "adjusted" share (ti
 - Slide 12 legend shortened to "Most roles" / "Some or few roles".
 
 - Legends without n on slides 12 and 14 (F_where_pres_m, F_why_pmes).
+
+- Slide 14: test annotations (Groups differ / No difference detected) removed from F_why_pmes; group sizes added to the speaker notes of slides 12-14.
