@@ -117,3 +117,5 @@ part-time 24); results_fwa/fwa_diagnosis.csv also holds the "adjusted" share (ti
 - Slide 13 legend shortened to "Agree" / "Neutral or disagree"; definition (4-5 vs 1-3) in the note.
 
 - Legends moved to the bottom (centred) on slides 12 and 13 and the four-concern backup, as on the other figures; slide 12 figure 5.5 cm tall.
+
+- Slide 12 legend shortened to "Most roles" / "Some or few roles".

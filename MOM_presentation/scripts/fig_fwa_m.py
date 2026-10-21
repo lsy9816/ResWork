@@ -191,7 +191,7 @@ def fig_where_pres_m():
     F = frame(fig, labels, -34, 112, [0, 25, 50, 75], val_w=0.35, head_h=0.25, bottom=1.05)
     ax = F["ax"]
     n1, n0 = int(es.n1.iloc[0]), int(es.n0.iloc[0])
-    keys = [("D", S.EMPLOYER, S.EMPLOYER, S.MS_DIAMOND, f"Most roles need on-site presence (n = {n1})", S.INK, "normal"),
+    keys = [("D", S.EMPLOYER, S.EMPLOYER, S.MS_DIAMOND, f"Most roles (n = {n1})", S.INK, "normal"),
             ("D", "white", S.EMPLOYER, S.MS_DIAMOND, f"Some or few roles (n = {n0})", S.INK, "normal")]
     V.r5_key(fig, (fig.W - V.key_width(fig, keys)) / 2, 0.16, keys)
     V.hline_cm(fig, 0.05, fig.W - 0.05, F["fy"](2.75), **S.SEP)
