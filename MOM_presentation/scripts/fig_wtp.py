@@ -60,7 +60,7 @@ def txt0(x):
     return ("−" if v < 0 else "") + str(abs(v))
 
 
-SIZES1 = {"F_emp_wtp": (13.0, 5.8), "F_org_wtp": (13.0, 5.8), "F_gap_m": (13.0, 5.4)}   # single-panel figures without a subtitle: taller
+SIZES1 = {"F_emp_wtp": (13.0, 5.8), "F_org_wtp": (13.0, 5.8), "F_gap_m": (13.0, 5.4), "F_barriers_r5": (13.0, 4.2)}   # single-panel figures without a subtitle: taller
 
 
 def new_fig(name):
@@ -563,45 +563,45 @@ def fig_puzzle_r5():
 # F_barriers_r5 (M-barriers): all respondents, single values
 # ----------------------------------------------------------------------------------------------------------------
 def fig_barriers_r5():
+    """M-barriers: how the Guidelines and FWAs reach PMEs -- awareness by seniority and the route by which an FWA was set up."""
     import fig_r5 as F5
     name = "F_barriers_r5"
     fam = "Familiar (aware and understand key provisions)"
-    c = float(M.one("emp_career.csv", block="career_penalty", sample="all", group="All respondents",
-                    item="Agree (4-5)")[0]["share"])
-    j = float(M.one("emp_tgfwar.csv", block="by_role", sample="all", group="Role: Junior professional / specialist",
-                    item=fam)[0]["share"])
-    a = float(M.one("emp_tgfwar.csv", block="overall", sample="all", group="All employed", item=fam)[0]["share"])
-    d_ = M.one("emp_requests.csv", block="outcome", sample="all", group="Employed who say they made a formal request",
-               item="Yes, but declined")[0]
-    d = float(d_["share"])
-    assert int(d_["k"]) >= 5
+    aware = [("All employed PMEs", M.one("emp_tgfwar.csv", block="overall", sample="all", group="All employed", item=fam)[0])]
+    for lab, g in (("Junior professionals", "Role: Junior professional / specialist"), ("Middle management", "Role: Middle management"),
+                   ("Senior management", "Role: Senior management")):
+        aware.append((lab, M.one("emp_tgfwar.csv", block="by_role", sample="all", group=g, item=fam)[0]))
+    route = []
+    for lab, it in (("Company-wide policy", "Company-wide policy (applied automatically)"),
+                    ("Individual request", "Individual FWA request or application"),
+                    ("Informal, with manager", "Informal, case-by-case with manager"),
+                    ("Negotiated at hiring", "Negotiated as part of employment terms")):
+        route.append((lab, M.one("emp_fwa_setup.csv", block="setup", sample="all", group="Employed who answered QID39", item=it)[0]))
     fig = M.new_fig(*SIZE)
     H, W = fig.H, fig.W
-    gap, sep = 0.18, 0.50
-    cw = (W - 0.10 - gap - sep) / 3
-    CY0, CY1 = 0.04, H - 0.52
-    xs = [0.05, 0.05 + cw + gap, 0.05 + 2 * cw + gap + sep]
-    for x0, x1, s in ((xs[0], xs[1] + cw, "Not conditional on asking"), (xs[2], xs[2] + cw, "Reported requesters")):
-        M.ftext(fig, (x0 + x1) / 2, H - 0.21, s, ha="center", va="center", fontsize=S.FS_HEAD, color=S.INK,
-                fontweight="bold")
-        V.hline_cm(fig, x0, x1, H - 0.42, color=S.INK, lw=0.8)
-    V.vline_cm(fig, xs[2] - sep / 2, CY0, H - 0.05, **S.SEP)
-    cards = [("Career concern", c, "of PMEs agree shorter or\nmore flexible hours would\nhurt their career"),
-             ("Know the Guidelines", j, f"of junior PMEs are familiar\nwith the Guidelines\n(all levels: {r0(a)}%)"),
-             ("Outright refusal", d, "of PMEs who report a\nformal request: a\nselected lower bound")]
-    YH = CY1 - S.CARD_BAR_CM - 0.13
-    YN, YT = CY1 - 1.48, CY1 - 2.08
-    YD = YT - 0.62
-    for x, (hd, v, ds) in zip(xs, cards):
+    gap = 0.30
+    cw = (W - 0.10 - gap) / 2
+    CY0, CY1 = 0.04, H - 0.05
+    cards = [("Know the Guidelines", "Share familiar with the key provisions", aware),
+             ("How an FWA is set up", "Share of employed PMEs, by route", route)]
+    for k, (hd, sub, rows) in enumerate(cards):
+        x = 0.05 + k * (cw + gap)
         F5.card(fig, x, CY0, cw, CY1 - CY0, S.EMPLOYEE)
-        M.ftext(fig, x + cw / 2, YH, hd, ha="center", va="top", fontsize=F5.FS_CARD, color=S.EMPLOYEE, fontweight="bold")
-        M.ftext(fig, x + cw / 2, YN, f"{r0(v)}%", ha="center", va="baseline", fontsize=S.FS_BIG, color=S.EMPLOYEE,
+        M.ftext(fig, x + 0.25, CY1 - S.CARD_BAR_CM - 0.13, hd, ha="left", va="top", fontsize=F5.FS_CARD, color=S.EMPLOYEE,
                 fontweight="bold")
-        fx = F5.track(fig, x + 0.30, YT, cw - 0.60)
-        F5.bar(fig, fx(0), fx(v), YT, S.EMPLOYEE)
-        F5.track_ends(fig, fx, YT)
-        M.ftext(fig, x + cw / 2, YD - 0.06, ds, ha="center", va="top", fontsize=F5.FS_LAB, color=S.INK,
-                linespacing=1.2, multialignment="center")
+        M.ftext(fig, x + 0.25, CY1 - S.CARD_BAR_CM - 0.62, sub, ha="left", va="top", fontsize=F5.FS_LAB, color=S.MUTED)
+        LW = max(V.tw_cm(fig, lab, F5.FS_ROW) for _, _, rr in cards for lab, _ in rr)
+        tx0 = x + 0.25 + LW + 0.20
+        tw = x + cw - 0.25 - 1.0 - tx0
+        y = CY1 - S.CARD_BAR_CM - 1.45
+        for lab, r in rows:
+            v = float(r["share"])
+            M.ftext(fig, x + 0.25, y, lab, ha="left", va="center", fontsize=F5.FS_ROW, color=S.INK)
+            fx = F5.track(fig, tx0, y, tw)
+            F5.bar(fig, fx(0), fx(v), y, S.EMPLOYEE)
+            M.ftext(fig, x + cw - 0.25, y, f"{r0(v)}%", ha="right", va="center", fontsize=S.FS_VAL, color=S.EMPLOYEE,
+                    fontweight="bold")
+            y -= 0.78
     return done(fig, name)
 
 

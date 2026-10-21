@@ -129,3 +129,5 @@ part-time 24); results_fwa/fwa_diagnosis.csv also holds the "adjusted" share (ti
 - Slides 8-9 captions now name each figure's own feature (compressed week = 1-2 days at home; staggered hours not valued / part-time cut large, compressed and staggered smallest).
 
 - Slide 14 legend: "Expect a penalty" (agree 4-5, n=455) vs "Neutral or disagree" (1-3, n=565); the old "No expected penalty" was wrong because the comparison group includes neutral answers.
+
+- Slides 14-19 reworked: 14 caption states 45%; 15 = awareness by seniority + route by which an FWA is set up (F_barriers_r5 rebuilt, request item not used because it was partly misread); 16 zone table covers all seven arrangements grouped by gap (no policy-move column); limits slide moved before the options; options banner shortened and tied to zones A-C; conclusion takeaways rewritten; speaker notes updated.
