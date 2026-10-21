@@ -103,3 +103,5 @@ part-time 24); results_fwa/fwa_diagnosis.csv also holds the "adjusted" share (ti
 - Slide 4 / B-references: Aksoy et al. (2022) described as one direct question (2-3 WFH days); Aksoy row added, planning-note row dropped, MRSD row shortened.
 
 - Slide 4 table rewritten: Known so far / This study adds now state direct-question WFH value, Poland WFH-only, seven FWAs incl. WFH, Singapore surveys cover use and provision.
+
+- Slide 4 "This study adds" column: six more FWAs; employers measured the same way; FWA values estimated for Singapore, gap.
