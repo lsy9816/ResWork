@@ -15,7 +15,7 @@ import fig_wtp as W  # noqa: E402  (helpers; running it as a module draws nothin
 from fig_wtp import M, S, V, Rectangle, r0, txt0, vlabel, ci_dot, frame, new_fig, done, MOM  # noqa: E402
 
 RES = MOM / "results_fwa"
-V.SIZE.update({k: W.SIZE for k in ("F_where_pres_m", "F_org_concerns_m", "F_use_m", "F_fwa_challenge_m", "F_fwa_current_m")})
+V.SIZE.update({k: W.SIZE for k in ("F_where_pres_m", "F_org_concerns_m", "F_org_concerns4_m", "F_use_m", "F_fwa_challenge_m", "F_fwa_current_m")})
 
 
 def bar(fig, x0, y, w, h, col):
@@ -212,17 +212,18 @@ def fig_where_pres_m():
 # ----------------------------------------------------------------------------------------------------------------
 # F_org_concerns_m (backup): how much more employers who share each concern ask, all seven arrangements
 # ----------------------------------------------------------------------------------------------------------------
-def fig_org_concerns_m():
-    name = "F_org_concerns_m"
+def fig_org_concerns_m(name="F_org_concerns_m", keys=("prod", "coord", "fair")):
     es = pd.read_csv(RES / "employer_splits.csv")
-    panels = [("prod", "Productivity"), ("coord", "Coordination"), ("creat", "Creativity"), ("fair", "Fairness")]
+    titles = {"prod": "Productivity", "coord": "Coordination", "creat": "Creativity", "fair": "Fairness"}
+    panels = [(k, titles[k]) for k in keys]
+    n = len(panels)
     SZ = (13.0, 5.6)
     fig = M.new_fig(*SZ)
     Wd, H = fig.W, fig.H
     labels = [r[0] for r in W.ROWS]
     LX = 0.05 + max(V.tw_cm(fig, t, S.FS_ROW) for t in labels)
     GAP = 0.25
-    PW = (Wd - 0.05 - LX - 0.15 - 3 * GAP) / 4
+    PW = (Wd - 0.05 - LX - 0.15 - (n - 1) * GAP) / n
     AY, AT = 0.70, H - 1.30
     YA_, YB_ = 0.55, 7.5
     YS = {"p3": 7.15, "p2": 6.2, "p1": 5.25, "t2": 4.3, "t1": 3.35, "l1": 2.15, "l2": 1.2}
@@ -261,7 +262,7 @@ def fig_org_concerns_m():
     return M.finish(fig, name, SZ)
 
 
-FIGS = {"F_where_pres_m": fig_where_pres_m, "F_org_concerns_m": fig_org_concerns_m, "F_use_m": fig_use_m, "F_fwa_challenge_m": fig_fwa_challenge_m, "F_fwa_current_m": fig_fwa_current_m}
+FIGS = {"F_where_pres_m": fig_where_pres_m, "F_org_concerns_m": fig_org_concerns_m, "F_org_concerns4_m": lambda: fig_org_concerns_m("F_org_concerns4_m", ("prod", "coord", "creat", "fair")), "F_use_m": fig_use_m, "F_fwa_challenge_m": fig_fwa_challenge_m, "F_fwa_current_m": fig_fwa_current_m}
 
 if __name__ == "__main__":
     import warnings
