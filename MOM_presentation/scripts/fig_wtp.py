@@ -246,8 +246,8 @@ def fig_why_pmes():
             color=S.INK, linespacing=1.1)
     M.ftext(fig, xb + 0.15, rows_y[3], "No difference\ndetected, p = .15", ha="left", va="center", fontsize=S.FS_TICK,
             color=S.INK, linespacing=1.1)
-    keys = [("o", S.EMPLOYEE, S.EMPLOYEE, S.MS_CIRCLE, f"No expected penalty (n = {ns[0]})", S.EMPLOYEE, "bold"),
-            ("o", GREY_D, GREY_D, S.MS_CIRCLE, f"Expected penalty (n = {ns[1]})", GREY_D, "bold")]
+    keys = [("o", S.EMPLOYEE, S.EMPLOYEE, S.MS_CIRCLE, "No expected penalty", S.EMPLOYEE, "bold"),
+            ("o", GREY_D, GREY_D, S.MS_CIRCLE, "Expected penalty", GREY_D, "bold")]
     V.r5_key(fig, (W - V.key_width(fig, keys)) / 2, 0.16, keys)
     nohead(fig, name, "Pay PMEs would give up, % of monthly pay")
     ax.set_yticks([])

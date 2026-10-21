@@ -119,3 +119,5 @@ part-time 24); results_fwa/fwa_diagnosis.csv also holds the "adjusted" share (ti
 - Legends moved to the bottom (centred) on slides 12 and 13 and the four-concern backup, as on the other figures; slide 12 figure 5.5 cm tall.
 
 - Slide 12 legend shortened to "Most roles" / "Some or few roles".
+
+- Legends without n on slides 12 and 14 (F_where_pres_m, F_why_pmes).
