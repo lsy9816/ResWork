@@ -123,3 +123,5 @@ part-time 24); results_fwa/fwa_diagnosis.csv also holds the "adjusted" share (ti
 - Legends without n on slides 12 and 14 (F_where_pres_m, F_why_pmes).
 
 - Slide 14: test annotations (Groups differ / No difference detected) removed from F_why_pmes; group sizes added to the speaker notes of slides 12-14.
+
+- Slides 8-9 captions: plain wording (more days at home -> more value / bigger cut; fully remote most), numbers left to the figure.
