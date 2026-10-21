@@ -378,9 +378,9 @@
 
 % Short presentation build (round 5): compile main_short.tex for the 15-frame
 % path below plus every backup; return links to omitted main slides go to the index.
-\def\ShortLabels{M-title,M-motivation,M-question,M-benchmark,M-design,M-pmes,M-why-pmes,M-employers,M-where,M-meet,M-barriers,M-employer-barriers,M-options,M-conclusion,M-thanks}
+\def\ShortLabels{M-title,M-motivation,M-question,M-benchmark,M-design,M-pmes,M-why-pmes,M-employers,M-where,M-meet,M-barriers,M-employer-barriers,M-discussion,M-conclusion,M-thanks}
 \ifdefined\ShortPath
-  \includeonlyframes{M-title,M-motivation,M-question,M-benchmark,M-design,M-pmes,M-why-pmes,M-employers,M-where,M-meet,M-barriers,M-employer-barriers,M-options,M-conclusion,M-thanks,B-index,B-index-all,B-literature,B-references,B-framework,B-estimation,B-groups,B-robust,B-puzzle-main,B-fwa-current,B-fwa-table,B-laboursupply,B-talent,B-triangulation,B-guidelines,B-partners,B-legal,B-intl,B-zones,B-validity,B-sample,B-industry,B-governance,B-cards,B-paygaps,B-hedonic,B-methods,B-landscape,B-setup,B-emp-all,B-remote-commute,B-emp-benchmarks,B-why-pmes,B-emp-groups,B-access,B-emp-robust,B-org-robust,B-org-salary,B-why-org,B-org-splits,B-org-concerns,B-org-concerns4,B-org-view,B-industry-note,B-modelfree,B-puzzle,B-pilot,B-flexiload,B-career-who,B-career,B-tgfwar,B-awareness,B-approvals,B-approvals-tab,B-requestrate,B-limits,B-nextsteps,B-followup,B-optA,B-optB,B-optC,B-optD,B-optD-items,B-why-org-tests,B-language,B-org-pct,B-gap,B-ra-gender,B-ra-age,B-ra-care,B-ra-role,B-ra-edu,B-ra-sameside,B-ra-trim}
+  \includeonlyframes{M-title,M-motivation,M-question,M-benchmark,M-design,M-pmes,M-why-pmes,M-employers,M-where,M-meet,M-barriers,M-employer-barriers,M-discussion,M-conclusion,M-thanks,B-index,B-index-all,B-literature,B-references,B-framework,B-estimation,B-groups,B-robust,B-puzzle-main,B-fwa-current,B-fwa-table,B-laboursupply,B-talent,B-triangulation,B-guidelines,B-partners,B-legal,B-intl,B-zones,B-validity,B-sample,B-industry,B-governance,B-cards,B-paygaps,B-hedonic,B-methods,B-landscape,B-setup,B-emp-all,B-remote-commute,B-emp-benchmarks,B-why-pmes,B-emp-groups,B-access,B-emp-robust,B-org-robust,B-org-salary,B-why-org,B-org-splits,B-org-concerns,B-org-concerns4,B-org-view,B-industry-note,B-modelfree,B-puzzle,B-pilot,B-flexiload,B-career-who,B-career,B-tgfwar,B-awareness,B-approvals,B-approvals-tab,B-requestrate,B-limits,B-nextsteps,B-followup,B-optA,B-optB,B-optC,B-optD,B-optD-items,B-why-org-tests,B-language,B-org-pct,B-gap,B-ra-gender,B-ra-age,B-ra-care,B-ra-role,B-ra-edu,B-ra-sameside,B-ra-trim}
 \fi
 
 \begin{document}
@@ -397,7 +397,7 @@
 In this joint study with SNEF, 1,020 PMEs and 397 people involved in PME hiring or manpower decisions made mirrored choices on a common menu of arrangements. % [S1, S2, S5]
 The results point to common ground, a role-dependent case, and arrangements that need testing before scaling.
 Values in per cent of pay are a measuring rod, not a proposal to lower pay.
-The findings are preliminary; we end with a decision for the partners.
+The findings are preliminary; we end with points for discussion.
 [Timing: 130 words a minute plus 15 seconds a slide. Short path, 15 slides, target 17 to 18 minutes: Title, Motivation, Question, Framework, Design, PMEs, Why PMEs, Employers, Where, Meet, Compressed week, Barriers, Options, Conclusion, Thank you. The full deck adds Literature, Data, Estimation, Descriptive, Groups, Robustness, Discussion and Limits.]}
 
 % ==========================================================================
@@ -866,35 +866,36 @@ So why do PMEs who want an arrangement not ask? The survey did not ask; we come 
 % 19. DISCUSSION: A SYNTHESIS MAP BY ZONE   [full deck only]
 % ==========================================================================
 \begin{frame}[t,label=M-discussion]{What the findings point to}
-  % Synthesis (21 Oct 2026): the gap result and the barrier and heterogeneity results (slides 11-15) in one table.
-  % Rows: gap by arrangement [slide 10: compressed week 0, staggered 11, 1-2 days 12, job sharing 18, 3-4 days 26, part-time 32, fully remote 34];
-  % presence need [slide 12: employer cut 52 vs 3 (1-2 days), 60 vs 25, 67 vs 40; employer survey only, PMEs were not asked; PMEs give up 7 on average for 1-2 days];
-  % employer hurdles [slides 11, 13]; PME level [slide 14: values alike, access 80/85/94, familiarity 29/52/77]; career worry [slide 15: 45%, expected penalty 36/45/52 by level];
-  % measurement gap. No zone letters; options on the next slide follow from these rows.
+  % Merged synthesis and options (21 Oct 2026): one line per finding, its direction, and the option letter A-D (links to the back-ups).
+  % Findings: gap [slide 10: compressed week 0, staggered 11, 1-2 days 12, job sharing 18, 3-4 days 26, part-time 32, fully remote 34];
+  % presence need [slide 12: employer cut 52 vs 3 (1-2 days); employer survey only; PMEs give up 7 on average for 1-2 days];
+  % employer hurdles [slides 11, 13]; PME level [slide 14: values alike, access 80/85/94, familiarity 29/52/77];
+  % career worry [slide 15: 45%, expected penalty 36/45/52 by level]; measurement gap. No owners or evidence ratings on the slide (notes).
   \FrameTop
   {\FsBody\setlength{\tabcolsep}{6pt}\renewcommand{\arraystretch}{1.55}
-  \begin{tabularx}{\linewidth}{@{}>{\raggedright\arraybackslash}X>{\raggedright\arraybackslash}p{4.8cm}@{}}
+  \begin{tabularx}{\linewidth}{@{}>{\raggedright\arraybackslash}X>{\raggedright\arraybackslash}p{5.2cm}@{}}
     \toprule
     \textbf{What we found} & \textbf{What it points to}\\
     \midrule
-    \textbf{Both:} the compressed week has no gap & A pilot to run\\
-    \textcolor{Employer}{\textbf{Employers:}} little WFH cut where roles need no presence & Start with 1--2 WFH days there\\
-    \textcolor{Employer}{\textbf{Employers:}} top hurdles are productivity, coordination, fairness & Guidance and HR training\\
-    \textcolor{Employee}{\textbf{PMEs:}} juniors have less access, know the Guidelines least & Open access for juniors\\
-    \textcolor{Employee}{\textbf{PMEs:}} 45\% fear a career penalty & Appraise by output, at all levels\\
-    \textbf{Both:} why PMEs do not ask is unmeasured & Measure it\\
+    \textbf{Both:} the compressed week has no gap & \hyperlink{B-optA}{\textbf{\textcolor{Navy}{A}}}\enspace Pilot it\\
+    \textcolor{Employer}{\textbf{Employers:}} little WFH cut where roles need no presence & \hyperlink{B-optB}{\textbf{\textcolor{Navy}{B}}}\enspace 1--2 WFH days there first\\
+    \textcolor{Employer}{\textbf{Employers:}} top hurdles: productivity, coordination, fairness & \hyperlink{B-optC}{\textbf{\textcolor{Navy}{C}}}\enspace Guidance and HR training\\
+    \textcolor{Employee}{\textbf{PMEs:}} juniors have less access, know the Guidelines least & \hyperlink{B-optC}{\textbf{\textcolor{Navy}{C}}}\enspace Open access for juniors\\
+    \textcolor{Employee}{\textbf{PMEs:}} 45\% fear a career penalty & \hyperlink{B-optC}{\textbf{\textcolor{Navy}{C}}}\enspace Appraise by output\\
+    \textbf{Both:} why PMEs do not ask is unmeasured & \hyperlink{B-optD}{\textbf{\textcolor{Navy}{D}}}\enspace Measure it\\
     \bottomrule
   \end{tabularx}\par}
   \SourceNote{Stated choices from online panels; employer splits are preliminary.}
-  \Backups{\BL{B-intl}{Trials abroad} \BL{B-puzzle}{Offering}}
+  \Backups{\BL{B-optA}{Option A} \BL{B-optD-items}{Survey items} \BL{B-pilot}{Pilot checklist}}
 \end{frame}
-\note{[Full deck only] This table collects what the earlier slides found and what each result points to. % [S7]
-First, the gap. The two sides agree on the compressed week, both at about 7 per cent of pay. The gap is 11 to 18 points for staggered hours, one to two WFH days and job sharing, and 26 to 34 for three to four days, part-time and fully remote. Few surveyed firms offer the compressed week, and operating costs are unmeasured, so it is a low-risk arrangement to test, not a proven one. % [E5, R5, G1-G4, M16]
-Second, the employer survey splits firms by whether most roles need on-site presence. Where few roles do, employers expect only about 3 per cent less pay for one to two WFH days, below the 7 per cent PMEs would give up; where most roles do, they expect 52. That compares one employer group with all PMEs, PMEs were not asked about presence, and the intervals are wide, so it is preliminary. It points to starting with one to two days where roles allow. % [M10, Q10, M12]
-Third, employers name productivity, coordination and fairness as their main hurdles, and concern levels do not reliably change the pay cut. When asked for the single biggest challenge, technology and security are rarely named; we cannot say they are not hurdles. Managerial resistance or trust is the main hurdle for 14 per cent, and 58 per cent of employers say they know the Guidelines, so guidance and training for HR and managers is relevant; we did not test training itself. % [slide 11, 13, B-tgfwar]
-Fourth, PMEs of all levels value WFH alike, but access and familiarity rise with seniority: 80 per cent of junior professionals have at least one arrangement available against 94 in senior management, and 29 per cent know the Guidelines against 77. Senior staff already use the most; the gradient suggests that does not reach juniors by itself. % [D6, pme_level_access.csv]
-Fifth, 45 per cent of PMEs expect flexible work to hurt their career, 36 per cent of juniors and 52 per cent of seniors; they value WFH less and use staggered hours less. These are associations. Appraising by output therefore concerns every level. % [M23, B5]
-Finally, why PMEs who want an arrangement do not ask is not measured. What could the partners do about these points? % [P2, B6]
+\note{[Short path] This table collects what the earlier slides found and the direction each result points to; the letters link to the options in the back-up. None of it requires changing the Guidelines. % [S7]
+First, the gap. The two sides agree on the compressed week, both at about 7 per cent of pay. The gap is 11 to 18 points for staggered hours, one to two WFH days and job sharing, and 26 to 34 for three to four days, part-time and fully remote. Few surveyed firms offer the compressed week, and operating costs are unmeasured, so it is a low-risk arrangement to test, not a proven one. Option A: SNEF could recruit volunteer firms to put it on their written menu, with independent evaluation; the evidence is moderate. % [E5, R5, G1-G4, M16, M17]
+Second, the employer survey splits firms by whether most roles need on-site presence. Where few roles do, employers expect only about 3 per cent less pay for one to two WFH days, below the 7 per cent PMEs would give up; where most roles do, they expect 52. That compares one employer group with all PMEs, PMEs were not asked about presence, and the intervals are wide, so it is preliminary. Option B: review which tasks need presence, role by role, and start with one to two days where roles allow. % [M10, Q10, M12]
+Third, employers name productivity, coordination and fairness as their main hurdles, and concern levels do not reliably change the pay cut. When asked for the single biggest challenge, technology and security are rarely named; we cannot say they are not hurdles. Managerial resistance or trust is the main hurdle for 14 per cent, and 58 per cent of employers say they know the Guidelines, so guidance and training for HR and managers is relevant (Option C); we did not test training itself. % [slide 11, 13, B-tgfwar]
+Fourth, PMEs of all levels value WFH alike, but access and familiarity rise with seniority: 80 per cent of junior professionals have at least one arrangement available against 94 in senior management, and 29 per cent know the Guidelines against 77. Senior staff already use the most; the gradient suggests that does not reach juniors by itself. Option C: open access for juniors. % [D6, pme_level_access.csv]
+Fifth, 45 per cent of PMEs expect flexible work to hurt their career, 36 per cent of juniors and 52 per cent of seniors; they value WFH less and use staggered hours less. These are associations. Appraising by output therefore concerns every level (Option C). % [M23, B5]
+Finally, why PMEs who want an arrangement do not ask is not measured. Option D: MRSD, with NTUC and SNEF, could add why-not-request and partial-approval items where its surveys lack them; it adds no reporting duty for firms. % [P2, P3, B6, D9]
+Options B and C are exploratory: the presence result comes from the employer survey alone, and the career link is an association. % [options evidence]
 }
 
 % ==========================================================================
@@ -903,60 +904,15 @@ Finally, why PMEs who want an arrangement do not ask is not measured. What could
 % ==========================================================================
 % 22. CONCLUSION: THE DECISION   [short path]
 % ==========================================================================
-\begin{frame}[t,label=M-options]{Options for the partners' decision}
-  % Decision banner (ROUND5_SPEC s3 row 20; mandate: one measurement step and one bounded practice pilot, a lead for each)
-  % MANDATE: one bounded practice pilot; voluntary as on M-puzzle. Fixer pass 7 Oct 2026: mom_ps-01 (a) proposed
-  % default visible, D and A, and bounded; employer-04 voluntary. Wording change vs ROUND5_SPEC row 20 logged in ADJUDICATION.md
-  \FrameTop
-  \DecisionBanner{Four options; we propose D (measure) and A (pilot), each with a lead.}
-  \vspace{0.12cm}% polish pass, 7 Oct 2026 (DESIGN_PLAN s2 W5): was 0.04 cm
-  % Three columns (COMMENTS slide 20): option | owner and first step | evidence strength. 9.5 pt.
-  % Option letters link to B-optA..B-optD (detail for Q&A). No "easy", no "low cost";
-  % operating cost was not measured (mandate).
-  % Polish pass, 7 Oct 2026 (G8): the shared tight table size \FsTableTight = 9.5 pt, arraystretch 1.1 and
-  % 2 pt of space between the option rows, so each option reads as one unit (was 1.0 and no row space).
-  {\FsTableTight
-  \setlength{\tabcolsep}{4pt}
-  \renewcommand{\arraystretch}{1.1}
-  \begin{tabularx}{\linewidth}{@{}>{\raggedright\arraybackslash}X>{\raggedright\arraybackslash}p{5.0cm}>{\raggedright\arraybackslash}p{3.4cm}@{}}
-    \toprule
-    \textbf{Option} & \textbf{Owner and first step} & \textbf{Evidence strength}\\
-    \midrule
-    \hyperlink{B-optA}{\textbf{\textcolor{Navy}{A\enspace Pilot:}}} compressed week
-      & SNEF and volunteer firms
-      & Moderate\\ \addlinespace[4pt]
-    \hyperlink{B-optB}{\textbf{\textcolor{Navy}{B\enspace Review:}}} on-site needs; 1--2 days first
-      & Firms; MOM (PTRG review)
-      & Exploratory\\ \addlinespace[4pt]
-    \hyperlink{B-optC}{\textbf{\textcolor{Navy}{C\enspace Open up:}}} juniors, HR; appraise by output
-      & TAFEP, NTUC and firms
-      & Exploratory\\ \addlinespace[4pt]
-    \hyperlink{B-optD}{\textbf{\textcolor{Navy}{D\enspace Measure:}}} why PMEs do not ask
-      & MRSD, with NTUC and SNEF
-      & Gap documented\\
-    \bottomrule
-  \end{tabularx}\par}
-  % Lead decision 10: no option needs a Guidelines change
-  \Interp{None of these options requires changing the Guidelines.}
-  \Backups{\BL{B-optA}{Option A} \BL{B-optD-items}{Survey items} \BL{B-pilot}{Pilot checklist}}
-\end{frame}
-\note{[Short path] So to the decision. We ask the partners to choose one measurement step and one bounded, voluntary practice pilot, and to nominate a lead for each. None requires a change to the Guidelines. % mandate: two-part decision; Lead decision 10
-Option A is the most natural pilot: SNEF could recruit volunteer firms to put compressed weeks on their written menu and test them, with independent evaluation. The evidence is moderate, and operating costs are unmeasured. % [Q5, M16, M17, M19, M20]
-Option B reviews which tasks need on-site presence, role by role, and starts with one to two WFH days where roles allow, where employers expect the smallest cut. It is exploratory, because the presence result comes from the employer survey alone. % [M10, Q10, M13, V6]
-Option C opens up access for junior PMEs, who have the least access and know the Guidelines least, with HR training and output-based appraisal, because career worry runs through every level. It is exploratory: the career link is an association, and we did not test training. % [D6, M23, B5, pme_level_access.csv]
-For measurement, Option D: MRSD, with NTUC and SNEF, could add why-not-request and partial-approval items where its surveys lack them; it adds no reporting duty for firms. % [P2, P3, B6, D9]
-We close with three messages. % transition to M-conclusion
-[Option letters link to B-optA to B-optD.]}
-
 % ==========================================================================
 % 21. LIMITS   [full deck only]
 % ==========================================================================
-\begin{frame}[t,label=M-conclusion]{The decision we ask of the partners}
+\begin{frame}[t,label=M-conclusion]{Summary and discussion}
   % Decision slide (mandate; COMMENTS slide 22): banner, then one take-away block with three robust
   % messages; the 490-PME detail is on B-followup; no "Thank you" here (M-thanks follows).
   % MANDATE: one bounded practice pilot; voluntary as on M-puzzle (fixer pass 7 Oct 2026: mom_ps-01 c, employer-04)
   \FrameTop
-  \DecisionBanner{Decision sought today: one measurement step and one bounded, voluntary practice pilot, with a lead for each.}
+  \DecisionBanner{For discussion: which of these points could the partners take forward?}
   \vspace{0.20cm}% polish pass, 7 Oct 2026 (DESIGN_PLAN s2 W5): was 0.30 cm
   % Polish pass: no local font override in the block title; the restyled take-away card (preamble, G7) sets
   % the 11.5 pt bold Navy heading, the Navy top accent and the bold Navy numerals.
@@ -968,8 +924,6 @@ We close with three messages. % transition to M-conclusion
       \item The hurdles: employers' \textbf{productivity, coordination and fairness}; PMEs' \textbf{career worry}
     \end{enumerate}
   \end{alertblock}
-  % mom_ps-01 (d): the proposed default, visible on the decision slide (Options D and A as on M-options)
-  \Interp{We propose D (why-not and partial-approval items) and A (a compressed-week pilot).}
   \Backups{\BL{B-followup}{Follow-up} \BL{B-optD-items}{Survey items}}
 \end{frame}
 \note{[Short path] Three messages. First, PMEs value remote work most, and more with each extra day: about 7 per cent of pay for one to two days, 10 for three to four, 15 for fully remote. Employers expect a bigger pay cut for the same arrangements; that is a hiring expectation, not a salary price. % [E1, E2, R10, S6]
@@ -977,7 +931,7 @@ Second, only the compressed week shows common ground: PMEs value it and we detec
 Third, employers name productivity, coordination and fairness as their main hurdles; PMEs worry about their careers, and junior PMEs know the Guidelines least, 29 per cent against 77 in senior management. % [slide 11, D6, M23]
 We acknowledge that these are stated choices from unweighted online panels, and the employer splits remain preliminary. % [S4, S5; EB s9 l.183]
 A measurement step would show why PMEs who want an arrangement do not ask; a bounded pilot would show whether the compressed week works in practice. % [B6, P2]
-For example, MRSD could lead the measurement step, and SNEF a voluntary compressed-week pilot with volunteer firms, with NTUC co-designing safeguards. % owners as on M-options
+For discussion: which of these could the partners take forward, and who could lead each? % open question
 }
 
 % ==========================================================================
@@ -1593,7 +1547,7 @@ So the case is for a voluntary, evaluated pilot, not a roll-out: SNEF could recr
   % TODO(PI): re-check the UK DBT timeline (Employment Rights Act 2025) in Jan 2027 (EB P20, s14)
   % Check date: EB P20 sources GOV.UK updated 5 Oct 2026, DBT timeline 25 Sep 2026; EB s14 fact-check log, 6 Oct 2026
   \SourceNote{\textbf{Sources:} MOM COS 2026, FAQ (Jun 2026); Workgroup report (2024); gov.uk/flexible-working; Fair Work Act 2009 ss65--65C; Employment Relations Act 2000 (NZ) Part 6AA. Checked 6 Oct 2026.}
-  \BackToTwo{M-options}{Options}{M-question}{Question}
+  \BackToTwo{M-discussion}{Findings}{M-question}{Question}
 \end{frame}
 
 % ==========================================================================
@@ -2107,7 +2061,7 @@ So the case is for a voluntary, evaluated pilot, not a roll-out: SNEF could recr
   % [S7] survey wording, both questionnaires: same total hours across fewer days
   % EB s9: the employer task is a hire, not an operating-cost measure
   \SourceNote{Both surveys: the same total hours over fewer, longer days. The hiring choices did not record rostering, coverage or fatigue.}
-  \BackToTwo{B-puzzle-main}{Compressed week}{M-options}{Options}
+  \BackToTwo{B-puzzle-main}{Compressed week}{M-discussion}{Findings}
 \end{frame}
 
 % Round 5: the table prints employer % discounts [R6, R7, G6], so the frame carries the model-dependent header
@@ -2119,7 +2073,7 @@ So the case is for a voluntary, evaluated pilot, not a roll-out: SNEF could recr
   % [S7] 4 of 5 days; [R6, R7, G6] about pro-rata; [M13] part-time 35% where neither concern; [P11] PTRG under review, no enhancement by 6 Oct 2026
   % Declutter: [P5] 5.9% vs 13.7% part-time share of all women 25-64 is on B-laboursupply.
   \SourceNote{Part-time draws a larger required cut because it cuts more hours.}
-  \BackToTwo{M-options}{Options}{M-where}{Reservations}
+  \BackToTwo{M-discussion}{Findings}{M-where}{Reservations}
 \end{frame}
 
 % ==========================================================================
@@ -2261,7 +2215,7 @@ So the case is for a voluntary, evaluated pilot, not a roll-out: SNEF could recr
       \end{itemize}
     \end{column}
   \end{columns}
-  \BackTo{M-options}{Options}
+  \BackTo{M-discussion}{Findings}
 \end{frame}
 
 \begin{frame}[t,label=B-followup]{Follow-up design, if supported}
@@ -2310,7 +2264,7 @@ So the case is for a voluntary, evaluated pilot, not a roll-out: SNEF could recr
   {% [D2x] take-up 31 [33]
    Output, coverage, rostering, fatigue; take-up where available (31\%).}
   {\SourceNote{Associations, not causes: a policy may follow offering. Hiring choices do not measure operating costs.}%
-   \BackToTwo{M-options}{Options}{B-puzzle-main}{Puzzle}}
+   \BackToTwo{M-discussion}{Findings}{B-puzzle-main}{Puzzle}}
 
 \OptionFrame{B-optB}{Option B: fit arrangements to the role, with flexi-load}
   {\textbf{Zone:} B, depends on the role\quad\textbf{Strength:} moderate; preliminary associations}
@@ -2326,7 +2280,7 @@ So the case is for a voluntary, evaluated pilot, not a roll-out: SNEF could recr
   {% [B1] fairness top challenge at 200 or fewer staff, 28%; [P5] COS 2026 speech: under half who needed part-time got it, 2024
    Fairness to staff without FWAs (top challenge, $\le$200 staff); part-time access (COS 2026: under half who needed it got it).}
   {\SourceNote{Associations; asked after the choices. \hyperlink{B-flexiload}{\textcolor{Navy}{Flexi-load}}.}%
-   \BackToTwo{M-options}{Options}{M-where}{Reservations}}
+   \BackToTwo{M-discussion}{Findings}{M-where}{Reservations}}
 
 % [S7] 3-4 WFH days is a tested attribute level; W5 M-options row C
 \OptionFrame{B-optC}{Option C: a 3--4-day WFH pilot where roles allow}
@@ -2341,7 +2295,7 @@ So the case is for a voluntary, evaluated pilot, not a roll-out: SNEF could recr
    Not a push for fully remote work (mixed evidence; some studies find lower productivity); not a mandate; no pay change.}
   {Output, retention, collaboration; whether managers' concerns are borne out.}
   {\SourceNote{Bloom, Han \& Liang (2024); Barrero, Bloom \& Davis (2023); Emanuel \& Harrington (2024).}%
-   \BackToTwo{M-options}{Options}{M-meet}{Two sides}}
+   \BackToTwo{M-discussion}{Findings}{M-meet}{Two sides}}
 
 \OptionFrame{B-optD}{Option D: why-not-request and partial-approval items}
   {\textbf{Zone:} all (measurement)\quad\textbf{Strength:} gap documented}
@@ -2358,7 +2312,7 @@ So the case is for a voluntary, evaluated pilot, not a roll-out: SNEF could recr
   {% [D6] junior 29 [25] familiar; [P15] about 6% of FWA users reported a setback in 2025, experience not expectation
    Partial approvals; junior PMEs' awareness (29\% familiar); expected penalty vs MOM's reported setbacks (\ap 6\% of FWA users, 2025).}
   {\SourceNote{Surveyed samples, unweighted.}%
-   \BackToTwo{M-options}{Options}{M-barriers}{Barriers}}
+   \BackToTwo{M-discussion}{Findings}{M-barriers}{Barriers}}
 
 \begin{frame}[t,label=B-optD-items]{Option D: draft survey items}
   \FrameTop
@@ -2390,7 +2344,7 @@ So the case is for a voluntary, evaluated pilot, not a roll-out: SNEF could recr
     \end{column}
   \end{columns}
   \SourceNote{Draft for MRSD, to check against EWC and CoE questionnaires; item 1 appears new. Employee items first; any establishment items would sit in existing MOM surveys, for the partners to decide. \hyperlink{B-optD}{\textcolor{Navy}{Option D}}.}
-  \BackToTwo{M-options}{Options}{M-conclusion}{Conclusion}
+  \BackToTwo{M-discussion}{Findings}{M-conclusion}{Conclusion}
 \end{frame}
 
 % ==========================================================================

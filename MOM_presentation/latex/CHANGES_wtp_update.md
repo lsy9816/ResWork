@@ -147,3 +147,5 @@ part-time 24); results_fwa/fwa_diagnosis.csv also holds the "adjusted" share (ti
 - Slide 14: left card now shows FWA availability (any of five) and Guidelines familiarity by job level (scripts/pme_level_access.py -> data/pme_level_access.csv); title "All levels value WFH alike, but juniors have less access".
 
 - Slides 16-17: row and option wording follow the job-level findings (little WFH cut where roles need no presence -> start with 1-2 days; juniors have less access -> open access; appraise by output at all levels); notes updated.
+
+- Slides 16-17 merged into one findings-to-directions table with option letters A-D (links to back-ups); options table with owners and evidence strength removed from the main deck; closing slide now "Summary and discussion" with a neutral discussion prompt (no "we propose D and A"). Main deck is 18 slides.
