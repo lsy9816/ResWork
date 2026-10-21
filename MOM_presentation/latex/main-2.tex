@@ -380,7 +380,7 @@
 % path below plus every backup; return links to omitted main slides go to the index.
 \def\ShortLabels{M-title,M-motivation,M-question,M-benchmark,M-design,M-pmes,M-why-pmes,M-employers,M-where,M-meet,M-barriers,M-employer-barriers,M-discussion,M-conclusion,M-thanks}
 \ifdefined\ShortPath
-  \includeonlyframes{M-title,M-motivation,M-question,M-benchmark,M-design,M-pmes,M-why-pmes,M-employers,M-where,M-meet,M-barriers,M-employer-barriers,M-discussion,M-conclusion,M-thanks,B-index,B-index-all,B-literature,B-references,B-estimation,B-groups,B-robust,B-puzzle-main,B-fwa-current,B-fwa-table,B-laboursupply,B-talent,B-triangulation,B-guidelines,B-partners,B-legal,B-intl,B-validity,B-sample,B-industry,B-governance,B-cards,B-paygaps,B-hedonic,B-methods,B-landscape,B-setup,B-emp-all,B-remote-commute,B-emp-benchmarks,B-why-pmes,B-emp-groups,B-access,B-emp-robust,B-org-robust,B-org-salary,B-why-org,B-org-splits,B-org-concerns,B-org-concerns4,B-org-view,B-industry-note,B-modelfree,B-puzzle,B-pilot,B-flexiload,B-career-who,B-career,B-level-access,B-tgfwar,B-awareness,B-approvals,B-approvals-tab,B-requestrate,B-limits,B-nextsteps,B-followup,B-optA,B-optB,B-optC,B-optD,B-optD-items,B-why-org-tests,B-language,B-org-pct,B-gap,B-ra-gender,B-ra-age,B-ra-care,B-ra-role,B-ra-edu,B-ra-sameside,B-ra-trim}
+  \includeonlyframes{M-title,M-motivation,M-question,M-benchmark,M-design,M-pmes,M-why-pmes,M-employers,M-where,M-meet,M-barriers,M-employer-barriers,M-discussion,M-conclusion,M-thanks,B-index,B-index-all,B-literature,B-references,B-estimation,B-groups,B-robust,B-puzzle-main,B-fwa-current,B-fwa-table,B-laboursupply,B-talent,B-triangulation,B-guidelines,B-partners,B-legal,B-intl,B-validity,B-sample,B-industry,B-governance,B-cards,B-paygaps,B-hedonic,B-methods,B-landscape,B-setup,B-emp-all,B-remote-commute,B-emp-benchmarks,B-why-pmes,B-emp-groups,B-access,B-emp-robust,B-org-robust,B-org-salary,B-why-org,B-org-splits,B-org-concerns,B-org-concerns4,B-org-view,B-industry-note,B-modelfree,B-puzzle,B-pilot,B-flexiload,B-career-who,B-career,B-level-access,B-tgfwar,B-awareness,B-approvals,B-approvals-tab,B-requestrate,B-limits,B-nextsteps,B-followup,B-optA,B-optB,B-optC,B-optD,B-optD-items,B-language,B-org-pct,B-gap,B-ra-gender,B-ra-age,B-ra-care,B-ra-role,B-ra-edu,B-ra-sameside,B-ra-trim}
 \fi
 
 \begin{document}
@@ -784,8 +784,8 @@ Next, does the pay cut employers ask for depend on where they need people on sit
   \Interp{Where most roles need on-site presence, the WFH pay cut is 28 to 49 points larger.\\ Other arrangements show no such difference, yet few firms offer them. Early evidence only.}
   \Backups{\BL{B-why-org}{Tests}\BL{B-org-concerns}{Concerns}\BL{B-org-view}{Employer view}}
 \end{frame}
-\note{[Short path] We split employers by whether most PME roles need on-site presence: 137 firms say most roles do, 260 say some or few. Where they do, firms would require a much larger pay cut for any WFH: 52 against 3 per cent for one to two days, 60 against 25 for three to four days, 67 against 40 for fully remote. The WFH difference is statistically significant (p = .025) but not after correcting for the many splits we tested. % [M10, wtp_deck, employer_splits]
-For the other arrangements we detect no difference: the compressed week 1 against 8 per cent, job sharing 24 against 23, part-time 32 against 36; staggered hours are higher where presence is needed, 22 against 7, but not significantly. The intervals are wide, with 137 firms in one group, so we read this as no detectable difference, not as proof of none. % [employer_splits, p = .60]
+\note{[Short path] We split employers by whether most PME roles need on-site presence: 137 firms say most roles do, 260 say some or few. Where they do, firms would require a much larger pay cut for any WFH: 52 against 3 per cent for one to two days, 60 against 25 for three to four days, 67 against 40 for fully remote. The WFH differences are large and the intervals are wide; this is a preliminary association from one survey. % [M10, wtp_deck, employer_splits]
+For the other arrangements we detect no difference: the compressed week 1 against 8 per cent, job sharing 24 against 23, part-time 32 against 36; staggered hours are higher where presence is needed, 22 against 7, but not significantly. The intervals are wide, with 137 firms in one group, so we read this as no detectable difference, not as proof of none. % [employer_splits]
 So on-site needs mostly rule out location flexibility, not necessarily schedule or load. [Backup: tests; concerns.]}
 
 \begin{frame}[t,label=M-concerns]{Employers' main concerns do not reliably change the pay cut}
@@ -796,7 +796,7 @@ So on-site needs mostly rule out location flexibility, not necessarily schedule 
   \FigC{F_org_concerns_m}
   \Interp{Firms that agree with a concern expect somewhat bigger cuts, but not reliably.\\ Creativity, a fourth concern, shows the clearest signal (see backup).}
   \SourceNote{Agree = 4--5 of 5; neutral or disagree = 1--3. Job sharing and part-time: see backup.}
-  \Backups{\BL{B-org-concerns4}{Four concerns}\BL{B-why-org-tests}{All tests}\BL{B-org-view}{Employer view}}
+  \Backups{\BL{B-org-concerns4}{Four concerns}\BL{B-org-view}{Employer view}}
 \end{frame}
 \note{[Full deck only] On the previous slide employers named productivity, coordination and fairness as their main challenges. Here we ask whether firms that share each concern expect a bigger pay cut. The answer is: not reliably. Group sizes, agree against neutral or disagree: productivity 223 and 174 firms, coordination 213 and 184, fairness 184 and 213, creativity 201 and 196. A fourth concern, creativity, shows the clearest signal and is in the backup (full figure). Across all four concerns, firms that share the concern ask for more in 23 of 28 comparisons, on average 16 points more for the creativity concern, 10 for productivity, 5 for coordination and 3 for fairness. For WFH both groups ask for large cuts; for the compressed week and staggered hours, firms without the concern ask for nothing (about minus 3 per cent) while concerned firms ask for 15 to 22. But only three of the 28 differences are significant at 5 per cent, none after correcting for 28 tests. % [employer_splits]
 Fairness is new here: it shows no difference at all. So concerns point the same way, but on-site needs are the more reliable guide. Back to PMEs: do their values differ by job level?}
@@ -1050,7 +1050,7 @@ B and C are exploratory: the presence result comes from the employer survey alon
       \BH{Directions}
       \mbox{\BIi{B-optA}{Direction A}}\enspace\BIi{B-optB}{B}\enspace\BIi{B-optC}{C}\enspace\BIi{B-optD}{D}\enspace\BIi{B-optE}{E}\enspace\textcolor{Muted}{$\cdot$}\enspace \mbox{\BIi{B-optD-items}{E: items}}\par
       \BH{Technical appendix}
-      \mbox{\BIi{B-why-org-tests}{11 employer tests}}\enspace\textcolor{Muted}{$\cdot$}\enspace \mbox{\BIi{B-language}{Wording}}\par
+      \mbox{\BIi{B-language}{Wording}}\par
       \mbox{\BIi{B-org-pct}{Employer \% of salary}}\enspace\textcolor{Muted}{$\cdot$}\enspace \mbox{\BIi{B-gap}{Gap}}\par
       \mbox{\BIi{B-fwa-table}{Numbers}}\enspace\textcolor{Muted}{$\cdot$}\enspace \mbox{\BIi{B-fwa-current}{Users vs others}}\par
       \BH{PME groups}
@@ -1229,7 +1229,7 @@ We acknowledge that no pair had equal pay and gaps ran from 17 to 33 per cent, s
 MOM, SNEF and NTUC can rely on the rankings; per cent of pay is a rough size, never a proposed pay cut. % [V1-V5]
 Next, what PMEs and firms do today.}
 
-\begin{frame}[t,label=B-groups]{No subgroup difference detected after correction}
+\begin{frame}[t,label=B-groups]{No clear subgroup differences}
   % F_groups_m (fig_v2.py, 13.0 x 5.0 cm; compressed-week column removed, ROUND5_SPEC s4):
   % PME equal-pay shares with 95% CIs by gender, age (19-39 / 40+) and caregiving (none / any),
   % for 1-2 WFH days, 3-4 WFH days and fully remote (vs a long commute); 50% reference [s3b].
@@ -1703,27 +1703,25 @@ So the case is for a voluntary, evaluated pilot, not a roll-out: SNEF could recr
   \BackToTwo{M-pmes}{PMEs}{B-literature}{Literature}
 \end{frame}
 
-\begin{frame}[t,label=B-why-pmes]{PME splits: one survives correction}
+\begin{frame}[t,label=B-why-pmes]{PME splits by seven characteristics}
   \FrameTop
-  % WTP basis: group-specific pay slopes (pme_channels.csv, block wtp / fiwtp); values in % of pay given up, group A / group B
   {\TableFont\setlength{\tabcolsep}{2.5pt}\renewcommand{\arraystretch}{1.05}%
-  \begin{tabularx}{\linewidth}{@{}>{\RaggedRight}X>{\centering}p{1.6cm}>{\centering}p{1.3cm}>{\centering}p{1.3cm}>{\centering}p{1.3cm}>{\centering}p{1.3cm}>{\centering}p{1.0cm}>{\centering}p{1.0cm}>{\centering\arraybackslash}p{0.82cm}@{}}
+  \begin{tabularx}{\linewidth}{@{}>{\RaggedRight}X>{\centering}p{1.6cm}>{\centering}p{1.3cm}>{\centering}p{1.3cm}>{\centering}p{1.3cm}>{\centering\arraybackslash}p{1.3cm}@{}}
     \toprule
-    % [S7] attribute levels: 1-2 and 3-4 WFH days a week
-    \textbf{Split (A / B)} & \textbf{n} & \textbf{1--2 days} & \textbf{3--4 days} & \textbf{Remote}\textsuperscript{a} & \textbf{Compr.} & \textbf{p} & \textbf{p compr.} & \textbf{q}\\
+    \textbf{Split (A / B)} & \textbf{n} & \textbf{1--2 days} & \textbf{3--4 days} & \textbf{Remote}\textsuperscript{a} & \textbf{Compr.}\\
     \midrule
-    Career penalty: y / n & 455 / 565 & 2 / 10 & 2 / 14 & 9 / 19 & 10 / 6 & .002 & .15 & .012\\
-    Commute $>$ / $\le$45 min & 305 / 681 & 6 / 8 & 10 / 8 & 11 / 22 & 6 / 8 & .015 & .54 & .051\\
-    WFH now: y / n & 666 / 338 & 9 / 5 & 12 / 5 & 19 / 10 & 8 / 6 & .094 & .50 & .22\\
-    Pay $>$ / $\le$S\$6,000 & 408 / 435 & 8 / 7 & 11 / 10 & 17 / 13 & 9 / 6 & .77 & .33 & .77\\
-    Public / local / MNC & 171/383/412 & 8/9/7 & 6/11/9 & 21/15/14 & 7/7/8 & .68 & .93 & .77\\
-    Tenure: 3+ / $<$3 years & 805 / 199 & 7 / 6 & 9 / 12 & 15 / 15 & 7 / 8 & .62 & .69 & .77\\
-    Mothers, child 0--6 / rest & 108 / 912 & 11 / 7 & 17 / 9 & 21 / 14 & 7 / 7 & .33 & 1.00 & .58\\
+    Career penalty: y / n & 455 / 565 & 2 / 10 & 2 / 14 & 9 / 19 & 10 / 6\\
+    Commute $>$ / $\le$45 min & 305 / 681 & 6 / 8 & 10 / 8 & 11 / 22 & 6 / 8\\
+    WFH now: y / n & 666 / 338 & 9 / 5 & 12 / 5 & 19 / 10 & 8 / 6\\
+    Pay $>$ / $\le$S\$6,000 & 408 / 435 & 8 / 7 & 11 / 10 & 17 / 13 & 9 / 6\\
+    Public / local / MNC & 171/383/412 & 8/9/7 & 6/11/9 & 21/15/14 & 7/7/8\\
+    Tenure: 3+ / $<$3 years & 805 / 199 & 7 / 6 & 9 / 12 & 15 / 15 & 7 / 8\\
+    Mothers, child 0--6 / rest & 108 / 912 & 11 / 7 & 17 / 9 & 21 / 14 & 7 / 7\\
     \bottomrule
   \end{tabularx}\par}
   \vspace{0.08cm}
-  \Body{\textbf{Reading:} only the career-concern split survives correction (location); about 40\% of its gap could be choice noise, and it was asked after the choices.}
-  \SourceNote{Group A / group B. p, q: test that location values are equal across groups. Compr. = compressed week.}
+  \Body{\textbf{Reading:} the career-concern split shows the clearest difference in WFH values; it was asked after the choices, so part of the gap may be choice noise.}
+  \SourceNote{Group A / group B, \% of pay PMEs would give up. Compr. = compressed week.}
   \BackToTwo{M-why-pmes}{Career concerns}{B-groups}{PME groups}
 \end{frame}
 
@@ -1732,7 +1730,6 @@ So the case is for a voluntary, evaluated pilot, not a roll-out: SNEF could recr
   % [M9] access row: compressed week 58.7 vs 58.1 at equal pay, p = .86; E19 not robust; [M7] further splits on B-why-pmes
   \FrameTop
   \Fig{F_emp_groups}{5.2cm}
-  \SourceNote{p: test that all pay values are equal across the groups.}
   \BackToTwo{B-groups}{PME groups}{M-why-pmes}{Career concerns}
 \end{frame}
 
@@ -1781,23 +1778,22 @@ So the case is for a voluntary, evaluated pilot, not a roll-out: SNEF could recr
     % [S7] attribute levels: 1-2 and 3-4 WFH days a week
     \textbf{Pay cut required, \% of pay} & \textbf{Firms} & \textbf{1--2 days} & \textbf{3--4 days} & \textbf{Remote} & \textbf{Compressed}\\
     \midrule
-    \multicolumn{6}{@{}l}{\textbf{Do most PME roles need on-site presence?}\enspace p = .025,\ q = .14}\\
+    \multicolumn{6}{@{}l}{\textbf{Do most PME roles need on-site presence?}}\\
     \quad Yes, most roles & 137 & \textbf{\color{Employer}52} & 60 & 67 & 1\\
     \quad Only some or few & 260 & \textbf{\color{Employer}3} & 25 & 40 & 8\\
     \midrule
-    \multicolumn{6}{@{}l}{\textbf{Worried that creativity suffers when people are apart?}\enspace p = .14,\ q = .43}\\
+    \multicolumn{6}{@{}l}{\textbf{Worried that creativity suffers when people are apart?}}\\
     \quad Yes & 201 & 24 & 44 & \textbf{\color{Employer}61} & 18\\
     \quad No & 196 & 15 & 28 & \textbf{\color{Employer}36} & $-$3\\
     \bottomrule
   \end{tabularx}\par}
   \vspace{0.06cm}
   \begin{itemize}\setlength{\itemsep}{0.04cm}
-    \item \textbf{The presence contrast is significant at the 5\% level} (p = .025) but not after correcting for the 11 split tests (q = .14); the creativity contrast is not (p = .14).
+    \item \textbf{The presence contrast is the larger one:} 52 against 3 per cent for 1--2 days; the creativity contrast shows only for fully remote work (61 against 36).
     % EB s9 l.182: presence and concern items sit in Block 5, after the DCE block
     \item \textbf{Asked after the choices:} the answers may partly rationalise the hiring choices.
     \item \textbf{Separate pay slope for each group:} values are group-specific, so they are preliminary associations.
   \end{itemize}
-  \SourceNote{p: test that location values are equal across the groups; q: multiple-test correction.}
   \BackTo{M-where}{Reservations}
 \end{frame}
 
@@ -1805,7 +1801,7 @@ So the case is for a voluntary, evaluated pilot, not a roll-out: SNEF could recr
 % EB s10 QID22_6: a survey item, labelled salary offset, never FWAs let firms pay less (fixer pass 7 Oct 2026, worker-03)
 \BackupFig{B-org-concerns4}{Four concerns: only creativity shows a signal}{F_org_concerns4_m}{5.4cm}{M-concerns}{Concerns}{Pay cut required, 95\% CI; agree = 4--5 of 5; neutral or disagree = 1--3.  Item-level p $<$ .05 only for creativity (fully remote, staggered hours), not corrected for 28 comparisons.}
 
-\BackupFig{B-org-splits}{All employer splits}{F_org_splits}{5.4cm}{M-where}{Reservations}{Pay cut required, 95\% CI. Presence and no WFH today: p $\approx$ .02 each, q = .14 over all \hyperlink{B-why-org-tests}{\textcolor{Navy}{11 split tests}}; creativity p = .14, q = .43. Preliminary: asked after the choices. Salary offset: agrees that offering FWAs reduces the salary needed to attract and retain PMEs (survey item).}
+\BackupFig{B-org-splits}{All employer splits}{F_org_splits}{5.4cm}{M-where}{Reservations}{Pay cut required, 95\% CI. Presence and no WFH today show the largest differences. Preliminary: asked after the choices. Salary offset: agrees that offering FWAs reduces the salary needed to attract and retain PMEs (survey item).}
 
 % [B2] agreement shares; [Q11, R14b, M12] creativity p = .003, q about .06; Lead decision 6: concerns, not beliefs
 % EB s9 l.183: no free-slope check yet for the presence and creativity splits; EB s9 l.182: items asked after the choices
@@ -2192,7 +2188,7 @@ So the case is for a voluntary, evaluated pilot, not a roll-out: SNEF could recr
   {\textbf{Direction:} B\quad\textbf{Strength:} exploratory; preliminary associations}
   {% [Q10, M10] 27 vs 48 (appended); [Q10b] 50 (appended); [Q10c] p = .002 vs 1-2 days; [M12] p = .006, q = .058 over 20 splits; EB s9 l.183 one pay slope, free-slope check pending
    % [M13] part-time 35 where neither presence need nor creativity concern
-   Where most roles need presence, firms would require a pay cut of about 52\% for 1--2 WFH days, against 3\% where only some or few do (PMEs would give up about 7\%; PMEs were not asked about presence). A compressed week: about 1\%. Presence: p = .025 (q = .14 over 11 split tests; preliminary).}
+   Where most roles need presence, firms would require a pay cut of about 52\% for 1--2 WFH days, against 3\% where only some or few do (PMEs would give up about 7\%; PMEs were not asked about presence). A compressed week: about 1\%. Preliminary.}
   {% [P11] Job Redesign+ up to 70% of qualifying costs for SMEs, 50% for others; PTRG under review for flexi-load
    % [Q10c] say "a compressed week may fit where WFH does not" (fixer pass 7 Oct 2026, employer-11; fact_audit s3 item 6)
    \textbf{Firms}, with SNEF: review which tasks need presence; start with 1--2 WFH days where roles allow; a compressed week may fit where WFH does not; use flexi-load where fewer hours, not location, address the need. Job Redesign+: up to 70\% of qualifying costs for SMEs, 50\% for others. \textbf{MOM:} PTRG review.}
@@ -2282,33 +2278,6 @@ So the case is for a voluntary, evaluated pilot, not a roll-out: SNEF could recr
 % ==========================================================================
 % Technical appendix
 % ==========================================================================
-\begin{frame}[t,label=B-why-org-tests]{Technical: all 11 employer split tests}
-  \FrameTop % first body token (centring; never a frame subtitle)
-  % Appended sample (n = 397): ratio tests of equal location WTPs across groups (group-specific pay slopes), data/wtp_deck.csv (ratio_p);
-  % q = Benjamini-Hochberg over the 11 tests; 3-group splits use the joint 6-df test
-  {\TableFont\setlength{\tabcolsep}{4pt}\renewcommand{\arraystretch}{1.0}%
-  \begin{tabularx}{\linewidth}{@{}>{\RaggedRight}X>{\centering}p{3.2cm}>{\centering}p{1.6cm}>{\centering\arraybackslash}p{1.6cm}@{}}
-    \toprule
-    \textbf{Split} & \textbf{Firms} & \textbf{p} & \textbf{q}\\
-    \midrule
-    No WFH now & 96 / 301 & .023 & .14\\
-    Presence need & 137 / 260 & .025 & .14\\
-    Creativity concern & 201 / 196 & .14 & .43\\
-    Concern index & 260 / 137 & .19 & .43\\
-    Written policy & 276 / 121 & .19 & .43\\
-    Hiring role (3 groups) & 84 / 122 / 170 & .36 & .61\\
-    Productivity concern & 223 / 174 & .39 & .61\\
-    Coordination concern & 213 / 184 & .47 & .62\\
-    Salary offset & 187 / 210 & .51 & .62\\
-    Firm size (3 bands) & 175 / 140 / 82 & .63 & .66\\
-    Tech readiness (3 levels) & 29 / 209 / 159 & .66 & .66\\
-    \bottomrule
-  \end{tabularx}\par}
-  % EB s9 l.182: presence and concern items sit in Block 5, after the DCE block
-  \SourceNote{p: test that location values are equal across groups; q: multiple-test correction.}
-  \BackTo{M-where}{Reservations}
-\end{frame}
-
 % Round 5: in the technical appendix (presenter preparation, not for projection); wording follows the
 % round-5 language rules (MANDATE, Evidence and language rules; ROUND5_SPEC s6).
 \begin{frame}[t,label=B-language]{Public wording}

@@ -313,8 +313,7 @@ def fig_groups_m():
     W, H = fig.W, fig.H
     lab_w = max(V.tw_cm(fig, r[2], S.FS_ROW, "bold" if r[0] == "main" else "normal") for r in rows)
     LX = 0.05 + lab_w
-    P_HEAD = ("Joint", "test p")
-    PCW = max([V.tw_cm(fig, ".43", S.FS_ROW)] + [V.tw_cm(fig, s_, S.FS_HEAD, "bold") for s_ in P_HEAD]) + 0.10
+    PCW = 0.0   # no test column: the intervals carry the comparison
     PX0, GAP = LX + 0.15, 0.30
     PW = (W - 0.05 - PCW - 0.30 - PX0 - 2 * GAP) / 3
     AY, AT = 1.15, H - 0.62
@@ -348,13 +347,6 @@ def fig_groups_m():
     for (sp, g, lab), y in zip(rows, ys):
         M.ftext(fig, LX, fy(y), lab, ha="right", va="center", fontsize=S.FS_ROW, color=S.INK,
                 fontweight="bold" if sp == "main" else "normal")
-    xp = W - 0.05 - PCW
-    M.ftext(fig, xp, AT + 0.10, P_HEAD[0], ha="left", va="bottom", fontsize=S.FS_HEAD, color=S.INK, fontweight="bold")
-    M.ftext(fig, xp, AT + 0.06, P_HEAD[1], ha="left", va="top", fontsize=S.FS_HEAD, color=S.INK, fontweight="bold")
-    for (sp, a, b), (ya, yb_) in zip(splits, ((7.6, 6.8), (5.4, 4.6), (3.2, 2.4))):
-        pv = get("pme", "joint_p", split=sp, group=-1)
-        M.ftext(fig, xp, (fy(ya) + fy(yb_)) / 2, ("%.2f" % pv).lstrip("0"), ha="left", va="center",
-                fontsize=S.FS_ROW, color=S.INK)
     nohead(fig, name, "Pay PMEs would give up, % of monthly pay")
     keys = [("o", "white", S.EMPLOYEE, S.MS_CIRCLE, "first group listed", S.INK, "normal"),
             ("o", S.EMPLOYEE, S.EMPLOYEE, S.MS_CIRCLE, "second", S.INK, "normal")]

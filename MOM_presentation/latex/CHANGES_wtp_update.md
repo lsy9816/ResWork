@@ -153,3 +153,5 @@ part-time 24); results_fwa/fwa_diagnosis.csv also holds the "adjusted" share (ti
 - Slides 16-17: results summary ("What we found", four lines) and policy directions (Direction / Based on, slide numbers, letters A-D link to the back-ups); discussion prompt on the policy slide; old summary-and-decision slide removed.
 
 - Appendix aligned with the main deck: zone slides (B-framework, B-zones) removed; direction back-ups A-E (B-optA..E; new C managers and HR, new D juniors, old D measurement is now E); new B-level-access; index updated; joint-test p values removed from captions and T_concerns; M-conclusion back-links relabelled Summary; Findings -> Directions.
+
+- Joint tests removed everywhere: p/q columns dropped from F_emp_groups, F_groups_m, F_org_splits (figures regenerated), B-why-pmes and B-why-org tables, T_access; B-why-org-tests removed; slide 12 note no longer cites the joint presence test. Individual tests and 95% intervals stay.

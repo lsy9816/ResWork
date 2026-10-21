@@ -135,7 +135,7 @@ def fig_emp_groups():
         if i < len(rows) - 1 and rows[i + 1][0] != r[0]:
             y -= 0.45
     LX = 0.05 + max(V.tw_cm(fig, r[2], S.FS_ROW) for r in rows)
-    PCW = 0.9
+    PCW = 0.0   # no test column: the intervals carry the comparison
     PX0, GAP = LX + 0.15, 0.30
     PW = (Wd - 0.05 - PCW - 0.20 - PX0 - 3 * GAP) / 4
     AY, AT = 1.20, H - 0.55
@@ -170,13 +170,6 @@ def fig_emp_groups():
     for i in range(1, len(rows)):
         if rows[i][0] != rows[i - 1][0]:
             V.hline_cm(fig, 0.05, Wd - 0.05, fy((ys[i] + ys[i - 1]) / 2), **S.SEP)
-    xp = Wd - 0.05 - PCW
-    M.ftext(fig, xp + 0.1, AT + 0.08, "p", ha="left", va="bottom", fontsize=S.FS_HEAD, color=S.INK, fontweight="bold")
-    for sp in ("gender", "age", "care_type"):
-        idx = [i for i, r in enumerate(rows) if r[0] == sp]
-        pv = W.get("pme", "joint_p", split=sp, group=-1)
-        M.ftext(fig, xp, fy(sum(ys[i] for i in idx) / len(idx)), ("%.2f" % pv).lstrip("0"), ha="left", va="center",
-                fontsize=S.FS_ROW, color=S.INK)
     W.nohead(fig, name, "Pay PMEs would give up, % of monthly pay")
     keys = [("o", "white", S.EMPLOYEE, S.MS_CIRCLE, "first group listed", S.INK, "normal"),
             ("o", S.EMPLOYEE, S.EMPLOYEE, S.MS_CIRCLE, "others", S.INK, "normal")]
@@ -225,7 +218,7 @@ def fig_org_splits():
         labs.append(f"{lab}  {n1} / {n0}")
     LX = 0.05 + max(V.tw_cm(fig, t, S.FS_ROW) for t in labs)
     PX0, GAP = LX + 0.15, 0.25
-    PW_, QW_ = 0.85, 0.85
+    PW_, QW_ = 0.45, 0.0   # no p and q columns: the intervals carry the comparison
     PW = (Wd - 0.05 - PW_ - QW_ - PX0 - 3 * GAP) / 3
     AY, AT = 1.20, H - 0.55
     n = len(SPL_ROWS)
@@ -254,14 +247,6 @@ def fig_org_splits():
                 fontweight="bold", color=S.EMPLOYER)
     for (s, lab, g), yy, t in zip(SPL_ROWS, ys, labs):
         M.ftext(fig, LX, fy(yy), t, ha="right", va="center", fontsize=S.FS_ROW, color=S.INK)
-        p, q = tests[s]
-        xp = Wd - 0.05 - PW_ - QW_
-        M.ftext(fig, xp, fy(yy), "<.001" if p < 0.001 else ("%.3f" % p if p < 0.1 else "%.2f" % p).lstrip("0"),
-                ha="left", va="center", fontsize=S.FS_ROW, color=S.INK)
-        M.ftext(fig, xp + PW_, fy(yy), "<.001" if q < 0.001 else ("%.2f" % min(q, 0.99)).lstrip("0") if q < 0.995 else "≥.99",
-                ha="left", va="center", fontsize=S.FS_ROW, color=S.INK)
-    M.ftext(fig, Wd - 0.05 - PW_ - QW_, AT + 0.08, "p", ha="left", va="bottom", fontsize=S.FS_HEAD, color=S.INK, fontweight="bold")
-    M.ftext(fig, Wd - 0.05 - QW_, AT + 0.08, "q", ha="left", va="bottom", fontsize=S.FS_HEAD, color=S.INK, fontweight="bold")
     M.ftext(fig, 0.05, AT + 0.08, "n: with feature / others", ha="left", va="bottom", fontsize=S.FS_CAP, color=S.MUTED)
     W.nohead(fig, name, "Pay cut employers would require, % of pay")
     keys = [("D", S.EMPLOYER, S.EMPLOYER, 4.6, "with feature", S.INK, "normal"),
