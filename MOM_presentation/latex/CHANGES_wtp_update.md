@@ -155,3 +155,8 @@ part-time 24); results_fwa/fwa_diagnosis.csv also holds the "adjusted" share (ti
 - Appendix aligned with the main deck: zone slides (B-framework, B-zones) removed; direction back-ups A-E (B-optA..E; new C managers and HR, new D juniors, old D measurement is now E); new B-level-access; index updated; joint-test p values removed from captions and T_concerns; M-conclusion back-links relabelled Summary; Findings -> Directions.
 
 - Joint tests removed everywhere: p/q columns dropped from F_emp_groups, F_groups_m, F_org_splits (figures regenerated), B-why-pmes and B-why-org tables, T_access; B-why-org-tests removed; slide 12 note no longer cites the joint presence test. Individual tests and 95% intervals stay.
+
+## 21 Oct 2026 - links, new appendix pages, background checks
+- Main links: policy slide letters A-E -> B-optA..B-optE (C, D linked; E fixed; B-optE added to the frame list); buttons: policy slide -> Next steps / Survey items / Pilot checklist; results summary -> Limits / Robustness; slides 8-10 got back-up buttons; slide 13 -> Other traits; slide 15 -> Use / Value.
+- New back-ups: B-org-other (employer values by plans, hiring difficulty, talent belief, turnover, technology; scripts/fwa_employer_other.py -> results_fwa/employer_other.csv), B-use-att and B-wtp-att (use and PME values by career worry and stigma; data/emp_*.csv from Dropbox dta; scripts/fig_backup_att.py), B-sg-reports (MOM WC 2024 demand/provision; WLH 2020 penalties). No joint tests. "Dominance" check not added (definition not recoverable).
+- Background corrections: B-laboursupply support ratio 3.3 (2025) -> 2.7 (2030) and 22.0% housework/caregiving share (LFS 2025), unverifiable 133,500->72,500 removed; B-guidelines grounds wording follows the SNEF-SUSS report.

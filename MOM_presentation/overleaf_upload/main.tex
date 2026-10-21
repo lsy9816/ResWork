@@ -301,7 +301,7 @@
 \AtBeginEnvironment{frame}{\global\deckSrcfalse}
 \newcommand{\BI}[2]{\hyperlink{#1}{\textcolor{myblue}{#2}}\par}
 \newcommand{\BIi}[2]{\hyperlink{#1}{\textcolor{myblue}{#2}}}
-\newcommand{\BH}[1]{\vspace{0.12cm}{\color{Ink}\fontsize{9.5}{11.4}\selectfont\bfseries #1\par}}
+\newcommand{\BH}[1]{\vspace{0.07cm}{\color{Ink}\fontsize{9.5}{11.4}\selectfont\bfseries #1\par}}
 
 % Employer update (appended sample, n = 397; appended_clogit.xlsx / appended_wtp.xlsx, 9 Oct 2026):
 % kept and shown in red until it is re-estimated. To print them normally: \renewcommand{\Pend}[1]{#1}.
@@ -380,7 +380,7 @@
 % path below plus every backup; return links to omitted main slides go to the index.
 \def\ShortLabels{M-title,M-motivation,M-question,M-benchmark,M-design,M-pmes,M-why-pmes,M-employers,M-where,M-meet,M-barriers,M-employer-barriers,M-discussion,M-conclusion,M-thanks}
 \ifdefined\ShortPath
-  \includeonlyframes{M-title,M-motivation,M-question,M-benchmark,M-design,M-pmes,M-why-pmes,M-employers,M-where,M-meet,M-barriers,M-employer-barriers,M-discussion,M-conclusion,M-thanks,B-index,B-index-all,B-literature,B-references,B-estimation,B-groups,B-robust,B-puzzle-main,B-fwa-current,B-fwa-table,B-laboursupply,B-talent,B-triangulation,B-guidelines,B-partners,B-legal,B-intl,B-validity,B-sample,B-industry,B-governance,B-cards,B-paygaps,B-hedonic,B-methods,B-landscape,B-setup,B-emp-all,B-remote-commute,B-emp-benchmarks,B-why-pmes,B-emp-groups,B-access,B-emp-robust,B-org-robust,B-org-salary,B-why-org,B-org-splits,B-org-concerns,B-org-concerns4,B-org-view,B-industry-note,B-modelfree,B-puzzle,B-pilot,B-flexiload,B-career-who,B-career,B-level-access,B-tgfwar,B-awareness,B-approvals,B-approvals-tab,B-requestrate,B-limits,B-nextsteps,B-followup,B-optA,B-optB,B-optC,B-optD,B-optD-items,B-language,B-org-pct,B-gap,B-ra-gender,B-ra-age,B-ra-care,B-ra-role,B-ra-edu,B-ra-sameside,B-ra-trim}
+  \includeonlyframes{M-title,M-motivation,M-question,M-benchmark,M-design,M-pmes,M-why-pmes,M-employers,M-where,M-meet,M-barriers,M-employer-barriers,M-discussion,M-conclusion,M-thanks,B-index,B-index-all,B-literature,B-references,B-estimation,B-groups,B-robust,B-puzzle-main,B-fwa-current,B-fwa-table,B-sg-reports,B-laboursupply,B-talent,B-triangulation,B-guidelines,B-partners,B-legal,B-intl,B-validity,B-sample,B-industry,B-governance,B-cards,B-paygaps,B-hedonic,B-methods,B-landscape,B-setup,B-emp-all,B-remote-commute,B-emp-benchmarks,B-why-pmes,B-emp-groups,B-access,B-emp-robust,B-org-robust,B-org-salary,B-why-org,B-org-splits,B-org-other,B-use-att,B-wtp-att,B-org-concerns,B-org-concerns4,B-org-view,B-industry-note,B-modelfree,B-puzzle,B-pilot,B-flexiload,B-career-who,B-career,B-level-access,B-tgfwar,B-awareness,B-approvals,B-approvals-tab,B-requestrate,B-limits,B-nextsteps,B-followup,B-optA,B-optB,B-optC,B-optD,B-optE,B-optD-items,B-language,B-org-pct,B-gap,B-ra-gender,B-ra-age,B-ra-care,B-ra-role,B-ra-edu,B-ra-sameside,B-ra-trim}
 \fi
 
 \begin{document}
@@ -673,7 +673,7 @@ Now the results, starting with PMEs. [Full deck: ``Next, how we turn these choic
   \FigC{F_emp_wtp}
   % [E1, E2] 1-2 days 7.4, 3-4 days 9.5 -> about 7-10%; [S6] pay gaps 17-33% by design (mandated wording kept)
   \Interp{PMEs value remote work most, and more with each extra day.\\ A compressed week is worth as much as 1--2 days at home; staggered hours are not valued.}
-  \vskip 0pt plus 1filll\relax
+  \Backups{\BL{B-emp-benchmarks}{Benchmarks} \BL{B-emp-robust}{Checks} \BL{B-groups}{PME groups}}
   % Note: F_emp_wtp's former footnote, verbatim, for the starred job-sharing and part-time rows [E6, E7].
   % Polish pass: "Conditional logit" leaves the source line (DESIGN_PLAN s2 W3; M-estimation and B-methods
   % carry the method). One line at 7.5 pt, 406 of 421 pt: the source names the survey, its size and month,
@@ -710,7 +710,7 @@ Now employers.
   % line 2, fixer pass 7 Oct 2026 (employer-02): MANDATE information/learning problem; [S5; EB s9] hiring choice
   % between candidates, not a request and not an operating-cost measure; the DCE cannot separate these; EB s3b 50%
   \Interp{Employers expect the biggest cut for fully remote work, and a large one for part-time.\\ A compressed week or staggered hours draw the smallest cuts.}
-  \vskip 0pt plus 1filll\relax
+  \Backups{\BL{B-org-pct}{Per cent of salary} \BL{B-org-robust}{Checks}}
   % Note: F_org_eqpay's former footnote, verbatim. [S6] no shown pair had equal pay, gaps 17-33%; EB s3b model-based share.
   % Source: the respondent wording, people involved in PME hiring or manpower decisions, stays on M-design
   % and M-data; here "employer survey, n = 397, Aug-Oct 2026" keeps the block on one line, 408 of 421 pt.
@@ -749,6 +749,7 @@ Put side by side, how far apart are the two sides?}
   % compressed-week wording: mandate "Evidence and language rules"; [Q5] 47% (41-53, appended) includes 50
   \Interp{Only for the compressed week do the two sides agree (about 7\% each).\\ For WFH, employers expect a pay cut 12 to 34 points larger than PMEs would accept.}
   \SourceNote{Gap: pay cut employers require minus pay PMEs would give up, in points of pay, with 95\% intervals.}
+  \Backups{\BL{B-gap}{Gap in \% of pay} \BL{B-modelfree}{Raw choices}}
   % Note = F_meet_r5's former footnote, verbatim (polish pass 7 Oct 2026): [s3b] equal-pay shares, 95% CIs;
   % [Q16] zones A-C are descriptive labels; [M1] PMEs' fully remote is measured against each PME's own commute.
   % [S1] 1,020 PMEs, 4-21 Aug 2026; [S2] 397 employer respondents (appended sample)
@@ -782,7 +783,7 @@ Next, does the pay cut employers ask for depend on where they need people on sit
   \FrameTop
   \FigC{F_where_pres_m}
   \Interp{Where most roles need on-site presence, the WFH pay cut is 28 to 49 points larger.\\ Other arrangements show no such difference, yet few firms offer them. Early evidence only.}
-  \Backups{\BL{B-why-org}{Tests}\BL{B-org-concerns}{Concerns}\BL{B-org-view}{Employer view}}
+  \Backups{\BL{B-why-org}{Tests}\BL{B-org-concerns}{Concerns}\BL{B-org-other}{Other traits}\BL{B-org-view}{Employer view}}
 \end{frame}
 \note{[Short path] We split employers by whether most PME roles need on-site presence: 137 firms say most roles do, 260 say some or few. Where they do, firms would require a much larger pay cut for any WFH: 52 against 3 per cent for one to two days, 60 against 25 for three to four days, 67 against 40 for fully remote. The WFH differences are large and the intervals are wide; this is a preliminary association from one survey. % [M10, wtp_deck, employer_splits]
 For the other arrangements we detect no difference: the compressed week 1 against 8 per cent, job sharing 24 against 23, part-time 32 against 36; staggered hours are higher where presence is needed, 22 against 7, but not significantly. The intervals are wide, with 137 firms in one group, so we read this as no detectable difference, not as proof of none. % [employer_splits]
@@ -850,7 +851,7 @@ Next: does a career worry change what PMEs give up?}
   % Note: F_why_pmes's former footnote. [M4] penalty = QID51_1 agree 4-5; "Associations" kept. Its second
   % [S1] 1,020 PMEs, 4-21 Aug 2026; [M4] fully interacted model, equal-pay shares, 95% CIs
   \SourceNote{Expect a penalty: agree (4--5 of 5) that flexible hours would hurt their career.}
-  \Backups{\BL{B-why-pmes}{All splits}\BL{B-career-who}{Career risk}}
+  \Backups{\BL{B-why-pmes}{All splits}\BL{B-career-who}{Career risk}\BL{B-use-att}{Use}\BL{B-wtp-att}{Value}}
 \end{frame}
 % note facts: [M4] 52 vs 64, 1% level; [M5] compressed week 59 vs 58, p = .70, no detectable difference;
 \note{[Short path] Of the 1,020 surveyed PMEs, 455 (45 per cent) expect shorter or more flexible hours to hurt their career and 565 do not. Those who expect a penalty would give up about 2 per cent of pay for one to two WFH days, against 10 per cent for other PMEs; for three to four days, 2 against 14. The location difference is statistically significant (p = .002). For the compressed week we detect no difference (p = .15). % [M4, M5]
@@ -877,7 +878,7 @@ So why do PMEs who want an arrangement not ask? The survey did not ask; we come 
     \textcolor{Employee}{\textbf{PMEs}} & Juniors have \textbf{less access} and know the Guidelines least; 45\% fear a career penalty\\
     \bottomrule
   \end{tabularx}\par}
-  \Backups{\BL{B-followup}{Follow-up} \BL{B-optD-items}{Survey items}}
+  \Backups{\BL{B-limits}{Limits} \BL{B-robust}{Robustness}}
 \end{frame}
 \note{[Short path] Four blocks of results. First, PMEs value remote work most, and more with each extra day: about 7 per cent of pay for one to two days, 10 for three to four, 15 for fully remote. Employers expect a bigger pay cut for the same arrangements; that is a hiring expectation, not a salary price. % [E1, E2, R10, S6]
 Second, only the compressed week shows common ground: PMEs value it and we detect no hiring penalty, but the evidence is moderate and operating costs are unmeasured. For WFH the gap is 12 to 34 points. % [S7, Q5, M19, M20, G1-G4]
@@ -887,7 +888,7 @@ We acknowledge that these are stated choices from unweighted online panels, and 
 }
 
 \begin{frame}[t,label=M-discussion]{Policy directions}
-  % Policy directions (21 Oct 2026): one line per direction with the finding it rests on. Letters A-E; A, B and E link to the back-ups (B-optA, B-optB, B-optD); C and D have no back-up yet.
+  % Policy directions (21 Oct 2026): one line per direction with the finding it rests on. Letters A-E link to B-optA..B-optE.
   % 1 compressed week: gap 0, access 21%, use 6.5% [slides 6, 10]; 2 roles: employer cut 3 vs 52 (1-2 days) by presence need [slide 12];
   % 3 managers and HR: hurdles [11, 13], career worry 45% [15]; 4 juniors: access 80/85/94, familiarity 29/52/77 [14]; 5 measurement gap [15].
   \FrameTop
@@ -898,16 +899,16 @@ We acknowledge that these are stated choices from unweighted online panels, and 
     \midrule
     \hyperlink{B-optA}{\textbf{\textcolor{Navy}{A}}}\enspace \textbf{Test the compressed week} & No gap; few have access\\
     \hyperlink{B-optB}{\textbf{\textcolor{Navy}{B}}}\enspace \textbf{Match arrangements to roles} & Little WFH cut where roles need no presence\\
-    \textbf{\textcolor{Navy}{C}}\enspace \textbf{Support managers and HR} & Employer hurdles; career worry\\
-    \textbf{\textcolor{Navy}{D}}\enspace \textbf{Open access and information for juniors} & Least access, lowest familiarity\\
-    \hyperlink{B-optD}{\textbf{\textcolor{Navy}{E}}}\enspace \textbf{Measure what is missing} & Why PMEs do not ask\\
+    \hyperlink{B-optC}{\textbf{\textcolor{Navy}{C}}}\enspace \textbf{Support managers and HR} & Employer hurdles; career worry\\
+    \hyperlink{B-optD}{\textbf{\textcolor{Navy}{D}}}\enspace \textbf{Open access and information for juniors} & Least access, lowest familiarity\\
+    \hyperlink{B-optE}{\textbf{\textcolor{Navy}{E}}}\enspace \textbf{Measure what is missing} & Why PMEs do not ask\\
     \bottomrule
   \end{tabularx}\par}
   \Interp{For discussion: which of these could the partners take forward?}
   \SourceNote{Stated choices from online panels; employer splits are preliminary.}
-  \Backups{\BL{B-optA}{Direction A} \BL{B-optD-items}{Survey items} \BL{B-pilot}{Pilot checklist}}
+  \Backups{\BL{B-nextsteps}{Next steps} \BL{B-optD-items}{Survey items} \BL{B-pilot}{Pilot checklist}}
 \end{frame}
-\note{[Short path] These are the directions the results point to; the right-hand column gives the finding each rests on, and the letters link to the back-up where there is one. None requires changing the Guidelines. % [S7]
+\note{[Short path] These are the directions the results point to; the right-hand column gives the finding each rests on, and the letters link to a back-up for each direction. None requires changing the Guidelines. % [S7]
 A. Test the compressed week. The two sides agree on it, both at about 7 per cent of pay, and few PMEs have it available. Few surveyed firms offer it and operating costs are unmeasured, so it is a low-risk arrangement to test, not a proven one. SNEF could recruit volunteer firms to put it on their written menu, with independent evaluation; the evidence is moderate. % [E5, R5, G1, M16, M17]
 B. Match arrangements to roles. Where few roles need on-site presence, employers expect only about 3 per cent less pay for one to two WFH days, below the 7 per cent PMEs would give up; where most roles do, they expect 52. That compares one employer group with all PMEs, PMEs were not asked about presence, and the intervals are wide, so it is preliminary. Review which tasks need presence, role by role, and start with one to two days where roles allow. % [M10, Q10, M12]
 C. Support managers and HR. Employers name productivity, coordination and fairness as their main hurdles, and concern levels do not reliably change the pay cut. When asked for the single biggest challenge, technology and security are rarely named; we cannot say they are not hurdles. Managerial resistance or trust is the main hurdle for 14 per cent, and 58 per cent of employers say they know the Guidelines. Also 45 per cent of PMEs expect flexible work to hurt their career, 36 per cent of juniors and 52 per cent of seniors, and they value WFH less and use staggered hours less: associations. Guidance and training for HR and managers, and appraising by output at every level, are relevant; we did not test training. % [slide 11, 13, 15, B-tgfwar]
@@ -1024,7 +1025,7 @@ B and C are exploratory: the presence result comes from the employer survey alon
       \BH{Method}
       \mbox{\BIi{B-methods}{Equations}}\enspace\textcolor{Muted}{$\cdot$}\enspace \mbox{\BIi{B-estimation}{Estimation}}\par
       \BH{Practice today}
-      \mbox{\BIi{B-landscape}{Landscape}}\enspace\textcolor{Muted}{$\cdot$}\enspace \mbox{\BIi{B-setup}{Pathways}}\par
+      \mbox{\BIi{B-landscape}{Landscape}}\enspace\textcolor{Muted}{$\cdot$}\enspace \mbox{\BIi{B-setup}{Pathways}}\enspace\textcolor{Muted}{$\cdot$}\enspace \mbox{\BIi{B-sg-reports}{Surveys}}\par
     \end{column}
     \begin{column}{0.35\textwidth}
       \BH{PMEs}
@@ -1033,7 +1034,7 @@ B and C are exploratory: the presence result comes from the employer survey alon
       \mbox{\BIi{B-emp-groups}{By group}}\enspace\textcolor{Muted}{$\cdot$}\enspace \mbox{\BIi{B-access}{Access}}\enspace\textcolor{Muted}{$\cdot$}\enspace \mbox{\BIi{B-emp-robust}{Checks}}\par
       \BH{Employers}
       \mbox{\BIi{B-org-salary}{Salary lever}}\enspace\textcolor{Muted}{$\cdot$}\enspace \mbox{\BIi{B-org-robust}{Checks}}\par
-      \mbox{\BIi{B-why-org}{Roles and concerns}}\enspace\textcolor{Muted}{$\cdot$}\enspace \mbox{\BIi{B-org-splits}{Splits chart}}\par
+      \mbox{\BIi{B-why-org}{Roles and concerns}}\enspace\textcolor{Muted}{$\cdot$}\enspace \mbox{\BIi{B-org-splits}{Splits}}\enspace\textcolor{Muted}{$\cdot$}\enspace \mbox{\BIi{B-org-other}{Traits}}\par
       \mbox{\BIi{B-org-concerns}{Concerns}}\enspace\textcolor{Muted}{$\cdot$}\enspace \mbox{\BIi{B-org-concerns4}{Four concerns}}\par
       \mbox{\BIi{B-org-view}{Own view; SMEs}}\enspace\textcolor{Muted}{$\cdot$}\enspace \mbox{\BIi{B-industry-note}{No industry split}}\par
       \BH{Where the sides meet}
@@ -1041,6 +1042,7 @@ B and C are exploratory: the presence result comes from the employer survey alon
       \mbox{\BIi{B-pilot}{Pilot checklist}}\enspace\textcolor{Muted}{$\cdot$}\enspace \mbox{\BIi{B-flexiload}{Flexi-load}}\par
       \BH{Barriers}
       \mbox{\BIi{B-career-who}{Who expects it}}\enspace\textcolor{Muted}{$\cdot$}\enspace \mbox{\BIi{B-career}{Career risk}}\par
+      \mbox{\BIi{B-use-att}{Use by view}}\enspace\textcolor{Muted}{$\cdot$}\enspace \mbox{\BIi{B-wtp-att}{Value by view}}\par
       \mbox{\BIi{B-level-access}{By level}}\enspace\textcolor{Muted}{$\cdot$}\enspace \mbox{\BIi{B-tgfwar}{Guidelines}}\enspace\textcolor{Muted}{$\cdot$}\enspace \mbox{\BIi{B-awareness}{Awareness}}\par
       \mbox{\BIi{B-approvals}{Approvals}}\enspace\textcolor{Muted}{$\cdot$}\enspace \mbox{\BIi{B-approvals-tab}{Outcomes}}\enspace\textcolor{Muted}{$\cdot$}\enspace \mbox{\BIi{B-requestrate}{Request rate}}\par
     \end{column}
@@ -1319,14 +1321,14 @@ So the case is for a voluntary, evaluated pilot, not a roll-out: SNEF could recr
 % Motivation and question
 % ==========================================================================
 \begin{frame}[t,label=B-laboursupply]{Keeping people in work matters more}
-  % [P6] LFPR 67.9% (2025); support ratio 3.2 (Jun 2026) to 2.7 (2030, projected); 133,500 to 72,500 mainly to give care;
+  % [P6] LFPR 67.9% (2025); support ratio 3.3 (2025) to 2.7 (2030, projected), LFS 2025 para 2.8; housework/caregiving 22.0% (2025) vs 24.4% (2020), para 7.2;
   % female LFPR 25-64 80.5%; [P5] fewer than half (COS 2026, data for 2024); 5.9% vs 13.7%, women 25-64, share of all women
   \FrameTop
   \begin{columns}[T,onlytextwidth]
     \begin{column}{0.49\textwidth}
       \BigStat{Navy}{67.9\%}{resident participation, 2025 (fourth straight fall)}
-      \BigStat{Navy}{3.2 \ensuremath{\rightarrow} 2.7}{residents 20--64 per resident 65+, 2026 to 2030 (projected)}
-      \BigStat{Navy}{133,500 \ensuremath{\rightarrow} 72,500}{outside the labour force mainly to give care, 2019 to 2025}
+      \BigStat{Navy}{3.3 \ensuremath{\rightarrow} 2.7}{residents 20--64 per resident 65+, 2025 to 2030 (projected)}
+      \BigStat{Navy}{22.0\%}{of residents outside the labour force cite housework or caregiving (2025; 24.4\% in 2020)}
     \end{column}
     \begin{column}{0.49\textwidth}
       \BigStat{Navy}{80.5\%}{female participation, ages 25--64 (2025)}
@@ -1337,7 +1339,7 @@ So the case is for a voluntary, evaluated pilot, not a roll-out: SNEF could recr
   % [P6] 1.48 vacancies per unemployed person, Jun 2026; [S1] sample = PMEs in or seeking work (Lead decision 13)
   % TODO(PI): re-check LFS Advance Release 2026 and LMR 3Q 2026 before the meeting (EB s14)
   % Check date: P6 fact-checked 6 Oct 2026 (EB s14), fixer pass 7 Oct 2026 (mom_ps-10)
-  \SourceNote{\textbf{Sources:} MRSD Labour Force in Singapore 2025; Population in Brief 2026; MOM COS 2026; Labour Market Report 2Q 2026 (1.48 vacancies per unemployed person, Jun 2026). We survey PMEs in or seeking work, not carers outside the labour force. Checked 6 Oct 2026.}
+  \SourceNote{\textbf{Sources:} MRSD Labour Force in Singapore 2025 (participation, support ratio, reasons for being outside the labour force: checked against the report); MOM COS 2026; Labour Market Report 2Q 2026. We survey PMEs in or seeking work, not carers outside the labour force.}
   \BackTo{M-motivation}{Motivation}
 \end{frame}
 
@@ -1416,7 +1418,7 @@ So the case is for a voluntary, evaluated pilot, not a roll-out: SNEF could recr
   \vspace{0.10cm}
   % [P1] reasonable grounds include cost, productivity and feasibility; custom or disbelief in FWAs cannot be one (para 19, Table 4)
   % [P17] MOM 2026; short form as on B-legal (verified wording: FAQ, 17 Jun 2026; COS 2026 speech, 3 Mar 2026)
-  {\fontsize{9}{11}\selectfont\RaggedRight In effect from 1 Dec 2024 for employees past probation. Cost, productivity and feasibility can be reasonable grounds to decline; custom or disbelief in FWAs cannot. TAFEP takes an educational approach, guiding employers to comply (MOM, 2026).\par}
+  {\fontsize{9}{11}\selectfont\RaggedRight In effect from 1 Dec 2024 for employees past probation. A significant cost burden or customer needs can be business grounds to decline; a preference for face time, or refusing to avoid similar requests from others, cannot. TAFEP takes an educational approach, guiding employers to comply (MOM, 2026).\par}
   \vspace{0.10cm}
   \PanelTitle{Navy}{MOM indicators, 2024 data: not one funnel; definitions differ} % [P3]
   % [P3] MRSD, Employees' Working Conditions, May 2026, data for 2024, full-time resident employees aged 25-64:
@@ -1662,6 +1664,26 @@ So the case is for a voluntary, evaluated pilot, not a roll-out: SNEF could recr
   \BackToTwo{M-descriptive}{Practice}{B-puzzle-main}{Puzzle}
 \end{frame}
 
+\begin{frame}[t,label=B-sg-reports]{Official surveys: demand, provision and penalties}
+  % WC 2024: MRSD Report on Employees' Working Conditions, May 2026, para 2.3-2.4 (full-time resident employees 25-64, data for 2024);
+  % WLH 2020: MRSD Work-Life Harmony Report 2020, Charts 2d, 2e (9% felt penalised; reasons among them: chart values). Checked 21 Oct 2026.
+  \FrameTop
+  \begin{columns}[T,onlytextwidth]
+    \begin{column}{0.49\textwidth}
+      \PanelTitle{Navy}{Required and provided, 2024}
+      \BigStat{Navy}{32\% / 23\% / 21\%}{required scheduled tele-working, flexible hours, choice of days off}
+      \BigStat{Navy}{72\% / 67\% / 75\%}{of those who required each were provided with it}
+    \end{column}
+    \begin{column}{0.49\textwidth}
+      \PanelTitle{Navy}{Felt penalised for taking up FWAs, 2020}
+      \BigStat{Navy}{9\%}{of employees felt penalised}
+      \BigStat{Navy}{34 / 29 / 29}{of them: fewer training opportunities / reduced benefits / passed over for promotion}
+    \end{column}
+  \end{columns}
+  \SourceNote{\textbf{Sources:} MRSD, Report on Employees' Working Conditions (May 2026); Work-Life Harmony Report 2020. Full-time resident employees aged 25--64.}
+  \BackToTwo{M-descriptive}{Practice}{M-why-pmes}{Career concerns}
+\end{frame}
+
 \begin{frame}[t,label=B-setup]{Most FWAs come via policy or request}
   % [D4, D5, D5x, D10]
   \FrameTop
@@ -1802,6 +1824,9 @@ So the case is for a voluntary, evaluated pilot, not a roll-out: SNEF could recr
 \BackupFig{B-org-concerns4}{Four concerns: only creativity shows a signal}{F_org_concerns4_m}{5.4cm}{M-concerns}{Concerns}{Pay cut required, 95\% CI; agree = 4--5 of 5; neutral or disagree = 1--3.  Item-level p $<$ .05 only for creativity (fully remote, staggered hours), not corrected for 28 comparisons.}
 
 \BackupFig{B-org-splits}{All employer splits}{F_org_splits}{5.4cm}{M-where}{Reservations}{Pay cut required, 95\% CI. Presence and no WFH today show the largest differences. Preliminary: asked after the choices. Salary offset: agrees that offering FWAs reduces the salary needed to attract and retain PMEs (survey item).}
+\BackupFig{B-org-other}{Employer values by other firm characteristics}{F_org_other}{5.0cm}{M-where}{Reservations}{Pay cut required, 95\% CI; intervals overlap throughout. Plans: expect to expand FWAs vs maintain or reduce. Difficulty: some or significant, filling PME vacancies. Talent: agrees FWAs help attract and retain. Not-sure answers dropped.}
+\BackupFig{B-use-att}{Use among PMEs with access, by career worry and stigma}{F_use_att}{6.0cm}{M-why-pmes}{Career concerns}{Share using, among PMEs with the arrangement available; 95\% CI. Career: ``working shorter or more flexible hours would negatively affect my career''. Stigma: ``users are seen as less committed''. Associations only.}
+\BackupFig{B-wtp-att}{Pay PMEs would give up, by career worry and stigma}{F_wtp_att}{6.2cm}{M-why-pmes}{Career concerns}{Pay given up, 95\% CI. Disagree = 1--2, neutral = 3, agree = 4--5 on the five-point item. Associations, not causes.}
 
 % [B2] agreement shares; [Q11, R14b, M12] creativity p = .003, q about .06; Lead decision 6: concerns, not beliefs
 % EB s9 l.183: no free-slope check yet for the presence and creativity splits; EB s9 l.182: items asked after the choices
