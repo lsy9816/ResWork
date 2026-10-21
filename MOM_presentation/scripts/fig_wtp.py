@@ -60,7 +60,7 @@ def txt0(x):
     return ("−" if v < 0 else "") + str(abs(v))
 
 
-SIZES1 = {"F_emp_wtp": (13.0, 5.8), "F_org_wtp": (13.0, 5.8), "F_gap_m": (13.0, 5.4), "F_barriers_r5": (13.0, 4.2)}   # single-panel figures without a subtitle: taller
+SIZES1 = {"F_emp_wtp": (13.0, 5.8), "F_org_wtp": (13.0, 5.8), "F_gap_m": (13.0, 5.4), "F_barriers_r5": (13.0, 4.9)}   # single-panel figures without a subtitle: taller
 
 
 def new_fig(name):
@@ -567,22 +567,25 @@ def fig_barriers_r5():
     import fig_r5 as F5
     name = "F_barriers_r5"
     fam = "Familiar (aware and understand key provisions)"
-    aware = [("All employed PMEs", M.one("emp_tgfwar.csv", block="overall", sample="all", group="All employed", item=fam)[0])]
-    for lab, g in (("Junior professionals", "Role: Junior professional / specialist"), ("Middle management", "Role: Middle management"),
-                   ("Senior management", "Role: Senior management")):
+    aware = [("Have heard of them", M.one("emp_tgfwar.csv", block="overall", sample="all", group="All employed",
+                                          item="Aware (familiar or heard of)")[0]),
+             ("Know key provisions", M.one("emp_tgfwar.csv", block="overall", sample="all", group="All employed", item=fam)[0])]
+    for lab, g in (("   Junior professionals", "Role: Junior professional / specialist"), ("   Middle management", "Role: Middle management"),
+                   ("   Senior management", "Role: Senior management")):
         aware.append((lab, M.one("emp_tgfwar.csv", block="by_role", sample="all", group=g, item=fam)[0]))
     route = []
     for lab, it in (("Company-wide policy", "Company-wide policy (applied automatically)"),
                     ("Individual request", "Individual FWA request or application"),
                     ("Informal, with manager", "Informal, case-by-case with manager"),
-                    ("Negotiated at hiring", "Negotiated as part of employment terms")):
+                    ("Negotiated at hiring", "Negotiated as part of employment terms"),
+                    ("Don't know", "Don't know / unsure")):
         route.append((lab, M.one("emp_fwa_setup.csv", block="setup", sample="all", group="Employed who answered QID39", item=it)[0]))
     fig = M.new_fig(*SIZE)
     H, W = fig.H, fig.W
     gap = 0.30
     cw = (W - 0.10 - gap) / 2
     CY0, CY1 = 0.04, H - 0.05
-    cards = [("Know the Guidelines", "Share familiar with the key provisions", aware),
+    cards = [("Know the Guidelines", "Share of employed PMEs", aware),
              ("How an FWA is set up", "Share of employed PMEs, by route", route)]
     for k, (hd, sub, rows) in enumerate(cards):
         x = 0.05 + k * (cw + gap)
@@ -601,7 +604,7 @@ def fig_barriers_r5():
             F5.bar(fig, fx(0), fx(v), y, S.EMPLOYEE)
             M.ftext(fig, x + cw - 0.25, y, f"{r0(v)}%", ha="right", va="center", fontsize=S.FS_VAL, color=S.EMPLOYEE,
                     fontweight="bold")
-            y -= 0.78
+            y -= 0.70
     return done(fig, name)
 
 
