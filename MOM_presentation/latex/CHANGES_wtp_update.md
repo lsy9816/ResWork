@@ -111,3 +111,5 @@ part-time 24); results_fwa/fwa_diagnosis.csv also holds the "adjusted" share (ti
 - Slide 13: three panels (productivity, coordination, fairness) matching slide 11, title/caption say concerns do not reliably change the cut; creativity shown in new backup B-org-concerns4 (F_org_concerns4_m).
 
 - Slide 13 figure: five arrangements (job sharing and part-time dropped; full seven in backup B-org-concerns4).
+
+- Slide 13 legend: "Agrees with the concern (4-5 of 5)" vs "Neutral or disagrees (1-3)" (split is score > 3 in the code).

@@ -231,8 +231,8 @@ def fig_org_concerns_m(name="F_org_concerns_m", keys=("prod", "coord", "fair"), 
 
     def fy(v):
         return AY + (v - YA_) / (YB_ - YA_) * (AT - AY)
-    keys = [("D", S.EMPLOYER, S.EMPLOYER, S.MS_DIAMOND, "Firm shares the concern", S.INK, "normal"),
-            ("D", "white", S.EMPLOYER, S.MS_DIAMOND, "Firm does not", S.INK, "normal")]
+    keys = [("D", S.EMPLOYER, S.EMPLOYER, S.MS_DIAMOND, "Agrees with the concern (4–5 of 5)", S.INK, "normal"),
+            ("D", "white", S.EMPLOYER, S.MS_DIAMOND, "Neutral or disagrees (1–3)", S.INK, "normal")]
     V.r5_key(fig, 0.05, H - 0.30, keys)
     if not five:
         V.hline_cm(fig, 0.05, Wd - 0.05, fy(2.75), **S.SEP)
