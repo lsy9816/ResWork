@@ -202,7 +202,7 @@ def fig_where_pres_m():
         for cut, lb, ub, dy, focal in ((r.cut1, r.lb1, r.ub1, 0.27, True), (r.cut0, r.lb0, r.ub0, -0.27, False)):
             ax.plot([lb, ub], [y + dy, y + dy], color=S.EMPLOYER, lw=S.CI_LW, solid_capstyle="butt", zorder=2)
             ax.plot([cut], [y + dy], marker="D", ms=S.MS_DIAMOND, mfc=S.EMPLOYER if focal else "white",
-                    mec="white" if focal else S.EMPLOYER, mew=S.MEW if focal else S.MEW_HOLLOW, ls="none", zorder=3)
+                    mec="white" if focal else S.EMPLOYER, mew=S.MEW if focal else S.MEW_HOLLOW, ls="none", zorder=3, clip_on=False)
             vlabel(ax, max(ub, cut), y + dy, txt0(cut), S.EMPLOYER)
         M.ftext(fig, F["LX"], F["fy"](y), lab, ha="right", va="center", fontsize=S.FS_ROW, color=S.INK)
     V.outside(fig, name)
@@ -254,7 +254,7 @@ def fig_org_concerns_m():
             for cut, lb, ub, dy, focal in ((r.cut1, r.lb1, r.ub1, 0.25, True), (r.cut0, r.lb0, r.ub0, -0.25, False)):
                 ax.plot([lb, ub], [y + dy, y + dy], color=S.EMPLOYER, lw=S.CI_LW, solid_capstyle="butt", zorder=2)
                 ax.plot([cut], [y + dy], marker="D", ms=S.MS_DIAMOND, mfc=S.EMPLOYER if focal else "white",
-                        mec="white" if focal else S.EMPLOYER, mew=S.MEW if focal else S.MEW_HOLLOW, ls="none", zorder=3)
+                        mec="white" if focal else S.EMPLOYER, mew=S.MEW if focal else S.MEW_HOLLOW, ls="none", zorder=3, clip_on=False)
     for lab, item, y0, load in W.ROWS:
         M.ftext(fig, LX, fy(YS[item]), lab, ha="right", va="center", fontsize=S.FS_ROW, color=S.INK)
     V.outside(fig, name)

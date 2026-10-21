@@ -672,7 +672,8 @@ Now the results, starting with PMEs. [Full deck: ``Next, how we turn these choic
   \FrameTop
   \FigC{F_emp_wtp}
   % [E1, E2] 1-2 days 7.4, 3-4 days 9.5 -> about 7-10%; [S6] pay gaps 17-33% by design (mandated wording kept)
-  \Interp{PMEs would accept around 7–10\% lower pay for hybrid work and 15\% for fully remote work, compared with fully onsite work.}
+  \Interp{The more days at home, the more pay PMEs would give up:\\ about 7\% (1--2 days), 10\% (3--4 days) and 15\% fully remote, versus fully onsite.}
+  \vskip 0pt plus 1filll\relax
   % Note: F_emp_wtp's former footnote, verbatim, for the starred job-sharing and part-time rows [E6, E7].
   % Polish pass: "Conditional logit" leaves the source line (DESIGN_PLAN s2 W3; M-estimation and B-methods
   % carry the method). One line at 7.5 pt, 406 of 421 pt: the source names the survey, its size and month,
@@ -695,7 +696,7 @@ Now employers.
 % ==========================================================================
 % 12. RESULT 2: WHAT EMPLOYERS RANK, IN HIRING   [short path]
 % ==========================================================================
-\begin{frame}[t,label=M-employers]{Employers ask for the biggest pay cut for fully remote work}
+\begin{frame}[t,label=M-employers]{Employers expect a pay cut, biggest for fully remote work}
   % F_org_eqpay, true size 13.0 x 5.0 cm: share of hiring choices the flexible candidate wins at equal salary,
   % 95% CIs; no % of salary values (mandate; EB s8). Appended sample (n = 397), appended_clogit.xlsx main,
   % invlogit(b) with delta-method CIs. Rows: compressed week 47 [41, 53] [Q5];
@@ -708,7 +709,8 @@ Now employers.
   % EB s3b: 50% = indifferent, equal-pay share uses no salary coefficient; [R13] pay is a weak lever for employers
   % line 2, fixer pass 7 Oct 2026 (employer-02): MANDATE information/learning problem; [S5; EB s9] hiring choice
   % between candidates, not a request and not an operating-cost measure; the DCE cannot separate these; EB s3b 50%
-  \Interp{Employers would ask for the biggest pay cut\\ from a candidate who wants to work fully remotely.}
+  \Interp{The more days at home, the bigger the pay cut employers expect:\\ 20\% (1--2 days), 36\% (3--4 days), 49\% fully remote.}
+  \vskip 0pt plus 1filll\relax
   % Note: F_org_eqpay's former footnote, verbatim. [S6] no shown pair had equal pay, gaps 17-33%; EB s3b model-based share.
   % Source: the respondent wording, people involved in PME hiring or manpower decisions, stays on M-design
   % and M-data; here "employer survey, n = 397, Aug-Oct 2026" keeps the block on one line, 408 of 421 pt.
@@ -745,7 +747,7 @@ Put side by side, how far apart are the two sides?}
   \FrameTop
   \FigC{F_gap_m}
   % compressed-week wording: mandate "Evidence and language rules"; [Q5] 47% (41-53, appended) includes 50
-  \Interp{Only for the compressed week do the two sides agree (about 7\% each).\\ For WFH, employers ask for 12 to 34 points more than PMEs would give up.}
+  \Interp{Only for the compressed week do the two sides agree (about 7\% each).\\ For WFH, employers expect a pay cut 12 to 34 points larger than PMEs would accept.}
   \SourceNote{Gap: pay cut employers require minus pay PMEs would give up, in points of pay, with 95\% intervals.}
   % Note = F_meet_r5's former footnote, verbatim (polish pass 7 Oct 2026): [s3b] equal-pay shares, 95% CIs;
   % [Q16] zones A-C are descriptive labels; [M1] PMEs' fully remote is measured against each PME's own commute.
@@ -779,20 +781,20 @@ Next, does the pay cut employers ask for depend on where they need people on sit
   % conditional logit (group-specific pay slope); location p = .025, non-location (staggered, compressed, job sharing, part-time) p = .60.
   \FrameTop
   \FigC{F_where_pres_m}
-  \Interp{Where most roles need on-site presence, employers ask for 28 to 49 points more for WFH.\\ The other arrangements show no such difference, yet few firms offer them. Early evidence only.}
+  \Interp{Where most roles need on-site presence, the WFH pay cut is 28 to 49 points larger.\\ Other arrangements show no such difference, yet few firms offer them. Early evidence only.}
   \Backups{\BL{B-why-org}{Tests}\BL{B-org-concerns}{Concerns}\BL{B-org-view}{Employer view}}
 \end{frame}
 \note{[Short path] We split employers by whether most PME roles need on-site presence. Where they do, firms would require a much larger pay cut for any WFH: 52 against 3 per cent for one to two days, 60 against 25 for three to four days, 67 against 40 for fully remote. The WFH difference is statistically significant (p = .025) but not after correcting for the many splits we tested. % [M10, wtp_deck, employer_splits]
 For the other arrangements we detect no difference: the compressed week 1 against 8 per cent, job sharing 24 against 23, part-time 32 against 36; staggered hours are higher where presence is needed, 22 against 7, but not significantly. The intervals are wide, 137 firms in one group, so we read this as no detectable difference, not as proof of none. % [employer_splits, p = .60]
 So on-site needs mostly rule out location flexibility, not necessarily schedule or load. [Backup: tests; concerns.]}
 
-\begin{frame}[t,label=M-concerns]{Employers who share a concern tend to ask for more}
+\begin{frame}[t,label=M-concerns]{Employers who share a concern tend to expect bigger cuts}
   % F_org_concerns_m (scripts/fig_fwa_m.py; employer_splits.csv): difference in the pay cut required, firms that agree with the concern minus
   % firms that do not (points), all seven arrangements; filled = 95% interval excludes 0. Joint tests across all 7: productivity p = .25,
   % coordination .89, creativity .18, fairness .79; item-level p < .05 only for creativity (fully remote, staggered hours), not corrected for 28 items.
   \FrameTop
   \FigC{F_org_concerns_m}
-  \Interp{Firms worried about creativity or productivity ask for more, notably for the compressed week.\\ But the differences are not statistically reliable.}
+  \Interp{Firms worried about creativity or productivity expect bigger cuts, notably for the compressed week.\\ But the differences are not statistically reliable.}
   \Backups{\BL{B-why-org-tests}{All tests}\BL{B-org-splits}{All splits}\BL{B-org-view}{Employer view}}
 \end{frame}
 \note{[Full deck only] Employers' main stated concerns are productivity, coordination, creativity and fairness across roles. Splitting firms by whether they agree with each concern, firms that do ask for more in 23 of 28 comparisons, on average 16 points more for the creativity concern, 10 for productivity, 5 for coordination and 3 for fairness. For WFH both groups ask for large cuts; for the compressed week and staggered hours, firms without the concern ask for nothing (about minus 3 per cent) while concerned firms ask for 15 to 22. But only three of the 28 differences are significant at 5 per cent, none after correcting for 28 tests, and the joint tests are not significant (p = .18 to .89). % [employer_splits]
@@ -898,7 +900,7 @@ One guardrail before the options. These are stated choices from unweighted onlin
     % column heads, as on M-framework
     \node[deckcolhead,text=Ink] at (0.20,0.15) {Zone};
     \node[deckcolhead,text=Employee] at (3.95,0.15) {PMEs give up};
-    \node[deckcolhead,text=Employer] at (6.40,0.15) {Employers ask};
+    \node[deckcolhead,text=Employer] at (6.40,0.15) {Employers expect};
     \node[deckcolhead,text=Ink] at (9.15,0.15) {Gap};
     \node[deckcolhead,text=Ink] at (11.85,0.15) {Policy move};
     % one full-row band per zone
@@ -1067,7 +1069,7 @@ MOM, SNEF and NTUC could each support a next step for these limits. With that, t
     \begin{enumerate}\setlength{\itemsep}{0.12cm}
       % [E1, E2] 7.4 and 9.5 -> about 7-10% of pay, status I (indicative); [S6] gaps shown 17-33%; not a pay cut (mandate)
       \item PMEs would accept \textbf{about 7--10\% lower pay} for hybrid work and about 15\% for fully remote work
-      \item For WFH, employers ask for \textbf{12 to 34 points more}; only for the compressed week do the two sides agree
+      \item For WFH, employers expect a pay cut \textbf{12 to 34 points larger}; only for the compressed week do the two sides agree
       \item Compressed week: \textbf{most promising common-ground test}; evidence moderate; operating costs unmeasured
     \end{enumerate}
   \end{alertblock}

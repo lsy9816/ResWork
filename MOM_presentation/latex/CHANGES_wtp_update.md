@@ -105,3 +105,5 @@ part-time 24); results_fwa/fwa_diagnosis.csv also holds the "adjusted" share (ti
 - Slide 4 table rewritten: Known so far / This study adds now state direct-question WFH value, Poland WFH-only, seven FWAs incl. WFH, Singapore surveys cover use and provision.
 
 - Slide 4 "This study adds" column: six more FWAs; employers measured the same way; FWA values estimated for Singapore, gap.
+
+- Main slides: centred slides 8-9 (bottom glue), unclipped markers on slides 12-13 (figures regenerated), captions rewritten (days-at-home gradient; employers "expect a pay cut/bigger cuts" instead of "ask for").
