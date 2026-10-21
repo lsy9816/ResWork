@@ -236,8 +236,8 @@ def fig_why_pmes():
             xt = (min(lb, other[1]) - 0.8) if left else (max(ub, other[2]) + 0.8)
             ax.text(xt, y + DY[g], txt0(p), ha="right" if left else "left", va="center", fontsize=S.FS_VAL,
                     color=cols[g], fontweight="bold", path_effects=HALO, zorder=5)
-    keys = [("o", S.EMPLOYEE, S.EMPLOYEE, S.MS_CIRCLE, "No expected penalty", S.EMPLOYEE, "bold"),
-            ("o", GREY_D, GREY_D, S.MS_CIRCLE, "Expected penalty", GREY_D, "bold")]
+    keys = [("o", GREY_D, GREY_D, S.MS_CIRCLE, "Expect a penalty", GREY_D, "bold"),
+            ("o", S.EMPLOYEE, S.EMPLOYEE, S.MS_CIRCLE, "Neutral or disagree", S.EMPLOYEE, "bold")]
     V.r5_key(fig, (W - V.key_width(fig, keys)) / 2, 0.16, keys)
     nohead(fig, name, "Pay PMEs would give up, % of monthly pay")
     ax.set_yticks([])

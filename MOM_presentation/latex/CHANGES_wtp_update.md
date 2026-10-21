@@ -127,3 +127,5 @@ part-time 24); results_fwa/fwa_diagnosis.csv also holds the "adjusted" share (ti
 - Slides 8-9 captions: plain wording (more days at home -> more value / bigger cut; fully remote most), numbers left to the figure.
 
 - Slides 8-9 captions now name each figure's own feature (compressed week = 1-2 days at home; staggered hours not valued / part-time cut large, compressed and staggered smallest).
+
+- Slide 14 legend: "Expect a penalty" (agree 4-5, n=455) vs "Neutral or disagree" (1-3, n=565); the old "No expected penalty" was wrong because the comparison group includes neutral answers.
