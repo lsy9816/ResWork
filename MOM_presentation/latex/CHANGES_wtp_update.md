@@ -94,3 +94,4 @@ part-time 24); results_fwa/fwa_diagnosis.csv also holds the "adjusted" share (ti
 - Slide 4: Employers row now gives the Poland numbers (21% vs 2.9%); Singapore row says official surveys count provision and employers' views but not pay trade-offs. B-references gained Lewandowski et al. and the SNEF-SUSS report.
 - Slide 4 Employers row: 'about seven times' the 2.9% workers would give up (21 / 2.9 = 7.2).
 - Slide 4 table rewritten around the gap: workers (WFH known, other arrangements much less), employers (one two-sided study found, WFH only), Singapore (official surveys do not measure pay trade-offs).
+- Slide 4 'This study adds' column: workers = beyond WFH (hours and workload); employers = the employer side in Singapore on the same cards; Singapore = both sides in one study. Workers' known cell says 'four studies'.
