@@ -95,3 +95,4 @@ part-time 24); results_fwa/fwa_diagnosis.csv also holds the "adjusted" share (ti
 - Slide 4 Employers row: 'about seven times' the 2.9% workers would give up (21 / 2.9 = 7.2).
 - Slide 4 table rewritten around the gap: workers (WFH known, other arrangements much less), employers (one two-sided study found, WFH only), Singapore (official surveys do not measure pay trade-offs).
 - Slide 4 'This study adds' column: workers = beyond WFH (hours and workload); employers = the employer side in Singapore on the same cards; Singapore = both sides in one study. Workers' known cell says 'four studies'.
+- Slide 4 adds: 'Other FWAs, not only WFH' / 'Singapore employers' required pay cut for each FWA, from the same choices PMEs make' / 'The gap between what PMEs give up and what employers require, FWA by FWA'.
