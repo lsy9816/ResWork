@@ -125,3 +125,5 @@ part-time 24); results_fwa/fwa_diagnosis.csv also holds the "adjusted" share (ti
 - Slide 14: test annotations (Groups differ / No difference detected) removed from F_why_pmes; group sizes added to the speaker notes of slides 12-14.
 
 - Slides 8-9 captions: plain wording (more days at home -> more value / bigger cut; fully remote most), numbers left to the figure.
+
+- Slides 8-9 captions now name each figure's own feature (compressed week = 1-2 days at home; staggered hours not valued / part-time cut large, compressed and staggered smallest).
