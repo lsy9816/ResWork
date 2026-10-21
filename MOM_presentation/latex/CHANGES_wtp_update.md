@@ -92,3 +92,4 @@ part-time 24); results_fwa/fwa_diagnosis.csv also holds the "adjusted" share (ti
   14 PMEs' career worry, 15 PME barriers, 16 zones, 17 options, 18 limits, 19 conclusion, 20 thanks. Plain-language titles on slides 5, 7, 9, 14;
   take-aways on the conclusion slide now state the pay PMEs would accept and the 12-34 point gap; notes' transitions follow the new order.
 - Slide 4: Employers row now gives the Poland numbers (21% vs 2.9%); Singapore row says official surveys count provision and employers' views but not pay trade-offs. B-references gained Lewandowski et al. and the SNEF-SUSS report.
+- Slide 4 Employers row: 'about seven times' the 2.9% workers would give up (21 / 2.9 = 7.2).
