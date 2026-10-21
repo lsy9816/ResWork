@@ -143,3 +143,5 @@ part-time 24); results_fwa/fwa_diagnosis.csv also holds the "adjusted" share (ti
 - Slides 16-18 simplified: one short line per finding and per option; takeaways shortened.
 
 - HR/manager guidance and training added: slide 16 row 3 points to "Guidance and HR training"; option C "Inform: juniors, HR; appraise by output"; notes cite 14% managerial resistance and 58% employer familiarity.
+
+- Slide 14: left card now shows FWA availability (any of five) and Guidelines familiarity by job level (scripts/pme_level_access.py -> data/pme_level_access.csv); title "All levels value WFH alike, but juniors have less access".

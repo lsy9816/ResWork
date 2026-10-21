@@ -571,6 +571,9 @@ def fig_barriers_r5():
           ("Middle management", "Middle management", "Role: Middle management"),
           ("Senior management", "Senior management", "Role: Senior management")]
     aware = [float(M.one("emp_tgfwar.csv", block="by_role", sample="all", group=g, item=fam)[0]["share"]) for _, _, g in LV]
+    import pandas as pd
+    acc = pd.read_csv(MOM / "data" / "pme_level_access.csv").set_index("level")["avail_any"]
+    avail = [float(acc[i]) for i in (1, 2, 3)]
     ITEMS = [("p12", "1\u20132 days", "#9DB4D0"), ("p34", "3\u20134 days", "#5C7FAE"), ("remote", "Fully remote", S.EMPLOYEE)]
 
     def wtp(level, item):
@@ -586,7 +589,8 @@ def fig_barriers_r5():
     cw = (W - 0.10 - gap) / 2
     CY0, CY1 = 0.04, H - 0.05
     LW = max(V.tw_cm(fig, lab, F5.FS_ROW) for lab, _, _ in LV)
-    heads = [("Know the Guidelines", "Share familiar with the key provisions"),
+    LEFT = [("FWA available", "#9DB4D0"), ("Know the Guidelines", S.EMPLOYEE)]
+    heads = [("Access and awareness", "Share of employed PMEs"),
              ("Pay given up for WFH", "% of monthly pay")]
     for k, (hd, sub) in enumerate(heads):
         x = 0.05 + k * (cw + gap)
@@ -600,10 +604,12 @@ def fig_barriers_r5():
             tx0 = x + 0.25 + LW + 0.20
             if k == 0:
                 tw = x + cw - 0.25 - 1.0 - tx0
-                fx = F5.track(fig, tx0, yc, tw)
-                F5.bar(fig, fx(0), fx(aware[lv]), yc, S.EMPLOYEE)
-                M.ftext(fig, x + cw - 0.25, yc, f"{r0(aware[lv])}%", ha="right", va="center", fontsize=S.FS_VAL,
-                        color=S.EMPLOYEE, fontweight="bold")
+                for m_, (v, col) in enumerate(((avail[lv], LEFT[0][1]), (aware[lv], LEFT[1][1]))):
+                    yy = yc + 0.135 - m_ * 0.27
+                    fx = F5.track(fig, tx0, yy, tw, h=0.17)
+                    F5.bar(fig, fx(0), fx(v), yy, col, h=0.17)
+                    M.ftext(fig, tx0 + tw + 0.12, yy, f"{r0(v)}%", ha="left", va="center", fontsize=S.FS_VAL - 1,
+                            color=S.EMPLOYEE, fontweight="bold")
             else:
                 tw = x + cw - 0.25 - 0.8 - tx0
                 for m_, (it, il, col) in enumerate(ITEMS):
@@ -614,13 +620,13 @@ def fig_barriers_r5():
                     M.ftext(fig, tx0 + tw + 0.12, yy, f"{r0(v)}", ha="left", va="center", fontsize=S.FS_VAL - 1, color=S.EMPLOYEE,
                             fontweight="bold")
     # legend of the right card, at the bottom of the figure
-    x = 0.05 + cw + gap + 0.25
-    ky = CY0 + 0.30
-    for it, il, col in ITEMS:
-        fig.add_artist(Rectangle((x / W, (ky - 0.07) / H), 0.22 / W, 0.14 / H, transform=fig.transFigure, facecolor=col,
-                                 edgecolor="none"))
-        M.ftext(fig, x + 0.32, ky, il, ha="left", va="center", fontsize=F5.FS_LAB, color=S.INK)
-        x += 0.32 + V.tw_cm(fig, il, F5.FS_LAB) + 0.25
+    for x, ky, items in ((0.05 + 0.25, CY0 + 0.30, [(None, il, col) for il, col in LEFT]),
+                         (0.05 + cw + gap + 0.25, CY0 + 0.30, ITEMS)):
+        for it, il, col in items:
+            fig.add_artist(Rectangle((x / W, (ky - 0.07) / H), 0.22 / W, 0.14 / H, transform=fig.transFigure, facecolor=col,
+                                     edgecolor="none"))
+            M.ftext(fig, x + 0.32, ky, il, ha="left", va="center", fontsize=F5.FS_LAB, color=S.INK)
+            x += 0.32 + V.tw_cm(fig, il, F5.FS_LAB) + 0.25
     return done(fig, name)
 
 
