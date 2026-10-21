@@ -212,20 +212,21 @@ def fig_where_pres_m():
 # ----------------------------------------------------------------------------------------------------------------
 # F_org_concerns_m (backup): how much more employers who share each concern ask, all seven arrangements
 # ----------------------------------------------------------------------------------------------------------------
-def fig_org_concerns_m(name="F_org_concerns_m", keys=("prod", "coord", "fair")):
+def fig_org_concerns_m(name="F_org_concerns_m", keys=("prod", "coord", "fair"), five=True):
     es = pd.read_csv(RES / "employer_splits.csv")
     titles = {"prod": "Productivity", "coord": "Coordination", "creat": "Creativity", "fair": "Fairness"}
     panels = [(k, titles[k]) for k in keys]
     n = len(panels)
-    SZ = (13.0, 5.6)
+    rows = W.ROWS[:5] if five else W.ROWS   # five: location and schedule items only (job sharing and part-time dropped)
+    SZ = (13.0, 5.0 if five else 5.6)
     fig = M.new_fig(*SZ)
     Wd, H = fig.W, fig.H
-    labels = [r[0] for r in W.ROWS]
+    labels = [r[0] for r in rows]
     LX = 0.05 + max(V.tw_cm(fig, t, S.FS_ROW) for t in labels)
     GAP = 0.25
     PW = (Wd - 0.05 - LX - 0.15 - (n - 1) * GAP) / n
     AY, AT = 0.70, H - 1.30
-    YA_, YB_ = 0.55, 7.5
+    YA_, YB_ = (2.65 if five else 0.55), 7.5
     YS = {"p3": 7.15, "p2": 6.2, "p1": 5.25, "t2": 4.3, "t1": 3.35, "l1": 2.15, "l2": 1.2}
 
     def fy(v):
@@ -233,7 +234,8 @@ def fig_org_concerns_m(name="F_org_concerns_m", keys=("prod", "coord", "fair")):
     keys = [("D", S.EMPLOYER, S.EMPLOYER, S.MS_DIAMOND, "Firm shares the concern", S.INK, "normal"),
             ("D", "white", S.EMPLOYER, S.MS_DIAMOND, "Firm does not", S.INK, "normal")]
     V.r5_key(fig, 0.05, H - 0.30, keys)
-    V.hline_cm(fig, 0.05, Wd - 0.05, fy(2.75), **S.SEP)
+    if not five:
+        V.hline_cm(fig, 0.05, Wd - 0.05, fy(2.75), **S.SEP)
     for j, (key, title) in enumerate(panels):
         x0 = LX + 0.15 + j * (PW + GAP)
         ax = M.axes_cm(fig, x0, AY, PW, AT - AY)
@@ -249,20 +251,20 @@ def fig_org_concerns_m(name="F_org_concerns_m", keys=("prod", "coord", "fair")):
         M.ftext(fig, x0 + PW / 2, AT + 0.08, title, ha="center", va="bottom", fontsize=S.FS_HEAD, color=S.INK,
                 fontweight="bold")
         q = es[es.split == key].set_index("item")
-        for lab, item, y0, load in W.ROWS:
+        for lab, item, y0, load in rows:
             r = q.loc[CSV2[item]]
             y = YS[item]
             for cut, lb, ub, dy, focal in ((r.cut1, r.lb1, r.ub1, 0.25, True), (r.cut0, r.lb0, r.ub0, -0.25, False)):
                 ax.plot([lb, ub], [y + dy, y + dy], color=S.EMPLOYER, lw=S.CI_LW, solid_capstyle="butt", zorder=2)
                 ax.plot([cut], [y + dy], marker="D", ms=S.MS_DIAMOND, mfc=S.EMPLOYER if focal else "white",
                         mec="white" if focal else S.EMPLOYER, mew=S.MEW if focal else S.MEW_HOLLOW, ls="none", zorder=3, clip_on=False)
-    for lab, item, y0, load in W.ROWS:
+    for lab, item, y0, load in rows:
         M.ftext(fig, LX, fy(YS[item]), lab, ha="right", va="center", fontsize=S.FS_ROW, color=S.INK)
     V.outside(fig, name)
     return M.finish(fig, name, SZ)
 
 
-FIGS = {"F_where_pres_m": fig_where_pres_m, "F_org_concerns_m": fig_org_concerns_m, "F_org_concerns4_m": lambda: fig_org_concerns_m("F_org_concerns4_m", ("prod", "coord", "creat", "fair")), "F_use_m": fig_use_m, "F_fwa_challenge_m": fig_fwa_challenge_m, "F_fwa_current_m": fig_fwa_current_m}
+FIGS = {"F_where_pres_m": fig_where_pres_m, "F_org_concerns_m": fig_org_concerns_m, "F_org_concerns4_m": lambda: fig_org_concerns_m("F_org_concerns4_m", ("prod", "coord", "creat", "fair"), five=False), "F_use_m": fig_use_m, "F_fwa_challenge_m": fig_fwa_challenge_m, "F_fwa_current_m": fig_fwa_current_m}
 
 if __name__ == "__main__":
     import warnings

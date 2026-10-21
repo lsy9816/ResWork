@@ -109,3 +109,5 @@ part-time 24); results_fwa/fwa_diagnosis.csv also holds the "adjusted" share (ti
 - Main slides: centred slides 8-9 (bottom glue), unclipped markers on slides 12-13 (figures regenerated), captions rewritten (days-at-home gradient; employers "expect a pay cut/bigger cuts" instead of "ask for").
 
 - Slide 13: three panels (productivity, coordination, fairness) matching slide 11, title/caption say concerns do not reliably change the cut; creativity shown in new backup B-org-concerns4 (F_org_concerns4_m).
+
+- Slide 13 figure: five arrangements (job sharing and part-time dropped; full seven in backup B-org-concerns4).
