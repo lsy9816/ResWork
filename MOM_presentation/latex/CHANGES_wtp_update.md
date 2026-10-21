@@ -133,3 +133,5 @@ part-time 24); results_fwa/fwa_diagnosis.csv also holds the "adjusted" share (ti
 - Slides 14-19 reworked: 14 caption states 45%; 15 = awareness by seniority + route by which an FWA is set up (F_barriers_r5 rebuilt, request item not used because it was partly misread); 16 zone table covers all seven arrangements grouped by gap (no policy-move column); limits slide moved before the options; options banner shortened and tied to zones A-C; conclusion takeaways rewritten; speaker notes updated.
 
 - Slide 15: awareness card now shows heard-of (83%) and know-key-provisions (55%) with the seniority split; route card adds the don't-know row.
+
+- Slides 14-15 swapped and slide 14 (now by job level) rebuilt: F_barriers_r5 shows familiarity with the Guidelines and pay given up for WFH (three levels) by junior/middle/senior; career-penalty slide is now 15 and leads into the synthesis. Notes updated.

@@ -563,48 +563,64 @@ def fig_puzzle_r5():
 # F_barriers_r5 (M-barriers): all respondents, single values
 # ----------------------------------------------------------------------------------------------------------------
 def fig_barriers_r5():
-    """M-barriers: how the Guidelines and FWAs reach PMEs -- awareness by seniority and the route by which an FWA was set up."""
+    """M-barriers: by job level, what PMEs give up for WFH (three levels) next to familiarity with the Guidelines."""
     import fig_r5 as F5
     name = "F_barriers_r5"
     fam = "Familiar (aware and understand key provisions)"
-    aware = [("Have heard of them", M.one("emp_tgfwar.csv", block="overall", sample="all", group="All employed",
-                                          item="Aware (familiar or heard of)")[0]),
-             ("Know key provisions", M.one("emp_tgfwar.csv", block="overall", sample="all", group="All employed", item=fam)[0])]
-    for lab, g in (("   Junior professionals", "Role: Junior professional / specialist"), ("   Middle management", "Role: Middle management"),
-                   ("   Senior management", "Role: Senior management")):
-        aware.append((lab, M.one("emp_tgfwar.csv", block="by_role", sample="all", group=g, item=fam)[0]))
-    route = []
-    for lab, it in (("Company-wide policy", "Company-wide policy (applied automatically)"),
-                    ("Individual request", "Individual FWA request or application"),
-                    ("Informal, with manager", "Informal, case-by-case with manager"),
-                    ("Negotiated at hiring", "Negotiated as part of employment terms"),
-                    ("Don't know", "Don't know / unsure")):
-        route.append((lab, M.one("emp_fwa_setup.csv", block="setup", sample="all", group="Employed who answered QID39", item=it)[0]))
+    LV = [("Junior professionals", "Junior professional", "Role: Junior professional / specialist"),
+          ("Middle management", "Middle management", "Role: Middle management"),
+          ("Senior management", "Senior management", "Role: Senior management")]
+    aware = [float(M.one("emp_tgfwar.csv", block="by_role", sample="all", group=g, item=fam)[0]["share"]) for _, _, g in LV]
+    ITEMS = [("p12", "1\u20132 days", "#9DB4D0"), ("p34", "3\u20134 days", "#5C7FAE"), ("remote", "Fully remote", S.EMPLOYEE)]
+
+    def wtp(level, item):
+        # junior and middle from the junior-vs-middle pair; senior from the junior-vs-senior pair
+        if level == 2:
+            r = M.one("dce_emp_het.csv", block="pairwise", split="level", group_a="Junior professional", group_b="Senior management", item=item)[0]
+            return float(r["wtp_b"])
+        r = M.one("dce_emp_het.csv", block="pairwise", split="level", group_a="Junior professional", group_b="Middle management", item=item)[0]
+        return float(r["wtp_a" if level == 0 else "wtp_b"])
     fig = M.new_fig(*SIZE)
     H, W = fig.H, fig.W
     gap = 0.30
     cw = (W - 0.10 - gap) / 2
     CY0, CY1 = 0.04, H - 0.05
-    cards = [("Know the Guidelines", "Share of employed PMEs", aware),
-             ("How an FWA is set up", "Share of employed PMEs, by route", route)]
-    for k, (hd, sub, rows) in enumerate(cards):
+    LW = max(V.tw_cm(fig, lab, F5.FS_ROW) for lab, _, _ in LV)
+    heads = [("Know the Guidelines", "Share familiar with the key provisions"),
+             ("Pay given up for WFH", "% of monthly pay")]
+    for k, (hd, sub) in enumerate(heads):
         x = 0.05 + k * (cw + gap)
         F5.card(fig, x, CY0, cw, CY1 - CY0, S.EMPLOYEE)
         M.ftext(fig, x + 0.25, CY1 - S.CARD_BAR_CM - 0.13, hd, ha="left", va="top", fontsize=F5.FS_CARD, color=S.EMPLOYEE,
                 fontweight="bold")
         M.ftext(fig, x + 0.25, CY1 - S.CARD_BAR_CM - 0.62, sub, ha="left", va="top", fontsize=F5.FS_LAB, color=S.MUTED)
-        LW = max(V.tw_cm(fig, lab, F5.FS_ROW) for _, _, rr in cards for lab, _ in rr)
-        tx0 = x + 0.25 + LW + 0.20
-        tw = x + cw - 0.25 - 1.0 - tx0
-        y = CY1 - S.CARD_BAR_CM - 1.45
-        for lab, r in rows:
-            v = float(r["share"])
-            M.ftext(fig, x + 0.25, y, lab, ha="left", va="center", fontsize=F5.FS_ROW, color=S.INK)
-            fx = F5.track(fig, tx0, y, tw)
-            F5.bar(fig, fx(0), fx(v), y, S.EMPLOYEE)
-            M.ftext(fig, x + cw - 0.25, y, f"{r0(v)}%", ha="right", va="center", fontsize=S.FS_VAL, color=S.EMPLOYEE,
-                    fontweight="bold")
-            y -= 0.70
+        for lv, (lab, _, _) in enumerate(LV):
+            yc = CY1 - S.CARD_BAR_CM - 1.75 - lv * 0.95
+            M.ftext(fig, x + 0.25, yc, lab, ha="left", va="center", fontsize=F5.FS_ROW, color=S.INK)
+            tx0 = x + 0.25 + LW + 0.20
+            if k == 0:
+                tw = x + cw - 0.25 - 1.0 - tx0
+                fx = F5.track(fig, tx0, yc, tw)
+                F5.bar(fig, fx(0), fx(aware[lv]), yc, S.EMPLOYEE)
+                M.ftext(fig, x + cw - 0.25, yc, f"{r0(aware[lv])}%", ha="right", va="center", fontsize=S.FS_VAL,
+                        color=S.EMPLOYEE, fontweight="bold")
+            else:
+                tw = x + cw - 0.25 - 0.8 - tx0
+                for m_, (it, il, col) in enumerate(ITEMS):
+                    yy = yc + 0.27 - m_ * 0.27
+                    v = wtp(lv, it)
+                    fx = F5.track(fig, tx0, yy, tw, h=0.17)
+                    F5.bar(fig, fx(0), fx(max(v, 0) / 25.0 * 100), yy, col, h=0.17)
+                    M.ftext(fig, tx0 + tw + 0.12, yy, f"{r0(v)}", ha="left", va="center", fontsize=S.FS_VAL - 1, color=S.EMPLOYEE,
+                            fontweight="bold")
+    # legend of the right card, at the bottom of the figure
+    x = 0.05 + cw + gap + 0.25
+    ky = CY0 + 0.30
+    for it, il, col in ITEMS:
+        fig.add_artist(Rectangle((x / W, (ky - 0.07) / H), 0.22 / W, 0.14 / H, transform=fig.transFigure, facecolor=col,
+                                 edgecolor="none"))
+        M.ftext(fig, x + 0.32, ky, il, ha="left", va="center", fontsize=F5.FS_LAB, color=S.INK)
+        x += 0.32 + V.tw_cm(fig, il, F5.FS_LAB) + 0.25
     return done(fig, name)
 
 
