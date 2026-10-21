@@ -115,3 +115,5 @@ part-time 24); results_fwa/fwa_diagnosis.csv also holds the "adjusted" share (ti
 - Slide 13 legend: "Agrees with the concern (4-5 of 5)" vs "Neutral or disagrees (1-3)" (split is score > 3 in the code).
 
 - Slide 13 legend shortened to "Agree" / "Neutral or disagree"; definition (4-5 vs 1-3) in the note.
+
+- Legends moved to the bottom (centred) on slides 12 and 13 and the four-concern backup, as on the other figures; slide 12 figure 5.5 cm tall.

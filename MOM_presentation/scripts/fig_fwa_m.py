@@ -185,15 +185,15 @@ def fig_where_pres_m():
     name = "F_where_pres_m"
     es = pd.read_csv(RES / "employer_splits.csv")
     es = es[es.split == "pres"].set_index("item")
-    SZ = (13.0, 5.9)
+    SZ = (13.0, 5.5)
     fig = M.new_fig(*SZ)
     labels = [r[0] for r in W.ROWS]
-    F = frame(fig, labels, -34, 112, [0, 25, 50, 75], val_w=0.35, head_h=0.92, bottom=0.62)
+    F = frame(fig, labels, -34, 112, [0, 25, 50, 75], val_w=0.35, head_h=0.25, bottom=1.05)
     ax = F["ax"]
     n1, n0 = int(es.n1.iloc[0]), int(es.n0.iloc[0])
     keys = [("D", S.EMPLOYER, S.EMPLOYER, S.MS_DIAMOND, f"Most roles need on-site presence (n = {n1})", S.INK, "normal"),
             ("D", "white", S.EMPLOYER, S.MS_DIAMOND, f"Some or few roles (n = {n0})", S.INK, "normal")]
-    V.r5_key(fig, 0.05, fig.H - 0.40, keys)
+    V.r5_key(fig, (fig.W - V.key_width(fig, keys)) / 2, 0.16, keys)
     V.hline_cm(fig, 0.05, fig.W - 0.05, F["fy"](2.75), **S.SEP)
     YS = {"p3": 7.15, "p2": 6.2, "p1": 5.25, "t2": 4.3, "t1": 3.35, "l1": 2.15, "l2": 1.2}
     for lab, item, y0, load in W.ROWS:
@@ -225,7 +225,7 @@ def fig_org_concerns_m(name="F_org_concerns_m", keys=("prod", "coord", "fair"), 
     LX = 0.05 + max(V.tw_cm(fig, t, S.FS_ROW) for t in labels)
     GAP = 0.25
     PW = (Wd - 0.05 - LX - 0.15 - (n - 1) * GAP) / n
-    AY, AT = 0.70, H - 1.30
+    AY, AT = 1.15, H - 0.60
     YA_, YB_ = (2.65 if five else 0.55), 7.5
     YS = {"p3": 7.15, "p2": 6.2, "p1": 5.25, "t2": 4.3, "t1": 3.35, "l1": 2.15, "l2": 1.2}
 
@@ -233,7 +233,7 @@ def fig_org_concerns_m(name="F_org_concerns_m", keys=("prod", "coord", "fair"), 
         return AY + (v - YA_) / (YB_ - YA_) * (AT - AY)
     keys = [("D", S.EMPLOYER, S.EMPLOYER, S.MS_DIAMOND, "Agree", S.INK, "normal"),
             ("D", "white", S.EMPLOYER, S.MS_DIAMOND, "Neutral or disagree", S.INK, "normal")]
-    V.r5_key(fig, 0.05, H - 0.30, keys)
+    V.r5_key(fig, (Wd - V.key_width(fig, keys)) / 2, 0.16, keys)
     if not five:
         V.hline_cm(fig, 0.05, Wd - 0.05, fy(2.75), **S.SEP)
     for j, (key, title) in enumerate(panels):
