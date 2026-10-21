@@ -151,3 +151,5 @@ part-time 24); results_fwa/fwa_diagnosis.csv also holds the "adjusted" share (ti
 - Slides 16-17 merged into one findings-to-directions table with option letters A-D (links to back-ups); options table with owners and evidence strength removed from the main deck; closing slide now "Summary and discussion" with a neutral discussion prompt (no "we propose D and A"). Main deck is 18 slides.
 
 - Slides 16-17: results summary ("What we found", four lines) and policy directions (Direction / Based on, slide numbers, letters A-D link to the back-ups); discussion prompt on the policy slide; old summary-and-decision slide removed.
+
+- Appendix aligned with the main deck: zone slides (B-framework, B-zones) removed; direction back-ups A-E (B-optA..E; new C managers and HR, new D juniors, old D measurement is now E); new B-level-access; index updated; joint-test p values removed from captions and T_concerns; M-conclusion back-links relabelled Summary; Findings -> Directions.
