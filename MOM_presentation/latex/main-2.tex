@@ -774,20 +774,7 @@ Next, what do employers worry about, and does it change what they ask?}
 \end{frame}
 \note{[Short path] Asked for the biggest challenge in offering flexible arrangements, employers name productivity and output quality (24 per cent), team coordination (24) and fairness across roles (23). Managerial resistance or lack of trust follows (14). Digital infrastructure and security are named by 6 per cent each. % [B1, fwa_challenge]
 The three leading items are statistically indistinguishable in this sample. The question asks for one challenge for FWAs in general, not for each arrangement, so it cannot say why a given arrangement, such as the compressed week, is offered by few firms. % [B1]
-Next, does the pay cut employers ask for depend on where they need people on site, and on these concerns?}
-
-\begin{frame}[t,label=M-where]{On-site needs raise the WFH pay cut, not the others}
-  % F_where_pres_m (scripts/fig_fwa_m.py from results_fwa/employer_splits.csv; scripts/fwa_employer_splits.py): pay cut employers would
-  % require, all seven arrangements, by on-site presence need (137 firms: most PME roles need presence; 260: some or few). Fully interacted
-  % conditional logit (group-specific pay slope); location p = .025, non-location (staggered, compressed, job sharing, part-time) p = .60.
-  \FrameTop
-  \FigC{F_where_pres_m}
-  \Interp{Where most roles need on-site presence, the WFH pay cut is 28 to 49 points larger.\\ Other arrangements show no such difference, yet few firms offer them. Early evidence only.}
-  \Backups{\BL{B-org-splits}{All splits}\BL{B-org-concerns}{Concerns}\BL{B-org-other}{Other traits}\BL{B-org-view}{Employer view}}
-\end{frame}
-\note{[Short path] We split employers by whether most PME roles need on-site presence: 137 firms say most roles do, 260 say some or few. Where they do, firms would require a much larger pay cut for any WFH: 52 against 3 per cent for one to two days, 60 against 25 for three to four days, 67 against 40 for fully remote. The WFH differences are large and the intervals are wide; this is a preliminary association from one survey. % [M10, wtp_deck, employer_splits]
-For the other arrangements we detect no difference: the compressed week 1 against 8 per cent, job sharing 24 against 23, part-time 32 against 36; staggered hours are higher where presence is needed, 22 against 7, but not significantly. The intervals are wide, with 137 firms in one group, so we read this as no detectable difference, not as proof of none. % [employer_splits]
-So on-site needs mostly rule out location flexibility, not necessarily schedule or load. [Backup: tests; concerns.]}
+Next, do these concerns change the pay cut employers expect?}
 
 \begin{frame}[t,label=M-concerns]{Employers' main concerns do not reliably change the pay cut}
   % F_org_concerns_m (scripts/fig_fwa_m.py; employer_splits.csv): difference in the pay cut required, firms that agree with the concern minus
@@ -800,7 +787,21 @@ So on-site needs mostly rule out location flexibility, not necessarily schedule 
   \Backups{\BL{B-org-concerns4}{Four concerns}\BL{B-org-view}{Employer view}}
 \end{frame}
 \note{[Full deck only] On the previous slide employers named productivity, coordination and fairness as their main challenges. Here we ask whether firms that share each concern expect a bigger pay cut. The answer is: not reliably. Group sizes, agree against neutral or disagree: productivity 223 and 174 firms, coordination 213 and 184, fairness 184 and 213, creativity 201 and 196. A fourth concern, creativity, shows the clearest signal and is in the backup (full figure). Across all four concerns, firms that share the concern ask for more in 23 of 28 comparisons, on average 16 points more for the creativity concern, 10 for productivity, 5 for coordination and 3 for fairness. For WFH both groups ask for large cuts; for the compressed week and staggered hours, firms without the concern ask for nothing (about minus 3 per cent) while concerned firms ask for 15 to 22. But only three of the 28 differences are significant at 5 per cent, none after correcting for 28 tests. % [employer_splits]
-Fairness is new here: it shows no difference at all. So concerns point the same way, but on-site needs are the more reliable guide. Back to PMEs: do their values differ by job level?}
+Fairness is new here: it shows no difference at all. So concerns are a weak guide. Does where firms need people on site matter more?}
+
+\begin{frame}[t,label=M-where]{On-site needs raise the WFH pay cut, not the others}
+  % F_where_pres_m (scripts/fig_fwa_m.py from results_fwa/employer_splits.csv; scripts/fwa_employer_splits.py): pay cut employers would
+  % require, all seven arrangements, by on-site presence need (137 firms: most PME roles need presence; 260: some or few). Fully interacted
+  % conditional logit (group-specific pay slope); location p = .025, non-location (staggered, compressed, job sharing, part-time) p = .60.
+  \FrameTop
+  \FigC{F_where_pres_m}
+  \Interp{Where most roles need on-site presence, the WFH pay cut is 28 to 49 points larger.\\ Other arrangements show no such difference, yet few firms offer them. Early evidence only.}
+  \Backups{\BL{B-org-splits}{All splits}\BL{B-org-concerns}{Concerns}\BL{B-org-other}{Other traits}\BL{B-org-view}{Employer view}}
+\end{frame}
+\note{[Short path] We split employers by whether most PME roles need on-site presence: 137 firms say most roles do, 260 say some or few. Where they do, firms would require a much larger pay cut for any WFH: 52 against 3 per cent for one to two days, 60 against 25 for three to four days, 67 against 40 for fully remote. The WFH differences are large and the intervals are wide; this is a preliminary association from one survey. % [M10, wtp_deck, employer_splits]
+For the other arrangements we detect no difference: the compressed week 1 against 8 per cent, job sharing 24 against 23, part-time 32 against 36; staggered hours are higher where presence is needed, 22 against 7, but not significantly. The intervals are wide, with 137 firms in one group, so we read this as no detectable difference, not as proof of none. % [employer_splits]
+So on-site needs mostly rule out location flexibility, not necessarily schedule or load, and they are a more reliable guide than the concerns. Back to PMEs: do their values differ by job level? [Backup: all splits; concerns.]}
+
 % ##########################################################################
 % Main slides from redesign/v3/W4_frames.tex
 % ##########################################################################
