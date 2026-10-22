@@ -177,3 +177,4 @@ part-time 24); results_fwa/fwa_diagnosis.csv also holds the "adjusted" share (ti
 
 ## 22 Oct 2026 - slide order
 - Employer block now: challenges (11) -> concerns (12) -> on-site needs (13) -> PME levels (14) -> career penalty (15). Speaker-note transitions rewritten; on-site note now says it is a more reliable guide than the concerns.
+- Slide 16 Employers row: hurdles named, but concerns do not reliably change the pay cut; on-site needs do (WFH). Note updated.
