@@ -418,7 +418,7 @@ The findings are preliminary; we end with points for discussion.
   % caption + one 7.5 pt source line + buttons (compiled deck is the fit authority; slack_check.py).
   % Source line: [P4s] MRSD time series released 30 Jun 2026, establishments with 25+ staff; [P4] MOM gives no
   % reason for the 2025 fall; [P4s] 77.5 incl. newer types, 2024
-  \SourceNote{\textbf{Source:} MRSD, MOM (Jun 2026).} % [P4s, P4]
+  \SourceNote{Share of establishments (25+ staff, incl. public sector) offering a scheduled FWA. \textbf{Source:} MRSD, MOM (Jun 2026).} % [P4s, P4]
   \Backups{\BL{B-laboursupply}{Labour supply} \BL{B-guidelines}{Guidelines}}
 \end{frame}
 % Note numbers: [P4s] 28 in 2008, 73 in mid-2024, establishments with 25 or more staff, private plus public sector;
@@ -770,6 +770,7 @@ Next, what do employers worry about, and does it change what they ask?}
   \FrameTop
   \FigC{F_fwa_challenge_m}
   \Interp{Productivity, coordination and fairness are each named by about a quarter of employers.\\ Digital infrastructure and security matter much less (6\% each).}
+  \SourceNote{Single biggest challenge in offering FWAs; 397 employers.}
   \Backups{\BL{B-org-view}{Employer view}}
 \end{frame}
 \note{[Short path] Asked for the biggest challenge in offering flexible arrangements, employers name productivity and output quality (24 per cent), team coordination (24) and fairness across roles (23). Managerial resistance or lack of trust follows (14). Digital infrastructure and security are named by 6 per cent each. % [B1, fwa_challenge]
@@ -1129,7 +1130,7 @@ B and C are exploratory: the presence result comes from the employer survey alon
   \end{itemize}
   % [P7] co-author disclosure
   \SourceNote{Other settings; read as context. Trip.com trial: co-author James Liang co-founded and chairs Trip.com.}
-  \BackTo{M-discussion}{Directions}
+  \BackToTwo{M-benchmark}{Slide 4}{M-discussion}{Directions}
 \end{frame}
 
 \begin{frame}[t,label=B-landscape]{Flexible work today: PMEs and firms}
@@ -1460,7 +1461,7 @@ Next, what PMEs and firms do today.}
   \setbeamerfont{itemize/enumerate body}{size=\fontsize{9}{11}\selectfont}
   \begin{itemize}\setlength{\itemsep}{0.03cm}
     % EB s9: 10 versions x 6 tasks = 60; [E18] 198 PME contrasts; [M7] 7 PME mechanism splits; [M12] 20 employer splits
-    \item \textbf{Tests:} 60 choice situations per side, so intervals may be too narrow. Benjamini--Hochberg by family: 198 PME contrasts, 7 PME mechanisms, 11 employer split tests.
+    \item \textbf{Intervals:} 60 choice situations per side (10 versions $\times$ 6 tasks), so intervals may be too narrow.
     % [M8] free-slope tests added after the pre-specified convention; EB s9: no employer free-slope check yet for presence and creativity
     \item \textbf{Pay slopes:} group splits use a separate pay slope for each group. Employers' role and concern items were asked after the choices, so these splits are preliminary associations.
     % [RB2] PME arrangement values move at most 2 points; [E15]; EB s9: task-1 coding moves remote by about 0.5 point
@@ -1486,7 +1487,7 @@ Next, what PMEs and firms do today.}
     % [V1] 977 of 1,738 = 56% matched, up to three years later; kept vs lost 4.1 pp at the 1% level; gained 1.7 pp n.s.
     \textbf{Maestas et al.}\newline (AER 2023) & US workers, up to 3 years on: 977 of 1,738 (56\%) matched; kept vs lost an amenity: +4.1 pp (1\% level); gained: +1.7 pp (n.s.)\\ \RowSep
     % [V2] 59 of 71 follow-up respondents working; about four years; 6 links, 3 significant at 5%; joint p = .012
-    \textbf{Wiswall \& Zafar}\newline (QJE 2018) & NYU students, about 4 years on (59 working): 6 of 6 links to actual jobs with the expected sign, 3 significant at 5\%; joint test of no link p = .012\\ \RowSep
+    \textbf{Wiswall \& Zafar}\newline (QJE 2018) & NYU students, about 4 years on (59 working): 6 of 6 links to actual jobs with the expected sign, 3 significant at 5\%\\ \RowSep
     % [V3] survey 8.4% reweighted to field commute times vs field 7.8%; scheduling 2.5% vs 2.8%; US call-centre applicants
     \textbf{Mas \& Pallais}\newline (AER 2017) & Call-centre applicants: WFH 8.4\% of pay, survey (reweighted to field commute times) vs 7.8\%, field; scheduling 2.5\% vs 2.8\%\\ \RowSep
     % [V4] paired conjoint, best of five designs: within 2 pp on average across 21 effects; 21% vs 37% rejection
@@ -1527,7 +1528,7 @@ Next, what PMEs and firms do today.}
 \begin{frame}[t,label=B-fwa-table]{Offering, use and pay terms: numbers}
   \FrameTop % first body token (centring; never a frame subtitle)
   \Tab{T_fwa_diag}
-  \BackTo{M-descriptive}{Current use}
+  \BackToTwo{M-descriptive}{Practice}{M-meet}{Two sides}
 \end{frame}
 
 % ==========================================================================
@@ -1651,20 +1652,20 @@ Only the career-concern split stands out, as we saw earlier. Why, then, is the c
 
 \BackupTab{B-org-salary}{Why employer \% is secondary}{T_org_salary}{M-employers}{Employers}{Pay-cut sizes rest on a weakly identified pay slope; the ranking is firmer.}
 
-\BackupFig{B-org-splits}{All employer splits}{F_org_splits}{5.4cm}{M-where}{Reservations}{Pay cut required, 95\% CI; asked after the choices. Salary offset: agrees offering FWAs reduces the salary needed to attract PMEs.}
+\BackupFig{B-org-splits}{All employer splits}{F_org_splits}{5.4cm}{M-where}{On-site needs}{Pay cut required, 95\% CI; yes = as labelled (agree = 4--5 of 5). Asked after the choices.}
 
 \BackupFig{B-org-concerns4}{Four concerns: only creativity shows a signal}{F_org_concerns4_m}{5.4cm}{M-concerns}{Concerns}{Agree = 4--5 of 5; neutral or disagree = 1--3. Item-level p $<$ .05 only for creativity; not corrected for 28 comparisons.}
 
-\BackupTab{B-org-concerns}{Concerns are common; creativity shows a weak link}{T_concerns}{M-where}{Reservations}{Agree = 4--5 of 5. Associations: items asked after the choices.}
+\BackupTab{B-org-concerns}{Concerns are common; creativity shows a weak link}{T_concerns}{M-concerns}{Concerns}{Agree = 4--5 of 5. Associations: items asked after the choices.}
 
-\BackupFig{B-org-other}{Employer values by other firm characteristics}{F_org_other}{5.0cm}{M-where}{Reservations}{Pay cut required, 95\% CI. Plans: expand vs maintain or reduce. Difficulty: some or significant, filling PME vacancies. Talent: agrees FWAs help attract and retain.}
+\BackupFig{B-org-other}{Employer values by other firm characteristics}{F_org_other}{5.0cm}{M-where}{On-site needs}{Pay cut required, 95\% CI; yes = as labelled (agree = 4--5 of 5).}
 
 \begin{frame}[t,label=B-org-view]{Employers: talent upside, practical hurdles}
   % [B1, B2, B3]; [B1] fairness top challenge at 200 or fewer staff, 28% (shown in the figure); [P16] MOM PQ 2937; [S3] 12%; [R15, Q13, M18] no size association
   \FrameTop
   \Fig{F_org_view}{5.2cm}
   \SourceNote{No size association in hiring choices; compressed-week offering rises with firm size (14, 18, 26\%; p = .07).}
-  \BackToTwo{M-employers}{Employers}{M-where}{Reservations}
+  \BackToTwo{M-employer-barriers}{Challenges}{M-concerns}{Concerns}
 \end{frame}
 
 \begin{frame}[t,label=B-career]{Over a third of surveyed PMEs expect a career penalty}
@@ -1739,7 +1740,7 @@ Only the career-concern split stands out, as we saw earlier. Why, then, is the c
       \end{itemize}
     \end{column}
   \end{columns}
-  \BackTo{M-barriers}{Barriers}
+  \DeckNavGlue{\DeckBtnRow\noindent\hfill\BL{B-approvals}{Approvals}\BL{B-awareness}{Awareness}\hyperlink{M-barriers}{\beamerreturnbutton{Barriers}}\par}
 \end{frame}
 
 % [D6, D6x]; [P8] PAP Women's Wing-NTUC WAF survey: 58% aware, 29% know where to turn (FACTCHECK F30, V-21)
@@ -1861,7 +1862,7 @@ So the case is for a voluntary, evaluated pilot, not a roll-out: SNEF could recr
   \Tab{T_flexiload}
   % [S7] 4 of 5 days; [R6, R7, G6] about pro-rata; [M13] part-time 35% where neither concern; [P11] PTRG under review, no enhancement by 6 Oct 2026
   % Declutter: [P5] 5.9% vs 13.7% part-time share of all women 25-64 is on B-laboursupply.
-  \BackToTwo{M-discussion}{Directions}{M-where}{Reservations}
+  \BackToTwo{M-meet}{Two sides}{M-discussion}{Directions}
 \end{frame}
 
 % ==========================================================================
@@ -2063,7 +2064,7 @@ MOM, SNEF and NTUC can therefore act on rankings; prices need a wave with small 
   {% [B1] fairness top challenge at 200 or fewer staff, 28%; [P5] COS 2026 speech: under half who needed part-time got it, 2024
    Fairness to staff without FWAs (top challenge, $\le$200 staff); part-time access (COS 2026: under half who needed it got it).}
   {\SourceNote{Associations; asked after the choices. \hyperlink{B-flexiload}{\textcolor{Navy}{Flexi-load}}.}%
-   \BackToTwo{M-discussion}{Directions}{M-where}{Reservations}}
+   \BackToTwo{M-discussion}{Directions}{M-where}{On-site needs}}
 
 \OptionFrame{B-optC}{Direction C: support managers and HR}
   {\textbf{Direction:} C\quad\textbf{Strength:} exploratory; associations, and the effect of training is untested}

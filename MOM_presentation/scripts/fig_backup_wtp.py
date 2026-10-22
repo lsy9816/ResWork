@@ -73,6 +73,12 @@ FB_REPS = [
      '                    xv = xb + v / XMAX * BL + 0.07 + text_width_cm(fig, f"{fmt(v)}%", FS_SMALL, "bold") + 0.08\n'
      '                    text_cm(fig, xv, y, f"[{fmt(sen_ex)}]", ha="left", va="center", fontsize=FS_SMALL, color=S.MUTED)\n', ''),
     ('f"{pnts[2]} PMEs ({fmt(pnts[0], 1)}%) gave no gender. [ ] = {EXCL}."', 'f"{pnts[2]} PMEs ({fmt(pnts[0], 1)}%) gave no gender."'),
+    # figures carry no subtitle (the slide title and caption say what is shown); no in-figure notes
+    ('    head(fig, 0.05, H - 0.22, "Share of pairs, %")\n', ''),
+    ('    head(fig, 0.05, H - 0.22, "% of pay workers would give up for WFH")\n', ''),
+    ('    note_lines(fig, pl)\n', ''),
+    ('    ay = 1.18\n    ax = axes_cm(fig, x_ax, ay, axw, H - ay - 0.44)', '    ay = 0.60\n    ax = axes_cm(fig, x_ax, ay, axw, H - ay - 0.30)'),
+    ('    head(fig, 0.05, H - 0.22, "% of PMEs (n)")\n', ''),
     # F_career: no in-figure footnotes; one key (dashed line) at the bottom, centred
     ('    key_row(fig, W - 0.05, H - 0.22, [(mk(S.EMPLOYEE), "full sample", S.MUTED),\n'
      '                                       (None, "dashed: one third", S.MUTED)], ha="right")\n',
@@ -121,8 +127,9 @@ V2_REPS = [
     ('    keys = [("o", S.EMPLOYEE, S.EMPLOYEE, S.MS_CIRCLE, "all", S.MUTED, "normal"),\n'
      '            ("o", "white", S.EMPLOYEE, S.MS_CIRCLE, "excl. one panel (†)", S.MUTED, "normal")]\n', '    keys = []\n'),
     ('    xk = r5_key(fig, 0.05, 0.40 + 0.09, keys, fs=S.FS_NOTE, gap=0.30) + 0.35', '    xk = 0.05'),
+    ('    head(fig, name, "Establishments (25+ staff, incl. public sector) offering a scheduled FWA, %")\n', ''),
     # F_motivation: key at the bottom, centred (not inside the plot)
-    ('    X0, X1, Y0, Y1 = 1.12, W - 0.10, 0.55, H - 0.78', '    X0, X1, Y0, Y1 = 1.12, W - 0.10, 1.05, H - 0.78'),
+    ('    X0, X1, Y0, Y1 = 1.12, W - 0.10, 0.55, H - 0.78', '    X0, X1, Y0, Y1 = 1.12, W - 0.10, 1.05, H - 0.30'),
     ('    r5_key(fig, X0 + (2008.3 - XA) / (XB - XA) * (X1 - X0), Y0 + 0.10 * (Y1 - Y0),\n'
      '           [("o", FIRM, FIRM, S.MS_CIRCLE, "CoE Survey", S.INK, "normal"),\n'
      '            ("o", "white", FIRM, S.MS_CIRCLE, "Supplementary Survey", S.INK, "normal")])\n',
@@ -137,7 +144,7 @@ def run_patched():
     fb.S.FIGDIR = S.FIGDIR
     v2 = load_patched("fig_v2", V2_REPS)
     out = {}
-    for n in ("fig_landscape", "fig_awareness", "fig_career", "fig_approvals_two", "fig_sample"):
+    for n in ("fig_landscape", "fig_awareness", "fig_career", "fig_approvals_two", "fig_sample", "fig_benchmarks", "fig_paygaps"):
         out["F_" + n[4:]] = getattr(fb, n)
     out["F_career_who"] = v2.fig_career_who
     out["F_motivation"] = v2.fig_motivation
@@ -205,7 +212,7 @@ def fig_emp_groups():
             V.hline_cm(fig, 0.05, Wd - 0.05, fy((ys[i] + ys[i - 1]) / 2), **S.SEP)
     W.nohead(fig, name, "Pay PMEs would give up, % of monthly pay")
     keys = [("o", "white", S.EMPLOYEE, S.MS_CIRCLE, "first group listed", S.INK, "normal"),
-            ("o", S.EMPLOYEE, S.EMPLOYEE, S.MS_CIRCLE, "others", S.INK, "normal")]
+            ("o", S.EMPLOYEE, S.EMPLOYEE, S.MS_CIRCLE, "No", S.INK, "normal")]
     V.r5_key(fig, (Wd - V.key_width(fig, keys, gap=0.35)) / 2, 0.16, keys, gap=0.35)
     V.outside(fig, name)
     return M.finish(fig, name, SZ)
@@ -280,10 +287,10 @@ def fig_org_splits():
                 fontweight="bold", color=S.EMPLOYER)
     for (s, lab, g), yy, t in zip(SPL_ROWS, ys, labs):
         M.ftext(fig, LX, fy(yy), t, ha="right", va="center", fontsize=S.FS_ROW, color=S.INK)
-    M.ftext(fig, 0.05, AT + 0.08, "n: with feature / others", ha="left", va="bottom", fontsize=S.FS_CAP, color=S.MUTED)
+    M.ftext(fig, 0.05, AT + 0.08, "n: yes / no", ha="left", va="bottom", fontsize=S.FS_CAP, color=S.MUTED)
     W.nohead(fig, name, "Pay cut employers would require, % of pay")
-    keys = [("D", S.EMPLOYER, S.EMPLOYER, 4.6, "with feature", S.INK, "normal"),
-            ("D", "white", S.EMPLOYER, 4.6, "others", S.INK, "normal")]
+    keys = [("D", S.EMPLOYER, S.EMPLOYER, 4.6, "Yes", S.INK, "normal"),
+            ("D", "white", S.EMPLOYER, 4.6, "No", S.INK, "normal")]
     V.r5_key(fig, (Wd - V.key_width(fig, keys, gap=0.35)) / 2, 0.16, keys, gap=0.35)
     V.outside(fig, name)
     return M.finish(fig, name, SZ)

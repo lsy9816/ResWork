@@ -134,10 +134,10 @@ def fig_org_other():
                 fontweight="bold", color=S.EMPLOYER)
     for t, yy in zip(labs, ys):
         M.ftext(fig, LX, fy(yy), t, ha="right", va="center", fontsize=S.FS_ROW, color=S.INK)
-    M.ftext(fig, 0.05, AT + 0.08, "n: with feature / others", ha="left", va="bottom", fontsize=S.FS_CAP, color=S.MUTED)
+    M.ftext(fig, 0.05, AT + 0.08, "n: yes / no", ha="left", va="bottom", fontsize=S.FS_CAP, color=S.MUTED)
     W.nohead(fig, "F_org_other", "Pay cut employers would require, % of pay")
-    keys = [("D", S.EMPLOYER, S.EMPLOYER, 4.6, "with feature", S.INK, "normal"),
-            ("D", "white", S.EMPLOYER, 4.6, "others", S.INK, "normal")]
+    keys = [("D", S.EMPLOYER, S.EMPLOYER, 4.6, "Yes", S.INK, "normal"),
+            ("D", "white", S.EMPLOYER, 4.6, "No", S.INK, "normal")]
     V.r5_key(fig, (Wd - V.key_width(fig, keys, gap=0.35)) / 2, 0.16, keys, gap=0.35)
     V.outside(fig, "F_org_other")
     return M.finish(fig, "F_org_other", SZ)
@@ -149,7 +149,7 @@ def fig_dominance():
     SZ = (12.0, 5.2)
     fig = M.new_fig(*SZ)
     Wd, H = fig.W, fig.H
-    ax = M.axes_cm(fig, 1.4, 1.35, Wd - 1.9, H - 1.9)
+    ax = M.axes_cm(fig, 1.4, 1.35, Wd - 1.9, H - 1.55)
     ax.set_xlim(-0.44, 0.34)
     ax.set_ylim(0, 1.02)
     S.ref_line(ax, 0, 0, 1.02)
@@ -168,7 +168,6 @@ def fig_dominance():
     ax.spines["bottom"].set_color(S.RULE)
     ax.spines["left"].set_color(S.RULE)
     W.nohead(fig, "F_dominance", "Salary of the dominant job minus the other (log points)")
-    M.ftext(fig, 0.05, H - 0.2, "Chose the dominant job, %", ha="left", va="center", fontsize=S.FS_CAP, color=S.MUTED)
     keys = [("o", S.EMPLOYEE, "white", S.MS_CIRCLE, "Observed share, 95% CI", S.INK, "normal"),
             ("s", S.MUTED, "white", S.MS_CIRCLE, "Model prediction", S.INK, "normal")]
     V.r5_key(fig, (Wd - V.key_width(fig, keys, gap=0.35)) / 2, 0.16, keys, gap=0.35)

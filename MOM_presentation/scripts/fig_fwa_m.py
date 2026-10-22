@@ -137,9 +137,7 @@ def fig_fwa_challenge_m():
     Wd, H = fig.W, fig.H
     labs = [short[c] for c in ch.challenge]
     LX = 0.05 + max(V.tw_cm(fig, t, S.FS_ROW) for t in labs)
-    M.ftext(fig, 0.05, H - 0.04, f"Employers' biggest challenge in offering FWAs, % of employers (n = {int(ch.n.iloc[0])})",
-            ha="left", va="top", fontsize=S.FS_HEAD, color=S.EMPLOYER, fontweight="bold")
-    top = H - 0.95
+    top = H - 0.35
     pitch = (top - 0.30) / (len(ch) - 1)
     B0, BW = LX + 0.18, Wd - LX - 1.4
     for i, (r, lab) in enumerate(zip(ch.itertuples(), labs)):

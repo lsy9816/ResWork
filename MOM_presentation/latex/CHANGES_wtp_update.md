@@ -178,3 +178,9 @@ part-time 24); results_fwa/fwa_diagnosis.csv also holds the "adjusted" share (ti
 ## 22 Oct 2026 - slide order
 - Employer block now: challenges (11) -> concerns (12) -> on-site needs (13) -> PME levels (14) -> career penalty (15). Speaker-note transitions rewritten; on-site note now says it is a more reliable guide than the concerns.
 - Slide 16 Employers row: hurdles named, but concerns do not reliably change the pay cut; on-site needs do (WFH). Note updated.
+
+## 22 Oct 2026 - second appendix pass
+- In-figure subtitles removed: F_benchmarks (also its in-figure Poland note), F_paygaps, F_career, F_motivation, F_fwa_challenge_m, F_dominance (slide 2 and slide 11 now say the metric in the slide note). Patches in scripts/fig_backup_wtp.py (professor's code untouched).
+- "with feature / others" legend renamed "Yes / No" (F_org_splits, F_org_other); the note says yes = as labelled (agree = 4-5 of 5).
+- Joint/BH remnants removed: B-methods "Tests" bullet, Wiswall & Zafar joint test on B-validity.
+- Back-links fixed: B-org-view (Challenges, Concerns), B-flexiload (Two sides, Directions), B-intl (Slide 4, Directions), B-fwa-table (Practice, Two sides), B-org-concerns (Concerns); B-tgfwar buttons to Approvals and Awareness; "Reservations" renamed "On-site needs". Unused figure files deleted (F_emp_groups, F_groups_m, F_landscape_m, F_ra_sameside, F_ra_trim, F_where_r5).
