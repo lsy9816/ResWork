@@ -143,8 +143,41 @@ def fig_org_other():
     return M.finish(fig, "F_org_other", SZ)
 
 
+def fig_dominance():
+    """Share choosing the dominant job by its salary gap (data/pme_dominance.csv from scripts/pme_dominance.py)."""
+    d = pd.read_csv(MOM / "data" / "pme_dominance.csv")
+    SZ = (12.0, 5.2)
+    fig = M.new_fig(*SZ)
+    Wd, H = fig.W, fig.H
+    ax = M.axes_cm(fig, 1.4, 1.35, Wd - 1.9, H - 1.9)
+    ax.set_xlim(-0.44, 0.34)
+    ax.set_ylim(0, 1.02)
+    S.ref_line(ax, 0, 0, 1.02)
+    c = d.dropna(subset=["pred"])
+    ax.plot(c.bin, c.pred, color=S.MUTED, lw=1.6, zorder=2)
+    p = d.dropna(subset=["frac"])
+    for _, q in p.iterrows():
+        ax.plot([q.bin] * 2, [q.frac - 1.96 * q.se, q.frac + 1.96 * q.se], color=S.EMPLOYEE, lw=S.CI_LW, zorder=2)
+    ax.plot(p.bin, p.frac, ls="none", marker="o", ms=S.MS_CIRCLE, mfc=S.EMPLOYEE, mec="white", mew=S.MEW, zorder=3)
+    ax.set_yticks([0, 0.25, 0.5, 0.75, 1.0])
+    ax.set_yticklabels(["0", "25", "50", "75", "100%"])
+    ax.set_xticks([-0.4, -0.3, -0.2, 0, 0.2, 0.3])
+    ax.set_xticklabels(["-0.4", "-0.3", "-0.2", "0", "0.2", "0.3"])
+    for sp in ("top", "right"):
+        ax.spines[sp].set_visible(False)
+    ax.spines["bottom"].set_color(S.RULE)
+    ax.spines["left"].set_color(S.RULE)
+    W.nohead(fig, "F_dominance", "Salary of the dominant job minus the other (log points)")
+    M.ftext(fig, 0.05, H - 0.2, "Chose the dominant job, %", ha="left", va="center", fontsize=S.FS_CAP, color=S.MUTED)
+    keys = [("o", S.EMPLOYEE, "white", S.MS_CIRCLE, "Observed share, 95% CI", S.INK, "normal"),
+            ("s", S.MUTED, "white", S.MS_CIRCLE, "Model prediction", S.INK, "normal")]
+    V.r5_key(fig, (Wd - V.key_width(fig, keys, gap=0.35)) / 2, 0.16, keys, gap=0.35)
+    V.outside(fig, "F_dominance")
+    return M.finish(fig, "F_dominance", SZ)
+
+
 if __name__ == "__main__":
-    figs = {"F_use_att": fig_use_att, "F_wtp_att": fig_wtp_att, "F_org_other": fig_org_other}
+    figs = {"F_use_att": fig_use_att, "F_wtp_att": fig_wtp_att, "F_org_other": fig_org_other, "F_dominance": fig_dominance}
     for nm in sys.argv[1:] or list(figs):
         print("wrote", figs[nm]())
     for fl in dict.fromkeys(M.FLAGS):

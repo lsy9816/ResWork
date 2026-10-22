@@ -380,7 +380,7 @@
 % path below plus every backup; return links to omitted main slides go to the index.
 \def\ShortLabels{M-title,M-motivation,M-question,M-benchmark,M-design,M-pmes,M-why-pmes,M-employers,M-where,M-meet,M-barriers,M-employer-barriers,M-discussion,M-conclusion,M-thanks}
 \ifdefined\ShortPath
-  \includeonlyframes{M-title,M-motivation,M-question,M-benchmark,M-design,M-pmes,M-why-pmes,M-employers,M-where,M-meet,M-barriers,M-employer-barriers,M-discussion,M-conclusion,M-thanks,B-index,B-index-all,B-literature,B-references,B-estimation,B-groups,B-robust,B-puzzle-main,B-fwa-current,B-fwa-table,B-sg-reports,B-laboursupply,B-talent,B-triangulation,B-guidelines,B-partners,B-legal,B-intl,B-validity,B-sample,B-industry,B-governance,B-cards,B-paygaps,B-hedonic,B-methods,B-landscape,B-setup,B-emp-all,B-remote-commute,B-emp-benchmarks,B-why-pmes,B-emp-groups,B-access,B-emp-robust,B-org-robust,B-org-salary,B-why-org,B-org-splits,B-org-other,B-use-att,B-wtp-att,B-org-concerns,B-org-concerns4,B-org-view,B-industry-note,B-modelfree,B-puzzle,B-pilot,B-flexiload,B-career-who,B-career,B-level-access,B-tgfwar,B-awareness,B-approvals,B-approvals-tab,B-requestrate,B-limits,B-nextsteps,B-followup,B-optA,B-optB,B-optC,B-optD,B-optE,B-optD-items,B-language,B-org-pct,B-gap,B-ra-gender,B-ra-age,B-ra-care,B-ra-role,B-ra-edu,B-ra-sameside,B-ra-trim}
+  \includeonlyframes{M-title,M-motivation,M-question,M-benchmark,M-design,M-pmes,M-why-pmes,M-employers,M-where,M-meet,M-barriers,M-employer-barriers,M-discussion,M-conclusion,M-thanks,B-index,B-index-all,B-literature,B-references,B-estimation,B-groups,B-robust,B-puzzle-main,B-fwa-current,B-fwa-table,B-sg-reports,B-laboursupply,B-talent,B-triangulation,B-guidelines,B-partners,B-legal,B-intl,B-validity,B-dominance,B-sample,B-industry,B-governance,B-cards,B-paygaps,B-hedonic,B-methods,B-landscape,B-setup,B-emp-all,B-remote-commute,B-emp-benchmarks,B-why-pmes,B-emp-groups,B-access,B-emp-robust,B-org-robust,B-org-salary,B-why-org,B-org-splits,B-org-other,B-use-att,B-wtp-att,B-org-concerns,B-org-concerns4,B-org-view,B-industry-note,B-modelfree,B-puzzle,B-pilot,B-flexiload,B-career-who,B-career,B-level-access,B-tgfwar,B-awareness,B-approvals,B-approvals-tab,B-requestrate,B-limits,B-nextsteps,B-followup,B-optA,B-optB,B-optC,B-optD,B-optE,B-optD-items,B-language,B-org-pct,B-gap,B-ra-gender,B-ra-age,B-ra-care,B-ra-role,B-ra-edu,B-ra-sameside,B-ra-trim}
 \fi
 
 \begin{document}
@@ -1017,7 +1017,7 @@ B and C are exploratory: the presence result comes from the employer survey alon
       \BH{Framework}
       \mbox{\BIi{B-intl}{Evidence elsewhere}}\par
       \mbox{\BIi{B-literature}{Literature}}\enspace\textcolor{Muted}{$\cdot$}\enspace \mbox{\BIi{B-references}{Studies}}\par
-      \BI{B-validity}{Validity of stated choices}
+      \mbox{\BIi{B-validity}{Validity of stated choices}}\enspace\textcolor{Muted}{$\cdot$}\enspace \mbox{\BIi{B-dominance}{Dominance}}\par
       \BH{Data and design}
       \mbox{\BIi{B-sample}{Sample}}\enspace\textcolor{Muted}{$\cdot$}\enspace \mbox{\BIi{B-industry}{Industries}}\par
       \mbox{\BIi{B-governance}{Governance}}\enspace\textcolor{Muted}{$\cdot$}\enspace \mbox{\BIi{B-cards}{Choice cards}}\par
@@ -1528,7 +1528,7 @@ So the case is for a voluntary, evaluated pilot, not a roll-out: SNEF could recr
     \item \textbf{Rankings hold best:} direction right and, in one direct test, relative size; our ranking is the firmest result.
     \item \textbf{Levels less so:} rates predicted less well, money values mixed; our \% of pay values are indicative.
     % [S6] every pay gap 17-33%
-    \item \textbf{Our design:} one cross-section; pay gaps of 17--33\% only; no link yet to behaviour.
+    \item \textbf{Our design:} one cross-section; pay gaps of 17--33\% only; no link yet to behaviour (\hyperlink{B-dominance}{\textcolor{Navy}{dominance check}}).
   \end{itemize}
   \vspace{0.10cm}
   % COMMENTS B-validity, verbatim closing line; the follow-up covers PMEs only, with no employer consent [F1, F2]
@@ -1541,6 +1541,15 @@ So the case is for a voluntary, evaluated pilot, not a roll-out: SNEF could recr
 % ==========================================================================
 % Data and design
 % ==========================================================================
+\begin{frame}[t,label=B-dominance]{Dominance check: choices follow pay when one job is clearly better}
+  % port of code_final.do "Dominance test" (scripts/pme_dominance.py): 3,150 of 6,120 choice sets have one option better on both non-salary attributes shown
+  \FrameTop
+  \Fig{F_dominance}{4.6cm}
+  \Interp{When the better job paid less, 25--40\% still chose it; when it paid more, 79--86\% did.}
+  \SourceNote{Choice sets where one job is better on both non-salary attributes shown (3,150 of 6,120); x-axis: its salary minus the other job's, log points. Better = fully remote $>$ 3--4 $>$ 1--2 days $>$ onsite; compressed $>$ staggered $>$ fixed; part-time $>$ job sharing $>$ full time; low $>$ moderate $>$ high risk; collaborative $>$ autonomous $>$ mixed $>$ hierarchical; short $>$ moderate $>$ long commute.}
+  \BackToTwo{B-validity}{Validity}{B-estimation}{Estimation}
+\end{frame}
+
 \begin{frame}[t,label=B-sample]{Who answered}
   % [S1-S4]; [S2] people involved in PME hiring or manpower decisions; [S3] 12% of firms have 50 or fewer staff
   \FrameTop
