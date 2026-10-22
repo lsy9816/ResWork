@@ -60,7 +60,7 @@ def txt0(x):
     return ("−" if v < 0 else "") + str(abs(v))
 
 
-SIZES1 = {"F_emp_wtp": (13.0, 5.8), "F_org_wtp": (13.0, 5.8), "F_gap_m": (13.0, 5.4), "F_barriers_r5": (13.0, 4.9)}   # single-panel figures without a subtitle: taller
+SIZES1 = {"F_emp_wtp": (13.0, 5.3), "F_org_wtp": (13.0, 5.3), "F_gap_m": (13.0, 5.1), "F_barriers_r5": (13.0, 4.9)}   # single-panel figures without a subtitle: taller
 
 
 def new_fig(name):

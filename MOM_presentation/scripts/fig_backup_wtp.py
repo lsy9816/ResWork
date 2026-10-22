@@ -73,6 +73,28 @@ FB_REPS = [
      '                    xv = xb + v / XMAX * BL + 0.07 + text_width_cm(fig, f"{fmt(v)}%", FS_SMALL, "bold") + 0.08\n'
      '                    text_cm(fig, xv, y, f"[{fmt(sen_ex)}]", ha="left", va="center", fontsize=FS_SMALL, color=S.MUTED)\n', ''),
     ('f"{pnts[2]} PMEs ({fmt(pnts[0], 1)}%) gave no gender. [ ] = {EXCL}."', 'f"{pnts[2]} PMEs ({fmt(pnts[0], 1)}%) gave no gender."'),
+    # F_career: no in-figure footnotes; one key (dashed line) at the bottom, centred
+    ('    key_row(fig, W - 0.05, H - 0.22, [(mk(S.EMPLOYEE), "full sample", S.MUTED),\n'
+     '                                       (None, "dashed: one third", S.MUTED)], ha="right")\n',
+     '    key_row(fig, (W - text_width_cm(fig, "dashed line: one third", FS_SMALL)) / 2, 0.30,\n'
+     '            [(None, "dashed line: one third", S.MUTED)])\n'),
+    ('    note_lines(fig, [f"Career item, adjusted: child 0–6 +{fmt(kid_ame)} pp (p = .001), any caregiving"\n'
+     '                     f" +{fmt(any_ame)} pp (p = .01).",\n'
+     '                     f"Other gaps not tested. PAP–NTUC survey ({ntuc_when}): {ntuc_stigma}% named stigma their primary"\n'
+     '                     " concern."])\n', ''),
+    # F_ra_*: no head, no footnote markers or note, no n in the key; key at the bottom, centred
+    ('("3.place", "Fully remote¹"),   # polish', '("3.place", "Fully remote"),   # polish'),
+    ('("1.load", "Job sharing²"), ("2.load", "Part-time²")]', '("1.load", "Job sharing"), ("2.load", "Part-time")]'),
+    ('    AY = 0.98                                         # declutter: one footnote line (was two)\n'
+     '    AW, AH = W - X0 - 0.40, H - AY - 0.86\n', '    AY = 1.25\n    AW, AH = W - X0 - 0.40, H - AY - 0.20\n'),
+    ('    head(fig, 0.05, H - 0.22, "% of monthly pay given up (indicative)")\n', ''),
+    ('    key_row(fig, 0.05, H - 0.58, [(RA_STYLE[style], f"{lab} ({ns[int(g)]:,})", S.INK) for g, lab, style in groups]\n'
+     '            + [(None, "lines: 95% CI", S.MUTED)], fs=FS, gap=0.40)\n',
+     '    _it = [(RA_STYLE[style], lab, S.INK) for g, lab, style in groups]\n'
+     '    _tw = sum(0.34 + text_width_cm(fig, t, FS) for _, t, _ in _it) + 0.40 * (len(_it) - 1)\n'
+     '    key_row(fig, (W - _tw) / 2, 0.30, _it, fs=FS, gap=0.40)\n'),
+    ('    note_lines(fig, ["¹ vs onsite, >45 min commute. ² Fewer hours, same monthly pay. Base: onsite, fixed hours,"\n'
+     '                     " full-time."])\n', ''),
 ]
 
 V2_REPS = [
@@ -99,6 +121,14 @@ V2_REPS = [
     ('    keys = [("o", S.EMPLOYEE, S.EMPLOYEE, S.MS_CIRCLE, "all", S.MUTED, "normal"),\n'
      '            ("o", "white", S.EMPLOYEE, S.MS_CIRCLE, "excl. one panel (†)", S.MUTED, "normal")]\n', '    keys = []\n'),
     ('    xk = r5_key(fig, 0.05, 0.40 + 0.09, keys, fs=S.FS_NOTE, gap=0.30) + 0.35', '    xk = 0.05'),
+    # F_motivation: key at the bottom, centred (not inside the plot)
+    ('    X0, X1, Y0, Y1 = 1.12, W - 0.10, 0.55, H - 0.78', '    X0, X1, Y0, Y1 = 1.12, W - 0.10, 1.05, H - 0.78'),
+    ('    r5_key(fig, X0 + (2008.3 - XA) / (XB - XA) * (X1 - X0), Y0 + 0.10 * (Y1 - Y0),\n'
+     '           [("o", FIRM, FIRM, S.MS_CIRCLE, "CoE Survey", S.INK, "normal"),\n'
+     '            ("o", "white", FIRM, S.MS_CIRCLE, "Supplementary Survey", S.INK, "normal")])\n',
+     '    _k = [("o", FIRM, FIRM, S.MS_CIRCLE, "CoE Survey", S.INK, "normal"),\n'
+     '          ("o", "white", FIRM, S.MS_CIRCLE, "Supplementary Survey", S.INK, "normal")]\n'
+     '    r5_key(fig, (W - key_width(fig, _k)) / 2, 0.16, _k)\n'),
 ]
 
 
@@ -110,6 +140,9 @@ def run_patched():
     for n in ("fig_landscape", "fig_awareness", "fig_career", "fig_approvals_two", "fig_sample"):
         out["F_" + n[4:]] = getattr(fb, n)
     out["F_career_who"] = v2.fig_career_who
+    out["F_motivation"] = v2.fig_motivation
+    for sheet, groups, nm, rob in fb.RA_FIGS[:5]:
+        out[nm] = (lambda sheet=sheet, groups=groups, nm=nm, rob=rob: fb.fig_ra(sheet, groups, nm, rob))
     return out
 
 
