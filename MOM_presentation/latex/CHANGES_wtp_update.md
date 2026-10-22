@@ -163,3 +163,6 @@ part-time 24); results_fwa/fwa_diagnosis.csv also holds the "adjusted" share (ti
 
 ## 22 Oct 2026 - dominance check added
 - B-dominance (Backup after Validity): port of the "Dominance test" in code_final.do (scripts/pme_dominance.py -> data/pme_dominance.csv, pme_dominance_task.csv; scripts/fig_backup_att.py F_dominance). Reproduces the Dropbox plot points exactly (3,150 of 6,120 sets; shares 25-40% when the dominant job pays less, 79-86% when more). Linked from B-validity and the full index.
+
+## 22 Oct 2026 - subgroup slide (B-groups) redone
+- B-groups now shows, for all seven arrangements, the difference in pay given up between groups (women-men, 40+ vs under 40, caregiving-none) with 95% CIs (F_groups_diff, scripts/fig_backup_att.py; data deck_support/data/dce_emp_het.csv pairwise rows). Old title "No clear subgroup differences" rested on joint tests / BH over 198 contrasts and was not supported at the individual level: women +8.5 points for 3-4 WFH days (p = .004), 40+ -7.0 for staggered hours (p = .02). Title, caption, note, B-emp-groups title and B-ra-* captions (gender, age, care, role, edu) rewritten on individual tests.

@@ -176,8 +176,56 @@ def fig_dominance():
     return M.finish(fig, "F_dominance", SZ)
 
 
+def fig_groups_diff():
+    """Difference in pay PMEs would give up between groups, all seven arrangements (dce_emp_het.csv pairwise rows; diff, se -> 95% CI)."""
+    h = pd.read_csv(Path(W.BUILD) / "deck_support" / "data" / "dce_emp_het.csv")
+    h = h[h.block == "pairwise"]
+    items = [("p12", "1–2 WFH days"), ("p34", "3–4 WFH days"), ("remote", "Fully remote"), ("compress", "Compressed week"),
+             ("stagger", "Staggered hours"), ("jobshare", "Job sharing"), ("parttime", "Part-time")]
+    panels = [("female", "Women − men"), ("age40", "40+ − under 40"), ("care_any", "Caregiving − none")]
+    SZ = (14.5, 5.0)
+    fig = M.new_fig(*SZ)
+    Wd, H = fig.W, fig.H
+    LX = 0.05 + max(V.tw_cm(fig, t, S.FS_ROW) for _, t in items)
+    PX0, GAP = LX + 0.15, 0.55
+    PW = (Wd - 0.65 - PX0 - 2 * GAP) / 3
+    AY, AT = 1.15, H - 0.65
+    n = len(items)
+    YA_, YB_ = 0.4, n + 0.6
+    ys = [n - i for i in range(n)]
+
+    def fy(v):
+        return AY + (v - YA_) / (YB_ - YA_) * (AT - AY)
+    for j, (sp, title) in enumerate(panels):
+        ax = M.axes_cm(fig, PX0 + j * (PW + GAP), AY, PW, AT - AY)
+        ax.set_xlim(-20, 20)
+        ax.set_ylim(YA_, YB_)
+        S.ref_line(ax, 0, YA_, YB_)
+        for (it, lab), yy in zip(items, ys):
+            q = h[(h.split == sp) & (h["item"] == it)].iloc[0]
+            lb, ub = q["diff"] - 1.96 * q.se, q["diff"] + 1.96 * q.se
+            filled = lb > 0 or ub < 0
+            ax.plot([lb, ub], [yy, yy], color=S.EMPLOYEE, lw=S.CI_LW, solid_capstyle="butt", zorder=2)
+            ax.plot([q["diff"]], [yy], marker="o", ms=S.MS_CIRCLE, mfc=S.EMPLOYEE if filled else "white",
+                    mec="white" if filled else S.EMPLOYEE, mew=S.MEW if filled else S.MEW_HOLLOW, ls="none", zorder=3)
+        ax.set_yticks([])
+        ax.spines["left"].set_visible(False)
+        ax.spines["bottom"].set_color(S.RULE)
+        ax.set_xticks([-15, 0, 15])
+        ax.set_xticklabels(["-15", "0", "15"])
+        M.ftext(fig, PX0 + j * (PW + GAP) + PW / 2, AT + 0.08, title, ha="center", va="bottom", fontsize=S.FS_HEAD,
+                fontweight="bold", color=S.EMPLOYEE)
+    for (it, lab), yy in zip(items, ys):
+        M.ftext(fig, LX, fy(yy), lab, ha="right", va="center", fontsize=S.FS_ROW, color=S.INK)
+    keys = [("o", S.EMPLOYEE, "white", S.MS_CIRCLE, "Interval excludes 0", S.INK, "normal"),
+            ("o", "white", S.EMPLOYEE, S.MS_CIRCLE, "Includes 0", S.INK, "normal")]
+    V.r5_key(fig, (Wd - V.key_width(fig, keys, gap=0.35)) / 2, 0.16, keys, gap=0.35)
+    V.outside(fig, "F_groups_diff")
+    return M.finish(fig, "F_groups_diff", SZ)
+
+
 if __name__ == "__main__":
-    figs = {"F_use_att": fig_use_att, "F_wtp_att": fig_wtp_att, "F_org_other": fig_org_other, "F_dominance": fig_dominance}
+    figs = {"F_use_att": fig_use_att, "F_wtp_att": fig_wtp_att, "F_org_other": fig_org_other, "F_dominance": fig_dominance, "F_groups_diff": fig_groups_diff}
     for nm in sys.argv[1:] or list(figs):
         print("wrote", figs[nm]())
     for fl in dict.fromkeys(M.FLAGS):

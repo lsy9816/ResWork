@@ -1231,7 +1231,7 @@ We acknowledge that no pair had equal pay and gaps ran from 17 to 33 per cent, s
 MOM, SNEF and NTUC can rely on the rankings; per cent of pay is a rough size, never a proposed pay cut. % [V1-V5]
 Next, what PMEs and firms do today.}
 
-\begin{frame}[t,label=B-groups]{No clear subgroup differences}
+\begin{frame}[t,label=B-groups]{Women give up more for WFH; little else differs}
   % F_groups_m (fig_v2.py, 13.0 x 5.0 cm; compressed-week column removed, ROUND5_SPEC s4):
   % PME equal-pay shares with 95% CIs by gender, age (19-39 / 40+) and caregiving (none / any),
   % for 1-2 WFH days, 3-4 WFH days and fully remote (vs a long commute); 50% reference [s3b].
@@ -1239,20 +1239,20 @@ Next, what PMEs and firms do today.}
   %   [Q14] women 63/67/73% vs men 56/56/63% (location p = .047, nominal only); age p = .30; caregiving p = .53
   %   [E18] 198 pairwise contrasts, minimum BH q = .70; WTP joint tests p = .43 / .09 / .66
   \FrameTop
-  \FigC{F_groups_m}
+  \FigC{F_groups_diff}
   % [E18, M7] null results are not equivalence (mandate: "Non-rejection is not equivalence")
-  \Interp{Women and men, younger and older PMEs, and caregivers or not\\ all give up similar amounts; we find no clear differences.}
+  \Interp{Women give up more for WFH (clearly for 3--4 days); PMEs aged 40+ less for staggered hours.\\ Other differences are small or imprecise.}
+  \SourceNote{Pay given up: second group minus first, 95\% CI; filled if the interval excludes 0. Not adjusted for repeated comparisons.}
   % Note (polish pass 7 Oct 2026): the 95% CI convention (formerly in the figure's axis caption and this
   % source line, [s3b]); "Fully remote: vs a >45 min commute", moved out of the figure's column title
   % ([E3] main model: fully remote vs onsite with a long commute; [S8] long = >45 min); and the figure's
   % former "* Nominal" footnote, verbatim ([Q14] the starred p = .047 is nominal; [E18] 198 contrasts, BH).
   % [S1] 1,020 PMEs; [E18] BH correction over 198 contrasts; [M7] 7 primary splits
 \end{frame}
-\note{[Full deck only] In every group shown, the interval for the pay PMEs would give up for each WFH level lies above zero. % [Q14b]
-None of 198 group contrasts survives correction for multiple testing, and we detect no differences by income, organisation type or tenure. % [E18, M7]
-We acknowledge that no difference detected is not proof that groups are alike; mothers of young children are a small sample. % [M7] n = 108
-Only the career-concern split stands out, as we saw earlier. % [M7, M4] a belief, not a demographic group
-MOM, SNEF and NTUC could therefore treat PME demand for WFH as broad, not niche. Why, then, is the compressed week rare? % implication and transition to M-puzzle
+\note{[Full deck only] Each dot is the difference in the pay one group would give up and the other would give up, for the seven arrangements; filled dots have an interval that excludes zero. % [dce_emp_het.csv pairwise]
+Women would give up 5, 8 and 8 points more of pay for one to two days, three to four days and fully remote; the three-to-four-day difference is clearly non-zero (p below .01), the other two are borderline (p = .08 and .06). PMEs aged 40 and over give up 7 points less for staggered hours (p = .02), and about 6 points less for the compressed week, which is borderline (p = .05). No caregiving difference is significant. % [diffs 5.0, 8.5, 7.6; 7.0, 6.1]
+Two of 21 comparisons exclude zero, about what chance alone would give, so we read this as a suggestion that women value WFH more, not as settled. We acknowledge that no difference detected is not proof that groups are alike; mothers of young children are a small sample.
+Only the career-concern split stands out, as we saw earlier. Why, then, is the compressed week rare? % transition to M-puzzle
 }
 
 \begin{frame}[t,label=B-robust]{Rankings are more credible than levels}
@@ -1756,7 +1756,7 @@ So the case is for a voluntary, evaluated pilot, not a roll-out: SNEF could recr
   \BackToTwo{M-why-pmes}{Career concerns}{B-groups}{PME groups}
 \end{frame}
 
-\begin{frame}[t,label=B-emp-groups]{No group difference established}
+\begin{frame}[t,label=B-emp-groups]{Pay given up by group: levels}
   % [Q14, Q14b] equal-pay shares by group; [E18] p = .43 / .09 / .66; 198 contrasts, min q = .70; [Q14] p = .047 nominal
   % [M9] access row: compressed week 58.7 vs 58.1 at equal pay, p = .86; E19 not robust; [M7] further splits on B-why-pmes
   \FrameTop
@@ -2361,19 +2361,19 @@ So the case is for a voluntary, evaluated pilot, not a roll-out: SNEF could recr
 % PME groups
 % ==========================================================================
 % [E18] gender p = .43
-\BackupFig{B-ra-gender}{Estimates by gender}{F_ra_gender}{5.4cm}{B-groups}{PME groups}{No statistically significant gender difference. \hyperlink{B-emp-groups}{\textcolor{Navy}{All groups}}.}
+\BackupFig{B-ra-gender}{Estimates by gender}{F_ra_gender}{5.4cm}{B-groups}{PME groups}{Women give up more for 3--4 WFH days (8 points, p $<$ .01); no other difference is significant at 5\%. \hyperlink{B-groups}{\textcolor{Navy}{Differences}}; \hyperlink{B-emp-groups}{\textcolor{Navy}{All groups}}.}
 
 % [E18] age p = .09
-\BackupFig{B-ra-age}{Estimates by age}{F_ra_age}{5.4cm}{B-groups}{PME groups}{Ages 19--39 vs 40+; not statistically significant. \hyperlink{B-emp-groups}{\textcolor{Navy}{All groups}}.}
+\BackupFig{B-ra-age}{Estimates by age}{F_ra_age}{5.4cm}{B-groups}{PME groups}{Ages 19--39 vs 40+: those aged 40+ give up less for staggered hours (7 points, p = .02); no other difference is significant at 5\%. \hyperlink{B-groups}{\textcolor{Navy}{Differences}}; \hyperlink{B-emp-groups}{\textcolor{Navy}{All groups}}.}
 
 % [E18] caregiving p = .66
-\BackupFig{B-ra-care}{Estimates by caregiving}{F_ra_care}{5.4cm}{B-groups}{PME groups}{No caregiving vs any; not statistically significant. \hyperlink{B-emp-groups}{\textcolor{Navy}{All groups}}.}
+\BackupFig{B-ra-care}{Estimates by caregiving}{F_ra_care}{5.4cm}{B-groups}{PME groups}{No caregiving vs any; no difference is significant at 5\%. \hyperlink{B-groups}{\textcolor{Navy}{Differences}}; \hyperlink{B-emp-groups}{\textcolor{Navy}{All groups}}.}
 
 % [E18] role p = .15
-\BackupFig{B-ra-role}{Estimates by role level}{F_ra_role}{5.4cm}{B-groups}{PME groups}{Junior, middle and senior; not statistically significant. \hyperlink{B-emp-groups}{\textcolor{Navy}{All groups}}.}
+\BackupFig{B-ra-role}{Estimates by role level}{F_ra_role}{5.4cm}{B-groups}{PME groups}{Junior, middle and senior; no difference in the seven arrangements is significant at 5\%. \hyperlink{B-emp-groups}{\textcolor{Navy}{All groups}}.}
 
 % [E18b] education p = .56
-\BackupFig{B-ra-edu}{Estimates by education}{F_ra_edu}{5.4cm}{B-groups}{PME groups}{Three education levels; not statistically significant. \hyperlink{B-emp-groups}{\textcolor{Navy}{All groups}}.}
+\BackupFig{B-ra-edu}{Estimates by education}{F_ra_edu}{5.4cm}{B-groups}{PME groups}{Three education levels; no difference in the seven arrangements is significant at 5\%. \hyperlink{B-emp-groups}{\textcolor{Navy}{All groups}}.}
 
 % ==========================================================================
 % PME checks
