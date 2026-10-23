@@ -196,3 +196,4 @@ part-time 24); results_fwa/fwa_diagnosis.csv also holds the "adjusted" share (ti
 
 ## 23 Oct 2026 - employer splits restructured
 - B-org-splits "Employer pay cut by firm characteristic: WFH" now shows all 13 splits (8 from wtp_deck.csv + the 5 from results_fwa/employer_other.csv), WFH options only, no n beside labels (group-size range in the note). B-org-other removed (merged). New B-org-policy: no written policy, no WFH today, salary-offset belief and high overall concern, all seven arrangements (same layout as B-org-concerns4). Figures from scripts/fig_backup_att.py (F_org_splits, F_org_policy); F_org_other deleted. Buttons on slide 13 and the index updated.
+- Reverted the merge (too busy): B-org-splits (8 splits: roles, policy, concerns) and B-org-other (5 hiring/readiness splits) are separate again, WFH options only, no n beside labels; the four-panel all-arrangements slide (B-org-policy) removed.
