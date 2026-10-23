@@ -193,9 +193,17 @@ def fig_dominance():
     ax.spines["bottom"].set_color(S.RULE)
     ax.spines["left"].set_color(S.RULE)
     W.nohead(fig, "F_dominance", "Salary of the dominant job minus the other (log points)")
-    keys = [("o", S.EMPLOYEE, "white", S.MS_CIRCLE, "Observed share, 95% CI", S.INK, "normal"),
-            ("s", S.MUTED, "white", S.MS_CIRCLE, "Model prediction", S.INK, "normal")]
-    V.r5_key(fig, (Wd - V.key_width(fig, keys, gap=0.35)) / 2, 0.16, keys, gap=0.35)
+    # key at the bottom, centred: dot = observed share, line = model prediction
+    t1, t2 = "Observed share, 95% CI", "Model prediction"
+    w1 = 0.33 + V.tw_cm(fig, t1, S.FS_TICK)
+    w2 = 0.55 + V.tw_cm(fig, t2, S.FS_TICK)
+    gap = 0.42
+    x = (Wd - (w1 + gap + w2)) / 2
+    M.fmarker(fig, x + 0.11, 0.16, "o", S.EMPLOYEE, "white", size=S.MS_CIRCLE, lw=S.MEW)
+    M.ftext(fig, x + 0.33, 0.16, t1, ha="left", va="center", fontsize=S.FS_TICK, color=S.INK)
+    x += w1 + gap
+    V.hline_cm(fig, x, x + 0.45, 0.16, color=S.MUTED, lw=1.6)
+    M.ftext(fig, x + 0.55, 0.16, t2, ha="left", va="center", fontsize=S.FS_TICK, color=S.INK)
     V.outside(fig, "F_dominance")
     return M.finish(fig, "F_dominance", SZ)
 
