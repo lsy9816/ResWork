@@ -185,3 +185,8 @@ part-time 24); results_fwa/fwa_diagnosis.csv also holds the "adjusted" share (ti
 - Joint/BH remnants removed: B-methods "Tests" bullet, Wiswall & Zafar joint test on B-validity.
 - Back-links fixed: B-org-view (Challenges, Concerns), B-flexiload (Two sides, Directions), B-intl (Slide 4, Directions), B-fwa-table (Practice, Two sides), B-org-concerns (Concerns); B-tgfwar buttons to Approvals and Awareness; "Reservations" renamed "On-site needs". Unused figure files deleted (F_emp_groups, F_groups_m, F_landscape_m, F_ra_sameside, F_ra_trim, F_where_r5).
 - B-intl: removed the slide note; the Trip.com co-founder disclosure now sits in the trial bullet.
+
+## 23 Oct 2026 - sample slide and a third notes pass
+- F_sample: "Prefer not to say" (0.3%) is now a gender row (the note is gone); the PMEs and Employers headers are centred over their columns with more room above the first sub-head.
+- F_landscape: in-figure take-up lines removed (numbers are in B-fwa-table).
+- Slide notes removed: M-meet, B-landscape, B-paygaps, B-remote-commute, B-fwa-current, B-modelfree, B-pilot, B-why-pmes (header now "Compressed"), the direction-A footer; others shortened (M-employer-barriers, B-hedonic, B-emp-all, B-org-concerns, B-org-concerns4, B-limits, direction D/E footers).

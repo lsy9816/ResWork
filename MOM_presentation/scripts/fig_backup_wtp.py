@@ -79,6 +79,24 @@ FB_REPS = [
     ('    note_lines(fig, pl)\n', ''),
     ('    ay = 1.18\n    ax = axes_cm(fig, x_ax, ay, axw, H - ay - 0.44)', '    ay = 0.60\n    ax = axes_cm(fig, x_ax, ay, axw, H - ay - 0.30)'),
     ('    head(fig, 0.05, H - 0.22, "% of PMEs (n)")\n', ''),
+    # F_sample: "prefer not to say" is a gender row (no note); the two headers are centred over their columns
+    ('[("Gender", [("Men", "gender", "Male"), ("Women", "gender", "Female")]),',
+     '[("Gender", [("Men", "gender", "Male"), ("Women", "gender", "Female"),\n'
+     '                      ("Prefer not to say", "gender", "Prefer not to say")]),'),
+    ('+ (pnts[2] if title == "Gender" else 0)', '+ 0'),
+    ('text_cm(fig, xb + v / XMAX * BL + 0.07, y, f"{fmt(v)}%", ha="left", va="center", fontsize=FS_SMALL,',
+     'text_cm(fig, xb + v / XMAX * BL + 0.07, y, f"{fmt(v, 1) if v < 1 else fmt(v)}%", ha="left", va="center", fontsize=FS_SMALL,'),
+    ('    note_lines(fig, [f"{pnts[2]} PMEs ({fmt(pnts[0], 1)}%) gave no gender."])\n', ''),
+    ('    fig = canvas(W_BK, 4.8)                        # polish pass: 14.5 cm wide (was 14.0); still scale 1',
+     '    fig = canvas(W_BK, 5.2)'),
+    ('    text_cm(fig, 0.08, H - 0.24, f"PMEs (n = {n_pme:,})", ha="left", va="center", fontsize=FS_HEAD,',
+     '    text_cm(fig, (0.08 + cols[1][0] + cols[1][1] + BL + VAL_W) / 2, H - 0.24, f"PMEs (n = {n_pme:,})", ha="center", va="center", fontsize=FS_HEAD,'),
+    ('    text_cm(fig, split + 0.25, H - 0.24, f"Employers (n = {n_org:,})", ha="left", va="center", fontsize=FS_HEAD,',
+     '    text_cm(fig, split + 0.25 + (lw_o[0] + BL + VAL_W) / 2, H - 0.24, f"Employers (n = {n_org:,})", ha="center", va="center", fontsize=FS_HEAD,'),
+    # F_landscape: the take-up line is in B-fwa-table; no in-figure footnote
+    ('    text_cm(fig, 0.05, 0.50, tk, ha="left", va="center", fontsize=FS_SMALL)\n', ''),
+    ('    text_cm(fig, 0.05, 0.21, "Take-up = % using it among those with access (available or used).", ha="left",\n'
+     '            va="center", fontsize=FS_SMALL, color=S.MUTED)\n', ''),
     # F_career: no in-figure footnotes; one key (dashed line) at the bottom, centred
     ('    key_row(fig, W - 0.05, H - 0.22, [(mk(S.EMPLOYEE), "full sample", S.MUTED),\n'
      '                                       (None, "dashed: one third", S.MUTED)], ha="right")\n',
