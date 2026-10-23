@@ -322,14 +322,14 @@
   \begin{frame}[t,label=#1]{#2}
     \FrameTop
     \Fig{#3}{#4}
-    \SourceNote{#7}
+    \ifx\relax#7\relax\else\SourceNote{#7}\fi
     \BackTo{#5}{#6}
   \end{frame}}
 \newcommand{\BackupTab}[6]{%
   \begin{frame}[t,label=#1]{#2}
     \FrameTop
     \Tab{#3}
-    \SourceNote{#6}
+    \ifx\relax#6\relax\else\SourceNote{#6}\fi
     \BackTo{#4}{#5}
   \end{frame}}
 
@@ -1561,7 +1561,7 @@ Next, what PMEs and firms do today.}
   \FigC{F_groups_diff}
   % [E18, M7] null results are not equivalence (mandate: "Non-rejection is not equivalence")
   \Interp{Women give up more for WFH (clearly for 3--4 days); PMEs aged 40+ less for staggered hours.\\ Other differences are small or imprecise.}
-  \SourceNote{Second group minus first, 95\% CI; not adjusted for repeated comparisons.}
+  \SourceNote{}
   % Note (polish pass 7 Oct 2026): the 95% CI convention (formerly in the figure's axis caption and this
   % source line, [s3b]); "Fully remote: vs a >45 min commute", moved out of the figure's column title
   % ([E3] main model: fully remote vs onsite with a long commute; [S8] long = >45 min); and the figure's
@@ -1574,23 +1574,23 @@ Two of 21 comparisons exclude zero, about what chance alone would give, so we re
 Only the career-concern split stands out, as we saw earlier. Why, then, is the compressed week rare? % transition to M-puzzle
 }
 
-\BackupFig{B-ra-gender}{Estimates by gender}{F_ra_gender}{5.4cm}{B-groups}{PME groups}{Women give up more for 3--4 WFH days (8 points, p $<$ .01); nothing else is significant at 5\%.}
+\BackupFig{B-ra-gender}{Estimates by gender}{F_ra_gender}{5.4cm}{B-groups}{PME groups}{}
 
 % [E18] age p = .09
 
-\BackupFig{B-ra-age}{Estimates by age}{F_ra_age}{5.4cm}{B-groups}{PME groups}{Aged 40+ give up less for staggered hours (7 points, p = .02); nothing else is significant at 5\%.}
+\BackupFig{B-ra-age}{Estimates by age}{F_ra_age}{5.4cm}{B-groups}{PME groups}{}
 
 % [E18] caregiving p = .66
 
-\BackupFig{B-ra-care}{Estimates by caregiving}{F_ra_care}{5.4cm}{B-groups}{PME groups}{No difference is significant at 5\%.}
+\BackupFig{B-ra-care}{Estimates by caregiving}{F_ra_care}{5.4cm}{B-groups}{PME groups}{}
 
 % [E18] role p = .15
 
-\BackupFig{B-ra-role}{Estimates by role level}{F_ra_role}{5.4cm}{B-groups}{PME groups}{No difference is significant at 5\%.}
+\BackupFig{B-ra-role}{Estimates by role level}{F_ra_role}{5.4cm}{B-groups}{PME groups}{}
 
 % [E18b] education p = .56
 
-\BackupFig{B-ra-edu}{Estimates by education}{F_ra_edu}{5.4cm}{B-groups}{PME groups}{No difference is significant at 5\%.}
+\BackupFig{B-ra-edu}{Estimates by education}{F_ra_edu}{5.4cm}{B-groups}{PME groups}{}
 
 % ==========================================================================
 % PME checks
@@ -1643,15 +1643,15 @@ Only the career-concern split stands out, as we saw earlier. Why, then, is the c
   \BackToTwo{M-meet}{Two sides}{M-employers}{Employers}
 \end{frame}
 
-\BackupTab{B-org-salary}{Why employer \% is secondary}{T_org_salary}{M-employers}{Employers}{Pay-cut sizes rest on a weakly identified pay slope; the ranking is firmer.}
+\BackupTab{B-org-salary}{Why employer \% is secondary}{T_org_salary}{M-employers}{Employers}{}
 
-\BackupFig{B-org-splits}{All employer splits}{F_org_splits}{5.4cm}{M-where}{On-site needs}{Pay cut required, 95\% CI; yes = as labelled (agree = 4--5 of 5). Asked after the choices.}
+\BackupFig{B-org-splits}{All employer splits}{F_org_splits}{5.4cm}{M-where}{On-site needs}{Yes = as labelled (agree = 4--5 of 5).}
 
-\BackupFig{B-org-concerns4}{Four concerns: only creativity shows a signal}{F_org_concerns4_m}{5.4cm}{M-concerns}{Concerns}{Agree = 4--5 of 5; neutral or disagree = 1--3. p $<$ .05 only for creativity; not corrected for 28 comparisons.}
+\BackupFig{B-org-concerns4}{Four concerns: only creativity shows a signal}{F_org_concerns4_m}{5.4cm}{M-concerns}{Concerns}{Agree = 4--5 of 5; neutral or disagree = 1--3.}
 
 \BackupTab{B-org-concerns}{Concerns are common; creativity shows a weak link}{T_concerns}{M-concerns}{Concerns}{Agree = 4--5 of 5.}
 
-\BackupFig{B-org-other}{Employer values by other firm characteristics}{F_org_other}{5.0cm}{M-where}{On-site needs}{Pay cut required, 95\% CI; yes = as labelled (agree = 4--5 of 5).}
+\BackupFig{B-org-other}{Employer values by other firm characteristics}{F_org_other}{5.0cm}{M-where}{On-site needs}{Yes = as labelled (agree = 4--5 of 5).}
 
 \begin{frame}[t,label=B-org-view]{Employers: talent upside, practical hurdles}
   % [B1, B2, B3]; [B1] fairness top challenge at 200 or fewer staff, 28% (shown in the figure); [P16] MOM PQ 2937; [S3] 12%; [R15, Q13, M18] no size association
