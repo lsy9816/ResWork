@@ -5,6 +5,7 @@ the PME barrier aggregates of the build tree.  Figures: F_use_m, F_fwa_challenge
 
 usage: BUILD=/path/to/build OUTDIR=/path/to/figures python3 fig_fwa_m.py [name ...]
 """
+import math
 import sys
 from pathlib import Path
 
@@ -223,7 +224,7 @@ def fig_org_concerns_m(name="F_org_concerns_m", keys=("prod", "coord", "fair"), 
     LX = 0.05 + max(V.tw_cm(fig, t, S.FS_ROW) for t in labels)
     GAP = 0.25
     PW = (Wd - 0.05 - LX - 0.15 - (n - 1) * GAP) / n
-    AY, AT = 1.15, H - 0.60
+    AY, AT = 1.15, H - (0.60 if five else 0.85)
     YA_, YB_ = (2.65 if five else 0.55), 7.5
     YS = {"p3": 7.15, "p2": 6.2, "p1": 5.25, "t2": 4.3, "t1": 3.35, "l1": 2.15, "l2": 1.2}
 
@@ -246,9 +247,15 @@ def fig_org_concerns_m(name="F_org_concerns_m", keys=("prod", "coord", "fair"), 
         ax.set_xticks([0, 50])
         ax.set_xticklabels(["0", "50%"])
         ax.tick_params(axis="x", length=2.5, width=0.6, colors=S.RULE, labelcolor=S.MUTED, labelsize=S.FS_TICK)
-        M.ftext(fig, x0 + PW / 2, AT + 0.08, title, ha="center", va="bottom", fontsize=S.FS_HEAD, color=S.INK,
-                fontweight="bold")
         q = es[es.split == key].set_index("item")
+        if five:
+            M.ftext(fig, x0 + PW / 2, AT + 0.08, title, ha="center", va="bottom", fontsize=S.FS_HEAD, color=S.INK,
+                    fontweight="bold")
+        else:   # back-up: the share of firms that agree sits under the concern's name
+            sh = int(math.floor(100 * q.loc["p1"].n1 / (q.loc["p1"].n1 + q.loc["p1"].n0) + 0.5))
+            M.ftext(fig, x0 + PW / 2, AT + 0.34, title, ha="center", va="bottom", fontsize=S.FS_HEAD, color=S.INK,
+                    fontweight="bold")
+            M.ftext(fig, x0 + PW / 2, AT + 0.08, f"{sh}% agree", ha="center", va="bottom", fontsize=S.FS_CAP, color=S.MUTED)
         for lab, item, y0, load in rows:
             r = q.loc[CSV2[item]]
             y = YS[item]

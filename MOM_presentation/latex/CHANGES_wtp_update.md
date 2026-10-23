@@ -200,3 +200,7 @@ part-time 24); results_fwa/fwa_diagnosis.csv also holds the "adjusted" share (ti
 - One scale definition everywhere an agree item appears: "Agree = 4-5 of 5; neutral or disagree = 1-3" on M-why-pmes, B-org-concerns, B-career, B-career-who, B-org-view; B-use-att gets disagree/neutral/agree. T_concerns footnote cut to the one marker.
 - Outlier definition stated everywhere: monthly salary outside S$2,000-50,000 (both PME and employer samples): B-robust table, B-emp-robust and B-org-robust notes, B-methods, limits note text.
 - B-limits: capped salaries made precise (outside S$2,000-50,000: 129 of 1,020 PMEs, 5 of 397 employers; same group as the outlier check).
+
+## 23 Oct 2026 - merged duplicates (83 -> 81 pages)
+- B-org-concerns (concerns table) merged into B-org-concerns4: each panel now shows the share of firms that agree (56/54/51/46%, from employer_splits.csv; same numbers as the old table, fairness is new); T_concerns deleted.
+- B-tgfwar ("What we can say about the Guidelines") removed: its bullets repeated B-awareness, B-approvals and B-setup; "no before-and-after: we cannot say whether the Guidelines changed outcomes" moved into the B-approvals note. Slide 14 button now "Awareness"; FAQ "Did the Guidelines change outcomes?" points to B-approvals. Links, indexes and frame list checked: no dangling links, every back-up is in the full index.
