@@ -199,3 +199,4 @@ part-time 24); results_fwa/fwa_diagnosis.csv also holds the "adjusted" share (ti
 - Reverted the merge (too busy): B-org-splits (8 splits: roles, policy, concerns) and B-org-other (5 hiring/readiness splits) are separate again, WFH options only, no n beside labels; the four-panel all-arrangements slide (B-org-policy) removed.
 - One scale definition everywhere an agree item appears: "Agree = 4-5 of 5; neutral or disagree = 1-3" on M-why-pmes, B-org-concerns, B-career, B-career-who, B-org-view; B-use-att gets disagree/neutral/agree. T_concerns footnote cut to the one marker.
 - Outlier definition stated everywhere: monthly salary outside S$2,000-50,000 (both PME and employer samples): B-robust table, B-emp-robust and B-org-robust notes, B-methods, limits note text.
+- B-limits: capped salaries made precise (outside S$2,000-50,000: 129 of 1,020 PMEs, 5 of 397 employers; same group as the outlier check).
