@@ -276,10 +276,7 @@ def fig_org_splits():
         labs.append(lab)
         nn.append((n1, n0))
     LX = 0.05 + max(V.tw_cm(fig, t, S.FS_ROW) for t in labs)
-    NW = V.tw_cm(fig, "n yes", S.FS_CAP)
-    N1X = LX + 0.30 + NW
-    N0X = N1X + 0.20 + V.tw_cm(fig, "n no", S.FS_CAP)
-    PX0, GAP = N0X + 0.30, 0.25
+    PX0, GAP = LX + 0.15, 0.25
     PW_, QW_ = 0.45, 0.0   # no p and q columns: the intervals carry the comparison
     PW = (Wd - 0.05 - PW_ - QW_ - PX0 - 3 * GAP) / 3
     AY, AT = 1.20, H - 0.55
@@ -309,11 +306,6 @@ def fig_org_splits():
                 fontweight="bold", color=S.EMPLOYER)
     for (s, lab, g), yy, t in zip(SPL_ROWS, ys, labs):
         M.ftext(fig, LX, fy(yy), t, ha="right", va="center", fontsize=S.FS_ROW, color=S.INK)
-    M.ftext(fig, N1X, AT + 0.08, "n yes", ha="right", va="bottom", fontsize=S.FS_CAP, color=S.MUTED)
-    M.ftext(fig, N0X, AT + 0.08, "n no", ha="right", va="bottom", fontsize=S.FS_CAP, color=S.MUTED)
-    for (n1, n0), yy in zip(nn, ys):
-        M.ftext(fig, N1X, fy(yy), f"{n1}", ha="right", va="center", fontsize=S.FS_CAP, color=S.MUTED)
-        M.ftext(fig, N0X, fy(yy), f"{n0}", ha="right", va="center", fontsize=S.FS_CAP, color=S.MUTED)
     W.nohead(fig, name, "Pay cut employers would require, % of pay")
     keys = [("D", S.EMPLOYER, S.EMPLOYER, 4.6, "Yes", S.INK, "normal"),
             ("D", "white", S.EMPLOYER, 4.6, "No", S.INK, "normal")]
