@@ -184,3 +184,4 @@ part-time 24); results_fwa/fwa_diagnosis.csv also holds the "adjusted" share (ti
 - "with feature / others" legend renamed "Yes / No" (F_org_splits, F_org_other); the note says yes = as labelled (agree = 4-5 of 5).
 - Joint/BH remnants removed: B-methods "Tests" bullet, Wiswall & Zafar joint test on B-validity.
 - Back-links fixed: B-org-view (Challenges, Concerns), B-flexiload (Two sides, Directions), B-intl (Slide 4, Directions), B-fwa-table (Practice, Two sides), B-org-concerns (Concerns); B-tgfwar buttons to Approvals and Awareness; "Reservations" renamed "On-site needs". Unused figure files deleted (F_emp_groups, F_groups_m, F_landscape_m, F_ra_sameside, F_ra_trim, F_where_r5).
+- B-intl: removed the slide note; the Trip.com co-founder disclosure now sits in the trial bullet.
