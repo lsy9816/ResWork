@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2026.10.14)  23 OCT 2026 04:15
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2026.10.14)  23 OCT 2026 04:25
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1561,11 +1561,11 @@ Package pdftex.def Info: figures/F_fwa_current_m.pdf  used on input line 1637.
 ] (./tables/T_org_salary.tex) [54
 
 ]
-<figures/F_org_splits.pdf, id=1015, 412.56496pt x 153.64488pt>
+<figures/F_org_splits.pdf, id=1015, 412.56496pt x 179.25235pt>
 File: figures/F_org_splits.pdf Graphic file (type pdf)
 <use figures/F_org_splits.pdf>
 Package pdftex.def Info: figures/F_org_splits.pdf  used on input line 1648.
-(pdftex.def)             Requested size: 412.57022pt x 153.64684pt.
+(pdftex.def)             Requested size: 406.01689pt x 176.40733pt.
  [55
 
  <./figures/F_org_splits.pdf>]
@@ -1578,21 +1578,20 @@ Package pdftex.def Info: figures/F_org_concerns4_m.pdf  used on input line 1650
  [56
 
  <./figures/F_org_concerns4_m.pdf>]
-(./tables/T_concerns.tex) [57
+<figures/F_org_policy.pdf, id=1066, 369.88583pt x 159.33543pt>
+File: figures/F_org_policy.pdf Graphic file (type pdf)
+<use figures/F_org_policy.pdf>
+Package pdftex.def Info: figures/F_org_policy.pdf  used on input line 1652.
+(pdftex.def)             Requested size: 369.90184pt x 159.34232pt.
+ [57
+
+ <./figures/F_org_policy.pdf>] (./tables/T_concerns.tex) [58
 
 ]
-<figures/F_org_other.pdf, id=1075, 412.56496pt x 142.26378pt>
-File: figures/F_org_other.pdf Graphic file (type pdf)
-<use figures/F_org_other.pdf>
-Package pdftex.def Info: figures/F_org_other.pdf  used on input line 1654.
-(pdftex.def)             Requested size: 412.6017pt x 142.27644pt.
- [58
-
- <./figures/F_org_other.pdf>]
 <figures/F_org_view.pdf, id=1100, 412.61047pt x 147.95433pt>
 File: figures/F_org_view.pdf Graphic file (type pdf)
 <use figures/F_org_view.pdf>
-Package pdftex.def Info: figures/F_org_view.pdf  used on input line 1662.
+Package pdftex.def Info: figures/F_org_view.pdf  used on input line 1663.
 (pdftex.def)             Requested size: 412.60947pt x 147.95396pt.
  [59
 
@@ -1600,15 +1599,16 @@ Package pdftex.def Info: figures/F_org_view.pdf  used on input line 1662.
 <figures/F_career.pdf, id=1126, 412.6994pt x 133.72795pt>
 File: figures/F_career.pdf Graphic file (type pdf)
 <use figures/F_career.pdf>
-Package pdftex.def Info: figures/F_career.pdf  used on input line 1670.
+Package pdftex.def Info: figures/F_career.pdf  used on input line 1671.
 (pdftex.def)             Requested size: 412.72356pt x 133.73576pt.
- [60
+
+[60
 
  <./figures/F_career.pdf>]
 <figures/F_career_who.pdf, id=1154, 398.3386pt x 130.88269pt>
 File: figures/F_career_who.pdf Graphic file (type pdf)
 <use figures/F_career_who.pdf>
-Package pdftex.def Info: figures/F_career_who.pdf  used on input line 1684.
+Package pdftex.def Info: figures/F_career_who.pdf  used on input line 1685.
 (pdftex.def)             Requested size: 398.35585pt x 130.88834pt.
  [61
 
@@ -1616,7 +1616,7 @@ Package pdftex.def Info: figures/F_career_who.pdf  used on input line 1684.
 <figures/F_use_att.pdf, id=1182, 412.56496pt x 170.71654pt>
 File: figures/F_use_att.pdf Graphic file (type pdf)
 <use figures/F_use_att.pdf>
-Package pdftex.def Info: figures/F_use_att.pdf  used on input line 1686.
+Package pdftex.def Info: figures/F_use_att.pdf  used on input line 1687.
 (pdftex.def)             Requested size: 412.5954pt x 170.72913pt.
  [62
 
@@ -1624,7 +1624,7 @@ Package pdftex.def Info: figures/F_use_att.pdf  used on input line 1686.
 <figures/F_wtp_att.pdf, id=1207, 412.56496pt x 182.09764pt>
 File: figures/F_wtp_att.pdf Graphic file (type pdf)
 <use figures/F_wtp_att.pdf>
-Package pdftex.def Info: figures/F_wtp_att.pdf  used on input line 1688.
+Package pdftex.def Info: figures/F_wtp_att.pdf  used on input line 1689.
 (pdftex.def)             Requested size: 399.6776pt x 176.40944pt.
  [63
 
@@ -1636,53 +1636,51 @@ Package pdftex.def Info: figures/F_wtp_att.pdf  used on input line 1688.
 <figures/F_awareness.pdf, id=1253, 412.56496pt x 142.26378pt>
 File: figures/F_awareness.pdf Graphic file (type pdf)
 <use figures/F_awareness.pdf>
-Package pdftex.def Info: figures/F_awareness.pdf  used on input line 1741.
+Package pdftex.def Info: figures/F_awareness.pdf  used on input line 1742.
 (pdftex.def)             Requested size: 412.6017pt x 142.27644pt.
-
-[66
+ [66
 
  <./figures/F_awareness.pdf>]
 <figures/F_approvals_two.pdf, id=1286, 412.58772pt x 130.88269pt>
 File: figures/F_approvals_two.pdf Graphic file (type pdf)
 <use figures/F_approvals_two.pdf>
-Package pdftex.def Info: figures/F_approvals_two.pdf  used on input line 1754.
+Package pdftex.def Info: figures/F_approvals_two.pdf  used on input line 1755.
 (pdftex.def)             Requested size: 412.60559pt x 130.88834pt.
  [67
 
- <./figures/F_approvals_two.pdf>]
-(./tables/T_requestrate.tex) [68
+ <./figures/F_approvals_two.pdf>] (./tables/T_requestrate.tex)
+[68
 
 ]
 <figures/F_puzzle_r5.pdf, id=1322, 369.88583pt x 142.26378pt>
 File: figures/F_puzzle_r5.pdf Graphic file (type pdf)
 <use figures/F_puzzle_r5.pdf>
-Package pdftex.def Info: figures/F_puzzle_r5.pdf  used on input line 1780.
+Package pdftex.def Info: figures/F_puzzle_r5.pdf  used on input line 1781.
 (pdftex.def)             Requested size: 369.88492pt x 142.26343pt.
  [69
 
  <./figures/F_puzzle_r5.pdf>] [70
 
-]
-(./tables/T_flexiload.tex
+] (./tables/T_flexiload.tex
 LaTeX Font Info:    Font shape `T1/phv/b/n' will be
 (Font)              scaled to size 5.47395pt on input line 5.
 ) [71
 
-] [72
+]
+[72
 
 ] (./tables/T_robust_main.tex) [73
 
-]
-(./tables/T_emp_robust.tex) [74
+] (./tables/T_emp_robust.tex) [74
 
-] (./tables/T_org_robust.tex) [75
+]
+(./tables/T_org_robust.tex) [75
 
 ] [76
 
 ] [77
 
-]
-[78
+] [78
 
 ] [79
 
@@ -1704,7 +1702,8 @@ LaTeX Font Info:    Font shape `T1/phv/b/n' will be
 \tf@snm=\write8
 \openout8 = `main.snm'.
 
- (./main.aux)
+
+(./main.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-22>
@@ -1714,7 +1713,7 @@ Package rerunfilecheck Info: File `main.out' has not changed.
  ) 
 Here is how much of TeX's memory you used:
  27823 strings out of 476182
- 552751 string characters out of 5795594
+ 552774 string characters out of 5795594
  1950975 words of memory out of 5000000
  48871 multiletter control sequences out of 15000+600000
  733692 words of font info for 232 fonts, out of 8000000 for 9000
@@ -1727,7 +1726,7 @@ blic/lm/lmsy10.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy9.pfb></usr/shar
 e/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/share/texlive/te
 xmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/share/texlive/texmf-dist/fon
 ts/type1/urw/helvetic/uhvro8a.pfb>
-Output written on main.pdf (83 pages, 892168 bytes).
+Output written on main.pdf (83 pages, 898138 bytes).
 PDF statistics:
  1616 PDF objects out of 1728 (max. 8388607)
  1202 compressed objects within 13 object streams

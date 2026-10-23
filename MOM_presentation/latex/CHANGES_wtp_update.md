@@ -193,3 +193,6 @@ part-time 24); results_fwa/fwa_diagnosis.csv also holds the "adjusted" share (ti
 - B-groups and B-ra-gender/age/care/role/edu: slide notes removed (empty notes no longer print). B-modelfree and B-org-salary: table footnote rows and markers removed; B-org-splits/B-org-other keep only the "Yes = as labelled" line; B-org-concerns4 keeps only the agree definition.
 - F_org_splits / F_org_other: n moved to two muted columns ("n yes", "n no") beside the row labels; note now defines Yes and No.
 - F_org_splits / F_org_other: n columns dropped again (too busy); the note gives the range of group sizes instead.
+
+## 23 Oct 2026 - employer splits restructured
+- B-org-splits "Employer pay cut by firm characteristic: WFH" now shows all 13 splits (8 from wtp_deck.csv + the 5 from results_fwa/employer_other.csv), WFH options only, no n beside labels (group-size range in the note). B-org-other removed (merged). New B-org-policy: no written policy, no WFH today, salary-offset belief and high overall concern, all seven arrangements (same layout as B-org-concerns4). Figures from scripts/fig_backup_att.py (F_org_splits, F_org_policy); F_org_other deleted. Buttons on slide 13 and the index updated.

@@ -92,25 +92,52 @@ def fig_wtp_att():
                        (-8, 32), [0, 10, 20, 30], "Pay PMEs would give up, % of monthly pay", (14.5, 6.4), S.EMPLOYEE)
 
 
-def fig_org_other():
-    d = pd.read_csv(MOM / "results_fwa" / "employer_other.csv")
-    # each split as a row; panels = the three WFH options; group 1 filled, group 0 hollow (two groups)
-    SPL = [("plan", "Plans to expand FWAs"), ("hire", "Difficulty filling vacancies"), ("talent", "FWAs help attract talent"),
-           ("turn", "Turnover 10% or more"), ("tech", "Technology fully ready")]
+SPL8 = [("physical", "Most roles need presence", 0), ("curwfh", "No WFH today", 1), ("policy", "No written policy", 1),
+        ("belief", "Salary offset belief", 0), ("concern", "High overall concern", 0), ("creat", "Creativity suffers apart", 0),
+        ("prod", "Productivity worry", 0), ("coord", "Coordination worry", 0)]
+SPL5 = [("plan", "Plans to expand FWAs"), ("hire", "Difficulty filling vacancies"), ("talent", "FWAs help attract talent"),
+        ("turn", "Turnover 10% or more"), ("tech", "Technology fully ready")]
+
+
+def deck_emp(split, group, item):
+    q = W.D[(W.D.side == "emp") & (W.D["sample"] == "main") & (W.D.split == split) & (W.D.group == group) & (W.D["item"] == item)].iloc[0]
+    return float(q.giveup), float(q.lb), float(q.ub)
+
+
+def diamond(ax, y, e, lb, ub, filled):
+    ax.plot([lb, ub], [y, y], color=S.EMPLOYER, lw=S.CI_LW, solid_capstyle="butt", zorder=2)
+    ax.plot([e], [y], marker="D", ms=S.MS_DIAMOND, mfc=S.EMPLOYER if filled else "white", mec="white" if filled else S.EMPLOYER,
+            mew=S.MEW if filled else S.MEW_HOLLOW, ls="none", zorder=3, clip_on=False)
+
+
+def yes_no_key(fig):
+    keys = [("D", S.EMPLOYER, S.EMPLOYER, S.MS_DIAMOND, "Yes", S.INK, "normal"),
+            ("D", "white", S.EMPLOYER, S.MS_DIAMOND, "No", S.INK, "normal")]
+    V.r5_key(fig, (fig.W - V.key_width(fig, keys)) / 2, 0.16, keys)
+
+
+def fig_org_overview():
+    """All 13 employer splits, WFH options only: pay cut required, yes vs no."""
+    name = "F_org_splits"
+    o = pd.read_csv(MOM / "results_fwa" / "employer_other.csv")
     items = [("p1", "1–2 days"), ("p2", "3–4 days"), ("p3", "Remote")]
-    SZ = (14.5, 5.0)
+    rows = []
+    for sp, lab, g in SPL8:
+        rows.append((lab, {it: (deck_emp(sp, g, it), deck_emp(sp, 1 - g, it)) for it, _ in items}))
+    for sp, lab in SPL5:
+        d = {}
+        for it, _ in items:
+            q = o[(o.split == sp) & (o["item"] == it)].iloc[0]
+            d[it] = ((q.cut1, q.lb1, q.ub1), (q.cut0, q.lb0, q.ub0))
+        rows.append((lab, d))
+    SZ = (14.5, 6.3)
     fig = M.new_fig(*SZ)
     Wd, H = fig.W, fig.H
-    labs, nn = [], []
-    for s, lab in SPL:
-        q = d[(d.split == s) & (d.item == "p1")].iloc[0]
-        labs.append(lab)
-        nn.append((int(q.n1), int(q.n0)))
-    LX = 0.05 + max(V.tw_cm(fig, t, S.FS_ROW) for t in labs)
+    LX = 0.05 + max(V.tw_cm(fig, r[0], S.FS_ROW) for r in rows)
     PX0, GAP = LX + 0.15, 0.25
     PW = (Wd - 0.65 - PX0 - 2 * GAP) / 3
-    AY, AT = 1.20, H - 0.55
-    n = len(SPL)
+    AY, AT = 1.15, H - 0.55
+    n = len(rows)
     YA_, YB_ = 0.4, n + 0.6
     ys = [n - i for i in range(n)]
 
@@ -121,26 +148,66 @@ def fig_org_other():
         ax.set_xlim(-35, 100)
         ax.set_ylim(YA_, YB_)
         S.ref_line(ax, 0, YA_, YB_)
-        for (s, lab), yy in zip(SPL, ys):
-            q = d[(d.split == s) & (d.item == it)].iloc[0]
-            for filled, e, lb, ub, dy in ((True, q.cut1, q.lb1, q.ub1, 0.17), (False, q.cut0, q.lb0, q.ub0, -0.17)):
-                ax.plot([lb, ub], [yy + dy] * 2, color=S.EMPLOYER, lw=1.0, solid_capstyle="butt", zorder=2)
-                ax.plot([e], [yy + dy], marker="D", ms=4.6, mfc=S.EMPLOYER if filled else "white",
-                        mec="white" if filled else S.EMPLOYER, mew=S.MEW if filled else S.MEW_HOLLOW, ls="none", zorder=3)
+        for (lab, d), yy in zip(rows, ys):
+            (e1, l1, u1), (e0, l0, u0) = d[it]
+            diamond(ax, yy + 0.17, e1, l1, u1, True)
+            diamond(ax, yy - 0.17, e0, l0, u0, False)
         ax.set_yticks([])
         ax.spines["left"].set_visible(False)
         ax.spines["bottom"].set_color(S.RULE)
         S.pct_ticks(ax, [0, 50, 100])
         M.ftext(fig, PX0 + j * (PW + GAP) + PW / 2, AT + 0.08, title, ha="center", va="bottom", fontsize=S.FS_HEAD,
                 fontweight="bold", color=S.EMPLOYER)
-    for t, yy in zip(labs, ys):
-        M.ftext(fig, LX, fy(yy), t, ha="right", va="center", fontsize=S.FS_ROW, color=S.INK)
-    W.nohead(fig, "F_org_other", "Pay cut employers would require, % of pay")
-    keys = [("D", S.EMPLOYER, S.EMPLOYER, 4.6, "Yes", S.INK, "normal"),
-            ("D", "white", S.EMPLOYER, 4.6, "No", S.INK, "normal")]
-    V.r5_key(fig, (Wd - V.key_width(fig, keys, gap=0.35)) / 2, 0.16, keys, gap=0.35)
-    V.outside(fig, "F_org_other")
-    return M.finish(fig, "F_org_other", SZ)
+    for (lab, d), yy in zip(rows, ys):
+        M.ftext(fig, LX, fy(yy), lab, ha="right", va="center", fontsize=S.FS_ROW, color=S.INK)
+    V.hline_cm(fig, 0.05, Wd - 0.05, fy(5.5), **S.SEP)
+    yes_no_key(fig)
+    V.outside(fig, name)
+    return M.finish(fig, name, SZ)
+
+
+def fig_org_four():
+    """Four further splits, all seven arrangements (same layout as F_org_concerns4_m)."""
+    name = "F_org_policy"
+    panels = [("policy", 1, "No policy"), ("curwfh", 1, "No WFH now"), ("belief", 0, "Salary offset"),
+              ("concern", 0, "High concern")]
+    SZ = (13.0, 5.6)
+    fig = M.new_fig(*SZ)
+    Wd, H = fig.W, fig.H
+    rows = W.ROWS
+    LX = 0.05 + max(V.tw_cm(fig, r[0], S.FS_ROW) for r in rows)
+    GAP = 0.25
+    PW = (Wd - 0.05 - LX - 0.15 - (len(panels) - 1) * GAP) / len(panels)
+    AY, AT = 1.15, H - 0.60
+    YA_, YB_ = 0.55, 7.5
+    YS = {"p3": 7.15, "p2": 6.2, "p1": 5.25, "t2": 4.3, "t1": 3.35, "l1": 2.15, "l2": 1.2}
+
+    def fy(v):
+        return AY + (v - YA_) / (YB_ - YA_) * (AT - AY)
+    yes_no_key(fig)
+    V.hline_cm(fig, 0.05, Wd - 0.05, fy(2.75), **S.SEP)
+    for j, (sp, g, title) in enumerate(panels):
+        x0 = LX + 0.15 + j * (PW + GAP)
+        ax = M.axes_cm(fig, x0, AY, PW, AT - AY)
+        ax.set_xlim(-30, 100)
+        ax.set_ylim(YA_, YB_)
+        S.ref_line(ax, 0, YA_, YB_)
+        ax.set_yticks([])
+        ax.spines["left"].set_visible(False)
+        ax.spines["bottom"].set_color(S.RULE)
+        ax.set_xticks([0, 50])
+        ax.set_xticklabels(["0", "50%"])
+        ax.tick_params(axis="x", length=2.5, width=0.6, colors=S.RULE, labelcolor=S.MUTED, labelsize=S.FS_TICK)
+        M.ftext(fig, x0 + PW / 2, AT + 0.08, title, ha="center", va="bottom", fontsize=S.FS_HEAD, color=S.INK, fontweight="bold")
+        for lab, item, y0, load in rows:
+            e1, l1, u1 = deck_emp(sp, g, item)
+            e0, l0, u0 = deck_emp(sp, 1 - g, item)
+            diamond(ax, YS[item] + 0.25, e1, l1, u1, True)
+            diamond(ax, YS[item] - 0.25, e0, l0, u0, False)
+    for lab, item, y0, load in rows:
+        M.ftext(fig, LX, fy(YS[item]), lab, ha="right", va="center", fontsize=S.FS_ROW, color=S.INK)
+    V.outside(fig, name)
+    return M.finish(fig, name, SZ)
 
 
 def fig_dominance():
@@ -224,7 +291,7 @@ def fig_groups_diff():
 
 
 if __name__ == "__main__":
-    figs = {"F_use_att": fig_use_att, "F_wtp_att": fig_wtp_att, "F_org_other": fig_org_other, "F_dominance": fig_dominance, "F_groups_diff": fig_groups_diff}
+    figs = {"F_use_att": fig_use_att, "F_wtp_att": fig_wtp_att, "F_org_splits": fig_org_overview, "F_org_policy": fig_org_four, "F_dominance": fig_dominance, "F_groups_diff": fig_groups_diff}
     for nm in sys.argv[1:] or list(figs):
         print("wrote", figs[nm]())
     for fl in dict.fromkeys(M.FLAGS):
