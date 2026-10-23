@@ -380,7 +380,7 @@
 % path below plus every backup; return links to omitted main slides go to the index.
 \def\ShortLabels{M-title,M-motivation,M-question,M-benchmark,M-design,M-pmes,M-why-pmes,M-employers,M-where,M-meet,M-barriers,M-employer-barriers,M-discussion,M-conclusion,M-thanks}
 \ifdefined\ShortPath
-  \includeonlyframes{M-title,M-motivation,M-question,M-benchmark,M-design,M-pmes,M-why-pmes,M-employers,M-where,M-meet,M-barriers,M-employer-barriers,M-discussion,M-conclusion,M-thanks,B-index,B-index-all,B-references,B-emp-benchmarks,B-intl,B-landscape,B-setup,B-sg-reports,B-laboursupply,B-guidelines,B-legal,B-partners,B-triangulation,B-sample,B-industry,B-cards,B-paygaps,B-hedonic,B-estimation,B-methods,B-validity,B-dominance,B-emp-all,B-fwa-table,B-remote-commute,B-groups,B-ra-gender,B-ra-age,B-ra-care,B-ra-role,B-ra-edu,B-why-pmes,B-access,B-fwa-current,B-modelfree,B-org-salary,B-org-splits,B-org-concerns4,B-org-other,B-org-view,B-career,B-career-who,B-use-att,B-wtp-att,B-level-access,B-awareness,B-approvals,B-requestrate,B-puzzle-main,B-puzzle,B-flexiload,B-pilot,B-robust,B-emp-robust,B-org-robust,B-limits,B-followup,B-optA,B-optB,B-optC,B-optD,B-optE,B-optD-items}
+  \includeonlyframes{M-title,M-motivation,M-question,M-benchmark,M-design,M-pmes,M-why-pmes,M-employers,M-where,M-meet,M-barriers,M-employer-barriers,M-discussion,M-conclusion,M-thanks,B-index,B-index-all,B-references,B-emp-benchmarks,B-intl,B-landscape,B-setup,B-sg-reports,B-laboursupply,B-guidelines,B-legal,B-partners,B-triangulation,B-sample,B-industry,B-cards,B-paygaps,B-hedonic,B-estimation,B-methods,B-validity,B-dominance,B-emp-all,B-fwa-table,B-remote-commute,B-groups,B-ra-gender,B-ra-age,B-ra-care,B-ra-role,B-ra-edu,B-size,B-why-pmes,B-access,B-fwa-current,B-modelfree,B-org-salary,B-org-splits,B-org-concerns4,B-org-other,B-org-role,B-org-view,B-career,B-career-who,B-use-att,B-wtp-att,B-level-access,B-awareness,B-approvals,B-requestrate,B-puzzle-main,B-puzzle,B-flexiload,B-pilot,B-robust,B-emp-robust,B-org-robust,B-limits,B-followup,B-optA,B-optB,B-optC,B-optD,B-optE,B-optD-items}
 \fi
 
 \begin{document}
@@ -673,7 +673,7 @@ Now the results, starting with PMEs. [Full deck: ``Next, how we turn these choic
   \FigC{F_emp_wtp}
   % [E1, E2] 1-2 days 7.4, 3-4 days 9.5 -> about 7-10%; [S6] pay gaps 17-33% by design (mandated wording kept)
   \Interp{PMEs value remote work most, and more with each extra day.\\ A compressed week is worth as much as 1--2 days at home; staggered hours are not valued.}
-  \Backups{\BL{B-emp-benchmarks}{Benchmarks} \BL{B-emp-robust}{Checks} \BL{B-groups}{PME groups}}
+  \Backups{\BL{B-emp-benchmarks}{Benchmarks} \BL{B-emp-robust}{Checks} \BL{B-groups}{PME groups} \BL{B-size}{By size}}
   % Note: F_emp_wtp's former footnote, verbatim, for the starred job-sharing and part-time rows [E6, E7].
   % Polish pass: "Conditional logit" leaves the source line (DESIGN_PLAN s2 W3; M-estimation and B-methods
   % carry the method). One line at 7.5 pt, 406 of 421 pt: the source names the survey, its size and month,
@@ -710,7 +710,7 @@ Now employers.
   % line 2, fixer pass 7 Oct 2026 (employer-02): MANDATE information/learning problem; [S5; EB s9] hiring choice
   % between candidates, not a request and not an operating-cost measure; the DCE cannot separate these; EB s3b 50%
   \Interp{Employers expect the biggest cut for fully remote work, and a large one for part-time.\\ A compressed week or staggered hours draw the smallest cuts.}
-  \Backups{\BL{B-fwa-table}{Numbers} \BL{B-org-robust}{Checks}}
+  \Backups{\BL{B-fwa-table}{Numbers} \BL{B-org-robust}{Checks} \BL{B-size}{By size}}
   % Note: F_org_eqpay's former footnote, verbatim. [S6] no shown pair had equal pay, gaps 17-33%; EB s3b model-based share.
   % Source: the respondent wording, people involved in PME hiring or manpower decisions, stays on M-design
   % and M-data; here "employer survey, n = 397, Aug-Oct 2026" keeps the block on one line, 408 of 421 pt.
@@ -1029,12 +1029,12 @@ B and C are exploratory: the presence result comes from the employer survey alon
       \mbox{\BIi{B-emp-all}{All estimates}}\enspace \textcolor{Muted}{$\cdot$}\enspace \mbox{\BIi{B-fwa-table}{Numbers}}\enspace \textcolor{Muted}{$\cdot$}\enspace \mbox{\BIi{B-remote-commute}{Commute}}\par
       \mbox{\BIi{B-groups}{Group differences}}\enspace \textcolor{Muted}{$\cdot$}\enspace \mbox{\BIi{B-why-pmes}{Other splits}}\par
       \mbox{\BIi{B-ra-gender}{Gender}}\enspace \textcolor{Muted}{$\cdot$}\enspace \mbox{\BIi{B-ra-age}{Age}}\enspace \textcolor{Muted}{$\cdot$}\enspace \mbox{\BIi{B-ra-care}{Care}}\par
-      \mbox{\BIi{B-ra-role}{Role}}\enspace \textcolor{Muted}{$\cdot$}\enspace \mbox{\BIi{B-ra-edu}{Education}}\par
+      \mbox{\BIi{B-ra-role}{Role}}\enspace \textcolor{Muted}{$\cdot$}\enspace \mbox{\BIi{B-ra-edu}{Education}}\enspace \textcolor{Muted}{$\cdot$}\enspace \mbox{\BIi{B-size}{Size}}\par
       \mbox{\BIi{B-access}{Access}}\enspace \textcolor{Muted}{$\cdot$}\enspace \mbox{\BIi{B-fwa-current}{Users vs others}}\par
       \BH{Employer values}
       \mbox{\BIi{B-modelfree}{Raw choices}}\enspace \textcolor{Muted}{$\cdot$}\enspace \mbox{\BIi{B-org-salary}{Salary lever}}\par
       \mbox{\BIi{B-org-splits}{All splits}}\enspace \textcolor{Muted}{$\cdot$}\enspace \mbox{\BIi{B-org-concerns4}{Four concerns}}\par
-      \mbox{\BIi{B-org-other}{Other traits}}\enspace \textcolor{Muted}{$\cdot$}\enspace \mbox{\BIi{B-org-view}{Own view}}\par
+      \mbox{\BIi{B-org-other}{Other traits}}\enspace \textcolor{Muted}{$\cdot$}\enspace \mbox{\BIi{B-org-role}{By respondent}}\enspace \textcolor{Muted}{$\cdot$}\enspace \mbox{\BIi{B-org-view}{Own view}}\par
       \BH{Compressed week}
       \mbox{\BIi{B-puzzle-main}{Valued, rarely offered}}\enspace \textcolor{Muted}{$\cdot$}\enspace \mbox{\BIi{B-puzzle}{Design}}\par
       \mbox{\BIi{B-flexiload}{Flexi-load}}\enspace \textcolor{Muted}{$\cdot$}\enspace \mbox{\BIi{B-pilot}{Pilot checklist}}\par
@@ -1483,7 +1483,7 @@ Next, what PMEs and firms do today.}
     \toprule
     % [V1] 977 of 1,738 = 56% matched, up to three years later; kept vs lost 4.1 pp at the 1% level; gained 1.7 pp n.s.
     \textbf{Maestas et al.}\newline (AER 2023) & US workers, up to 3 years on: 977 of 1,738 (56\%) matched; kept vs lost an amenity: +4.1 pp (1\% level); gained: +1.7 pp (n.s.)\\ \RowSep
-    % [V2] 59 of 71 follow-up respondents working; about four years; 6 links, 3 significant at 5%; joint p = .012
+    % [V2] 59 of 71 follow-up respondents working; about four years; 6 links, 3 significant at 5%
     \textbf{Wiswall \& Zafar}\newline (QJE 2018) & NYU students, about 4 years on (59 working): 6 of 6 links to actual jobs with the expected sign, 3 significant at 5\%\\ \RowSep
     % [V3] survey 8.4% reweighted to field commute times vs field 7.8%; scheduling 2.5% vs 2.8%; US call-centre applicants
     \textbf{Mas \& Pallais}\newline (AER 2017) & Call-centre applicants: WFH 8.4\% of pay, survey (reweighted to field commute times) vs 7.8\%, field; scheduling 2.5\% vs 2.8\%\\ \RowSep
@@ -1556,7 +1556,7 @@ Next, what PMEs and firms do today.}
   % for 1-2 WFH days, 3-4 WFH days and fully remote (vs a long commute); 50% reference [s3b].
   %   [Q14b] every plotted group's CI lies above 50% for the three WFH levels (lowest bound: men, 1-2 days, 51.2)
   %   [Q14] women 63/67/73% vs men 56/56/63% (location p = .047, nominal only); age p = .30; caregiving p = .53
-  %   [E18] 198 pairwise contrasts, minimum BH q = .70; WTP joint tests p = .43 / .09 / .66
+  %   [E18] 198 pairwise contrasts, minimum BH q = .70
   \FrameTop
   \FigC{F_groups_diff}
   % [E18, M7] null results are not equivalence (mandate: "Non-rejection is not equivalence")
@@ -1591,6 +1591,13 @@ Only the career-concern split stands out, as we saw earlier. Why, then, is the c
 % [E18b] education p = .56
 
 \BackupFig{B-ra-edu}{Estimates by education}{F_ra_edu}{5.4cm}{B-groups}{PME groups}{}
+
+\begin{frame}[t,label=B-size]{No clear difference by organisation size}
+  \FrameTop
+  \Fig{F_size}{6.2cm}
+  \Interp{No difference between size groups is significant at 5\% (0 of 21 comparisons on each side).}
+  \BackToTwo{M-pmes}{PMEs}{M-employers}{Employers}
+\end{frame}
 
 % ==========================================================================
 % PME checks
@@ -1653,12 +1660,19 @@ Only the career-concern split stands out, as we saw earlier. Why, then, is the c
 
 \BackupFig{B-org-other}{Employer pay cut by hiring pressure and readiness: WFH}{F_org_other}{4.6cm}{M-where}{On-site needs}{Yes = as labelled (agree = 4--5 of 5); no = otherwise. Each group has 105--267 firms.}
 
+\begin{frame}[t,label=B-org-role]{Employer pay cut by who answered}
+  \FrameTop
+  \Fig{F_org_role}{5.8cm}
+  \Interp{HR expects larger cuts than hiring managers for 3--4 days and job sharing; 2 of 21 significant at 5\%.}
+  \BackToTwo{M-employers}{Employers}{B-org-splits}{All splits}
+\end{frame}
+
 
 \begin{frame}[t,label=B-org-view]{Employers: talent upside, practical hurdles}
   % [B1, B2, B3]; [B1] fairness top challenge at 200 or fewer staff, 28% (shown in the figure); [P16] MOM PQ 2937; [S3] 12%; [R15, Q13, M18] no size association
   \FrameTop
   \Fig{F_org_view}{5.2cm}
-  \SourceNote{Agree = 4--5 of 5. No size association in hiring choices; compressed-week offering rises with firm size (14, 18, 26\%; p = .07).}
+  \SourceNote{Agree = 4--5 of 5. Compressed-week offering rises with firm size (14, 18, 26\%; p = .07); pay cut by size: \hyperlink{B-size}{\textcolor{Navy}{By size}}.}
   \BackToTwo{M-employer-barriers}{Challenges}{M-concerns}{Concerns}
 \end{frame}
 

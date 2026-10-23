@@ -207,3 +207,8 @@ part-time 24); results_fwa/fwa_diagnosis.csv also holds the "adjusted" share (ti
 - B-dominance: title and caption say the choice share rises with the pay gap.
 - B-dominance (option A): title "choices rise with pay, as the model predicts"; caption states the rise 25-40% -> 79-86% as modelled.
 - F_dominance: the model-prediction key is a line (was a square).
+
+## 23 Oct 2026 - size and respondent-role analyses added (83 pages)
+- B-size "No clear difference by organisation size": PMEs by the size of their own organisation (new, scripts/pme_by_size.py -> data/pme_by_size.csv; same model as code_final.do, full sample reproduces 7.4 / 9.5 / 15.1 / 7.4 / -0.7 / 6.0 / 3.9) and employers by firm size (wtp_deck.csv), three size groups x seven arrangements, 0 of 21 pairwise differences significant at 5% on each side. Figure F_size in scripts/fig_backup_att.py; buttons "By size" on slides 8 and 9, link from B-org-view.
+- B-org-role "Employer pay cut by who answered" (owner / HR / hiring manager, wtp_deck.csv): 2 of 21 pairwise differences significant (HR vs hiring manager, 3-4 days and job sharing).
+- Joint-test remnants removed from source comments (Wiswall-Zafar, groups slide, T_access); no visible joint-test sentence remains.

@@ -256,8 +256,114 @@ def fig_groups_diff():
     return M.finish(fig, "F_groups_diff", SZ)
 
 
+GROUP_MARK = [("o", "white"), ("o", "half"), ("o", "full")]   # smallest group hollow, middle half-tone, largest filled
+
+
+def draw3(ax, y, vals, color, light):
+    """vals: three (est, lb, ub) tuples top to bottom."""
+    for (e, lb, ub), dy, st in zip(vals, (0.32, 0.0, -0.32), ("white", "half", "full")):
+        ax.plot([lb, ub], [y + dy] * 2, color=color, lw=S.CI_LW, solid_capstyle="butt", zorder=2)
+        mfc = {"white": "white", "half": light, "full": color}[st]
+        ax.plot([e], [y + dy], marker="o", ms=S.MS_CIRCLE, mfc=mfc, mec=color if st != "full" else "white",
+                mew=S.MEW_HOLLOW if st != "full" else S.MEW, ls="none", zorder=3)
+
+
+def key3(fig, labels, color, light):
+    items = []
+    for lab, st in zip(labels, ("white", "half", "full")):
+        mfc = {"white": "white", "half": light, "full": color}[st]
+        items.append(("o", mfc, color, S.MS_CIRCLE, lab, S.INK, "normal"))
+    V.r5_key(fig, (fig.W - V.key_width(fig, items, gap=0.35)) / 2, 0.16, items, gap=0.35)
+
+
+ARR = [("1–2 WFH days", "p1"), ("3–4 WFH days", "p2"), ("Fully remote", "p3"), ("Compressed week", "t2"),
+       ("Staggered hours", "t1"), ("Job sharing", "l1"), ("Part-time", "l2")]
+YS7 = [8.0, 7.0, 6.0, 4.4, 3.4, 1.8, 0.8]
+
+
+def fig_size():
+    """Pay by organisation size, PMEs (own organisation) and employers (firm): three size groups, seven arrangements."""
+    name = "F_size"
+    pm = pd.read_csv(MOM / "data" / "pme_by_size.csv")
+    em = W.D[(W.D.side == "emp") & (W.D["sample"] == "main") & (W.D.split == "size")]
+    SZ = (14.5, 6.4)
+    fig = M.new_fig(*SZ)
+    Wd, H = fig.W, fig.H
+    LX = 0.05 + max(V.tw_cm(fig, a, S.FS_ROW) for a, _ in ARR)
+    PX0, GAP = LX + 0.15, 0.7
+    PW = (Wd - 0.5 - PX0 - GAP) / 2
+    AY, AT = 1.35, H - 0.65
+    YA_, YB_ = 0.1, 8.7
+
+    def fy(v):
+        return AY + (v - YA_) / (YB_ - YA_) * (AT - AY)
+    for j, (title, color, light, xlim, ticks) in enumerate([("PMEs: own organisation", S.EMPLOYEE, S.EMPLOYEE_LIGHT, (-8, 30), [0, 10, 20, 30]),
+                                                            ("Employers: firm", S.EMPLOYER, S.EMPLOYER_LIGHT, (-30, 80), [0, 25, 50, 75])]):
+        ax = M.axes_cm(fig, PX0 + j * (PW + GAP), AY, PW, AT - AY)
+        ax.set_xlim(*xlim)
+        ax.set_ylim(YA_, YB_)
+        S.ref_line(ax, 0, YA_, YB_)
+        for (lab, it), y in zip(ARR, YS7):
+            if j == 0:
+                vals = [tuple(pm[(pm.group == g) & (pm["item"] == it)][["giveup", "lb", "ub"]].iloc[0]) for g in (1, 2, 3)]
+            else:
+                vals = [tuple(em[(em.group == g) & (em["item"] == it)][["giveup", "lb", "ub"]].iloc[0]) for g in (0, 1, 2)]
+            draw3(ax, y, vals, color, light)
+        ax.set_yticks([])
+        ax.spines["left"].set_visible(False)
+        ax.spines["bottom"].set_color(S.RULE)
+        ax.set_xticks(ticks)
+        ax.set_xticklabels([str(t) for t in ticks[:-1]] + [f"{ticks[-1]}%"])
+        ax.tick_params(axis="x", length=2.5, width=0.6, colors=S.RULE, labelcolor=S.MUTED, labelsize=S.FS_TICK)
+        M.ftext(fig, PX0 + j * (PW + GAP) + PW / 2, AT + 0.08, title, ha="center", va="bottom", fontsize=S.FS_HEAD,
+                fontweight="bold", color=color)
+    for (lab, it), y in zip(ARR, YS7):
+        M.ftext(fig, LX, fy(y), lab, ha="right", va="center", fontsize=S.FS_ROW, color=S.INK)
+    V.hline_cm(fig, 0.05, Wd - 0.05, fy(5.2), **S.SEP)
+    V.hline_cm(fig, 0.05, Wd - 0.05, fy(2.6), **S.SEP)
+    key3(fig, ["≤200 staff", "201–1,000", "1,001+"], S.MUTED, S.GREY_MID)
+    V.outside(fig, name)
+    return M.finish(fig, name, SZ)
+
+
+def fig_role():
+    """Employer pay cut by who answered the survey (owner / HR / line or hiring manager), seven arrangements."""
+    name = "F_org_role"
+    em = W.D[(W.D.side == "emp") & (W.D["sample"] == "main") & (W.D.split == "role")]
+    SZ = (13.0, 5.8)
+    fig = M.new_fig(*SZ)
+    Wd, H = fig.W, fig.H
+    LX = 0.05 + max(V.tw_cm(fig, a, S.FS_ROW) for a, _ in ARR)
+    PX0 = LX + 0.15
+    AY, AT = 1.35, H - 0.3
+    YA_, YB_ = 0.1, 8.7
+
+    def fy(v):
+        return AY + (v - YA_) / (YB_ - YA_) * (AT - AY)
+    ax = M.axes_cm(fig, PX0, AY, Wd - PX0 - 0.5, AT - AY)
+    ax.set_xlim(-30, 85)
+    ax.set_ylim(YA_, YB_)
+    S.ref_line(ax, 0, YA_, YB_)
+    for (lab, it), y in zip(ARR, YS7):
+        vals = [tuple(em[(em.group == g) & (em["item"] == it)][["giveup", "lb", "ub"]].iloc[0]) for g in (0, 1, 2)]
+        draw3(ax, y, vals, S.EMPLOYER, S.EMPLOYER_LIGHT)
+    ax.set_yticks([])
+    ax.spines["left"].set_visible(False)
+    ax.spines["bottom"].set_color(S.RULE)
+    ax.set_xticks([0, 25, 50, 75])
+    ax.set_xticklabels(["0", "25", "50", "75%"])
+    ax.tick_params(axis="x", length=2.5, width=0.6, colors=S.RULE, labelcolor=S.MUTED, labelsize=S.FS_TICK)
+    for (lab, it), y in zip(ARR, YS7):
+        M.ftext(fig, LX, fy(y), lab, ha="right", va="center", fontsize=S.FS_ROW, color=S.INK)
+    V.hline_cm(fig, 0.05, Wd - 0.05, fy(5.2), **S.SEP)
+    V.hline_cm(fig, 0.05, Wd - 0.05, fy(2.6), **S.SEP)
+    key3(fig, ["Owner / C-suite", "HR", "Hiring manager"], S.EMPLOYER, S.EMPLOYER_LIGHT)
+    V.outside(fig, name)
+    return M.finish(fig, name, SZ)
+
+
 if __name__ == "__main__":
-    figs = {"F_use_att": fig_use_att, "F_wtp_att": fig_wtp_att, "F_org_splits": fig_org_overview, "F_org_other": lambda: fig_org_overview("F_org_other", "hiring"), "F_dominance": fig_dominance, "F_groups_diff": fig_groups_diff}
+    figs = {"F_use_att": fig_use_att, "F_wtp_att": fig_wtp_att, "F_org_splits": fig_org_overview, "F_org_other": lambda: fig_org_overview("F_org_other", "hiring"), "F_dominance": fig_dominance, "F_size": fig_size, "F_org_role": fig_role, "F_groups_diff": fig_groups_diff}
     for nm in sys.argv[1:] or list(figs):
         print("wrote", figs[nm]())
     for fl in dict.fromkeys(M.FLAGS):
