@@ -191,3 +191,4 @@ part-time 24); results_fwa/fwa_diagnosis.csv also holds the "adjusted" share (ti
 - F_landscape: in-figure take-up lines removed (numbers are in B-fwa-table).
 - Slide notes removed: M-meet, B-landscape, B-paygaps, B-remote-commute, B-fwa-current, B-modelfree, B-pilot, B-why-pmes (header now "Compressed"), the direction-A footer; others shortened (M-employer-barriers, B-hedonic, B-emp-all, B-org-concerns, B-org-concerns4, B-limits, direction D/E footers).
 - B-groups and B-ra-gender/age/care/role/edu: slide notes removed (empty notes no longer print). B-modelfree and B-org-salary: table footnote rows and markers removed; B-org-splits/B-org-other keep only the "Yes = as labelled" line; B-org-concerns4 keeps only the agree definition.
+- F_org_splits / F_org_other: n moved to two muted columns ("n yes", "n no") beside the row labels; note now defines Yes and No.
