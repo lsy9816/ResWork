@@ -205,3 +205,4 @@ part-time 24); results_fwa/fwa_diagnosis.csv also holds the "adjusted" share (ti
 - B-org-concerns (concerns table) merged into B-org-concerns4: each panel now shows the share of firms that agree (56/54/51/46%, from employer_splits.csv; same numbers as the old table, fairness is new); T_concerns deleted.
 - B-tgfwar ("What we can say about the Guidelines") removed: its bullets repeated B-awareness, B-approvals and B-setup; "no before-and-after: we cannot say whether the Guidelines changed outcomes" moved into the B-approvals note. Slide 14 button now "Awareness"; FAQ "Did the Guidelines change outcomes?" points to B-approvals. Links, indexes and frame list checked: no dangling links, every back-up is in the full index.
 - B-dominance: title and caption say the choice share rises with the pay gap.
+- B-dominance (option A): title "choices rise with pay, as the model predicts"; caption states the rise 25-40% -> 79-86% as modelled.
