@@ -378,9 +378,9 @@
 
 % Short presentation build (round 5): compile main_short.tex for the 15-frame
 % path below plus every backup; return links to omitted main slides go to the index.
-\def\ShortLabels{M-title,M-motivation,M-question,M-benchmark,M-design,M-pmes,M-why-pmes,M-employers,M-where,M-meet,M-barriers,M-employer-barriers,M-discussion,M-conclusion,M-thanks}
+\def\ShortLabels{M-title,M-motivation,M-intl,M-question,M-benchmark,M-keyfindings,M-design,M-pmes,M-why-pmes,M-employers,M-where,M-meet,M-barriers,M-employer-barriers,M-discussion,M-nextsteps,M-conclusion,M-thanks}
 \ifdefined\ShortPath
-  \includeonlyframes{M-title,M-motivation,M-question,M-benchmark,M-design,M-pmes,M-why-pmes,M-employers,M-where,M-meet,M-barriers,M-employer-barriers,M-discussion,M-conclusion,M-thanks,B-index,B-index-all,B-references,B-emp-benchmarks,B-intl,B-landscape,B-setup,B-sg-reports,B-laboursupply,B-guidelines,B-legal,B-partners,B-triangulation,B-sample,B-industry,B-cards,B-paygaps,B-hedonic,B-estimation,B-methods,B-validity,B-dominance,B-emp-all,B-fwa-table,B-remote-commute,B-groups,B-ra-gender,B-ra-age,B-ra-care,B-ra-role,B-ra-edu,B-size,B-why-pmes,B-access,B-fwa-current,B-modelfree,B-org-salary,B-org-splits,B-org-concerns4,B-org-other,B-org-role,B-org-view,B-career,B-career-who,B-use-att,B-wtp-att,B-level-access,B-awareness,B-approvals,B-requestrate,B-puzzle-main,B-puzzle,B-flexiload,B-pilot,B-robust,B-emp-robust,B-org-robust,B-limits,B-followup,B-optA,B-optB,B-optC,B-optD,B-optE,B-optD-items}
+  \includeonlyframes{M-title,M-motivation,M-intl,M-question,M-benchmark,M-keyfindings,M-design,M-pmes,M-why-pmes,M-employers,M-where,M-meet,M-barriers,M-employer-barriers,M-discussion,M-nextsteps,M-conclusion,M-thanks,B-index,B-index-all,B-references,B-emp-benchmarks,B-intl,B-landscape,B-setup,B-sg-reports,B-laboursupply,B-guidelines,B-legal,B-partners,B-triangulation,B-sample,B-industry,B-cards,B-paygaps,B-hedonic,B-estimation,B-methods,B-validity,B-dominance,B-emp-all,B-fwa-table,B-remote-commute,B-groups,B-ra-gender,B-ra-age,B-ra-care,B-ra-role,B-ra-edu,B-size,B-why-pmes,B-access,B-fwa-current,B-modelfree,B-org-salary,B-org-splits,B-org-concerns4,B-org-other,B-org-role,B-org-view,B-career,B-career-who,B-use-att,B-wtp-att,B-level-access,B-awareness,B-approvals,B-requestrate,B-puzzle-main,B-puzzle,B-flexiload,B-pilot,B-robust,B-emp-robust,B-org-robust,B-limits,B-followup,B-optA,B-optB,B-optC,B-optD,B-optE,B-optD-items}
 \fi
 
 \begin{document}
@@ -429,6 +429,49 @@ With fewer working-age residents per senior, keeping people in work matters more
 But a firm offering one arrangement may not offer the one a worker values, or one the role can sustain.
 So the partners' question is no longer how many firms offer flexibility, but which arrangements, for which roles, on what terms; MOM's surveys are well placed to track that.
 That points to three open problems.}
+
+% ==========================================================================
+% 2b. INTERNATIONAL PREVALENCE   [new, 26 Oct 2026]
+% ==========================================================================
+% Prevalence only (the pay-value benchmarks stay on M-benchmark and B-emp-benchmarks). Not like-for-like: each row has its own
+% population and definition. Figures taken from search-result snippets of the sources below; the primary pages could not be opened
+% from this environment, so TODO(PI): check each number against its source before presenting.
+%  GSWA (Aksoy, Barrero, Bloom, Davis, Dolls, Zarate; PNAS 122(27), 2025; wfhresearch.com): full-time, college-educated employees,
+%    average full paid days WFH per week; world 1.23-1.29 (2024/25 wave, 40 countries, Nov 2024-Feb 2025); English-speaking 1.5-2.0, Asia 0.5-1.0 (SIEPR, "Working from Home in 2025: Five Key Facts");
+%    Singapore 0.9 days in the April-May 2023 wave (GSWA 2023 report; 34-country average 0.9).
+%  Eurostat LFS lfsa_ehomp: employed aged 20-64 working from home usually or sometimes, EU 22.9% in 2024; Netherlands 51.9% in 2023 (CBS: over half sometimes, 2024).
+%  MOM PQ 2023-02-07 (written answer on telecommuting): 34% of employed residents worked from home at some point in the survey month, 2022.
+%  MRSD [P4s]: 72.7% of establishments with 25+ staff offered at least one scheduled FWA in 2024.
+\begin{frame}[t,label=M-intl]{Remote work: Singapore and abroad}
+  \FrameTop
+  {\FsBody\setlength{\tabcolsep}{5pt}\renewcommand{\arraystretch}{1.05}
+  \begin{tabularx}{\linewidth}{@{}>{\raggedright\arraybackslash}p{3.3cm}>{\raggedright\arraybackslash}X>{\raggedright\arraybackslash}p{2.0cm}>{\raggedright\arraybackslash}p{1.5cm}@{}}
+    \toprule
+    \textbf{Measure} & \textbf{Where} & \textbf{Value} & \textbf{Year}\\
+    \midrule
+    \multirow{4}{3.3cm}{\raggedright Days working from home per week, college-educated full-time employees}
+      & World average (40 countries) & 1.2--1.3 & 2024/25\\
+      & English-speaking countries & 1.5--2.0 & 2024/25\\
+      & Asia & 0.5--1.0 & 2024/25\\
+      & \textbf{Singapore} & \textbf{0.9} & 2023\\
+    \midrule
+    \multirow{3}{3.3cm}{\raggedright Share of employed who work from home at least sometimes}
+      & EU, aged 20--64 & 23\% & 2024\\
+      & Netherlands & over 50\% & 2023--24\\
+      & \textbf{Singapore}, employed residents (in the survey month) & \textbf{34\%} & 2022\\
+    \midrule
+    Firms offering a scheduled FWA
+      & \textbf{Singapore}, establishments with 25+ staff & \textbf{73\%} & 2024\\
+    \bottomrule
+  \end{tabularx}\par}
+  \SourceNote{Not like-for-like: populations and definitions differ. Aksoy et al.\ 2025 (PNAS); Eurostat LFS; CBS; MOM 2023; MRSD 2024.}
+  \Backups{\BL{B-references}{Studies} \BL{B-emp-benchmarks}{Benchmarks}}
+\end{frame}
+\note{[Short path] Flexible work is mainstream in Singapore's firms, but how much remote work do people actually do compared with elsewhere? % [P4s]
+In the Global Survey of Working Arrangements, college-educated full-time employees work from home about 1.2 to 1.3 days a week worldwide, 1.5 to 2 in English-speaking countries and 0.5 to 1 in Asia; Singapore's reading in 2023 was 0.9. % [Aksoy et al. 2025]
+In the EU, about 23 per cent of employed people aged 20 to 64 work from home at least sometimes, and over half in the Netherlands. In Singapore, 34 per cent of employed residents had worked from home in the survey month in 2022, and 73 per cent of larger establishments offered a scheduled arrangement in 2024. % [Eurostat, CBS, MOM, MRSD]
+These are not like-for-like comparisons, so we read them as direction only: remote work in Singapore is at the world average, below English-speaking countries and Northern Europe.
+}
 
 % ==========================================================================
 % 3. THE PROBLEM AND THE QUESTION   [short path]
@@ -517,6 +560,35 @@ We use a simple map. [Full deck: first, where this sits in the research.]}
 A Polish study found workers would give up about 3 per cent, while employers expect a 21 per cent wage cut. % [R16]
 A six-month hybrid trial cut quits by a third (backup: Trials). % [P7]
 Our study measures both sides in Singapore with the same choices.}
+
+% Key findings (26 Oct 2026): a short preview of the results; the full summary stays on M-conclusion. Numbers: wtp_deck.csv main sample.
+\begin{frame}[t,label=M-keyfindings]{Key findings}
+  \FrameTop
+  \begin{columns}[T,onlytextwidth]
+    \begin{column}{0.31\textwidth}
+      \PanelTitle{Navy}{WFH}
+      \BigStat{Navy}{12--37 points}{gap between what employers expect to cut pay by and what PMEs would give up, for 1--2 days, 3--4 days and fully remote WFH}
+    \end{column}
+    \begin{column}{0.31\textwidth}
+      \PanelTitle{Navy}{Common ground}
+      \BigStat{Navy}{No gap}{for the compressed week: PMEs would give up about 7\% of pay, employers expect about 11\%; the difference is not significant}
+    \end{column}
+    \begin{column}{0.31\textwidth}
+      \PanelTitle{Navy}{Hurdles}
+      \BigStat{Navy}{49\% vs 3\%}{employers' pay cut for 1--2 WFH days where most roles need on-site presence vs where few do; stated concerns do not reliably change it}
+    \end{column}
+  \end{columns}
+  \vspace{0.12cm}
+  \Interp{Juniors have less access and know the Guidelines least; 45\% of PMEs fear a career penalty.}
+  \SourceNote{Pay in \% of monthly pay, stated choices from unweighted online panels; preliminary.}
+  \Backups{\BL{B-limits}{Limits} \BL{B-robust}{Robustness}}
+\end{frame}
+\note{[Short path] A preview of the four results we cover. % [E1, E2, G1-G4]
+For WFH, employers expect a pay cut 12 to 37 points larger than what PMEs would give up. % [G1-G3]
+Only the compressed week shows no detectable gap: about 7 per cent for PMEs and about 11 for employers. % [Q5, M19]
+Employers' concerns do not reliably change the pay cut, but on-site needs do: 49 per cent against 3 for one to two WFH days. % [M10, M12]
+And juniors have less access and know the Guidelines least; 45 per cent of PMEs fear a career penalty. % [D6, M23]
+}
 
 % ==========================================================================
 % 5. CONCEPTUAL FRAMEWORK   [short path]
@@ -919,6 +991,31 @@ E. Measure what is missing. Why PMEs who want an arrangement do not ask is not m
 B and C are exploratory: the presence result comes from the employer survey alone, and the career link is an association. For discussion: which of these could the partners take forward, and who could lead each? % [options evidence]
 }
 
+% Next steps (26 Oct 2026): each step points to a direction or a backup; "could" because the partners decide.
+\begin{frame}[t,label=M-nextsteps]{Possible next steps}
+  \FrameTop
+  {\FsBody\setlength{\tabcolsep}{6pt}\renewcommand{\arraystretch}{1.5}
+  \begin{tabularx}{\linewidth}{@{}>{\raggedright\arraybackslash}X>{\raggedright\arraybackslash}p{3.6cm}@{}}
+    \toprule
+    \textbf{Step} & \textbf{Who could lead}\\
+    \midrule
+    \textbf{Trial the compressed week} with volunteer firms, with independent evaluation (\hyperlink{B-pilot}{\textcolor{Navy}{checklist}}) & SNEF, with NTUC safeguards\\
+    \textbf{Follow up} with the 490 PMEs who agreed to one short survey, Feb--Aug 2027 (\hyperlink{B-followup}{\textcolor{Navy}{design}}) & NTUC reach; MOM only with fresh consent\\
+    \textbf{Add survey items} on why PMEs do not request, and on partial approval (\hyperlink{B-optE}{\textcolor{Navy}{E}}) & MOM (MRSD), with NTUC and SNEF\\
+    \textbf{Ask on-site need first} in any next employer survey, before the choices (\hyperlink{B-limits}{\textcolor{Navy}{limits}}) & SNEF\\
+    \bottomrule
+  \end{tabularx}\par}
+  \Interp{For discussion: which step should come first?}
+  \SourceNote{Directions A, B, C and E on the previous slide.}
+  \Backups{\BL{B-followup}{Follow-up} \BL{B-pilot}{Pilot checklist}}
+\end{frame}
+\note{[Short path] These are possible next steps, for discussion; the partners decide. % [options]
+One: SNEF could recruit volunteer firms to trial the compressed week, with independent evaluation and NTUC safeguards. % [B-pilot]
+Two: 490 PMEs agreed to one short follow-up survey between February and August 2027; MOM linkage would need fresh consent. % [F1]
+Three: MOM's surveys could add why-not-request and partial-approval items. % [D9, B6]
+Four: a next employer survey should ask about on-site needs before the choices. % [EB s9]
+Which should come first, and who could lead each?}
+
 % ==========================================================================
 % 20. OPTIONS FOR THE PARTNERS' DECISION   [short path]
 % ==========================================================================
@@ -1097,7 +1194,7 @@ B and C are exploratory: the presence result comes from the employer survey alon
     SNEF--SUSS report (2025) & Singapore employers & Practices, benefits and drawbacks; no pay trade-offs\\
     \bottomrule
   \end{tabularx}\par}
-  \BackToTwo{M-benchmark}{Slide 4}{B-emp-benchmarks}{Estimates abroad}
+  \BackToTwo{M-benchmark}{Literature}{B-emp-benchmarks}{Estimates abroad}
 \end{frame}
 
 
@@ -1129,7 +1226,7 @@ B and C are exploratory: the presence result comes from the employer survey alon
     \item \textbf{Fully remote:} evidence is mixed and job-dependent; several studies find lower productivity, partly reflecting who selects into remote jobs (Barrero, Bloom \& Davis 2023; Emanuel \& Harrington 2024).
   \end{itemize}
   % [P7] co-author disclosure
-  \BackToTwo{M-benchmark}{Slide 4}{M-discussion}{Directions}
+  \BackToTwo{M-benchmark}{Literature}{M-discussion}{Directions}
 \end{frame}
 
 \begin{frame}[t,label=B-landscape]{Flexible work today: PMEs and firms}

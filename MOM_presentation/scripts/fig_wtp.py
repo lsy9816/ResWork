@@ -424,7 +424,7 @@ def fig_sample_m():
     PAD, BAR = S.CARD_PAD_CM, S.CARD_BAR_CM
     CY0, CY1 = 2.95, H - 0.04
     CWD = (Wd - 0.10 - 0.30) / 2
-    cards = [(0.05, S.EMPLOYEE, "1,020", "PMEs", ["Singapore citizens and PRs", "in or seeking PME roles"],
+    cards = [(0.05, S.EMPLOYEE, "1,020", "PMEs", ["Professionals, managers, executives:", "citizens and PRs in or seeking such roles"],
               "Fielded 4\u201321 Aug 2026", "Online panels"),
              (0.05 + CWD + 0.30, S.EMPLOYER, "465", "employer respondents", ["People involved in PME hiring", "or manpower decisions"],
               "Fielded 12 Aug\u201321 Oct 2026", "Online panel")]

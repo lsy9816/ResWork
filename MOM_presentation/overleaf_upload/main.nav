@@ -34,18 +34,18 @@
 \headcommand {\beamer@framepages {17}{17}}
 \headcommand {\slideentry {0}{0}{18}{18/18}{}{0}}
 \headcommand {\beamer@framepages {18}{18}}
-\headcommand {\gdef \insertmainframenumber {18}}
-\headcommand {\partentry {\translate {Appendix}}{1}}
-\headcommand {\beamer@partpages {1}{18}}
-\headcommand {\beamer@sectionpages {1}{18}}
-\headcommand {\beamer@subsectionpages {1}{18}}
-\headcommand {\beamer@appendixpages {19}}
-\headcommand {\slideentry {0}{0}{19}{19/19}{}{1}}
+\headcommand {\slideentry {0}{0}{19}{19/19}{}{0}}
 \headcommand {\beamer@framepages {19}{19}}
-\headcommand {\slideentry {0}{0}{20}{20/20}{}{1}}
+\headcommand {\slideentry {0}{0}{20}{20/20}{}{0}}
 \headcommand {\beamer@framepages {20}{20}}
-\headcommand {\slideentry {0}{0}{21}{21/21}{}{1}}
+\headcommand {\slideentry {0}{0}{21}{21/21}{}{0}}
 \headcommand {\beamer@framepages {21}{21}}
+\headcommand {\gdef \insertmainframenumber {21}}
+\headcommand {\partentry {\translate {Appendix}}{1}}
+\headcommand {\beamer@partpages {1}{21}}
+\headcommand {\beamer@sectionpages {1}{21}}
+\headcommand {\beamer@subsectionpages {1}{21}}
+\headcommand {\beamer@appendixpages {22}}
 \headcommand {\slideentry {0}{0}{22}{22/22}{}{1}}
 \headcommand {\beamer@framepages {22}{22}}
 \headcommand {\slideentry {0}{0}{23}{23/23}{}{1}}
@@ -170,10 +170,16 @@
 \headcommand {\beamer@framepages {82}{82}}
 \headcommand {\slideentry {0}{0}{83}{83/83}{}{1}}
 \headcommand {\beamer@framepages {83}{83}}
-\headcommand {\beamer@partpages {19}{83}}
-\headcommand {\beamer@subsectionpages {19}{83}}
-\headcommand {\beamer@sectionpages {19}{83}}
-\headcommand {\beamer@documentpages {83}}
+\headcommand {\slideentry {0}{0}{84}{84/84}{}{1}}
+\headcommand {\beamer@framepages {84}{84}}
+\headcommand {\slideentry {0}{0}{85}{85/85}{}{1}}
+\headcommand {\beamer@framepages {85}{85}}
+\headcommand {\slideentry {0}{0}{86}{86/86}{}{1}}
+\headcommand {\beamer@framepages {86}{86}}
+\headcommand {\beamer@partpages {22}{86}}
+\headcommand {\beamer@subsectionpages {22}{86}}
+\headcommand {\beamer@sectionpages {22}{86}}
+\headcommand {\beamer@documentpages {86}}
 \headcommand {\gdef \inserttotalframenumber {65}}
-\headcommand {\gdef \inserttotalframenumber {18}}
+\headcommand {\gdef \inserttotalframenumber {21}}
 \headcommand {\gdef \appendixtotalframenumber {65}}

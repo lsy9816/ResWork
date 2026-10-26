@@ -218,3 +218,11 @@ part-time 24); results_fwa/fwa_diagnosis.csv also holds the "adjusted" share (ti
 - All employer figures, tables, CSVs regenerated; hard-coded 397 / "2 Oct" removed (F_sample, F_landscape now 465 firms, fielded 12 Aug-21 Oct).
 - Main employer pay cuts: 1-2 days 19.6, 3-4 days 39.8, remote 51.9, staggered 9.4, compressed week 10.6 [0.05, 21.1], job sharing 25.8, part-time 37.8. Compressed week gap vs PMEs about 3 points, not significant.
 - Text updated: compressed-week puzzle (offered by 71 of 465 firms = 15%; policy 17.8% vs 8.6%; size 11/16/24%, p = .013), cheaper-option share 92% of employer pairs, Guidelines familiarity 63% / heard 32%, challenge shares (productivity 24, fairness 23, coordination 23, managerial 14, security 6, digital 5), group-size ranges, B-org-role (5 of 21 significant, HR > line managers), B-size (0 of 21 on both sides), fairness no longer the top challenge in firms of 200 or fewer staff (productivity 26%, fairness 24%).
+
+## 26 Oct 2026 - three new main slides (86 pages)
+- M-intl "Remote work: Singapore and abroad" (after M-motivation): prevalence only (WFH days per week, share working from home, firms offering FWAs); Singapore vs world, English-speaking countries, Asia, EU, Netherlands. Not like-for-like. Numbers come from search-result snippets of the sources (Aksoy et al. PNAS 2025 / GSWA 2023, SIEPR, Eurostat, CBS, MOM PQ 2023, MRSD); primary pages could not be opened here: TODO(PI) check each against its source. The WTP benchmarks stay on M-benchmark / B-emp-benchmarks, so there is little overlap.
+- M-keyfindings "Key findings" (after M-benchmark): three headline results + juniors/career line; the fuller summary stays on M-conclusion.
+- M-nextsteps "Possible next steps" (after M-discussion): four steps with who could lead; links to B-pilot, B-followup, B-optE, B-limits.
+- Added to \ShortLabels / \includeonlyframes; "Slide 4" button labels now read "Literature".
+- PME defined at first body use (data slide card: Professionals, managers, executives). Decision on replacing PMEs with "employees": kept PMEs (see reply).
+- M-motivation synced with the Overleaf edit (title "Flexible work is mainstream now", caption = definition only, source line only).
