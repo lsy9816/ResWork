@@ -145,7 +145,11 @@
   {\color{Ink}\fontsize{12}{14.4}\selectfont\bfseries\insertauthor\par}\vspace{0.10cm}
   {\color{Ink}\FsBody\insertinstitute\par}\vspace{0.06cm}
   {\color{Muted}\FsBody\JointWork\par}\vspace{0.50cm}
-  {\color{Muted}\fontsize{9.5}{11.4}\selectfont\insertdate\par}}
+  {\color{Muted}\fontsize{9.5}{11.4}\selectfont\insertdate\par}\vspace{0.45cm}
+  % Logos: put logo_snef.png and logo_smu.png (any width, they are scaled to 0.9 cm high) in figures/; a missing file is skipped.
+  \IfFileExists{figures/logo_snef.png}{\includegraphics[height=0.9cm]{figures/logo_snef.png}}{}%
+  \IfFileExists{figures/logo_snef.png}{\IfFileExists{figures/logo_smu.png}{\hspace{1.2cm}}{}}{}%
+  \IfFileExists{figures/logo_smu.png}{\includegraphics[height=0.9cm]{figures/logo_smu.png}}{}\par}
 
 % --------------------------------------------------------------------------
 % Inner theme: flat bullets, plain bold numerals, flat blocks (no rounded

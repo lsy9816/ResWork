@@ -228,3 +228,5 @@ part-time 24); results_fwa/fwa_diagnosis.csv also holds the "adjusted" share (ti
 - M-motivation synced with the Overleaf edit (title "Flexible work is mainstream now", caption = definition only, source line only).
 
 - M-intl-wtp "PME values for WFH are at or above estimates abroad" (slide 4, alternative to M-intl; same figure as B-emp-benchmarks). Delete whichever is not used (87 pages with both).
+
+- Title page: optional SNEF and SMU logos (figures/logo_snef.png, figures/logo_smu.png; skipped if missing). Logo files must be added by the PI.
