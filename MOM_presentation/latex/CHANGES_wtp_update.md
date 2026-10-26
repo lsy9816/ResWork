@@ -239,3 +239,8 @@ part-time 24); results_fwa/fwa_diagnosis.csv also holds the "adjusted" share (ti
 
 ## 26 Oct 2026 - M-nextsteps emptied (PI request)
 Earlier draft, kept here: (1) Trial the compressed week with volunteer firms, independent evaluation (SNEF, with NTUC safeguards; B-pilot); (2) Follow up with the 490 PMEs who agreed to one short survey, Feb-Aug 2027 (NTUC reach; MOM only with fresh consent; B-followup); (3) Add why-not-request and partial-approval items to MRSD surveys (MOM, with NTUC and SNEF; Direction E); (4) Ask on-site need before the choices in any next employer survey (SNEF).
+
+## 26 Oct 2026 - policy directions cut to three, specific (85 pages)
+- M-discussion: three rows, each with a concrete action, the result it rests on and how to track it: A trial the compressed week in volunteer firms' written FWA policies (SNEF runs, evaluated); B check roles for on-site need in FWA guidance, start with 1-2 WFH days where none (employer cut 49% vs 3%); C reach juniors through company policies and train HR/managers (access 80 vs 94, familiarity 29 vs 77, 45% career worry).
+- Old D (juniors) merged into B-optC; B-optD deleted. Old E now "Measure what is missing (for next steps)" (B-optE) and "Draft survey items" (B-optD-items) stay as backups; index updated.
+- B-optB corrected: 49% (was 52%) for 1-2 WFH days; compressed week 6% vs 11%, not significant (was "about 1%").

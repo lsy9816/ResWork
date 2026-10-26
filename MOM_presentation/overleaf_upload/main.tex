@@ -393,7 +393,7 @@
 % path below plus every backup; return links to omitted main slides go to the index.
 \def\ShortLabels{M-title,M-motivation,M-intl,M-question,M-benchmark,M-keyfindings,M-design,M-pmes,M-why-pmes,M-employers,M-where,M-meet,M-barriers,M-employer-barriers,M-discussion,M-nextsteps,M-conclusion,M-thanks}
 \ifdefined\ShortPath
-  \includeonlyframes{M-title,M-motivation,M-intl,M-question,M-benchmark,M-keyfindings,M-design,M-pmes,M-why-pmes,M-employers,M-where,M-meet,M-barriers,M-employer-barriers,M-discussion,M-nextsteps,M-conclusion,M-thanks,B-index,B-index-all,B-references,B-emp-benchmarks,B-intl,B-landscape,B-setup,B-sg-reports,B-laboursupply,B-guidelines,B-legal,B-partners,B-triangulation,B-sample,B-industry,B-cards,B-paygaps,B-hedonic,B-estimation,B-methods,B-validity,B-dominance,B-emp-all,B-fwa-table,B-remote-commute,B-groups,B-ra-gender,B-ra-age,B-ra-care,B-ra-role,B-ra-edu,B-size,B-why-pmes,B-access,B-fwa-current,B-modelfree,B-org-salary,B-org-splits,B-org-concerns4,B-org-other,B-org-role,B-org-view,B-career,B-career-who,B-use-att,B-wtp-att,B-level-access,B-awareness,B-approvals,B-requestrate,B-puzzle-main,B-puzzle,B-flexiload,B-pilot,B-robust,B-emp-robust,B-org-robust,B-limits,B-followup,B-optA,B-optB,B-optC,B-optD,B-optE,B-optD-items}
+  \includeonlyframes{M-title,M-motivation,M-intl,M-question,M-benchmark,M-keyfindings,M-design,M-pmes,M-why-pmes,M-employers,M-where,M-meet,M-barriers,M-employer-barriers,M-discussion,M-nextsteps,M-conclusion,M-thanks,B-index,B-index-all,B-references,B-emp-benchmarks,B-intl,B-landscape,B-setup,B-sg-reports,B-laboursupply,B-guidelines,B-legal,B-partners,B-triangulation,B-sample,B-industry,B-cards,B-paygaps,B-hedonic,B-estimation,B-methods,B-validity,B-dominance,B-emp-all,B-fwa-table,B-remote-commute,B-groups,B-ra-gender,B-ra-age,B-ra-care,B-ra-role,B-ra-edu,B-size,B-why-pmes,B-access,B-fwa-current,B-modelfree,B-org-salary,B-org-splits,B-org-concerns4,B-org-other,B-org-role,B-org-view,B-career,B-career-who,B-use-att,B-wtp-att,B-level-access,B-awareness,B-approvals,B-requestrate,B-puzzle-main,B-puzzle,B-flexiload,B-pilot,B-robust,B-emp-robust,B-org-robust,B-limits,B-followup,B-optA,B-optB,B-optC,B-optE,B-optD-items}
 \fi
 
 \begin{document}
@@ -948,32 +948,32 @@ We acknowledge that these are stated choices from unweighted online panels, and 
 }
 
 \begin{frame}[t,label=M-discussion]{Policy directions}
-  % Policy directions (21 Oct 2026): one line per direction with the finding it rests on. Letters A-E link to B-optA..B-optE.
-  % 1 compressed week: gap 0, access 21%, use 6.5% [slides 6, 10]; 2 roles: employer cut 3 vs 52 (1-2 days) by presence need [slide 12];
-  % 3 managers and HR: hurdles [11, 13], career worry 45% [15]; 4 juniors: access 80/85/94, familiarity 29/52/77 [14]; 5 measurement gap [15].
+  % Three directions (26 Oct 2026, PI request: fewer, specific, from our results). Letters link to B-optA..C. Old D (juniors) merged into C;
+  % old E (measure what is missing) moved to the next steps (B-optE stays as a backup).
+  % A: compressed week gap 3 n.s. (7.4 vs 10.6), offered by 15% of firms (71 of 465), written policy 17.8 vs 8.6, PME access 21%;
+  % B: employer cut for 1-2 WFH days 48.9 (most roles need presence) vs 2.7; C: access 80/85/94, familiarity 29/52/77, career penalty 45%.
   \FrameTop
-  {\FsBody\setlength{\tabcolsep}{6pt}\renewcommand{\arraystretch}{1.6}
-  \begin{tabularx}{\linewidth}{@{}>{\raggedright\arraybackslash}X>{\raggedright\arraybackslash}p{5.4cm}@{}}
+  {\FsBody\setlength{\tabcolsep}{5pt}\renewcommand{\arraystretch}{1.1}
+  \begin{tabularx}{\linewidth}{@{}>{\raggedright\arraybackslash}X>{\raggedright\arraybackslash}p{5.0cm}>{\raggedright\arraybackslash}p{2.3cm}@{}}
     \toprule
-    \textbf{Direction} & \textbf{Based on}\\
+    \textbf{Direction} & \textbf{Based on} & \textbf{How to track}\\
     \midrule
-    \hyperlink{B-optA}{\textbf{\textcolor{Navy}{A}}}\enspace \textbf{Test the compressed week} & No gap; few have access\\
-    \hyperlink{B-optB}{\textbf{\textcolor{Navy}{B}}}\enspace \textbf{Match arrangements to roles} & Little WFH cut where roles need no presence\\
-    \hyperlink{B-optC}{\textbf{\textcolor{Navy}{C}}}\enspace \textbf{Support managers and HR} & Employer hurdles; career worry\\
-    \hyperlink{B-optD}{\textbf{\textcolor{Navy}{D}}}\enspace \textbf{Open access and information for juniors} & Least access, lowest familiarity\\
-    \hyperlink{B-optE}{\textbf{\textcolor{Navy}{E}}}\enspace \textbf{Measure what is missing} & Why PMEs do not ask\\
+    \hyperlink{B-optA}{\textbf{\textcolor{Navy}{A}}}\enspace \textbf{Trial the compressed week} in volunteer firms' written FWA policies, run by SNEF and evaluated
+      & No pay gap (about 7\% vs 11\%); 15\% of firms offer it, 21\% of PMEs have it & Take-up, quits, coverage\\[3pt]
+    \hyperlink{B-optB}{\textbf{\textcolor{Navy}{B}}}\enspace \textbf{Check roles for on-site need} in FWA guidance; start with 1--2 WFH days where none
+      & Employers' pay cut for 1--2 days: 49\% where most roles need presence, 3\% where few do & Firms offering 1--2 days\\[3pt]
+    \hyperlink{B-optC}{\textbf{\textcolor{Navy}{C}}}\enspace \textbf{Reach juniors and support HR}: tell juniors about the Guidelines through company policies; train managers on requests
+      & Access 80\% (junior) vs 94\% (senior); know the Guidelines 29\% vs 77\%; 45\% fear a career penalty & Juniors' access and familiarity\\
     \bottomrule
   \end{tabularx}\par}
   \Interp{For discussion: which of these could the partners take forward?}
   \SourceNote{Stated choices from online panels; employer splits are preliminary.}
   \Backups{\BL{B-followup}{Follow-up} \BL{B-optD-items}{Survey items} \BL{B-pilot}{Pilot checklist}}
 \end{frame}
-\note{[Short path] These are the directions the results point to; the right-hand column gives the finding each rests on, and the letters link to a back-up for each direction. None requires changing the Guidelines. % [S7]
-A. Test the compressed week. PMEs would give up about 7 per cent of pay for it and employers would require about 11, a gap we cannot tell from zero, and few PMEs have it available. Few surveyed firms offer it and operating costs are unmeasured, so it is a low-risk arrangement to test, not a proven one. SNEF could recruit volunteer firms to put it on their written menu, with independent evaluation; the evidence is moderate. % [E5, R5, G1, M16, M17]
-B. Match arrangements to roles. Where few roles need on-site presence, employers expect only about 3 per cent less pay for one to two WFH days, below the 7 per cent PMEs would give up; where most roles do, they expect 49. That compares one employer group with all PMEs, PMEs were not asked about presence, and the intervals are wide, so it is preliminary. Review which tasks need presence, role by role, and start with one to two days where roles allow. % [M10, Q10, M12]
-C. Support managers and HR. Employers name productivity, coordination and fairness as their main hurdles, and concern levels do not reliably change the pay cut. When asked for the single biggest challenge, technology and security are rarely named; we cannot say they are not hurdles. Managerial resistance or trust is the main hurdle for 14 per cent, and 63 per cent of employers say they know the Guidelines. Also 45 per cent of PMEs expect flexible work to hurt their career, 36 per cent of juniors and 52 per cent of seniors, and they value WFH less and use staggered hours less: associations. Guidance and training for HR and managers, and appraising by output at every level, are relevant; we did not test training. % [slide 11, 13, 15, B-tgfwar]
-D. Open access and information for juniors. PMEs of all levels value WFH alike, but access and familiarity rise with seniority: 80 per cent of junior professionals have at least one arrangement available against 94 in senior management, and 29 per cent know the Guidelines against 77. Senior staff already use the most; the gradient suggests that does not reach juniors by itself. % [D6, pme_level_access.csv]
-E. Measure what is missing. Why PMEs who want an arrangement do not ask is not measured. MRSD, with NTUC and SNEF, could add why-not-request and partial-approval items where its surveys lack them; it adds no reporting duty for firms. % [P2, P3, B6, D9]
+\note{[Short path] Three directions the results point to; the middle column gives the finding each rests on, and the letters link to a back-up for each. None requires changing the Guidelines. % [S7]
+A. Trial the compressed week. PMEs would give up about 7 per cent of pay for it and employers would require about 11, a gap we cannot tell from zero. 15 per cent of surveyed firms offer it, more often with a written policy, 18 against 9 per cent, and 21 per cent of PMEs have it. Operating costs are unmeasured, so it is a low-risk arrangement to test, not a proven one: SNEF could recruit volunteer firms to put it on the written menu, with independent evaluation of take-up, quits and coverage. % [E5, R5, G1, M16, M17]
+B. Check roles for on-site need. Where most roles need on-site presence, employers expect a pay cut of about 49 per cent for one to two WFH days, against 3 where few do; PMEs would give up about 7. That compares one employer group with all PMEs, PMEs were not asked about presence, and the intervals are wide, so it is preliminary. FWA guidance could add a role-by-role presence check, and firms could start with one to two days where roles do not need presence. % [M10, Q10, M12]
+C. Reach juniors and support HR. PMEs of all levels value WFH alike, but access and familiarity rise with seniority: 80 per cent of junior professionals have at least one arrangement against 94 in senior management, and 29 per cent know the Guidelines against 77; 45 per cent of PMEs expect flexible work to hurt their career. Employers' concerns do not reliably change the pay cut. Firms could tell juniors about the Guidelines through the usual channel, company policy, and train managers and HR on requests; whether this lowers career worry is untested. % [D6, M23, pme_level_access.csv]
 B and C are exploratory: the presence result comes from the employer survey alone, and the career link is an association. For discussion: which of these could the partners take forward, and who could lead each? % [options evidence]
 }
 
@@ -1117,8 +1117,8 @@ B and C are exploratory: the presence result comes from the employer survey alon
       \mbox{\BIi{B-robust}{Summary}}\enspace \textcolor{Muted}{$\cdot$}\enspace \mbox{\BIi{B-emp-robust}{PMEs}}\enspace \textcolor{Muted}{$\cdot$}\enspace \mbox{\BIi{B-org-robust}{Employers}}\par
       \BH{Limits and directions}
       \mbox{\BIi{B-limits}{Limits}}\enspace \textcolor{Muted}{$\cdot$}\enspace \mbox{\BIi{B-followup}{Follow-up}}\par
-      \mbox{\BIi{B-optA}{Direction A}}\enspace\BIi{B-optB}{B}\enspace\BIi{B-optC}{C}\enspace\BIi{B-optD}{D}\enspace\BIi{B-optE}{E}\par
-      \mbox{\BIi{B-optD-items}{E: survey items}}\par
+      \mbox{\BIi{B-optA}{Direction A}}\enspace\BIi{B-optB}{B}\enspace\BIi{B-optC}{C}\enspace\BIi{B-optE}{Measurement gap}\par
+      \mbox{\BIi{B-optD-items}{Draft survey items}}\par
     \end{column}
   \end{columns}
   \DeckNavGlue\noindent\hfill{\usebeamerfont{button}\hyperlink{B-index}{\beamergotobutton{Likely questions}}\hspace{0.15cm}\hyperlink{M-thanks}{\beamerreturnbutton{Thank you}}}\par
@@ -2043,7 +2043,7 @@ MOM, SNEF and NTUC can therefore act on rankings; prices need a wave with small 
     \textbf{Employer task} & A hire, not a staff request; not an operating cost & Pilots that record operations\\ \RowSep
     \textbf{Samples} & Unweighted panels, mostly large firms & Items in MOM surveys\\ \RowSep
     % [D9] misread; [D7b] askers only, a lower bound; [B6] no why-not item
-    \textbf{Request item} & Misread; refusals among askers only; no why-not item & Direction E items\\
+    \textbf{Request item} & Misread; refusals among askers only; no why-not item & draft survey items\\
     \bottomrule
   \end{tabularx}\par}
   % [S9] respondents knew SNEF would use the results; EB s9: 118 of 1,020 = 12% capped; task-1 coding; [E15] choice results hold without the weaker panel
@@ -2102,7 +2102,7 @@ MOM, SNEF and NTUC can therefore act on rankings; prices need a wave with small 
   {\textbf{Direction:} B\quad\textbf{Strength:} exploratory; preliminary associations}
   {% [Q10, M10] 27 vs 48 (appended); [Q10b] 50 (appended); [Q10c] p = .002 vs 1-2 days; [M12] p = .006, q = .058 over 20 splits; EB s9 l.183 one pay slope, free-slope check pending
    % [M13] part-time 35 where neither presence need nor creativity concern
-   Where most roles need presence, firms would require a pay cut of about 52\% for 1--2 WFH days, against 3\% where only some or few do (PMEs would give up about 7\%; PMEs were not asked about presence). A compressed week: about 1\%. Preliminary.}
+   Where most roles need presence, firms would require a pay cut of about 49\% for 1--2 WFH days, against 3\% where only some or few do (PMEs would give up about 7\%; PMEs were not asked about presence). A compressed week: 6\% against 11\%, not significantly different. Preliminary.}
   {% [P11] Job Redesign+ up to 70% of qualifying costs for SMEs, 50% for others; PTRG under review for flexi-load
    % [Q10c] say "a compressed week may fit where WFH does not" (fixer pass 7 Oct 2026, employer-11; fact_audit s3 item 6)
    \textbf{Firms}, with SNEF: review which tasks need presence; start with 1--2 WFH days where roles allow; a compressed week may fit where WFH does not; use flexi-load where fewer hours, not location, address the need. Job Redesign+: up to 70\% of qualifying costs for SMEs, 50\% for others. \textbf{MOM:} PTRG review.}
@@ -2114,33 +2114,20 @@ MOM, SNEF and NTUC can therefore act on rankings; prices need a wave with small 
   {\SourceNote{Associations; asked after the choices. \hyperlink{B-flexiload}{\textcolor{Navy}{Flexi-load}}.}%
    \BackToTwo{M-discussion}{Directions}{M-where}{On-site needs}}
 
-\OptionFrame{B-optC}{Direction C: support managers and HR}
-  {\textbf{Direction:} C\quad\textbf{Strength:} exploratory; associations, and the effect of training is untested}
-  {% slide 11 challenge shares; slide 13; slide 15; B-tgfwar employer familiarity 58%
-   Employers' main challenge: productivity 24\%, fairness 23\%, coordination 23\%, managerial resistance or trust 14\%; security 6\%, digital infrastructure 5\% (one answer each). Concern levels do not reliably change the pay cut. 45\% of PMEs expect flexible work to hurt their career (36\% of juniors, 52\% of seniors); they value WFH much less and, where staggered hours are available, use them less (38\% vs 59--69\%).}
-  {% owner suggestion: TAFEP, NTUC, member firms
-   \textbf{TAFEP, NTUC and member firms:} guidance and training for HR and managers on FWA requests and on appraising by output; try it with volunteer firms.}
-  {TAFEP and IHRP resources; SNEF guidance on FWA requests; 63\% of employers say they know the Guidelines.}
-  {Not a new reporting duty for firms; not shown to change appraisal or use.}
-  {% fairness: 23% name it as the main challenge; B1 28% at 200 or fewer staff
-   Fairness to staff without FWAs; whether career worry falls and use rises.}
-  {\SourceNote{Associations; concern items were asked after the choices. Technology rarely named as the main challenge is not shown to be no hurdle.}%
-   \BackToTwo{M-discussion}{Directions}{M-employer-barriers}{Challenges}}
-
-\OptionFrame{B-optD}{Direction D: open access and information for juniors}
-  {\textbf{Direction:} D\quad\textbf{Strength:} exploratory; descriptive}
-  {% pme_level_access.csv; slide 14; B-setup 43% policy, 30% request
-   At least one of five arrangements available: 80\% of junior professionals, 85\% of middle and 94\% of senior management; in use: 66\%, 72\%, 80\%. Use among those with access is similar (82--85\%), so the gap is access. Familiar with the key provisions of the Guidelines: 29\%, 52\%, 77\%. WFH values are alike across levels. Most FWAs arrive through company policy (43\%) rather than an individual request (30\%).}
-  {% owner suggestion: firms with MOM and NTUC outreach
-   \textbf{Member firms}, with MOM and NTUC outreach: check whether junior roles can use the arrangements the firm already has, and tell juniors about the Guidelines through the usual channel, the company policy.}
-  {Company policies; MOM and NTUC communication channels.}
-  {Not a new entitlement; not evidence that leaders' use spreads to juniors.}
-  {Access and familiarity among juniors; take-up among those with access.}
-  {\SourceNote{Descriptive (see \hyperlink{B-level-access}{\textcolor{Navy}{by level}}).}%
+\OptionFrame{B-optC}{Direction C: reach juniors and support managers and HR}
+  {\textbf{Direction:} C\quad\textbf{Strength:} exploratory; descriptive and associations, the effect of training is untested}
+  {% pme_level_access.csv; slide 14; B-setup 43% policy, 30% request; employers' challenges 465 firms
+   At least one of five arrangements available: 80\% of junior professionals, 85\% of middle and 94\% of senior management; in use: 66\%, 72\%, 80\%. Use given access is similar (82--85\%). Know the key provisions of the Guidelines: 29\%, 52\%, 77\%; 45\% of PMEs fear a career penalty (36\% of juniors, 52\% of seniors). Most FWAs arrive through company policy (43\%), not a request (30\%). Employers' concern levels do not reliably change the pay cut.}
+  {% owner suggestion: firms with MOM and NTUC outreach, TAFEP
+   \textbf{Firms}, with MOM and NTUC outreach: tell juniors about the Guidelines through company policy. \textbf{TAFEP, NTUC, firms:} train HR and managers on requests, with volunteer firms.}
+  {Company policies; MOM and NTUC channels; TAFEP, IHRP and SNEF resources; 63\% of employers know the Guidelines.}
+  {Not a new entitlement or reporting duty; not shown that training changes appraisal or use.}
+  {Access and familiarity among juniors; take-up among those with access; whether career worry falls and use rises.}
+  {\SourceNote{Descriptive and associations; concern items were asked after the choices (see \hyperlink{B-level-access}{\textcolor{Navy}{by level}}).}%
    \BackToTwo{M-discussion}{Directions}{M-barriers}{By level}}
 
-\OptionFrame{B-optE}{Direction E: measure what is missing}
-  {\textbf{Direction:} E\quad\textbf{Strength:} gap documented}
+\OptionFrame{B-optE}{Measure what is missing (for next steps)}
+  {\textbf{Next step:} survey items\quad\textbf{Strength:} gap documented}
   {% [P2] no administrative counts; [P3] 18.5% made a formal request, data for 2024; [D9] misread item; [B6] no why-not item
    % [D7] 4.4 [7.2] declined, 32 [42] partly; [D7b] lower bound; [M23] 44.6 [37.1]; [M27] more formal requests, not fewer
    % fixer pass 7 Oct 2026 (mom_ps-02 b): [P3] MOM publishes request rates; [B6] our survey had no why-not item; whether MRSD's
@@ -2156,7 +2143,7 @@ MOM, SNEF and NTUC can therefore act on rankings; prices need a wave with small 
   {\SourceNote{\hyperlink{B-followup}{\textcolor{Navy}{Follow-up}}.}%
    \BackToTwo{M-discussion}{Directions}{M-barriers}{Barriers}}
 
-\begin{frame}[t,label=B-optD-items]{Direction E: draft survey items}
+\begin{frame}[t,label=B-optD-items]{Draft survey items}
   \FrameTop
   \setbeamerfont{itemize/enumerate body}{size=\fontsize{9.5}{11.6}\selectfont}
   % COMMENTS slide 20 and s4: the first deliverable is the why-not-request and partial-approval items,
