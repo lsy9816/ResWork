@@ -236,3 +236,6 @@ part-time 24); results_fwa/fwa_diagnosis.csv also holds the "adjusted" share (ti
 - M-design (slide 9): drawn cards replaced by screenshots of the survey screens (figures/survey_pme.png, figures/survey_employer.png), side by side; the example screens differ from the old card text (PME S$2,550 vs S$3,300; employer S$4,500 vs S$5,500).
 
 - M-design (slide 9): screenshots redrawn as two LaTeX tables with the survey wording (equal widths, centred cells, shaded rows = attributes that differ); figures/survey_pme.png and survey_employer.png are no longer used. Needs colortbl (added to the preamble).
+
+## 26 Oct 2026 - M-nextsteps emptied (PI request)
+Earlier draft, kept here: (1) Trial the compressed week with volunteer firms, independent evaluation (SNEF, with NTUC safeguards; B-pilot); (2) Follow up with the 490 PMEs who agreed to one short survey, Feb-Aug 2027 (NTUC reach; MOM only with fresh consent; B-followup); (3) Add why-not-request and partial-approval items to MRSD surveys (MOM, with NTUC and SNEF; Direction E); (4) Ask on-site need before the choices in any next employer survey (SNEF).
