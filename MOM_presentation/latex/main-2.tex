@@ -49,6 +49,7 @@
 \usepackage{booktabs}
 \usepackage{tabularx}
 \usepackage{array}
+\usepackage{colortbl}
 \usepackage{multirow}
 \usepackage{amsmath}
 \usepackage{amssymb}
@@ -252,6 +253,14 @@
 \newcommand{\BigStat}[3]{%
   {\color{#1}\fontsize{15}{17}\selectfont\bfseries #2\par}%
   {\color{Ink}\fontsize{8.5}{10}\selectfont\RaggedRight #3\par}\vspace{0.06cm}}
+% Survey-screen tables on M-design (26 Oct 2026)
+\definecolor{SvyBlue}{HTML}{DDEBFA}
+\newcommand{\SvyHead}[1]{\cellcolor{Soft}\textbf{#1}}
+\newcommand{\SvyTab}[3]{% #1 unused, #2 header row cells, #3 body rows
+  {\renewcommand{\arraystretch}{1.12}\setlength{\tabcolsep}{3pt}\fontsize{8}{9.6}\selectfont\arrayrulecolor{Rule}%
+  \begin{tabular}{|>{\centering\arraybackslash}p{2.35cm}|>{\centering\arraybackslash}p{2.1cm}|>{\centering\arraybackslash}p{2.1cm}|}
+    \hline #2 \\ \hline #3
+  \end{tabular}}}
 \newcommand{\Body}[1]{{\fontsize{9.5}{11.6}\selectfont\RaggedRight #1\par}}
 
 % --------------------------------------------------------------------------
@@ -661,13 +670,27 @@ Next, the choice task that lets us put a price on each arrangement.}
   % PME screen: S$2,550 (1-2 days WFH, staggered) vs S$3,300 (fully remote, fixed); employer screen: S$4,500 (3-4 days, compressed 4-day week)
   % vs S$5,500 (1-2 days, fixed). Shaded rows differ between options; the other rows are held at the respondent's own practice [S5, S6, S7].
   {\centering
-  \begin{minipage}[t]{0.44\linewidth}\centering
-    {\color{Employee}\FsHead\bfseries PMEs choose a job\par}\vspace{0.12cm}
-    \includegraphics[width=\linewidth]{figures/survey_pme.png}
+  % Redrawn from the survey screens (26 Oct 2026): same wording, equal widths, centred cells; shaded rows = attributes that differ.
+  \begin{minipage}[t]{0.49\linewidth}\centering
+    {\color{Employee}\FsHead PMEs choose a job\par}\vspace{0.14cm}
+    \SvyTab{Employee}{\SvyHead{Attribute} & \SvyHead{Job Offer A} & \SvyHead{Job Offer B}}{%
+      \cellcolor{SvyBlue}\textbf{Monthly gross salary for this job} & \cellcolor{SvyBlue}\textbf{S\$2,550/month} & \cellcolor{SvyBlue}\textbf{S\$3,300/month}\\ \hline
+      \cellcolor{SvyBlue}\textbf{Work location} & \cellcolor{SvyBlue}1--2 days WFH/week & \cellcolor{SvyBlue}Fully remote (5 days WFH)\\ \hline
+      \cellcolor{SvyBlue}\textbf{Work schedule} & \cellcolor{SvyBlue}Staggered hours & \cellcolor{SvyBlue}Fixed hours (9am--6pm)\\ \hline
+      Workload & \multicolumn{2}{c|}{Full-time (35--44 hours/week)}\\ \hline
+      Job security & \multicolumn{2}{c|}{Moderate (10--30\% chance)}\\ \hline
+      Workplace culture & \multicolumn{2}{c|}{Collaborative}\\ \hline
+      Commute time for onsite days & \multicolumn{2}{c|}{Moderate (15--45 minutes)}\\ \hline}
   \end{minipage}\hfill
-  \begin{minipage}[t]{0.54\linewidth}\centering
-    {\color{Employer}\FsHead\bfseries Employers choose a hire\par}\vspace{0.12cm}
-    \includegraphics[width=\linewidth]{figures/survey_employer.png}
+  \begin{minipage}[t]{0.49\linewidth}\centering
+    {\color{Employer}\FsHead Employers choose a hire\par}\vspace{0.14cm}
+    \SvyTab{Employer}{\SvyHead{Attribute} & \SvyHead{Candidate A} & \SvyHead{Candidate B}}{%
+      \cellcolor{SvyBlue}\textbf{Monthly gross salary offered for this candidate} & \cellcolor{SvyBlue}\textbf{S\$4,500/month} & \cellcolor{SvyBlue}\textbf{S\$5,500/month}\\ \hline
+      \cellcolor{SvyBlue}\textbf{Work location} & \cellcolor{SvyBlue}3--4 days WFH/week & \cellcolor{SvyBlue}1--2 days WFH/week\\ \hline
+      \cellcolor{SvyBlue}\textbf{Work schedule} & \cellcolor{SvyBlue}Compressed 4-day week & \cellcolor{SvyBlue}Fixed hours (9am--6pm)\\ \hline
+      Workload & \multicolumn{2}{c|}{Full-time (35--44 hours/week)}\\ \hline
+      Retention risk & \multicolumn{2}{c|}{Low ($<$10\% turnover)}\\ \hline
+      Workplace culture & \multicolumn{2}{c|}{Hierarchical}\\ \hline}
   \end{minipage}\par}
   \vspace{0.25cm}
   {\centering\FsBody Two attributes differ in each choice; which ones, and their levels, are randomized. From six choices each, we estimate the \textbf{\% of pay} each side would give up or require.\par}

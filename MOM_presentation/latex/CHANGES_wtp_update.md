@@ -234,3 +234,5 @@ part-time 24); results_fwa/fwa_diagnosis.csv also holds the "adjusted" share (ti
 - M-intl-wtp removed from the main flow (same figure is backup B-emp-benchmarks, retitled "Our WFH values are at or above estimates abroad"). M-intl table now Definition / Population / Country / Value / Year; the Singapore "firms offering FWA" row removed (provision, not use; it is on M-motivation). 86 pages.
 
 - M-design (slide 9): drawn cards replaced by screenshots of the survey screens (figures/survey_pme.png, figures/survey_employer.png), side by side; the example screens differ from the old card text (PME S$2,550 vs S$3,300; employer S$4,500 vs S$5,500).
+
+- M-design (slide 9): screenshots redrawn as two LaTeX tables with the survey wording (equal widths, centred cells, shaded rows = attributes that differ); figures/survey_pme.png and survey_employer.png are no longer used. Needs colortbl (added to the preamble).
