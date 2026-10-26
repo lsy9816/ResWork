@@ -230,3 +230,5 @@ part-time 24); results_fwa/fwa_diagnosis.csv also holds the "adjusted" share (ti
 - M-intl-wtp "PME values for WFH are at or above estimates abroad" (slide 4, alternative to M-intl; same figure as B-emp-benchmarks). Delete whichever is not used (87 pages with both).
 
 - Title page: optional SNEF and SMU logos (figures/logo_snef.png, figures/logo_smu.png; skipped if missing). Logo files must be added by the PI.
+
+- M-intl-wtp removed from the main flow (same figure is backup B-emp-benchmarks, retitled "Our WFH values are at or above estimates abroad"). M-intl table now Definition / Population / Country / Value / Year; the Singapore "firms offering FWA" row removed (provision, not use; it is on M-motivation). 86 pages.
