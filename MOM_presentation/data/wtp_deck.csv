@@ -131,277 +131,277 @@ pme,main,care_type,2,Child aged 0-6,258,t2,7.9521,2.382,3.2836,12.6207
 pme,main,care_type,2,Child aged 0-6,258,l1,8.5106,2.0391,4.514,12.5071
 pme,main,care_type,2,Child aged 0-6,258,l2,6.8481,2.1721,2.591,11.1053
 pme,main,care_type,-1,joint test: all WTP ratios equal,0,joint_p,0.60122,0.0,0.0,0.0
-emp,main,all,0,All employers,397,p1,19.7097,5.0828,9.7476,29.6719
-emp,main,all,0,All employers,397,p2,35.8482,5.2569,25.5449,46.1515
-emp,main,all,0,All employers,397,p3,48.7025,4.9626,38.976,58.4291
-emp,main,all,0,All employers,397,t1,10.0251,5.2342,-0.2336,20.2839
-emp,main,all,0,All employers,397,t2,6.992,5.9965,-4.7611,18.745
-emp,main,all,0,All employers,397,l1,23.5716,4.2104,15.3194,31.8239
-emp,main,all,0,All employers,397,l2,35.5493,4.1601,27.3957,43.7028
-emp,main,all,0,All employers,397,r1,5.2041,4.959,-4.5153,14.9236
-emp,main,all,0,All employers,397,r2,31.3366,5.3525,20.8459,41.8274
-emp,excl_salary_out,all,0,All employers,392,l1,23.6308,4.1902,15.4183,31.8434
-emp,excl_salary_out,all,0,All employers,392,p1,19.7164,5.0816,9.7566,29.6761
-emp,excl_salary_out,all,0,All employers,392,t1,9.2435,5.2313,-1.0096,19.4967
-emp,excl_salary_out,all,0,All employers,392,l2,35.1747,4.1492,27.0424,43.3071
-emp,excl_salary_out,all,0,All employers,392,p2,35.6769,5.2566,25.374,45.9797
-emp,excl_salary_out,all,0,All employers,392,t2,7.2259,5.908,-4.3535,18.8054
-emp,excl_salary_out,all,0,All employers,392,p3,48.8002,4.9632,39.0724,58.528
-emp,trim1pct,all,0,All employers,391,l1,23.5058,4.2163,15.242,31.7696
-emp,trim1pct,all,0,All employers,391,p1,20.2197,5.0832,10.2568,30.1825
-emp,trim1pct,all,0,All employers,391,t1,8.8914,5.2569,-1.4119,19.1947
-emp,trim1pct,all,0,All employers,391,l2,34.913,4.1645,26.7506,43.0753
-emp,trim1pct,all,0,All employers,391,p2,36.0648,5.2683,25.7391,46.3905
-emp,trim1pct,all,0,All employers,391,t2,6.4056,5.9904,-5.3353,18.1466
-emp,trim1pct,all,0,All employers,391,p3,49.0492,4.9728,39.3027,58.7957
-emp,same_side,all,0,All employers,381,l1,23.4225,4.2323,15.1274,31.7176
-emp,same_side,all,0,All employers,381,p1,18.8614,5.312,8.4501,29.2726
-emp,same_side,all,0,All employers,381,t1,10.4674,5.2797,0.1194,20.8155
-emp,same_side,all,0,All employers,381,l2,33.9577,4.2002,25.7255,42.19
-emp,same_side,all,0,All employers,381,p2,35.2876,5.3528,24.7963,45.7789
-emp,same_side,all,0,All employers,381,t2,4.4493,6.1771,-7.6575,16.5561
-emp,same_side,all,0,All employers,381,p3,47.5331,5.0635,37.6087,57.4575
-emp,main,belief,0,Agree: FWAs reduce the salary needed (4-5),187,p1,11.2828,8.4218,-5.2239,27.7895
-emp,main,belief,0,Agree: FWAs reduce the salary needed (4-5),187,p2,34.3844,8.6612,17.4084,51.3604
-emp,main,belief,0,Agree: FWAs reduce the salary needed (4-5),187,p3,47.7832,8.2925,31.5299,64.0365
-emp,main,belief,0,Agree: FWAs reduce the salary needed (4-5),187,t1,15.6963,8.3984,-0.7646,32.1572
-emp,main,belief,0,Agree: FWAs reduce the salary needed (4-5),187,t2,6.058,10.8686,-15.2445,27.3605
-emp,main,belief,0,Agree: FWAs reduce the salary needed (4-5),187,l1,24.4959,7.1232,10.5344,38.4574
-emp,main,belief,0,Agree: FWAs reduce the salary needed (4-5),187,l2,36.7594,6.8782,23.2781,50.2407
-emp,main,belief,0,Agree: FWAs reduce the salary needed (4-5),187,r1,2.8279,8.4412,-13.7169,19.3727
-emp,main,belief,0,Agree: FWAs reduce the salary needed (4-5),187,r2,28.5458,9.4597,10.0048,47.0868
-emp,main,belief,1,Not agree (1-3),210,p1,25.5755,6.4768,12.881,38.27
-emp,main,belief,1,Not agree (1-3),210,p2,37.4721,6.6447,24.4485,50.4957
-emp,main,belief,1,Not agree (1-3),210,p3,50.0602,6.1974,37.9133,62.2071
-emp,main,belief,1,Not agree (1-3),210,t1,5.3185,6.8499,-8.1073,18.7443
-emp,main,belief,1,Not agree (1-3),210,t2,8.4433,6.8417,-4.9664,21.853
-emp,main,belief,1,Not agree (1-3),210,l1,23.3196,5.1625,13.2011,33.4381
-emp,main,belief,1,Not agree (1-3),210,l2,34.9826,5.3369,24.5223,45.4429
-emp,main,belief,1,Not agree (1-3),210,r1,7.0626,6.0795,-4.8532,18.9784
-emp,main,belief,1,Not agree (1-3),210,r2,33.3997,6.4149,20.8265,45.9729
-emp,main,belief,-1,ratio test: location WTPs equal,0,ratio_p,0.50621,0.0,0.0,0.0
-emp,main,belief,-1,location interactions = 0 (common slope),0,linear_p,0.43923,0.0,0.0,0.0
-emp,main,concern,0,High concern index (mean of 3 items > 3),260,p1,21.0034,7.1221,7.0441,34.9627
-emp,main,concern,0,High concern index (mean of 3 items > 3),260,p2,41.8455,7.4396,27.2639,56.4271
-emp,main,concern,0,High concern index (mean of 3 items > 3),260,p3,55.9266,6.6874,42.8193,69.0339
-emp,main,concern,0,High concern index (mean of 3 items > 3),260,t1,18.8139,7.1544,4.7913,32.8365
-emp,main,concern,0,High concern index (mean of 3 items > 3),260,t2,10.492,8.3677,-5.9087,26.8927
-emp,main,concern,0,High concern index (mean of 3 items > 3),260,l1,28.0358,6.15,15.9818,40.0898
-emp,main,concern,0,High concern index (mean of 3 items > 3),260,l2,38.9589,5.7264,27.7352,50.1826
-emp,main,concern,0,High concern index (mean of 3 items > 3),260,r1,10.6555,6.5058,-2.0959,23.4069
-emp,main,concern,0,High concern index (mean of 3 items > 3),260,r2,38.1788,7.1543,24.1564,52.2012
-emp,main,concern,1,Low concern index (mean <= 3),137,p1,18.6266,7.0498,4.809,32.4442
-emp,main,concern,1,Low concern index (mean <= 3),137,p2,28.551,7.1044,14.6264,42.4756
-emp,main,concern,1,Low concern index (mean <= 3),137,p3,36.3159,7.1228,22.3552,50.2766
-emp,main,concern,1,Low concern index (mean <= 3),137,t1,-4.5907,8.5844,-21.4161,12.2347
-emp,main,concern,1,Low concern index (mean <= 3),137,t2,1.417,8.2488,-14.7506,17.5846
-emp,main,concern,1,Low concern index (mean <= 3),137,l1,17.7904,5.4801,7.0494,28.5314
-emp,main,concern,1,Low concern index (mean <= 3),137,l2,31.6066,6.0027,19.8413,43.3719
-emp,main,concern,1,Low concern index (mean <= 3),137,r1,-0.9817,7.5028,-15.6872,13.7238
-emp,main,concern,1,Low concern index (mean <= 3),137,r2,21.4277,8.2435,5.2704,37.585
-emp,main,concern,-1,ratio test: location WTPs equal,0,ratio_p,0.19334,0.0,0.0,0.0
-emp,main,concern,-1,location interactions = 0 (common slope),0,linear_p,0.35933,0.0,0.0,0.0
-emp,main,coord,0,Agree: hybrid creates coordination problems (4-5),213,p1,18.9321,7.2828,4.6578,33.2064
-emp,main,coord,0,Agree: hybrid creates coordination problems (4-5),213,p2,40.5062,7.4731,25.8589,55.1535
-emp,main,coord,0,Agree: hybrid creates coordination problems (4-5),213,p3,53.9585,7.0545,40.1317,67.7853
-emp,main,coord,0,Agree: hybrid creates coordination problems (4-5),213,t1,11.5531,7.5818,-3.3072,26.4134
-emp,main,coord,0,Agree: hybrid creates coordination problems (4-5),213,t2,8.7841,8.7068,-8.2812,25.8494
-emp,main,coord,0,Agree: hybrid creates coordination problems (4-5),213,l1,26.556,6.146,14.5098,38.6022
-emp,main,coord,0,Agree: hybrid creates coordination problems (4-5),213,l2,37.036,5.7321,25.8011,48.2709
-emp,main,coord,0,Agree: hybrid creates coordination problems (4-5),213,r1,14.7785,6.606,1.8307,27.7263
-emp,main,coord,0,Agree: hybrid creates coordination problems (4-5),213,r2,39.8064,7.3631,25.3747,54.2381
-emp,main,coord,1,Not agree (1-3),184,p1,20.5445,7.0296,6.7665,34.3225
-emp,main,coord,1,Not agree (1-3),184,p2,31.0857,7.2684,16.8396,45.3318
-emp,main,coord,1,Not agree (1-3),184,p3,42.2812,6.8533,28.8487,55.7137
-emp,main,coord,1,Not agree (1-3),184,t1,8.1809,7.1104,-5.7555,22.1173
-emp,main,coord,1,Not agree (1-3),184,t2,5.4886,7.9102,-10.0154,20.9926
-emp,main,coord,1,Not agree (1-3),184,l1,20.2147,5.6823,9.0774,31.352
-emp,main,coord,1,Not agree (1-3),184,l2,33.7806,5.9009,22.2148,45.3464
-emp,main,coord,1,Not agree (1-3),184,r1,-5.0481,7.5748,-19.8947,9.7985
-emp,main,coord,1,Not agree (1-3),184,r2,21.9275,7.7066,6.8226,37.0324
-emp,main,coord,-1,ratio test: location WTPs equal,0,ratio_p,0.47402,0.0,0.0,0.0
-emp,main,coord,-1,location interactions = 0 (common slope),0,linear_p,0.47793,0.0,0.0,0.0
-emp,main,creat,0,Agree: creativity suffers apart (4-5),201,p1,24.4906,7.8303,9.1432,39.838
-emp,main,creat,0,Agree: creativity suffers apart (4-5),201,p2,44.463,8.4008,27.9974,60.9286
-emp,main,creat,0,Agree: creativity suffers apart (4-5),201,p3,60.9007,7.4685,46.2624,75.539
-emp,main,creat,0,Agree: creativity suffers apart (4-5),201,t1,21.9891,7.8284,6.6454,37.3328
-emp,main,creat,0,Agree: creativity suffers apart (4-5),201,t2,18.3906,8.8747,0.9962,35.785
-emp,main,creat,0,Agree: creativity suffers apart (4-5),201,l1,26.4436,6.9357,12.8496,40.0376
-emp,main,creat,0,Agree: creativity suffers apart (4-5),201,l2,41.0086,6.5654,28.1404,53.8768
-emp,main,creat,0,Agree: creativity suffers apart (4-5),201,r1,7.1142,7.1119,-6.8251,21.0535
-emp,main,creat,0,Agree: creativity suffers apart (4-5),201,r2,36.7663,8.1285,20.8344,52.6982
-emp,main,creat,1,Not agree (1-3),196,p1,15.1663,6.6682,2.0966,28.236
-emp,main,creat,1,Not agree (1-3),196,p2,28.0461,6.6267,15.0578,41.0344
-emp,main,creat,1,Not agree (1-3),196,p3,35.5209,6.6477,22.4914,48.5504
-emp,main,creat,1,Not agree (1-3),196,t1,-1.7108,7.6166,-16.6393,13.2177
-emp,main,creat,1,Not agree (1-3),196,t2,-2.7752,7.8401,-18.1418,12.5914
-emp,main,creat,1,Not agree (1-3),196,l1,21.738,5.2049,11.5364,31.9396
-emp,main,creat,1,Not agree (1-3),196,l2,31.6423,5.3509,21.1545,42.1301
-emp,main,creat,1,Not agree (1-3),196,r1,4.4622,6.7675,-8.8021,17.7265
-emp,main,creat,1,Not agree (1-3),196,r2,26.8894,7.1926,12.7919,40.9869
-emp,main,creat,-1,ratio test: location WTPs equal,0,ratio_p,0.13977,0.0,0.0,0.0
-emp,main,creat,-1,location interactions = 0 (common slope),0,linear_p,0.06796,0.0,0.0,0.0
-emp,main,curwfh,0,Some WFH today (typical 1+ days),301,p1,10.3675,6.2479,-1.8784,22.6134
-emp,main,curwfh,0,Some WFH today (typical 1+ days),301,p2,25.9112,6.308,13.5475,38.2749
-emp,main,curwfh,0,Some WFH today (typical 1+ days),301,p3,45.6163,5.9097,34.0333,57.1993
-emp,main,curwfh,0,Some WFH today (typical 1+ days),301,t1,10.1896,6.1319,-1.8289,22.2081
-emp,main,curwfh,0,Some WFH today (typical 1+ days),301,t2,6.0557,7.3593,-8.3685,20.4799
-emp,main,curwfh,0,Some WFH today (typical 1+ days),301,l1,20.7002,4.9655,10.9678,30.4326
-emp,main,curwfh,0,Some WFH today (typical 1+ days),301,l2,36.5105,4.9075,26.8918,46.1292
-emp,main,curwfh,0,Some WFH today (typical 1+ days),301,r1,2.5047,5.9645,-9.1857,14.1951
-emp,main,curwfh,0,Some WFH today (typical 1+ days),301,r2,32.3092,6.1172,20.3195,44.2989
-emp,main,curwfh,1,No WFH today (typical 0 days),96,p1,44.2335,9.0636,26.4688,61.9982
-emp,main,curwfh,1,No WFH today (typical 0 days),96,p2,60.4771,9.205,42.4353,78.5189
-emp,main,curwfh,1,No WFH today (typical 0 days),96,p3,58.2443,9.5316,39.5624,76.9262
-emp,main,curwfh,1,No WFH today (typical 0 days),96,t1,15.8861,9.9014,-3.5206,35.2928
-emp,main,curwfh,1,No WFH today (typical 0 days),96,t2,9.8335,10.3127,-10.3794,30.0464
-emp,main,curwfh,1,No WFH today (typical 0 days),96,l1,32.5911,8.0843,16.7459,48.4363
-emp,main,curwfh,1,No WFH today (typical 0 days),96,l2,34.7325,8.1412,18.7757,50.6893
-emp,main,curwfh,1,No WFH today (typical 0 days),96,r1,11.2913,9.7228,-7.7654,30.348
-emp,main,curwfh,1,No WFH today (typical 0 days),96,r2,28.6989,11.7959,5.5789,51.8189
-emp,main,curwfh,-1,ratio test: location WTPs equal,0,ratio_p,0.02266,0.0,0.0,0.0
-emp,main,curwfh,-1,location interactions = 0 (common slope),0,linear_p,0.00021,0.0,0.0,0.0
-emp,main,physical,0,Most PME roles need on-site presence,137,p1,51.8994,11.0434,30.2543,73.5445
-emp,main,physical,0,Most PME roles need on-site presence,137,p2,60.4597,11.7392,37.4509,83.4685
-emp,main,physical,0,Most PME roles need on-site presence,137,p3,67.2899,10.2431,47.2134,87.3664
-emp,main,physical,0,Most PME roles need on-site presence,137,t1,22.1753,11.2059,0.2117,44.1389
-emp,main,physical,0,Most PME roles need on-site presence,137,t2,1.2117,14.2453,-26.7091,29.1325
-emp,main,physical,0,Most PME roles need on-site presence,137,l1,23.783,9.3779,5.4023,42.1637
-emp,main,physical,0,Most PME roles need on-site presence,137,l2,31.5524,8.933,14.0437,49.0611
-emp,main,physical,0,Most PME roles need on-site presence,137,r1,7.6254,11.1338,-14.1968,29.4476
-emp,main,physical,0,Most PME roles need on-site presence,137,r2,23.1164,13.5726,-3.4859,49.7187
-emp,main,physical,1,Some or few PME roles need presence,260,p1,3.3953,6.2495,-8.8537,15.6443
-emp,main,physical,1,Some or few PME roles need presence,260,p2,25.408,5.7124,14.2117,36.6043
-emp,main,physical,1,Some or few PME roles need presence,260,p3,39.5584,5.6411,28.5018,50.615
-emp,main,physical,1,Some or few PME roles need presence,260,t1,6.8703,5.9233,-4.7394,18.48
-emp,main,physical,1,Some or few PME roles need presence,260,t2,7.8893,6.4916,-4.8342,20.6128
-emp,main,physical,1,Some or few PME roles need presence,260,l1,23.3581,4.6171,14.3086,32.4076
-emp,main,physical,1,Some or few PME roles need presence,260,l2,36.4954,4.6467,27.3879,45.6029
-emp,main,physical,1,Some or few PME roles need presence,260,r1,1.1034,5.6753,-10.0202,12.227
-emp,main,physical,1,Some or few PME roles need presence,260,r2,33.4847,5.6144,22.4805,44.4889
-emp,main,physical,-1,ratio test: location WTPs equal,0,ratio_p,0.02468,0.0,0.0,0.0
-emp,main,physical,-1,location interactions = 0 (common slope),0,linear_p,0.00019,0.0,0.0,0.0
-emp,main,policy,0,Written FWA policy,276,p1,24.0899,6.5524,11.2472,36.9326
-emp,main,policy,0,Written FWA policy,276,p2,43.2522,6.9686,29.5937,56.9107
-emp,main,policy,0,Written FWA policy,276,p3,53.7599,6.3646,41.2853,66.2345
-emp,main,policy,0,Written FWA policy,276,t1,3.4697,7.1785,-10.6002,17.5396
-emp,main,policy,0,Written FWA policy,276,t2,9.539,7.2246,-4.6212,23.6992
-emp,main,policy,0,Written FWA policy,276,l1,23.5058,5.5526,12.6227,34.3889
-emp,main,policy,0,Written FWA policy,276,l2,35.7612,5.3188,25.3364,46.186
-emp,main,policy,0,Written FWA policy,276,r1,3.5757,6.5075,-9.179,16.3304
-emp,main,policy,0,Written FWA policy,276,r2,34.8613,6.8395,21.4559,48.2667
-emp,main,policy,1,No written FWA policy,121,p1,9.429,8.4904,-7.2122,26.0702
-emp,main,policy,1,No written FWA policy,121,p2,20.0783,8.0151,4.3687,35.7879
-emp,main,policy,1,No written FWA policy,121,p3,37.784,8.1147,21.8792,53.6888
-emp,main,policy,1,No written FWA policy,121,t1,21.217,7.3435,6.8237,35.6103
-emp,main,policy,1,No written FWA policy,121,t2,-0.0121,11.3977,-22.3516,22.3274
-emp,main,policy,1,No written FWA policy,121,l1,22.6236,6.4332,10.0145,35.2327
-emp,main,policy,1,No written FWA policy,121,l2,35.5216,6.8,22.1936,48.8496
-emp,main,policy,1,No written FWA policy,121,r1,7.1814,7.767,-8.0419,22.4047
-emp,main,policy,1,No written FWA policy,121,r2,25.2928,8.9636,7.7241,42.8615
-emp,main,policy,-1,ratio test: location WTPs equal,0,ratio_p,0.19341,0.0,0.0,0.0
-emp,main,policy,-1,location interactions = 0 (common slope),0,linear_p,0.19671,0.0,0.0,0.0
-emp,main,prod,0,Agree: WFH lowers productivity (4-5),223,p1,17.3683,7.2661,3.1267,31.6099
-emp,main,prod,0,Agree: WFH lowers productivity (4-5),223,p2,39.4749,7.5305,24.7151,54.2347
-emp,main,prod,0,Agree: WFH lowers productivity (4-5),223,p3,53.4315,6.6867,40.3256,66.5374
-emp,main,prod,0,Agree: WFH lowers productivity (4-5),223,t1,19.3653,7.1785,5.2954,33.4352
-emp,main,prod,0,Agree: WFH lowers productivity (4-5),223,t2,15.1798,7.5841,0.315,30.0446
-emp,main,prod,0,Agree: WFH lowers productivity (4-5),223,l1,30.7466,6.0459,18.8966,42.5966
-emp,main,prod,0,Agree: WFH lowers productivity (4-5),223,l2,37.573,5.4323,26.9257,48.2203
-emp,main,prod,0,Agree: WFH lowers productivity (4-5),223,r1,11.4604,6.4807,-1.2418,24.1626
-emp,main,prod,0,Agree: WFH lowers productivity (4-5),223,r2,35.9743,7.4026,21.4652,50.4834
-emp,main,prod,1,Not agree (1-3),174,p1,22.5053,7.0124,8.761,36.2496
-emp,main,prod,1,Not agree (1-3),174,p2,32.4853,7.1098,18.5501,46.4205
-emp,main,prod,1,Not agree (1-3),174,p3,42.2352,7.1958,28.1314,56.339
-emp,main,prod,1,Not agree (1-3),174,t1,-2.5231,8.5752,-19.3305,14.2843
-emp,main,prod,1,Not agree (1-3),174,t2,-3.2344,9.4695,-21.7946,15.3258
-emp,main,prod,1,Not agree (1-3),174,l1,15.4097,5.8832,3.8786,26.9408
-emp,main,prod,1,Not agree (1-3),174,l2,34.419,6.1225,22.4189,46.4191
-emp,main,prod,1,Not agree (1-3),174,r1,-1.3152,7.6389,-16.2874,13.657
-emp,main,prod,1,Not agree (1-3),174,r2,26.087,7.5203,11.3472,40.8268
-emp,main,prod,-1,ratio test: location WTPs equal,0,ratio_p,0.3857,0.0,0.0,0.0
-emp,main,prod,-1,location interactions = 0 (common slope),0,linear_p,0.40055,0.0,0.0,0.0
-emp,main,role,0,Senior executive / owner,84,p1,-2.9993,17.1547,-36.6225,30.6239
-emp,main,role,0,Senior executive / owner,84,p2,27.5671,16.1701,-4.1263,59.2605
-emp,main,role,0,Senior executive / owner,84,p3,48.6628,14.7095,19.8322,77.4934
-emp,main,role,0,Senior executive / owner,84,t1,27.4021,13.7018,0.5466,54.2576
-emp,main,role,0,Senior executive / owner,84,t2,12.254,17.7658,-22.567,47.075
-emp,main,role,0,Senior executive / owner,84,l1,38.5364,12.5885,13.8629,63.2099
-emp,main,role,0,Senior executive / owner,84,l2,48.4822,13.2167,22.5775,74.3869
-emp,main,role,0,Senior executive / owner,84,r1,-6.5231,16.5867,-39.033,25.9868
-emp,main,role,0,Senior executive / owner,84,r2,35.6961,15.7213,4.8824,66.5098
-emp,main,role,1,HR director or manager,122,p1,29.2113,8.8462,11.8727,46.5499
-emp,main,role,1,HR director or manager,122,p2,49.6147,9.5433,30.9098,68.3196
-emp,main,role,1,HR director or manager,122,p3,58.5929,8.9922,40.9682,76.2176
-emp,main,role,1,HR director or manager,122,t1,1.8933,10.6699,-19.0197,22.8063
-emp,main,role,1,HR director or manager,122,t2,4.2396,10.9876,-17.2961,25.7753
-emp,main,role,1,HR director or manager,122,l1,33.2166,7.9236,17.6863,48.7469
-emp,main,role,1,HR director or manager,122,l2,39.7558,7.4453,25.163,54.3486
-emp,main,role,1,HR director or manager,122,r1,12.4409,8.5053,-4.2295,29.1113
-emp,main,role,1,HR director or manager,122,r2,37.9121,9.2699,19.7431,56.0811
-emp,main,role,2,Line or hiring manager,170,p1,15.5409,6.8886,2.0392,29.0426
-emp,main,role,2,Line or hiring manager,170,p2,23.4728,7.1514,9.4561,37.4895
-emp,main,role,2,Line or hiring manager,170,p3,38.3663,6.8985,24.8452,51.8874
-emp,main,role,2,Line or hiring manager,170,t1,7.8969,7.4419,-6.6892,22.483
-emp,main,role,2,Line or hiring manager,170,t2,7.3372,7.9233,-8.1925,22.8669
-emp,main,role,2,Line or hiring manager,170,l1,11.7115,5.9773,-0.004,23.427
-emp,main,role,2,Line or hiring manager,170,l2,27.177,5.5417,16.3153,38.0387
-emp,main,role,2,Line or hiring manager,170,r1,1.6001,7.0617,-12.2408,15.441
-emp,main,role,2,Line or hiring manager,170,r2,27.2728,7.4273,12.7153,41.8303
-emp,main,role,-1,ratio test: location WTPs equal,0,ratio_p,0.35737,0.0,0.0,0.0
-emp,main,size,0,200 or fewer staff,175,p1,25.8943,6.6527,12.855,38.9336
-emp,main,size,0,200 or fewer staff,175,p2,35.0737,6.819,21.7085,48.4389
-emp,main,size,0,200 or fewer staff,175,p3,46.7088,7.1239,32.746,60.6716
-emp,main,size,0,200 or fewer staff,175,t1,3.3394,7.573,-11.5037,18.1825
-emp,main,size,0,200 or fewer staff,175,t2,7.3229,8.5102,-9.3571,24.0029
-emp,main,size,0,200 or fewer staff,175,l1,23.8453,5.6342,12.8023,34.8883
-emp,main,size,0,200 or fewer staff,175,l2,32.0201,5.6738,20.8995,43.1407
-emp,main,size,0,200 or fewer staff,175,r1,5.3496,6.5821,-7.5513,18.2505
-emp,main,size,0,200 or fewer staff,175,r2,18.9534,8.635,2.0288,35.878
-emp,main,size,1,"201-1,000 staff",140,p1,12.0501,10.8539,-9.2235,33.3237
-emp,main,size,1,"201-1,000 staff",140,p2,35.9054,11.5236,13.3191,58.4917
-emp,main,size,1,"201-1,000 staff",140,p3,54.2821,9.458,35.7444,72.8198
-emp,main,size,1,"201-1,000 staff",140,t1,12.1845,10.3121,-8.0272,32.3962
-emp,main,size,1,"201-1,000 staff",140,t2,-1.5437,11.8253,-24.7213,21.6339
-emp,main,size,1,"201-1,000 staff",140,l1,21.4738,8.2403,5.3228,37.6248
-emp,main,size,1,"201-1,000 staff",140,l2,37.9598,7.9649,22.3486,53.571
-emp,main,size,1,"201-1,000 staff",140,r1,-8.3292,11.2435,-30.3665,13.7081
-emp,main,size,1,"201-1,000 staff",140,r2,47.9835,9.968,28.4462,67.5208
-emp,main,size,2,"1,001+ staff",82,p1,20.0135,11.1009,-1.7443,41.7713
-emp,main,size,2,"1,001+ staff",82,p2,42.079,11.5846,19.3732,64.7848
-emp,main,size,2,"1,001+ staff",82,p3,44.6962,11.3702,22.4106,66.9818
-emp,main,size,2,"1,001+ staff",82,t1,21.7232,11.6031,-1.0189,44.4653
-emp,main,size,2,"1,001+ staff",82,t2,14.0808,13.8595,-13.0838,41.2454
-emp,main,size,2,"1,001+ staff",82,l1,29.1674,10.4737,8.6389,49.6959
-emp,main,size,2,"1,001+ staff",82,l2,41.411,10.4205,20.9868,61.8352
-emp,main,size,2,"1,001+ staff",82,r1,27.1029,12.4599,2.6815,51.5243
-emp,main,size,2,"1,001+ staff",82,r2,28.2917,11.7281,5.3046,51.2788
-emp,main,size,-1,ratio test: location WTPs equal,0,ratio_p,0.62763,0.0,0.0,0.0
-emp,main,tech,0,Tech not ready,29,p1,-9.03,41.2635,-89.9065,71.8465
-emp,main,tech,0,Tech not ready,29,p2,32.0772,38.1827,-42.7609,106.9153
-emp,main,tech,0,Tech not ready,29,p3,42.6071,43.6848,-43.0151,128.2293
-emp,main,tech,0,Tech not ready,29,t1,35.5926,29.1928,-21.6253,92.8105
-emp,main,tech,0,Tech not ready,29,t2,-79.5834,135.4035,-344.9743,185.8075
-emp,main,tech,0,Tech not ready,29,l1,34.749,25.6375,-15.5005,84.9985
-emp,main,tech,0,Tech not ready,29,l2,70.7896,28.7779,14.3849,127.1943
-emp,main,tech,0,Tech not ready,29,r1,-69.9528,90.4163,-247.1687,107.2631
-emp,main,tech,0,Tech not ready,29,r2,-64.1197,119.1898,-297.7317,169.4923
-emp,main,tech,1,Tech partially ready,209,p1,13.7243,7.3105,-0.6043,28.0529
-emp,main,tech,1,Tech partially ready,209,p2,27.7881,7.079,13.9133,41.6629
-emp,main,tech,1,Tech partially ready,209,p3,46.1677,6.6276,33.1776,59.1578
-emp,main,tech,1,Tech partially ready,209,t1,3.1901,7.3676,-11.2504,17.6306
-emp,main,tech,1,Tech partially ready,209,t2,1.1685,8.8216,-16.1218,18.4588
-emp,main,tech,1,Tech partially ready,209,l1,18.7716,5.6901,7.619,29.9242
-emp,main,tech,1,Tech partially ready,209,l2,26.7974,5.4695,16.0772,37.5176
-emp,main,tech,1,Tech partially ready,209,r1,7.7741,6.7829,-5.5204,21.0686
-emp,main,tech,1,Tech partially ready,209,r2,31.3428,6.9053,17.8084,44.8772
-emp,main,tech,2,Tech fully ready,159,p1,28.2241,7.3259,13.8653,42.5829
-emp,main,tech,2,Tech fully ready,159,p2,45.5254,8.0924,29.6643,61.3865
-emp,main,tech,2,Tech fully ready,159,p3,51.8081,7.542,37.0258,66.5904
-emp,main,tech,2,Tech fully ready,159,t1,17.2503,7.829,1.9055,32.5951
-emp,main,tech,2,Tech fully ready,159,t2,18.6926,7.7973,3.4099,33.9753
-emp,main,tech,2,Tech fully ready,159,l1,28.4482,6.5104,15.6878,41.2086
-emp,main,tech,2,Tech fully ready,159,l2,42.5398,6.4981,29.8035,55.2761
-emp,main,tech,2,Tech fully ready,159,r1,4.8884,7.1429,-9.1117,18.8885
-emp,main,tech,2,Tech fully ready,159,r2,37.5037,8.3741,21.0905,53.9169
-emp,main,tech,-1,ratio test: location WTPs equal,0,ratio_p,0.66223,0.0,0.0,0.0
+emp,main,all,0,All employers,465,p1,19.6331,4.6512,10.5169,28.7494
+emp,main,all,0,All employers,465,p2,39.8343,4.8069,30.4129,49.2556
+emp,main,all,0,All employers,465,p3,51.9305,4.5467,43.019,60.8419
+emp,main,all,0,All employers,465,t1,9.4489,4.8226,-0.0033,18.901
+emp,main,all,0,All employers,465,t2,10.5627,5.3621,0.0532,21.0722
+emp,main,all,0,All employers,465,l1,25.8317,3.9329,18.1234,33.54
+emp,main,all,0,All employers,465,l2,37.8248,3.9667,30.0502,45.5993
+emp,main,all,0,All employers,465,r1,10.2774,4.3634,1.7253,18.8294
+emp,main,all,0,All employers,465,r2,36.3735,4.9181,26.7343,46.0127
+emp,excl_salary_out,all,0,All employers,460,p1,19.6687,4.6473,10.5599,28.7775
+emp,excl_salary_out,all,0,All employers,460,p2,39.6973,4.8066,30.2763,49.1182
+emp,excl_salary_out,all,0,All employers,460,p3,52.014,4.5467,43.1026,60.9255
+emp,excl_salary_out,all,0,All employers,460,t1,8.7598,4.8209,-0.6892,18.2088
+emp,excl_salary_out,all,0,All employers,460,t2,10.775,5.2924,0.4018,21.1481
+emp,excl_salary_out,all,0,All employers,460,l1,25.8904,3.9169,18.2131,33.5676
+emp,excl_salary_out,all,0,All employers,460,l2,37.5071,3.959,29.7474,45.2668
+emp,same_side,all,0,All employers,446,p1,18.8027,4.8157,9.3639,28.2414
+emp,same_side,all,0,All employers,446,p2,38.9804,4.8769,29.4217,48.5391
+emp,same_side,all,0,All employers,446,p3,50.4377,4.6212,41.3801,59.4952
+emp,same_side,all,0,All employers,446,t1,10.1085,4.8386,0.6249,19.5921
+emp,same_side,all,0,All employers,446,t2,8.7729,5.4224,-1.8549,19.4008
+emp,same_side,all,0,All employers,446,l1,25.9416,3.9271,18.2445,33.6388
+emp,same_side,all,0,All employers,446,l2,36.1658,3.9675,28.3895,43.942
+emp,trim1pct,all,0,All employers,458,p1,19.8325,4.6171,10.7831,28.8819
+emp,trim1pct,all,0,All employers,458,p2,39.6194,4.7813,30.2481,48.9906
+emp,trim1pct,all,0,All employers,458,p3,52.1781,4.5262,43.3068,61.0494
+emp,trim1pct,all,0,All employers,458,t1,8.658,4.8191,-0.7873,18.1034
+emp,trim1pct,all,0,All employers,458,t2,10.0816,5.3268,-0.359,20.5222
+emp,trim1pct,all,0,All employers,458,l1,26.1091,3.9035,18.4582,33.76
+emp,trim1pct,all,0,All employers,458,l2,37.4196,3.9453,29.6868,45.1524
+emp,main,belief,0,Agree: FWAs reduce the salary needed (4-5),196,p1,12.6428,8.4748,-3.9678,29.2534
+emp,main,belief,0,Agree: FWAs reduce the salary needed (4-5),196,p2,38.1963,8.8642,20.8225,55.5701
+emp,main,belief,0,Agree: FWAs reduce the salary needed (4-5),196,p3,51.1921,8.2537,35.0148,67.3694
+emp,main,belief,0,Agree: FWAs reduce the salary needed (4-5),196,t1,16.9042,8.432,0.3775,33.4309
+emp,main,belief,0,Agree: FWAs reduce the salary needed (4-5),196,t2,8.9384,10.6059,-11.8492,29.726
+emp,main,belief,0,Agree: FWAs reduce the salary needed (4-5),196,l1,23.6566,7.2107,9.5236,37.7896
+emp,main,belief,0,Agree: FWAs reduce the salary needed (4-5),196,l2,37.3703,6.9627,23.7234,51.0172
+emp,main,belief,0,Agree: FWAs reduce the salary needed (4-5),196,r1,0.5091,8.6748,-16.4935,17.5117
+emp,main,belief,0,Agree: FWAs reduce the salary needed (4-5),196,r2,31.4886,9.6538,12.5672,50.41
+emp,main,belief,1,Not agree (1-3),269,p1,23.8433,5.4453,13.1705,34.5161
+emp,main,belief,1,Not agree (1-3),269,p2,41.0721,5.5971,30.1018,52.0424
+emp,main,belief,1,Not agree (1-3),269,p3,52.8763,5.3719,42.3474,63.4052
+emp,main,belief,1,Not agree (1-3),269,t1,4.3096,5.9863,-7.4235,16.0427
+emp,main,belief,1,Not agree (1-3),269,t2,12.2649,5.9311,0.6399,23.8899
+emp,main,belief,1,Not agree (1-3),269,l1,27.3403,4.5832,18.3572,36.3234
+emp,main,belief,1,Not agree (1-3),269,l2,37.8709,4.8821,28.302,47.4398
+emp,main,belief,1,Not agree (1-3),269,r1,15.6228,4.9215,5.9767,25.2689
+emp,main,belief,1,Not agree (1-3),269,r2,38.9761,5.5301,28.1371,49.8151
+emp,main,belief,-1,ratio test: location WTPs equal,0,ratio_p,0.6762,0.0,0.0,0.0
+emp,main,belief,-1,location interactions = 0 (common slope),0,linear_p,0.46585,0.0,0.0,0.0
+emp,main,concern,0,High concern index (mean of 3 items > 3),294,p1,21.8239,6.474,9.1349,34.5129
+emp,main,concern,0,High concern index (mean of 3 items > 3),294,p2,44.6023,6.7847,31.3043,57.9003
+emp,main,concern,0,High concern index (mean of 3 items > 3),294,p3,58.7003,6.0704,46.8023,70.5983
+emp,main,concern,0,High concern index (mean of 3 items > 3),294,t1,20.0745,6.5305,7.2747,32.8743
+emp,main,concern,0,High concern index (mean of 3 items > 3),294,t2,14.4823,7.4804,-0.1793,29.1439
+emp,main,concern,0,High concern index (mean of 3 items > 3),294,l1,28.1825,5.7233,16.9648,39.4002
+emp,main,concern,0,High concern index (mean of 3 items > 3),294,l2,39.9743,5.403,29.3844,50.5642
+emp,main,concern,0,High concern index (mean of 3 items > 3),294,r1,12.5015,5.9572,0.8254,24.1776
+emp,main,concern,0,High concern index (mean of 3 items > 3),294,r2,41.5654,6.6377,28.5555,54.5753
+emp,main,concern,1,Low concern index (mean <= 3),171,p1,17.3196,6.5432,4.4949,30.1443
+emp,main,concern,1,Low concern index (mean <= 3),171,p2,34.4516,6.6093,21.4974,47.4058
+emp,main,concern,1,Low concern index (mean <= 3),171,p3,40.5191,6.7369,27.3148,53.7234
+emp,main,concern,1,Low concern index (mean <= 3),171,t1,-8.2088,8.3515,-24.5777,8.1601
+emp,main,concern,1,Low concern index (mean <= 3),171,t2,4.5333,7.5185,-10.203,19.2696
+emp,main,concern,1,Low concern index (mean <= 3),171,l1,23.2794,5.151,13.1834,33.3754
+emp,main,concern,1,Low concern index (mean <= 3),171,l2,35.3587,5.8524,23.888,46.8294
+emp,main,concern,1,Low concern index (mean <= 3),171,r1,8.3683,6.2339,-3.8501,20.5867
+emp,main,concern,1,Low concern index (mean <= 3),171,r2,28.6958,7.2976,14.3925,42.9991
+emp,main,concern,-1,ratio test: location WTPs equal,0,ratio_p,0.23877,0.0,0.0,0.0
+emp,main,concern,-1,location interactions = 0 (common slope),0,linear_p,0.39954,0.0,0.0,0.0
+emp,main,coord,0,Agree: hybrid creates coordination problems (4-5),245,p1,19.38,6.6345,6.3764,32.3836
+emp,main,coord,0,Agree: hybrid creates coordination problems (4-5),245,p2,44.2847,6.7702,31.0151,57.5543
+emp,main,coord,0,Agree: hybrid creates coordination problems (4-5),245,p3,57.6593,6.3648,45.1843,70.1343
+emp,main,coord,0,Agree: hybrid creates coordination problems (4-5),245,t1,10.9807,7.0088,-2.7565,24.7179
+emp,main,coord,0,Agree: hybrid creates coordination problems (4-5),245,t2,11.9186,7.8489,-3.4652,27.3024
+emp,main,coord,0,Agree: hybrid creates coordination problems (4-5),245,l1,27.1158,5.6998,15.9442,38.2874
+emp,main,coord,0,Agree: hybrid creates coordination problems (4-5),245,l2,38.822,5.4527,28.1347,49.5093
+emp,main,coord,0,Agree: hybrid creates coordination problems (4-5),245,r1,16.2674,6.105,4.3016,28.2332
+emp,main,coord,0,Agree: hybrid creates coordination problems (4-5),245,r2,44.2858,6.8292,30.9006,57.671
+emp,main,coord,1,Not agree (1-3),220,p1,19.7794,6.4971,7.0451,32.5137
+emp,main,coord,1,Not agree (1-3),220,p2,35.3363,6.7528,22.1008,48.5718
+emp,main,coord,1,Not agree (1-3),220,p3,45.2381,6.417,32.6608,57.8154
+emp,main,coord,1,Not agree (1-3),220,t1,7.384,6.5653,-5.484,20.252
+emp,main,coord,1,Not agree (1-3),220,t2,9.2061,7.1596,-4.8267,23.2389
+emp,main,coord,1,Not agree (1-3),220,l1,24.3466,5.359,13.843,34.8502
+emp,main,coord,1,Not agree (1-3),220,l2,36.6468,5.6865,25.5013,47.7923
+emp,main,coord,1,Not agree (1-3),220,r1,4.3315,6.2361,-7.8913,16.5543
+emp,main,coord,1,Not agree (1-3),220,r2,27.6335,6.9348,14.0413,41.2257
+emp,main,coord,-1,ratio test: location WTPs equal,0,ratio_p,0.45072,0.0,0.0,0.0
+emp,main,coord,-1,location interactions = 0 (common slope),0,linear_p,0.38429,0.0,0.0,0.0
+emp,main,creat,0,Agree: creativity suffers apart (4-5),228,p1,24.7465,7.2533,10.53,38.963
+emp,main,creat,0,Agree: creativity suffers apart (4-5),228,p2,46.7506,7.806,31.4508,62.0504
+emp,main,creat,0,Agree: creativity suffers apart (4-5),228,p3,62.3911,6.958,48.7534,76.0288
+emp,main,creat,0,Agree: creativity suffers apart (4-5),228,t1,22.6412,7.3955,8.146,37.1364
+emp,main,creat,0,Agree: creativity suffers apart (4-5),228,t2,22.0988,8.101,6.2208,37.9768
+emp,main,creat,0,Agree: creativity suffers apart (4-5),228,l1,28.5169,6.7016,15.3818,41.652
+emp,main,creat,0,Agree: creativity suffers apart (4-5),228,l2,43.3026,6.4445,30.6714,55.9338
+emp,main,creat,0,Agree: creativity suffers apart (4-5),228,r1,8.1813,6.7642,-5.0765,21.4391
+emp,main,creat,0,Agree: creativity suffers apart (4-5),228,r2,40.4185,7.7699,25.1895,55.6475
+emp,main,creat,1,Not agree (1-3),237,p1,15.0293,6.0606,3.1505,26.9081
+emp,main,creat,1,Not agree (1-3),237,p2,33.989,6.0029,22.2233,45.7547
+emp,main,creat,1,Not agree (1-3),237,p3,41.6367,5.9811,29.9137,53.3597
+emp,main,creat,1,Not agree (1-3),237,t1,-2.6077,6.8516,-16.0368,10.8214
+emp,main,creat,1,Not agree (1-3),237,t2,1.1522,6.912,-12.3953,14.6997
+emp,main,creat,1,Not agree (1-3),237,l1,24.1554,4.7047,14.9342,33.3766
+emp,main,creat,1,Not agree (1-3),237,l2,33.8739,4.969,24.1347,43.6131
+emp,main,creat,1,Not agree (1-3),237,r1,12.6003,5.6291,1.5673,23.6333
+emp,main,creat,1,Not agree (1-3),237,r2,33.107,6.3366,20.6873,45.5267
+emp,main,creat,-1,ratio test: location WTPs equal,0,ratio_p,0.21466,0.0,0.0,0.0
+emp,main,creat,-1,location interactions = 0 (common slope),0,linear_p,0.18824,0.0,0.0,0.0
+emp,main,curwfh,0,Some WFH today (typical 1+ days),349,p1,8.995,5.8308,-2.4334,20.4234
+emp,main,curwfh,0,Some WFH today (typical 1+ days),349,p2,29.9324,5.7745,18.6144,41.2504
+emp,main,curwfh,0,Some WFH today (typical 1+ days),349,p3,46.9192,5.4685,36.2009,57.6375
+emp,main,curwfh,0,Some WFH today (typical 1+ days),349,t1,8.4931,5.7473,-2.7716,19.7578
+emp,main,curwfh,0,Some WFH today (typical 1+ days),349,t2,8.8207,6.5543,-4.0257,21.6671
+emp,main,curwfh,0,Some WFH today (typical 1+ days),349,l1,24.936,4.6376,15.8463,34.0257
+emp,main,curwfh,0,Some WFH today (typical 1+ days),349,l2,39.2334,4.7054,30.0108,48.456
+emp,main,curwfh,0,Some WFH today (typical 1+ days),349,r1,10.1375,5.078,0.1846,20.0904
+emp,main,curwfh,0,Some WFH today (typical 1+ days),349,r2,37.8393,5.6351,26.7945,48.8841
+emp,main,curwfh,1,No WFH today (typical 0 days),116,p1,46.4224,8.085,30.5758,62.269
+emp,main,curwfh,1,No WFH today (typical 0 days),116,p2,63.9278,8.2287,47.7995,80.0561
+emp,main,curwfh,1,No WFH today (typical 0 days),116,p3,65.6411,8.128,49.7102,81.572
+emp,main,curwfh,1,No WFH today (typical 0 days),116,t1,17.2086,8.6362,0.2816,34.1356
+emp,main,curwfh,1,No WFH today (typical 0 days),116,t2,15.7573,9.3593,-2.5869,34.1015
+emp,main,curwfh,1,No WFH today (typical 0 days),116,l1,29.1549,7.4423,14.568,43.7418
+emp,main,curwfh,1,No WFH today (typical 0 days),116,l2,35.0975,7.5685,20.2632,49.9318
+emp,main,curwfh,1,No WFH today (typical 0 days),116,r1,10.534,8.8476,-6.8073,27.8753
+emp,main,curwfh,1,No WFH today (typical 0 days),116,r2,32.7725,10.6402,11.9177,53.6273
+emp,main,curwfh,-1,ratio test: location WTPs equal,0,ratio_p,0.01056,0.0,0.0,0.0
+emp,main,curwfh,-1,location interactions = 0 (common slope),0,linear_p,4e-05,0.0,0.0,0.0
+emp,main,physical,0,Most PME roles need on-site presence,164,p1,48.9248,8.6337,32.0027,65.8469
+emp,main,physical,0,Most PME roles need on-site presence,164,p2,60.3137,9.1543,42.3713,78.2561
+emp,main,physical,0,Most PME roles need on-site presence,164,p3,68.2721,7.9659,52.6589,83.8853
+emp,main,physical,0,Most PME roles need on-site presence,164,t1,19.6659,8.8022,2.4136,36.9182
+emp,main,physical,0,Most PME roles need on-site presence,164,t2,6.0624,10.9979,-15.4935,27.6183
+emp,main,physical,0,Most PME roles need on-site presence,164,l1,22.9813,7.6655,7.9569,38.0057
+emp,main,physical,0,Most PME roles need on-site presence,164,l2,32.8605,7.3399,18.4743,47.2467
+emp,main,physical,0,Most PME roles need on-site presence,164,r1,9.3821,8.7639,-7.7951,26.5593
+emp,main,physical,0,Most PME roles need on-site presence,164,r2,27.7855,10.7222,6.77,48.801
+emp,main,physical,1,Some or few PME roles need presence,301,p1,2.7441,6.1314,-9.2734,14.7616
+emp,main,physical,1,Some or few PME roles need presence,301,p2,29.6311,5.5324,18.7876,40.4746
+emp,main,physical,1,Some or few PME roles need presence,301,p3,42.4774,5.4913,31.7145,53.2403
+emp,main,physical,1,Some or few PME roles need presence,301,t1,5.1196,5.7996,-6.2476,16.4868
+emp,main,physical,1,Some or few PME roles need presence,301,t2,10.923,6.0883,-1.0101,22.8561
+emp,main,physical,1,Some or few PME roles need presence,301,l1,26.5706,4.4879,17.7743,35.3669
+emp,main,physical,1,Some or few PME roles need presence,301,l2,39.1875,4.6596,30.0547,48.3203
+emp,main,physical,1,Some or few PME roles need presence,301,r1,8.08,5.0669,-1.8511,18.0111
+emp,main,physical,1,Some or few PME roles need presence,301,r2,39.1911,5.4419,28.525,49.8572
+emp,main,physical,-1,ratio test: location WTPs equal,0,ratio_p,0.00317,0.0,0.0,0.0
+emp,main,physical,-1,location interactions = 0 (common slope),0,linear_p,2e-05,0.0,0.0,0.0
+emp,main,policy,0,Written FWA policy,337,p1,22.1141,5.7745,10.7961,33.4321
+emp,main,policy,0,Written FWA policy,337,p2,45.5769,6.0771,33.6658,57.488
+emp,main,policy,0,Written FWA policy,337,p3,56.1283,5.6524,45.0496,67.207
+emp,main,policy,0,Written FWA policy,337,t1,4.252,6.3686,-8.2305,16.7345
+emp,main,policy,0,Written FWA policy,337,t2,13.7908,6.2723,1.4971,26.0845
+emp,main,policy,0,Written FWA policy,337,l1,26.7341,5.0251,16.8849,36.5833
+emp,main,policy,0,Written FWA policy,337,l2,39.6662,4.9643,29.9362,49.3962
+emp,main,policy,0,Written FWA policy,337,r1,13.0727,5.318,2.6494,23.496
+emp,main,policy,0,Written FWA policy,337,r2,41.0842,6.0383,29.2491,52.9193
+emp,main,policy,1,No written FWA policy,128,p1,12.6246,8.1285,-3.3073,28.5565
+emp,main,policy,1,No written FWA policy,128,p2,26.3872,7.9556,10.7942,41.9802
+emp,main,policy,1,No written FWA policy,128,p3,42.0812,7.7755,26.8412,57.3212
+emp,main,policy,1,No written FWA policy,128,t1,19.1581,7.1984,5.0492,33.267
+emp,main,policy,1,No written FWA policy,128,t2,0.7897,11.2038,-21.1697,22.7491
+emp,main,policy,1,No written FWA policy,128,l1,22.7679,6.317,10.3866,35.1492
+emp,main,policy,1,No written FWA policy,128,l2,33.8949,6.7065,20.7502,47.0396
+emp,main,policy,1,No written FWA policy,128,r1,2.4365,8.1899,-13.6157,18.4887
+emp,main,policy,1,No written FWA policy,128,r2,25.7223,9.1162,7.8545,43.5901
+emp,main,policy,-1,ratio test: location WTPs equal,0,ratio_p,0.26532,0.0,0.0,0.0
+emp,main,policy,-1,location interactions = 0 (common slope),0,linear_p,0.29716,0.0,0.0,0.0
+emp,main,prod,0,Agree: WFH lowers productivity (4-5),244,p1,21.0911,6.9479,7.4732,34.709
+emp,main,prod,0,Agree: WFH lowers productivity (4-5),244,p2,43.8124,7.3348,29.4362,58.1886
+emp,main,prod,0,Agree: WFH lowers productivity (4-5),244,p3,57.2615,6.3938,44.7297,69.7933
+emp,main,prod,0,Agree: WFH lowers productivity (4-5),244,t1,20.5466,6.902,7.0187,34.0745
+emp,main,prod,0,Agree: WFH lowers productivity (4-5),244,t2,16.7686,7.2965,2.4675,31.0697
+emp,main,prod,0,Agree: WFH lowers productivity (4-5),244,l1,29.9892,5.9232,18.3797,41.5987
+emp,main,prod,0,Agree: WFH lowers productivity (4-5),244,l2,38.1089,5.3944,27.5359,48.6819
+emp,main,prod,0,Agree: WFH lowers productivity (4-5),244,r1,10.6537,6.399,-1.8883,23.1957
+emp,main,prod,0,Agree: WFH lowers productivity (4-5),244,r2,38.9186,7.1982,24.8101,53.0271
+emp,main,prod,1,Not agree (1-3),221,p1,18.4387,6.1352,6.4137,30.4637
+emp,main,prod,1,Not agree (1-3),221,p2,36.4855,6.1942,24.3449,48.6261
+emp,main,prod,1,Not agree (1-3),221,p3,45.3274,6.4526,32.6803,57.9745
+emp,main,prod,1,Not agree (1-3),221,t1,-3.3678,7.5413,-18.1487,11.4131
+emp,main,prod,1,Not agree (1-3),221,t2,3.6866,7.8945,-11.7866,19.1598
+emp,main,prod,1,Not agree (1-3),221,l1,22.2768,5.205,12.075,32.4786
+emp,main,prod,1,Not agree (1-3),221,l2,38.318,5.7008,27.1444,49.4916
+emp,main,prod,1,Not agree (1-3),221,r1,10.591,5.8739,-0.9218,22.1038
+emp,main,prod,1,Not agree (1-3),221,r2,33.8333,6.5663,20.9634,46.7032
+emp,main,prod,-1,ratio test: location WTPs equal,0,ratio_p,0.60592,0.0,0.0,0.0
+emp,main,prod,-1,location interactions = 0 (common slope),0,linear_p,0.65515,0.0,0.0,0.0
+emp,main,role,0,Senior executive / owner,91,p1,-8.0458,18.8134,-44.9201,28.8285
+emp,main,role,0,Senior executive / owner,91,p2,31.3885,16.3819,-0.72,63.497
+emp,main,role,0,Senior executive / owner,91,p3,49.3899,14.8578,20.2686,78.5112
+emp,main,role,0,Senior executive / owner,91,t1,22.8309,14.1203,-4.8449,50.5067
+emp,main,role,0,Senior executive / owner,91,t2,11.1004,19.3917,-26.9073,49.1081
+emp,main,role,0,Senior executive / owner,91,l1,45.2259,13.4899,18.7857,71.6661
+emp,main,role,0,Senior executive / owner,91,l2,52.6039,14.1531,24.8638,80.344
+emp,main,role,0,Senior executive / owner,91,r1,2.3649,15.064,-27.1605,31.8903
+emp,main,role,0,Senior executive / owner,91,r2,41.0487,16.2008,9.2951,72.8023
+emp,main,role,1,HR director or manager,173,p1,27.5869,6.9105,14.0423,41.1315
+emp,main,role,1,HR director or manager,173,p2,53.3331,7.4671,38.6976,67.9686
+emp,main,role,1,HR director or manager,173,p3,63.9074,7.1019,49.9877,77.8271
+emp,main,role,1,HR director or manager,173,t1,4.348,8.1859,-11.6964,20.3924
+emp,main,role,1,HR director or manager,173,t2,14.884,8.0288,-0.8524,30.6204
+emp,main,role,1,HR director or manager,173,l1,34.5173,6.5895,21.6019,47.4327
+emp,main,role,1,HR director or manager,173,l2,42.9905,6.4497,30.3491,55.6319
+emp,main,role,1,HR director or manager,173,r1,15.373,6.639,2.3606,28.3854
+emp,main,role,1,HR director or manager,173,r2,44.6682,7.7897,29.4004,59.936
+emp,main,role,2,Line or hiring manager,173,p1,15.6915,6.8686,2.229,29.154
+emp,main,role,2,Line or hiring manager,173,p2,23.4476,7.1824,9.3701,37.5251
+emp,main,role,2,Line or hiring manager,173,p3,38.541,6.8605,25.0944,51.9876
+emp,main,role,2,Line or hiring manager,173,t1,8.3226,7.3536,-6.0905,22.7357
+emp,main,role,2,Line or hiring manager,173,t2,7.9078,7.7497,-7.2816,23.0972
+emp,main,role,2,Line or hiring manager,173,l1,10.6687,6.017,-1.1246,22.462
+emp,main,role,2,Line or hiring manager,173,l2,26.1765,5.5339,15.3301,37.0229
+emp,main,role,2,Line or hiring manager,173,r1,2.9043,7.0051,-10.8257,16.6343
+emp,main,role,2,Line or hiring manager,173,r2,28.569,7.2909,14.2788,42.8592
+emp,main,role,-1,ratio test: location WTPs equal,0,ratio_p,0.08963,0.0,0.0,0.0
+emp,main,size,0,200 or fewer staff,215,p1,23.8297,6.0472,11.9772,35.6822
+emp,main,size,0,200 or fewer staff,215,p2,39.5941,6.1623,27.516,51.6722
+emp,main,size,0,200 or fewer staff,215,p3,50.2576,6.4518,37.6121,62.9031
+emp,main,size,0,200 or fewer staff,215,t1,3.0997,6.8642,-10.3541,16.5535
+emp,main,size,0,200 or fewer staff,215,t2,10.0149,7.6684,-5.0152,25.045
+emp,main,size,0,200 or fewer staff,215,l1,24.4164,5.1191,14.383,34.4498
+emp,main,size,0,200 or fewer staff,215,l2,34.0212,5.4032,23.4309,44.6115
+emp,main,size,0,200 or fewer staff,215,r1,11.636,5.7562,0.3538,22.9182
+emp,main,size,0,200 or fewer staff,215,r2,29.1186,7.2239,14.9598,43.2774
+emp,main,size,1,"201-1,000 staff",160,p1,12.8169,10.0589,-6.8985,32.5323
+emp,main,size,1,"201-1,000 staff",160,p2,40.4865,10.5935,19.7232,61.2498
+emp,main,size,1,"201-1,000 staff",160,p3,56.7853,8.7569,39.6218,73.9488
+emp,main,size,1,"201-1,000 staff",160,t1,11.0402,9.713,-7.9973,30.0777
+emp,main,size,1,"201-1,000 staff",160,t2,6.2391,10.0507,-13.4603,25.9385
+emp,main,size,1,"201-1,000 staff",160,l1,25.8368,7.9473,10.2601,41.4135
+emp,main,size,1,"201-1,000 staff",160,l2,41.7375,7.6745,26.6955,56.7795
+emp,main,size,1,"201-1,000 staff",160,r1,-1.2364,9.3487,-19.5599,17.0871
+emp,main,size,1,"201-1,000 staff",160,r2,51.8718,9.3935,33.4605,70.2831
+emp,main,size,2,"1,001+ staff",90,p1,23.0846,10.0547,3.3774,42.7918
+emp,main,size,2,"1,001+ staff",90,p2,42.682,10.6391,21.8294,63.5346
+emp,main,size,2,"1,001+ staff",90,p3,48.5843,10.2455,28.5031,68.6655
+emp,main,size,2,"1,001+ staff",90,t1,23.1612,10.571,2.442,43.8804
+emp,main,size,2,"1,001+ staff",90,t2,16.1988,12.4071,-8.1191,40.5167
+emp,main,size,2,"1,001+ staff",90,l1,32.6782,9.881,13.3114,52.045
+emp,main,size,2,"1,001+ staff",90,l2,42.2736,9.5754,23.5058,61.0414
+emp,main,size,2,"1,001+ staff",90,r1,28.7228,10.9249,7.31,50.1356
+emp,main,size,2,"1,001+ staff",90,r2,27.4768,11.0264,5.8651,49.0885
+emp,main,size,-1,ratio test: location WTPs equal,0,ratio_p,0.81888,0.0,0.0,0.0
+emp,main,tech,0,Tech not ready,31,p1,4.749,41.9605,-77.4936,86.9916
+emp,main,tech,0,Tech not ready,31,p2,44.4592,43.2569,-40.3243,129.2427
+emp,main,tech,0,Tech not ready,31,p3,49.8513,44.544,-37.4549,137.1575
+emp,main,tech,0,Tech not ready,31,t1,42.0637,30.9525,-18.6032,102.7306
+emp,main,tech,0,Tech not ready,31,t2,-104.6365,204.3815,-505.2242,295.9512
+emp,main,tech,0,Tech not ready,31,l1,37.4575,28.6643,-18.7245,93.6395
+emp,main,tech,0,Tech not ready,31,l2,76.1808,31.3516,14.7317,137.6299
+emp,main,tech,0,Tech not ready,31,r1,-59.614,89.6357,-235.3,116.072
+emp,main,tech,0,Tech not ready,31,r2,-100.2922,195.8645,-484.1866,283.6022
+emp,main,tech,1,Tech partially ready,233,p1,15.3011,6.6525,2.2622,28.34
+emp,main,tech,1,Tech partially ready,233,p2,32.2392,6.5475,19.4061,45.0723
+emp,main,tech,1,Tech partially ready,233,p3,49.6304,6.1011,37.6722,61.5886
+emp,main,tech,1,Tech partially ready,233,t1,3.5956,6.7121,-9.5601,16.7513
+emp,main,tech,1,Tech partially ready,233,t2,2.6454,8.031,-13.0954,18.3862
+emp,main,tech,1,Tech partially ready,233,l1,16.8341,5.2272,6.5888,27.0794
+emp,main,tech,1,Tech partially ready,233,l2,27.574,5.0371,17.7013,37.4467
+emp,main,tech,1,Tech partially ready,233,r1,10.7058,6.0069,-1.0677,22.4793
+emp,main,tech,1,Tech partially ready,233,r2,34.9789,6.4036,22.4278,47.53
+emp,main,tech,2,Tech fully ready,201,p1,24.7716,6.629,11.7788,37.7644
+emp,main,tech,2,Tech fully ready,201,p2,48.182,7.2161,34.0384,62.3256
+emp,main,tech,2,Tech fully ready,201,p3,54.4876,6.9031,40.9575,68.0177
+emp,main,tech,2,Tech fully ready,201,t1,14.4951,7.2815,0.2234,28.7668
+emp,main,tech,2,Tech fully ready,201,t2,23.0305,7.1385,9.039,37.022
+emp,main,tech,2,Tech fully ready,201,l1,35.1415,6.2333,22.9242,47.3588
+emp,main,tech,2,Tech fully ready,201,l2,46.0113,6.3831,33.5004,58.5222
+emp,main,tech,2,Tech fully ready,201,r1,11.7741,6.2968,-0.5676,24.1158
+emp,main,tech,2,Tech fully ready,201,r2,43.8768,7.6103,28.9606,58.793
+emp,main,tech,-1,ratio test: location WTPs equal,0,ratio_p,0.7422,0.0,0.0,0.0

@@ -125,7 +125,7 @@ ER = [("1--2 days WFH", "p1"), ("3--4 days WFH", "p2"), ("Fully remote", "p3"), 
 for lab, it in ER:
     rows.append([lab] + [M % ("\\ensuremath{\\approx}" + r1(row("emp", it, c).giveup)) for _, c in cols])
 write("T_org_robust", "B-org-robust", tab([4.00, 1.90, 2.30, 1.90, 2.40][:5], "lrrrr", ["", *[h for h, _ in cols]], rows,
-    "\\% pay cut employers would require. Outliers: implausible salaries; same-side: always chose one side.", total=12.50))
+    "\\% pay cut employers would require. Outliers: monthly salary outside S\\$2,000--50,000; same-side: always chose one side.", total=12.50))
 
 # ---- T_fwa_diag: B-fwa-table (needs results_fwa/ from fwa_diagnosis.py)
 fd = MOM / "results_fwa" / "fwa_diagnosis.csv"
@@ -145,6 +145,6 @@ if fd.exists():
     write("T_fwa_diag", "B-fwa-table", tab([2.30, 1.15, 1.25, 1.15, 1.80, 1.65, 1.75, 1.60], "lrrrrrrr",
         ["Arrangement", "Firms offer, \\%", "PMEs with access, \\%", "PMEs use, \\%", "Use, if available, \\%",
          "PMEs give up, \\%", "Employers require, \\%", "Gap, points"], rows,
-        "Firms: ticked in the survey (n = 397). PMEs: employed (n = 1,004). Offer, access and use refer to any WFH, shown on the first WFH row. Access: available to them or already used. Use, if available: share using it among PMEs with access. 95\\% CIs. n.s. = not significant at 5\\%.",
+        "Access: available or already used. Use, if available: share using among PMEs with access. Offer, access and use refer to any WFH (first WFH row). 95\\% CIs; n.s. = not significant at 5\\%.",
         total=14.30))
 print("ok")

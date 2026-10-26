@@ -125,38 +125,38 @@ dominance_broad_by_bin,excl_lucid,employee,Log pay difference bin -0.20,Chose th
 dominance_broad_by_bin,excl_lucid,employee,Log pay difference bin 0.20,Chose the dominant offer,66,66,58,87.8788,77.8626,93.7282,0.2,"bin = log salary of dominant minus other, rounded to 0.05"
 dominance_broad_by_bin,excl_lucid,employee,Log pay difference bin 0.25,Chose the dominant offer,244,204,200,81.9672,76.6597,86.2837,0.25,"bin = log salary of dominant minus other, rounded to 0.05"
 dominance_broad_by_bin,excl_lucid,employee,Log pay difference bin 0.30,Chose the dominant offer,115,101,100,86.9565,79.5902,91.9336,0.3,"bin = log salary of dominant minus other, rounded to 0.05"
-cheaper_chosen,all,employer,All choice sets,Chose the cheaper candidate,2382,397,1372,57.5987,55.6034,59.5695,,R13
-cheaper_by_task,all,employer,Task 1,Chose the cheaper candidate,397,397,240,60.4534,55.5656,65.1409,,
-cheaper_by_task,all,employer,Task 2,Chose the cheaper candidate,397,397,195,49.1184,44.2328,54.0208,,
-cheaper_by_task,all,employer,Task 3,Chose the cheaper candidate,397,397,273,68.7657,64.0454,73.1264,,
-cheaper_by_task,all,employer,Task 4,Chose the cheaper candidate,397,397,236,59.4458,54.5478,64.1628,,
-cheaper_by_task,all,employer,Task 5,Chose the cheaper candidate,397,397,228,57.4307,52.5186,62.2005,,
-cheaper_by_task,all,employer,Task 6,Chose the cheaper candidate,397,397,200,50.3778,45.4796,55.2688,,
-cheaper_by_gap_tercile,all,employer,Gap tercile 1,Chose the cheaper candidate,797,397,452,56.7127,53.2487,60.1122,0.2332,displayed log pay gap 0.177-0.258; value = mean log gap
-cheaper_by_gap_tercile,all,employer,Gap tercile 2,Chose the cheaper candidate,803,375,476,59.2777,55.8431,62.6239,0.2788,displayed log pay gap 0.258-0.302; value = mean log gap
-cheaper_by_gap_tercile,all,employer,Gap tercile 3,Chose the cheaper candidate,782,319,444,56.7775,53.2806,60.2081,0.3591,displayed log pay gap 0.302-0.416; value = mean log gap
-cheaper_by_design_gap,all,employer,Design log gap 0.191,Chose the cheaper candidate,83,83,42,50.6024,40.0604,61.0911,0.191,cheaper candidate 17.4% below the dearer one
-cheaper_by_design_gap,all,employer,Design log gap 0.201,Chose the cheaper candidate,113,113,40,35.3982,27.1942,44.5624,0.201,cheaper candidate 18.2% below the dearer one
-cheaper_by_design_gap,all,employer,Design log gap 0.234,Chose the cheaper candidate,160,160,102,63.75,56.0597,70.7956,0.234,cheaper candidate 20.9% below the dearer one
-cheaper_by_design_gap,all,employer,Design log gap 0.245,Chose the cheaper candidate,242,205,140,57.8512,51.5547,63.9024,0.245,cheaper candidate 21.7% below the dearer one
-cheaper_by_design_gap,all,employer,Design log gap 0.258,Chose the cheaper candidate,309,243,192,62.1359,56.6099,67.3639,0.258,cheaper candidate 22.7% below the dearer one
-cheaper_by_design_gap,all,employer,Design log gap 0.272,Chose the cheaper candidate,345,232,211,61.1594,55.9205,66.1526,0.272,cheaper candidate 23.8% below the dearer one
-cheaper_by_design_gap,all,employer,Design log gap 0.288,Chose the cheaper candidate,255,210,148,58.0392,51.9068,63.933,0.288,cheaper candidate 25.0% below the dearer one
-cheaper_by_design_gap,all,employer,Design log gap 0.302,Chose the cheaper candidate,158,158,90,56.962,49.1668,64.4268,0.302,cheaper candidate 26.1% below the dearer one
-cheaper_by_design_gap,all,employer,Design log gap 0.318,Chose the cheaper candidate,154,154,91,59.0909,51.1962,66.5431,0.318,cheaper candidate 27.2% below the dearer one
-cheaper_by_design_gap,all,employer,Design log gap 0.345,Chose the cheaper candidate,155,155,81,52.2581,44.4356,59.9714,0.345,cheaper candidate 29.2% below the dearer one
-cheaper_by_design_gap,all,employer,Design log gap 0.363,Chose the cheaper candidate,153,153,92,60.1307,52.2158,67.5494,0.363,cheaper candidate 30.4% below the dearer one
-cheaper_by_design_gap,all,employer,Design log gap 0.405,Chose the cheaper candidate,255,210,143,56.0784,49.9416,62.0349,0.405,cheaper candidate 33.3% below the dearer one
-flexible_vs_base,all,employer,Flexible candidate cheaper,1-2 days WFH vs fully onsite,172,131,82,47.6744,40.3428,55.1076,,share choosing the flexible candidate
-flexible_vs_base,all,employer,Flexible candidate dearer,1-2 days WFH vs fully onsite,90,45,31,34.4444,25.4459,44.7165,,share choosing the flexible candidate
-flexible_vs_base,all,employer,Flexible candidate cheaper,3-4 days WFH vs fully onsite,152,115,59,38.8158,31.4353,46.7477,,share choosing the flexible candidate
-flexible_vs_base,all,employer,Flexible candidate dearer,3-4 days WFH vs fully onsite,73,73,22,30.137,20.8226,41.4374,,share choosing the flexible candidate
-flexible_vs_base,all,employer,Flexible candidate cheaper,Fully remote vs fully onsite,110,110,43,39.0909,30.488,48.4301,,share choosing the flexible candidate
-flexible_vs_base,all,employer,Flexible candidate dearer,Fully remote vs fully onsite,37,37,3,8.1081,2.7961,21.3007,,share choosing the flexible candidate
-remote_vs_onsite,all,employer,Fully remote candidate cheaper,Chose the on-site candidate,110,110,67,60.9091,51.5699,69.512,,R13: complement of the flexible share
+cheaper_chosen,all,employer,All choice sets,Chose the cheaper candidate,2790,465,1591,57.0251,55.1798,58.8511,,R13
+cheaper_by_task,all,employer,Task 1,Chose the cheaper candidate,465,465,272,58.4946,53.9644,62.8857,,
+cheaper_by_task,all,employer,Task 2,Chose the cheaper candidate,465,465,226,48.6022,44.0895,53.1378,,
+cheaper_by_task,all,employer,Task 3,Chose the cheaper candidate,465,465,325,69.8925,65.574,73.885,,
+cheaper_by_task,all,employer,Task 4,Chose the cheaper candidate,465,465,278,59.7849,55.2657,64.1439,,
+cheaper_by_task,all,employer,Task 5,Chose the cheaper candidate,465,465,267,57.4194,52.8824,61.8348,,
+cheaper_by_task,all,employer,Task 6,Chose the cheaper candidate,465,465,223,47.957,43.4516,52.4959,,
+cheaper_by_gap_tercile,all,employer,Gap tercile 1,Chose the cheaper candidate,977,465,549,56.1924,53.0631,59.2733,0.2344,displayed log pay gap 0.177-0.258; value = mean log gap
+cheaper_by_gap_tercile,all,employer,Gap tercile 2,Chose the cheaper candidate,940,437,556,59.1489,55.9755,62.2479,0.28,displayed log pay gap 0.258-0.302; value = mean log gap
+cheaper_by_gap_tercile,all,employer,Gap tercile 3,Chose the cheaper candidate,873,365,486,55.6701,52.3571,58.9335,0.3613,displayed log pay gap 0.302-0.416; value = mean log gap
+cheaper_by_design_gap,all,employer,Design log gap 0.191,Chose the cheaper candidate,99,99,50,50.5051,40.8232,60.1492,0.191,cheaper candidate 17.4% below the dearer one
+cheaper_by_design_gap,all,employer,Design log gap 0.201,Chose the cheaper candidate,127,127,43,33.8583,26.2098,42.4546,0.201,cheaper candidate 18.2% below the dearer one
+cheaper_by_design_gap,all,employer,Design log gap 0.234,Chose the cheaper candidate,193,193,127,65.8031,58.8607,72.1287,0.234,cheaper candidate 20.9% below the dearer one
+cheaper_by_design_gap,all,employer,Design log gap 0.245,Chose the cheaper candidate,277,236,160,57.7617,51.8777,63.4334,0.245,cheaper candidate 21.7% below the dearer one
+cheaper_by_design_gap,all,employer,Design log gap 0.258,Chose the cheaper candidate,380,292,231,60.7895,55.7962,65.5668,0.258,cheaper candidate 22.7% below the dearer one
+cheaper_by_design_gap,all,employer,Design log gap 0.272,Chose the cheaper candidate,411,273,248,60.3406,55.5365,64.9533,0.272,cheaper candidate 23.8% below the dearer one
+cheaper_by_design_gap,all,employer,Design log gap 0.288,Chose the cheaper candidate,298,246,174,58.3893,52.7208,63.8442,0.288,cheaper candidate 25.0% below the dearer one
+cheaper_by_design_gap,all,employer,Design log gap 0.302,Chose the cheaper candidate,182,182,98,53.8462,46.5989,60.9344,0.302,cheaper candidate 26.1% below the dearer one
+cheaper_by_design_gap,all,employer,Design log gap 0.318,Chose the cheaper candidate,173,173,102,58.9595,51.5123,66.0175,0.318,cheaper candidate 27.2% below the dearer one
+cheaper_by_design_gap,all,employer,Design log gap 0.345,Chose the cheaper candidate,178,178,92,51.6854,44.3866,58.913,0.345,cheaper candidate 29.2% below the dearer one
+cheaper_by_design_gap,all,employer,Design log gap 0.363,Chose the cheaper candidate,172,172,100,58.1395,50.6679,65.2555,0.363,cheaper candidate 30.4% below the dearer one
+cheaper_by_design_gap,all,employer,Design log gap 0.405,Chose the cheaper candidate,300,245,166,55.3333,49.6755,60.8563,0.405,cheaper candidate 33.3% below the dearer one
+flexible_vs_base,all,employer,Flexible candidate cheaper,1-2 days WFH vs fully onsite,203,157,94,46.3054,39.5784,53.1697,,share choosing the flexible candidate
+flexible_vs_base,all,employer,Flexible candidate dearer,1-2 days WFH vs fully onsite,104,52,39,37.5,28.7973,47.0933,,share choosing the flexible candidate
+flexible_vs_base,all,employer,Flexible candidate cheaper,3-4 days WFH vs fully onsite,181,140,66,36.4641,29.8008,43.69,,share choosing the flexible candidate
+flexible_vs_base,all,employer,Flexible candidate dearer,3-4 days WFH vs fully onsite,82,82,26,31.7073,22.6481,42.4038,,share choosing the flexible candidate
+flexible_vs_base,all,employer,Flexible candidate cheaper,Fully remote vs fully onsite,123,123,44,35.7724,27.8505,44.556,,share choosing the flexible candidate
+flexible_vs_base,all,employer,Flexible candidate dearer,Fully remote vs fully onsite,41,41,4,9.7561,3.8597,22.5477,,share choosing the flexible candidate
+remote_vs_onsite,all,employer,Fully remote candidate cheaper,Chose the on-site candidate,123,123,79,64.2276,55.444,72.1495,,R13: complement of the flexible share
 remote_vs_onsite_by_task,all,employer,Remote candidate cheaper; task 1,Chose the fully remote candidate,0,0,,,,,,no such choices in the design.
-remote_vs_onsite_by_task,all,employer,Remote candidate dearer; task 1,Chose the fully remote candidate,37,37,3,8.1081,2.7961,21.3007,,
-remote_vs_onsite_by_task,all,employer,Remote candidate cheaper; task 2,Chose the fully remote candidate,35,35,13,37.1429,23.1658,53.6631,,
+remote_vs_onsite_by_task,all,employer,Remote candidate dearer; task 1,Chose the fully remote candidate,41,41,4,9.7561,3.8597,22.5477,,
+remote_vs_onsite_by_task,all,employer,Remote candidate cheaper; task 2,Chose the fully remote candidate,38,38,13,34.2105,21.2124,50.1079,,
 remote_vs_onsite_by_task,all,employer,Remote candidate dearer; task 2,Chose the fully remote candidate,0,0,,,,,,no such choices in the design.
 remote_vs_onsite_by_task,all,employer,Remote candidate cheaper; task 3,Chose the fully remote candidate,0,0,,,,,,no such choices in the design.
 remote_vs_onsite_by_task,all,employer,Remote candidate dearer; task 3,Chose the fully remote candidate,0,0,,,,,,no such choices in the design.
@@ -164,15 +164,15 @@ remote_vs_onsite_by_task,all,employer,Remote candidate cheaper; task 4,Chose the
 remote_vs_onsite_by_task,all,employer,Remote candidate dearer; task 4,Chose the fully remote candidate,0,0,,,,,,no such choices in the design.
 remote_vs_onsite_by_task,all,employer,Remote candidate cheaper; task 5,Chose the fully remote candidate,0,0,,,,,,no such choices in the design.
 remote_vs_onsite_by_task,all,employer,Remote candidate dearer; task 5,Chose the fully remote candidate,0,0,,,,,,no such choices in the design.
-remote_vs_onsite_by_task,all,employer,Remote candidate cheaper; task 6,Chose the fully remote candidate,75,75,30,40.0,29.6625,51.312,,
+remote_vs_onsite_by_task,all,employer,Remote candidate cheaper; task 6,Chose the fully remote candidate,85,85,31,36.4706,27.0293,47.0819,,
 remote_vs_onsite_by_task,all,employer,Remote candidate dearer; task 6,Chose the fully remote candidate,0,0,,,,,,no such choices in the design.
-remote_cheaper_by_gap,all,employer,Design log gap 0.318,Chose the fully remote candidate (remote cheaper),35,35,13,37.1429,23.1658,53.6631,0.318,remote candidate 27.2% cheaper
-remote_cheaper_by_gap,all,employer,Design log gap 0.345,Chose the fully remote candidate (remote cheaper),75,75,30,40.0,29.6625,51.312,0.345,remote candidate 29.2% cheaper
-flexible_vs_base,all,employer,Flexible candidate cheaper,Staggered vs fixed hours,315,270,193,61.2698,55.7854,66.4828,,share choosing the flexible candidate
+remote_cheaper_by_gap,all,employer,Design log gap 0.318,Chose the fully remote candidate (remote cheaper),38,38,13,34.2105,21.2124,50.1079,0.318,remote candidate 27.2% cheaper
+remote_cheaper_by_gap,all,employer,Design log gap 0.345,Chose the fully remote candidate (remote cheaper),85,85,31,36.4706,27.0293,47.0819,0.345,remote candidate 29.2% cheaper
+flexible_vs_base,all,employer,Flexible candidate cheaper,Staggered vs fixed hours,374,319,231,61.7647,56.7436,66.5466,,share choosing the flexible candidate
 flexible_vs_base,all,employer,Flexible candidate dearer,Staggered vs fixed hours,0,0,,,,,,no such choices in the design. share choosing the flexible candidate
-flexible_vs_base,all,employer,Flexible candidate cheaper,Compressed 4-day week vs fixed hours,209,164,125,59.8086,53.0425,66.2207,,share choosing the flexible candidate
-flexible_vs_base,all,employer,Flexible candidate dearer,Compressed 4-day week vs fixed hours,41,41,15,36.5854,23.5898,51.8793,,share choosing the flexible candidate
-flexible_vs_base,all,employer,Flexible candidate cheaper,Reduced load (4 days) vs full-time,239,239,138,57.7406,51.4041,63.8322,,share choosing the flexible candidate
-flexible_vs_base,all,employer,Flexible candidate dearer,Reduced load (4 days) vs full-time,145,145,46,31.7241,24.7042,39.6875,,share choosing the flexible candidate
-flexible_vs_base,all,employer,Flexible candidate cheaper,Part-time vs full-time,233,233,94,40.3433,34.2501,46.7498,,share choosing the flexible candidate
-flexible_vs_base,all,employer,Flexible candidate dearer,Part-time vs full-time,164,164,40,24.3902,18.4533,31.4995,,share choosing the flexible candidate
+flexible_vs_base,all,employer,Flexible candidate cheaper,Compressed 4-day week vs fixed hours,252,200,147,58.3333,52.1658,64.2506,,share choosing the flexible candidate
+flexible_vs_base,all,employer,Flexible candidate dearer,Compressed 4-day week vs fixed hours,46,46,16,34.7826,22.681,49.2299,,share choosing the flexible candidate
+flexible_vs_base,all,employer,Flexible candidate cheaper,Reduced load (4 days) vs full-time,285,285,166,58.2456,52.4477,63.8242,,share choosing the flexible candidate
+flexible_vs_base,all,employer,Flexible candidate dearer,Reduced load (4 days) vs full-time,170,170,49,28.8235,22.5422,36.0408,,share choosing the flexible candidate
+flexible_vs_base,all,employer,Flexible candidate cheaper,Part-time vs full-time,262,262,102,38.9313,33.2277,44.9547,,share choosing the flexible candidate
+flexible_vs_base,all,employer,Flexible candidate dearer,Part-time vs full-time,203,203,48,23.6453,18.3236,29.946,,share choosing the flexible candidate

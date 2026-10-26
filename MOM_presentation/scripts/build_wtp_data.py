@@ -6,11 +6,11 @@ Convention (user decision, 16 Oct 2026): `giveup` = % of pay given up for the ar
   Gap = employers' required cut minus PMEs' accepted cut   (positive = friction).
 Confidence limits are swapped for employers (lb = -ub_wtp, ub = -lb_wtp). All main results use ALL respondents.
 
-Inputs (read only):  data/dce_org_het.csv, data/dce_org_wtp.csv (this repo), the Dropbox files appended_wtp.xlsx,
+Inputs (read only):  data/dce_org_het.csv, data/dce_org_wtp.csv (this repo), the Dropbox files employer_wtp.xlsx,
 employee_wtp.xlsx and the professor's dce_emp_wtp.csv, dce_emp_het.csv, pme_channels.csv (paths via argv).
 Output: data/wtp_deck.csv
 
-usage: python3 build_wtp_data.py DIR_WITH_INPUTS      (DIR holds appended_wtp.xlsx, employee_wtp.xlsx, dce_emp_wtp.csv,
+usage: python3 build_wtp_data.py DIR_WITH_INPUTS      (DIR holds employer_wtp.xlsx, employee_wtp.xlsx, dce_emp_wtp.csv,
                                                        dce_emp_het.csv, pme_channels.csv)
 """
 import sys
@@ -77,19 +77,19 @@ for sheet, (hs, labs) in SPL.items():
                     n=0, item="joint_p", giveup=round(float(jt.p), 5), se=0, lb=0, ub=0))
 
 # ---------------- employers ----------------
-ap = pd.ExcelFile(IN / "appended_wtp.xlsx")
+ap = pd.ExcelFile(IN / "employer_wtp.xlsx")     # Stata output of code_final.do (26 Oct 2026 update, 465 firms)
+NEMP = int(pd.read_csv(MOM / "data" / "dce_org_wtp.csv").n_resp.max())
 m = ap.parse("main")
 for _, r in m.iterrows():
     k = TERM.get(r.term)
     if k:
-        add("emp", "main", "all", 0, "All employers", 397, k, r.wtp, r.se, r.lb, r.ub)
-NR = {"robust_outlier": ("excl_salary_out", 392), "robust_trim": ("trim1pct", 391), "robust_same_side": ("same_side", 381)}
-for sh, (nm, n) in NR.items():
-    t = ap.parse(sh)
-    for _, r in t[t.group == 1].iterrows():
+        add("emp", "main", "all", 0, "All employers", NEMP, k, r.wtp, r.se, r.lb, r.ub)
+rb = pd.read_csv(MOM / "data" / "employer_robust.csv")      # scripts/employer_robust.py (Python port; same-side check matches the Stata sheet)
+for nm, t in rb.groupby("sample"):
+    for _, r in t.iterrows():
         k = TERM.get(r.term)
         if k in ("p1", "p2", "p3", "t1", "t2", "l1", "l2"):
-            add("emp", nm, "all", 0, "All employers", n, k, r.wtp, r.se, r.lb, r.ub)
+            add("emp", "same_side" if nm == "same_side" else nm, "all", 0, "All employers", int(r.n_resp), k, r.wtp, r.se, r.lb, r.ub)
 org = pd.read_csv(MOM / "data" / "dce_org_het.csv")
 gw = org[org.block == "group_wtp"]
 lt = org[org.block == "linear_test"]

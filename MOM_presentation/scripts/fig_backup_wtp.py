@@ -93,6 +93,8 @@ FB_REPS = [
      '    text_cm(fig, (0.08 + cols[1][0] + cols[1][1] + BL + VAL_W) / 2, H - 0.24, f"PMEs (n = {n_pme:,})", ha="center", va="center", fontsize=FS_HEAD,'),
     ('    text_cm(fig, split + 0.25, H - 0.24, f"Employers (n = {n_org:,})", ha="left", va="center", fontsize=FS_HEAD,',
      '    text_cm(fig, split + 0.25 + (lw_o[0] + BL + VAL_W) / 2, H - 0.24, f"Employers (n = {n_org:,})", ha="center", va="center", fontsize=FS_HEAD,'),
+    # stacked bars: a 9.7% segment (3-4 WFH days, 465-firm sample) is a hair too narrow for its label: allow 0.08 cm of overhang
+    ('if text_width_cm(fig, lab, label_fs) + 0.02 < seg_cm:', 'if text_width_cm(fig, lab, label_fs) - 0.08 < seg_cm:'),
     # F_landscape: the take-up line is in B-fwa-table; no in-figure footnote
     ('    text_cm(fig, 0.05, 0.50, tk, ha="left", va="center", fontsize=FS_SMALL)\n', ''),
     ('    text_cm(fig, 0.05, 0.21, "Take-up = % using it among those with access (available or used).", ha="left",\n'

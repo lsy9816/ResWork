@@ -39,7 +39,7 @@ def normalize(path, cols=INT_COLS):
 
 def main():
     import org_survey, org_het, compressed_employer, run_dce, org_channels
-    org_survey.run(str(DTA), True, str(OUT_DATA), expected_firms=397)
+    org_survey.run(str(DTA), True, str(OUT_DATA), expected_firms=int(os.environ.get("N_FIRMS", 397)))
     org_het.run(str(DTA), True, str(OUT_DATA))
     run_dce.run(str(DTA), True, str(OUT_DATA), str(DECK / "data"))
     compressed_employer.run(str(DTA), True, str(OUT_MECH))

@@ -387,7 +387,7 @@ def fig_landscape_m():
                 color=S.EMPLOYEE, fontweight="bold")
     V.vline_cm(fig, BX0, top - 4 * pitch - bh / 2 - 0.06, top + bh / 2 + 0.06, color=S.RULE, lw=0.7)
     RX0 = 8.05
-    M.ftext(fig, RX0, H - 0.04, "Employers (n = 397)", ha="left", va="top", fontsize=S.FS_HEAD, color=S.EMPLOYER,
+    M.ftext(fig, RX0, H - 0.04, "Employers (n = 465)", ha="left", va="top", fontsize=S.FS_HEAD, color=S.EMPLOYER,
             fontweight="bold")
     M.ftext(fig, RX0, H - 0.47, "% offering it to PMEs", ha="left", va="top", fontsize=S.FS_AXIS, color=S.INK)
     ritems = [("Remote work (ad hoc, scheduled or remote-first)", "WFH"), ("Staggered hours", "Staggered hours"),
@@ -426,8 +426,8 @@ def fig_sample_m():
     CWD = (Wd - 0.10 - 0.30) / 2
     cards = [(0.05, S.EMPLOYEE, "1,020", "PMEs", ["Singapore citizens and PRs", "in or seeking PME roles"],
               "Fielded 4\u201321 Aug 2026", "Online panels"),
-             (0.05 + CWD + 0.30, S.EMPLOYER, "397", "employer respondents", ["People involved in PME hiring", "or manpower decisions"],
-              "Fielded 12 Aug\u20132 Oct 2026", "Online panel")]
+             (0.05 + CWD + 0.30, S.EMPLOYER, "465", "employer respondents", ["People involved in PME hiring", "or manpower decisions"],
+              "Fielded 12 Aug\u201321 Oct 2026", "Online panel")]
     for x, col, big, unit, who, when, pan in cards:
         fig.add_artist(Rectangle((x / Wd, CY0 / H), CWD / Wd, (CY1 - CY0) / H, transform=fig.transFigure, fc=S.CARD_FILL, ec="none", lw=0))
         fig.add_artist(Rectangle((x / Wd, (CY1 - BAR) / H), CWD / Wd, BAR / H, transform=fig.transFigure, fc=col, ec="none", lw=0))

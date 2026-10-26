@@ -12,7 +12,7 @@ Definitions (as in code_final.do / appended.do):
   PME sample: respondents who answered QID38 (currently employed, n = 1,004).
     available (adjusted) = ticked in QID38 or currently used;   used: remote QID31 in 2-4, staggered QID32 = 2,
     compressed QID32 = 3, job sharing QID33 = 2, part-time QID33 = 3.   take-up = used / available (adjusted).
-  Employers (n = 397): offered (adjusted) = ticked in QID15 or the typical practice for its PMEs (QID16 remote days > 0,
+  Employers (n = 465): offered (adjusted) = ticked in QID15 or the typical practice for its PMEs (QID16 remote days > 0,
     QID61 = 2 staggered / 3 compressed, QID17 = 2 job sharing / 3 part-time), as org_fwa.csv.
 
 usage: python3 fwa_diagnosis.py DIR_WITH_employee.dta_and_appended.dta
