@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2026.10.14)  26 OCT 2026 09:35
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2026.10.14)  26 OCT 2026 10:00
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1152,80 +1152,81 @@ Package pdftex.def Info: figures/F_use_m.pdf  used on input line 640.
  [8
 
  <./figures/F_use_m.pdf>]
-LaTeX Font Info:    Trying to load font information for TS1+phv on input line 7
-18.
-
-(/usr/share/texlive/texmf-dist/tex/latex/psnfss/ts1phv.fd
-File: ts1phv.fd 2020/03/25 scalable font definitions for TS1/phv.
-)
-LaTeX Font Info:    Font shape `TS1/phv/b/n' will be
-(Font)              scaled to size 9.65997pt on input line 718.
+<figures/survey_pme.png, id=149, 1830.84pt x 748.7975pt>
+File: figures/survey_pme.png Graphic file (type png)
+<use figures/survey_pme.png>
+Package pdftex.def Info: figures/survey_pme.png  used on input line 675.
+(pdftex.def)             Requested size: 185.28522pt x 75.77533pt.
+<figures/survey_employer.png, id=150, 1790.69pt x 429.605pt>
+File: figures/survey_employer.png Graphic file (type png)
+<use figures/survey_employer.png>
+Package pdftex.def Info: figures/survey_employer.png  used on input line 675.
+(pdftex.def)             Requested size: 227.3914pt x 54.55267pt.
  [9
 
-]
-<figures/F_emp_wtp.pdf, id=159, 369.88583pt x 150.7996pt>
+ <./figures/survey_pme.png> <./figures/survey_employer.png>]
+<figures/F_emp_wtp.pdf, id=161, 369.88583pt x 150.7996pt>
 File: figures/F_emp_wtp.pdf Graphic file (type pdf)
 <use figures/F_emp_wtp.pdf>
-Package pdftex.def Info: figures/F_emp_wtp.pdf  used on input line 761.
+Package pdftex.def Info: figures/F_emp_wtp.pdf  used on input line 718.
 (pdftex.def)             Requested size: 369.88492pt x 150.79922pt.
  [10
 
  <./figures/F_emp_wtp.pdf>]
-<figures/F_org_wtp.pdf, id=183, 369.88583pt x 150.7996pt>
+<figures/F_org_wtp.pdf, id=185, 369.88583pt x 150.7996pt>
 File: figures/F_org_wtp.pdf Graphic file (type pdf)
 <use figures/F_org_wtp.pdf>
-Package pdftex.def Info: figures/F_org_wtp.pdf  used on input line 796.
+Package pdftex.def Info: figures/F_org_wtp.pdf  used on input line 753.
 (pdftex.def)             Requested size: 369.88492pt x 150.79922pt.
- [11
+
+[11
 
  <./figures/F_org_wtp.pdf>]
-<figures/F_gap_m.pdf, id=203, 369.88583pt x 145.10905pt>
+<figures/F_gap_m.pdf, id=205, 369.88583pt x 145.10905pt>
 File: figures/F_gap_m.pdf Graphic file (type pdf)
 <use figures/F_gap_m.pdf>
-Package pdftex.def Info: figures/F_gap_m.pdf  used on input line 834.
+Package pdftex.def Info: figures/F_gap_m.pdf  used on input line 791.
 (pdftex.def)             Requested size: 369.88492pt x 145.10869pt.
  [12
 
  <./figures/F_gap_m.pdf>]
-<figures/F_fwa_challenge_m.pdf, id=222, 369.88583pt x 142.26378pt>
+<figures/F_fwa_challenge_m.pdf, id=224, 369.88583pt x 142.26378pt>
 File: figures/F_fwa_challenge_m.pdf Graphic file (type pdf)
 <use figures/F_fwa_challenge_m.pdf>
-Package pdftex.def Info: figures/F_fwa_challenge_m.pdf  used on input line 853.
+Package pdftex.def Info: figures/F_fwa_challenge_m.pdf  used on input line 810.
 
 (pdftex.def)             Requested size: 369.88492pt x 142.26343pt.
-
-[13
+ [13
 
  <./figures/F_fwa_challenge_m.pdf>]
-<figures/F_org_concerns_m.pdf, id=248, 369.88583pt x 142.26378pt>
+<figures/F_org_concerns_m.pdf, id=250, 369.88583pt x 142.26378pt>
 File: figures/F_org_concerns_m.pdf Graphic file (type pdf)
 <use figures/F_org_concerns_m.pdf>
-Package pdftex.def Info: figures/F_org_concerns_m.pdf  used on input line 867.
+Package pdftex.def Info: figures/F_org_concerns_m.pdf  used on input line 824.
 (pdftex.def)             Requested size: 369.88492pt x 142.26343pt.
  [14
 
  <./figures/F_org_concerns_m.pdf>]
-<figures/F_where_pres_m.pdf, id=274, 369.88583pt x 156.49016pt>
+<figures/F_where_pres_m.pdf, id=276, 369.88583pt x 156.49016pt>
 File: figures/F_where_pres_m.pdf Graphic file (type pdf)
 <use figures/F_where_pres_m.pdf>
-Package pdftex.def Info: figures/F_where_pres_m.pdf  used on input line 879.
+Package pdftex.def Info: figures/F_where_pres_m.pdf  used on input line 836.
 (pdftex.def)             Requested size: 369.88492pt x 156.48976pt.
-
-[15
+ [15
 
  <./figures/F_where_pres_m.pdf>]
-<figures/F_barriers_r5.pdf, id=295, 369.88583pt x 142.26378pt>
+<figures/F_barriers_r5.pdf, id=297, 369.88583pt x 142.26378pt>
 File: figures/F_barriers_r5.pdf Graphic file (type pdf)
 <use figures/F_barriers_r5.pdf>
-Package pdftex.def Info: figures/F_barriers_r5.pdf  used on input line 916.
+Package pdftex.def Info: figures/F_barriers_r5.pdf  used on input line 873.
 (pdftex.def)             Requested size: 369.88492pt x 142.26343pt.
  [16
 
  <./figures/F_barriers_r5.pdf>]
-<figures/F_why_pmes.pdf, id=325, 369.88583pt x 142.26378pt>
+<figures/F_why_pmes.pdf, id=327, 369.88583pt x 142.26378pt>
 File: figures/F_why_pmes.pdf Graphic file (type pdf)
 <use figures/F_why_pmes.pdf>
-Package pdftex.def Info: figures/F_why_pmes.pdf  used on input line 935.
+Package pdftex.def Info: figures/F_why_pmes.pdf  used on input line 892.
 (pdftex.def)             Requested size: 369.88492pt x 142.26343pt.
  [17
 
@@ -1237,51 +1238,51 @@ Package pdftex.def Info: figures/F_why_pmes.pdf  used on input line 935.
 
 ]
 LaTeX Font Info:    Font shape `T1/phv/m/n' will be
-(Font)              scaled to size 23.91995pt on input line 1060.
+(Font)              scaled to size 23.91995pt on input line 1017.
 LaTeX Font Info:    Font shape `T1/phv/b/n' will be
-(Font)              scaled to size 23.91995pt on input line 1060.
+(Font)              scaled to size 23.91995pt on input line 1017.
  [21
 
 {/usr/share/texmf/fonts/enc/dvips/lm/lm-mathsy.enc}]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\translate ' on input line 1066.
+(hyperref)                removing `\translate ' on input line 1023.
 
 [22
 
 ]
 LaTeX Font Info:    Font shape `T1/phv/m/n' will be
-(Font)              scaled to size 8.27998pt on input line 1160.
+(Font)              scaled to size 8.27998pt on input line 1117.
 LaTeX Font Info:    Font shape `T1/phv/b/n' will be
-(Font)              scaled to size 8.73997pt on input line 1160.
+(Font)              scaled to size 8.73997pt on input line 1117.
 LaTeX Font Info:    Font shape `OT1/phv/m/n' will be
-(Font)              scaled to size 8.27998pt on input line 1160.
+(Font)              scaled to size 8.27998pt on input line 1117.
 LaTeX Font Info:    Font shape `OT1/phv/m/n' will be
-(Font)              scaled to size 5.51999pt on input line 1160.
+(Font)              scaled to size 5.51999pt on input line 1117.
 LaTeX Font Info:    Font shape `OT1/phv/m/n' will be
-(Font)              scaled to size 4.59999pt on input line 1160.
+(Font)              scaled to size 4.59999pt on input line 1117.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <9> on input line 1160.
+(Font)              <9> on input line 1117.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <6> on input line 1160.
+(Font)              <6> on input line 1117.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <5> on input line 1160.
+(Font)              <5> on input line 1117.
 LaTeX Font Info:    Font shape `T1/phv/m/n' will be
-(Font)              scaled to size 4.59999pt on input line 1160.
+(Font)              scaled to size 4.59999pt on input line 1117.
 LaTeX Font Info:    Font shape `T1/phv/m/it' in size <9> not available
-(Font)              Font shape `T1/phv/m/sl' tried instead on input line 1160.
+(Font)              Font shape `T1/phv/m/sl' tried instead on input line 1117.
 LaTeX Font Info:    Font shape `T1/phv/m/sl' will be
-(Font)              scaled to size 8.27998pt on input line 1160.
+(Font)              scaled to size 8.27998pt on input line 1117.
 LaTeX Font Info:    Font shape `T1/phv/m/it' in size <6> not available
-(Font)              Font shape `T1/phv/m/sl' tried instead on input line 1160.
+(Font)              Font shape `T1/phv/m/sl' tried instead on input line 1117.
 LaTeX Font Info:    Font shape `T1/phv/m/sl' will be
-(Font)              scaled to size 5.51999pt on input line 1160.
+(Font)              scaled to size 5.51999pt on input line 1117.
 LaTeX Font Info:    Font shape `T1/phv/m/it' in size <5> not available
-(Font)              Font shape `T1/phv/m/sl' tried instead on input line 1160.
+(Font)              Font shape `T1/phv/m/sl' tried instead on input line 1117.
 LaTeX Font Info:    Font shape `T1/phv/m/sl' will be
-(Font)              scaled to size 4.59999pt on input line 1160.
+(Font)              scaled to size 4.59999pt on input line 1117.
 
-Overfull \hbox (4.28839pt too wide) in paragraph at lines 1160--1160
+Overfull \hbox (4.28839pt too wide) in paragraph at lines 1117--1117
 [][][]$\OMS/lmsy/m/n/9 ^^A$[][][]$^^A$[][]  
  []
 
@@ -1290,50 +1291,50 @@ Overfull \hbox (4.28839pt too wide) in paragraph at lines 1160--1160
 ] [24
 
 ]
-<figures/F_benchmarks.pdf, id=567, 412.56496pt x 128.0374pt>
+<figures/F_benchmarks.pdf, id=569, 412.56496pt x 128.0374pt>
 File: figures/F_benchmarks.pdf Graphic file (type pdf)
 <use figures/F_benchmarks.pdf>
-Package pdftex.def Info: figures/F_benchmarks.pdf  used on input line 1219.
+Package pdftex.def Info: figures/F_benchmarks.pdf  used on input line 1176.
 (pdftex.def)             Requested size: 412.58281pt x 128.04292pt.
  [25
 
  <./figures/F_benchmarks.pdf>]
-LaTeX Font Info:    Calculating math sizes for size <9.5> on input line 1236.
+LaTeX Font Info:    Calculating math sizes for size <9.5> on input line 1193.
 LaTeX Font Info:    Font shape `OT1/phv/m/n' will be
-(Font)              scaled to size 8.73997pt on input line 1236.
+(Font)              scaled to size 8.73997pt on input line 1193.
 LaTeX Font Info:    Font shape `OT1/phv/m/n' will be
-(Font)              scaled to size 6.11795pt on input line 1236.
+(Font)              scaled to size 6.11795pt on input line 1193.
 LaTeX Font Info:    Font shape `OT1/phv/m/n' will be
-(Font)              scaled to size 4.36998pt on input line 1236.
+(Font)              scaled to size 4.36998pt on input line 1193.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <9.5> on input line 1236.
+(Font)              <9.5> on input line 1193.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <6.64996> on input line 1236.
+(Font)              <6.64996> on input line 1193.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <4.75> on input line 1236.
+(Font)              <4.75> on input line 1193.
 LaTeX Font Info:    Font shape `T1/phv/m/n' will be
-(Font)              scaled to size 6.11795pt on input line 1236.
+(Font)              scaled to size 6.11795pt on input line 1193.
 LaTeX Font Info:    Font shape `T1/phv/m/n' will be
-(Font)              scaled to size 4.36998pt on input line 1236.
+(Font)              scaled to size 4.36998pt on input line 1193.
 LaTeX Font Info:    Font shape `T1/phv/m/it' in size <9.5> not available
-(Font)              Font shape `T1/phv/m/sl' tried instead on input line 1236.
+(Font)              Font shape `T1/phv/m/sl' tried instead on input line 1193.
 LaTeX Font Info:    Font shape `T1/phv/m/sl' will be
-(Font)              scaled to size 8.73997pt on input line 1236.
+(Font)              scaled to size 8.73997pt on input line 1193.
 LaTeX Font Info:    Font shape `T1/phv/m/it' in size <6.64996> not available
-(Font)              Font shape `T1/phv/m/sl' tried instead on input line 1236.
+(Font)              Font shape `T1/phv/m/sl' tried instead on input line 1193.
 LaTeX Font Info:    Font shape `T1/phv/m/sl' will be
-(Font)              scaled to size 6.11795pt on input line 1236.
+(Font)              scaled to size 6.11795pt on input line 1193.
 LaTeX Font Info:    Font shape `T1/phv/m/it' in size <4.75> not available
-(Font)              Font shape `T1/phv/m/sl' tried instead on input line 1236.
+(Font)              Font shape `T1/phv/m/sl' tried instead on input line 1193.
 LaTeX Font Info:    Font shape `T1/phv/m/sl' will be
-(Font)              scaled to size 4.36998pt on input line 1236.
+(Font)              scaled to size 4.36998pt on input line 1193.
  [26
 
 ]
-<figures/F_landscape.pdf, id=604, 412.61047pt x 142.26378pt>
+<figures/F_landscape.pdf, id=606, 412.61047pt x 142.26378pt>
 File: figures/F_landscape.pdf Graphic file (type pdf)
 <use figures/F_landscape.pdf>
-Package pdftex.def Info: figures/F_landscape.pdf  used on input line 1242.
+Package pdftex.def Info: figures/F_landscape.pdf  used on input line 1199.
 (pdftex.def)             Requested size: 412.64723pt x 142.27644pt.
  [27
 
@@ -1403,35 +1404,35 @@ LaTeX Font Info:    Font shape `T1/phv/m/sl' will be
 ] [29
 
 ]
-LaTeX Font Info:    Calculating math sizes for size <15> on input line 1297.
+LaTeX Font Info:    Calculating math sizes for size <15> on input line 1254.
 LaTeX Font Info:    Font shape `OT1/phv/m/n' will be
-(Font)              scaled to size 13.79997pt on input line 1297.
+(Font)              scaled to size 13.79997pt on input line 1254.
 LaTeX Font Info:    Font shape `OT1/phv/m/n' will be
-(Font)              scaled to size 9.65993pt on input line 1297.
+(Font)              scaled to size 9.65993pt on input line 1254.
 LaTeX Font Info:    Font shape `OT1/phv/m/n' will be
-(Font)              scaled to size 6.89998pt on input line 1297.
+(Font)              scaled to size 6.89998pt on input line 1254.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <15> on input line 1297.
+(Font)              <15> on input line 1254.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10.49995> on input line 1297.
+(Font)              <10.49995> on input line 1254.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <7.5> on input line 1297.
+(Font)              <7.5> on input line 1254.
 LaTeX Font Info:    Font shape `T1/phv/m/n' will be
-(Font)              scaled to size 9.65993pt on input line 1297.
+(Font)              scaled to size 9.65993pt on input line 1254.
 LaTeX Font Info:    Font shape `T1/phv/m/n' will be
-(Font)              scaled to size 6.89998pt on input line 1297.
+(Font)              scaled to size 6.89998pt on input line 1254.
 LaTeX Font Info:    Font shape `T1/phv/m/it' in size <15> not available
-(Font)              Font shape `T1/phv/m/sl' tried instead on input line 1297.
+(Font)              Font shape `T1/phv/m/sl' tried instead on input line 1254.
 LaTeX Font Info:    Font shape `T1/phv/m/sl' will be
-(Font)              scaled to size 13.79997pt on input line 1297.
+(Font)              scaled to size 13.79997pt on input line 1254.
 LaTeX Font Info:    Font shape `T1/phv/m/it' in size <10.49995> not available
-(Font)              Font shape `T1/phv/m/sl' tried instead on input line 1297.
+(Font)              Font shape `T1/phv/m/sl' tried instead on input line 1254.
 LaTeX Font Info:    Font shape `T1/phv/m/sl' will be
-(Font)              scaled to size 9.65993pt on input line 1297.
+(Font)              scaled to size 9.65993pt on input line 1254.
 LaTeX Font Info:    Font shape `T1/phv/m/it' in size <7.5> not available
-(Font)              Font shape `T1/phv/m/sl' tried instead on input line 1297.
+(Font)              Font shape `T1/phv/m/sl' tried instead on input line 1254.
 LaTeX Font Info:    Font shape `T1/phv/m/sl' will be
-(Font)              scaled to size 6.89998pt on input line 1297.
+(Font)              scaled to size 6.89998pt on input line 1254.
  [30
 
 {/usr/share/texmf/fonts/enc/dvips/lm/lm-mathit.enc}] [31
@@ -1443,62 +1444,70 @@ LaTeX Font Info:    Font shape `T1/phv/m/sl' will be
 ] [34
 
 ]
-<figures/F_sample.pdf, id=701, 412.56496pt x 147.95433pt>
+<figures/F_sample.pdf, id=703, 412.56496pt x 147.95433pt>
 File: figures/F_sample.pdf Graphic file (type pdf)
 <use figures/F_sample.pdf>
-Package pdftex.def Info: figures/F_sample.pdf  used on input line 1416.
+Package pdftex.def Info: figures/F_sample.pdf  used on input line 1373.
 (pdftex.def)             Requested size: 412.56393pt x 147.95396pt.
  [35
 
  <./figures/F_sample.pdf>]
-<figures/F_industry.pdf, id=727, 412.56496pt x 147.95433pt>
+<figures/F_industry.pdf, id=729, 412.56496pt x 147.95433pt>
 File: figures/F_industry.pdf Graphic file (type pdf)
 <use figures/F_industry.pdf>
-Package pdftex.def Info: figures/F_industry.pdf  used on input line 1418.
+Package pdftex.def Info: figures/F_industry.pdf  used on input line 1375.
 (pdftex.def)             Requested size: 412.56393pt x 147.95396pt.
  [36
 
  <./figures/F_industry.pdf>] [37
 
 ]
-<figures/F_paygaps.pdf, id=765, 412.56496pt x 128.0374pt>
+<figures/F_paygaps.pdf, id=767, 412.56496pt x 128.0374pt>
 File: figures/F_paygaps.pdf Graphic file (type pdf)
 <use figures/F_paygaps.pdf>
-Package pdftex.def Info: figures/F_paygaps.pdf  used on input line 1452.
+Package pdftex.def Info: figures/F_paygaps.pdf  used on input line 1409.
 (pdftex.def)             Requested size: 412.58281pt x 128.04292pt.
  [38
 
  <./figures/F_paygaps.pdf>] (./tables/T_hedonic.tex)
 [39
 
-] [40
+]
+LaTeX Font Info:    Trying to load font information for TS1+phv on input line 1
+484.
+ (/usr/share/texlive/texmf-dist/tex/latex/psnfss/ts1phv.fd
+File: ts1phv.fd 2020/03/25 scalable font definitions for TS1/phv.
+)
+LaTeX Font Info:    Font shape `TS1/phv/b/n' will be
+(Font)              scaled to size 9.65997pt on input line 1484.
+ [40
 
 ]
 LaTeX Font Info:    Font shape `OT1/phv/m/n' will be
-(Font)              scaled to size 9.19998pt on input line 1573.
+(Font)              scaled to size 9.19998pt on input line 1530.
 LaTeX Font Info:    Font shape `OT1/phv/m/n' will be
-(Font)              scaled to size 6.43999pt on input line 1573.
+(Font)              scaled to size 6.43999pt on input line 1530.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10> on input line 1573.
+(Font)              <10> on input line 1530.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <7> on input line 1573.
+(Font)              <7> on input line 1530.
 LaTeX Font Info:    Font shape `T1/phv/m/it' in size <10> not available
-(Font)              Font shape `T1/phv/m/sl' tried instead on input line 1573.
+(Font)              Font shape `T1/phv/m/sl' tried instead on input line 1530.
 LaTeX Font Info:    Font shape `T1/phv/m/sl' will be
-(Font)              scaled to size 9.19998pt on input line 1573.
+(Font)              scaled to size 9.19998pt on input line 1530.
 LaTeX Font Info:    Font shape `T1/phv/m/it' in size <7> not available
-(Font)              Font shape `T1/phv/m/sl' tried instead on input line 1573.
+(Font)              Font shape `T1/phv/m/sl' tried instead on input line 1530.
 LaTeX Font Info:    Font shape `T1/phv/m/sl' will be
-(Font)              scaled to size 6.43999pt on input line 1573.
+(Font)              scaled to size 6.43999pt on input line 1530.
  [41
 
 {/usr/share/texmf/fonts/enc/dvips/lm/lm-mathex.enc}] [42
 
 ]
-<figures/F_dominance.pdf, id=833, 341.43306pt x 147.95433pt>
+<figures/F_dominance.pdf, id=835, 341.43306pt x 147.95433pt>
 File: figures/F_dominance.pdf Graphic file (type pdf)
 <use figures/F_dominance.pdf>
-Package pdftex.def Info: figures/F_dominance.pdf  used on input line 1624.
+Package pdftex.def Info: figures/F_dominance.pdf  used on input line 1581.
 (pdftex.def)             Requested size: 302.03537pt x 130.882pt.
  [43
 
@@ -1509,63 +1518,64 @@ Package pdftex.def Info: figures/F_dominance.pdf  used on input line 1624.
 ] [46
 
 ]
-<figures/F_groups_diff.pdf, id=884, 412.56496pt x 142.26378pt>
+<figures/F_groups_diff.pdf, id=886, 412.56496pt x 142.26378pt>
 File: figures/F_groups_diff.pdf Graphic file (type pdf)
 <use figures/F_groups_diff.pdf>
-Package pdftex.def Info: figures/F_groups_diff.pdf  used on input line 1673.
+Package pdftex.def Info: figures/F_groups_diff.pdf  used on input line 1630.
 (pdftex.def)             Requested size: 412.56393pt x 142.26343pt.
  [47
 
  <./figures/F_groups_diff.pdf>]
-<figures/F_ra_gender.pdf, id=908, 412.56496pt x 153.64488pt>
+<figures/F_ra_gender.pdf, id=910, 412.56496pt x 153.64488pt>
 File: figures/F_ra_gender.pdf Graphic file (type pdf)
 <use figures/F_ra_gender.pdf>
-Package pdftex.def Info: figures/F_ra_gender.pdf  used on input line 1680.
+Package pdftex.def Info: figures/F_ra_gender.pdf  used on input line 1637.
 (pdftex.def)             Requested size: 412.57022pt x 153.64684pt.
  [48
 
  <./figures/F_ra_gender.pdf>]
-<figures/F_ra_age.pdf, id=926, 412.56496pt x 153.64488pt>
+<figures/F_ra_age.pdf, id=928, 412.56496pt x 153.64488pt>
 File: figures/F_ra_age.pdf Graphic file (type pdf)
 <use figures/F_ra_age.pdf>
-Package pdftex.def Info: figures/F_ra_age.pdf  used on input line 1684.
+Package pdftex.def Info: figures/F_ra_age.pdf  used on input line 1641.
 (pdftex.def)             Requested size: 412.57022pt x 153.64684pt.
-[49
+ [49
 
  <./figures/F_ra_age.pdf>]
-<figures/F_ra_care.pdf, id=945, 412.56496pt x 153.64488pt>
+<figures/F_ra_care.pdf, id=947, 412.56496pt x 153.64488pt>
 File: figures/F_ra_care.pdf Graphic file (type pdf)
 <use figures/F_ra_care.pdf>
-Package pdftex.def Info: figures/F_ra_care.pdf  used on input line 1688.
+Package pdftex.def Info: figures/F_ra_care.pdf  used on input line 1645.
 (pdftex.def)             Requested size: 412.57022pt x 153.64684pt.
  [50
 
  <./figures/F_ra_care.pdf>]
-<figures/F_ra_role.pdf, id=963, 412.56496pt x 153.64488pt>
+<figures/F_ra_role.pdf, id=965, 412.56496pt x 153.64488pt>
 File: figures/F_ra_role.pdf Graphic file (type pdf)
 <use figures/F_ra_role.pdf>
-Package pdftex.def Info: figures/F_ra_role.pdf  used on input line 1692.
+Package pdftex.def Info: figures/F_ra_role.pdf  used on input line 1649.
 (pdftex.def)             Requested size: 412.57022pt x 153.64684pt.
  [51
 
  <./figures/F_ra_role.pdf>]
-<figures/F_ra_edu.pdf, id=981, 412.56496pt x 153.64488pt>
+<figures/F_ra_edu.pdf, id=983, 412.56496pt x 153.64488pt>
 File: figures/F_ra_edu.pdf Graphic file (type pdf)
 <use figures/F_ra_edu.pdf>
-Package pdftex.def Info: figures/F_ra_edu.pdf  used on input line 1696.
+Package pdftex.def Info: figures/F_ra_edu.pdf  used on input line 1653.
 (pdftex.def)             Requested size: 412.57022pt x 153.64684pt.
- [52
+
+[52
 
  <./figures/F_ra_edu.pdf>]
-<figures/F_size.pdf, id=999, 412.56496pt x 182.09764pt>
+<figures/F_size.pdf, id=1001, 412.56496pt x 182.09764pt>
 File: figures/F_size.pdf Graphic file (type pdf)
 <use figures/F_size.pdf>
-Package pdftex.def Info: figures/F_size.pdf  used on input line 1703.
+Package pdftex.def Info: figures/F_size.pdf  used on input line 1660.
 (pdftex.def)             Requested size: 399.6776pt x 176.40944pt.
  [53
 
  <./figures/F_size.pdf>]
-Overfull \hbox (10.37646pt too wide) in paragraph at lines 1729--1729
+Overfull \hbox (10.37646pt too wide) in paragraph at lines 1686--1686
  []|\T1/phv/b/n/8.5 Compressed| 
  []
 
@@ -1574,10 +1584,10 @@ Overfull \hbox (10.37646pt too wide) in paragraph at lines 1729--1729
 ] (./tables/T_access.tex) [55
 
 ]
-<figures/F_fwa_current_m.pdf, id=1047, 369.88583pt x 142.26378pt>
+<figures/F_fwa_current_m.pdf, id=1049, 369.88583pt x 142.26378pt>
 File: figures/F_fwa_current_m.pdf Graphic file (type pdf)
 <use figures/F_fwa_current_m.pdf>
-Package pdftex.def Info: figures/F_fwa_current_m.pdf  used on input line 1747.
+Package pdftex.def Info: figures/F_fwa_current_m.pdf  used on input line 1704.
 (pdftex.def)             Requested size: 369.88492pt x 142.26343pt.
  [56
 
@@ -1587,94 +1597,94 @@ Package pdftex.def Info: figures/F_fwa_current_m.pdf  used on input line 1747.
 ] (./tables/T_org_salary.tex) [58
 
 ]
-<figures/F_org_splits.pdf, id=1084, 412.56496pt x 153.64488pt>
+<figures/F_org_splits.pdf, id=1086, 412.56496pt x 153.64488pt>
 File: figures/F_org_splits.pdf Graphic file (type pdf)
 <use figures/F_org_splits.pdf>
-Package pdftex.def Info: figures/F_org_splits.pdf  used on input line 1758.
+Package pdftex.def Info: figures/F_org_splits.pdf  used on input line 1715.
 (pdftex.def)             Requested size: 412.57022pt x 153.64684pt.
  [59
 
  <./figures/F_org_splits.pdf>]
-<figures/F_org_concerns4_m.pdf, id=1109, 369.88583pt x 159.33543pt>
+<figures/F_org_concerns4_m.pdf, id=1111, 369.88583pt x 159.33543pt>
 File: figures/F_org_concerns4_m.pdf Graphic file (type pdf)
 <use figures/F_org_concerns4_m.pdf>
-Package pdftex.def Info: figures/F_org_concerns4_m.pdf  used on input line 1760
+Package pdftex.def Info: figures/F_org_concerns4_m.pdf  used on input line 1717
 .
 (pdftex.def)             Requested size: 356.68925pt x 153.65073pt.
  [60
 
  <./figures/F_org_concerns4_m.pdf>]
-<figures/F_org_other.pdf, id=1134, 412.56496pt x 130.88269pt>
+<figures/F_org_other.pdf, id=1136, 412.56496pt x 130.88269pt>
 File: figures/F_org_other.pdf Graphic file (type pdf)
 <use figures/F_org_other.pdf>
-Package pdftex.def Info: figures/F_org_other.pdf  used on input line 1764.
+Package pdftex.def Info: figures/F_org_other.pdf  used on input line 1721.
 (pdftex.def)             Requested size: 412.58281pt x 130.88834pt.
  [61
 
  <./figures/F_org_other.pdf>]
-<figures/F_org_role.pdf, id=1161, 369.88583pt x 165.02599pt>
+<figures/F_org_role.pdf, id=1163, 369.88583pt x 165.02599pt>
 File: figures/F_org_role.pdf Graphic file (type pdf)
 <use figures/F_org_role.pdf>
-Package pdftex.def Info: figures/F_org_role.pdf  used on input line 1771.
+Package pdftex.def Info: figures/F_org_role.pdf  used on input line 1728.
 (pdftex.def)             Requested size: 369.90749pt x 165.03564pt.
  [62
 
  <./figures/F_org_role.pdf>]
-<figures/F_org_view.pdf, id=1180, 412.61047pt x 147.95433pt>
+<figures/F_org_view.pdf, id=1182, 412.61047pt x 147.95433pt>
 File: figures/F_org_view.pdf Graphic file (type pdf)
 <use figures/F_org_view.pdf>
-Package pdftex.def Info: figures/F_org_view.pdf  used on input line 1780.
+Package pdftex.def Info: figures/F_org_view.pdf  used on input line 1737.
 (pdftex.def)             Requested size: 412.60947pt x 147.95396pt.
  [63
 
  <./figures/F_org_view.pdf>]
-<figures/F_career.pdf, id=1207, 412.6994pt x 133.72795pt>
+<figures/F_career.pdf, id=1209, 412.6994pt x 133.72795pt>
 File: figures/F_career.pdf Graphic file (type pdf)
 <use figures/F_career.pdf>
-Package pdftex.def Info: figures/F_career.pdf  used on input line 1788.
+Package pdftex.def Info: figures/F_career.pdf  used on input line 1745.
 (pdftex.def)             Requested size: 412.72356pt x 133.73576pt.
 
 [64
 
  <./figures/F_career.pdf>]
-<figures/F_career_who.pdf, id=1234, 398.3386pt x 130.88269pt>
+<figures/F_career_who.pdf, id=1236, 398.3386pt x 130.88269pt>
 File: figures/F_career_who.pdf Graphic file (type pdf)
 <use figures/F_career_who.pdf>
-Package pdftex.def Info: figures/F_career_who.pdf  used on input line 1802.
+Package pdftex.def Info: figures/F_career_who.pdf  used on input line 1759.
 (pdftex.def)             Requested size: 398.35585pt x 130.88834pt.
  [65
 
  <./figures/F_career_who.pdf>]
-<figures/F_use_att.pdf, id=1261, 412.56496pt x 170.71654pt>
+<figures/F_use_att.pdf, id=1263, 412.56496pt x 170.71654pt>
 File: figures/F_use_att.pdf Graphic file (type pdf)
 <use figures/F_use_att.pdf>
-Package pdftex.def Info: figures/F_use_att.pdf  used on input line 1804.
+Package pdftex.def Info: figures/F_use_att.pdf  used on input line 1761.
 (pdftex.def)             Requested size: 412.5954pt x 170.72913pt.
  [66
 
  <./figures/F_use_att.pdf>]
-<figures/F_wtp_att.pdf, id=1286, 412.56496pt x 182.09764pt>
+<figures/F_wtp_att.pdf, id=1288, 412.56496pt x 182.09764pt>
 File: figures/F_wtp_att.pdf Graphic file (type pdf)
 <use figures/F_wtp_att.pdf>
-Package pdftex.def Info: figures/F_wtp_att.pdf  used on input line 1806.
+Package pdftex.def Info: figures/F_wtp_att.pdf  used on input line 1763.
 (pdftex.def)             Requested size: 399.6776pt x 176.40944pt.
  [67
 
  <./figures/F_wtp_att.pdf>] [68
 
 ]
-<figures/F_awareness.pdf, id=1323, 412.56496pt x 142.26378pt>
+<figures/F_awareness.pdf, id=1325, 412.56496pt x 142.26378pt>
 File: figures/F_awareness.pdf Graphic file (type pdf)
 <use figures/F_awareness.pdf>
-Package pdftex.def Info: figures/F_awareness.pdf  used on input line 1832.
+Package pdftex.def Info: figures/F_awareness.pdf  used on input line 1789.
 (pdftex.def)             Requested size: 412.6017pt x 142.27644pt.
  [69
 
  <./figures/F_awareness.pdf>]
-<figures/F_approvals_two.pdf, id=1355, 412.58772pt x 130.88269pt>
+<figures/F_approvals_two.pdf, id=1357, 412.58772pt x 130.88269pt>
 File: figures/F_approvals_two.pdf Graphic file (type pdf)
 <use figures/F_approvals_two.pdf>
-Package pdftex.def Info: figures/F_approvals_two.pdf  used on input line 1845.
+Package pdftex.def Info: figures/F_approvals_two.pdf  used on input line 1802.
 (pdftex.def)             Requested size: 412.60559pt x 130.88834pt.
  [70
 
@@ -1682,10 +1692,10 @@ Package pdftex.def Info: figures/F_approvals_two.pdf  used on input line 1845.
 [71
 
 ]
-<figures/F_puzzle_r5.pdf, id=1390, 369.88583pt x 142.26378pt>
+<figures/F_puzzle_r5.pdf, id=1392, 369.88583pt x 142.26378pt>
 File: figures/F_puzzle_r5.pdf Graphic file (type pdf)
 <use figures/F_puzzle_r5.pdf>
-Package pdftex.def Info: figures/F_puzzle_r5.pdf  used on input line 1871.
+Package pdftex.def Info: figures/F_puzzle_r5.pdf  used on input line 1828.
 (pdftex.def)             Requested size: 369.88492pt x 142.26343pt.
  [72
 
@@ -1742,13 +1752,13 @@ Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: 5BCEA9CF7D2D9AECE7CAC4018E9F6C5B;81.
  ) 
 Here is how much of TeX's memory you used:
- 27900 strings out of 476182
- 554400 string characters out of 5795594
- 1950975 words of memory out of 5000000
- 48939 multiletter control sequences out of 15000+600000
+ 27891 strings out of 476182
+ 554392 string characters out of 5795594
+ 1951975 words of memory out of 5000000
+ 48930 multiletter control sequences out of 15000+600000
  733692 words of font info for 232 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 101i,15n,107p,1000b,834s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 101i,15n,107p,1000b,828s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/share/texmf/fonts/type1/public/lm/lmex10.pfb></usr/share/texmf/fonts/ty
 pe1/public/lm/lmmi10.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi12.pfb></u
 sr/share/texmf/fonts/type1/public/lm/lmmi9.pfb></usr/share/texmf/fonts/type1/pu
@@ -1756,10 +1766,10 @@ blic/lm/lmsy10.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy9.pfb></usr/shar
 e/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/share/texlive/te
 xmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/share/texlive/texmf-dist/fon
 ts/type1/urw/helvetic/uhvro8a.pfb>
-Output written on main.pdf (86 pages, 1001686 bytes).
+Output written on main.pdf (86 pages, 1195139 bytes).
 PDF statistics:
- 1687 PDF objects out of 1728 (max. 8388607)
+ 1689 PDF objects out of 1728 (max. 8388607)
  1249 compressed objects within 13 object streams
  346 named destinations out of 1000 (max. 500000)
- 246 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 256 words of extra memory for PDF output out of 10000 (max. 10000000)
 
