@@ -45,11 +45,12 @@ use "$data/employer.dta", clear
 capture drop collaborative
 gen collaborative = (jobculture == 2) if !missing(jobculture)
 
+gen double base_salary_num = real(base_salary_orig)     // base_salary_orig is a string in employer.dta
 egen byte tag_id = tag(id)
-summarize base_salary_orig if tag_id == 1, detail
+summarize base_salary_num if tag_id == 1, detail
 local p1  = r(p1)
 local p99 = r(p99)
-gen salary_trim = inrange(base_salary_orig, `p1', `p99') if !missing(base_salary_orig)
+gen salary_trim = inrange(base_salary_num, `p1', `p99') if !missing(base_salary_num)
 
 clogit chosen log_salary ib0.place ib0.timeflex ib0.load ib0.retention ib1.collaborative ///
     if salary_trim == 1, group(choice_set) vce(cluster id)
