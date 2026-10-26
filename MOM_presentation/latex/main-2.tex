@@ -258,7 +258,7 @@
 \newcommand{\SvyHead}[1]{\cellcolor{Soft}\textbf{#1}}
 \newcommand{\SvyTab}[3]{% #1 unused, #2 header row cells, #3 body rows
   {\renewcommand{\arraystretch}{1.12}\setlength{\tabcolsep}{3pt}\fontsize{8}{9.6}\selectfont\arrayrulecolor{Rule}%
-  \begin{tabular}{|>{\centering\arraybackslash}p{2.35cm}|>{\centering\arraybackslash}p{2.1cm}|>{\centering\arraybackslash}p{2.1cm}|}
+  \begin{tabular}{|>{\centering\arraybackslash}m{2.35cm}|>{\centering\arraybackslash}m{2.1cm}|>{\centering\arraybackslash}m{2.1cm}|}
     \hline #2 \\ \hline #3
   \end{tabular}}}
 \newcommand{\Body}[1]{{\fontsize{9.5}{11.6}\selectfont\RaggedRight #1\par}}
@@ -674,8 +674,8 @@ Next, the choice task that lets us put a price on each arrangement.}
   \begin{minipage}[t]{0.49\linewidth}\centering
     {\color{Employee}\FsHead PMEs choose a job\par}\vspace{0.14cm}
     \SvyTab{Employee}{\SvyHead{Attribute} & \SvyHead{Job Offer A} & \SvyHead{Job Offer B}}{%
-      \cellcolor{SvyBlue}\textbf{Monthly gross salary for this job} & \cellcolor{SvyBlue}\textbf{S\$2,550/month} & \cellcolor{SvyBlue}\textbf{S\$3,300/month}\\ \hline
-      \cellcolor{SvyBlue}\textbf{Work location} & \cellcolor{SvyBlue}1--2 days WFH/week & \cellcolor{SvyBlue}Fully remote (5 days WFH)\\ \hline
+      \cellcolor{SvyBlue}\textbf{Monthly salary} & \cellcolor{SvyBlue}\textbf{S\$2,550/month} & \cellcolor{SvyBlue}\textbf{S\$3,300/month}\\ \hline
+      \cellcolor{SvyBlue}\textbf{Work location} & \cellcolor{SvyBlue}1--2 days WFH/week & \cellcolor{SvyBlue}Fully remote \mbox{(5 days WFH)}\\ \hline
       \cellcolor{SvyBlue}\textbf{Work schedule} & \cellcolor{SvyBlue}Staggered hours & \cellcolor{SvyBlue}Fixed hours (9am--6pm)\\ \hline
       Workload & \multicolumn{2}{c|}{Full-time (35--44 hours/week)}\\ \hline
       Job security & \multicolumn{2}{c|}{Moderate (10--30\% chance)}\\ \hline
@@ -685,7 +685,7 @@ Next, the choice task that lets us put a price on each arrangement.}
   \begin{minipage}[t]{0.49\linewidth}\centering
     {\color{Employer}\FsHead Employers choose a hire\par}\vspace{0.14cm}
     \SvyTab{Employer}{\SvyHead{Attribute} & \SvyHead{Candidate A} & \SvyHead{Candidate B}}{%
-      \cellcolor{SvyBlue}\textbf{Monthly gross salary offered for this candidate} & \cellcolor{SvyBlue}\textbf{S\$4,500/month} & \cellcolor{SvyBlue}\textbf{S\$5,500/month}\\ \hline
+      \cellcolor{SvyBlue}\textbf{Monthly salary} & \cellcolor{SvyBlue}\textbf{S\$4,500/month} & \cellcolor{SvyBlue}\textbf{S\$5,500/month}\\ \hline
       \cellcolor{SvyBlue}\textbf{Work location} & \cellcolor{SvyBlue}3--4 days WFH/week & \cellcolor{SvyBlue}1--2 days WFH/week\\ \hline
       \cellcolor{SvyBlue}\textbf{Work schedule} & \cellcolor{SvyBlue}Compressed 4-day week & \cellcolor{SvyBlue}Fixed hours (9am--6pm)\\ \hline
       Workload & \multicolumn{2}{c|}{Full-time (35--44 hours/week)}\\ \hline
