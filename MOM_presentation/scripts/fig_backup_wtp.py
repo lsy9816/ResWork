@@ -33,6 +33,8 @@ def load_patched(modname, reps):
 
 # ---------------------------------------------------------------------------------------------------------------
 FB_REPS = [
+    # F_benchmarks: Aksoy's question was about 2-3 WFH days a week (EVIDENCE_BOOK E16)
+    ('f"{aksoy_n} countries"', 'f"{aksoy_n} countries, 2–3 days"'),
     # F_landscape: no [excl. one panel] anywhere
     ('f"% of employed PMEs [{EXCL}]"', '"% of employed PMEs"'),
     ('        xw = text_width_cm(fig, f"{fmt_share(a)}%", FS, "bold") / w_l * 100\n'
