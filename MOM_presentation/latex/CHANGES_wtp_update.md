@@ -260,3 +260,6 @@ Earlier draft, kept here: (1) Trial the compressed week with volunteer firms, in
 - Verified in the paper: WTP for the option to WFH 2-3 days a week = 5% of pay on average (simple mean of country values); Singapore 4.8% (country-level conditional mean, "HE" sample that greatly over-represents highly educated persons); Singapore wave 2 only (27 Jan-4 Feb 2022), raw 1,153, analysis sample 1,002; 89.8% tertiary or more (Table A.4). Mas & Pallais 8% is cited in the paper. Also in the paper (not yet on a slide): Singapore WFH days 2.4 (average 1.5, US 1.6); workers' desired days after COVID 2.3 (average 1.7); employer plans 1.1 (average 0.7); raw means 2.9 / 2.6 / 1.4 days, WTP 6.1.
 - M-benchmark Singapore cell: no longer says "No study measures what FWAs are worth" (Aksoy measures WFH in Singapore); now "the one value estimate is for WFH only (4.8%). No study prices other FWAs, or the employer side."
 - B-references: Aksoy 2022 setting now "Singapore: n = 1,002, early 2022; about 90% tertiary"; table font reduced to fit.
+
+## 2 Nov 2026 - slide 3 reduced to current use
+- M-intl now only the days-worked-from-home block (Aksoy et al. 2025, Fig. 1); the Eurostat, CBS and MOM rows were removed. The WFH value comparison stays after the results (M-intl-wtp, slide 13).
