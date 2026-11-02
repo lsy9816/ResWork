@@ -395,7 +395,7 @@
 % path below plus every backup; return links to omitted main slides go to the index.
 \def\ShortLabels{M-title,M-motivation,M-intl,M-question,M-benchmark,M-keyfindings,M-design,M-pmes,M-why-pmes,M-employers,M-where,M-meet,M-intl-wtp,M-barriers,M-employer-barriers,M-discussion,M-nextsteps,M-conclusion,M-thanks}
 \ifdefined\ShortPath
-  \includeonlyframes{M-title,M-motivation,M-intl,M-question,M-benchmark,M-keyfindings,M-design,M-pmes,M-why-pmes,M-employers,M-where,M-meet,M-intl-wtp,M-barriers,M-employer-barriers,M-discussion,M-nextsteps,M-conclusion,M-thanks,B-index,B-index-all,B-references,B-intl,B-setup,B-sg-reports,B-legal,B-partners,B-sample,B-industry,B-cards,B-paygaps,B-hedonic,B-estimation,B-methods,B-validity,B-dominance,B-emp-all,B-fwa-table,B-remote-commute,B-groups,B-ra-gender,B-ra-age,B-ra-care,B-ra-role,B-ra-edu,B-size,B-access,B-fwa-current,B-modelfree,B-org-salary,B-org-splits,B-org-concerns4,B-org-other,B-org-role,B-org-view,B-career,B-career-who,B-use-att,B-wtp-att,B-level-access,B-awareness,B-approvals,B-requestrate,B-puzzle-main,B-puzzle,B-flexiload,B-pilot,B-robust,B-emp-robust,B-org-robust,B-limits,B-followup,B-optA,B-optB,B-optC,B-optE}
+  \includeonlyframes{M-title,M-motivation,M-intl,M-question,M-benchmark,M-keyfindings,M-design,M-pmes,M-why-pmes,M-employers,M-where,M-meet,M-intl-wtp,M-barriers,M-employer-barriers,M-discussion,M-nextsteps,M-conclusion,M-thanks,B-index,B-index-all,B-references,B-intl,B-setup,B-sg-reports,B-guidelines,B-legal,B-partners,B-sample,B-industry,B-cards,B-paygaps,B-hedonic,B-estimation,B-methods,B-validity,B-dominance,B-emp-all,B-fwa-table,B-remote-commute,B-groups,B-ra-gender,B-ra-age,B-ra-care,B-ra-role,B-ra-edu,B-size,B-access,B-fwa-current,B-modelfree,B-org-salary,B-org-splits,B-org-concerns4,B-org-other,B-org-role,B-org-view,B-career,B-career-who,B-use-att,B-wtp-att,B-level-access,B-awareness,B-approvals,B-requestrate,B-puzzle-main,B-puzzle,B-flexiload,B-pilot,B-robust,B-emp-robust,B-org-robust,B-limits,B-followup,B-optA,B-optB,B-optC,B-optE}
 \fi
 
 \begin{document}
@@ -434,6 +434,7 @@ The findings are preliminary; we end with points for discussion.
   % Source line: [P4s] MRSD time series released 30 Jun 2026, establishments with 25+ staff; [P4] MOM gives no
   % reason for the 2025 fall; [P4s] 77.5 incl. newer types, 2024
   \SourceNote{Source: MRSD, MOM (Jun 2026).} % [P4s, P4]
+  \Backups{\BL{B-guidelines}{Guidelines}}
 \end{frame}
 % Note numbers: [P4s] 28 in 2008, 73 in mid-2024, establishments with 25 or more staff, private plus public sector;
 % [P4, P4s] 66 in 2025 and 68 in 2023, both MOM's odd-year Supplementary Survey; [P6] fewer working-age residents per senior, no number spoken
@@ -516,7 +517,7 @@ So remote work in Singapore is at the 40-country average, below the UK and US an
       {Which arrangements create common ground, for which roles,\\and what blocks adoption?};
     \draw[Navy,line width=0.8pt] (0,-5.37) -- (14.8,-5.37);
   \end{tikzpicture}\par
-  \Backups{\BL{B-partners}{Partners}}
+  \Backups{\BL{B-guidelines}{Guidelines} \BL{B-partners}{Partners}}
 \end{frame}
 % Note numbers: none spoken. Context only: [P1] the Guidelines set a process; [P2] no administrative request counts;
 % [P3] MOM's need-request data, almost entirely pre-Guidelines, and MOM's frictions reading (spoken, no number; mom_ps-03);
@@ -1103,6 +1104,7 @@ Third, test a manager guide on role-by-role on-site checks and on handling reque
       \mbox{\BIi{B-references}{Studies}}\enspace \textcolor{Muted}{$\cdot$}\enspace \mbox{\BIi{M-intl-wtp}{Benchmarks}}\par
       \mbox{\BIi{B-intl}{Evidence abroad}}\enspace \textcolor{Muted}{$\cdot$}\enspace \mbox{\BIi{B-legal}{Rules abroad}}\par
       \mbox{\BIi{B-setup}{Pathways}}\enspace \textcolor{Muted}{$\cdot$}\enspace \mbox{\BIi{B-sg-reports}{Surveys}}\par
+      \mbox{\BIi{B-guidelines}{Guidelines}}\par
       \mbox{\BIi{B-partners}{Partners' evidence and ours}}\par
       \BH{Data and design}
       \mbox{\BIi{B-sample}{Sample}}\enspace \textcolor{Muted}{$\cdot$}\enspace \mbox{\BIi{B-industry}{Industries}}\par
@@ -1244,6 +1246,50 @@ Third, test a manager guide on role-by-role on-site checks and on handling reque
   \end{columns}
   \SourceNote{\textbf{Sources:} MRSD, Report on Employees' Working Conditions (May 2026); Work-Life Harmony Report 2020.}
   \BackToTwo{M-descriptive}{Practice}{M-why-pmes}{Career concerns}
+\end{frame}
+
+\begin{frame}[t,label=B-guidelines]{The Guidelines: process, not outcome}
+  % [P1] in effect 1 Dec 2024; employees past probation, all employers; request in writing by default, paras 10-12;
+  % employer properly considers it on business needs, case by case, Table 1; written decision within 2 months with
+  % the reason if rejecting, paras 21-22; process, not outcome: Workgroup Rec. 2 (verified V-06; EB P1)
+  \FrameTop % first body token (centring; never a frame subtitle)
+  {\fontsize{9}{11}\selectfont\renewcommand{\arraystretch}{1.12}%
+  \begin{tabularx}{\linewidth}{@{}>{\RaggedRight\arraybackslash}X@{\hspace{0.12cm}}c@{\hspace{0.12cm}}>{\RaggedRight\arraybackslash}X@{\hspace{0.12cm}}c@{\hspace{0.12cm}}>{\RaggedRight\arraybackslash}X@{}}
+    \toprule
+    \textbf{\textcolor{Navy}{1.}\ Request} & \textcolor{Muted}{$\rightarrow$} & \textbf{\textcolor{Navy}{2.}\ Proper consideration} & \textcolor{Muted}{$\rightarrow$} & \textbf{\textcolor{Navy}{3.}\ Written decision}\\
+    In writing by default & & On business needs & & Within 2 months; reasons if declined\\ % [P1]
+    \bottomrule
+  \end{tabularx}\par}
+  \vspace{0.10cm}
+  % [P1] reasonable grounds include cost, productivity and feasibility; custom or disbelief in FWAs cannot be one (para 19, Table 4)
+  % [P17] MOM 2026; short form as on B-legal (verified wording: FAQ, 17 Jun 2026; COS 2026 speech, 3 Mar 2026)
+  {\fontsize{9}{11}\selectfont\RaggedRight In effect from 1 Dec 2024 for employees past probation. A significant cost burden or customer needs can be business grounds to decline; a preference for face time, or refusing to avoid similar requests from others, cannot. TAFEP takes an educational approach, guiding employers to comply (MOM, 2026).\par}
+  \vspace{0.10cm}
+  \PanelTitle{Navy}{MOM indicators, 2024 data: not one funnel; definitions differ} % [P3]
+  % [P3] MRSD, Employees' Working Conditions, May 2026, data for 2024, full-time resident employees aged 25-64:
+  % 84.5% of those who needed a scheduled FWA got at least one they needed; about 94% approved, stated with no base;
+  % 18.5% asked formally and 26.3% informally (Chart 5, other FWA types than the 84.5%, so not one funnel; do not add)
+  \begin{columns}[T,onlytextwidth]
+    \begin{column}{0.32\textwidth}
+      \BigStat{Navy}{84.5\%}{who needed a scheduled FWA got one they needed} % [P3]
+    \end{column}
+    \begin{column}{0.32\textwidth}
+      \BigStat{Navy}{\ap 94\%}{of requests approved; base not defined} % [P3]
+    \end{column}
+    \begin{column}{0.32\textwidth}
+      \BigStat{Navy}{18.5\%}{of those in need asked formally; 26.3\% informally} % [P3]
+    \end{column}
+  \end{columns}
+  \vspace{0.06cm}
+  % [P3] full-time residents 25-64; almost entirely before the Guidelines; MOM's frictions reading; [P2] firms are not required to report requests, no administrative counts
+  % [P4, P4s] 72.7% in Jun 2024 (CoE), 66.4% in Jun 2025 (Supplementary Survey); establishments with 25+ staff, private plus
+  % the public sector; no causal reading (Lead decision 1, EB s14). Fixer pass 7 Oct 2026: need not report (P2); establishments (P4);
+  % incl. public sector is on F_motivation's title; here it would add a line (B-guidelines overflowed by 0.01 cm)
+  {\fontsize{8.5}{10.2}\selectfont\RaggedRight Full-time residents aged 25--64, almost entirely before the Guidelines; MOM reads the gap as ``frictions'', not employer resistance. Firms need not report requests to MOM. Establishments (25+ staff) offering a scheduled FWA: 72.7\% (Jun 2024), 66.4\% (Jun 2025; another MOM survey; not attributed to the Guidelines).\par}
+  % TODO(PI): re-check the PQ replies of the Sep-Nov 2026 sittings and CoE 2025 before the meeting (EB s14)
+  % Check date: EB s14 fact-check log, 6 Oct 2026
+  \SourceNote{\textbf{Sources:} Tripartite Guidelines (2024); MRSD (2026); MOM PQ replies; COS 2026.}
+  \BackToTwo{M-question}{Question}{M-motivation}{Motivation}
 \end{frame}
 
 \begin{frame}[t,label=B-legal]{FWA request rules elsewhere}
