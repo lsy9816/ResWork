@@ -263,3 +263,8 @@ Earlier draft, kept here: (1) Trial the compressed week with volunteer firms, in
 
 ## 2 Nov 2026 - slide 3 reduced to current use
 - M-intl now only the days-worked-from-home block (Aksoy et al. 2025, Fig. 1); the Eurostat, CBS and MOM rows were removed. The WFH value comparison stays after the results (M-intl-wtp, slide 13).
+
+## 2 Nov 2026 - audit
+- B-org-concerns4 title: "creativity shows the clearest signal" (4 of 28 concern differences are significant at 5%: creativity 3, productivity 1 for staggered hours; none after correction). The M-concerns speaker note said three of 28; now four.
+- B54 (PME robustness) retitled "PME values hold in every sample" (staggered hours is about -0.7, not positive).
+- Open: Barrero, Bloom & Davis value in F_benchmarks is 8% (EVIDENCE_BOOK, JEP 2023) but the NBER WP 28731 in the Dropbox folder reports 7.2% (about 7%) for the option to WFH 2-3 days; 8% there is Mas & Pallais. Not changed: the JEP version needs checking.
