@@ -296,3 +296,9 @@ Earlier draft, kept here: (1) Trial the compressed week with volunteer firms, in
 - Slide 20 (Policy directions): A pilot the compressed week (same hours over four days) with a comparison group; B add a role-by-role on-site check to FWA guidance, start with 1-2 WFH days in roles that need none; C put what is on offer and how use is appraised into company policy, brief managers on requests; row rules added.
 
 - Slides 10, 11, 14, 15, 17, 18: figures enlarged to 14.5 cm wide (was 13.0) to use the space freed by removed captions (new macro \FigL). Slides 3, 12, 16 unchanged in size.
+
+## 2 Nov 2026 - backup clean-up (81 pages)
+- Removed B-landscape ("Flexible work today": PME use is also in the numbers table, employers' typical arrangement only here) and B-laboursupply ("Keeping people in work": MOM context); buttons, index entries and the slide-2 note updated.
+- B-partners: Position column removed (partners' positions are not paraphrased to the partners); title "Partners' evidence and ours".
+- B-methods (Equations and inference) cut to the equation, two definitions and two caveats.
+- B-emp-all note reworded. Kept after review: B-sg-reports, B-cards, B-hedonic, B-validity, B-emp-all, B-fwa-table, B-groups with B-ra-* (gender, age, caregiving, role, education stay by earlier request).
