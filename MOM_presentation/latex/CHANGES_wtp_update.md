@@ -273,3 +273,7 @@ Earlier draft, kept here: (1) Trial the compressed week with volunteer firms, in
 - B-optE ("Measure what is missing") and B-optD-items ("Draft survey items") merged into one backup, label B-optE, title "Measure what is missing: draft survey items". Links, buttons and the backup index updated. 83 pages.
 - M-intl-wtp source note names the Barrero, Bloom & Davis paper behind the 8%: The Evolution of Work from Home (JEP 37(4), 2023; NBER WP 31686). Their earlier paper Why Working from Home Will Stick (NBER WP 28731, 2021) reports 7.2%. The 8% in the 2023 paper rests on search summaries (SIEPR) and is not yet checked verbatim.
 - Kept as they are: B5/B6/B7 (different content), B47/B48 (request outcomes vs request-rate base).
+
+## 2 Nov 2026 - Barrero, Bloom & Davis (JEP 2023) verified against the paper
+- Barrero, Bloom & Davis (2023), The Evolution of Work from Home, JEP 37(4): 23-50, p. 37: "On average, Americans value the option to work from home two or three days a week at 8 percent of pay, according to data from the Survey of Working Arrangements and Attitudes"; Mas & Pallais find similar estimates for a narrower group. So the 8% (2-3 days, US workers) in F_benchmarks is correct; their 2021 NBER paper (7.2%) is a different paper. The same paper cites Aksoy et al. (2022) for 27 countries and higher WTP among workers with children under 14.
+- B-references: row for Barrero, Bloom & Davis (2023) added.
