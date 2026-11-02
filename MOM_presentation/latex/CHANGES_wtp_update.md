@@ -327,3 +327,5 @@ Earlier draft, kept here: (1) Trial the compressed week with volunteer firms, in
 - B-partners removed earlier; B-guidelines kept.
 
 - B-dominance (dominance check) restored (PI); B-cards ("Nearly the same cards on both sides") removed with its slide-9 button and index entry. The 17-33% pay range remains in the Limits table and the validity note. 75 pages.
+
+- B-methods (Equations and inference) restored together with B-dominance (PI: keep both). The 17-33% pay-difference range removed from every slide, table and speaker note (wording now "limited pay differences"). 76 pages.
