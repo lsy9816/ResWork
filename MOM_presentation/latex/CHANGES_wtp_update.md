@@ -318,3 +318,5 @@ Earlier draft, kept here: (1) Trial the compressed week with volunteer firms, in
 - B-partners: employers who agree FWAs help attract and retain talent corrected to 68% (was 66%, 397-firm value).
 - Slide 20 buttons: Follow-up and Survey items removed (not part of the three directions).
 - Link check: all 286 internal links in the compiled PDF resolve to the intended page.
+
+- B-guidelines ("The Guidelines: process, not outcome") removed: MOM knows its own Guidelines and the MOM indicators are also in the partners backup; its buttons (slides 2 and 4) and index entry removed. 79 pages.
