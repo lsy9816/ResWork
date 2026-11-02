@@ -268,3 +268,8 @@ Earlier draft, kept here: (1) Trial the compressed week with volunteer firms, in
 - B-org-concerns4 title: "creativity shows the clearest signal" (4 of 28 concern differences are significant at 5%: creativity 3, productivity 1 for staggered hours; none after correction). The M-concerns speaker note said three of 28; now four.
 - B54 (PME robustness) retitled "PME values hold in every sample" (staggered hours is about -0.7, not positive).
 - Open: Barrero, Bloom & Davis value in F_benchmarks is 8% (EVIDENCE_BOOK, JEP 2023) but the NBER WP 28731 in the Dropbox folder reports 7.2% (about 7%) for the option to WFH 2-3 days; 8% there is Mas & Pallais. Not changed: the JEP version needs checking.
+
+## 2 Nov 2026 - appendix merge, BBD citation
+- B-optE ("Measure what is missing") and B-optD-items ("Draft survey items") merged into one backup, label B-optE, title "Measure what is missing: draft survey items". Links, buttons and the backup index updated. 83 pages.
+- M-intl-wtp source note names the Barrero, Bloom & Davis paper behind the 8%: The Evolution of Work from Home (JEP 37(4), 2023; NBER WP 31686). Their earlier paper Why Working from Home Will Stick (NBER WP 28731, 2021) reports 7.2%. The 8% in the 2023 paper rests on search summaries (SIEPR) and is not yet checked verbatim.
+- Kept as they are: B5/B6/B7 (different content), B47/B48 (request outcomes vs request-rate base).
