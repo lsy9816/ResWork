@@ -283,3 +283,5 @@ Earlier draft, kept here: (1) Trial the compressed week with volunteer firms, in
 - M-nextsteps redesigned as "Next steps for our research": three cards (1 match firms and their PMEs; 2 follow up our PMEs, the 490 who agreed; 3 evaluate the compressed week in volunteer firms, random half first); "who could lead" removed.
 
 - M-nextsteps: "which step first" line removed; card 2 now "Follow up over time" (panel re-surveyed every six months plus the 490 PMEs who agreed to follow-up). No funding mention on the slide.
+
+- M-nextsteps rebuilt from the P1 application: 1 match firms and their staff; 2 track over time (six-monthly waves, hiring and departures); 3 test a manager guide (random half of firms first). Compressed-week trial and the 490-PME card removed from the slide (both remain in backups B-pilot, B-followup).
