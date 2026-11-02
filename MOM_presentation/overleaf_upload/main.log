@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2026.10.14)  2 NOV 2026 03:05
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2026.10.14)  2 NOV 2026 03:09
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1306,7 +1306,7 @@ Overfull \hbox (4.28839pt too wide) in paragraph at lines 1157--1157
 
 ]
 LaTeX Font Info:    Font shape `T1/phv/m/n' will be
-(Font)              scaled to size 7.72797pt on input line 1203.
+(Font)              scaled to size 7.54398pt on input line 1203.
  [25
 
 ]
@@ -1760,7 +1760,7 @@ Package rerunfilecheck Info: File `main.out' has not changed.
  ) 
 Here is how much of TeX's memory you used:
  27981 strings out of 476182
- 555170 string characters out of 5795594
+ 555206 string characters out of 5795594
  1952975 words of memory out of 5000000
  49019 multiletter control sequences out of 15000+600000
  763458 words of font info for 267 fonts, out of 8000000 for 9000
@@ -1774,7 +1774,7 @@ e/texmf/fonts/type1/public/lm/lmsy8.pfb></usr/share/texmf/fonts/type1/public/lm
 /lmsy9.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb><
 /usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/share/t
 exlive/texmf-dist/fonts/type1/urw/helvetic/uhvro8a.pfb>
-Output written on main.pdf (84 pages, 1005813 bytes).
+Output written on main.pdf (84 pages, 1005823 bytes).
 PDF statistics:
  1659 PDF objects out of 1728 (max. 8388607)
  1230 compressed objects within 13 object streams
