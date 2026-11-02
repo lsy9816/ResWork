@@ -309,3 +309,12 @@ Earlier draft, kept here: (1) Trial the compressed week with volunteer firms, in
 
 ## 2 Nov 2026 - gender, age and caregiving backups restored (81 pages)
 - B-ra-gender, B-ra-age, B-ra-care and their figures put back (PI: keep both the differences, B-groups, and the group-by-group levels). T_emp_all stays without the culture row.
+
+## 2 Nov 2026 - appendix review (80 pages)
+- B-why-pmes ("PME splits by seven characteristics") removed (rounded values without intervals; career concern is on slide 18, groups on B-groups); its button on slide 18 and its index entry removed.
+- B-fwa-current ("Current users value part-time and staggered hours more") is now a table (tables/T_fwa_current.tex, scripts/make_table_fwa_current.py).
+- B-org-concerns4: the "% agree" line above the panels removed (scripts/fig_fwa_m.py, F_org_concerns4_m regenerated).
+- Retitled: B-org-salary "Employers respond less to pay, so their % values are less firm" (+ one-line note), B-org-role "Employers' pay cut by respondent role: owner, HR, hiring manager", B-use-att "Use of the arrangement, by career worry and stigma", B-wtp-att "Pay given up, by career worry and stigma". B-career-who: takeaway line added, parents/MOM paragraph removed.
+- B-partners: employers who agree FWAs help attract and retain talent corrected to 68% (was 66%, 397-firm value).
+- Slide 20 buttons: Follow-up and Survey items removed (not part of the three directions).
+- Link check: all 286 internal links in the compiled PDF resolve to the intended page.

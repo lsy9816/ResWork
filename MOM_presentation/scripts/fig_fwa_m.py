@@ -248,14 +248,8 @@ def fig_org_concerns_m(name="F_org_concerns_m", keys=("prod", "coord", "fair"), 
         ax.set_xticklabels(["0", "50%"])
         ax.tick_params(axis="x", length=2.5, width=0.6, colors=S.RULE, labelcolor=S.MUTED, labelsize=S.FS_TICK)
         q = es[es.split == key].set_index("item")
-        if five:
-            M.ftext(fig, x0 + PW / 2, AT + 0.08, title, ha="center", va="bottom", fontsize=S.FS_HEAD, color=S.INK,
-                    fontweight="bold")
-        else:   # back-up: the share of firms that agree sits under the concern's name
-            sh = int(math.floor(100 * q.loc["p1"].n1 / (q.loc["p1"].n1 + q.loc["p1"].n0) + 0.5))
-            M.ftext(fig, x0 + PW / 2, AT + 0.34, title, ha="center", va="bottom", fontsize=S.FS_HEAD, color=S.INK,
-                    fontweight="bold")
-            M.ftext(fig, x0 + PW / 2, AT + 0.08, f"{sh}% agree", ha="center", va="bottom", fontsize=S.FS_CAP, color=S.MUTED)
+        M.ftext(fig, x0 + PW / 2, AT + 0.08, title, ha="center", va="bottom", fontsize=S.FS_HEAD, color=S.INK,
+                fontweight="bold")   # concern name only (2 Nov 2026: the '% agree' line above the panels was dropped, PI)
         for lab, item, y0, load in rows:
             r = q.loc[CSV2[item]]
             y = YS[item]
