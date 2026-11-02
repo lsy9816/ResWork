@@ -367,3 +367,5 @@ Earlier draft, kept here: (1) Trial the compressed week with volunteer firms, in
 - B-requestrate: note reworded (the request question had no "applies automatically" answer; the last row comes from the separate set-up question) and the row relabelled "Arrangement applies automatically under company policy".
 
 - B-requestrate: note simplified ("Many people whose arrangement applies to everyone under company policy still said they made a formal request (72%). The question was misread, so we do not report a request rate."); last row "Set by company-wide policy (no request needed)".
+
+- B-career-who: takeaway corrected. It said the penalty is more common among people unaware of the Guidelines; the chart shows the opposite (familiar 54% vs not aware 22%). Now: more common among those who rate job loss as likely and among those familiar with the Guidelines; associations, not causes.
