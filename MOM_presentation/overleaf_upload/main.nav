@@ -144,16 +144,10 @@
 \headcommand {\beamer@framepages {69}{69}}
 \headcommand {\slideentry {0}{0}{70}{70/70}{}{1}}
 \headcommand {\beamer@framepages {70}{70}}
-\headcommand {\slideentry {0}{0}{71}{71/71}{}{1}}
-\headcommand {\beamer@framepages {71}{71}}
-\headcommand {\slideentry {0}{0}{72}{72/72}{}{1}}
-\headcommand {\beamer@framepages {72}{72}}
-\headcommand {\slideentry {0}{0}{73}{73/73}{}{1}}
-\headcommand {\beamer@framepages {73}{73}}
-\headcommand {\beamer@partpages {23}{73}}
-\headcommand {\beamer@subsectionpages {23}{73}}
-\headcommand {\beamer@sectionpages {23}{73}}
-\headcommand {\beamer@documentpages {73}}
-\headcommand {\gdef \inserttotalframenumber {51}}
+\headcommand {\beamer@partpages {23}{70}}
+\headcommand {\beamer@subsectionpages {23}{70}}
+\headcommand {\beamer@sectionpages {23}{70}}
+\headcommand {\beamer@documentpages {70}}
+\headcommand {\gdef \inserttotalframenumber {48}}
 \headcommand {\gdef \inserttotalframenumber {22}}
-\headcommand {\gdef \appendixtotalframenumber {51}}
+\headcommand {\gdef \appendixtotalframenumber {48}}

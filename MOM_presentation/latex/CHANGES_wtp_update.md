@@ -334,3 +334,7 @@ Earlier draft, kept here: (1) Trial the compressed week with volunteer firms, in
 - Removed: B-emp-all ("All PME estimates": same values and CIs as B-fwa-table, plus status text), B-modelfree ("Raw choices, before any model"), B-optE ("Measure what is missing: draft survey items": no longer linked from the directions or next steps). Buttons and index entries updated; Limits row now says "Add why-not items to MOM surveys".
 - B-access ("Valued more where offered? Not robust") simplified: no p-values, separate-slope row or footnotes; note says the compressed-week and part-time differences disappear when the groups get different pay responses.
 - Kept: B-fwa-current (table), B-pilot (backup of Direction A), B-followup (linked from Next steps), B-optA, B-optB, B-optC.
+
+## 2 Nov 2026 - backup review, round 4 (70 pages)
+- Removed B-access ("Valued more where offered? Not robust"), B-fwa-current ("Current users value part-time and staggered hours more") and B-followup ("Follow-up design"): optional, and the follow-up design no longer matches the Next steps cards (matched panel, tracking, manager guide trial). The Follow-up button on slide 21 and the matching index entries removed; the validity slide now says "our next steps address part of that gap". tables/T_access.tex and T_fwa_current.tex deleted from the upload folder.
+- Kept: B-fwa-table (numbers), B-pilot, B-optA, B-optB, B-optC.
