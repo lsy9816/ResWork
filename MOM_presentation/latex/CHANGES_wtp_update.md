@@ -325,3 +325,5 @@ Earlier draft, kept here: (1) Trial the compressed week with volunteer firms, in
 - Removed: B-paygaps ("Every pair differed in pay by 17-33%"), B-methods ("Equations and inference"), B-dominance ("Dominance check"), B-org-salary ("Employers respond less to pay..."). Buttons, index entries and the validity note that pointed to them updated; the pay-gap range stays in B-cards and B-limits.
 - B-cards design row: multipliers removed. B-puzzle: odds-ratio column replaced by plain shares of firms offering the compressed week (with p), PME odds ratio removed.
 - B-partners removed earlier; B-guidelines kept.
+
+- B-dominance (dominance check) restored (PI); B-cards ("Nearly the same cards on both sides") removed with its slide-9 button and index entry. The 17-33% pay range remains in the Limits table and the validity note. 75 pages.

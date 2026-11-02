@@ -395,7 +395,7 @@
 % path below plus every backup; return links to omitted main slides go to the index.
 \def\ShortLabels{M-title,M-motivation,M-intl,M-question,M-benchmark,M-keyfindings,M-design,M-pmes,M-why-pmes,M-employers,M-where,M-meet,M-intl-wtp,M-barriers,M-employer-barriers,M-discussion,M-nextsteps,M-conclusion,M-thanks}
 \ifdefined\ShortPath
-  \includeonlyframes{M-title,M-motivation,M-intl,M-question,M-benchmark,M-keyfindings,M-design,M-pmes,M-why-pmes,M-employers,M-where,M-meet,M-intl-wtp,M-barriers,M-employer-barriers,M-discussion,M-nextsteps,M-conclusion,M-thanks,B-index,B-index-all,B-references,B-intl,B-setup,B-sg-reports,B-guidelines,B-legal,B-sample,B-industry,B-cards,B-hedonic,B-estimation,B-validity,B-emp-all,B-fwa-table,B-remote-commute,B-groups,B-ra-gender,B-ra-age,B-ra-care,B-ra-role,B-ra-edu,B-size,B-access,B-fwa-current,B-modelfree,B-org-splits,B-org-concerns4,B-org-other,B-org-role,B-org-view,B-career,B-career-who,B-use-att,B-wtp-att,B-level-access,B-awareness,B-approvals,B-requestrate,B-puzzle-main,B-puzzle,B-flexiload,B-pilot,B-robust,B-emp-robust,B-org-robust,B-limits,B-followup,B-optA,B-optB,B-optC,B-optE}
+  \includeonlyframes{M-title,M-motivation,M-intl,M-question,M-benchmark,M-keyfindings,M-design,M-pmes,M-why-pmes,M-employers,M-where,M-meet,M-intl-wtp,M-barriers,M-employer-barriers,M-discussion,M-nextsteps,M-conclusion,M-thanks,B-index,B-index-all,B-references,B-intl,B-setup,B-sg-reports,B-guidelines,B-legal,B-sample,B-industry,B-hedonic,B-estimation,B-validity,B-dominance,B-emp-all,B-fwa-table,B-remote-commute,B-groups,B-ra-gender,B-ra-age,B-ra-care,B-ra-role,B-ra-edu,B-size,B-access,B-fwa-current,B-modelfree,B-org-splits,B-org-concerns4,B-org-other,B-org-role,B-org-view,B-career,B-career-who,B-use-att,B-wtp-att,B-level-access,B-awareness,B-approvals,B-requestrate,B-puzzle-main,B-puzzle,B-flexiload,B-pilot,B-robust,B-emp-robust,B-org-robust,B-limits,B-followup,B-optA,B-optB,B-optC,B-optE}
 \fi
 
 \begin{document}
@@ -685,7 +685,7 @@ Next, the choice task that lets us put a price on each arrangement.}
   \end{minipage}\par}
   \vspace{0.25cm}
   {\centering\FsBody Two attributes differ in each choice; which ones, and their levels, are randomized. From six choices each, we estimate the \textbf{\% of pay} each side would give up or require.\par}
-  \Backups{\BL{B-cards}{Choice cards}\BL{B-sample}{Sample}}
+  \Backups{\BL{B-sample}{Sample}}
 \end{frame}
 % note facts: [S1] 1,020; [S2] 397; [S1, S2, S4] online, unweighted; [S3] firms lean large; [S5] six choices,
 % two options, the rest held at own practice; [S6b] 10% above / below = multipliers 1.10 / 0.90; [S7] compressed
@@ -1105,9 +1105,8 @@ Third, test a manager guide on role-by-role on-site checks and on handling reque
       \mbox{\BIi{B-guidelines}{Guidelines}}\par
       \BH{Data and design}
       \mbox{\BIi{B-sample}{Sample}}\enspace \textcolor{Muted}{$\cdot$}\enspace \mbox{\BIi{B-industry}{Industries}}\par
-      \mbox{\BIi{B-cards}{Choice cards}}\par
       \mbox{\BIi{B-hedonic}{Why not pay data}}\enspace \textcolor{Muted}{$\cdot$}\enspace \mbox{\BIi{B-estimation}{Estimation}}\par
-      \mbox{\BIi{B-validity}{Validity}}\par
+      \mbox{\BIi{B-validity}{Validity}}\enspace \textcolor{Muted}{$\cdot$}\enspace \mbox{\BIi{B-dominance}{Dominance}}\par
     \end{column}
     \begin{column}{0.35\textwidth}
       \BH{PME values}
@@ -1330,30 +1329,6 @@ Third, test a manager guide on role-by-role on-site checks and on handling reque
 % Round 5 (COMMENTS Top-10 #10; ROUND5_SPEC s5): governance facts must come from the PI in writing.
 % Every [PI to confirm] line is a placeholder; do not infer or invent its content.
 
-\begin{frame}[t,label=B-cards]{Nearly the same cards on both sides}
-  % [S5, S6, S6b, S7]; turnover levels [R8, R9]
-  \FrameTop % first body token (centring; never a frame subtitle)
-  {\fontsize{8.5}{10.2}\selectfont
-  \renewcommand{\arraystretch}{1.10}
-  \begin{tabularx}{\linewidth}{@{}>{\raggedright\arraybackslash}p{2.6cm}>{\raggedright\arraybackslash}X>{\raggedright\arraybackslash}X@{}}
-    \toprule
-    \textbf{Attribute} & \textbf{\color{Employee}PMEs (job offers)} & \textbf{\color{Employer}Employers (candidates)}\\
-    \midrule
-    \textbf{Salary} & Own salary $\times$ multiplier & Latest PME-hire salary $\times$ multiplier\\ \RowSep
-    \textbf{Location} & Onsite; 1--2 WFH days a week; 3--4 days; fully remote & \textcolor{Muted}{Same}\\ \RowSep
-    \textbf{Schedule} & Fixed 9am--6pm; staggered; compressed 4-day week (same hours, longer days) & \textcolor{Muted}{Same}\\ \RowSep
-    \textbf{Workload} & Full-time (35--44 h); \emph{job sharing (4 days)}; part-time ($<$35 h) & Full-time; \emph{reduced load (4 days)}; part-time\\ \RowSep
-    \textbf{Risk} & Job loss (low / moderate / high) & Turnover (low $<$10\% / moderate / high $>$20\%)\\ \RowSep
-    \textbf{Other} & Culture; commute & Culture\\
-    \midrule
-    % [S5] 6 tasks, 2 options; [S6, S6b] multipliers, closest pairs never drawn, 17-33%; 10 versions
-    \textbf{Design} & \multicolumn{2}{>{\raggedright\arraybackslash}p{11.2cm}}{6 forced choices between 2 options; each pair differs in salary and two attributes, the rest held at the respondent's own practice. Pay differs by 17--33\% between the options.}\\
-    \bottomrule
-  \end{tabularx}\par}
-  \SourceNote{Employers were told both candidates are equally qualified.}
-  \BackTo{M-design}{Design}
-\end{frame}
-
 % [H1] FWAs sit in better-paid jobs; usable only as sorting, never as a price
 
 \BackupTab{B-hedonic}{Pay data cannot price flexibility}{T_hedonic}{M-design}{Design}{Log current pay on current arrangement, with controls (N = 991 employed PMEs).}
@@ -1469,13 +1444,22 @@ Next, what PMEs and firms do today.}
     \item \textbf{Rankings hold best:} direction right and, in one direct test, relative size; our ranking is the firmest result.
     \item \textbf{Levels less so:} rates predicted less well, money values mixed; our \% of pay values are indicative.
     % [S6] every pay gap 17-33%
-    \item \textbf{Our design:} one cross-section; pay gaps of 17--33\% only; no link yet to behaviour.
+    \item \textbf{Our design:} one cross-section; pay gaps of 17--33\% only; no link yet to behaviour (\hyperlink{B-dominance}{\textcolor{Navy}{dominance check}}).
   \end{itemize}
   \vspace{0.10cm}
   % COMMENTS B-validity, verbatim closing line; the follow-up covers PMEs only, with no employer consent [F1, F2]
   {\fontsize{9}{11}\selectfont\RaggedRight\color{Ink}\textbf{No cited study validates employer hiring choices of this form;\\ our \hyperlink{B-followup}{\textcolor{Navy}{follow-up}} addresses only part of that gap.}\par}
   % [V1] split by amenity status; averages across 12 amenities
   \BackToTwo{B-estimation}{Estimation}{B-robust}{Robustness}
+\end{frame}
+
+\begin{frame}[t,label=B-dominance]{Dominance check: choices rise with pay, as the model predicts}
+  % port of code_final.do "Dominance test" (scripts/pme_dominance.py): 3,150 of 6,120 choice sets have one option better on both non-salary attributes shown
+  \FrameTop
+  \Fig{F_dominance}{4.6cm}
+  \Interp{The better job is chosen more as its pay advantage grows (25--40\% $\rightarrow$ 79--86\%), as modelled.}
+  \SourceNote{Choice sets where one job is better on both non-salary attributes shown (3,150 of 6,120); x-axis: its salary minus the other job's, log points. Better = fully remote $>$ 3--4 $>$ 1--2 days $>$ onsite; compressed $>$ staggered $>$ fixed; part-time $>$ job sharing $>$ full time; low $>$ moderate $>$ high risk; collaborative $>$ autonomous $>$ mixed $>$ hierarchical; short $>$ moderate $>$ long commute.}
+  \BackToTwo{B-validity}{Validity}{B-estimation}{Estimation}
 \end{frame}
 
 % ==========================================================================
