@@ -244,3 +244,6 @@ Earlier draft, kept here: (1) Trial the compressed week with volunteer firms, in
 - M-discussion: three rows, each with a concrete action, the result it rests on and how to track it: A trial the compressed week in volunteer firms' written FWA policies (SNEF runs, evaluated); B check roles for on-site need in FWA guidance, start with 1-2 WFH days where none (employer cut 49% vs 3%); C reach juniors through company policies and train HR/managers (access 80 vs 94, familiarity 29 vs 77, 45% career worry).
 - Old D (juniors) merged into B-optC; B-optD deleted. Old E now "Measure what is missing (for next steps)" (B-optE) and "Draft survey items" (B-optD-items) stay as backups; index updated.
 - B-optB corrected: 49% (was 52%) for 1-2 WFH days; compressed week 6% vs 11%, not significant (was "about 1%").
+
+## 2 Nov 2026 - WFH values abroad back in the main flow
+- Backup B-emp-benchmarks moved to the main deck as M-intl-wtp "Our WFH values are at or above estimates abroad", right after M-meet (slide 13); Poland pair in the caption. Buttons and links to B-emp-benchmarks now point to M-intl-wtp; backup index entry kept under the same name. The prevalence slide M-intl stays at slide 3. 85 pages.

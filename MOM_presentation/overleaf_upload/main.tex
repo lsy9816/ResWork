@@ -391,9 +391,9 @@
 
 % Short presentation build (round 5): compile main_short.tex for the 15-frame
 % path below plus every backup; return links to omitted main slides go to the index.
-\def\ShortLabels{M-title,M-motivation,M-intl,M-question,M-benchmark,M-keyfindings,M-design,M-pmes,M-why-pmes,M-employers,M-where,M-meet,M-barriers,M-employer-barriers,M-discussion,M-nextsteps,M-conclusion,M-thanks}
+\def\ShortLabels{M-title,M-motivation,M-intl,M-question,M-benchmark,M-keyfindings,M-design,M-pmes,M-why-pmes,M-employers,M-where,M-meet,M-intl-wtp,M-barriers,M-employer-barriers,M-discussion,M-nextsteps,M-conclusion,M-thanks}
 \ifdefined\ShortPath
-  \includeonlyframes{M-title,M-motivation,M-intl,M-question,M-benchmark,M-keyfindings,M-design,M-pmes,M-why-pmes,M-employers,M-where,M-meet,M-barriers,M-employer-barriers,M-discussion,M-nextsteps,M-conclusion,M-thanks,B-index,B-index-all,B-references,B-emp-benchmarks,B-intl,B-landscape,B-setup,B-sg-reports,B-laboursupply,B-guidelines,B-legal,B-partners,B-triangulation,B-sample,B-industry,B-cards,B-paygaps,B-hedonic,B-estimation,B-methods,B-validity,B-dominance,B-emp-all,B-fwa-table,B-remote-commute,B-groups,B-ra-gender,B-ra-age,B-ra-care,B-ra-role,B-ra-edu,B-size,B-why-pmes,B-access,B-fwa-current,B-modelfree,B-org-salary,B-org-splits,B-org-concerns4,B-org-other,B-org-role,B-org-view,B-career,B-career-who,B-use-att,B-wtp-att,B-level-access,B-awareness,B-approvals,B-requestrate,B-puzzle-main,B-puzzle,B-flexiload,B-pilot,B-robust,B-emp-robust,B-org-robust,B-limits,B-followup,B-optA,B-optB,B-optC,B-optE,B-optD-items}
+  \includeonlyframes{M-title,M-motivation,M-intl,M-question,M-benchmark,M-keyfindings,M-design,M-pmes,M-why-pmes,M-employers,M-where,M-meet,M-intl-wtp,M-barriers,M-employer-barriers,M-discussion,M-nextsteps,M-conclusion,M-thanks,B-index,B-index-all,B-references,B-intl,B-landscape,B-setup,B-sg-reports,B-laboursupply,B-guidelines,B-legal,B-partners,B-triangulation,B-sample,B-industry,B-cards,B-paygaps,B-hedonic,B-estimation,B-methods,B-validity,B-dominance,B-emp-all,B-fwa-table,B-remote-commute,B-groups,B-ra-gender,B-ra-age,B-ra-care,B-ra-role,B-ra-edu,B-size,B-why-pmes,B-access,B-fwa-current,B-modelfree,B-org-salary,B-org-splits,B-org-concerns4,B-org-other,B-org-role,B-org-view,B-career,B-career-who,B-use-att,B-wtp-att,B-level-access,B-awareness,B-approvals,B-requestrate,B-puzzle-main,B-puzzle,B-flexiload,B-pilot,B-robust,B-emp-robust,B-org-robust,B-limits,B-followup,B-optA,B-optB,B-optC,B-optE,B-optD-items}
 \fi
 
 \begin{document}
@@ -446,7 +446,7 @@ That points to three open problems.}
 % ==========================================================================
 % 2b. INTERNATIONAL PREVALENCE   [new, 26 Oct 2026]
 % ==========================================================================
-% Prevalence only (the pay-value benchmarks stay on M-benchmark and B-emp-benchmarks). Not like-for-like: each row has its own
+% Prevalence only (the pay-value benchmarks stay on M-benchmark and M-intl-wtp). Not like-for-like: each row has its own
 % population and definition. Figures taken from search-result snippets of the sources below; the primary pages could not be opened
 % from this environment, so TODO(PI): check each number against its source before presenting.
 %  GSWA (Aksoy, Barrero, Bloom, Davis, Dolls, Zarate; PNAS 122(27), 2025; wfhresearch.com): full-time, college-educated employees,
@@ -480,7 +480,7 @@ That points to three open problems.}
     \bottomrule
   \end{tabularx}\par}
   \SourceNote{Not like-for-like: populations and definitions differ. Aksoy et al.\ 2025 (PNAS); Eurostat LFS; CBS; MOM 2023.}
-  \Backups{\BL{B-references}{Studies} \BL{B-emp-benchmarks}{Benchmarks}}
+  \Backups{\BL{B-references}{Studies} \BL{M-intl-wtp}{Benchmarks}}
 \end{frame}
 \note{[Short path] Flexible work is mainstream in Singapore's firms, but how much remote work do people actually do compared with elsewhere? % [P4s]
 In the Global Survey of Working Arrangements, college-educated full-time employees work from home about 1.2 to 1.3 days a week worldwide, 1.5 to 2 in English-speaking countries and 0.5 to 1 in Asia; Singapore's reading in 2023 was 0.9. % [Aksoy et al. 2025]
@@ -547,7 +547,7 @@ We use a simple map. [Full deck: first, where this sits in the research.]}
 \begin{frame}[t,label=M-benchmark]{What is known, and what this study adds}
   % Table form restored (20 Oct 2026): known so far (columns: workers, employers, Singapore) and what this study adds.
   % [E16, L1] WFH option 4-8% of pay: Maestas et al. 2023 about 4%, Mas & Pallais 2017 8%, Aksoy et al. 2022 Singapore 4.8%;
-  % [R16] Poland, IZA DP 2023: employers expect a larger wage cut than workers would give up (numbers on B-emp-benchmarks);
+  % [R16] Poland, IZA DP 2023: employers expect a larger wage cut than workers would give up (numbers on M-intl-wtp);
   % [P4s] MRSD: 73% of establishments with 25 or more staff offered a scheduled flexible arrangement by mid-2024.
   \FrameTop
   {\FsBody\setlength{\tabcolsep}{6pt}\renewcommand{\arraystretch}{1.18}
@@ -569,7 +569,7 @@ We use a simple map. [Full deck: first, where this sits in the research.]}
     \bottomrule
   \end{tabularx}\par}
   \SourceNote{\textbf{References:} Mas \& Pallais 2017; Maestas et al.\ 2023; Aksoy et al.\ 2022; Lewandowski et al.\ 2023; MRSD 2024; SNEF--SUSS 2025.} % [L1, R16, E16, P4s]
-  \Backups{\BL{B-references}{Studies} \BL{B-emp-benchmarks}{Benchmarks} \BL{B-intl}{Trials}}
+  \Backups{\BL{B-references}{Studies} \BL{M-intl-wtp}{Benchmarks} \BL{B-intl}{Trials}}
 \end{frame}
 \note{[Draft; the literature table is now a backup] Abroad, workers give up about 4 to 8 per cent of pay for a work-from-home option; a 27-country survey puts Singapore at 4.8 per cent. % [E16, L1]
 A Polish study found workers would give up about 3 per cent, while employers expect a 21 per cent wage cut. % [R16]
@@ -731,7 +731,7 @@ Now the results, starting with PMEs. [Full deck: ``Next, how we turn these choic
   \FigC{F_emp_wtp}
   % [E1, E2] 1-2 days 7.4, 3-4 days 9.5 -> about 7-10%; [S6] pay gaps 17-33% by design (mandated wording kept)
   \Interp{PMEs value remote work most, and more with each extra day.\\ A compressed week is worth as much as 1--2 days at home; staggered hours are not valued.}
-  \Backups{\BL{B-emp-benchmarks}{Benchmarks} \BL{B-emp-robust}{Checks} \BL{B-groups}{PME groups} \BL{B-size}{By size}}
+  \Backups{\BL{M-intl-wtp}{Benchmarks} \BL{B-emp-robust}{Checks} \BL{B-groups}{PME groups} \BL{B-size}{By size}}
   % Note: F_emp_wtp's former footnote, verbatim, for the starred job-sharing and part-time rows [E6, E7].
   % Polish pass: "Conditional logit" leaves the source line (DESIGN_PLAN s2 W3; M-estimation and B-methods
   % carry the method). One line at 7.5 pt, 406 of 421 pt: the source names the survey, its size and month,
@@ -818,6 +818,21 @@ For one to two WFH days, PMEs would give up 7 per cent and employers would requi
 SNEF and volunteer firms could test the compressed week first. So why is it rare? % implication (who could act) and transition to M-puzzle (short path)
 [If asked: the gap is employers' required cut minus PMEs' accepted cut, so positive means friction.]
 Next, what do employers worry about, and does it change what they ask?}
+
+% WFH values abroad (26 Oct 2026, PI): moved from the backups (was B-emp-benchmarks) to after the values results.
+% [E16, L1] 4.2 Maestas, about 5 and 4.8 Aksoy, 8 Barrero-Bloom-Davis, 8 Mas-Pallais; [R16] Poland 2.9 vs 21 (IZA DP 2023, pooled); ILR 2026: 5.2 hybrid, 24.6 remote
+\begin{frame}[t,label=M-intl-wtp]{Our WFH values are at or above estimates abroad}
+  \FrameTop
+  \Fig{F_benchmarks}{4.5cm}
+  \Interp{Abroad, workers give up about 4--8\% of pay for WFH (two studies asked about 2--3 days); in Poland, employers expect a 21\% wage cut, workers 2.9\%.}
+  \SourceNote{Not like-for-like: populations, methods and definitions differ.}
+  \Backups{\BL{B-references}{Studies} \BL{B-intl}{Trials}}
+\end{frame}
+\note{[Short path] How do these values compare with studies elsewhere? Abroad, workers give up about 4 to 8 per cent of pay for a work-from-home option; two of the studies asked about two to three days a week, and a 27-country survey puts Singapore at 4.8 per cent. % [E16, L1]
+Our PME values, about 7 per cent for one to two days and 10 for three to four, sit at or above those estimates. % [E1, E2]
+In Poland, employers expected a 21 per cent wage cut while workers would give up 2.9 per cent: the same direction as our employers, who expect a larger cut than PMEs would give up. % [R16]
+The comparisons are not like-for-like.
+}
 
 
 % ==========================================================================
@@ -1081,7 +1096,7 @@ B and C are exploratory: the presence result comes from the employer survey alon
   \begin{columns}[T,onlytextwidth]
     \begin{column}{0.32\textwidth}
       \BH{Background}
-      \mbox{\BIi{B-references}{Studies}}\enspace \textcolor{Muted}{$\cdot$}\enspace \mbox{\BIi{B-emp-benchmarks}{Benchmarks}}\par
+      \mbox{\BIi{B-references}{Studies}}\enspace \textcolor{Muted}{$\cdot$}\enspace \mbox{\BIi{M-intl-wtp}{Benchmarks}}\par
       \mbox{\BIi{B-intl}{Evidence abroad}}\enspace \textcolor{Muted}{$\cdot$}\enspace \mbox{\BIi{B-legal}{Rules abroad}}\par
       \mbox{\BIi{B-landscape}{Landscape}}\enspace \textcolor{Muted}{$\cdot$}\enspace \mbox{\BIi{B-setup}{Pathways}}\enspace \textcolor{Muted}{$\cdot$}\enspace \mbox{\BIi{B-sg-reports}{Surveys}}\par
       \mbox{\BIi{B-laboursupply}{Labour supply}}\enspace \textcolor{Muted}{$\cdot$}\enspace \mbox{\BIi{B-guidelines}{Guidelines}}\par
@@ -1165,7 +1180,7 @@ B and C are exploratory: the presence result comes from the employer survey alon
     SNEF--SUSS report (2025) & Singapore employers & Practices, benefits and drawbacks; no pay trade-offs\\
     \bottomrule
   \end{tabularx}\par}
-  \BackToTwo{M-benchmark}{Literature}{B-emp-benchmarks}{Estimates abroad}
+  \BackToTwo{M-benchmark}{Literature}{M-intl-wtp}{Estimates abroad}
 \end{frame}
 
 
@@ -1174,14 +1189,6 @@ B and C are exploratory: the presence result comes from the employer survey alon
 % Card: PME version, Scenario 1 layout (salary, location and schedule varied; workload, job security,
 % workplace culture and commute time held at the respondent's own practice) [S5, S7]. Example pay: own pay
 % x 1.10 and x 0.90, shown here as +10% / -10% [S6b]; the instrument showed a monthly S$ amount [S6].
-
-\begin{frame}[t,label=B-emp-benchmarks]{Our WFH values are at or above estimates abroad}
-  % [E16, L1] 4.2 Maestas, about 5 and 4.8 Aksoy, 8 Barrero-Bloom-Davis, 8 Mas-Pallais; [R16] 2.9 vs 21 (IZA DP 2023, pooled); ILR 2026: 5.2 hybrid, 24.6 remote
-  \FrameTop
-  \Fig{F_benchmarks}{4.5cm}
-  \SourceNote{Not like-for-like: populations, methods and definitions differ.}
-  \BackToTwo{M-pmes}{PMEs}{B-references}{Studies}
-\end{frame}
 
 \begin{frame}[t,label=B-intl]{Evidence elsewhere: concerns and trials}
   \FrameTop
