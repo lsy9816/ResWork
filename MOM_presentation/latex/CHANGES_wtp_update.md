@@ -338,3 +338,5 @@ Earlier draft, kept here: (1) Trial the compressed week with volunteer firms, in
 ## 2 Nov 2026 - backup review, round 4 (70 pages)
 - Removed B-access ("Valued more where offered? Not robust"), B-fwa-current ("Current users value part-time and staggered hours more") and B-followup ("Follow-up design"): optional, and the follow-up design no longer matches the Next steps cards (matched panel, tracking, manager guide trial). The Follow-up button on slide 21 and the matching index entries removed; the validity slide now says "our next steps address part of that gap". tables/T_access.tex and T_fwa_current.tex deleted from the upload folder.
 - Kept: B-fwa-table (numbers), B-pilot, B-optA, B-optB, B-optC.
+
+- B-limits: rows "60 design cells" and "Compressed week" removed, "task-1 coding" dropped from the note (five limits remain).
