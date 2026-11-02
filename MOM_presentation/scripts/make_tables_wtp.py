@@ -11,7 +11,7 @@ import pandas as pd
 MOM = Path(__file__).resolve().parents[1]
 OUT = Path(sys.argv[1])
 D = pd.read_csv(MOM / "data" / "wtp_deck.csv")
-M = r"\textcolor{Muted}{%s}"
+M = r"%s"   # no grey: the "grey = indicative" convention was dropped (2 Nov 2026)
 
 
 def r0(x):
@@ -107,14 +107,12 @@ cols = [("Main", "main"), ("Excl.\\ outliers", "excl_salary_out"), ("1\\% trim",
 RR = [("1--2 days WFH", "p1"), ("3--4 days WFH", "p2"), ("Fully remote", "p3"), ("Compressed week", "t2"),
       ("Staggered hours", "t1"), ("Job sharing", "l1"), ("Part-time", "l2")]
 ns = {c: int(row("pme", "p1", c).n) for _, c in cols}
-rows = [["N"] + [f"{ns[c]:,}" for _, c in cols] + ["1,020"], "MID"]
+rows = [["N"] + [f"{ns[c]:,}" for _, c in cols], "MID"]
 for lab, it in RR:
-    vc = row("pme", it, "version_cluster")
-    rows.append([lab] + [M % ("\\ensuremath{\\approx}" + r1(row("pme", it, c).giveup)) for _, c in cols] +
-                [M % f"{r0(vc.lb)}--{r0(vc.ub)}"])
-w = [3.20, 1.30, 1.55, 1.30, 1.55, 1.50, 1.45]
-write("T_emp_robust", "B-emp-robust", tab(w, "lrrrrrr", ["", *[h for h, _ in cols], "Version CI"], rows,
-    "\\% of pay given up. Version CI: 95\\% CI clustered by survey version.", total=14.40))
+    rows.append([lab] + [M % ("\\ensuremath{\\approx}" + r1(row("pme", it, c).giveup)) for _, c in cols])
+w = [3.20, 1.30, 1.55, 1.30, 1.55, 1.50]
+write("T_emp_robust", "B-emp-robust", tab(w, "lrrrrr", ["", *[h for h, _ in cols]], rows,
+    "\\% of pay given up.", total=12.40))
 
 # ---- T_org_robust: B-org-robust (employers)
 cols = [("Main", "main"), ("Excl.\\ outliers", "excl_salary_out"), ("1\\% trim", "trim1pct"), ("Excl.\\ same-side", "same_side")]

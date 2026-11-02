@@ -355,3 +355,9 @@ Earlier draft, kept here: (1) Trial the compressed week with volunteer firms, in
 - Inline text links in notes removed everywhere (career penalty pair, request outcomes "why", pilot checklist, flexi-load, by level, dominance check): cross-references are buttons or the index only. The A, B, C letters in Policy directions stay.
 - Buttons: slide 3 no longer links to WTP benchmarks (use only); slides 15 and 16 no longer link to the employer-view backup (only slide 14 does).
 - "Agree = 4-5 of 5" notes now always carry "neutral or disagree = 1-3".
+
+## 2 Nov 2026 - third audit pass (formatting conventions and technical leftovers)
+- "Grey = indicative" dropped: grey cell text removed from T_flexiload, T_hedonic, T_emp_robust, T_org_robust, T_fwa_diag and the legend lines deleted; scripts/make_tables_wtp.py no longer writes grey.
+- Technical leftovers removed: "Version CI" column (T_emp_robust) and "Version clusters" row (T_robust_main); "Rank pay model" now "Alternative pay model: same ranking"; the "60 choice situations" sentence in the robustness note. Unused tables T_modelfree and T_org_salary deleted.
+- F_org_view (employer view backup): value labels of short bars (5%, 6%) moved to the right of the marker (patch in scripts/fig_backup_wtp.py).
+- Checked and clean: text inside all 34 figures, all inline text links, all buttons and their targets, "Agree = 4-5" definitions, speaker notes (no 33%, appended, Lucid, 397), p-value and jargon scan of the compiled PDF.

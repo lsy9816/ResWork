@@ -33,6 +33,13 @@ def load_patched(modname, reps):
 
 # ---------------------------------------------------------------------------------------------------------------
 FB_REPS = [
+    # F_org_view: the value label of a short bar sits to the right of its marker (it was white text inside the bar, hidden by the diamond)
+    ('        axl.text(0.7, y, f"{fmt(v)}%", ha="left", va="center", fontsize=FS_SMALL, color="white", fontweight="bold",\n'
+     '                 zorder=3)\n',
+     '        if v >= 12:\n'
+     '            axl.text(0.7, y, f"{fmt(v)}%", ha="left", va="center", fontsize=FS_SMALL, color="white", fontweight="bold", zorder=3)\n'
+     '        else:\n'
+     '            axl.text(max(v, vs) + 1.9, y, f"{fmt(v)}%", ha="left", va="center", fontsize=FS_SMALL, color=S.EMPLOYER, fontweight="bold", zorder=3)\n'),
     # F_benchmarks: Aksoy's question was about 2-3 WFH days a week (EVIDENCE_BOOK E16)
     ('f"{aksoy_n} countries"', 'f"{aksoy_n} countries, 2–3 days"'),
     # F_landscape: no [excl. one panel] anywhere
@@ -169,6 +176,7 @@ def run_patched():
     for n in ("fig_landscape", "fig_awareness", "fig_career", "fig_approvals_two", "fig_sample", "fig_benchmarks", "fig_paygaps"):
         out["F_" + n[4:]] = getattr(fb, n)
     out["F_career_who"] = v2.fig_career_who
+    out["F_org_view"] = fb.fig_org_view
     out["F_motivation"] = v2.fig_motivation
     for sheet, groups, nm, rob in fb.RA_FIGS[:5]:
         out[nm] = (lambda sheet=sheet, groups=groups, nm=nm, rob=rob: fb.fig_ra(sheet, groups, nm, rob))
