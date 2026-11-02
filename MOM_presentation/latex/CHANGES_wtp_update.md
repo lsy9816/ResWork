@@ -306,3 +306,6 @@ Earlier draft, kept here: (1) Trial the compressed week with volunteer firms, in
 ## 2 Nov 2026 - more backup clean-up (78 pages)
 - T_emp_all (B-emp-all): "Collaborative culture" row removed.
 - B-ra-gender, B-ra-age, B-ra-care removed: B-groups (differences with intervals for gender, age, caregiving) is kept; role and education backups stay because B-groups does not cover them. figures/F_ra_gender, F_ra_age, F_ra_care deleted from the upload folder (scripts/fig_backup_wtp.py can regenerate them).
+
+## 2 Nov 2026 - gender, age and caregiving backups restored (81 pages)
+- B-ra-gender, B-ra-age, B-ra-care and their figures put back (PI: keep both the differences, B-groups, and the group-by-group levels). T_emp_all stays without the culture row.

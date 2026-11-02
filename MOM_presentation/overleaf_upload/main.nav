@@ -160,10 +160,16 @@
 \headcommand {\beamer@framepages {77}{77}}
 \headcommand {\slideentry {0}{0}{78}{78/78}{}{1}}
 \headcommand {\beamer@framepages {78}{78}}
-\headcommand {\beamer@partpages {23}{78}}
-\headcommand {\beamer@subsectionpages {23}{78}}
-\headcommand {\beamer@sectionpages {23}{78}}
-\headcommand {\beamer@documentpages {78}}
-\headcommand {\gdef \inserttotalframenumber {56}}
+\headcommand {\slideentry {0}{0}{79}{79/79}{}{1}}
+\headcommand {\beamer@framepages {79}{79}}
+\headcommand {\slideentry {0}{0}{80}{80/80}{}{1}}
+\headcommand {\beamer@framepages {80}{80}}
+\headcommand {\slideentry {0}{0}{81}{81/81}{}{1}}
+\headcommand {\beamer@framepages {81}{81}}
+\headcommand {\beamer@partpages {23}{81}}
+\headcommand {\beamer@subsectionpages {23}{81}}
+\headcommand {\beamer@sectionpages {23}{81}}
+\headcommand {\beamer@documentpages {81}}
+\headcommand {\gdef \inserttotalframenumber {59}}
 \headcommand {\gdef \inserttotalframenumber {22}}
-\headcommand {\gdef \appendixtotalframenumber {56}}
+\headcommand {\gdef \appendixtotalframenumber {59}}
