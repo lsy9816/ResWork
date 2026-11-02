@@ -1141,7 +1141,7 @@ LaTeX Font Info:    Font shape `T1/phv/m/n' will be
  [6
 
 ]
-<figures/F_sample_m.pdf, id=92, 369.88583pt x 170.71654pt>
+<figures/F_sample_m.pdf, id=90, 369.88583pt x 170.71654pt>
 File: figures/F_sample_m.pdf Graphic file (type pdf)
 <use figures/F_sample_m.pdf>
 Package pdftex.def Info: figures/F_sample_m.pdf  used on input line 612.
@@ -1150,7 +1150,7 @@ Package pdftex.def Info: figures/F_sample_m.pdf  used on input line 612.
 [7
 
  <./figures/F_sample_m.pdf>]
-<figures/F_use_m.pdf, id=118, 369.88583pt x 139.4185pt>
+<figures/F_use_m.pdf, id=116, 369.88583pt x 139.4185pt>
 File: figures/F_use_m.pdf Graphic file (type pdf)
 <use figures/F_use_m.pdf>
 Package pdftex.def Info: figures/F_use_m.pdf  used on input line 640.
@@ -1191,7 +1191,7 @@ LaTeX Font Info:    Font shape `T1/phv/b/n' will be
  [9
 
 {/usr/share/texmf/fonts/enc/dvips/lm/lm-mathit.enc}]
-<figures/F_emp_wtp.pdf, id=156, 369.88583pt x 150.7996pt>
+<figures/F_emp_wtp.pdf, id=154, 369.88583pt x 150.7996pt>
 File: figures/F_emp_wtp.pdf Graphic file (type pdf)
 <use figures/F_emp_wtp.pdf>
 Package pdftex.def Info: figures/F_emp_wtp.pdf  used on input line 731.
@@ -1199,7 +1199,7 @@ Package pdftex.def Info: figures/F_emp_wtp.pdf  used on input line 731.
  [10
 
  <./figures/F_emp_wtp.pdf>]
-<figures/F_org_wtp.pdf, id=180, 369.88583pt x 150.7996pt>
+<figures/F_org_wtp.pdf, id=178, 369.88583pt x 150.7996pt>
 File: figures/F_org_wtp.pdf Graphic file (type pdf)
 <use figures/F_org_wtp.pdf>
 Package pdftex.def Info: figures/F_org_wtp.pdf  used on input line 765.
@@ -1207,7 +1207,7 @@ Package pdftex.def Info: figures/F_org_wtp.pdf  used on input line 765.
  [11
 
  <./figures/F_org_wtp.pdf>]
-<figures/F_gap_m.pdf, id=200, 369.88583pt x 145.10905pt>
+<figures/F_gap_m.pdf, id=198, 369.88583pt x 145.10905pt>
 File: figures/F_gap_m.pdf Graphic file (type pdf)
 <use figures/F_gap_m.pdf>
 Package pdftex.def Info: figures/F_gap_m.pdf  used on input line 803.
@@ -1215,7 +1215,7 @@ Package pdftex.def Info: figures/F_gap_m.pdf  used on input line 803.
  [12
 
  <./figures/F_gap_m.pdf>]
-<figures/F_benchmarks.pdf, id=219, 412.56496pt x 128.0374pt>
+<figures/F_benchmarks.pdf, id=217, 412.56496pt x 128.0374pt>
 File: figures/F_benchmarks.pdf Graphic file (type pdf)
 <use figures/F_benchmarks.pdf>
 Package pdftex.def Info: figures/F_benchmarks.pdf  used on input line 819.
@@ -1227,7 +1227,7 @@ LaTeX Font Info:    Font shape `T1/phv/m/sl' will be
  [13
 
  <./figures/F_benchmarks.pdf>]
-<figures/F_fwa_challenge_m.pdf, id=245, 369.88583pt x 142.26378pt>
+<figures/F_fwa_challenge_m.pdf, id=243, 369.88583pt x 142.26378pt>
 File: figures/F_fwa_challenge_m.pdf Graphic file (type pdf)
 <use figures/F_fwa_challenge_m.pdf>
 Package pdftex.def Info: figures/F_fwa_challenge_m.pdf  used on input line 835.
@@ -1236,7 +1236,7 @@ Package pdftex.def Info: figures/F_fwa_challenge_m.pdf  used on input line 835.
  [14
 
  <./figures/F_fwa_challenge_m.pdf>]
-<figures/F_org_concerns_m.pdf, id=270, 369.88583pt x 142.26378pt>
+<figures/F_org_concerns_m.pdf, id=268, 369.88583pt x 142.26378pt>
 File: figures/F_org_concerns_m.pdf Graphic file (type pdf)
 <use figures/F_org_concerns_m.pdf>
 Package pdftex.def Info: figures/F_org_concerns_m.pdf  used on input line 848.
@@ -1244,7 +1244,7 @@ Package pdftex.def Info: figures/F_org_concerns_m.pdf  used on input line 848.
  [15
 
  <./figures/F_org_concerns_m.pdf>]
-<figures/F_where_pres_m.pdf, id=296, 369.88583pt x 156.49016pt>
+<figures/F_where_pres_m.pdf, id=294, 369.88583pt x 156.49016pt>
 File: figures/F_where_pres_m.pdf Graphic file (type pdf)
 <use figures/F_where_pres_m.pdf>
 Package pdftex.def Info: figures/F_where_pres_m.pdf  used on input line 860.
@@ -1253,7 +1253,7 @@ Package pdftex.def Info: figures/F_where_pres_m.pdf  used on input line 860.
 [16
 
  <./figures/F_where_pres_m.pdf>]
-<figures/F_barriers_r5.pdf, id=318, 369.88583pt x 142.26378pt>
+<figures/F_barriers_r5.pdf, id=316, 369.88583pt x 142.26378pt>
 File: figures/F_barriers_r5.pdf Graphic file (type pdf)
 <use figures/F_barriers_r5.pdf>
 Package pdftex.def Info: figures/F_barriers_r5.pdf  used on input line 896.
@@ -1261,7 +1261,7 @@ Package pdftex.def Info: figures/F_barriers_r5.pdf  used on input line 896.
  [17
 
  <./figures/F_barriers_r5.pdf>]
-<figures/F_why_pmes.pdf, id=347, 369.88583pt x 142.26378pt>
+<figures/F_why_pmes.pdf, id=345, 369.88583pt x 142.26378pt>
 File: figures/F_why_pmes.pdf Graphic file (type pdf)
 <use figures/F_why_pmes.pdf>
 Package pdftex.def Info: figures/F_why_pmes.pdf  used on input line 914.
@@ -1438,7 +1438,7 @@ LaTeX Font Info:    Font shape `T1/phv/m/sl' will be
 ] [30
 
 ]
-<figures/F_sample.pdf, id=609, 412.56496pt x 147.95433pt>
+<figures/F_sample.pdf, id=607, 412.56496pt x 147.95433pt>
 File: figures/F_sample.pdf Graphic file (type pdf)
 <use figures/F_sample.pdf>
 Package pdftex.def Info: figures/F_sample.pdf  used on input line 1328.
@@ -1446,7 +1446,7 @@ Package pdftex.def Info: figures/F_sample.pdf  used on input line 1328.
  [31
 
  <./figures/F_sample.pdf>]
-<figures/F_industry.pdf, id=636, 412.56496pt x 147.95433pt>
+<figures/F_industry.pdf, id=634, 412.56496pt x 147.95433pt>
 File: figures/F_industry.pdf Graphic file (type pdf)
 <use figures/F_industry.pdf>
 Package pdftex.def Info: figures/F_industry.pdf  used on input line 1330.
@@ -1456,7 +1456,7 @@ Package pdftex.def Info: figures/F_industry.pdf  used on input line 1330.
  <./figures/F_industry.pdf>] [33
 
 ]
-<figures/F_paygaps.pdf, id=671, 412.56496pt x 128.0374pt>
+<figures/F_paygaps.pdf, id=669, 412.56496pt x 128.0374pt>
 File: figures/F_paygaps.pdf Graphic file (type pdf)
 <use figures/F_paygaps.pdf>
 Package pdftex.def Info: figures/F_paygaps.pdf  used on input line 1364.
@@ -1499,7 +1499,7 @@ LaTeX Font Info:    Font shape `T1/phv/m/sl' will be
 {/usr/share/texmf/fonts/enc/dvips/lm/lm-mathex.enc}] [38
 
 ]
-<figures/F_dominance.pdf, id=741, 341.43306pt x 147.95433pt>
+<figures/F_dominance.pdf, id=739, 341.43306pt x 147.95433pt>
 File: figures/F_dominance.pdf Graphic file (type pdf)
 <use figures/F_dominance.pdf>
 Package pdftex.def Info: figures/F_dominance.pdf  used on input line 1528.
@@ -1514,7 +1514,7 @@ Package pdftex.def Info: figures/F_dominance.pdf  used on input line 1528.
 ] [42
 
 ]
-<figures/F_groups_diff.pdf, id=790, 412.56496pt x 142.26378pt>
+<figures/F_groups_diff.pdf, id=788, 412.56496pt x 142.26378pt>
 File: figures/F_groups_diff.pdf Graphic file (type pdf)
 <use figures/F_groups_diff.pdf>
 Package pdftex.def Info: figures/F_groups_diff.pdf  used on input line 1577.
@@ -1522,7 +1522,7 @@ Package pdftex.def Info: figures/F_groups_diff.pdf  used on input line 1577.
  [43
 
  <./figures/F_groups_diff.pdf>]
-<figures/F_ra_gender.pdf, id=815, 412.56496pt x 153.64488pt>
+<figures/F_ra_gender.pdf, id=813, 412.56496pt x 153.64488pt>
 File: figures/F_ra_gender.pdf Graphic file (type pdf)
 <use figures/F_ra_gender.pdf>
 Package pdftex.def Info: figures/F_ra_gender.pdf  used on input line 1587.
@@ -1530,7 +1530,7 @@ Package pdftex.def Info: figures/F_ra_gender.pdf  used on input line 1587.
  [44
 
  <./figures/F_ra_gender.pdf>]
-<figures/F_ra_age.pdf, id=833, 412.56496pt x 153.64488pt>
+<figures/F_ra_age.pdf, id=831, 412.56496pt x 153.64488pt>
 File: figures/F_ra_age.pdf Graphic file (type pdf)
 <use figures/F_ra_age.pdf>
 Package pdftex.def Info: figures/F_ra_age.pdf  used on input line 1591.
@@ -1538,7 +1538,7 @@ Package pdftex.def Info: figures/F_ra_age.pdf  used on input line 1591.
  [45
 
  <./figures/F_ra_age.pdf>]
-<figures/F_ra_care.pdf, id=851, 412.56496pt x 153.64488pt>
+<figures/F_ra_care.pdf, id=849, 412.56496pt x 153.64488pt>
 File: figures/F_ra_care.pdf Graphic file (type pdf)
 <use figures/F_ra_care.pdf>
 Package pdftex.def Info: figures/F_ra_care.pdf  used on input line 1595.
@@ -1546,7 +1546,7 @@ Package pdftex.def Info: figures/F_ra_care.pdf  used on input line 1595.
  [46
 
  <./figures/F_ra_care.pdf>]
-<figures/F_ra_role.pdf, id=870, 412.56496pt x 153.64488pt>
+<figures/F_ra_role.pdf, id=868, 412.56496pt x 153.64488pt>
 File: figures/F_ra_role.pdf Graphic file (type pdf)
 <use figures/F_ra_role.pdf>
 Package pdftex.def Info: figures/F_ra_role.pdf  used on input line 1599.
@@ -1554,7 +1554,7 @@ Package pdftex.def Info: figures/F_ra_role.pdf  used on input line 1599.
  [47
 
  <./figures/F_ra_role.pdf>]
-<figures/F_ra_edu.pdf, id=888, 412.56496pt x 153.64488pt>
+<figures/F_ra_edu.pdf, id=886, 412.56496pt x 153.64488pt>
 File: figures/F_ra_edu.pdf Graphic file (type pdf)
 <use figures/F_ra_edu.pdf>
 Package pdftex.def Info: figures/F_ra_edu.pdf  used on input line 1603.
@@ -1562,7 +1562,7 @@ Package pdftex.def Info: figures/F_ra_edu.pdf  used on input line 1603.
  [48
 
  <./figures/F_ra_edu.pdf>]
-<figures/F_size.pdf, id=906, 412.56496pt x 182.09764pt>
+<figures/F_size.pdf, id=904, 412.56496pt x 182.09764pt>
 File: figures/F_size.pdf Graphic file (type pdf)
 <use figures/F_size.pdf>
 Package pdftex.def Info: figures/F_size.pdf  used on input line 1610.
@@ -1580,7 +1580,7 @@ Package pdftex.def Info: figures/F_size.pdf  used on input line 1610.
 (./tables/T_org_salary.tex) [53
 
 ]
-<figures/F_org_splits.pdf, id=971, 412.56496pt x 153.64488pt>
+<figures/F_org_splits.pdf, id=969, 412.56496pt x 153.64488pt>
 File: figures/F_org_splits.pdf Graphic file (type pdf)
 <use figures/F_org_splits.pdf>
 Package pdftex.def Info: figures/F_org_splits.pdf  used on input line 1645.
@@ -1588,7 +1588,7 @@ Package pdftex.def Info: figures/F_org_splits.pdf  used on input line 1645.
  [54
 
  <./figures/F_org_splits.pdf>]
-<figures/F_org_concerns4_m.pdf, id=997, 369.88583pt x 159.33543pt>
+<figures/F_org_concerns4_m.pdf, id=994, 369.88583pt x 159.33543pt>
 File: figures/F_org_concerns4_m.pdf Graphic file (type pdf)
 <use figures/F_org_concerns4_m.pdf>
 Package pdftex.def Info: figures/F_org_concerns4_m.pdf  used on input line 1647
@@ -1597,7 +1597,7 @@ Package pdftex.def Info: figures/F_org_concerns4_m.pdf  used on input line 1647
  [55
 
  <./figures/F_org_concerns4_m.pdf>]
-<figures/F_org_other.pdf, id=1023, 412.56496pt x 130.88269pt>
+<figures/F_org_other.pdf, id=1021, 412.56496pt x 130.88269pt>
 File: figures/F_org_other.pdf Graphic file (type pdf)
 <use figures/F_org_other.pdf>
 Package pdftex.def Info: figures/F_org_other.pdf  used on input line 1651.
@@ -1605,7 +1605,7 @@ Package pdftex.def Info: figures/F_org_other.pdf  used on input line 1651.
  [56
 
  <./figures/F_org_other.pdf>]
-<figures/F_org_role.pdf, id=1048, 369.88583pt x 165.02599pt>
+<figures/F_org_role.pdf, id=1046, 369.88583pt x 165.02599pt>
 File: figures/F_org_role.pdf Graphic file (type pdf)
 <use figures/F_org_role.pdf>
 Package pdftex.def Info: figures/F_org_role.pdf  used on input line 1658.
@@ -1613,7 +1613,7 @@ Package pdftex.def Info: figures/F_org_role.pdf  used on input line 1658.
  [57
 
  <./figures/F_org_role.pdf>]
-<figures/F_org_view.pdf, id=1067, 412.61047pt x 147.95433pt>
+<figures/F_org_view.pdf, id=1065, 412.61047pt x 147.95433pt>
 File: figures/F_org_view.pdf Graphic file (type pdf)
 <use figures/F_org_view.pdf>
 Package pdftex.def Info: figures/F_org_view.pdf  used on input line 1667.
@@ -1621,7 +1621,7 @@ Package pdftex.def Info: figures/F_org_view.pdf  used on input line 1667.
  [58
 
  <./figures/F_org_view.pdf>]
-<figures/F_career.pdf, id=1094, 412.6994pt x 133.72795pt>
+<figures/F_career.pdf, id=1092, 412.6994pt x 133.72795pt>
 File: figures/F_career.pdf Graphic file (type pdf)
 <use figures/F_career.pdf>
 Package pdftex.def Info: figures/F_career.pdf  used on input line 1675.
@@ -1629,7 +1629,7 @@ Package pdftex.def Info: figures/F_career.pdf  used on input line 1675.
  [59
 
  <./figures/F_career.pdf>]
-<figures/F_career_who.pdf, id=1121, 398.3386pt x 130.88269pt>
+<figures/F_career_who.pdf, id=1119, 398.3386pt x 130.88269pt>
 File: figures/F_career_who.pdf Graphic file (type pdf)
 <use figures/F_career_who.pdf>
 Package pdftex.def Info: figures/F_career_who.pdf  used on input line 1687.
@@ -1638,7 +1638,7 @@ Package pdftex.def Info: figures/F_career_who.pdf  used on input line 1687.
 [60
 
  <./figures/F_career_who.pdf>]
-<figures/F_use_att.pdf, id=1149, 412.56496pt x 170.71654pt>
+<figures/F_use_att.pdf, id=1147, 412.56496pt x 170.71654pt>
 File: figures/F_use_att.pdf Graphic file (type pdf)
 <use figures/F_use_att.pdf>
 Package pdftex.def Info: figures/F_use_att.pdf  used on input line 1689.
@@ -1646,7 +1646,7 @@ Package pdftex.def Info: figures/F_use_att.pdf  used on input line 1689.
  [61
 
  <./figures/F_use_att.pdf>]
-<figures/F_wtp_att.pdf, id=1175, 412.56496pt x 182.09764pt>
+<figures/F_wtp_att.pdf, id=1173, 412.56496pt x 182.09764pt>
 File: figures/F_wtp_att.pdf Graphic file (type pdf)
 <use figures/F_wtp_att.pdf>
 Package pdftex.def Info: figures/F_wtp_att.pdf  used on input line 1691.
@@ -1656,7 +1656,7 @@ Package pdftex.def Info: figures/F_wtp_att.pdf  used on input line 1691.
  <./figures/F_wtp_att.pdf>] [63
 
 ]
-<figures/F_awareness.pdf, id=1210, 412.56496pt x 142.26378pt>
+<figures/F_awareness.pdf, id=1208, 412.56496pt x 142.26378pt>
 File: figures/F_awareness.pdf Graphic file (type pdf)
 <use figures/F_awareness.pdf>
 Package pdftex.def Info: figures/F_awareness.pdf  used on input line 1717.
@@ -1664,7 +1664,7 @@ Package pdftex.def Info: figures/F_awareness.pdf  used on input line 1717.
  [64
 
  <./figures/F_awareness.pdf>]
-<figures/F_approvals_two.pdf, id=1242, 412.58772pt x 130.88269pt>
+<figures/F_approvals_two.pdf, id=1240, 412.58772pt x 130.88269pt>
 File: figures/F_approvals_two.pdf Graphic file (type pdf)
 <use figures/F_approvals_two.pdf>
 Package pdftex.def Info: figures/F_approvals_two.pdf  used on input line 1730.
@@ -1674,7 +1674,7 @@ Package pdftex.def Info: figures/F_approvals_two.pdf  used on input line 1730.
  <./figures/F_approvals_two.pdf>] (./tables/T_requestrate.tex) [66
 
 ]
-<figures/F_puzzle_r5.pdf, id=1277, 369.88583pt x 142.26378pt>
+<figures/F_puzzle_r5.pdf, id=1275, 369.88583pt x 142.26378pt>
 File: figures/F_puzzle_r5.pdf Graphic file (type pdf)
 <use figures/F_puzzle_r5.pdf>
 Package pdftex.def Info: figures/F_puzzle_r5.pdf  used on input line 1756.
@@ -1729,28 +1729,24 @@ Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: 5BCEA9CF7D2D9AECE7CAC4018E9F6C5B;81.
  ) 
 Here is how much of TeX's memory you used:
- 27855 strings out of 476182
- 552541 string characters out of 5795594
+ 27854 strings out of 476182
+ 552531 string characters out of 5795594
  1952975 words of memory out of 5000000
  48912 multiletter control sequences out of 15000+600000
  742784 words of font info for 242 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  101i,16n,107p,1088b,828s stack positions out of 10000i,1000n,20000p,200000b,200000s
-
-pdfTeX warning (dest): name{B-partners} has been referenced but does not exist,
- replaced by a fixed one
-
-</usr/share/texmf/fonts/type1/public/lm/lmex10.pfb></usr/share/texmf/fonts/type
-1/public/lm/lmmi10.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi8.pfb></usr/
-share/texmf/fonts/type1/public/lm/lmmi9.pfb></usr/share/texmf/fonts/type1/publi
-c/lm/lmsy10.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy9.pfb></usr/share/t
-exlive/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/share/texlive/texmf
--dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/share/texlive/texmf-dist/fonts/
-type1/urw/helvetic/uhvro8a.pfb>
-Output written on main.pdf (79 pages, 950293 bytes).
+</usr/share/texmf/fonts/type1/public/lm/lmex10.pfb></usr/share/texmf/fonts/ty
+pe1/public/lm/lmmi10.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi8.pfb></us
+r/share/texmf/fonts/type1/public/lm/lmmi9.pfb></usr/share/texmf/fonts/type1/pub
+lic/lm/lmsy10.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy9.pfb></usr/share
+/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/share/texlive/tex
+mf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/share/texlive/texmf-dist/font
+s/type1/urw/helvetic/uhvro8a.pfb>
+Output written on main.pdf (79 pages, 950035 bytes).
 PDF statistics:
- 1547 PDF objects out of 1728 (max. 8388607)
- 1148 compressed objects within 12 object streams
- 319 named destinations out of 1000 (max. 500000)
+ 1544 PDF objects out of 1728 (max. 8388607)
+ 1145 compressed objects within 12 object streams
+ 318 named destinations out of 1000 (max. 500000)
  236 words of extra memory for PDF output out of 10000 (max. 10000000)
 
