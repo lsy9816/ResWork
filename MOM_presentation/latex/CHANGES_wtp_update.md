@@ -277,3 +277,7 @@ Earlier draft, kept here: (1) Trial the compressed week with volunteer firms, in
 ## 2 Nov 2026 - Barrero, Bloom & Davis (JEP 2023) verified against the paper
 - Barrero, Bloom & Davis (2023), The Evolution of Work from Home, JEP 37(4): 23-50, p. 37: "On average, Americans value the option to work from home two or three days a week at 8 percent of pay, according to data from the Survey of Working Arrangements and Attitudes"; Mas & Pallais find similar estimates for a narrower group. So the 8% (2-3 days, US workers) in F_benchmarks is correct; their 2021 NBER paper (7.2%) is a different paper. The same paper cites Aksoy et al. (2022) for 27 countries and higher WTP among workers with children under 14.
 - B-references: row for Barrero, Bloom & Davis (2023) added.
+
+## 2 Nov 2026 - slide 3 takeaway; Next steps redesigned
+- M-intl (slide 3): one-line interpretation added ("Singapore's WFH use is at the international average. The open question is less how much, more which arrangements fit whom"), leading into M-question; speaker note extended.
+- M-nextsteps redesigned as "Next steps for our research": three cards (1 match firms and their PMEs; 2 follow up our PMEs, the 490 who agreed; 3 evaluate the compressed week in volunteer firms, random half first); "who could lead" removed.
