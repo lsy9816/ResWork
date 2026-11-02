@@ -320,3 +320,8 @@ Earlier draft, kept here: (1) Trial the compressed week with volunteer firms, in
 - Link check: all 286 internal links in the compiled PDF resolve to the intended page.
 
 - B-partners ("Partners' evidence and ours") removed (PI): other surveys are not like-for-like; slide 4 button and index entry removed. The Guidelines backup restored (it was removed by mistake). 79 pages.
+
+## 2 Nov 2026 - technical backups cut for the government audience (75 pages)
+- Removed: B-paygaps ("Every pair differed in pay by 17-33%"), B-methods ("Equations and inference"), B-dominance ("Dominance check"), B-org-salary ("Employers respond less to pay..."). Buttons, index entries and the validity note that pointed to them updated; the pay-gap range stays in B-cards and B-limits.
+- B-cards design row: multipliers removed. B-puzzle: odds-ratio column replaced by plain shares of firms offering the compressed week (with p), PME odds ratio removed.
+- B-partners removed earlier; B-guidelines kept.

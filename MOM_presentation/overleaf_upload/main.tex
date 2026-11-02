@@ -395,7 +395,7 @@
 % path below plus every backup; return links to omitted main slides go to the index.
 \def\ShortLabels{M-title,M-motivation,M-intl,M-question,M-benchmark,M-keyfindings,M-design,M-pmes,M-why-pmes,M-employers,M-where,M-meet,M-intl-wtp,M-barriers,M-employer-barriers,M-discussion,M-nextsteps,M-conclusion,M-thanks}
 \ifdefined\ShortPath
-  \includeonlyframes{M-title,M-motivation,M-intl,M-question,M-benchmark,M-keyfindings,M-design,M-pmes,M-why-pmes,M-employers,M-where,M-meet,M-intl-wtp,M-barriers,M-employer-barriers,M-discussion,M-nextsteps,M-conclusion,M-thanks,B-index,B-index-all,B-references,B-intl,B-setup,B-sg-reports,B-guidelines,B-legal,B-sample,B-industry,B-cards,B-paygaps,B-hedonic,B-estimation,B-methods,B-validity,B-dominance,B-emp-all,B-fwa-table,B-remote-commute,B-groups,B-ra-gender,B-ra-age,B-ra-care,B-ra-role,B-ra-edu,B-size,B-access,B-fwa-current,B-modelfree,B-org-salary,B-org-splits,B-org-concerns4,B-org-other,B-org-role,B-org-view,B-career,B-career-who,B-use-att,B-wtp-att,B-level-access,B-awareness,B-approvals,B-requestrate,B-puzzle-main,B-puzzle,B-flexiload,B-pilot,B-robust,B-emp-robust,B-org-robust,B-limits,B-followup,B-optA,B-optB,B-optC,B-optE}
+  \includeonlyframes{M-title,M-motivation,M-intl,M-question,M-benchmark,M-keyfindings,M-design,M-pmes,M-why-pmes,M-employers,M-where,M-meet,M-intl-wtp,M-barriers,M-employer-barriers,M-discussion,M-nextsteps,M-conclusion,M-thanks,B-index,B-index-all,B-references,B-intl,B-setup,B-sg-reports,B-guidelines,B-legal,B-sample,B-industry,B-cards,B-hedonic,B-estimation,B-validity,B-emp-all,B-fwa-table,B-remote-commute,B-groups,B-ra-gender,B-ra-age,B-ra-care,B-ra-role,B-ra-edu,B-size,B-access,B-fwa-current,B-modelfree,B-org-splits,B-org-concerns4,B-org-other,B-org-role,B-org-view,B-career,B-career-who,B-use-att,B-wtp-att,B-level-access,B-awareness,B-approvals,B-requestrate,B-puzzle-main,B-puzzle,B-flexiload,B-pilot,B-robust,B-emp-robust,B-org-robust,B-limits,B-followup,B-optA,B-optB,B-optC,B-optE}
 \fi
 
 \begin{document}
@@ -1074,8 +1074,6 @@ Third, test a manager guide on role-by-role on-site checks and on handling reque
         \item \BIi{B-career-who}{Is the career risk real?}
         \item \BIi{B-org-splits}{Are reservations about roles or concerns?}
         \item \BIi{B-puzzle}{Is the compressed-week result a design artefact?}
-        % fixer pass 7 Oct 2026 (worker-03): not a pay-cut question
-        \item \BIi{B-org-salary}{Can employer reservations be priced?}
       \end{itemize}
       \vspace{0.16cm}
       {\FsHead\color{Ink}The study\par}
@@ -1107,9 +1105,9 @@ Third, test a manager guide on role-by-role on-site checks and on handling reque
       \mbox{\BIi{B-guidelines}{Guidelines}}\par
       \BH{Data and design}
       \mbox{\BIi{B-sample}{Sample}}\enspace \textcolor{Muted}{$\cdot$}\enspace \mbox{\BIi{B-industry}{Industries}}\par
-      \mbox{\BIi{B-cards}{Choice cards}}\enspace \textcolor{Muted}{$\cdot$}\enspace \mbox{\BIi{B-paygaps}{Pay gaps}}\par
+      \mbox{\BIi{B-cards}{Choice cards}}\par
       \mbox{\BIi{B-hedonic}{Why not pay data}}\enspace \textcolor{Muted}{$\cdot$}\enspace \mbox{\BIi{B-estimation}{Estimation}}\par
-      \mbox{\BIi{B-methods}{Equations}}\enspace \textcolor{Muted}{$\cdot$}\enspace \mbox{\BIi{B-validity}{Validity}}\enspace \textcolor{Muted}{$\cdot$}\enspace \mbox{\BIi{B-dominance}{Dominance}}\par
+      \mbox{\BIi{B-validity}{Validity}}\par
     \end{column}
     \begin{column}{0.35\textwidth}
       \BH{PME values}
@@ -1119,7 +1117,7 @@ Third, test a manager guide on role-by-role on-site checks and on handling reque
       \mbox{\BIi{B-ra-role}{Role}}\enspace \textcolor{Muted}{$\cdot$}\enspace \mbox{\BIi{B-ra-edu}{Education}}\enspace \textcolor{Muted}{$\cdot$}\enspace \mbox{\BIi{B-size}{Size}}\par
       \mbox{\BIi{B-access}{Access}}\enspace \textcolor{Muted}{$\cdot$}\enspace \mbox{\BIi{B-fwa-current}{Users vs others}}\par
       \BH{Employer values}
-      \mbox{\BIi{B-modelfree}{Raw choices}}\enspace \textcolor{Muted}{$\cdot$}\enspace \mbox{\BIi{B-org-salary}{Salary lever}}\par
+      \mbox{\BIi{B-modelfree}{Raw choices}}\par
       \mbox{\BIi{B-org-splits}{All splits}}\enspace \textcolor{Muted}{$\cdot$}\enspace \mbox{\BIi{B-org-concerns4}{Four concerns}}\par
       \mbox{\BIi{B-org-other}{Other traits}}\enspace \textcolor{Muted}{$\cdot$}\enspace \mbox{\BIi{B-org-role}{By respondent}}\enspace \textcolor{Muted}{$\cdot$}\enspace \mbox{\BIi{B-org-view}{Own view}}\par
       \BH{Compressed week}
@@ -1349,18 +1347,11 @@ Third, test a manager guide on role-by-role on-site checks and on handling reque
     \textbf{Other} & Culture; commute & Culture\\
     \midrule
     % [S5] 6 tasks, 2 options; [S6, S6b] multipliers, closest pairs never drawn, 17-33%; 10 versions
-    \textbf{Design} & \multicolumn{2}{>{\raggedright\arraybackslash}p{11.2cm}}{6 forced choices between 2 options; each pair differs in salary and two attributes, the rest held at the respondent's own practice. Multipliers 0.80--0.95 vs 1.05--1.20, closest pairs never drawn: every gap is 17--33\%. 10 versions.}\\
+    \textbf{Design} & \multicolumn{2}{>{\raggedright\arraybackslash}p{11.2cm}}{6 forced choices between 2 options; each pair differs in salary and two attributes, the rest held at the respondent's own practice. Pay differs by 17--33\% between the options.}\\
     \bottomrule
   \end{tabularx}\par}
   \SourceNote{Employers were told both candidates are equally qualified.}
   \BackTo{M-design}{Design}
-\end{frame}
-
-\begin{frame}[t,label=B-paygaps]{Every pair differed in pay by 17--33\%}
-  % [S6, S6b] 17-33%; [E1-E7, E3] PME values about 4-15; [R3] employer remote beyond 33; EB s3b additivity
-  \FrameTop
-  \Fig{F_paygaps}{4.5cm}
-  \BackToTwo{M-design}{Design}{B-estimation}{Estimation}
 \end{frame}
 
 % [H1] FWAs sit in better-paid jobs; usable only as sorting, never as a price
@@ -1435,7 +1426,7 @@ Third, test a manager guide on role-by-role on-site checks and on handling reque
   \end{tikzpicture}\par}
   % [S6, S6b] no equal-pay pair was shown; every gap 17-33%; EB s9: magnitudes model-based
     % card wording: questionnaire/FWA_Study_-_Employee_DCE.docx Section D; employer card: Candidate A / Candidate B
-  \Backups{\BL{B-methods}{Equations}\BL{B-validity}{Validity}}
+  \Backups{\BL{B-validity}{Validity}}
 \end{frame}
 % note facts: [S5] six choices, employer version with two candidates; EB s3b: equal-pay share needs no pay
 % slope, 50% = no preference, read within each side; [S6] 17 to 33 per cent; EB s9: magnitudes model-based;
@@ -1448,33 +1439,6 @@ We report one number for each arrangement: a per cent of pay, the pay gap that m
 We acknowledge that no pair had equal pay and gaps ran from 17 to 33 per cent, so per cent of pay extrapolates. % [S6, EB s9]
 MOM, SNEF and NTUC can rely on the rankings; per cent of pay is a rough size, never a proposed pay cut. % [V1-V5]
 Next, what PMEs and firms do today.}
-
-\begin{frame}[t,label=B-methods]{Equations and inference}
-  % Simplified 2 Nov 2026: equation, the two definitions, two caveats. Checks are on the robustness backups; EB s3b conditional logit per side, SEs clustered by respondent.
-  \FrameTop % first body token (centring; never a frame subtitle)
-  {\centering\fontsize{10}{12}\selectfont $U_{ijt}=\beta_w\ln w_{ijt}+\sum_k\beta_k x_{kijt}+\varepsilon_{ijt}$\par}
-  \vspace{0.04cm}
-  {\centering\color{Muted}\fontsize{8.5}{10.2}\selectfont Conditional logit per side; SEs clustered by respondent.\par}
-  \vspace{0.12cm}
-  \begin{columns}[T,onlytextwidth]
-    \begin{column}{0.48\textwidth}
-      \PanelTitle{Navy}{Pay given up: $100\,[1-\exp(-\beta_k/\beta_w)]$}
-      {\fontsize{9}{11}\selectfont\RaggedRight PMEs ($\beta_w>0$): the pay they would give up for $k$. Employers ($\beta_w<0$): the pay cut they would require. Positive = a pay cut.\par}
-    \end{column}
-    \begin{column}{0.48\textwidth}
-      \PanelTitle{Navy}{Gap: employers' cut $-$ PMEs' give-up}
-      {\fontsize{9}{11}\selectfont\RaggedRight Positive = friction. The 95\% interval combines both sides' delta-method standard errors.\par}
-    \end{column}
-  \end{columns}
-  \vspace{0.12cm}
-  \setbeamerfont{itemize/enumerate body}{size=\fontsize{9}{11}\selectfont}
-  \begin{itemize}\setlength{\itemsep}{0.05cm}
-    \item \textbf{Intervals:} 60 choice situations per side (10 versions $\times$ 6 tasks), so intervals may be too narrow.
-    \item \textbf{Values:} employer cuts above 33\% go beyond the pay gaps shown (17--33\%), so values are indicative.
-  \end{itemize}
-  \SourceNote{$i$ respondent, $j$ option, $t$ task; $w$ pay shown; $x_k$ arrangement level $k$. McFadden (1974).}
-  \BackTo{B-estimation}{Estimation}
-\end{frame}
 
 % ==========================================================================
 % Practice today
@@ -1505,7 +1469,7 @@ Next, what PMEs and firms do today.}
     \item \textbf{Rankings hold best:} direction right and, in one direct test, relative size; our ranking is the firmest result.
     \item \textbf{Levels less so:} rates predicted less well, money values mixed; our \% of pay values are indicative.
     % [S6] every pay gap 17-33%
-    \item \textbf{Our design:} one cross-section; pay gaps of 17--33\% only; no link yet to behaviour (\hyperlink{B-dominance}{\textcolor{Navy}{dominance check}}).
+    \item \textbf{Our design:} one cross-section; pay gaps of 17--33\% only; no link yet to behaviour.
   \end{itemize}
   \vspace{0.10cm}
   % COMMENTS B-validity, verbatim closing line; the follow-up covers PMEs only, with no employer consent [F1, F2]
@@ -1517,15 +1481,6 @@ Next, what PMEs and firms do today.}
 % ==========================================================================
 % Data and design
 % ==========================================================================
-
-\begin{frame}[t,label=B-dominance]{Dominance check: choices rise with pay, as the model predicts}
-  % port of code_final.do "Dominance test" (scripts/pme_dominance.py): 3,150 of 6,120 choice sets have one option better on both non-salary attributes shown
-  \FrameTop
-  \Fig{F_dominance}{4.6cm}
-  \Interp{The better job is chosen more as its pay advantage grows (25--40\% $\rightarrow$ 79--86\%), as modelled.}
-  \SourceNote{Choice sets where one job is better on both non-salary attributes shown (3,150 of 6,120); x-axis: its salary minus the other job's, log points. Better = fully remote $>$ 3--4 $>$ 1--2 days $>$ onsite; compressed $>$ staggered $>$ fixed; part-time $>$ job sharing $>$ full time; low $>$ moderate $>$ high risk; collaborative $>$ autonomous $>$ mixed $>$ hierarchical; short $>$ moderate $>$ long commute.}
-  \BackToTwo{B-validity}{Validity}{B-estimation}{Estimation}
-\end{frame}
 
 \BackupTab{B-emp-all}{All PME estimates, \% of pay}{T_emp_all}{M-pmes}{PMEs}{Fully remote is compared with onsite work and a long commute (\hyperlink{B-remote-commute}{\textcolor{Navy}{commute}}).}
 
@@ -1640,7 +1595,6 @@ Only the career-concern split stands out, as we saw earlier. Why, then, is the c
   \BackToTwo{M-meet}{Two sides}{M-employers}{Employers}
 \end{frame}
 
-\BackupTab{B-org-salary}{Employers respond less to pay, so their \% values are less firm}{T_org_salary}{M-employers}{Employers}{PMEs chose the better-paid option 75\% of the time, employers 57\%: employer \% of pay values are read as rankings, not exact prices.}
 
 \BackupFig{B-org-splits}{Employer pay cut by roles, concerns and policy: WFH}{F_org_splits}{5.4cm}{M-where}{On-site needs}{Yes = as labelled (agree = 4--5 of 5); no = otherwise. Each group has 116--349 firms.}
 
@@ -1793,35 +1747,27 @@ So the case is for a voluntary, evaluated pilot, not a roll-out: SNEF could recr
     \begin{column}{0.56\textwidth}
       \PanelTitle{Navy}{Surveyed firms offering it (71 of 465)}
       {\TableFont\setlength{\tabcolsep}{3pt}%
-      \begin{tabular}{@{}>{\RaggedRight}p{2.85cm}>{\centering}p{2.55cm}>{\centering\arraybackslash}p{2.35cm}@{}}
+      \begin{tabular}{@{}>{\RaggedRight}p{3.6cm}>{\centering}p{2.6cm}>{\centering\arraybackslash}p{1.5cm}@{}}
         \toprule
-        \textbf{Trait} & \textbf{\% offer} & \textbf{OR [95\% CI]}\\
+        \textbf{Trait} & \textbf{\% offering} & \textbf{p}\\
         \midrule
-        % [M17] 26.5% (53/200) vs 9.7% (10/103); OR 2.94 [1.37, 6.33], p = .006
-        Written policy & 17.8 vs 8.6 & \textbf{2.05} [1.03, 4.11]\\
-        % [M17] offering part-time OR 3.19 [1.65, 6.18], p < .001
-        Offers part-time\textsuperscript{a} & & \textbf{2.78} [1.56, 4.93]\\
-        % [M18] most roles need presence OR 1.71 [0.94, 3.12], p = .080
-        Presence need & & 1.53 [0.90, 2.63]\\
-        % [M18] fully tech-ready OR 1.20 [0.66, 2.19]
-        Fully tech-ready & & 0.73 [0.43, 1.26]\\
-        % [M18] productivity worry OR 1.36 [0.59, 3.10]
-        Productivity concern\textsuperscript{b} & & 1.84 [0.86, 3.90]\\
-        % [M18] hiring difficulty 21.5% vs 20.0%, p = .74 (CSV chi2_p .7448)
-        Hard to hire & 16.0 vs 14.4 & p = .62\\
-        % [M18] by size band 18.9 / 19.8 / 25.0, p = .57
-        Size: $\le$200 / 201--1,000 / 1,001+ & 11.2 / 15.6 / 24.4 & \textbf{p = .013}\\
+        Written policy: yes vs no & 17.8 vs 8.6 & .014\\
+        Offers part-time & 25.5 vs 10.4 & $<$.001\\
+        Offers job sharing & 32.4 vs 7.0 & $<$.001\\
+        Worried about productivity & 18.9 vs 11.3 & .024\\
+        Hard to hire & 16.0 vs 14.4 & .62\\
+        Size: $\le$200 / 201--1,000 / 1,001+ & 11.2 / 15.6 / 24.4 & .013\\
         \bottomrule
       \end{tabular}\par}
       \vspace{0.06cm}
-      {\fontsize{9}{11}\selectfont\RaggedRight \textbf{Surveyed PMEs:} access 21\%; take-up 31\%; career concern OR 0.86 [0.44, 1.67].\par}
+      {\fontsize{9}{11}\selectfont\RaggedRight \textbf{Surveyed PMEs:} access 21\%; take-up 31\%.\par}
     \end{column}
   \end{columns}
   \vspace{0.08cm}
   % EB s9: hiring choices do not measure operating costs; COMMENTS B-puzzle row: pilot protocol on B-pilot
   {\fontsize{9}{11}\selectfont\RaggedRight Operating costs unmeasured: \hyperlink{B-pilot}{\textcolor{Navy}{pilot checklist}}.\par}
   % [M20] only 33 dearer employer pairs
-  \SourceNote{ORs from a logit (N = 465); policy may follow offering. \textsuperscript{a}With other offerings (policy OR 1.91 [0.92, 3.97]). \textsuperscript{b}With concerns, talent view, hiring, turnover: p $\ge$ .10. \textsuperscript{c}46 pairs.}
+    \SourceNote{Associations, not causes; a written policy may follow offering. \textsuperscript{c}46 pairs.}
   \BackToTwo{B-puzzle-main}{Compressed week}{M-discussion}{Directions}
 \end{frame}
 
