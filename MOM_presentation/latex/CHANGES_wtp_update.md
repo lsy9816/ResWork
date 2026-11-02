@@ -329,3 +329,8 @@ Earlier draft, kept here: (1) Trial the compressed week with volunteer firms, in
 - B-dominance (dominance check) restored (PI); B-cards ("Nearly the same cards on both sides") removed with its slide-9 button and index entry. The 17-33% pay range remains in the Limits table and the validity note. 75 pages.
 
 - B-methods (Equations and inference) restored together with B-dominance (PI: keep both). The 17-33% pay-difference range removed from every slide, table and speaker note (wording now "limited pay differences"). 76 pages.
+
+## 2 Nov 2026 - backup review, round 3 (73 pages)
+- Removed: B-emp-all ("All PME estimates": same values and CIs as B-fwa-table, plus status text), B-modelfree ("Raw choices, before any model"), B-optE ("Measure what is missing: draft survey items": no longer linked from the directions or next steps). Buttons and index entries updated; Limits row now says "Add why-not items to MOM surveys".
+- B-access ("Valued more where offered? Not robust") simplified: no p-values, separate-slope row or footnotes; note says the compressed-week and part-time differences disappear when the groups get different pay responses.
+- Kept: B-fwa-current (table), B-pilot (backup of Direction A), B-followup (linked from Next steps), B-optA, B-optB, B-optC.
