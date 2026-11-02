@@ -362,8 +362,50 @@ def fig_role():
     return M.finish(fig, name, SZ)
 
 
+def fig_career_who():
+    """Who expects a career penalty (agree 4-5 of 5), employed PMEs: by perceived job-loss chance and by familiarity with the Guidelines.
+    Simplified 2 Nov 2026 (PI): the former panel (c), formal requests, is dropped; values from mechanisms/career_risk.csv (A0_shares, all
+    respondents): 33/38/62% (n = 363/255/386), 54/22% (n = 556/174), all PMEs 44.6%."""
+    name = "F_career_who"
+    groups = [("By perceived chance of job loss, next 12 months", [("0\u201319%", 363, 33), ("20\u201349%", 255, 38), ("50\u2013100%", 386, 62)]),
+              ("By familiarity with the Guidelines", [("Familiar", 556, 54), ("Not aware", 174, 22)])]
+    SZ = (13.0, 4.0)
+    fig = M.new_fig(*SZ)
+    Wd, H = fig.W, fig.H
+    labs = [f"{l} ({n})" for _, rows in groups for l, n, _ in rows]
+    LX = 0.05 + max(V.tw_cm(fig, t, S.FS_ROW) for t in labs)
+    PX0, PX1 = LX + 0.2, Wd - 0.6
+    AY, AT = 0.75, H - 0.15
+    ax = M.axes_cm(fig, PX0, AY, PX1 - PX0, AT - AY)
+    ax.set_xlim(0, 80)
+    # y positions: heads and rows
+    ys, y, order = [], 9.0, []
+    for g, (head, rows) in enumerate(groups):
+        order.append(("head", head, y)); y -= 1.0
+        for l, n, v in rows:
+            order.append(("row", f"{l} ({n})", y, v)); y -= 1.0
+        y -= 0.6
+    ymin, ymax = y + 0.4, 9.6
+    ax.set_ylim(ymin, ymax)
+    for it in order:
+        if it[0] == "head":
+            M.ftext(fig, 0.05, AY + (it[2] - ymin) / (ymax - ymin) * (AT - AY), it[1], ha="left", va="center", fontsize=S.FS_HEAD,
+                    fontweight="bold", color=S.INK)
+        else:
+            _, lab, yy, v = it
+            M.ftext(fig, LX, AY + (yy - ymin) / (ymax - ymin) * (AT - AY), lab, ha="right", va="center", fontsize=S.FS_ROW, color=S.INK)
+            ax.plot([v], [yy], marker="o", ms=S.MS_CIRCLE, mfc=S.EMPLOYEE, mec="white", mew=S.MEW, ls="none", zorder=3)
+            ax.text(v + 2.4, yy, f"{v}%", ha="left", va="center", fontsize=S.FS_VAL, color=S.EMPLOYEE, fontweight="bold", zorder=4)
+    ax.set_yticks([])
+    ax.spines["left"].set_visible(False)
+    ax.spines["bottom"].set_color(S.RULE)
+    S.pct_ticks(ax, [0, 25, 50, 75])
+    V.outside(fig, name)
+    return M.finish(fig, name, SZ)
+
+
 if __name__ == "__main__":
-    figs = {"F_use_att": fig_use_att, "F_wtp_att": fig_wtp_att, "F_org_splits": fig_org_overview, "F_org_other": lambda: fig_org_overview("F_org_other", "hiring"), "F_dominance": fig_dominance, "F_size": fig_size, "F_org_role": fig_role, "F_groups_diff": fig_groups_diff}
+    figs = {"F_use_att": fig_use_att, "F_wtp_att": fig_wtp_att, "F_org_splits": fig_org_overview, "F_org_other": lambda: fig_org_overview("F_org_other", "hiring"), "F_dominance": fig_dominance, "F_size": fig_size, "F_org_role": fig_role, "F_groups_diff": fig_groups_diff, "F_career_who": fig_career_who}
     for nm in sys.argv[1:] or list(figs):
         print("wrote", figs[nm]())
     for fl in dict.fromkeys(M.FLAGS):

@@ -340,3 +340,5 @@ Earlier draft, kept here: (1) Trial the compressed week with volunteer firms, in
 - Kept: B-fwa-table (numbers), B-pilot, B-optA, B-optB, B-optC.
 
 - B-limits: rows "60 design cells" and "Compressed week" removed, "task-1 coding" dropped from the note (five limits remain).
+
+- B-career-who ("Who expects a career penalty?") redrawn (scripts/fig_backup_att.py, fig_career_who): only job-loss chance and Guidelines familiarity, no panel (c), no dotted line (all PMEs 45% is in the takeaway line); panel (c) moved to the speaker note. Note: fig_backup_wtp.py still writes the old F_career_who; run fig_backup_att.py F_career_who afterwards.
