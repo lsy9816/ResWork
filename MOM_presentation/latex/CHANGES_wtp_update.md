@@ -361,3 +361,5 @@ Earlier draft, kept here: (1) Trial the compressed week with volunteer firms, in
 - Technical leftovers removed: "Version CI" column (T_emp_robust) and "Version clusters" row (T_robust_main); "Rank pay model" now "Alternative pay model: same ranking"; the "60 choice situations" sentence in the robustness note. Unused tables T_modelfree and T_org_salary deleted.
 - F_org_view (employer view backup): value labels of short bars (5%, 6%) moved to the right of the marker (patch in scripts/fig_backup_wtp.py).
 - Checked and clean: text inside all 34 figures, all inline text links, all buttons and their targets, "Agree = 4-5" definitions, speaker notes (no 33%, appended, Lucid, 397), p-value and jargon scan of the compiled PDF.
+
+- Equations and inference: the "intervals may be too narrow" bullet removed (equation, two definitions and the indicative-values bullet stay).
