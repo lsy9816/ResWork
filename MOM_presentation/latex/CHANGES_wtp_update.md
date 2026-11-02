@@ -302,3 +302,7 @@ Earlier draft, kept here: (1) Trial the compressed week with volunteer firms, in
 - B-partners: Position column removed (partners' positions are not paraphrased to the partners); title "Partners' evidence and ours".
 - B-methods (Equations and inference) cut to the equation, two definitions and two caveats.
 - B-emp-all note reworded. Kept after review: B-sg-reports, B-cards, B-hedonic, B-validity, B-emp-all, B-fwa-table, B-groups with B-ra-* (gender, age, caregiving, role, education stay by earlier request).
+
+## 2 Nov 2026 - more backup clean-up (78 pages)
+- T_emp_all (B-emp-all): "Collaborative culture" row removed.
+- B-ra-gender, B-ra-age, B-ra-care removed: B-groups (differences with intervals for gender, age, caregiving) is kept; role and education backups stay because B-groups does not cover them. figures/F_ra_gender, F_ra_age, F_ra_care deleted from the upload folder (scripts/fig_backup_wtp.py can regenerate them).
