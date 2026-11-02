@@ -186,7 +186,7 @@ def fig_where_pres_m():
     es = es[es.split == "pres"].set_index("item")
     SZ = (13.0, 5.5)
     fig = M.new_fig(*SZ)
-    labels = [r[0] for r in W.ROWS]
+    labels = [r[0] for r in W.ROWS_EMP]
     F = frame(fig, labels, -34, 112, [0, 25, 50, 75], val_w=0.35, head_h=0.25, bottom=1.05)
     ax = F["ax"]
     n1, n0 = int(es.n1.iloc[0]), int(es.n0.iloc[0])
@@ -195,7 +195,7 @@ def fig_where_pres_m():
     V.r5_key(fig, (fig.W - V.key_width(fig, keys)) / 2, 0.16, keys)
     V.hline_cm(fig, 0.05, fig.W - 0.05, F["fy"](2.75), **S.SEP)
     YS = {"p3": 7.15, "p2": 6.2, "p1": 5.25, "t2": 4.3, "t1": 3.35, "l1": 2.15, "l2": 1.2}
-    for lab, item, y0, load in W.ROWS:
+    for lab, item, y0, load in W.ROWS_EMP:
         y = YS[item]
         r = es.loc[CSV2[item]]
         for cut, lb, ub, dy, focal in ((r.cut1, r.lb1, r.ub1, 0.27, True), (r.cut0, r.lb0, r.ub0, -0.27, False)):
@@ -216,7 +216,7 @@ def fig_org_concerns_m(name="F_org_concerns_m", keys=("prod", "coord", "fair"), 
     titles = {"prod": "Productivity", "coord": "Coordination", "creat": "Creativity", "fair": "Fairness"}
     panels = [(k, titles[k]) for k in keys]
     n = len(panels)
-    rows = W.ROWS[:5] if five else W.ROWS   # five: location and schedule items only (job sharing and part-time dropped)
+    rows = W.ROWS_EMP[:5] if five else W.ROWS_EMP   # five: location and schedule items only (job sharing and part-time dropped)
     SZ = (13.0, 5.0 if five else 5.6)
     fig = M.new_fig(*SZ)
     Wd, H = fig.W, fig.H

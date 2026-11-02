@@ -77,6 +77,8 @@ ROWS = [  # label, item, y (data units), hours-change row?
     ("1–2 WFH days", "p1", 5.05, False), ("Compressed week", "t2", 4.15, False),
     ("Staggered hours", "t1", 3.25, False), ("Job sharing", "l1", 1.95, True), ("Part-time", "l2", 1.05, True)]
 YA, YB = 0.55, 7.5
+# employer figures: the employer card said 'reduced load', the PME card 'job sharing' (2 Nov 2026 audit)
+ROWS_EMP = [(("Job sharing / reduced load" if r[0] == "Job sharing" else r[0]),) + tuple(r[1:]) for r in ROWS]
 
 
 def nohead(*args, **kw):
@@ -128,11 +130,11 @@ def ci_dot(ax, y, est, lb, ub, col, **kw):
 def fig_org_wtp():
     name = "F_org_wtp"
     fig = new_fig(name)
-    labels = [r[0] for r in ROWS]
+    labels = [r[0] for r in ROWS_EMP]
     F = frame(fig, labels, -8, 68, [0, 20, 40, 60], val_w=0.35, bottom=0.60)
     nohead(fig, name, "Pay cut employers would require for each arrangement, % of pay")
     V.hline_cm(fig, 0.05, fig.W - 0.05, F["fy"](2.6), **S.SEP)
-    for lab, item, y, load in ROWS:
+    for lab, item, y, load in ROWS_EMP:
         est, lb, ub = tri("emp", item)
         col = S.EMPLOYER
         ci_dot(F["ax"], y, est, lb, ub, col)

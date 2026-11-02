@@ -342,3 +342,10 @@ Earlier draft, kept here: (1) Trial the compressed week with volunteer firms, in
 - B-limits: rows "60 design cells" and "Compressed week" removed, "task-1 coding" dropped from the note (five limits remain).
 
 - B-career-who ("Who expects a career penalty?") redrawn (scripts/fig_backup_att.py, fig_career_who): only job-loss chance and Guidelines familiarity, no panel (c), no dotted line (all PMEs 45% is in the takeaway line); panel (c) moved to the speaker note. Note: fig_backup_wtp.py still writes the old F_career_who; run fig_backup_att.py F_career_who afterwards.
+
+## 2 Nov 2026 - full audit of the compiled deck (SNEF_FWA_project.pdf, 70 pages; text identical to the repository version)
+- B-career title "Over a third..." -> "45% of surveyed PMEs expect a career penalty" (45% is on slides 6, 18, 19).
+- B-puzzle-main (compressed week, valued, rarely offered): "A voluntary, evaluated pilot is the next step" -> "...is one policy direction" (the Next steps slide is about the research).
+- Employer figures (slides 11, 15, 16 and backups) now label the row "Job sharing / reduced load" (employers saw "reduced load"; scripts/fig_wtp.py ROWS_EMP).
+- Speaker notes: slide 12 note no longer says "above 33 per cent"; robustness note "employer values by up to two" (was three; data: 1.8), "larger pay differences"; title-slide timing line no longer lists the old 15-slide path.
+- Checked against data and left as is: main-slide numbers (7-15 vs 20-52, gaps 12/30/37, 49 vs 3, 26-46, 79/40/14/19/27 offered, 15%, 17.8 vs 8.6, 63/32/5 Guidelines), robustness tables, employer splits. Open: staggered-hours gap is borderline (10 [0, 20], p about .045).
