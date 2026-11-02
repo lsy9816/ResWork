@@ -294,3 +294,5 @@ Earlier draft, kept here: (1) Trial the compressed week with volunteer firms, in
 - Removed the captions on slides 10, 11 and 15; slide 14 note "Single biggest challenge per employer" removed and the title now carries it ("Employers' biggest challenge: productivity, coordination, fairness"); slide 16 caption rewritten ("Staggered hours, the compressed week, job sharing and part-time show no such difference. Early evidence only.").
 - Slide 19 (What we found): numbers added (7-15% vs 20-52%, gap 12-37 points; compressed week about 7% vs 11%, 15% of firms offer it; 49% vs 3%; access 80% vs 94%; those who fear a penalty give up much less).
 - Slide 20 (Policy directions): A pilot the compressed week (same hours over four days) with a comparison group; B add a role-by-role on-site check to FWA guidance, start with 1-2 WFH days in roles that need none; C put what is on offer and how use is appraised into company policy, brief managers on requests; row rules added.
+
+- Slides 10, 11, 14, 15, 17, 18: figures enlarged to 14.5 cm wide (was 13.0) to use the space freed by removed captions (new macro \FigL). Slides 3, 12, 16 unchanged in size.
