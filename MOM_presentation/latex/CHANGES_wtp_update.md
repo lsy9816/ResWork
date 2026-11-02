@@ -363,3 +363,5 @@ Earlier draft, kept here: (1) Trial the compressed week with volunteer firms, in
 - Checked and clean: text inside all 34 figures, all inline text links, all buttons and their targets, "Agree = 4-5" definitions, speaker notes (no 33%, appended, Lucid, 397), p-value and jargon scan of the compiled PDF.
 
 - Equations and inference: the "intervals may be too narrow" bullet removed (equation, two definitions and the indicative-values bullet stay).
+
+- B-requestrate: note reworded (the request question had no "applies automatically" answer; the last row comes from the separate set-up question) and the row relabelled "Arrangement applies automatically under company policy".
