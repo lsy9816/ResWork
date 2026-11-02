@@ -281,3 +281,5 @@ Earlier draft, kept here: (1) Trial the compressed week with volunteer firms, in
 ## 2 Nov 2026 - slide 3 takeaway; Next steps redesigned
 - M-intl (slide 3): one-line interpretation added ("Singapore's WFH use is at the international average. The open question is less how much, more which arrangements fit whom"), leading into M-question; speaker note extended.
 - M-nextsteps redesigned as "Next steps for our research": three cards (1 match firms and their PMEs; 2 follow up our PMEs, the 490 who agreed; 3 evaluate the compressed week in volunteer firms, random half first); "who could lead" removed.
+
+- M-nextsteps: "which step first" line removed; card 2 now "Follow up over time" (panel re-surveyed every six months plus the 490 PMEs who agreed to follow-up). No funding mention on the slide.
