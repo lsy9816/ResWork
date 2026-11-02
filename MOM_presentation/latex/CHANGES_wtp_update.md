@@ -285,3 +285,7 @@ Earlier draft, kept here: (1) Trial the compressed week with volunteer firms, in
 - M-nextsteps: "which step first" line removed; card 2 now "Follow up over time" (panel re-surveyed every six months plus the 490 PMEs who agreed to follow-up). No funding mention on the slide.
 
 - M-nextsteps rebuilt from the P1 application: 1 match firms and their staff; 2 track over time (six-monthly waves, hiring and departures); 3 test a manager guide (random half of firms first). Compressed-week trial and the 490-PME card removed from the slide (both remain in backups B-pilot, B-followup).
+
+## 2 Nov 2026 - slide text cut to what is not obvious from the chart or title
+- Removed: slide 3 takeaway (stays in the note); slide 14 both lines; slide 17 both lines; slide 18 both lines; slide 20 "For discussion" line.
+- Shortened to the one line that adds something: slide 8 (3 in 10 use), 10 (compressed week = 1-2 days; staggered not valued), 11 (smallest cuts), 15 (creativity signal), 16 (other arrangements, early evidence only). Kept: slides 6, 9, 12, 13 and the backups. The spoken versions are in the speaker notes.
