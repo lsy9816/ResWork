@@ -369,3 +369,6 @@ Earlier draft, kept here: (1) Trial the compressed week with volunteer firms, in
 - B-requestrate: note simplified ("Many people whose arrangement applies to everyone under company policy still said they made a formal request (72%). The question was misread, so we do not report a request rate."); last row "Set by company-wide policy (no request needed)".
 
 - B-career-who: takeaway corrected. It said the penalty is more common among people unaware of the Guidelines; the chart shows the opposite (familiar 54% vs not aware 22%). Now: more common among those who rate job loss as likely and among those familiar with the Guidelines; associations, not causes.
+
+## 2 Nov 2026 – merged professor approved revision (Q1–Q14)
+Merged final/overleaf/main.tex (3-way, base = main_before.tex SHA 486349…) into repo deck; 72 pages. Conflict only in B-career-who caption (kept repo wording). Removed from B-career-panel: joint-test rows and csv/BH source text (no joint-test statements). Professor QA notes: latex/APPROVED_2026-11-02_IMPLEMENTATION_AND_QA.txt.

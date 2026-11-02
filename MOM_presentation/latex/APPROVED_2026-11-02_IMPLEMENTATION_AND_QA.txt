@@ -1,0 +1,48 @@
+APPROVED MOM DECK REVISION — 2 NOVEMBER 2026
+
+Current source: final/overleaf/main.tex
+Checked preview: final/overleaf/SNEF_FWA_project_approved_2026-11-02.pdf
+Forwardable message: final/MESSAGE_TO_SEUNGYEON_2026-11-02.txt
+Original source: final/deck_support/reviews/approved_2026-11-02/main_before.tex
+Original SHA-256: 486349a88596c51807cd44bffff8939f37e09c236f985ef67483c16903aa44bd
+
+Scope: implements the PI's approved Q1–Q14 decisions. This is not a claim that every recommendation from the earlier review has been implemented.
+
+DECISION RECORD
+
+Q1 B — “No statistically detectable gap,” not equal valuations, for compressed weeks. Detailed gap uncertainty and non-equivalence explanation are in backups.
+Q2 A — Retain the fully remote PME point estimate; explicitly state the >45-minute on-site commute comparator. Remove the pure per-WFH-day gradient claim.
+Q3 B (less prominent caveat) — Retain the job-sharing/reduced-load comparison; disclose differing treatments in a short note, without calling the difference a clean like-for-like friction.
+Q4 A — Clarify on the first valuation slide that the numbers are model-implied pay equivalents, not proposed salary reductions.
+Q5 C — Preserve the literature table; correct three WFH intensities/four other options and overly broad novelty claims. Retain existing numerical literature benchmarks, as selected.
+Q6 A — Correct the familiarity/career-risk caption: concern is higher among those familiar with the Guidelines (54% vs 22%), an association.
+Q7 A — Career-concern headline is associative; include a brief visible caveat and add B-career-panel with panel-exclusion sensitivity and multiple-testing qualification.
+Q8 A — On-site presence is associative. Comparison is most roles versus some or few roles, not none/few. Firm-wide reports do not identify individual remote-suitable jobs.
+Q9 B — Neutral employer-concerns title; detailed inference and multiple-testing qualifications in notes/backups.
+Q10 A — No clear differences in WFH valuations by job level; retain both access/awareness and valuation panels, without equivalence language.
+Q11 B — Compressed-week provision = offered OR reported typical schedule: 71/465, 15% rounded. Main provision display, detailed table, compressed-week summary and policy wording aligned; other arrangement offer rows remain direct offer measures.
+Q12 A — Employer n=465 is respondents, not a verified distinct-firm count. Clarify respondent-reported organisation characteristics, including sample backups.
+Q13 A — Keep all 465 main employer observations. Verify attention-check coding against both questionnaires; add B-org-qc: 415 pass both, 50 fail at least one. Overall pattern is similar, with changes up to 2.7 percentage points; exact ordering is not asserted unchanged.
+Q14 A — Keep three policy options, framed as proposals for tripartite discussion/evaluation. Role-based guidance builds on existing guidance; policy effects are untested.
+
+IMPLEMENTATION / REGENERATION
+
+Manual changes were made only to main.tex, plus this handoff and the compiled PDF. Original attachments, analysis code, raw/cleaned data, figure assets and external table files were not modified.
+M-descriptive, B-fwa-table and B-puzzle-main now use editable native TeX content so that stale generated assets do not reintroduce the old provision number or equivalence wording.
+Added backup frames B-career-panel and B-org-qc, links and short-path inclusion.
+Port the manual edits to the relevant deck_support assembly sources BEFORE running assemble_deck.py. The nested final/final/overleaf/main.tex was deliberately not edited; final/overleaf/main.tex is the revised project copy.
+
+VERIFICATION
+
+Compiled successfully using Tectonic 0.17.0 (XeTeX-based preview); final PDF has 72 slides: 22 main, 50 backups.
+All slides were rendered and visually checked; changed/crowded slides were inspected individually. No final overfull hbox/vbox warnings. Benign engine/metadata warnings remain; the declared Overleaf pdfLaTeX engine has not been tested locally.
+PDF check: all 230 annotations are within page boundaries and all internal named destinations resolve.
+Numerical independent checks passed for both added sensitivity tables, attention-check coding, compressed-week provision and policy/take-up percentages.
+The legacy project linter still returns the SAME seven pre-existing rule violations as the original: outdated short-path/order assumptions, four buttons on M-pmes, missing historical DecisionBanner on M-conclusion, missing Backups on M-nextsteps, and the B-groups navigation-macro convention. No new linter violations were added. These rules and the long speaker-note warnings were not treated as authority to change unapproved content.
+
+PENDING / NOT IMPLEMENTED
+
+Q15: additional main-slide pilot safeguards await the PI's choice. Existing pilot-checklist safeguards were retained.
+Government initiative in https://bt.sg/L8sA: full URL, headline or article text needed for reliable identification and incorporation.
+Other review recommendations not selected in Q1–Q14 remain outside this revision, including broader literature updates and other unselected empirical/interpretive issues.
+Stale non-rendering provenance comments and unreferenced generated assets remain in the project; do not use them as the source of current estimates or regenerate without porting the manual edits.
