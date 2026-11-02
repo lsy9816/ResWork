@@ -349,3 +349,9 @@ Earlier draft, kept here: (1) Trial the compressed week with volunteer firms, in
 - Employer figures (slides 11, 15, 16 and backups) now label the row "Job sharing / reduced load" (employers saw "reduced load"; scripts/fig_wtp.py ROWS_EMP).
 - Speaker notes: slide 12 note no longer says "above 33 per cent"; robustness note "employer values by up to two" (was three; data: 1.8), "larger pay differences"; title-slide timing line no longer lists the old 15-slide path.
 - Checked against data and left as is: main-slide numbers (7-15 vs 20-52, gaps 12/30/37, 49 vs 3, 26-46, 79/40/14/19/27 offered, 15%, 17.8 vs 8.6, 63/32/5 Guidelines), robustness tables, employer splits. Open: staggered-hours gap is borderline (10 [0, 20], p about .045).
+
+## 2 Nov 2026 - second audit pass (inline links, notes, buttons)
+- Employer-view backup: the sentence on compressed-week offering by firm size and its "By size" text link removed (the note is now "Agree = 4-5 of 5; neutral or disagree = 1-3."); "Each group has ... firms" removed from the two employer-split backups.
+- Inline text links in notes removed everywhere (career penalty pair, request outcomes "why", pilot checklist, flexi-load, by level, dominance check): cross-references are buttons or the index only. The A, B, C letters in Policy directions stay.
+- Buttons: slide 3 no longer links to WTP benchmarks (use only); slides 15 and 16 no longer link to the employer-view backup (only slide 14 does).
+- "Agree = 4-5 of 5" notes now always carry "neutral or disagree = 1-3".
