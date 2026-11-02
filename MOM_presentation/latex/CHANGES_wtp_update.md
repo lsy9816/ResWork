@@ -247,3 +247,7 @@ Earlier draft, kept here: (1) Trial the compressed week with volunteer firms, in
 
 ## 2 Nov 2026 - WFH values abroad back in the main flow
 - Backup B-emp-benchmarks moved to the main deck as M-intl-wtp "Our WFH values are at or above estimates abroad", right after M-meet (slide 13); Poland pair in the caption. Buttons and links to B-emp-benchmarks now point to M-intl-wtp; backup index entry kept under the same name. The prevalence slide M-intl stays at slide 3. 85 pages.
+
+## 2 Nov 2026 - partners backups merged; Next steps written
+- B-partners (positions) and B-triangulation (their evidence vs ours) merged into one backup "What the partners have said, and what we find": rows MOM / SNEF / NTUC, columns Position / Their evidence / We find. B-triangulation removed; index entry merged. 84 pages.
+- M-nextsteps: three steps: matched employer-employee panel (willing firms approached through SNEF, a few PMEs each consenting directly); follow-up of the 490 consenting PMEs plus six-monthly re-surveys; compressed-week trial with a random half of volunteer firms first. Design features follow the harmonised employer-employee panel of the P1 SWDA application (29 Oct 2026); its numbers (firms, waves, skills items) are not used.

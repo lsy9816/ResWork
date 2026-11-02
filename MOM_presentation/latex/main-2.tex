@@ -393,7 +393,7 @@
 % path below plus every backup; return links to omitted main slides go to the index.
 \def\ShortLabels{M-title,M-motivation,M-intl,M-question,M-benchmark,M-keyfindings,M-design,M-pmes,M-why-pmes,M-employers,M-where,M-meet,M-intl-wtp,M-barriers,M-employer-barriers,M-discussion,M-nextsteps,M-conclusion,M-thanks}
 \ifdefined\ShortPath
-  \includeonlyframes{M-title,M-motivation,M-intl,M-question,M-benchmark,M-keyfindings,M-design,M-pmes,M-why-pmes,M-employers,M-where,M-meet,M-intl-wtp,M-barriers,M-employer-barriers,M-discussion,M-nextsteps,M-conclusion,M-thanks,B-index,B-index-all,B-references,B-intl,B-landscape,B-setup,B-sg-reports,B-laboursupply,B-guidelines,B-legal,B-partners,B-triangulation,B-sample,B-industry,B-cards,B-paygaps,B-hedonic,B-estimation,B-methods,B-validity,B-dominance,B-emp-all,B-fwa-table,B-remote-commute,B-groups,B-ra-gender,B-ra-age,B-ra-care,B-ra-role,B-ra-edu,B-size,B-why-pmes,B-access,B-fwa-current,B-modelfree,B-org-salary,B-org-splits,B-org-concerns4,B-org-other,B-org-role,B-org-view,B-career,B-career-who,B-use-att,B-wtp-att,B-level-access,B-awareness,B-approvals,B-requestrate,B-puzzle-main,B-puzzle,B-flexiload,B-pilot,B-robust,B-emp-robust,B-org-robust,B-limits,B-followup,B-optA,B-optB,B-optC,B-optE,B-optD-items}
+  \includeonlyframes{M-title,M-motivation,M-intl,M-question,M-benchmark,M-keyfindings,M-design,M-pmes,M-why-pmes,M-employers,M-where,M-meet,M-intl-wtp,M-barriers,M-employer-barriers,M-discussion,M-nextsteps,M-conclusion,M-thanks,B-index,B-index-all,B-references,B-intl,B-landscape,B-setup,B-sg-reports,B-laboursupply,B-guidelines,B-legal,B-partners,B-sample,B-industry,B-cards,B-paygaps,B-hedonic,B-estimation,B-methods,B-validity,B-dominance,B-emp-all,B-fwa-table,B-remote-commute,B-groups,B-ra-gender,B-ra-age,B-ra-care,B-ra-role,B-ra-edu,B-size,B-why-pmes,B-access,B-fwa-current,B-modelfree,B-org-salary,B-org-splits,B-org-concerns4,B-org-other,B-org-role,B-org-view,B-career,B-career-who,B-use-att,B-wtp-att,B-level-access,B-awareness,B-approvals,B-requestrate,B-puzzle-main,B-puzzle,B-flexiload,B-pilot,B-robust,B-emp-robust,B-org-robust,B-limits,B-followup,B-optA,B-optB,B-optC,B-optE,B-optD-items}
 \fi
 
 \begin{document}
@@ -993,14 +993,30 @@ B and C are exploratory: the presence result comes from the employer survey alon
 }
 
 % Next steps (26 Oct 2026): each step points to a direction or a backup; "could" because the partners decide.
+% Next steps (2 Nov 2026): three steps; the matched employer-employee panel is the first. Design features (firms approached through SNEF, up to a few staff per
+% firm who consent directly, six-monthly waves, random half of volunteer firms first) follow the harmonised employer-employee panel in the P1 SWDA application
+% (29 Oct 2026 version); numbers there are for a skills study and are not used here.
 \begin{frame}[t,label=M-nextsteps]{Next steps}
-  % Body intentionally empty (26 Oct 2026, PI request); the earlier draft (trial the compressed week with volunteer firms; follow-up of the
-  % 490 consenting PMEs, Feb-Aug 2027; why-not-request items; on-site need asked before the choices) is in CHANGES_wtp_update.md.
   \FrameTop
-  \vspace*{3cm}
+  {\FsBody\setlength{\tabcolsep}{6pt}\renewcommand{\arraystretch}{1.5}
+  \begin{tabularx}{\linewidth}{@{}>{\raggedright\arraybackslash}X>{\raggedright\arraybackslash}p{3.7cm}@{}}
+    \toprule
+    \textbf{Step} & \textbf{Who could lead}\\
+    \midrule
+    \textbf{Link employers to their own PMEs} in a matched panel: willing firms, then a few of their PMEs who consent directly; compare what the firm offers and expects with what its staff have and would give up & SNEF reaches firms; PMEs consent to the research team\\
+    \textbf{Follow up the 490 PMEs} who agreed to one more survey (Feb--Aug 2027), and re-survey the panel every six months: do stated choices predict take-up, moves and promotion? (\hyperlink{B-followup}{\textcolor{Navy}{design}}) & NTUC reach; MOM linkage only with fresh consent\\
+    \textbf{Trial the compressed week} in a random half of volunteer firms first, the rest later, to measure output, quits and coverage (\hyperlink{B-pilot}{\textcolor{Navy}{checklist}}) & SNEF, with NTUC safeguards\\
+    \bottomrule
+  \end{tabularx}\par}
+  \Interp{For discussion: which step should come first?}
   \Backups{\BL{B-followup}{Follow-up} \BL{B-pilot}{Pilot checklist}}
 \end{frame}
-\note{[Next steps: to be written.]}
+\note{[Short path] Three possible next steps, for discussion; the partners decide. % [options]
+First, a matched employer-employee panel: SNEF could approach willing firms, and a few PMEs in each would consent directly to the research team. That lets us set what a firm offers and expects against what its own staff have and would give up, which the two separate surveys cannot show, and test the employer splits that remain preliminary. % [S4; EB s9 l.183]
+Second, follow up the 490 PMEs who agreed to one short survey between February and August 2027, and re-survey the matched panel every six months, to see whether stated choices predict take-up, job moves and promotion. MOM linkage would need fresh consent. % [F1]
+Third, trial the compressed week with volunteer firms, a random half first and the rest later, so that output, quits and coverage can be compared fairly. % [Direction A]
+Which should come first, and who could lead each?
+}
 
 % ==========================================================================
 % 20. OPTIONS FOR THE PARTNERS' DECISION   [short path]
@@ -1100,7 +1116,7 @@ B and C are exploratory: the presence result comes from the employer survey alon
       \mbox{\BIi{B-intl}{Evidence abroad}}\enspace \textcolor{Muted}{$\cdot$}\enspace \mbox{\BIi{B-legal}{Rules abroad}}\par
       \mbox{\BIi{B-landscape}{Landscape}}\enspace \textcolor{Muted}{$\cdot$}\enspace \mbox{\BIi{B-setup}{Pathways}}\enspace \textcolor{Muted}{$\cdot$}\enspace \mbox{\BIi{B-sg-reports}{Surveys}}\par
       \mbox{\BIi{B-laboursupply}{Labour supply}}\enspace \textcolor{Muted}{$\cdot$}\enspace \mbox{\BIi{B-guidelines}{Guidelines}}\par
-      \mbox{\BIi{B-partners}{Partners' views}}\enspace \textcolor{Muted}{$\cdot$}\enspace \mbox{\BIi{B-triangulation}{Vs ours}}\par
+      \mbox{\BIi{B-partners}{Partners' views and ours}}\par
       \BH{Data and design}
       \mbox{\BIi{B-sample}{Sample}}\enspace \textcolor{Muted}{$\cdot$}\enspace \mbox{\BIi{B-industry}{Industries}}\par
       \mbox{\BIi{B-cards}{Choice cards}}\enspace \textcolor{Muted}{$\cdot$}\enspace \mbox{\BIi{B-paygaps}{Pay gaps}}\par
@@ -1336,43 +1352,25 @@ B and C are exploratory: the presence result comes from the employer survey alon
 % Framework
 % ==========================================================================
 
-\begin{frame}[t,label=B-partners]{What each partner has said}
+\begin{frame}[t,label=B-partners]{What the partners have said, and what we find}
+  % Merged (2 Nov 2026) from B-partners (positions) and B-triangulation (their evidence vs ours); one row per partner.
+  % [P3] MOM frictions reading; [P18] COS 2026 too-blunt remark (FACTCHECK F31); [P9b] SNEF three principles, 23 Apr 2024; SUSS x SNEF 367 firms, 2024;
+  % [P12] NTUC in MOM's release of 16 Apr 2024; [P8] PAP Women's Wing-NTUC online survey Nov-Dec 2025, N = 1,508; [P4] MOM CoE 2024 employer-reported shares.
+  % ours: [D6, D6x, D7, D7b, D7c, B2, M23]
   \FrameTop
-  \setbeamerfont{itemize/enumerate body}{size=\fontsize{9}{11}\selectfont}
-  \begin{itemize}\setlength{\itemsep}{0.10cm}
-    % [P3] MOM's frictions reading; [P18] COS 2026 too-blunt remark (FACTCHECK F31)
-    \item \textbf{MOM:} reads the need-request gap as ``frictions \ldots\ rather than employer resistance''; at COS 2026 called a proposal to make the Guidelines law, and FWAs a presumptive right for parents of young children, ``too blunt'', as business needs differ by industry and role.
-    % [P9b] SNEF three principles, 23 Apr 2024; SUSS x SNEF: 367 firms, Sep 2024, 81% prepared
-    \item \textbf{SNEF:} endorses the Guidelines on three principles: outcomes stay the employer's prerogative; FWAs must not harm productivity or service quality; not every role suits every FWA. SUSS$\times$SNEF (367 firms, 2024): 81\% felt prepared.
-    % [P12] NTUC in MOM's release of 16 Apr 2024; [P8] online survey, Nov-Dec 2025, N = 1,508; 36% primary concern, most-cited
-    \item \textbf{NTUC:} FWA access is often the main consideration for caregivers, women and senior workers in staying in or returning to work. PAP Women's Wing--NTUC survey (online, N = 1,508; sampling not published): 36\% named stigma their primary concern in requesting an FWA (most cited).
-  \end{itemize}
-  \SourceNote{\textbf{Sources:} MRSD (2026); MOM COS 2026 (3 Mar 2026); SNEF statement (23 Apr 2024); SUSS--SNEF (2025); MOM release (16 Apr 2024); PAP Women's Wing, NTUC (Mar 2026).}
-  \BackTo{M-question}{Question}
-\end{frame}
-
-\begin{frame}[t,label=B-triangulation]{Partners' evidence and ours}
-  % [P3, P4, P8, P8b, P9, P9b, P15] vs our [D6, D6x, D7, D7b, D7c, B2, M23]
-  \FrameTop % first body token (centring; never a frame subtitle)
-  {\fontsize{8.5}{10.2}\selectfont
-  \renewcommand{\arraystretch}{1.10}
-  \begin{tabularx}{\linewidth}{@{}>{\raggedright\arraybackslash}p{3.0cm}>{\raggedright\arraybackslash}X>{\raggedright\arraybackslash}X@{}}
+  {\fontsize{8}{9.6}\selectfont
+  \renewcommand{\arraystretch}{1.08}
+  \begin{tabularx}{\linewidth}{@{}>{\raggedright\arraybackslash}p{1.15cm}>{\raggedright\arraybackslash}X>{\raggedright\arraybackslash}X>{\raggedright\arraybackslash}X@{}}
     \toprule
-    \textbf{Source} & \textbf{They found} & \textbf{We find}\\
+    & \textbf{Position} & \textbf{Their evidence} & \textbf{We find}\\
     \midrule
-    % [P3] about 94% approved, 18.5% formal; [D7] declined 4.4 [7.2], a lower bound [D7b]
-    \textbf{MOM, Working Conditions 2024} & \ap 94\% of requests approved; 18.5\% ask formally & 4\% of PMEs' formal requests declined outright (a lower bound)\\ \RowSep
-    % [P4] employer-reported shares among firms offering scheduled FWAs; [B2] 67%
-    \textbf{MOM, CoE 2024} & Firms with scheduled FWAs report gains: engagement 69.5\%, retention 65.9\%, productivity 59.9\% & 66\% of employers: FWAs help attract and retain talent\\ \RowSep
-    % [P8, P8b] 36%, 58%, 89%; [M23] 44.6 [37.1]; [D6x] 83 [77]; [D6] 55 [44]; [D7c] 95.6 [92.8]
-    \textbf{PAP Women's Wing--NTUC (2025)}\textsuperscript{a} & 36\% name stigma the main concern; 58\% aware; 89\% of formal applicants approved, fully or with changes & 45\% expect a career penalty; 83\% aware (55\% familiar); 96\% of formal requests approved, fully or partly\\ \RowSep
-    % [P9b, P9] 81% prepared; 22% thought they must approve all; [D6] employers familiar 53%, heard but not familiar 40%
-    \textbf{SUSS$\times$SNEF (2024)} & 81\% felt prepared; 22\% thought they must approve every request & 63\% of employers familiar; 32\% more have heard of them\\
+    \textbf{MOM} & Reads the need-request gap as ``frictions \ldots\ rather than employer resistance''; at COS 2026 called legislating the Guidelines ``too blunt'' & \ap 94\% of requests approved, 18.5\% ask formally (2024); firms with scheduled FWAs report gains: engagement 69.5\%, retention 65.9\%, productivity 59.9\% & 4\% of PMEs' formal requests declined outright (a lower bound); 66\% of employers: FWAs help attract and retain talent\\ \RowSep
+    \textbf{SNEF} & Endorses the Guidelines on three principles: outcomes stay the employer's prerogative; no harm to productivity or service; not every role suits every FWA & SUSS$\times$SNEF (367 firms, 2024): 81\% felt prepared; 22\% thought they must approve every request & 63\% of employers familiar with the Guidelines; 32\% more have heard of them\\ \RowSep
+    \textbf{NTUC} & FWA access is often the main consideration for caregivers, women and senior workers in staying in or returning to work & PAP Women's Wing--NTUC\textsuperscript{a}: 36\% name stigma the main concern; 58\% aware; 89\% of formal applicants approved & 45\% of PMEs expect a career penalty; 83\% aware (55\% familiar); 96\% of formal requests approved, fully or partly\\
     \bottomrule
   \end{tabularx}\par}
-  % [P15] MOM PQ 2936, 9 Sep 2026: about 6% of resident FWA users reported a setback in 2025; not comparable with M23
-  \SourceNote{\textsuperscript{a}Online survey, N = 1,508; sampling not published. Populations and questions differ: read as direction.}
-  \BackToTwo{M-motivation}{Motivation}{M-barriers}{Barriers}
+  \SourceNote{\textsuperscript{a}Online survey, N = 1,508; sampling not published. Populations and questions differ: read as direction. \textbf{Sources:} MRSD 2026; COS 2026; SNEF 2024; SUSS--SNEF 2025; MOM 2024; PAP Women's Wing--NTUC 2026.}
+  \BackToTwo{M-question}{Question}{M-barriers}{Barriers}
 \end{frame}
 
 % Round 5: receives the Guidelines process strip and the MOM indicators that
