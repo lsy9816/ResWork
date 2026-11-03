@@ -375,3 +375,6 @@ Merged final/overleaf/main.tex (3-way, base = main_before.tex SHA 486349…) int
 
 ## 3 Nov 2026 – citation check against source PDFs
 Maestas et al. now AER 2023 values (WFH 4.2%, own schedule 8.9%; WP had 4.1/9.0). Bloom-Han-Liang wording follows the paper (managers revised view from -2.6% before to +1.0% after; performance grades unaffected; no evidence of promotion difference). Verified OK: Aksoy 2022, Barrero-Bloom-Davis 2023, Aum-Kim-Lee 2025, Mas-Pallais 2017, Hainmueller et al. 2015, Wang-Dong 2024. Open: Lewandowski ILR-version numbers (IZA DP 16041 gives hybrid gap 14pp, remote 25pp).
+
+## 3 Nov 2026 – rebased on professor's approved main.tex (SHA 2fd1ca...)
+Repo deck is now exactly the professor's file plus three citation edits only (Maestas AER 2023 values 4.2/8.9; Bloom-Han-Liang wording as in paper). My earlier removals (joint-test row, csv source note, B-career-who caption wording) are NOT applied; professor's text kept.
