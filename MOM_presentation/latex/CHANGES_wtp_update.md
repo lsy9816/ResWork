@@ -372,3 +372,6 @@ Earlier draft, kept here: (1) Trial the compressed week with volunteer firms, in
 
 ## 2 Nov 2026 – merged professor approved revision (Q1–Q14)
 Merged final/overleaf/main.tex (3-way, base = main_before.tex SHA 486349…) into repo deck; 72 pages. Conflict only in B-career-who caption (kept repo wording). Removed from B-career-panel: joint-test rows and csv/BH source text (no joint-test statements). Professor QA notes: latex/APPROVED_2026-11-02_IMPLEMENTATION_AND_QA.txt.
+
+## 3 Nov 2026 – citation check against source PDFs
+Maestas et al. now AER 2023 values (WFH 4.2%, own schedule 8.9%; WP had 4.1/9.0). Bloom-Han-Liang wording follows the paper (managers revised view from -2.6% before to +1.0% after; performance grades unaffected; no evidence of promotion difference). Verified OK: Aksoy 2022, Barrero-Bloom-Davis 2023, Aum-Kim-Lee 2025, Mas-Pallais 2017, Hainmueller et al. 2015, Wang-Dong 2024. Open: Lewandowski ILR-version numbers (IZA DP 16041 gives hybrid gap 14pp, remote 25pp).
