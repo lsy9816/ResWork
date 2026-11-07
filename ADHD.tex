@@ -1,0 +1,387 @@
+\documentclass[12pt]{article}
+
+\usepackage[margin=1in]{geometry}
+\usepackage{mathptmx}
+\usepackage{amsmath,amssymb}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{setspace}
+\usepackage{xcolor}
+\usepackage[authoryear,round]{natbib}
+\usepackage[colorlinks=true,linkcolor=black,citecolor=black,urlcolor=blue]{hyperref}
+
+\setstretch{1.25}
+
+% 작성자 메모 / 아직 채워야 할 부분 (빨간색 표시)
+\newcommand{\todo}[1]{\textcolor{red}{[#1]}}
+
+\title{Study Drugs? High-Stakes Exam Competition and ADHD Medication Use in South Korea\thanks{We thank XXX for helpful comments. We additionally thank seminar participants at YYY. All errors are our own.}}
+
+\author{
+  Seonghoon Kim\thanks{School of Economics, Singapore Management University, and IZA. E-mail: \href{mailto:seonghoonkim@smu.edu.sg}{seonghoonkim@smu.edu.sg}}
+  \and
+  Kanghyock Koh\thanks{Department of Economics, Korea University, and IZA. E-mail: \href{mailto:kkoh@korea.ac.kr}{kkoh@korea.ac.kr}}
+  \and
+  Seungyeon Lee\thanks{Department of Economics, Korea University. E-mail: \href{mailto:leeseungyeon9816@gmail.com}{leeseungyeon9816@gmail.com}}
+}
+\date{September 1, 2026}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+\noindent Does high-stakes educational competition induce nonmedical use of prescription stimulants? Nonmedical use is rarely observable, and survey evidence is limited. We examine insurance-reimbursed ADHD medication prescriptions among Korean adolescents around the College Scholastic Ability Test (CSAT), a national college entrance exam administered on a single, predetermined day. Using claims data for a 50 percent random sample of adolescents (822,409 individuals, 2010--2019) and within-individual event-study comparisons, we find that the probability of an ADHD medication prescription drops sharply at the exam month and falls by 0.14 percentage points thereafter, about 61 percent of the pre-exam mean; the number of prescriptions falls by about 56 percent. Mental healthcare utilization and suicide show no concurrent improvement. The decline is largest in Gangnam, in districts with dense entrance-exam cram school markets, and among high-income households. These patterns are consistent with a substantial share of pre-exam prescribing reflecting exam-driven demand rather than medical need.
+
+\medskip
+\noindent\textbf{Keywords:} ADHD medication; nonmedical prescription drug use; educational competition; adolescent mental health; South Korea
+
+\noindent\textbf{JEL Codes:} I12, I11, I21
+\end{abstract}
+
+\thispagestyle{empty}
+\newpage
+\setcounter{page}{1}
+
+%==============================================================
+\section{Introduction}
+%==============================================================
+
+Competition for admission to selective universities leads students and parents to invest heavily in academic achievement. These investments may be particularly costly when educational opportunities are hierarchically ranked and admission depends substantially on a student's position relative to other applicants. In such settings, families have incentives not only to improve a student's absolute achievement but also to prevent their child from falling behind others. Although these investments may be individually rational, rank competition can generate status externalities and result in a socially inefficient outcome \citep{kim2024}.
+
+The consequences of such competition may extend beyond conventional educational investments to students' health-related behavior. Existing work documents nonmedical prescription stimulant use among college students, often for academic purposes such as improving concentration or studying for longer hours \citep{mccabe2005,desantis2008,rabiner2009}. Much of the literature on nonmedical stimulant use, however, relies on self-reported use.
+
+South Korea provides a useful setting for examining whether educational competition generates exam-related demand for prescription drugs. University admission is highly competitive, and students and parents devote substantial time and resources to college entrance preparation. The College Scholastic Ability Test (CSAT, or \textit{Suneung} in Korean) is administered nationwide on a single predetermined day each November and is one of the most consequential academic milestones for Korean students \todo{reference}. The clearly defined timing of the CSAT allows us to examine whether prescription drug use responds to exam-related demand.
+
+We focus on medications used to treat Attention Deficit Hyperactivity Disorder (ADHD), particularly methylphenidate, the predominant ADHD medication in most countries \citep{raman2018,song2016}. ADHD medications are effective in reducing core symptoms among patients with ADHD \citep{faraone2015}, and may therefore be perceived by students without ADHD as a means of improving concentration or academic performance \citep{smith2011}. This perceived benefit creates a potential source of exam-related demand and makes ADHD medications particularly relevant to concerns about performance-enhancing drug use. At the same time, methylphenidate is a controlled substance that requires a physician's prescription, while ADHD diagnosis is based largely on clinical interviews and behavioral assessments rather than a definitive biological test \citep{faraone2015,lee2017}. Patient or parental demand may therefore influence prescribing decisions. Because ADHD is a chronic neurodevelopmental condition, however, the underlying medical need for treatment should not change abruptly when the CSAT takes place. In the absence of exam-related changes in treatment demand, prescribing would be expected to evolve smoothly through the exam month. A discontinuous decline at the time of the exam would therefore be consistent with part of the pre-exam prescribing being related to exam-driven demand.
+
+We examine this prediction using administrative claims data from South Korea's National Health Insurance Service. The database covers the entire resident population, including both National Health Insurance enrollees and Medical Aid recipients. We use a 50 percent random sample of 822,409 individuals observed from ages 17 to 21 during 2010--2019. These records allow us to observe the timing of ADHD medication prescriptions rather than relying on self-reported medication use. We align each individual's prescription history relative to the CSAT associated with their birth cohort and compare changes in prescribing within the same individual before and after the predetermined exam month.
+
+We find a sharp decline in ADHD medication prescribing in the month of the CSAT. The probability of receiving an ADHD medication prescription falls by 0.14 percentage points after the exam, which represents approximately 61 percent of its pre-exam mean. The average number of prescriptions also declines by 0.0018 per individual-month, a reduction of approximately 56 percent relative to its pre-exam mean. Weekly estimates show that the decline is concentrated around the week of the CSAT, closely aligning the timing of the change with the exam. Prescribing remains below its pre-exam level throughout the subsequent three years. We also observe a smaller additional decline around the subsequent CSAT dates in the following two years, with a relative magnitude suggestive of continued exam-related prescribing among students preparing to retake the examination.
+
+The decline in ADHD medication prescribing does not appear to reflect a general improvement in mental health after the CSAT. Outpatient mental healthcare use declines gradually over the post-exam period but does not show a sharp change in the month of the exam, while inpatient mental healthcare use does not decline. We also find no discontinuous reduction in self-harm or suicide around the CSAT. These patterns provide little evidence that the sharp decline in ADHD medication prescribing reflects a broad improvement in mental health.
+
+The decline in ADHD medication prescribing is larger among individuals living in areas characterized by more intense educational competition. It is substantially greater among individuals living in Gangnam, an area widely regarded as the center of private education in Korea, than among those living elsewhere. More generally, we find larger declines in districts with higher cram school density, which we use as a proxy for local educational competition. The decline is also larger among individuals from higher-income households and is particularly pronounced at the top of the income distribution. These findings suggest that exam-driven demand for ADHD medication may be stronger in more competitive educational environments and among households with greater financial resources to bear the costs of educational competition. This pattern is consistent with prior evidence that status competition can generate socially excessive private education spending \citep{kim2024} and that higher-income households spend more on private education \citep{kim2010}.
+
+This paper contributes to the literature on the health consequences of educational pressure. \citet{chen2026} examine changes in psychiatric medication use, including ADHD medication, around major school milestones in Taiwan. They find that psychiatric medication use increases upon entry into middle school and declines following high-stakes entrance examinations. They interpret these patterns as reflecting changes in mental health associated with education-related stress. In South Korea, \citet{wang2016} shows that ranking below one's expectation on the CSAT increases suicidal ideation, while \citet{fawaz2022} show that a lower rank relative to classmates is associated with greater suicidal ideation. We extend this literature by placing ADHD medication prescribing at the center of the analysis and examining the role of exam-related demand. The single nationwide timing of the CSAT allows us to show that the decline is concentrated around the exam month and persists over the subsequent three years. We also show that a broad improvement in mental health is unlikely to account for the sharp decline in ADHD medication prescribing after the exam. The decline is larger in districts with greater cram-school density and among individuals from higher-income households. Our findings suggest that exam-driven ADHD medication prescribing may represent an additional cost of educational competition.
+
+This paper also contributes to the literature on nonmedical stimulant use and factors affecting ADHD medication use. Survey-based studies document that students use prescription stimulants for nonmedical purposes, such as improving concentration and academic performance \citep{mccabe2005,desantis2008,rabiner2009}. Other studies show that ADHD diagnosis and medication use may respond to nonclinical factors, including a child's age relative to classmates and incentives faced by schools \citep{elder2010,evans2010,bokhari2011,morrill2018}. We contribute to these studies by using administrative prescription records to show that ADHD medication prescribing declines sharply after the high-stakes examination and that the decline is larger where educational competition is more intense.
+
+Finally, this paper contributes to the literature on geographic variation in healthcare use \citep{chandra2007,finkelstein2016}. Previous studies show that regional differences in healthcare utilization may reflect patient-side factors, such as health and preferences, or differences in treatment productivity, and therefore do not necessarily indicate inefficient care. We document another possible source of geographic variation in healthcare demand. The decline in ADHD medication prescribing is larger in districts with higher entrance-exam cram school density. This pattern suggests that local educational competition may affect prescription drug demand beyond differences in medical need. When such demand is shaped by competition for relative educational position, demand-driven geographic variation in healthcare use may reflect socially excessive demand rather than differences in patient preferences alone.
+
+The remainder of the paper is organized as follows. Section~2 describes Korea's education system and ADHD prescription practice. Section~3 describes the data. Section~4 outlines the empirical strategy. Section~5 presents the results. Section~6 concludes.
+
+%==============================================================
+\section{Background}
+%==============================================================
+
+\subsection{Korea's Education System and Competition for College Entrance Exam}
+
+South Korea's education system is characterized by intense academic competition and a strong reliance on private education \citep{oecd2025}. Because university admission has lasting implications for labor market opportunities as well as educational attainment, students and parents invest substantial time and resources in preparing for it \citep{kim2010,han2025}.
+
+The Korean education system follows a rigid cohort structure based on year of birth. Students enter the first grade of elementary school in March of the year in which they turn seven, and the standard structure consists of six years of elementary school, three years of middle school, and three years of high school. Most students therefore enter high school in the year they turn sixteen and reach the third year of high school in the year they turn eighteen, at which point they take the College Scholastic Ability Test (CSAT, or Suneung), the national university entrance examination.
+
+University admissions are organized into two tracks: the early track (Susi), based on comprehensive school records and interviews, and the regular track (Jeongsi), based primarily on CSAT scores. Although the share of admissions through the early track has increased over time, many universities require minimum CSAT scores even within the early track, so the CSAT remains a key determinant of admission outcomes for most students.
+
+The CSAT is administered simultaneously across the country on a single Thursday in mid-November each year. The exam is widely regarded as the most important academic milestone of high school. Given the steep hierarchical ranking of Korean universities and the limited number of places at the top of that hierarchy, admissions take the form of a relative competition: students compete to rank above one another rather than to reach an absolute standard of achievement. A growing literature shows that ordinal rank itself affects educational and labor market outcomes \citep{murphy2020,elsner2021,denning2023}, and rank concerns have been linked to adolescent mental health \citep{fawaz2022}.
+
+This competitive environment manifests in long study hours and heavy investment in private education, delivered largely through private academies called \textit{hagwons}. In 2024, about 80 percent of elementary, middle, and high school students participated in private education, and participation among elementary school students reached 87.7 percent, indicating that academic pressure begins at an early age \citep{statkorea2025}. Private education expenditures rose from 18.7 trillion KRW in 2017 to 29.2 trillion KRW in 2024, even as the school-age population steadily declined \citep{statkorea2025}.
+
+High demand for private education is also visible in its geographic concentration. Certain areas have come to be recognized as ``education districts'' because of their perceived advantages in school quality and admission outcomes, and the Gangnam area of Seoul is the leading example. Within Gangnam, Daechi-dong is a nationally known hub of private education with a dense concentration of hagwons; a large share of local businesses in the area are private academies. \todo{AUTHOR: the current draft states ``more than 60 percent of local businesses''; add a citation for this figure or keep the softened ``a large share.''} Educational quality is also capitalized into local housing markets: housing price premiums are closely linked to demand for high-quality educational environments \citep{black1999,gibbons2003}, and Gangnam's housing premium is a standing illustration.
+
+These patterns are reinforced through the interaction of household decisions. When admission depends on rank, reducing educational investment weakens a child's relative position, so each household invests to avoid falling behind others that are doing the same. Extensive private education and long study hours therefore spread across households and further intensify competition. Each household's choice is individually rational, but because the competition is over ranks, the resulting increase in aggregate human capital may be limited; \citet{kim2024} show quantitatively that such status externalities generate socially excessive education spending in Korea. This logic implies that households facing intense local competition may adopt costly practices that confer little social benefit, including, as we document below, prescription stimulant use that rises and falls with a high-stakes exam.
+
+\subsection{Adolescent Mental Health and ADHD Prescription Practice in Korea}
+
+This competitive environment imposes a heavy academic burden on adolescents, with consequences for their mental health. Survey evidence indicates that academic performance and university admission concerns are among the leading causes of suicidal ideation among Korean adolescents \citep{statkorea2024,nypi2025}, and suicide is the leading cause of death among adolescents in South Korea \citep{statkorea2024}.
+
+In such an environment, students and parents have strong incentives to seek any available means of improving academic performance. One such means is medication for Attention Deficit Hyperactivity Disorder (ADHD), which some students without an ADHD diagnosis seek out in the belief that it improves concentration.
+
+ADHD is a chronic neurodevelopmental disorder characterized by inattention, impulsivity, and hyperactivity, associated with dysregulation of dopamine and norepinephrine in prefrontal brain circuits \citep{arnsten2009,faraone2015}. Methylphenidate, the most commonly prescribed ADHD medication, is a central nervous system stimulant that increases the availability of these neurotransmitters and improves attention and executive functioning in patients \citep{faraone2015}. Because of these properties, prescription stimulants are also used nonmedically by students without an ADHD diagnosis who seek to enhance concentration or academic performance \citep{desantis2008,rabiner2009,smith2011}.
+
+While ADHD medications are effective treatments for diagnosed patients \citep{faraone2015}, the evidence on cognitive enhancement among individuals without ADHD is inconsistent and suggests limited effects \citep{smith2011}. One explanation is that prefrontal function depends on an optimal level of dopamine and norepinephrine, following an inverted-U pattern in which further increases beyond that optimum impair rather than improve function \citep{arnsten2009}. At the same time, methylphenidate carries real side effects: it raises blood pressure through sympathetic activation \citep{volkow2003} and delays circadian rhythms in ways that disturb sleep \citep{antle2012}, and its nonmedical use has been linked to insomnia and cardiovascular complications \citep{lakhan2012,faraone2015}. Nonmedical use by adolescents therefore carries health risks with, at best, uncertain cognitive benefits.
+
+In South Korea, ADHD diagnoses and prescriptions among children and adolescents have increased rapidly. The number of individuals aged 0 to 19 diagnosed with ADHD more than doubled, from 59,197 in 2020 to 118,747 in 2023 \citep{hira2024}, and total ADHD medication prescriptions increased by approximately 139 percent, from 37.7 million in 2020 to 90.2 million in 2024 \citep{mfds2025}. \todo{AUTHOR: add Health Insurance Review and Assessment Service (2024) and Ministry of Food and Drug Safety (2025) to the reference list; both are cited but missing.} Media reports have raised concerns that students seek ADHD medications before major examinations such as the CSAT to improve concentration, and that information about how to obtain prescriptions, including through intermediaries, circulates among students.\footnote{Segye Ilbo, 2023 (\url{https://www.segye.com/newsView/20230416513026?OutUrl=naver}).}
+
+The diagnostic process for ADHD makes such demand-driven prescribing feasible. No definitive biological test for ADHD exists; diagnosis relies on clinical interviews and reports from patients or parents \citep{faraone2015}, and Korean clinical practice guidelines likewise recommend diagnosis based on interviews, behavioral rating scales, and caregiver reports \citep{lee2017}. Diagnosis and prescription decisions therefore leave room for patient and parental demand to influence prescribing.
+
+ADHD medication prescribing is nonetheless subject to institutional oversight. The Health Insurance Review and Assessment Service sets reimbursement criteria under which insurance coverage requires specific diagnostic and procedural conditions; prescriptions outside these criteria are not reimbursed and must be paid for out of pocket. In addition, methylphenidate is classified as a controlled substance, and all prescribing and dispensing are tracked through a centralized reporting system operated by the Ministry of Food and Drug Safety, which records detailed information on patients, prescriptions, and transactions. \todo{AUTHOR: per Kanghyock's comment in the draft, Seungyeon is checking whether HIRA applies stricter reimbursement review to ADHD medications than to other drug classes (as it does for antibiotics); if so, add one sentence here with the source.}
+
+At the same time, a substantial share of prescriptions falls outside insurance coverage. In the first half of 2024, 69.2 percent of non-reimbursed ADHD medication prescriptions went to individuals in their teens through thirties, with adolescents accounting for 38.2 percent.\footnote{JoongAng Ilbo, 2024 (\url{https://www.joongang.co.kr/article/25282450}).} Media reports suggest that this pattern is related to nonmedical use aimed at improving concentration or academic performance.\footnote{JoongAng Ilbo, 2024 (\url{https://www.joongang.co.kr/article/25282450}).} Because our claims data cover only reimbursed prescriptions, prescribing of this kind is not captured in our analysis, an issue we return to in Section~3.
+
+Prescribing also varies across regions. Health Insurance Review and Assessment Service data show substantial regional differences in the number of ADHD patients and claims per capita across provinces in 2023.\footnote{We calculate the numbers of ADHD patients and claims per capita using 2023 province-level data from the Health Insurance Review and Assessment Service and resident population data from the Ministry of the Interior and Safety.} These differences are unlikely to reflect drug prices: under Korea's National Health Insurance system, pharmaceutical prices are centrally regulated and do not vary across regions. Regional variation in ADHD prescribing instead reflects differences in demand, provider availability, or prescribing practices. Because our empirical design compares the same individuals before and after the exam, time-invariant differences in local prescribing practices do not generate the discontinuities we study; Section~5 relates the size of the post-exam decline to local educational competition.
+
+%==============================================================
+\section{Data}
+%==============================================================
+
+We use the administrative claims database of the NHIS for the empirical analysis. It contains all insurance-covered healthcare encounters for the entire resident population, including diagnosis codes, prescription details, dates of service, and provider identifiers, together with each enrollee's sex, year of birth, residential district, and health insurance premium. To estimate changes in ADHD medication use before and after the CSAT, we use a 50\% random sample of Korean adolescents observed at ages 17 to 21 during 2010--2019.\footnote{Although we were granted access to the full population data, all analyses had to be conducted within the NHIS data center, where estimation on the complete universe of claims proved computationally prohibitive given the size of the sample. We therefore draw a 50\% random sample to keep computation tractable while preserving a representative and sufficiently large sample for our analysis.}
+
+We measure ADHD medication prescription using claims for methylphenidate hydrochloride.\footnote{Our data covers all methylphenidate products listed in the Health Insurance Review and Assessment Service's drug master file, spanning 5~mg to 54~mg doses in immediate- and extended-release formulations.} We construct two outcome variables at the individual-month level. The probability of any ADHD medication prescription is defined as an indicator equal to one if an individual receives at least one methylphenidate prescription in a given month and zero otherwise. The number of ADHD medication prescriptions is the number of distinct ADHD medication prescription events received by an individual within a month.\footnote{We identify distinct prescription events using the unique visit identifier.} Figure~A1 presents the raw monthly trends of both outcomes around the month of the CSAT, where month 0 denotes the month of the examination. Both the probability and the number of the ADHD medication prescriptions remain relatively stable before the CSAT and decline sharply immediately afterward.
+
+To measure mental health, we construct outcomes for mental healthcare utilization using the same aggregation procedure. Mental healthcare utilization is identified from claims with a primary or secondary diagnosis code beginning with F (mental and behavioral disorders under the ICD-10 classification). Outpatient visits and hospital admissions are distinguished based on the claim form type, and the probability and number of each are constructed in the same manner as the ADHD medication outcomes. Self-harm is an indicator equal to one if any diagnosis field records an intentional self-harm code (ICD-10: X60--X84) and zero otherwise.
+
+We also use suicide rates as a measure of severe mental health outcomes, constructed from mortality records in Statistics Korea's MicroData Integrated Service (MDIS). We classify a death as suicide if either of the two recorded cause-of-death codes indicates intentional self-harm (ICD-10: X60--X84). Unlike the claims data, the mortality records do not report the year and month of birth; they report the date of death and age at death, with age calculated based on the month of birth. We therefore cannot assign deaths to event time relative to each person's CSAT month. Instead, we infer each deceased individual's birth year from age at death and date of death, under the approximation that the month of birth coincides with the month of death. We then aggregate suicides by event time and express monthly suicide rates per 1,000,000 individuals in the corresponding analysis sample.
+
+For the empirical analysis, we construct an individual-month balanced panel that follows each adolescent for 60 consecutive months, from January of the second year of high school through December of the year in which she turns 21. Because the year of the CSAT is determined by birth year, the sample covers the 1993--1998 birth cohorts, whose CSAT exams were administered between 2011 and 2016. The balanced panel requires continuous NHIS enrollment throughout the 60 months and therefore excludes individuals who die or emigrate before the end of the window; we acknowledge this survivorship restriction when interpreting the mental health analyses, and we measure suicide from separate mortality records precisely because suicide cannot be observed in a panel that conditions on survival. The balanced panel contains 822,409 individuals and 49,344,540 individual-month observations.
+
+Table~A1 reports summary statistics. The sample is 47.2\% female, with an average age of 19 years. Approximately 3.3\% of the sample resides in Gangnam at age 18, the year of the CSAT, where Gangnam is an indicator for residence in Gangnam-gu, Seocho-gu, and Songpa-gu, the Seoul districts widely regarded as the center of private education. We proxy household income with the ventile of the household's health insurance premium, also measured at age 18; group 0 corresponds to Medical Aid beneficiaries and groups 1--20 represent premium percentiles.\footnote{Because premium ventiles are not defined within our sample of adolescents' households, their sample shares are not uniform: the top four ventiles account for 33.5\% of observations.} The average monthly probability of receiving an ADHD medication prescription is 0.14\%, and the average number of ADHD medication prescriptions is 0.002 per individual-month. Conditional on receiving at least one ADHD medication prescription, individuals receive an average of 1.39 prescriptions per month.
+
+\paragraph{Entrance-exam Cram School Density.}
+To further examine the role of educational competition on ADHD medication prescribing, we construct district-level measures of private academy density using administrative data from the Korean Educational Development Institute (KEDI) Educational Statistics Service (KESS). We combine two datasets: (i) the Private Academy Census, which records the number of private academies (\textit{hagwons}) by district and academy type, and (ii) the District-Level Education Statistics Summary, which reports student enrollment by school level and district.
+
+Our primary measure of educational competition is the number of entrance-exam cram school academies (\textit{Hagwons} in Korean) per 1,000 middle and high school students at the district level. \textit{Hagwons} are classified into two broad categories: school-curriculum-instruction academies (\textit{hakgyo-gwagwa-gyoseup-hagwon}), which provide supplementary instruction in school subjects, and lifelong-vocational-education academies. Within the school-curriculum-instruction category, we focus on academies classified in the exam-preparation and supplementary (\textit{ipsi-geomjeong-boseup}) field, which directly target college entrance exam preparation. We refer to this as the entrance-exam cram school density. For the empirical analysis, we average the measure over 2013--2019 for each district, yielding a time-invariant cross-sectional measure of cram school density across approximately 246 districts. We use a multi-year average because consistent district-level academy data are available only from 2013 and because the geographic distribution of cram schools is highly persistent over the sample period; we acknowledge that the measure is not contemporaneous for the cohorts taking the CSAT in 2011 and 2012. Each individual is assigned the density of her district of residence at age 18, the year of the CSAT. As a robustness check, we also use a broader measure, the number of all school-curriculum-instruction academies per 1,000 middle and high school students, which additionally includes academies in fields such as internationalization and arts education.\footnote{We acknowledge that these measures do not account for non-academy forms of private education, such as individual tutoring or online instruction, which could be positively correlated with our measures.}
+
+Figure~A2 maps the spatial distributions of cram school density across districts. The mean and standard deviation are 20.96 and 7.95 entrance-exam cram schools per 1,000 students, respectively. The nationwide map indicates that cram school density is relatively high in the Seoul metropolitan area and other metropolitan areas, whereas many non-metropolitan areas exhibit lower densities. Within Seoul, the highest cram school densities are observed in the Gangnam districts and Yangcheon-gu, home to Mok-dong, another major private education hub. The maps indicate substantial cross-sectional variation in educational pressure as proxied by the entrance-exam cram school density.
+
+%==============================================================
+\section{Empirical Strategy}
+%==============================================================
+
+We estimate the effect of high-stakes college entrance exam pressure on ADHD medication prescribing by examining the discontinuous change in prescribing around the timing of the CSAT, which is administered in November of the third year of high school. ADHD is a chronic neurodevelopmental condition; if medications were prescribed solely to treat it, prescribing should evolve smoothly through the exam month, since the disorder itself does not change discontinuously at that date. A discontinuous decline in prescribing immediately after the CSAT would instead indicate that part of the pre-exam prescribing was due to the exam rather than to clinical need. To examine how prescribing evolves after the exam, we use the individual--month-level balanced panel described in Section~3, which follows each adolescent for 60 months from January of the second year of high school. Specifically, we estimate the following equation:
+\begin{equation}
+  ADHD_{i,t} = \alpha + \sum_{k \neq -1}^{35} \beta_k \mathbf{1}[Time_t = k] + \lambda_i + \epsilon_{i,t},
+  \label{eq:es}
+\end{equation}
+where $ADHD_{i,t}$ denotes an ADHD prescription measure, either the probability of an ADHD medication prescription or the number of ADHD prescriptions, for individual $i$ in event time $t$; $Time_t$ is the event time relative to the month of an adolescent's CSAT in her final year of high school; $\lambda_i$ represents individual fixed effects, which capture each individual's time-invariant characteristics; and $\epsilon_{i,t}$ is an error term. For statistical inference, we calculate standard errors clustered at the individual level and corrected for heteroskedasticity.
+
+The parameters of interest are the $\beta_k$s ($k=-22,\ldots,35$), which capture monthly changes in ADHD prescriptions relative to October of the final year of high school, the month immediately before the CSAT ($k=-1$, the omitted category). The key identifying assumption is that, in the absence of the CSAT, ADHD medication prescribing would have remained stable around the exam month. This assumption is most credible for the immediate effect, which we identify from the discontinuity in ADHD prescribing in the exam month. Because we identify this effect from the sharp change within the same individual in the months just before and after the exam, the design resembles a regression discontinuity in event time: as in an RDD, the identifying requirement is that all other determinants of prescribing evolve smoothly through the threshold.\footnote{Manipulation of the running variable is not a concern in our context because students cannot choose when the CSAT is held.} One remaining threat is that the sharp relief of stress once the exam is over could itself reduce prescribing through a genuine improvement in mental health. To examine this, we estimate Equation~(\ref{eq:es}) for mental healthcare utilization and self-harm, and we examine the cohort-level suicide series in a separate aggregate event-time analysis. As we show in Section~5.1.3, we find little evidence of a discontinuous improvement in mental health at the exam month (Figure~A12). Another identification threat is seasonality in prescribing. Because the CSAT always takes place in November, monthly event time cannot separate the exam from calendar-month seasonality. To address this concern, we compare the discontinuity in ADHD prescribing in November of the third year of high school with that in November of the second year of high school, when no exam takes place. We also re-estimate Equation~(\ref{eq:es}) at the weekly level, which reveals whether the decline is concentrated in the exam week itself rather than spread across the fall months, narrowing, though not fully ruling out, seasonal explanations (Section~5.1.2).
+
+To summarize the estimates in Equation~(\ref{eq:es}), we estimate two simplified specifications. The first estimates the overall change in ADHD medication prescribing after the CSAT:
+\begin{equation}
+  ADHD_{i,t} = \alpha + \beta\, Post_t + \lambda_i + \epsilon_{i,t},
+  \label{eq:post}
+\end{equation}
+where $Post_t$ equals one for months 0 to 35 after the CSAT and zero otherwise. The coefficient $\beta$ captures the average change in ADHD medication prescriptions after the CSAT.
+
+The second estimates changes in prescribing separately for each of the three years after the CSAT:
+\begin{equation}
+  ADHD_{i,t} = \alpha + \beta_1 Post1_t + \beta_2 Post2_t + \beta_3 Post3_t + \lambda_i + \epsilon_{i,t},
+  \label{eq:post3}
+\end{equation}
+where $Post1_t$, $Post2_t$, and $Post3_t$ equal one for months 0 to 11, 12 to 23, and 24 to 35 after the CSAT, respectively. The coefficients $\beta_k$ ($k=1,2,3$) capture the corresponding changes in ADHD medication prescribing in the first, second, and third years after the CSAT. For statistical inference, we calculate standard errors clustered at the individual level and corrected for heteroskedasticity.
+
+If the CSAT-induced decline in ADHD prescribing reflects nonmedical use driven by exam pressure, we expect the decline to be larger in districts where educational competition is more intense. To examine this, we exploit cross-sectional variation in entrance-exam cram school density across districts. Specifically, we interact the event-time indicators from Equation~(\ref{eq:es}) with our district-level measure of cram school density and estimate the following dynamic difference-in-differences equation:
+\begin{equation}
+  ADHD_{i,d,t} = \alpha + \sum_{k \neq -1}^{35} \delta_k \mathbf{1}[Time_t = k] \times CramDensity_d + \lambda_i + \mu_t + \epsilon_{i,d,t},
+  \label{eq:dd}
+\end{equation}
+where $CramDensity_d$ denotes the entrance-exam cram school density in district $d$, measured as the average number of exam-preparation academies per 1,000 middle and high school students over 2013--2019. The remaining notation follows Equation~(\ref{eq:es}). Standard errors are clustered at the individual level.
+
+The parameters of interest are the interaction coefficients $\delta_k$s, which capture how monthly ADHD prescribing changes vary with entrance-exam cram school density. If educational competition drives nonmedical use of ADHD, we expect $\delta_k < 0$ (for $k \geq 0$): districts with higher cram school density exhibit larger declines in ADHD prescribing after the CSAT.
+
+The key identification assumption for interpreting the estimated $\delta_k$s as the effects of differential CSAT pressure is that, in the absence of the CSAT, the difference in ADHD prescribing trends between high- and low-density districts would have remained stable before and after the CSAT. Since this counterfactual scenario is unobservable, we indirectly test this assumption by investigating whether $\delta_k$s ($k<0$) are small in magnitude and statistically insignificant.
+
+%==============================================================
+\section{Empirical Results}
+%==============================================================
+
+\subsection{Effects of the CSAT on ADHD Medication Prescriptions}
+
+Figure~1 presents event study estimates obtained from Equation~(\ref{eq:es}). Panel~A shows the estimates for the probability of any ADHD medication prescription, and Panel~B shows the estimates for the number of ADHD medication prescriptions. In Panel~A, the estimates move relatively smoothly prior to the CSAT. In the month of the CSAT, however, the probability of any ADHD medication prescription declines sharply and remains persistently below its pre-exam level throughout the post-exam period. Panel~B follows the same pattern. The number of ADHD medication prescriptions drops discontinuously in the month of the CSAT and does not return to its pre-exam level thereafter. The sharp decline in the exam month, following stable pre-exam estimates, suggests that part of the pre-exam prescribing was tied to the exam itself rather than to the treatment of a chronic condition.
+
+To quantify the average post-exam changes in ADHD medication prescription, we estimate the simplified specifications in Equations~(\ref{eq:post}) and (\ref{eq:post3}). Table~A2 presents the results. Column~(1) reports the estimates for the probability of any ADHD medication prescription, and column~(2) reports those for the number of ADHD medication prescriptions. In Panel~A, based on Equation~(\ref{eq:post}), the estimated coefficient on Post is $-0.0014$ in column~(1) and $-0.0018$ in column~(2). Both estimates are statistically significant at the 1\% level and consistent with the event study pattern in Figure~1. Relative to the average pre-exam prescribing levels (0.0023 and 0.0032, respectively), these estimates correspond to declines of 61\% and 56\%. To examine how the decline evolves over time, Panel~B reports estimates from Equation~(\ref{eq:post3}), which splits the post-exam period into the first, second, and third years after the exam. In column~(1), the coefficients are $-0.0011$, $-0.0015$, and $-0.0015$ for the first, second, and third years after the CSAT, respectively. The corresponding estimates in column~(2) are $-0.0015$, $-0.0020$, and $-0.0020$. The decline in ADHD medication prescribing is therefore not a transitory disruption confined to the months surrounding the exam: the estimates remain negative and, if anything, grow in magnitude over the three post-exam years. We interpret this longer-term persistence as an association rather than a causal effect of the exam, because the year-two and year-three coefficients cannot be cleanly separated from age effects.
+
+We conduct two robustness checks. First, one may be concerned that the baseline reflects differences across regions in the composition of adolescents. To address this concern, we add region fixed effects to Equation~(\ref{eq:es}), where regions are defined at the district (\textit{si-gun-gu}) level. Figure~A3 shows that the estimates are very similar to the baseline in Figure~1. In both panels, ADHD medication prescriptions fall in the month of the CSAT and remain lower throughout the post-exam period, indicating that the decline is not driven by regional composition. Second, as discussed in Section~4, the decline could reflect a seasonal pattern common to every fall rather than the exam itself. To examine this possibility, we estimate Equation~(\ref{eq:es}) using weekly event time. Figure~A4 shows that prescriptions drop sharply in the week of the CSAT rather than drifting downward over the fall months, consistent with an exam-specific decline rather than a seasonal one. To further assess whether the decline reflects a recurring November pattern, we compare monthly prescribing in the second and third years of high school. Figure~\todo{AX} plots the estimates separately for the two school years. In the second year, \todo{prescribing remains broadly stable, with no comparable decline in November}. In the third year, by contrast, prescribing \todo{declines sharply in the month of the CSAT}, falling sharply in the month of the CSAT. The November-to-October change is \todo{XX} in Grade~11 and \todo{YY} in Grade~12, yielding a differential decline of \todo{ZZ}. Thus, the sharp drop in the month of the CSAT is not part of a recurring November pattern.
+
+Figure~1 also suggests a smaller additional decline approximately one year after the CSAT, around the next CSAT administered in November. One possible explanation is that this decline reflects exam-related prescribing among students preparing to retake the examination. Students who do not achieve their desired admission outcomes may retake the CSAT, and a substantial share of CSAT test takers are high school graduates. In the CSAT years relevant to our analysis, graduates accounted for approximately 21.3 percent of all test takers. We therefore examine prescribing patterns more closely around the subsequent CSAT date. To quantify the additional decline, we compare prescribing in November with prescribing in the following month around the initial and subsequent CSAT dates. As shown in the raw prescribing trends in Figure~A1, the probability of any ADHD medication prescription declines from 0.001062 to 0.000930, a decrease of 12.4 percent. The number of prescriptions similarly declines from 0.001479 to 0.001300, a decrease of 12.1 percent. A regression comparing the two months yields an estimated change of \todo{XX} (xx) and \todo{YY} (yy), respectively. These declines are approximately \todo{ZZ} percent as large as the corresponding decline around the initial CSAT. Given that the 21.3 percent graduate share includes individuals taking the examination more than one year after graduation, the relative magnitude of the timing of additional declines suggest that they may reflect continued exam-related prescribing among students preparing to retake the CSAT.
+
+As an additional robustness check, we examine two additional healthcare outcomes to assess whether the decline in ADHD medication prescribing reflects a broader change in healthcare utilization after CSAT. Students may alter the timing of medical visits when exam preparation ends, which could generate a decline in prescription claims. To assess this possibility, we estimate Equation~(\ref{eq:es}) using ophthalmology and dermatology visits as outcomes. Ophthalmology visits \todo{\ldots}, while dermatology visits \todo{\ldots}. Neither outcome exhibits a discontinuous decline in the month of the CSAT comparable to the sharp decline in ADHD medication prescribing.
+
+We next examine how the post-exam decline in ADHD medication prescriptions differs by gender and household income. We begin with gender, given prior evidence of higher rates of nonmedical prescription stimulant use among males \citep{mccabe2005}. Figure~A5 presents event study estimates separately for male and female adolescents. Both groups show a discontinuous decline in the month of the CSAT, but the drop is markedly larger for males than for females. This pattern holds for both the probability of any ADHD medication prescription and the number of prescriptions.
+
+We next turn to household income. Because household resources may shape educational investments, the post-exam decline may vary across household income groups. Figure~A6 plots the estimated average post-CSAT change in ADHD medication prescribing across ventiles of household income, proxied by health insurance premiums measured at age 18. For each ventile, we estimate Equation~(\ref{eq:post}) separately and plot the coefficient on \textit{Post}. The estimated drop tends to be larger for adolescents from higher-income households, and is especially pronounced at the very top of the income distribution. The average post-exam decline reaches $-0.0031$ for the highest income ventile, more than twice the full-sample estimate of $-0.0014$. The post-exam decline is thus not concentrated among low-income adolescents but is most evident among those from the wealthiest households.
+
+\subsection{Effects of the CSAT on ADHD Medication Prescriptions by Educational Pressure}
+
+Our event-study design estimates indicate educational pressure induced by the CSAT decreased ADHD medication prescription. If this is indeed the case, we expect that the effects are greater among adolescents facing more severe competition.
+
+To explore this idea, we first examine heterogeneity by residential location. As discussed in Section~2, the Gangnam districts are widely regarded as the center of intense college entrance competition in Korea. If the decline in ADHD medication prescribing reflects exam-driven demand, we expect a larger decline among adolescents living in Gangnam. Figure~A7 presents the event study estimates separately for adolescents residing in Gangnam and those residing elsewhere, based on residential location at age 18. Both groups show a decline in ADHD medication prescribing after the CSAT, but the drop is far larger for adolescents in Gangnam. Relative to adolescents living elsewhere, the post-exam decline in Gangnam is larger by 0.0017 for the probability of any prescription and by 0.0026 for the number of prescriptions, and both differences are statistically significant at the 1\% level. These gaps widen over the years following the exam.
+
+We generalize the effects of educational competition by using a more continuous proxy of educational pressure. As described in Section~3, we measure local educational competition by district-level entrance-exam cram school density. If part of pre-exam prescribing was driven by the exam rather than by medical need, as the previous results suggest, the post-exam decline should be larger in districts with higher cram school density.
+
+Then we estimate the dynamic difference-in-differences specification in Equation~(\ref{eq:dd}), which interacts the event-time indicators with district-level entrance-exam cram school density. Figure~2 plots the resulting interaction coefficients. Before the CSAT, the coefficients are generally close to zero and statistically insignificant. This indicates that, relative to the month immediately preceding the exam, ADHD medication prescribing did not change differentially with cram school density during the pre-exam period. The interaction coefficients turn negative in the month of the exam and remain negative throughout the post-exam period, with the negative gap widening over time. Districts with higher cram school density thus experience larger declines in ADHD medication prescribing once the exam is over. The pattern holds for both the probability of any ADHD medication prescription and the number of prescriptions. To examine the sensitivity of these results to how cram school density is defined, we estimate Equation~(\ref{eq:dd}) using the broader academic cram school density measure, which includes school-curriculum-instruction academies beyond those focused on exam preparation. Figure~A8 shows that the interaction coefficients are flat before the exam and turn negative in the month of the CSAT, consistent with the baseline results.
+
+In this analysis, we assume a linear relationship between cram school density and the event-time effects. To diagnose the validity of this assumption, we first provide descriptive evidence on the relationship between local cram school density and the size of the ADHD prescription discontinuity \citep{callaway2024}. For each district, we estimate the post-CSAT discontinuity in the probability of any ADHD medication prescription, using individuals' residential location in the year of the CSAT. Figure~A9 groups districts into 20 equal-sized bins by cram school density and plots the average discontinuity against the average cram school density in each bin. Panel~A uses entrance-exam cram school density, and Panel~B uses the broader academic cram school density measure. In both panels, the fitted line slopes downward, indicating an approximately linear relationship between education pressure measures and post-exam declines in ADHD medication prescribing. To further examine this assumption, we estimate three pairwise versions of Equation~(\ref{eq:dd}). In each regression, the sample is restricted to the lowest quartile and one higher quartile of entrance-exam cram school density, and the continuous density measure is replaced by an indicator for the higher quartile.
+
+Figure~A10 presents the results. In the second and third quartiles, the differential post-exam changes are modest, with no sharp discontinuity in the month of the CSAT. In the top quartile, by contrast, the estimates discontinuously fall in the exam month and remain negative throughout the post-exam period. The pattern in Figure~2 therefore appears to be driven mainly by districts in the highest-density quartile. Figure~A11 repeats the quartile analysis using academic cram school density and shows a broadly similar pattern, with the largest post-exam declines in the top quartile, although the estimates are somewhat less precise than those in Figure~A10. Overall, the results are not sensitive to how cram school density is defined.
+
+Table~A3 reports the corresponding average post-exam estimates from the quartile specifications. Panel~A uses entrance-exam cram school density, and Panel~B uses academic cram school density. In each specification, the coefficient on \textit{Post} captures the post-exam decline in the reference group, the lowest-density quartile, while the interaction terms capture the additional decline in each higher quartile. In Panel~A, the decline for the lowest quartile is $-0.00093$ for the probability of any ADHD medication prescription and $-0.00126$ for the number of prescriptions. The additional decline grows monotonically across quartiles. For the probability, the interaction coefficients are $-0.00033$, $-0.00042$, and $-0.00061$ for the second, third, and top quartiles. For the number of prescriptions, they are $-0.00037$, $-0.00057$, and $-0.00085$. The top-quartile differential is therefore about two-thirds the size of the lowest-quartile decline itself. Panel~B shows a similar but weaker pattern for academic cram school density. The interaction coefficients are small or even slightly positive in the second quartile (0.00019 for probability and 0.00010 for the number of prescriptions) and become sizable only in the top quartile ($-0.00035$ and $-0.00066$, respectively). These estimates are consistent with Figures~A10 and A11. Under both measures, the post-exam decline is clearest in the highest-density districts.
+
+\subsection{Effects of the CSAT on Adolescents' Mental Health}
+
+We next examine whether the decline in ADHD medication prescriptions simply reflects the relief of exam-related stress and a broad improvement in mental health after the CSAT. If adolescents were mentally healthier after the exam, other mental health outcomes should also improve discontinuously at the same time. Figure~A12 presents event study estimates for broader mental health-related outcomes. Panels A and B report outpatient mental healthcare use, Panels C and D report inpatient mental healthcare admissions, Panel~E reports suicide rates, and Panel~F reports self-harm. Outpatient mental healthcare use declines gradually over the post-exam period, but we do not find a sharp drop in the month of the CSAT; the gradual decline stands in contrast to the abrupt fall in ADHD prescribing. Inpatient mental healthcare admissions in Panels C and D are somewhat higher after the exam. Neither suicide rates nor self-harm shows a discontinuous decline around the CSAT. Taken together, these patterns provide little evidence that the drop in ADHD medication prescriptions reflects a general improvement in mental health. Combined with the magnitude of the prescription decline itself (Section~5.1.1), this suggests that a substantial part of the pre-exam prescribing was driven by the exam rather than by medical need.
+
+Because ADHD-related visits may decline mechanically when ADHD medication prescribing falls, we also reconstruct mental healthcare utilization after excluding ADHD diagnosis codes. Specifically, we define non-ADHD mental healthcare using diagnosis codes beginning with the code F other than F90 and re-estimate Equation~(\ref{eq:es}). Figure~\todo{?} presents the results. Non-ADHD outpatient mental healthcare use \todo{results} after the CSAT, while non-ADHD inpatient mental healthcare use \todo{results}. Overall, these results suggest that the contrast between ADHD prescribing and broader mental healthcare utilization is not mechanically driven by the inclusion of ADHD-related visits.
+
+In Section~5.1.3, we found that the overall post-exam decline in ADHD medication prescribing did not reflect a broad improvement in mental health. We now apply the same logic to the heterogeneity result. If the larger decline in high-competition districts arose because adolescents there became mentally healthier after the exam, their mental health outcomes should also improve more than those of adolescents in other districts. To test this, we estimate the interaction specification in Figure~2, interacting the event-time indicators with entrance-exam cram school density as in Equation~(\ref{eq:dd}), using mental health outcomes as the dependent variables. Figure~3 presents the results for outpatient mental healthcare use, inpatient mental healthcare admissions, and self-harm.
+
+Across these outcomes, the interaction coefficients show no discontinuous improvement in the month of the CSAT in higher-density districts. The probability of any outpatient visit (Panel~A) stays close to zero throughout the event window. The number of outpatient visits (Panel~B) rises gradually in the months leading up to the exam and declines gradually afterward, but this movement is smooth rather than discontinuous and stands in sharp contrast to the abrupt drop in ADHD medication prescribing. Outpatient use does not fall discontinuously in the exam month in higher-density districts.
+
+The remaining panels show similar patterns. The probability and number of inpatient mental healthcare admissions (Panels C and D) fluctuate around zero with no break in the exam month, and self-harm (Panel~E) similarly shows no discontinuous change in higher-density districts. Across all these outcomes, there is no evidence that mental health improves more in the districts where ADHD medication prescribing falls most sharply.
+
+These patterns reinforce the evidence presented in Section~5.1 that the post-exam decline does not reflect improved mental health. The steeper decline in high-competition districts is therefore more consistent with the removal of exam-related, nonmedical prescribing than with a clear clinical improvement in mental health.
+
+%==============================================================
+\section{Concluding Remarks}
+%==============================================================
+
+Using administrative claims data from South Korea, we document a sharp decline in ADHD medication prescribing around the CSAT. Prescribing remains below its pre-exam level throughout the following three years. The decline is larger in areas with more intense educational competition and among individuals from higher income households. By contrast, broader mental health outcomes show little evidence of a comparable discontinuous improvement after the exam. These findings suggest that part of pre-exam prescribing may reflect exam-related demand.
+
+Our findings suggest that the consequences of high-stakes educational competition may extend beyond conventional educational investments to prescription drug demand. This points to a need for closer monitoring of potential nonmedical stimulant use among adolescents, particularly around major examinations and in highly competitive areas. More broadly, policies that reduce the intensity of college entrance competition may have the additional benefit of reducing exam-related prescription demand.
+
+Our analysis has several limitations. The claims data measure prescriptions rather than actual medication use and do not reveal the motivation for individual prescriptions. They also exclude non-reimbursed prescriptions, among which nonmedical use may be more prevalent, so our estimates may understate the overall extent of exam-related prescribing. In addition, although district-level cram school density is associated with the intensity of educational competition, it remains an imperfect proxy for educational pressure. Finally, the longer-run patterns cannot be cleanly separated from age-related changes in ADHD treatment and should be interpreted as associations rather than causal effects of the exam. Even so, the findings suggest that exam-related demand for ADHD medication may be a less visible consequence of high-stakes exam competition.
+
+%==============================================================
+% References
+%==============================================================
+\newpage
+\begin{thebibliography}{99}
+\setlength{\itemsep}{0.4em}
+
+\bibitem[Antle et~al.(2012)]{antle2012}
+Antle, M.~C., H.~C. van Diepen, T.~Deboer, P.~Pedram, R.~R. Pereira, and J.~H. Meijer. 2012. ``Methylphenidate Modifies the Motion of the Circadian Clock.'' \textit{Neuropsychopharmacology} 37 (11): 2446--2455.
+
+\bibitem[Arnsten(2009)]{arnsten2009}
+Arnsten, A.~F.~T. 2009. ``Toward a New Understanding of Attention-Deficit Hyperactivity Disorder Pathophysiology: An Important Role for Prefrontal Cortex Dysfunction.'' \textit{CNS Drugs} 23 (Suppl.~1): 33--41.
+
+\bibitem[Black(1999)]{black1999}
+Black, S.~E. 1999. ``Do Better Schools Matter? Parental Valuation of Elementary Education.'' \textit{Quarterly Journal of Economics} 114 (2): 577--599.
+
+\bibitem[Bokhari and Schneider(2011)]{bokhari2011}
+Bokhari, F.~A.~S., and H.~S. Schneider. 2011. ``School Accountability Laws and the Consumption of Psychostimulants.'' \textit{Journal of Health Economics} 30 (2): 355--372.
+
+\bibitem[Buchmueller and Carey(2018)]{buchmueller2018}
+Buchmueller, T.~C., and C.~Carey. 2018. ``The Effect of Prescription Drug Monitoring Programs on Opioid Utilization in Medicare.'' \textit{American Economic Journal: Economic Policy} 10 (1): 77--112.
+
+\bibitem[Callaway et~al.(2024)]{callaway2024}
+Callaway, B., A.~Goodman-Bacon, and P.~H. Sant'Anna. 2024. \textit{Difference-in-Differences with a Continuous Treatment}. NBER Working Paper No.~32117.
+
+\bibitem[Chandra and Staiger(2007)]{chandra2007}
+Chandra, A., and D.~O. Staiger. 2007. ``Productivity Spillovers in Health Care: Evidence from the Treatment of Heart Attacks.'' \textit{Journal of Political Economy} 115 (1): 103--140.
+
+\bibitem[Chen et~al.(2026)]{chen2026}
+Chen, K.-M., J.~Currie, H.~Ding, and W.-L. Lo. 2026. ``School Milestones Impact Child Mental Health in Taiwan.'' \textit{The Economic Journal}: ueag084.
+
+\bibitem[Chorniy and Kitashima(2016)]{chorniy2016}
+Chorniy, A., and L.~Kitashima. 2016. ``Sex, Drugs, and ADHD: The Effects of ADHD Pharmacological Treatment on Teens' Risky Behaviors.'' \textit{Labour Economics} 43: 87--105.
+
+\bibitem[Currie and Stabile(2006)]{currie2006}
+Currie, J., and M.~Stabile. 2006. ``Child Mental Health and Human Capital Accumulation: The Case of ADHD.'' \textit{Journal of Health Economics} 25 (6): 1094--1118.
+
+\bibitem[Currie et~al.(2014)]{currie2014}
+Currie, J., M.~Stabile, and L.~Jones. 2014. ``Do Stimulant Medications Improve Educational and Behavioral Outcomes for Children with ADHD?'' \textit{Journal of Health Economics} 37: 58--69.
+
+\bibitem[Currie et~al.(2023)]{currie2023}
+Currie, J., A.~Li, and M.~Schnell. 2023. ``The Effects of Competition on Physician Prescribing.'' NBER Working Paper No.~30889.
+
+\bibitem[Dalsgaard et~al.(2014)]{dalsgaard2014}
+Dalsgaard, S., H.~S. Nielsen, and M.~Simonsen. 2014. ``Consequences of ADHD Medication Use for Children's Outcomes.'' \textit{Journal of Health Economics} 37: 137--151.
+
+\bibitem[Denning et~al.(2023)]{denning2023}
+Denning, J.~T., R.~Murphy, and F.~Weinhardt. 2023. ``Class Rank and Long-Run Outcomes.'' \textit{Review of Economics and Statistics} 105 (6): 1426--1441.
+
+\bibitem[DeSantis et~al.(2008)]{desantis2008}
+DeSantis, A.~D., E.~M. Webb, and S.~M. Noar. 2008. ``Illicit Use of Prescription ADHD Medications on a College Campus: A Multimethodological Approach.'' \textit{Journal of American College Health} 57 (3): 315--324.
+
+\bibitem[Elder(2010)]{elder2010}
+Elder, T.~E. 2010. ``The Importance of Relative Standards in ADHD Diagnoses: Evidence Based on Exact Birth Dates.'' \textit{Journal of Health Economics} 29 (5): 641--656.
+
+\bibitem[Elsner et~al.(2021)]{elsner2021}
+Elsner, B., I.~E. Isphording, and U.~Z{\"o}litz. 2021. ``Achievement Rank Affects Performance and Major Choices in College.'' \textit{Economic Journal} 131 (640): 3182--3206.
+
+\bibitem[Evans et~al.(2010)]{evans2010}
+Evans, W.~N., M.~S. Morrill, and S.~T. Parente. 2010. ``Measuring Inappropriate Medical Diagnosis and Treatment in Survey Data: The Case of ADHD among School-Age Children.'' \textit{Journal of Health Economics} 29 (5): 657--673.
+
+\bibitem[Faraone et~al.(2015)]{faraone2015}
+Faraone, S.~V., P.~Asherson, T.~Banaschewski, J.~Biederman, J.~K. Buitelaar, J.~A. Ramos-Quiroga, L.~A. Rohde, E.~J.~S. Sonuga-Barke, R.~Tannock, and B.~Franke. 2015. ``Attention-Deficit/Hyperactivity Disorder.'' \textit{Nature Reviews Disease Primers} 1: 15020.
+
+\bibitem[Fawaz and Lee(2022)]{fawaz2022}
+Fawaz, Y., and J.~Lee. 2022. ``Rank Comparisons amongst Teenagers and Suicidal Ideation.'' \textit{Economics and Human Biology} 44: 101093.
+
+\bibitem[Finkelstein et~al.(2016)]{finkelstein2016}
+Finkelstein, A., M.~Gentzkow, and H.~Williams. 2016. ``Sources of Geographic Variation in Health Care: Evidence from Patient Migration.'' \textit{Quarterly Journal of Economics} 131 (4): 1681--1726.
+
+\bibitem[Gibbons and Machin(2003)]{gibbons2003}
+Gibbons, S., and S.~Machin. 2003. ``Valuing English Primary Schools.'' \textit{Journal of Urban Economics} 53 (2): 197--219.
+
+\bibitem[Greely et~al.(2008)]{greely2008}
+Greely, H., B.~Sahakian, J.~Harris, R.~C. Kessler, M.~Gazzaniga, P.~Campbell, and M.~J. Farah. 2008. ``Towards Responsible Use of Cognitive-Enhancing Drugs by the Healthy.'' \textit{Nature} 456: 702--705.
+
+\bibitem[Han(2025)]{han2025}
+Han, \todo{full reference missing}. 2025.
+
+\bibitem[Health Insurance Review and Assessment Service(2024)]{hira2024}
+Health Insurance Review and Assessment Service. 2024. \todo{full reference missing}.
+
+\bibitem[Kim et~al.(2024)]{kim2024}
+Kim, S., M.~Tertilt, and M.~Yum. 2024. ``Status Externalities in Education and Low Birth Rates in Korea.'' \textit{American Economic Review} 114 (6): 1576--1611.
+
+\bibitem[Kim and Lee(2010)]{kim2010}
+Kim, S., and J.-H. Lee. 2010. ``Private Tutoring and Demand for Education in South Korea.'' \textit{Economic Development and Cultural Change} 58 (2): 259--296.
+
+\bibitem[Lakhan and Kirchgessner(2012)]{lakhan2012}
+Lakhan, S.~E., and A.~Kirchgessner. 2012. ``Prescription Stimulants in Individuals with and without Attention Deficit Hyperactivity Disorder: Misuse, Cognitive Impact, and Adverse Effects.'' \textit{Brain and Behavior} 2 (5): 661--677.
+
+\bibitem[Layton et~al.(2018)]{layton2018}
+Layton, T.~J., M.~L. Barnett, T.~R. Hicks, and A.~B. Jena. 2018. ``Attention Deficit--Hyperactivity Disorder and Month of School Enrollment.'' \textit{New England Journal of Medicine} 379 (22): 2122--2130.
+
+\bibitem[Lee et~al.(2017)]{lee2017}
+Lee, M.-S., S.-B. Park, G.-M. Kim, H.-J. Kim, S.~Park, Y.~Kim, Y.~S. Lee, Y.-S. Kweon, and D.~Shin. 2017. ``The Revised Korean Practice Parameter for the Treatment of Attention-Deficit Hyperactivity Disorder (II): Diagnosis and Assessment.'' \textit{Journal of the Korean Academy of Child and Adolescent Psychiatry} 28 (2): 58--69.
+
+\bibitem[McCabe et~al.(2005)]{mccabe2005}
+McCabe, S.~E., J.~R. Knight, C.~J. Teter, and H.~Wechsler. 2005. ``Non-Medical Use of Prescription Stimulants among US College Students: Prevalence and Correlates from a National Survey.'' \textit{Addiction} 100 (1): 96--106.
+
+\bibitem[Ministry of Food and Drug Safety(2025)]{mfds2025}
+Ministry of Food and Drug Safety. 2025. \todo{full reference missing}.
+
+\bibitem[Morrill(2018)]{morrill2018}
+Morrill, M.~S. 2018. ``Special Education Financing and ADHD Medications: A Bitter Pill to Swallow.'' \textit{Journal of Policy Analysis and Management} 37 (2): 384--402.
+
+\bibitem[Murphy and Weinhardt(2020)]{murphy2020}
+Murphy, R., and F.~Weinhardt. 2020. ``Top of the Class: The Importance of Ordinal Rank.'' \textit{Review of Economic Studies} 87 (6): 2777--2826.
+
+\bibitem[National Youth Policy Institute(2025)]{nypi2025}
+National Youth Policy Institute. 2025. \textit{Children's and Youth Rights Survey}.
+
+\bibitem[OECD(2025)]{oecd2025}
+OECD. 2025. ``Education Policy Outlook in Korea.'' \textit{OECD Education Policy Perspectives}, No.~131. Paris: OECD Publishing.
+
+\bibitem[Rabiner et~al.(2009)]{rabiner2009}
+Rabiner, D.~L., A.~D. Anastopoulos, E.~J. Costello, R.~H. Hoyle, S.~E. McCabe, and H.~S. Swartzwelder. 2009. ``Motives and Perceived Consequences of Nonmedical ADHD Medication Use by College Students.'' \textit{Journal of Attention Disorders} 13 (3): 259--270.
+
+\bibitem[Raman et~al.(2018)]{raman2018}
+Raman, S.~R., K.~K.~C. Man, S.~Bahmanyar, et~al. 2018. ``Trends in Attention-Deficit Hyperactivity Disorder Medication Use: A Retrospective Observational Study Using Population-Based Databases.'' \textit{The Lancet Psychiatry} 5 (10): 824--835.
+
+\bibitem[Ramey and Ramey(2010)]{ramey2010}
+Ramey, G., and V.~A. Ramey. 2010. ``The Rug Rat Race.'' \textit{Brookings Papers on Economic Activity} 2010 (1): 129--176.
+
+\bibitem[Scheffler et~al.(2007)]{scheffler2007}
+Scheffler, R.~M., S.~P. Hinshaw, S.~Modrek, and P.~Levine. 2007. ``The Global Market for ADHD Medications.'' \textit{Health Affairs} 26 (2): 450--457.
+
+\bibitem[Schnell and Currie(2018)]{schnell2018}
+Schnell, M., and J.~Currie. 2018. ``Addressing the Opioid Epidemic: Is There a Role for Physician Education?'' \textit{American Journal of Health Economics} 4 (3): 383--410.
+
+\bibitem[Schwandt and Wuppermann(2016)]{schwandt2016}
+Schwandt, H., and A.~C. Wuppermann. 2016. ``The Youngest Get the Pill: ADHD Misdiagnosis in Germany, Its Regional Correlates, and International Comparison.'' \textit{Labour Economics} 43: 72--86.
+
+\bibitem[Smith and Farah(2011)]{smith2011}
+Smith, M.~E., and M.~J. Farah. 2011. ``Are Prescription Stimulants `Smart Pills'? The Epidemiology and Cognitive Neuroscience of Prescription Stimulant Use by Normal Healthy Individuals.'' \textit{Psychological Bulletin} 137 (5): 717--741.
+
+\bibitem[Song and Shin(2016)]{song2016}
+Song, I., and J.-Y. Shin. 2016. ``Prescribing Patterns for Attention Deficit Hyperactivity Disorder Medications among Children and Adolescents in Korea, 2007--2011.'' \textit{Epidemiology and Health} 38: e2016045.
+
+\bibitem[Statistics Korea(2024)]{statkorea2024}
+Statistics Korea. 2024. \textit{Social Survey}.
+
+\bibitem[Statistics Korea(2025)]{statkorea2025}
+Statistics Korea. 2025. \textit{Private Education Expenditures Survey}.
+
+\bibitem[Volkow et~al.(2003)]{volkow2003}
+Volkow, N.~D., G.-J. Wang, F.~Telang, J.~S. Fowler, J.~Logan, S.~J. Gatley, A.~Gifford, Y.-S. Ding, C.~Wong, N.~Pappas, W.~Zhu, and J.~M. Swanson. 2003. ``Cardiovascular Effects of Methylphenidate in Humans Are Associated with Increases of Dopamine in Brain and of Epinephrine in Plasma.'' \textit{Psychopharmacology} 166 (3): 264--270.
+
+\bibitem[Wang(2016)]{wang2016}
+Wang, L.~C. 2016. ``The Effects of High-Stakes Testing on Suicidal Ideation of Teenagers with Reference-Dependent Preferences.'' \textit{Journal of Population Economics} 29 (2): 345--364.
+
+\end{thebibliography}
+
+\end{document}
