@@ -10,6 +10,8 @@
 \captionsetup[figure]{labelformat=empty,labelsep=none,font=small,justification=centering,singlelinecheck=off}
 % Figure helpers: \figpanel{width}{panel label}{file}{annotation}
 \newcommand{\figpanel}[4]{\begin{minipage}[t]{#1\linewidth}\centering\small #2\\[2pt]\includegraphics[width=\linewidth]{#3}\\[1pt]{\scriptsize #4}\end{minipage}}
+% same as \figpanel but crops the image (trim = left bottom right top, in bp = px at 72 dpi)
+\newcommand{\figpanelt}[5]{\begin{minipage}[t]{#1\linewidth}\centering\small #2\\[2pt]\includegraphics[width=\linewidth,trim=#5,clip]{#3}\\[1pt]{\scriptsize #4}\end{minipage}}
 \newcommand{\fignotes}[2]{\par\smallskip{\footnotesize\raggedright Data source: #1\par Notes: #2\par}}
 \usepackage{booktabs}
 \usepackage{setspace}
@@ -337,8 +339,8 @@ Gibbons, S., and S.~Machin. 2003. ``Valuing English Primary Schools.'' \textit{J
 \bibitem[Greely et~al.(2008)]{greely2008}
 Greely, H., B.~Sahakian, J.~Harris, R.~C. Kessler, M.~Gazzaniga, P.~Campbell, and M.~J. Farah. 2008. ``Towards Responsible Use of Cognitive-Enhancing Drugs by the Healthy.'' \textit{Nature} 456: 702--705.
 
-\bibitem[Han(2025)]{han2025}
-Han, \todo{full reference missing}. 2025.
+\bibitem[Han and Han(2026)]{han2025}
+Han, S., and S.~Han. 2026. ``The Effects of Parental Competitive Pressure on Private Education Investment.'' \textit{KDI Journal of Economic Policy} 48 (2): 63--87.
 
 \bibitem[Health Insurance Review and Assessment Service(2024)]{hira2024}
 Health Insurance Review and Assessment Service. 2024. \todo{full reference missing}.
@@ -563,8 +565,8 @@ Obs. & 22,300,768 & 22,300,768 & \\
 \begin{figure}[!htbp]
 \centering
 \caption{Figure A2. Spatial Distribution of Entrance-Exam Cram School Density}
-\figpanel{0.47}{Korea}{figureA2A}{}\hfill
-\figpanel{0.47}{Within Seoul}{figureA2B}{}
+\figpanelt{0.47}{Korea}{figureA2A}{}{3bp 6bp 3bp 225bp}\hfill
+\figpanelt{0.47}{Within Seoul}{figureA2B}{}{3bp 3bp 3bp 118bp}
 \fignotes{Korean Educational Development Institute (KEDI), South Korea.}{The maps show entrance-exam cram school density by district, measured as the number of entrance-exam cram schools per 1,000 middle and high school students (2013--2019 average). Colors indicate quintiles of the density distribution; quintile cutoffs are computed separately for each map.}
 \end{figure}
 
