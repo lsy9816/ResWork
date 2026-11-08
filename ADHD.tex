@@ -6,6 +6,7 @@
 \usepackage{graphicx}
 \usepackage{caption}
 \graphicspath{{figures/}}
+\captionsetup[table]{labelformat=empty,labelsep=none,font=small,justification=centering,singlelinecheck=off}
 \captionsetup[figure]{labelformat=empty,labelsep=none,font=small,justification=centering,singlelinecheck=off}
 % Figure helpers: \figpanel{width}{panel label}{file}{annotation}
 \newcommand{\figpanel}[4]{\begin{minipage}[t]{#1\linewidth}\centering\small #2\\[2pt]\includegraphics[width=\linewidth]{#3}\\[1pt]{\scriptsize #4}\end{minipage}}
@@ -62,7 +63,7 @@ We focus on medications used to treat Attention Deficit Hyperactivity Disorder (
 
 We examine this prediction using administrative claims data from South Korea's National Health Insurance Service. The database covers the entire resident population, including both National Health Insurance enrollees and Medical Aid recipients. We use a 50 percent random sample of 822,409 individuals observed from ages 17 to 21 during 2010--2019. These records allow us to observe the timing of ADHD medication prescriptions rather than relying on self-reported medication use. We align each individual's prescription history relative to the CSAT associated with their birth cohort and compare changes in prescribing within the same individual before and after the predetermined exam month.
 
-We find a sharp decline in ADHD medication prescribing in the month of the CSAT. The probability of receiving an ADHD medication prescription falls by 0.14 percentage points after the exam, which represents approximately 61 percent of its pre-exam mean. The average number of prescriptions also declines by 0.0018 per individual-month, a reduction of approximately 56 percent relative to its pre-exam mean. Weekly estimates show that the decline is concentrated around the week of the CSAT, closely aligning the timing of the change with the exam. Prescribing remains below its pre-exam level throughout the subsequent three years. We also observe a smaller additional decline around the subsequent CSAT dates in the following two years, with a relative magnitude suggestive of continued exam-related prescribing among students preparing to retake the examination.
+We find a sharp decline in ADHD medication prescribing in the month of the CSAT. The probability of receiving an ADHD medication prescription falls by 0.14 percentage points after the exam, which represents approximately 61 percent of its pre-exam mean. The average number of prescriptions also declines by 0.0018 per individual-month, a reduction of approximately 56 percent relative to its pre-exam mean. Weekly estimates show that the decline is concentrated around the week of the CSAT, closely aligning the timing of the change with the exam. Prescribing remains below its pre-exam level throughout the subsequent three years.
 
 The decline in ADHD medication prescribing does not appear to reflect a general improvement in mental health after the CSAT. Outpatient mental healthcare use declines gradually over the post-exam period but does not show a sharp change in the month of the exam, while inpatient mental healthcare use does not decline. We also find no discontinuous reduction in self-harm or suicide around the CSAT. These patterns provide little evidence that the sharp decline in ADHD medication prescribing reflects a broad improvement in mental health.
 
@@ -197,8 +198,6 @@ To quantify the average post-exam changes in ADHD medication prescription, we es
 
 We conduct two robustness checks. First, one may be concerned that the baseline reflects differences across regions in the composition of adolescents. To address this concern, we add region fixed effects to Equation~(\ref{eq:es}), where regions are defined at the district (\textit{si-gun-gu}) level. Figure~A3 shows that the estimates are very similar to the baseline in Figure~1. In both panels, ADHD medication prescriptions fall in the month of the CSAT and remain lower throughout the post-exam period, indicating that the decline is not driven by regional composition. Second, as discussed in Section~4, the decline could reflect a seasonal pattern common to every fall rather than the exam itself. To examine this possibility, we estimate Equation~(\ref{eq:es}) using weekly event time. Figure~A4 shows that prescriptions drop sharply in the week of the CSAT rather than drifting downward over the fall months, consistent with an exam-specific decline rather than a seasonal one. To further assess whether the decline reflects a recurring November pattern, we compare monthly prescribing in the second and third years of high school. Figure~\todo{AX} plots the estimates separately for the two school years. In the second year, \todo{prescribing remains broadly stable, with no comparable decline in November}. In the third year, by contrast, prescribing \todo{declines sharply in the month of the CSAT}, falling sharply in the month of the CSAT. The November-to-October change is \todo{XX} in Grade~11 and \todo{YY} in Grade~12, yielding a differential decline of \todo{ZZ}. Thus, the sharp drop in the month of the CSAT is not part of a recurring November pattern.
 
-Figure~1 also suggests a smaller additional decline approximately one year after the CSAT, around the next CSAT administered in November. One possible explanation is that this decline reflects exam-related prescribing among students preparing to retake the examination. Students who do not achieve their desired admission outcomes may retake the CSAT, and a substantial share of CSAT test takers are high school graduates. In the CSAT years relevant to our analysis, graduates accounted for approximately 21.3 percent of all test takers. We therefore examine prescribing patterns more closely around the subsequent CSAT date. To quantify the additional decline, we compare prescribing in November with prescribing in the following month around the initial and subsequent CSAT dates. As shown in the raw prescribing trends in Figure~A1, the probability of any ADHD medication prescription declines from 0.001062 to 0.000930, a decrease of 12.4 percent. The number of prescriptions similarly declines from 0.001479 to 0.001300, a decrease of 12.1 percent. A regression comparing the two months yields an estimated change of \todo{XX} (xx) and \todo{YY} (yy), respectively. These declines are approximately \todo{ZZ} percent as large as the corresponding decline around the initial CSAT. Given that the 21.3 percent graduate share includes individuals taking the examination more than one year after graduation, the relative magnitude of the timing of additional declines suggest that they may reflect continued exam-related prescribing among students preparing to retake the CSAT.
-
 We next examine how the post-exam decline in ADHD medication prescriptions differs by gender and household income. We begin with gender, given prior evidence of higher rates of nonmedical prescription stimulant use among males \citep{mccabe2005}. Figure~A5 presents event study estimates separately for male and female adolescents. Both groups show a discontinuous decline in the month of the CSAT, but the drop is markedly larger for males than for females. This pattern holds for both the probability of any ADHD medication prescription and the number of prescriptions.
 
 We next turn to household income. Because household resources may shape educational investments, the post-exam decline may vary across household income groups. Figure~A6 plots the estimated average post-CSAT change in ADHD medication prescribing across ventiles of household income, proxied by health insurance premiums measured at age 18. For each ventile, we estimate Equation~(\ref{eq:post}) separately and plot the coefficient on \textit{Post}. The estimated drop tends to be larger for adolescents from higher-income households, and is especially pronounced at the very top of the income distribution. The average post-exam decline reaches $-0.0031$ for the highest income ventile, more than twice the full-sample estimate of $-0.0014$. The post-exam decline is thus not concentrated among low-income adolescents but is most evident among those from the wealthiest households.
@@ -231,8 +230,6 @@ Table~A3 reports the corresponding average post-exam estimates from the quartile
 \subsection{Effects of the CSAT on Adolescents' Mental Health}
 
 We next examine whether the decline in ADHD medication prescriptions simply reflects the relief of exam-related stress and a broad improvement in mental health after the CSAT. If adolescents were mentally healthier after the exam, other mental health outcomes should also improve discontinuously at the same time. Figure~A12 presents event study estimates for broader mental health-related outcomes. Panels A and B report outpatient mental healthcare use, Panels C and D report inpatient mental healthcare admissions, Panel~E reports suicide rates, and Panel~F reports self-harm. Outpatient mental healthcare use declines gradually over the post-exam period, but we do not find a sharp drop in the month of the CSAT; the gradual decline stands in contrast to the abrupt fall in ADHD prescribing. Inpatient mental healthcare admissions in Panels C and D are somewhat higher after the exam. Neither suicide rates nor self-harm shows a discontinuous decline around the CSAT. Taken together, these patterns provide little evidence that the drop in ADHD medication prescriptions reflects a general improvement in mental health. Combined with the magnitude of the prescription decline itself (Section~5.1.1), this suggests that a substantial part of the pre-exam prescribing was driven by the exam rather than by medical need.
-
-Because ADHD-related visits may decline mechanically when ADHD medication prescribing falls, we also reconstruct mental healthcare utilization after excluding ADHD diagnosis codes. Specifically, we define non-ADHD mental healthcare using diagnosis codes beginning with the code F other than F90 and re-estimate Equation~(\ref{eq:es}). Figure~\todo{?} presents the results. Non-ADHD outpatient mental healthcare use \todo{results} after the CSAT, while non-ADHD inpatient mental healthcare use \todo{results}. Overall, these results suggest that the contrast between ADHD prescribing and broader mental healthcare utilization is not mechanically driven by the inclusion of ADHD-related visits.
 
 In Section~5.1.3, we found that the overall post-exam decline in ADHD medication prescribing did not reflect a broad improvement in mental health. We now apply the same logic to the heterogeneity result. If the larger decline in high-competition districts arose because adolescents there became mentally healthier after the exam, their mental health outcomes should also improve more than those of adolescents in other districts. To test this, we estimate the interaction specification in Figure~2, interacting the event-time indicators with entrance-exam cram school density as in Equation~(\ref{eq:dd}), using mental health outcomes as the dependent variables. Figure~3 presents the results for outpatient mental healthcare use, inpatient mental healthcare admissions, and self-harm.
 
@@ -419,6 +416,137 @@ Volkow, N.~D., G.-J. Wang, F.~Telang, J.~S. Fowler, J.~Logan, S.~J. Gatley, A.~G
 Wang, L.~C. 2016. ``The Effects of High-Stakes Testing on Suicidal Ideation of Teenagers with Reference-Dependent Preferences.'' \textit{Journal of Population Economics} 29 (2): 345--364.
 
 \end{thebibliography}
+
+\clearpage
+\section*{Appendix Tables}
+
+\begin{table}[!htbp]
+\centering
+\caption{Table A1. Summary Statistics}
+\small
+\begin{tabular}{lcc}
+\toprule
+ & Mean (SD) & N \\
+\midrule
+Female & 47.22\% & 49,344,540 \\
+Age & 19 (1.41) & 49,344,540 \\
+Gangnam & 3.26\% & 49,344,540 \\
+Health insurance premium group (share) & & 49,344,540 \\
+\quad Group 0 & 4.40\% & \\
+\quad Group 1 & 4.75\% & \\
+\quad Group 2 & 3.41\% & \\
+\quad Group 3 & 3.66\% & \\
+\quad Group 4 & 3.62\% & \\
+\quad Group 5 & 3.06\% & \\
+\quad Group 6 & 3.53\% & \\
+\quad Group 7 & 3.66\% & \\
+\quad Group 8 & 3.63\% & \\
+\quad Group 9 & 3.68\% & \\
+\quad Group 10 & 3.53\% & \\
+\quad Group 11 & 3.67\% & \\
+\quad Group 12 & 3.71\% & \\
+\quad Group 13 & 4.05\% & \\
+\quad Group 14 & 4.29\% & \\
+\quad Group 15 & 4.70\% & \\
+\quad Group 16 & 5.13\% & \\
+\quad Group 17 & 6.33\% & \\
+\quad Group 18 & 8.60\% & \\
+\quad Group 19 & 8.61\% & \\
+\quad Group 20 & 9.97\% & \\
+\midrule
+Any ADHD prescription & 0.14\% & 49,344,540 \\
+Monthly number of ADHD prescriptions & 0.002 (0.06) & 49,344,540 \\
+Monthly number of ADHD prescriptions (conditional) & 1.39 (0.76) & 69,038 \\
+\bottomrule
+\end{tabular}
+\fignotes{National Health Insurance Service (NHIS), South Korea.}{All outcomes are measured at the individual-month level from 2010 to 2019 using a balanced five-year panel. Conditional outcomes are calculated only for individual-months with at least one ADHD medication prescription. Gangnam is an indicator equal to one if an individual resides in Gangnam-gu, Seocho-gu, or Songpa-gu, districts in Seoul. Health insurance premium groups are defined based on health insurance premiums and divided into 20 groups. Percentile 0 corresponds to medical aid beneficiaries.}
+\end{table}
+
+\begin{table}[!htbp]
+\centering
+\caption{Table A2. Discontinuities in ADHD Medication Prescriptions at the Month of Suneung}
+\small
+\begin{tabular}{lcc}
+\toprule
+Dep. vars. & \shortstack{Probability of ADHD\\medication prescription} & \shortstack{Number of ADHD\\medication prescriptions} \\
+ & (1) & (2) \\
+\midrule
+\multicolumn{3}{l}{\textit{A. Baseline}} \\
+Post & $-0.0014$ & $-0.0018$ \\
+ & (0.00003) & (0.00005) \\
+R-squared & 0.4193 & 0.3652 \\
+\midrule
+\multicolumn{3}{l}{\textit{B. By year after the CSAT}} \\
+Post1 & $-0.0011$ & $-0.0015$ \\
+ & (0.00003) & (0.00005) \\
+Post2 & $-0.0015$ & $-0.0020$ \\
+ & (0.00004) & (0.00006) \\
+Post3 & $-0.0015$ & $-0.0020$ \\
+ & (0.00004) & (0.00006) \\
+R-squared & 0.4193 & 0.3652 \\
+\midrule
+Pre-CSAT mean of dep.\ var. & 0.0023 & 0.0032 \\
+Num.\ individuals & 822,409 & 822,409 \\
+Obs. & 47,699,722 & 47,699,722 \\
+\bottomrule
+\end{tabular}
+\fignotes{National Health Insurance Service (NHIS), South Korea.}{This table reports estimated discontinuities in ADHD medication prescriptions at the month of the CSAT (\textit{Suneung}). Panel A reports estimates from Equation~(\ref{eq:post}), where Post indicates months 0--35 relative to the CSAT. Panel B reports estimates from Equation~(\ref{eq:post3}), where Post1, Post2, and Post3 correspond to months 0--11, 12--23, and 24--35 relative to the CSAT, respectively. All specifications include individual fixed effects. Standard errors are clustered at the individual level.}
+\end{table}
+
+\begin{table}[!htbp]
+\centering
+\caption{Table A3. Heterogeneity in ADHD Medication Prescription Trends around Suneung by Quartiles of Cram School Density}
+\footnotesize\setlength{\tabcolsep}{5pt}
+\begin{tabular}{lccc}
+\toprule
+Dep. vars. & \shortstack{Probability of ADHD\\medication prescription} & \shortstack{Number of ADHD\\medication prescriptions} & \shortstack{Average of cram\\school density} \\
+ & (1) & (2) & (3) \\
+\midrule
+\multicolumn{4}{l}{\textit{A. Entrance-Exam Cram School Density}} \\
+Post & $-0.00093$ & $-0.00126$ & 12.32 \\
+ & (0.00009) & (0.00014) & \\
+PostQ2 & $-0.00033$ & $-0.00037$ & 18.67 \\
+ & (0.00012) & (0.00018) & \\
+R-squared & 0.4399 & 0.3978 & \\
+Num.\ individuals & 224,132 & 224,132 & \\
+Obs. & 12,999,656 & 12,999,656 & \\
+\addlinespace
+PostQ3 & $-0.00042$ & $-0.00057$ & 22.64 \\
+ & (0.00011) & (0.00016) & \\
+R-squared & 0.4185 & 0.3684 & \\
+Num.\ individuals & 376,074 & 376,074 & \\
+Obs. & 21,812,292 & 21,812,292 & \\
+\addlinespace
+PostQ4 & $-0.00061$ & $-0.00085$ & 31.52 \\
+ & (0.00011) & (0.00016) & \\
+R-squared & 0.4132 & 0.3574 & \\
+Num.\ individuals & 389,687 & 389,687 & \\
+Obs. & 22,601,846 & 22,601,846 & \\
+\midrule
+\multicolumn{4}{l}{\textit{B. Academic Cram School Density}} \\
+Post & $-0.00122$ & $-0.00151$ & 13.45 \\
+ & (0.00010) & (0.00014) & \\
+PostQ2 & $0.00019$ & $0.00010$ & 20.29 \\
+ & (0.00012) & (0.00017) & \\
+R-squared & 0.4210 & 0.3544 & \\
+Num.\ individuals & 264,524 & 264,524 & \\
+Obs. & 15,342,392 & 15,342,392 & \\
+\addlinespace
+PostQ3 & $-0.00017$ & $-0.00036$ & 23.15 \\
+ & (0.00012) & (0.00017) & \\
+R-squared & 0.4270 & 0.3773 & \\
+Num.\ individuals & 346,925 & 346,925 & \\
+Obs. & 20,121,650 & 20,121,650 & \\
+\addlinespace
+PostQ4 & $-0.00035$ & $-0.00066$ & 30.63 \\
+ & (0.00012) & (0.00017) & \\
+R-squared & 0.4266 & 0.3777 & \\
+Num.\ individuals & 384,496 & 384,496 & \\
+Obs. & 22,300,768 & 22,300,768 & \\
+\bottomrule
+\end{tabular}
+\fignotes{National Health Insurance Service (NHIS), South Korea; Korean Educational Development Institute (KEDI), South Korea.}{This table reports estimates of heterogeneity in the discontinuity of ADHD medication prescriptions at the month of the CSAT (\textit{Suneung}) by quartiles of cram school density. Columns (1) and (2) report the probability of any ADHD medication prescription and the number of ADHD medication prescriptions, respectively. Each pair of coefficients is estimated from a separate regression comparing the lowest quartile with one higher quartile. The coefficient on Post represents the discontinuity for the lowest quartile, while PostQ2, PostQ3, and PostQ4 represent the differential discontinuities relative to the lowest quartile. Column (3) reports the average cram school density for each quartile. All specifications include individual fixed effects. Standard errors are clustered at the individual level.}
+\end{table}
 
 \clearpage
 \section*{Appendix Figures}
