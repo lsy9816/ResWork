@@ -563,43 +563,63 @@ Obs. & 22,300,768 & 22,300,768 & \\
 \begin{table}[H]
 \centering
 \caption{Table A4. Post-Exam Changes in Mental Health Outcomes}
-\small
-\begin{tabular}{lcccc}
+\footnotesize
+\setlength{\tabcolsep}{5pt}
+\renewcommand{\arraystretch}{0.93}
+\begin{tabular}{lcccccc}
 \toprule
- & Post & Post1 & Post2 & Post3 \\
+Dep. vars. & \multicolumn{2}{c}{Outpatient visits} & \multicolumn{2}{c}{Hospital admissions} & \shortstack{Suicide rate\\(per 1,000,000)} & \shortstack{Self-harm\\($\times 10^{6}$)} \\
+\cmidrule(lr){2-3}\cmidrule(lr){4-5}
+ & Probability & Number & Probability & Number & & \\
+ & (1) & (2) & (3) & (4) & (5) & (6) \\
 \midrule
-Outpatient visit: probability & $-$0.0438 & $-$0.0262 & $-$0.0497 & $-$0.0553 \\
- & (0.00020) & (0.00022) & (0.00024) & (0.00026) \\
-Outpatient visits: number & $-$0.0871 & $-$0.0568 & $-$0.1014 & $-$0.1031 \\
- & (0.00058) & (0.00063) & (0.00070) & (0.00075) \\
-Hospital admission: probability & 0.0010 & 0.0006 & 0.0009 & 0.0014 \\
- & (0.00002) & (0.00003) & (0.00004) & (0.00004) \\
-Hospital admissions: number & 0.0011 & 0.0007 & 0.0009 & 0.0016 \\
- & (0.00005) & (0.00006) & (0.00006) & (0.00006) \\
-Suicide rate (per 1,000,000) & 0.2845 & 0.1896 & 0.3710 & 0.2929 \\
- & (0.04037) & (0.04999) & (0.04999) & (0.04999) \\
-Self-harm ($\times 10^{6}$) & 0.5 & $-$0.3 & 0.7 & 1.0 \\
- & (0.4) & (0.4) & (0.5) & (0.6) \\
+\multicolumn{7}{l}{\textit{A. Baseline}} \\
+Post & $-$0.0438 & $-$0.0871 & 0.0010 & 0.0011 & 0.2845 & 0.5 \\
+ & (0.00020) & (0.00058) & (0.00002) & (0.00005) & (0.04037) & (0.4) \\
+\midrule
+\multicolumn{7}{l}{\textit{B. By year after the CSAT}} \\
+Post1 & $-$0.0262 & $-$0.0568 & 0.0006 & 0.0007 & 0.1896 & $-$0.3 \\
+ & (0.00022) & (0.00063) & (0.00003) & (0.00006) & (0.04999) & (0.4) \\
+Post2 & $-$0.0497 & $-$0.1014 & 0.0009 & 0.0009 & 0.3710 & 0.7 \\
+ & (0.00024) & (0.00070) & (0.00004) & (0.00006) & (0.04999) & (0.5) \\
+Post3 & $-$0.0553 & $-$0.1031 & 0.0014 & 0.0016 & 0.2929 & 1.0 \\
+ & (0.00026) & (0.00075) & (0.00004) & (0.00006) & (0.04999) & (0.6) \\
+\midrule
+Num.\ individuals & 822,409 & 822,409 & 822,409 & 822,409 & --- & 822,409 \\
+Obs. & 47,699,722 & 47,699,722 & 47,699,722 & 47,699,722 & --- & 47,699,722 \\
 \bottomrule
 \end{tabular}
-\fignotes{National Health Insurance Service (NHIS); Statistics Korea, MicroData Integrated Service (MDIS), South Korea.}{The table reports estimated discontinuities at the month of the CSAT (\textit{Suneung}) corresponding to Figure A12. Post reports the average change in months 0--35 after the CSAT, and Post1, Post2, and Post3 report the changes in months 0--11, 12--23, and 24--35, respectively. Standard errors are in parentheses and are clustered at the individual level, except for the suicide rate, which is computed from aggregate monthly data. Self-harm estimates and standard errors are multiplied by $10^{6}$. All specifications include individual fixed effects.}
+\fignotes{National Health Insurance Service (NHIS); Statistics Korea, MicroData Integrated Service (MDIS), South Korea.}{This table reports estimated discontinuities at the month of the CSAT (\textit{Suneung}) corresponding to Figure A12. Post and Post1--Post3 are defined as in Table~A2. Standard errors are in parentheses and are clustered at the individual level, except for the suicide rate, which is computed from aggregate monthly data. Self-harm estimates and standard errors are multiplied by $10^{6}$. All specifications include individual fixed effects.}
 \end{table}
 
 \begin{table}[H]
 \centering
 \caption{Table A5. Differences in Post-Exam Changes in ADHD Medication Prescriptions between Gangnam and Other Areas}
-\small
-\begin{tabular}{lcccc}
+\footnotesize
+\renewcommand{\arraystretch}{0.93}
+\begin{tabular}{lcc}
 \toprule
- & Post & Post1 & Post2 & Post3 \\
+Dep. vars. & \shortstack{Probability of ADHD\\medication prescription} & \shortstack{Number of ADHD\\medication prescriptions} \\
+ & (1) & (2) \\
 \midrule
-Probability of ADHD prescription & $-$0.0017 & $-$0.0010 & $-$0.0018 & $-$0.0022 \\
- & (0.00028) & (0.00026) & (0.00031) & (0.00033) \\
-Number of ADHD prescriptions & $-$0.0026 & $-$0.0017 & $-$0.0028 & $-$0.0034 \\
- & (0.00049) & (0.00047) & (0.00055) & (0.00057) \\
+\multicolumn{3}{l}{\textit{A. Baseline}} \\
+Post & $-$0.0017 & $-$0.0026 \\
+ & (0.00028) & (0.00049) \\
+\midrule
+\multicolumn{3}{l}{\textit{B. By year after the CSAT}} \\
+Post1 & $-$0.0010 & $-$0.0017 \\
+ & (0.00026) & (0.00047) \\
+Post2 & $-$0.0018 & $-$0.0028 \\
+ & (0.00031) & (0.00055) \\
+Post3 & $-$0.0022 & $-$0.0034 \\
+ & (0.00033) & (0.00057) \\
+\midrule
+R-squared & 0.4193 & 0.3652 \\
+Num.\ individuals & 822,409 & 822,409 \\
+Obs. & 47,699,722 & 47,699,722 \\
 \bottomrule
 \end{tabular}
-\fignotes{National Health Insurance Service (NHIS), South Korea.}{The table reports differences in the estimated discontinuities at the month of the CSAT (\textit{Suneung}) between Gangnam (Gangnam-gu, Seocho-gu, and Songpa-gu) and all other areas, corresponding to Figure A7. Residential location is measured at age 18 (the year of the CSAT). Post reports the average change in months 0--35 after the CSAT, and Post1, Post2, and Post3 report the changes in months 0--11, 12--23, and 24--35, respectively. Standard errors are in parentheses and are clustered at the individual level. All specifications include individual fixed effects.}
+\fignotes{National Health Insurance Service (NHIS), South Korea.}{This table reports differences in the estimated discontinuities at the month of the CSAT (\textit{Suneung}) between Gangnam (Gangnam-gu, Seocho-gu, and Songpa-gu) and all other areas, corresponding to Figure A7. Residential location is measured at age 18 (the year of the CSAT). Post and Post1--Post3 are defined as in Table~A2. Standard errors are in parentheses and are clustered at the individual level. All specifications include individual fixed effects.}
 \end{table}
 
 \clearpage
