@@ -4,6 +4,12 @@
 \usepackage{mathptmx}
 \usepackage{amsmath,amssymb}
 \usepackage{graphicx}
+\usepackage{caption}
+\graphicspath{{figures/}}
+\captionsetup[figure]{labelformat=empty,labelsep=none,font=small,justification=centering,singlelinecheck=off}
+% Figure helpers: \figpanel{width}{panel label}{file}{annotation}
+\newcommand{\figpanel}[4]{\begin{minipage}[t]{#1\linewidth}\centering\small #2\\[2pt]\includegraphics[width=\linewidth]{#3}\\[1pt]{\scriptsize #4}\end{minipage}}
+\newcommand{\fignotes}[2]{\par\smallskip{\footnotesize\raggedright Data source: #1\par Notes: #2\par}}
 \usepackage{booktabs}
 \usepackage{setspace}
 \usepackage{xcolor}
@@ -178,6 +184,15 @@ The key identification assumption for interpreting the estimated $\delta_k$s as 
 
 Figure~1 presents event study estimates obtained from Equation~(\ref{eq:es}). Panel~A shows the estimates for the probability of any ADHD medication prescription, and Panel~B shows the estimates for the number of ADHD medication prescriptions. In Panel~A, the estimates move relatively smoothly prior to the CSAT. In the month of the CSAT, however, the probability of any ADHD medication prescription declines sharply and remains persistently below its pre-exam level throughout the post-exam period. Panel~B follows the same pattern. The number of ADHD medication prescriptions drops discontinuously in the month of the CSAT and does not return to its pre-exam level thereafter. The sharp decline in the exam month, following stable pre-exam estimates, suggests that part of the pre-exam prescribing was tied to the exam itself rather than to the treatment of a chronic condition.
 
+\begin{figure}[!htbp]
+\centering
+\caption{Figure 1. ADHD Medication Prescription Trends around Suneung}
+\figpanel{0.49}{A. Probability of ADHD medication prescription}{fig1_1}{}\hfill
+\figpanel{0.49}{B. Number of ADHD medication prescriptions}{fig1_2}{}
+\fignotes{National Health Insurance Service (NHIS), South Korea.}{Panels present event study estimates around the month of the CSAT (\textit{Suneung}). Estimates are obtained from Equation~(\ref{eq:es}) and are relative to the month immediately preceding the CSAT. All specifications include individual fixed effects. Error bars represent 95 percent confidence intervals. Standard errors are clustered at the individual level. The vertical dashed line indicates the month of the CSAT.}
+\end{figure}
+
+
 To quantify the average post-exam changes in ADHD medication prescription, we estimate the simplified specifications in Equations~(\ref{eq:post}) and (\ref{eq:post3}). Table~A2 presents the results. Column~(1) reports the estimates for the probability of any ADHD medication prescription, and column~(2) reports those for the number of ADHD medication prescriptions. In Panel~A, based on Equation~(\ref{eq:post}), the estimated coefficient on Post is $-0.0014$ in column~(1) and $-0.0018$ in column~(2). Both estimates are statistically significant at the 1\% level and consistent with the event study pattern in Figure~1. Relative to the average pre-exam prescribing levels (0.0023 and 0.0032, respectively), these estimates correspond to declines of 61\% and 56\%. To examine how the decline evolves over time, Panel~B reports estimates from Equation~(\ref{eq:post3}), which splits the post-exam period into the first, second, and third years after the exam. In column~(1), the coefficients are $-0.0011$, $-0.0015$, and $-0.0015$ for the first, second, and third years after the CSAT, respectively. The corresponding estimates in column~(2) are $-0.0015$, $-0.0020$, and $-0.0020$. The decline in ADHD medication prescribing is therefore not a transitory disruption confined to the months surrounding the exam: the estimates remain negative and, if anything, grow in magnitude over the three post-exam years. We interpret this longer-term persistence as an association rather than a causal effect of the exam, because the year-two and year-three coefficients cannot be cleanly separated from age effects.
 
 We conduct two robustness checks. First, one may be concerned that the baseline reflects differences across regions in the composition of adolescents. To address this concern, we add region fixed effects to Equation~(\ref{eq:es}), where regions are defined at the district (\textit{si-gun-gu}) level. Figure~A3 shows that the estimates are very similar to the baseline in Figure~1. In both panels, ADHD medication prescriptions fall in the month of the CSAT and remain lower throughout the post-exam period, indicating that the decline is not driven by regional composition. Second, as discussed in Section~4, the decline could reflect a seasonal pattern common to every fall rather than the exam itself. To examine this possibility, we estimate Equation~(\ref{eq:es}) using weekly event time. Figure~A4 shows that prescriptions drop sharply in the week of the CSAT rather than drifting downward over the fall months, consistent with an exam-specific decline rather than a seasonal one. To further assess whether the decline reflects a recurring November pattern, we compare monthly prescribing in the second and third years of high school. Figure~\todo{AX} plots the estimates separately for the two school years. In the second year, \todo{prescribing remains broadly stable, with no comparable decline in November}. In the third year, by contrast, prescribing \todo{declines sharply in the month of the CSAT}, falling sharply in the month of the CSAT. The November-to-October change is \todo{XX} in Grade~11 and \todo{YY} in Grade~12, yielding a differential decline of \todo{ZZ}. Thus, the sharp drop in the month of the CSAT is not part of a recurring November pattern.
@@ -200,6 +215,15 @@ We generalize the effects of educational competition by using a more continuous 
 
 Then we estimate the dynamic difference-in-differences specification in Equation~(\ref{eq:dd}), which interacts the event-time indicators with district-level entrance-exam cram school density. Figure~2 plots the resulting interaction coefficients. Before the CSAT, the coefficients are generally close to zero and statistically insignificant. This indicates that, relative to the month immediately preceding the exam, ADHD medication prescribing did not change differentially with cram school density during the pre-exam period. The interaction coefficients turn negative in the month of the exam and remain negative throughout the post-exam period, with the negative gap widening over time. Districts with higher cram school density thus experience larger declines in ADHD medication prescribing once the exam is over. The pattern holds for both the probability of any ADHD medication prescription and the number of prescriptions. To examine the sensitivity of these results to how cram school density is defined, we estimate Equation~(\ref{eq:dd}) using the broader academic cram school density measure, which includes school-curriculum-instruction academies beyond those focused on exam preparation. Figure~A8 shows that the interaction coefficients are flat before the exam and turn negative in the month of the CSAT, consistent with the baseline results.
 
+\begin{figure}[!htbp]
+\centering
+\caption{Figure 2. Heterogeneity in ADHD Medication Prescription Trends around Suneung by Entrance-Exam Cram School Density}
+\figpanel{0.49}{A. Probability of ADHD medication prescription}{fig2_1}{}\hfill
+\figpanel{0.49}{B. Number of ADHD medication prescriptions}{fig2_2}{}
+\fignotes{National Health Insurance Service (NHIS), South Korea; Korean Educational Development Institute (KEDI), South Korea.}{Panels present estimates of the interaction between event time indicators and entrance-exam cram school density. Entrance-exam cram school density is measured as the average number of entrance-exam cram schools per 1,000 students between 2013 and 2019 and is assigned based on individuals' residential location at age 18 (the year of the CSAT). Estimates are relative to the month immediately preceding the CSAT. All specifications include individual fixed effects. Error bars represent 95 percent confidence intervals. Standard errors are clustered at the individual level.}
+\end{figure}
+
+
 In this analysis, we assume a linear relationship between cram school density and the event-time effects. To diagnose the validity of this assumption, we first provide descriptive evidence on the relationship between local cram school density and the size of the ADHD prescription discontinuity \citep{callaway2024}. For each district, we estimate the post-CSAT discontinuity in the probability of any ADHD medication prescription, using individuals' residential location in the year of the CSAT. Figure~A9 groups districts into 20 equal-sized bins by cram school density and plots the average discontinuity against the average cram school density in each bin. Panel~A uses entrance-exam cram school density, and Panel~B uses the broader academic cram school density measure. In both panels, the fitted line slopes downward, indicating an approximately linear relationship between education pressure measures and post-exam declines in ADHD medication prescribing. To further examine this assumption, we estimate three pairwise versions of Equation~(\ref{eq:dd}). In each regression, the sample is restricted to the lowest quartile and one higher quartile of entrance-exam cram school density, and the continuous density measure is replaced by an indicator for the higher quartile.
 
 Figure~A10 presents the results. In the second and third quartiles, the differential post-exam changes are modest, with no sharp discontinuity in the month of the CSAT. In the top quartile, by contrast, the estimates discontinuously fall in the exam month and remain negative throughout the post-exam period. The pattern in Figure~2 therefore appears to be driven mainly by districts in the highest-density quartile. Figure~A11 repeats the quartile analysis using academic cram school density and shows a broadly similar pattern, with the largest post-exam declines in the top quartile, although the estimates are somewhat less precise than those in Figure~A10. Overall, the results are not sensitive to how cram school density is defined.
@@ -213,6 +237,18 @@ We next examine whether the decline in ADHD medication prescriptions simply refl
 Because ADHD-related visits may decline mechanically when ADHD medication prescribing falls, we also reconstruct mental healthcare utilization after excluding ADHD diagnosis codes. Specifically, we define non-ADHD mental healthcare using diagnosis codes beginning with the code F other than F90 and re-estimate Equation~(\ref{eq:es}). Figure~\todo{?} presents the results. Non-ADHD outpatient mental healthcare use \todo{results} after the CSAT, while non-ADHD inpatient mental healthcare use \todo{results}. Overall, these results suggest that the contrast between ADHD prescribing and broader mental healthcare utilization is not mechanically driven by the inclusion of ADHD-related visits.
 
 In Section~5.1.3, we found that the overall post-exam decline in ADHD medication prescribing did not reflect a broad improvement in mental health. We now apply the same logic to the heterogeneity result. If the larger decline in high-competition districts arose because adolescents there became mentally healthier after the exam, their mental health outcomes should also improve more than those of adolescents in other districts. To test this, we estimate the interaction specification in Figure~2, interacting the event-time indicators with entrance-exam cram school density as in Equation~(\ref{eq:dd}), using mental health outcomes as the dependent variables. Figure~3 presents the results for outpatient mental healthcare use, inpatient mental healthcare admissions, and self-harm.
+
+\begin{figure}[!htbp]
+\centering
+\caption{Figure 3. Heterogeneity in Mental Health Outcomes around Suneung by Entrance-Exam Cram School Density}
+\figpanel{0.49}{A. Probability of any outpatient visits}{fig3_1}{}\hfill
+\figpanel{0.49}{B. Number of outpatient visits}{fig3_2}{}\\[4pt]
+\figpanel{0.49}{C. Probability of any hospital admissions}{fig3_3}{}\hfill
+\figpanel{0.49}{D. Number of hospital admissions}{fig3_4}{}\\[4pt]
+\figpanel{0.49}{E. Self-harm}{fig3_5}{}
+\fignotes{National Health Insurance Service (NHIS), South Korea.}{Panels present estimates of the interaction between event time indicators and entrance-exam cram school density. Entrance-exam cram school density is measured as the average number of entrance-exam cram schools per 1,000 students between 2013 and 2019 and is assigned based on individuals' residential location at age 18 (the year of the CSAT). Panels A and B show outpatient mental healthcare use, while Panels C and D show inpatient mental healthcare use. Mental healthcare use is defined as healthcare use with a primary or secondary diagnosis code beginning with F (mental and behavioral disorders under the ICD-10 classification). Panel E shows self-harm, defined as a diagnosis code indicating intentional self-harm (ICD-10: X60--X84) recorded in any diagnosis field. Error bars represent 95 percent confidence intervals. All specifications include individual fixed effects. Standard errors are clustered at the individual level.}
+\end{figure}
+
 
 Across these outcomes, the interaction coefficients show no discontinuous improvement in the month of the CSAT in higher-density districts. The probability of any outpatient visit (Panel~A) stays close to zero throughout the event window. The number of outpatient visits (Panel~B) rises gradually in the months leading up to the exam and declines gradually afterward, but this movement is smooth rather than discontinuous and stands in sharp contrast to the abrupt drop in ADHD medication prescribing. Outpatient use does not fall discontinuously in the exam month in higher-density districts.
 
@@ -385,5 +421,127 @@ Volkow, N.~D., G.-J. Wang, F.~Telang, J.~S. Fowler, J.~Logan, S.~J. Gatley, A.~G
 Wang, L.~C. 2016. ``The Effects of High-Stakes Testing on Suicidal Ideation of Teenagers with Reference-Dependent Preferences.'' \textit{Journal of Population Economics} 29 (2): 345--364.
 
 \end{thebibliography}
+
+\clearpage
+\section*{Appendix Figures}
+
+\begin{figure}[!htbp]
+\centering
+\caption{Figure A1. Age Profiles of ADHD Medication Prescription}
+\figpanel{0.49}{A. Probability of ADHD medication prescription}{figA1_1}{}\hfill
+\figpanel{0.49}{B. Number of ADHD medication prescriptions}{figA1_2}{}
+\fignotes{National Health Insurance Service (NHIS), South Korea.}{Panels present raw monthly trends in ADHD medication prescriptions around the month of the CSAT (\textit{Suneung}). Panel A shows the probability of any ADHD medication prescription, and Panel B shows the number of ADHD medication prescriptions. The vertical dashed line indicates the month of the CSAT.}
+\end{figure}
+
+
+\begin{figure}[!htbp]
+\centering
+\caption{Figure A2. Spatial Distribution of Entrance-Exam Cram School Density}
+\figpanel{0.47}{Korea}{figA2_1}{}\hfill
+\figpanel{0.47}{Within Seoul}{figA2_2}{}
+\end{figure}
+
+
+\begin{figure}[!htbp]
+\centering
+\caption{Figure A3. ADHD Medication Prescription Trends around Suneung: With Region Fixed Effects}
+\figpanel{0.49}{A. Probability of ADHD medication prescription}{figA3_1}{}\hfill
+\figpanel{0.49}{B. Number of ADHD medication prescriptions}{figA3_2}{}
+\fignotes{National Health Insurance Service (NHIS), South Korea.}{Panels present event study estimates around the month of the CSAT (\textit{Suneung}). Estimates are obtained from Equation~(\ref{eq:es}) and are relative to the month immediately preceding the CSAT. All specifications include individual and region fixed effects. Error bars represent 95 percent confidence intervals. Standard errors are clustered at the individual level.}
+\end{figure}
+
+
+\begin{figure}[!htbp]
+\centering
+\caption{Figure A4. Weekly Trends of ADHD Medication Prescriptions around Suneung}
+\figpanel{0.49}{A. Probability of ADHD medication prescription}{figA4_1}{}\hfill
+\figpanel{0.49}{B. Number of ADHD medication prescriptions}{figA4_2}{}
+\fignotes{National Health Insurance Service (NHIS), South Korea.}{Panels present event study estimates around the week of the CSAT (\textit{Suneung}). The figure replicates the main analysis using weekly rather than monthly event time. Estimates are obtained from Equation~(\ref{eq:es}) and are relative to the week immediately preceding the CSAT. All specifications include individual fixed effects. Error bars represent 95 percent confidence intervals. Standard errors are clustered at the individual level.}
+\end{figure}
+
+
+\begin{figure}[!htbp]
+\centering
+\caption{Figure A5. ADHD Medication Prescription Trends around Suneung by Gender}
+\figpanel{0.49}{A. Probability of ADHD medication prescription}{figA5_1}{}\hfill
+\figpanel{0.49}{B. Number of ADHD medication prescriptions}{figA5_2}{}
+\fignotes{National Health Insurance Service (NHIS), South Korea.}{Panels present event study estimates around the month of the CSAT (\textit{Suneung}) separately for males and females. Estimates are obtained from Equation~(\ref{eq:es}) and are relative to the month immediately preceding the CSAT. All specifications include individual fixed effects. Error bars represent 95 percent confidence intervals. Standard errors are clustered at the individual level.}
+\end{figure}
+
+
+\begin{figure}[!htbp]
+\centering
+\caption{Figure A6. Discontinuities in ADHD Medication Prescriptions by Household Income}
+\includegraphics[width=0.6\linewidth]{figA6_1}
+\fignotes{National Health Insurance Service (NHIS), South Korea.}{The figure presents estimated discontinuities in the probability of any ADHD medication prescription at the month of the CSAT (\textit{Suneung}), obtained from Equation~(\ref{eq:es}). This figure plots estimated discontinuities by household income, proxied by ventiles of health insurance premiums (20 groups) measured at age 18 (the year of the CSAT). The dashed line represents a fitted linear regression line. Standard errors are clustered at the individual level.}
+\end{figure}
+
+
+\begin{figure}[!htbp]
+\centering
+\caption{Figure A7. Heterogeneity in ADHD Medication Prescription Trends around Suneung by Residential Location}
+\figpanel{0.49}{A. Probability of ADHD medication prescription}{figA7_1}{Gangnam $-$ Others: Post $-0.0017$ (0.00028); Post~1 $-0.0010$ (0.00026); Post~2 $-0.0018$ (0.00031); Post~3 $-0.0022$ (0.00033)}\hfill
+\figpanel{0.49}{B. Number of ADHD medication prescriptions}{figA7_2}{Gangnam $-$ Others: Post $-0.0026$ (0.00049); Post~1 $-0.0017$ (0.00047); Post~2 $-0.0028$ (0.00055); Post~3 $-0.0034$ (0.00057)}
+\fignotes{National Health Insurance Service (NHIS), South Korea.}{Panels present event study estimates separately for Gangnam and Others around the month of the CSAT (\textit{Suneung}). Gangnam refers to Gangnam-gu, Seocho-gu, and Songpa-gu, while Others refers to all remaining areas. Residential location is measured at age 18 (the year of the CSAT). Estimates are obtained from Equation~(\ref{eq:es}) and are relative to the month immediately preceding the CSAT. Reported discontinuities (Post, Post~1--3, with standard errors in parentheses) represent differences between Gangnam and Others. All specifications include individual fixed effects. Error bars represent 95 percent confidence intervals. Standard errors are clustered at the individual level.}
+\end{figure}
+
+
+\begin{figure}[!htbp]
+\centering
+\caption{Figure A8. Heterogeneity in ADHD Medication Prescription Trends around Suneung by Academic Cram School Density}
+\figpanel{0.49}{A. Probability of ADHD medication prescription}{figA8_1}{}\hfill
+\figpanel{0.49}{B. Number of ADHD medication prescriptions}{figA8_2}{}
+\fignotes{National Health Insurance Service (NHIS), South Korea; Korean Educational Development Institute (KEDI), South Korea.}{Panels present estimates of the interaction between event time indicators and academic cram school density. Academic cram school density is measured as the average number of academic cram schools per 1,000 students between 2013 and 2019 and is assigned based on individuals' residential location at age 18 (the year of the CSAT). Estimates are relative to the month immediately preceding the CSAT. All specifications include individual fixed effects. Error bars represent 95 percent confidence intervals. Standard errors are clustered at the individual level.}
+\end{figure}
+
+
+\begin{figure}[!htbp]
+\centering
+\caption{Figure A9. Discontinuities in ADHD Medication Prescriptions and Cram School Density}
+\figpanel{0.49}{A. By Entrance-Exam Cram School Density}{figA9_1}{}\hfill
+\figpanel{0.49}{B. By Academic Cram School Density}{figA9_2}{}
+\fignotes{National Health Insurance Service (NHIS), South Korea; Korean Educational Development Institute (KEDI), South Korea.}{The figure presents estimated discontinuities in the probability of any ADHD medication prescription at the month of the CSAT (\textit{Suneung}), obtained from Equation~(\ref{eq:es}). Residential areas are grouped into 20 equal-sized bins based on cram school density, and each point represents the average estimated discontinuity and the average cram school density within a bin. Panel A uses entrance-exam cram school density, while Panel B uses academic cram school density. Both density measures are defined as the average number of institutions per 1,000 students between 2013 and 2019 and are assigned based on individuals' residential location at age 18 (the year of the CSAT). The dashed lines represent fitted linear regression lines. Standard errors are clustered at the individual level.}
+\end{figure}
+
+
+\begin{figure}[!htbp]
+\centering
+\caption{Figure A10. Heterogeneity in ADHD Medication Prescription Trends around Suneung by Quartiles of Entrance-Exam Cram School Density}
+\noindent\textbf{\small A. Probability of ADHD medication prescription}\\[2pt]
+\figpanel{0.32}{2nd Quartile}{figA10_1}{}\hfill\figpanel{0.32}{3rd Quartile}{figA10_2}{}\hfill\figpanel{0.32}{4th Quartile}{figA10_3}{}
+\medskip
+
+\noindent\textbf{\small B. Number of ADHD medication prescriptions}\\[2pt]
+\figpanel{0.32}{2nd Quartile}{figA10_4}{}\hfill\figpanel{0.32}{3rd Quartile}{figA10_5}{}\hfill\figpanel{0.32}{4th Quartile}{figA10_6}{}
+\fignotes{National Health Insurance Service (NHIS), South Korea; Korean Educational Development Institute (KEDI), South Korea.}{Panels present event study estimates around the month of the CSAT separately for the second, third, and fourth quartiles of entrance-exam cram school density, using the lowest quartile as the reference group. Entrance-exam cram school density is measured as the average number of entrance-exam cram schools per 1,000 students between 2013 and 2019 and is assigned based on individuals' residential location at age 18 (the year of the CSAT). Estimates are relative to the month immediately preceding the CSAT. All specifications include individual fixed effects. Error bars represent 95 percent confidence intervals. Standard errors are clustered at the individual level.}
+\end{figure}
+
+
+\begin{figure}[!htbp]
+\centering
+\caption{Figure A11. Heterogeneity in ADHD Medication Prescription Trends around Suneung by Quartiles of Academic Cram School Density}
+\noindent\textbf{\small A. Probability of ADHD medication prescription}\\[2pt]
+\figpanel{0.32}{2nd Quartile}{figA11_1}{}\hfill\figpanel{0.32}{3rd Quartile}{figA11_2}{}\hfill\figpanel{0.32}{4th Quartile}{figA11_3}{}
+\medskip
+
+\noindent\textbf{\small B. Number of ADHD medication prescriptions}\\[2pt]
+\figpanel{0.32}{2nd Quartile}{figA11_4}{}\hfill\figpanel{0.32}{3rd Quartile}{figA11_5}{}\hfill\figpanel{0.32}{4th Quartile}{figA11_6}{}
+\fignotes{National Health Insurance Service (NHIS), South Korea; Korean Educational Development Institute (KEDI), South Korea.}{Panels present event study estimates around the month of the CSAT separately for the second, third, and fourth quartiles of academic cram school density, using the lowest quartile as the reference group. Academic cram school density is measured as the average number of academic cram schools per 1,000 students between 2013 and 2019 and is assigned based on individuals' residential location at age 18 (the year of the CSAT). Estimates are relative to the month immediately preceding the CSAT. All specifications include individual fixed effects. Error bars represent 95 percent confidence intervals. Standard errors are clustered at the individual level.}
+\end{figure}
+
+
+\begin{figure}[!htbp]
+\centering
+\caption{Figure A12. Trends of Mental Health Outcomes around Suneung}
+\figpanel{0.49}{A. Probability of any outpatient visits}{figA12_1}{Post $-$0.0438 (0.00020); Post~1 $-$0.0262 (0.00022); Post~2 $-$0.0497 (0.00024); Post~3 $-$0.0553 (0.00026)}\hfill
+\figpanel{0.49}{B. Number of outpatient visits}{figA12_2}{Post $-$0.0871 (0.00058); Post~1 $-$0.0568 (0.00063); Post~2 $-$0.1014 (0.00070); Post~3 $-$0.1031 (0.00075)}\\[4pt]
+\figpanel{0.49}{C. Probability of any hospital admissions}{figA12_3}{Post 0.0010 (0.00002); Post~1 0.0006 (0.00003); Post~2 0.0009 (0.00004); Post~3 0.0014 (0.00004)}\hfill
+\figpanel{0.49}{D. Number of hospital admissions}{figA12_4}{Post 0.0011 (0.00005); Post~1 0.0007 (0.00006); Post~2 0.0009 (0.00006); Post~3 0.0016 (0.00006)}\\[4pt]
+\figpanel{0.49}{E. Suicide rates}{figA12_5}{Post 0.2845 (0.04037); Post~1 0.1896 (0.04999); Post~2 0.3710 (0.04999); Post~3 0.2929 (0.04999)}\hfill
+\figpanel{0.49}{F. Self-harm}{figA12_6}{Post 0.0000005 (0.0000004); Post~1 $-$0.0000003 (0.0000004); Post~2 0.0000007 (0.0000005); Post~3 0.0000010 (0.0000006)}\\[4pt]
+\fignotes{National Health Insurance Service (NHIS); Statistics Korea, MicroData Integrated Service (MDIS), South Korea.}{Panels present event study estimates around the month of the CSAT (\textit{Suneung}). Estimates are obtained from Equation~(\ref{eq:es}) and are relative to the month immediately preceding the CSAT. All specifications include individual fixed effects. Panels A and B show outpatient mental healthcare use, while Panels C and D show inpatient mental healthcare use. Mental healthcare use is defined as healthcare use with a primary or secondary diagnosis code beginning with F (mental and behavioral disorders under the ICD-10 classification). Panel E shows monthly suicide rates, calculated as the number of suicides divided by the number of individuals in the analysis sample and expressed per 1,000,000 individuals. Panel F shows self-harm, defined as a diagnosis code indicating intentional self-harm (ICD-10: X60--X84) recorded in any diagnosis field. Reported discontinuities (Post, Post~1--3) are shown below each panel with standard errors in parentheses. Error bars represent 95 percent confidence intervals for Panels A--D and F. Standard errors are clustered at the individual level for Panels A--D and F.}
+\end{figure}
+
+
 
 \end{document}
